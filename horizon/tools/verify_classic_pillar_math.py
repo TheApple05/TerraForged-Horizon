@@ -2,6 +2,7 @@
 from __future__ import annotations
 import argparse,datetime as dt,gzip,hashlib,json,os,subprocess
 from pathlib import Path
+from java_reference import java_reference_root
 ROOT=Path(__file__).resolve().parents[2]
 def sha(data):return hashlib.sha256(data).hexdigest()
 def main():
@@ -11,7 +12,8 @@ def main():
     inputs=(fixture/'inputs.tsv').read_bytes();compressed=(fixture/'values.tsv.gz').read_bytes();expected=gzip.decompress(compressed)
     if sha(inputs)!=metadata['inputsSha256'] or sha(compressed)!=metadata['fixtureSha256'] or sha(expected)!=metadata['uncompressedValuesSha256']:raise ValueError('Frozen fixture bytes changed')
     for name,digest in metadata['sourceSha256Lf'].items():
-        if sha((ROOT/name).read_bytes().replace(b'\r\n',b'\n'))!=digest:raise ValueError('Reference source changed '+name)
+        source_root=java_reference_root() if name.startswith('common/') else ROOT
+        if sha((source_root/name).read_bytes().replace(b'\r\n',b'\n'))!=digest:raise ValueError('Reference source changed '+name)
     work=ROOT/'build/qa/horizon'/a.report.stem;work.mkdir(parents=True,exist_ok=False)
     env=dict(os.environ,CARGO_BUILD_JOBS='2',CARGO_NET_OFFLINE='true');env.pop('CARGO_TARGET_DIR',None);profiles=[]
     for profile in ('debug','release'):
