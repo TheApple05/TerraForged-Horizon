@@ -1,7 +1,8 @@
 # TerraForged for Horizon: procedural port and prepared prototype
 
 The procedural Rust port is in development for Horizon's Minecraft **26.3**
-target; the Java port in this repository targets **26.2**. The explicit native
+target; the [separate Java port](https://github.com/TheApple05/TerraForged-26.2)
+targets **26.2**. The explicit native
 pipeline now generates real terrain and decorated regions in repeatable QA.
 See [native chunk evidence](../docs/horizon/native-chunks.md). The explicit
 native preset/saved stem now selects that pipeline in constructor QA; see
@@ -102,7 +103,7 @@ Their original license texts are available at
 [Horizon](https://github.com/TheApple05/horizon/blob/9dd5c4093977c718c5c0349032fd3a5434e86afc/LICENSE)
 and [horizon-mixins](https://github.com/horizon-rust/horizon-mixins/blob/e8cd0aa38cffef49cb2e088ef716baa107148c02/LICENSE).
 
-The Java Gradle projects do not include `horizon/` in their source sets. The
+The Java Gradle projects live in the separate Java repository. The
 native bundles contain no Java classes, Forge LanguageProvider implementation,
 Minecraft binaries or player-prepared game resources. The Java components'
 separate notices remain in the repository root and their own JARs.

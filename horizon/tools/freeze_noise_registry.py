@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+from java_reference import java_reference_root
 from freeze_noise_composition import VISITOR_NAMES
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -15,6 +16,7 @@ def main():
     p.add_argument('--second',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
     args=p.parse_args()
+    java_reference_root()
     if args.output.exists():p.error('Refusing to replace registry reference directory')
     captures=[];producers=[]
     for path in (args.first,args.second):
@@ -44,7 +46,7 @@ def main():
     sources={}
     for name in VISITOR_NAMES+['function.Interpolation']:
         suffix=name if '.' in name or name=='NoiseUtil' else 'module.'+name
-        source=ROOT/'common/src/main/java/raccoonman/reterraforged/world/worldgen/noise'/(suffix.replace('.','/').split('$')[0]+'.java')
+        source=java_reference_root() / 'common/src/main/java/raccoonman/reterraforged/world/worldgen/noise'/(suffix.replace('.','/').split('$')[0]+'.java')
         sources[name]=sha(source.read_bytes().replace(b'\r\n',b'\n'))
     probe=ROOT/'horizon/tests/java/NativeNoiseRegistryProbe.java'
     report={'schemaVersion':1,'status':'frozen-genuine-java-registry-reference','freshRunsAgree':True,

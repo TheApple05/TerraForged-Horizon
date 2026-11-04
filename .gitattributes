@@ -1,0 +1,16 @@
+* text=auto
+*.md text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.rs text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+# Frozen evidence retains its original bytes and diagnostic whitespace.
+docs/validation/** -text whitespace=-trailing-space
+horizon/tests/fixtures/** -text whitespace=-trailing-space
+horizon/tests/inputs/** -text
+tests/core/reference-output.tsv -text whitespace=-trailing-space
+*.png binary
+*.bin binary
+*.gz binary
+**/Cargo.lock text eol=lf

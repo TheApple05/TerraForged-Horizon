@@ -7,6 +7,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+from java_reference import java_reference_root
 import shutil
 import struct
 
@@ -82,6 +83,7 @@ def main():
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--report',type=Path,required=True)
     args = parser.parse_args()
+    java_reference_root()
     if args.output.exists() or args.report.exists(): parser.error('Refusing to replace a frozen kernel oracle')
     reports = [json.loads(p.read_text()) for p in (args.first,args.second)]
     snapshots = []
@@ -89,7 +91,7 @@ def main():
         qa = report.get('qaResult',report.get('runtimeQa'))
         if report.get('result',report.get('status'))!='passed' or qa['kernelOracle']['status']!='passed-java-reference-capture-only':
             raise ValueError('Java reference process failed')
-        snapshots.append((ROOT/report['instance']/'qa-output/kernel-oracle-v1',qa['kernelOracle']))
+        snapshots.append((java_reference_root()/report['instance']/'qa-output/kernel-oracle-v1',qa['kernelOracle']))
     (first,a),(second,b) = snapshots
     if a!=b or a['productionJarSha256']!=qa['runtime']['modSha256']:
         raise ValueError('Fresh Java JVM captures/input bindings differ')

@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+from java_reference import java_reference_root
 import subprocess
 import tempfile
 import zipfile
@@ -18,11 +19,12 @@ def main() -> int:
     parser.add_argument("--jar", required=True, type=Path)
     parser.add_argument("--output", type=Path, default=ROOT / "build/qa/horizon/terraforged-horizon-exporter.jar")
     args = parser.parse_args()
+    java_reference_root()
     output = args.output.resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
     work = Path(tempfile.mkdtemp(prefix="exporter-", dir=output.parent))
     source = ROOT / "horizon/tests/HorizonExportMod.java"
-    classpath_file = ROOT / "build/qa/target/compile-classpath.txt"
+    classpath_file = java_reference_root() / "build/qa/target/compile-classpath.txt"
     classpath = classpath_file.read_text().strip()
     javac = args.java_home / "bin" / ("javac.exe" if os.name == "nt" else "javac")
     result = subprocess.run([str(javac), "--release", "25", "-proc:none", "-encoding", "UTF-8", "-cp",

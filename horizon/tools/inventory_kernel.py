@@ -10,11 +10,10 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+from java_reference import java_reference_root
 import re
 
 ROOT = Path(__file__).resolve().parents[2]
-JAVA = ROOT / "common/src/main/java"
-BASE = JAVA / "raccoonman/reterraforged"
 GROUPS = {
     "noise": "world/worldgen/noise",
     "cell": "world/worldgen/cell",
@@ -27,22 +26,25 @@ ADDITIONAL = ["world/worldgen/GeneratorContext.java", "world/worldgen/WorldFilte
 
 
 def inventory() -> dict:
+    java_root = java_reference_root()
+    java = java_root / "common/src/main/java"
+    base = java / "raccoonman/reterraforged"
     groups = {}
     files = set()
     for label, folder in GROUPS.items():
-        selected = sorted((BASE / folder).rglob("*.java"))
+        selected = sorted((base / folder).rglob("*.java"))
         files.update(selected)
         groups[label] = {
-            "directory": (BASE / folder).relative_to(ROOT).as_posix(),
+            "directory": (base / folder).relative_to(java_root).as_posix(),
             "files": len(selected),
             "nonemptyLines": sum(sum(bool(line.strip()) for line in p.read_text(encoding="utf-8").splitlines()) for p in selected),
         }
-    files.update(BASE / path for path in ADDITIONAL)
+    files.update(base / path for path in ADDITIONAL)
     entries, imports = {}, {}
     for path in sorted(files):
         raw = path.read_bytes()
         source = raw.decode("utf-8")
-        key = path.relative_to(ROOT).as_posix()
+        key = path.relative_to(java_root).as_posix()
         entries[key] = {"sha256": hashlib.sha256(raw).hexdigest(),
                         "nonemptyLines": sum(bool(line.strip()) for line in source.splitlines())}
         for target in re.findall(r"^import\s+(?:static\s+)?([\w.*]+);", source, flags=re.MULTILINE):
@@ -53,7 +55,7 @@ def inventory() -> dict:
                 parts = target.split(".")
                 local = None
                 while parts:
-                    candidate = JAVA.joinpath(*parts).with_suffix(".java")
+                    candidate = java.joinpath(*parts).with_suffix(".java")
                     if candidate.is_file():
                         local = candidate
                         break
@@ -80,6 +82,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
+    java_reference_root()
     report = inventory()
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

@@ -3,15 +3,16 @@ from __future__ import annotations
 import argparse
 import hashlib
 from pathlib import Path
+from java_reference import java_reference_root
 import re
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / 'common/src/main/java/raccoonman/reterraforged/world/worldgen/noise/NoiseUtil.java'
 OUTPUT = ROOT / 'horizon/native-core/src/noise_vectors.rs'
 
 
 def generated():
-    source = SOURCE.read_bytes().replace(b'\r\n', b'\n')
+    source_path = java_reference_root() / 'common/src/main/java/raccoonman/reterraforged/world/worldgen/noise/NoiseUtil.java'
+    source = source_path.read_bytes().replace(b'\r\n', b'\n')
     # This is also the independently frozen core-reference source.
     import json
     metadata = json.loads((ROOT / 'tests/core/reference-metadata.json').read_text())
@@ -44,6 +45,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--write', action='store_true')
     args = parser.parse_args()
+    java_reference_root()
     expected = generated()
     if args.write:
         OUTPUT.write_text(expected, encoding='utf-8', newline='\n')

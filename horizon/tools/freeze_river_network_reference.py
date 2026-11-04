@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse,gzip,hashlib,json
 from collections import Counter
 from pathlib import Path
+from java_reference import java_reference_root
 ROOT=Path(__file__).resolve().parents[2]
 def sha(data):return hashlib.sha256(data).hexdigest()
 NAMES=['cell/continent/simple/SimpleRiverGenerator','cell/continent/advanced/AdvancedContinentGenerator',
@@ -14,6 +15,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ('first','second','output'):p.add_argument('--'+n,type=Path,required=True)
     args=p.parse_args()
+    java_reference_root()
     if args.output.exists():p.error('Refusing to replace network reference directory')
     captures=[];producers=[]
     for path in (args.first,args.second):
@@ -36,7 +38,7 @@ def main():
     rows=dict(line.split('\t',1) for line in values.decode().splitlines());counts=Counter(k.split('/')[0] for k in rows)
     expected={'map':62424,'full':3888,'node':1920,'river':1920,'bounds':1920,'config':1920,'warp':1920,'curve':1920,'wetland':562,'lake':434,'map-info':72,'rng':72}
     if len(rows)!=len(values.splitlines()) or counts!=expected or sum(len(v.split(',')) for v in rows.values())!=1687920:raise ValueError('Incomplete network corpus')
-    compressed=gzip.compress(values,mtime=0);source_root=ROOT/'common/src/main/java/raccoonman/reterraforged/world/worldgen'
+    compressed=gzip.compress(values,mtime=0);source_root=java_reference_root() / 'common/src/main/java/raccoonman/reterraforged/world/worldgen'
     report={'schemaVersion':1,'status':'frozen-genuine-java-river-network-reference','freshRunsAgree':True,
         'productionJarSha256':producers[0]['productionJarSha256'],'fixtureSha256':sha(compressed),'uncompressedValuesSha256':sha(values),'inputsSha256':sha(inputs),
         'recordCount':len(rows),'fieldsPerProfile':1687920,'recordKinds':counts,'producerReports':producers,

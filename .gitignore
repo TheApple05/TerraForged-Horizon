@@ -1,0 +1,15 @@
+**/target/
+**/build/
+**/run/
+**/runs/
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+*.log
+.env
+.env.*
+!*.example
+local.properties
+logs/
+crash-reports/

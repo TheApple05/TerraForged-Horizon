@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse, gzip, hashlib, json
 from collections import Counter
 from pathlib import Path
+from java_reference import java_reference_root
 ROOT=Path(__file__).resolve().parents[2]
 def sha(data): return hashlib.sha256(data).hexdigest()
 NAMES=['cell/rivermap/river/RiverCarver','cell/rivermap/river/River','cell/rivermap/river/RiverWarp',
@@ -13,6 +14,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ('first','second','output'): p.add_argument('--'+n,type=Path,required=True)
     args=p.parse_args()
+    java_reference_root()
     if args.output.exists():p.error('Refusing to replace river-carver reference directory')
     captures=[];producers=[]
     for path in (args.first,args.second):
@@ -37,7 +39,7 @@ def main():
     expected={'carve':48600,'lake':34992,'wetland':78732,'fork':810,'lake-geometry':5832,'lake-bounds':72,'wetland-bounds':162,
               'valley-rng':384,'create-rng':18,'round-double':24,'bounds-empty':1,'bounds-none':1,'bounds-negative':1}
     if len(rows)!=len(values.splitlines()) or counts!=expected or sum(len(v.split(',')) for v in rows.values())!=3919986:raise ValueError('Incomplete carver corpus')
-    compressed=gzip.compress(values,mtime=0);source_root=ROOT/'common/src/main/java/raccoonman/reterraforged/world/worldgen'
+    compressed=gzip.compress(values,mtime=0);source_root=java_reference_root() / 'common/src/main/java/raccoonman/reterraforged/world/worldgen'
     report={'schemaVersion':1,'status':'frozen-genuine-java-river-carvers-reference','freshRunsAgree':True,
         'productionJarSha256':producers[0]['productionJarSha256'],'fixtureSha256':sha(compressed),'uncompressedValuesSha256':sha(values),'inputsSha256':sha(inputs),
         'recordCount':len(rows),'fieldsPerProfile':3919986,'recordKinds':counts,'producerReports':producers,

@@ -18,8 +18,17 @@ jobs:
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 15
+    env:
+      TERRAFORGED_JAVA_ROOT: ${{ github.workspace }}/build/reference-java
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Check out pinned Java reference sources
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: TheApple05/TerraForged-26.2
+          ref: c7a477a4a272ef34df9d3f55a95f185f264b40ec
+          path: build/reference-java
+          persist-credentials: false
       - name: Install stable Rust
         run: rustup toolchain install stable --profile minimal --component clippy --component rustfmt
       - name: Check independent Java fixtures

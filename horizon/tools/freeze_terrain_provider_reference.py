@@ -5,6 +5,7 @@ import hashlib
 import gzip
 import json
 from pathlib import Path
+from java_reference import java_reference_root
 
 ROOT=Path(__file__).resolve().parents[2]
 def sha(data):return hashlib.sha256(data).hexdigest()
@@ -21,6 +22,7 @@ ORIGINS=['world.worldgen.'+n for n in [
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--first',type=Path,required=True);p.add_argument('--second',type=Path,required=True);p.add_argument('--output',type=Path,required=True);args=p.parse_args()
+    java_reference_root()
     if args.output.exists():p.error('Refusing to replace terrain-provider reference directory')
     captures=[];producers=[]
     for path in (args.first,args.second):
@@ -43,7 +45,7 @@ def main():
     rows=dict(line.split('\t',1) for line in values.decode().splitlines())
     if len(rows)!=len(values.splitlines()) or len(rows)!=230292 or sum(k.startswith('node-cell/') for k in rows)!=77682 or sum(k.startswith('selector/') for k in rows)!=49368 or sum(k.startswith('volcano/') for k in rows)!=101400 or sum(k.startswith('modify/') for k in rows)!=1152 or sum(k.startswith('node/') for k in rows)!=642:raise ValueError('Incomplete terrain-provider corpus')
     compressed=gzip.compress(values,mtime=0)
-    source_root=ROOT/'common/src/main/java/raccoonman/reterraforged'
+    source_root=java_reference_root() / 'common/src/main/java/raccoonman/reterraforged'
     report={'schemaVersion':1,'status':'frozen-genuine-java-terrain-provider-reference','freshRunsAgree':True,
         'productionJarSha256':producers[0]['productionJarSha256'],'fixtureSha256':sha(compressed),'uncompressedValuesSha256':sha(values),'inputsSha256':sha(inputs),
         'recordCount':len(rows),'settingCases':4,'signed32Seeds':6,'cellSamples':229602,'providerNodes':642,'volcanoGridSamples':101400,'allCellFields':24,'producerReports':producers,

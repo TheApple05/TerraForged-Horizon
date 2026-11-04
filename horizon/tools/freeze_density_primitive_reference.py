@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse,gzip,hashlib,json
 from collections import Counter
 from pathlib import Path
+from java_reference import java_reference_root
 ROOT=Path(__file__).resolve().parents[2]
 def sha(data):return hashlib.sha256(data).hexdigest()
 NAMES=['densityfunction/CellSampler','densityfunction/CellSampler$Field','densityfunction/ClampToNearestUnit',
@@ -13,6 +14,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ('first','second','output'):p.add_argument('--'+n,type=Path,required=True)
     args=p.parse_args()
+    java_reference_root()
     if args.output.exists():p.error('Refusing to replace density primitive reference directory')
     captures=[];producers=[]
     for path in (args.first,args.second):
@@ -35,7 +37,7 @@ def main():
     rows=dict(line.split('\t',1) for line in values.decode().splitlines());counts=Counter(k.split('/')[0] for k in rows)
     expected={'field':42120,'array':1728,'array-init':819,'spline':336,'clamp':280,'noise':30,'array-bounds':12,'context':3}
     if len(rows)!=len(values.splitlines()) or counts!=expected or sum(len(v.split(',')) for v in rows.values())!=430254:raise ValueError('Incomplete density primitive corpus')
-    compressed=gzip.compress(values,mtime=0);source_root=ROOT/'common/src/main/java/raccoonman/reterraforged/world/worldgen'
+    compressed=gzip.compress(values,mtime=0);source_root=java_reference_root() / 'common/src/main/java/raccoonman/reterraforged/world/worldgen'
     sources=sorted({name.split('$')[0]+'.java' for name in NAMES})
     report={'schemaVersion':1,'status':'frozen-genuine-java-density-primitive-reference','freshRunsAgree':True,
         'productionJarSha256':producers[0]['productionJarSha256'],'fixtureSha256':sha(compressed),'uncompressedValuesSha256':sha(values),'inputsSha256':sha(inputs),

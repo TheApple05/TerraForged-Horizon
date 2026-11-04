@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+from java_reference import java_reference_root
 import subprocess
 import tempfile
 
@@ -20,6 +21,7 @@ def main():
     parser.add_argument('--jar',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
     args = parser.parse_args()
+    java_reference_root()
     if args.output.exists(): parser.error('Refusing to replace a math reference directory')
     source = ROOT/'horizon/tests/java/NativeMathProbe.java'
     workroot = ROOT/'build/qa/horizon/math-capture'
@@ -46,7 +48,7 @@ def main():
     args.output.mkdir(parents=True)
     (args.output/'sine.bin').write_bytes(binary)
     (args.output/'values.tsv').write_bytes(values)
-    noise = ROOT/'common/src/main/java/raccoonman/reterraforged/world/worldgen/noise/NoiseUtil.java'
+    noise = java_reference_root() / 'common/src/main/java/raccoonman/reterraforged/world/worldgen/noise/NoiseUtil.java'
     record = {'schemaVersion':1,'status':'frozen-independent-java-math-reference','freshRunsAgree':True,
         'productionJarSha256':sha(args.jar),'noiseUtilSourceSha256Lf':hashlib.sha256(noise.read_bytes().replace(b'\r\n',b'\n')).hexdigest(),
         'oracleSourceSha256Lf':hashlib.sha256(source.read_bytes().replace(b'\r\n',b'\n')).hexdigest(),

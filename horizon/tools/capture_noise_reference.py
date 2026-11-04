@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+from java_reference import java_reference_root
 import subprocess
 import tempfile
 
@@ -22,6 +23,7 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--family', choices=['base','second','sources','power','cell','terrain'], default='base')
     args = parser.parse_args()
+    java_reference_root()
     metadata = args.output.with_suffix('.json')
     if args.output.exists() or metadata.exists():
         parser.error('Refusing to replace a frozen oracle')
@@ -31,7 +33,7 @@ def main():
              'sources':'NativeNoiseSourcesProbe','power':'NativePowerProbe','cell':'NativeCellFoundationProbe','terrain':'NativeTerrainProbe'}[args.family]
     source = ROOT/('horizon/tests/java/'+probe+'.java')
     jar = args.jar.resolve()
-    cp = str(jar) + os.pathsep + (ROOT/'build/qa/target/compile-classpath.txt').read_text().strip()
+    cp = str(jar) + os.pathsep + (java_reference_root() / 'build/qa/target/compile-classpath.txt').read_text().strip()
     suffix = '.exe' if os.name == 'nt' else ''
     workroot = ROOT/'build/qa/horizon/noise-reference'
     workroot.mkdir(parents=True, exist_ok=True)
@@ -68,13 +70,13 @@ def main():
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_bytes(captures[0])
     classes = ['NoiseUtil.java']+['module/'+name+'.java' for name in modules]+['function/Interpolation.java']
-    srcroot = ROOT/'common/src/main/java/raccoonman/reterraforged/world/worldgen/noise'
+    srcroot = java_reference_root() / 'common/src/main/java/raccoonman/reterraforged/world/worldgen/noise'
     if args.family=='cell':
-        srcroot = ROOT/'common/src/main/java/raccoonman/reterraforged/world/worldgen'
+        srcroot = java_reference_root() / 'common/src/main/java/raccoonman/reterraforged/world/worldgen'
         classes = ['cell/Cell.java','cell/heightmap/Levels.java','densityfunction/tile/Size.java',
                    'cell/terrain/TerrainType.java','cell/terrain/Terrain.java','cell/biome/type/BiomeType.java','noise/NoiseUtil.java']
     if args.family=='terrain':
-        srcroot=ROOT/'common/src/main/java/raccoonman/reterraforged/world/worldgen'
+        srcroot=java_reference_root() / 'common/src/main/java/raccoonman/reterraforged/world/worldgen'
         classes=['cell/terrain/'+name+'.java' for name in ['ITerrain','Terrain','ConfiguredTerrain','CompositeTerrain','TerrainType','TerrainCategory']]+['noise/NoiseUtil.java']
     record = {'schemaVersion':1,'status':'frozen-java-reference','productionJarSha256':digest(jar),
         'sourceSha256Lf':{name:hashlib.sha256((srcroot/name).read_bytes().replace(b'\r\n',b'\n')).hexdigest() for name in classes},

@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+from java_reference import java_reference_root
 
 ROOT=Path(__file__).resolve().parents[2]
 def sha(data):return hashlib.sha256(data).hexdigest()
@@ -19,6 +20,7 @@ ORIGINS=['world.worldgen.'+n for n in [
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--first',type=Path,required=True);p.add_argument('--second',type=Path,required=True);p.add_argument('--output',type=Path,required=True);args=p.parse_args()
+    java_reference_root()
     if args.output.exists():p.error('Refusing to replace terrain-factories reference directory')
     captures=[];producers=[]
     for path in (args.first,args.second):
@@ -40,7 +42,7 @@ def main():
     if inputs!=(ROOT/'horizon/tests/inputs/terrain-factories-v1.json').read_bytes():raise ValueError('Captured inputs differ from predefined cases')
     rows=dict(line.split('\t',1) for line in values.decode().splitlines())
     if len(rows)!=len(values.splitlines()) or len(rows)!=108361 or sum(k.startswith('cell/') for k in rows)!=58080 or sum(k.startswith('noise/') for k in rows)!=49368 or sum(k.startswith('meta/') for k in rows)!=408 or sum(k.startswith('cursor/') for k in rows)!=480 or sum(k.startswith('round/') for k in rows)!=25:raise ValueError('Incomplete terrain-factories corpus')
-    source_root=ROOT/'common/src/main/java/raccoonman/reterraforged'
+    source_root=java_reference_root() / 'common/src/main/java/raccoonman/reterraforged'
     report={'schemaVersion':1,'status':'frozen-genuine-java-terrain-factories-reference','freshRunsAgree':True,
         'productionJarSha256':producers[0]['productionJarSha256'],'fixtureSha256':sha(values),'inputsSha256':sha(inputs),
         'recordCount':len(rows),'factoryBranches':20,'settingCases':4,'signed32Seeds':6,'cellSamples':58080,'rawNoiseSamples':49368,'allCellFields':24,'producerReports':producers,

@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+from java_reference import java_reference_root
 
 ROOT = Path(__file__).resolve().parents[2]
 NAMES = ['Constant','Add','Multiply','Frequency','ShiftSeed','Abs','Invert','Min','Max','Clamp','Map','Simplex','Perlin2']
@@ -27,6 +28,7 @@ def main():
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--family',choices=['composition','shaping','cellular','final','visitors'],default='composition')
     args = parser.parse_args()
+    java_reference_root()
     names = {'composition':NAMES,'shaping':SHAPING_NAMES,'cellular':CELLULAR_NAMES,'final':FINAL_NAMES,'visitors':VISITOR_NAMES}[args.family]
     graph_count = {'composition':40,'shaping':85,'cellular':158,'final':78,'visitors':144}[args.family]
     extra_records = {'cellular':18,'final':15898,'visitors':144}.get(args.family,0)
@@ -67,7 +69,7 @@ def main():
     if len(records)!=len(lines): raise ValueError('Duplicate graph record keys')
     graphs = {k:v for k,v in records.items() if k.startswith('graph/')}
     if len(graphs)!=graph_count or len(lines)!=graph_count*(1+6*17*17)+extra_records: raise ValueError('Graph corpus incomplete')
-    source_root = ROOT/'common/src/main/java/raccoonman/reterraforged/world/worldgen/noise'
+    source_root = java_reference_root() / 'common/src/main/java/raccoonman/reterraforged/world/worldgen/noise'
     sources = {name:hashlib.sha256((source_root/((name.replace('.','/') if '.' in name or name=='NoiseUtil' else 'module/'+name).split('$')[0]+'.java')).read_bytes().replace(b'\r\n',b'\n')).hexdigest() for name in names}
     probe = ROOT/('horizon/tests/java/'+{'composition':'NativeNoiseCompositionProbe','shaping':'NativeNoiseShapingProbe','cellular':'NativeNoiseCellularProbe','final':'NativeNoiseFinalProbe','visitors':'NativeNoiseVisitorProbe'}[args.family]+'.java')
     result = {'schemaVersion':1,'status':'frozen-genuine-game-java-reference','freshRunsAgree':True,

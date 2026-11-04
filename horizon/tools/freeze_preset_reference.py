@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+from java_reference import java_reference_root
 
 ROOT=Path(__file__).resolve().parents[2]
 def sha(data):return hashlib.sha256(data).hexdigest()
@@ -15,6 +16,7 @@ ORIGINS=['data.worldgen.preset.settings.'+n for n in ['Preset','WorldSettings','
     'world.worldgen.noise.module.Simplex','world.worldgen.noise.module.Simplex2','world.worldgen.noise.module.PerlinRidge','world.worldgen.noise.module.SimplexRidge','world.worldgen.noise.module.Billow','world.worldgen.noise.module.Cubic']
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--first',type=Path,required=True);p.add_argument('--second',type=Path,required=True);p.add_argument('--output',type=Path,required=True);args=p.parse_args()
+    java_reference_root()
     if args.output.exists():p.error('Refusing to replace preset reference directory')
     captures=[];producers=[]
     for path in (args.first,args.second):
@@ -35,7 +37,7 @@ def main():
     if inputs!=(ROOT/'horizon/tests/inputs/preset-model-v1.json').read_bytes():raise ValueError('Captured inputs differ from predefined cases')
     rows=dict(line.split('\t',1) for line in values.decode().splitlines())
     if len(rows)!=len(values.splitlines()) or len(rows)!=85630 or sum(k.startswith('graph/') for k in rows)!=49 or len(json.loads(inputs))!=5:raise ValueError('Preset corpus incomplete')
-    source_root=ROOT/'common/src/main/java/raccoonman/reterraforged'
+    source_root=java_reference_root() / 'common/src/main/java/raccoonman/reterraforged'
     report={'schemaVersion':1,'status':'frozen-genuine-java-preset-reference','freshRunsAgree':True,'productionJarSha256':producers[0]['productionJarSha256'],
         'fixtureSha256':sha(values),'inputsSha256':sha(inputs),'recordCount':len(rows),'presetCases':5,'factoryGraphs':49,'producerReports':producers,
         'sourceSha256Lf':{name:sha((source_root/name).read_bytes().replace(b'\r\n',b'\n')) for name in SOURCES},
