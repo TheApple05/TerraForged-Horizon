@@ -20,7 +20,7 @@ cargo check --locked --manifest-path horizon/native-adapter/Cargo.toml --all-tar
 python horizon/tools/verify_native_scalars.py
 ```
 
-Native builds and verification against frozen fixtures do not require Java. Regenerating or capturing Java references requires an explicit checkout of the [Java port](https://github.com/TheApple05/TerraForged-26.2):
+Native builds and fixture-only checks, including the scalar, utility, and classic-biome verifiers, do not require Java. Regenerating or capturing Java references, and checks that additionally validate Java producer source such as pillar math, require an explicit checkout of the [Java port](https://github.com/TheApple05/TerraForged-26.2):
 
 ```powershell
 $env:TERRAFORGED_JAVA_ROOT = 'C:\path\to\TerraForged-26.2'

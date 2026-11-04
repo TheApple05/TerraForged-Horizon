@@ -20,7 +20,7 @@ The original [development log](https://github.com/TheApple05/TerraForged-26.2/bl
 
 ## Reproduction boundary
 
-Native Rust builds and frozen-fixture verification are self-contained. Reference capture and source regeneration tools read Java inputs only from the explicit `TERRAFORGED_JAVA_ROOT` checkout. Native CI pins the original Java reference commit above. Outputs remain in this repository's ignored build directories.
+Native Rust builds and fixture-only checks are self-contained. Reference capture, source regeneration, and Java producer source-identity checks read Java inputs only from the explicit `TERRAFORGED_JAVA_ROOT` checkout. Native CI pins the original Java reference commit above. Outputs remain in this repository's ignored build directories.
 
 Historical fixture and validation report bytes are preserved. Their original machine paths, source-tree hashes, and checkpoint-specific limitations describe the recorded runs; moving the repository does not turn them into a new acceptance run. Follow the current documentation for the latest checkpoint.
 
