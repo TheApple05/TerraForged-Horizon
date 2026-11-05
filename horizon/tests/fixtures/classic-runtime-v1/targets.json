@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "seed": 8675309,
+  "targets": {
+    "reterraforged:bryce": {
+      "x": -118532,
+      "y": 99,
+      "z": -107012
+    },
+    "reterraforged:stone_forest": {
+      "x": 100812,
+      "y": 72,
+      "z": -100468
+    },
+    "reterraforged:cold_steppe": {
+      "x": -126976,
+      "y": 136,
+      "z": 76052
+    },
+    "reterraforged:cold_marshland": {
+      "x": -16896,
+      "y": 63,
+      "z": 24988
+    },
+    "reterraforged:frozen_marsh": {
+      "x": -104064,
+      "y": 63,
+      "z": -12168
+    },
+    "reterraforged:frozen_lake": {
+      "x": -79680,
+      "y": 63,
+      "z": 33060
+    },
+    "reterraforged:lake": {
+      "x": 56832,
+      "y": 63,
+      "z": 15280
+    },
+    "reterraforged:warm_beach": {
+      "x": 43540,
+      "y": 63,
+      "z": 113064
+    },
+    "reterraforged:fir_forest": {
+      "x": 0,
+      "y": 70,
+      "z": -43692
+    },
+    "reterraforged:snowy_fir_forest": {
+      "x": -124928,
+      "y": 76,
+      "z": -62032
+    },
+    "reterraforged:flower_plains": {
+      "x": 68608,
+      "y": 71,
+      "z": -67424
+    },
+    "reterraforged:taiga_scrub": {
+      "x": -125952,
+      "y": 72,
+      "z": 41532
+    },
+    "reterraforged:snowy_taiga_scrub": {
+      "x": -28672,
+      "y": 98,
+      "z": 56636
+    },
+    "reterraforged:marshland": {
+      "x": -102528,
+      "y": 63,
+      "z": -26552
+    },
+    "reterraforged:savanna_scrub": {
+      "x": 70656,
+      "y": 80,
+      "z": -41536
+    },
+    "reterraforged:shattered_savanna_scrub": {
+      "x": 100428,
+      "y": 74,
+      "z": 42832
+    },
+    "reterraforged:steppe": {
+      "x": 68096,
+      "y": 144,
+      "z": 128192
+    }
+  },
+  "sourceJavaReport": "docs/validation/classic-biome-dev23-fabric-corpus.json",
+  "sourceJavaReportSha256": "4e9190382bbd9fd3a63611b2625b543b85d45c7133ac78b5236a301f189baf02",
+  "scope": "Advisory Java candidate coordinates, not expected native world snapshots. Native registry/noise/stored-biome checks must execute independently."
+}

@@ -30,7 +30,7 @@ jobs:
         run: |
           git init build/qa/horizon/host-source
           git -C build/qa/horizon/host-source remote add origin https://github.com/TheApple05/horizon.git
-          git -C build/qa/horizon/host-source fetch --depth=1 origin 61680d714bad3496a0ca5cef31537166f1232c4b
+          git -C build/qa/horizon/host-source fetch --depth=1 origin 1049b7158ecbc6f455c0b56cce744ff34f80a27b
           git -C build/qa/horizon/host-source checkout --detach FETCH_HEAD
           git init build/qa/horizon/mixin-source
           git -C build/qa/horizon/mixin-source remote add origin https://github.com/horizon-rust/horizon-mixins.git
@@ -46,7 +46,14 @@ jobs:
       - name: Check compiled densities and ownership
         shell: bash
         run: |
-          cargo clippy --offline --locked --manifest-path build/qa/horizon/ci-host/staged/Cargo.toml -p ${{ matrix.mode == 'ui' && 'horizon-client-lib' || matrix.mode != 'graph' && 'horizon-world' || 'horizon-core' }} --lib -- -D warnings
+          if [ '${{ matrix.mode }}' = ui ]; then
+            packages=(-p horizon-client -p horizon-client-lib)
+          elif [ '${{ matrix.mode }}' = graph ]; then
+            packages=(-p horizon-core)
+          else
+            packages=(-p horizon-world)
+          fi
+          cargo clippy --offline --locked --manifest-path build/qa/horizon/ci-host/staged/Cargo.toml "${packages[@]}" --lib -- -D warnings
       - name: Check density observations
         if: matrix.mode == 'graph' || matrix.mode == 'registry'
         shell: bash

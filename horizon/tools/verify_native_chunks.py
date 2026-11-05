@@ -38,7 +38,8 @@ def main():
         'stageResultSha256':sha(stage_path),'probeSourceSha256':sha(source),'entryMode':a.entry,'profile':a.profile,'compileExitCode':compiled.returncode,
         'resourceRoot':str(resources),'resourceFilesSha256':before,'runs':[],'gameAssetsDownloaded':False,
         'notCovered':['17 native classic biome variants','Source carver configuration','Independent whole-chunk Java parity','Actual save-file round trip','Structures/spawn/client/launcher/modpack acceptance']}
-    executable=workspace/'target'/a.profile/(binary+('.exe' if os.name=='nt' else ''))
+    target=Path(env.get('CARGO_TARGET_DIR',str(workspace/'target')))
+    executable=target/a.profile/(binary+('.exe' if os.name=='nt' else ''))
     inputs=ROOT/('horizon/native-content/data/terraforged/worldgen/world_preset/default.json' if a.entry else 'horizon/tests/fixtures/host-density-v1/inputs.json')
     normalized=[]
     if compiled.returncode==0:

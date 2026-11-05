@@ -15,7 +15,20 @@ import tarfile
 import tomllib
 
 ROOT = Path(__file__).resolve().parents[2]
-PIN = "61680d714bad3496a0ca5cef31537166f1232c4b"
+PIN = "1049b7158ecbc6f455c0b56cce744ff34f80a27b"
+
+
+def add_module(bundle: Path, manifest, file: str, name: str, source: str) -> None:
+    shutil.copy2(ROOT / "horizon/native-world" / source, bundle / source)
+    manifest.write(f'\n[[module]]\nid = "{name}"\nfile = "{file}"\nname = "{name}"\nsource = "{source}"\nvisibility = "pub"\n')
+
+
+def add_head(bundle: Path, manifest, ident: str, target: str, helper: str, bindings: list[tuple[str, str, str]]) -> None:
+    shutil.copy2(ROOT / "horizon/native-world" / helper, bundle / helper)
+    manifest.write(f'\n[[injection]]\nid = "{ident}"\ntarget = "{target}"\nkind = "HEAD"\ncancellable = true\nhelper = "{helper}"\nbindings = [\n')
+    for name, ty, value in bindings:
+        manifest.write(f'  {{ name = "{name}", ty = "{ty}", value = "{value}" }},\n')
+    manifest.write(']\n')
 
 
 def sha(path: Path) -> str:
@@ -124,6 +137,14 @@ bindings = [
 ]
 ''')
     if a.world:
+        with (bundle / "horizon-mixin.toml").open("a", encoding="utf-8", newline="\n") as manifest:
+            generator = "crates/horizon-world/src/worldgen/generator.rs"
+            for name, file in [("terraforged_resources", "biome_resources.rs"), ("terraforged_biomes", "biome_mapping.rs"), ("terraforged_features", "feature_runtime.rs")]:
+                add_module(bundle, manifest, generator, name, file)
+            add_module(bundle, manifest, "crates/horizon-world/src/worldgen/overrides.rs", "terraforged_defaults", "resource_overrides.rs")
+            add_head(bundle, manifest, "native-biome-resources", "horizon_world::worldgen::generator::GeneratorData::load_with", "load_biome_resources.rs", [
+                ("dir", "&std::path::Path", "dir"), ("registry", "&'static BlockRegistry", "registry"), ("overrides", "&WorldgenOverrides", "ov"),
+            ])
         shutil.copy2(ROOT / "horizon/native-world/world_runtime.rs", bundle / "world_runtime.rs")
         with (bundle / "horizon-mixin.toml").open("a", encoding="utf-8", newline="\n") as manifest:
             manifest.write('''
@@ -154,6 +175,14 @@ bindings = [
 ]
 ''')
     if a.ui:
+        with (bundle / "horizon-mixin.toml").open("a", encoding="utf-8", newline="\n") as manifest:
+            add_module(bundle, manifest, "crates/horizon-client-render/src/biome.rs", "terraforged_client_biomes", "client_biomes.rs")
+            add_head(bundle, manifest, "native-client-biome-registry", "horizon_client_render::biome::Biomes::load", "load_client_biomes.rs", [("root", "&std::path::Path", "root")])
+            add_module(bundle, manifest, "crates/horizon-client/src/game.rs", "terraforged_biome_packs", "packed_biomes.rs")
+            add_head(bundle, manifest, "native-client-biome-packs", "horizon_client::game::world_loading::packed_biomes", "load_packed_biomes.rs", [
+                ("world_root", "&std::path::Path", "world_root"), ("resources", "&std::path::Path", "resources"),
+                ("base", "&std::sync::Arc<horizon_client::biome::Biomes>", "base"), ("enabled_features", "&[String]", "enabled_features"),
+            ])
         for name in ("world_presets.rs", "register_preset_catalog.rs", "register_preset_reopen.rs"):
             shutil.copy2(ROOT / "horizon/native-world" / name, bundle / name)
         with (bundle / "horizon-mixin.toml").open("a", encoding="utf-8", newline="\n") as manifest:
@@ -206,7 +235,7 @@ bindings = [
     for file in sorted((ROOT / "horizon/native-core/src").rglob("*")):
         if file.is_file() and "bin" not in file.relative_to(ROOT / "horizon/native-core/src").parts:
             source_files[file.relative_to(ROOT).as_posix()] = sha(file)
-    for name, destination in (("noise_registry.rs", "noise_registry.rs"), ("preset.rs", "preset_input.rs"), ("router.rs", "router.rs"), ("spawn.rs", "spawn.rs")):
+    for name, destination in (("noise_registry.rs", "noise_registry.rs"), ("preset.rs", "preset_input.rs"), ("router.rs", "router.rs"), ("spawn.rs", "spawn.rs"), ("classic_biome_data.rs", "classic_biome_data.rs")):
         file = ROOT / "horizon/native-adapter/src" / name
         source_files[file.relative_to(ROOT).as_posix()] = sha(file)
         (kernel / "src" / destination).write_text(file.read_text(encoding="utf-8").replace("terraforged_native_core::", "crate::"), encoding="utf-8", newline="\n")
@@ -214,7 +243,7 @@ bindings = [
         file = ROOT / "horizon/native-world/world_runtime.rs"
         source_files[file.relative_to(ROOT).as_posix()] = sha(file)
     with (kernel / "src/lib.rs").open("a", encoding="utf-8", newline="\n") as lib:
-        lib.write("\npub mod noise_registry;\npub mod preset_input;\npub mod router;\npub mod spawn;\npub use serde_json;\n")
+        lib.write("\npub mod noise_registry;\npub mod preset_input;\npub mod router;\npub mod spawn;\npub mod classic_biome_data;\npub use serde_json;\n")
     if a.entry:
         data_dir=kernel / "data"
         data_dir.mkdir(exist_ok=True)
@@ -259,6 +288,11 @@ workspace = true
         for name in ("world_presets.rs", "register_preset_catalog.rs", "register_preset_reopen.rs"):
             file = ROOT / "horizon/native-world" / name
             source_files[file.relative_to(ROOT).as_posix()] = sha(file)
+    # Every injected runtime source is part of the reproducibility record.
+    for file in bundle.glob("*.rs"):
+        original = ROOT / "horizon/native-world" / file.name
+        if original.exists():
+            source_files[original.relative_to(ROOT).as_posix()] = sha(original)
     plan = output / "plan.json"
     stage = output / "staged"
     for action, destination in (("plan", plan), ("apply", stage)):
