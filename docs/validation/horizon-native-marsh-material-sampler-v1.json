@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-independent-marsh-material-sampler",
+  "completedAtUtc": "2026-11-04T23:57:14.557054+00:00",
+  "referenceRecords": 122832,
+  "recordsPerProfile": 81934,
+  "qualifiedOperations": [
+    "noise",
+    "material",
+    "select"
+  ],
+  "separateHostOperations": [
+    "info",
+    "positive"
+  ],
+  "referenceMetadataSha256": "710d03d1ba1da82facdba87d0bcf28d9b9bddf69192e3969cbce33e71012fa75",
+  "nativeSourceSha256": "2debd25b94359660bbbd358c06dd6bfce3b9ecd2b374513840d888caff364fab",
+  "probeSourceSha256": "0e6d6448b0046e7dd4e83cc1a0e1b923aeae432316fd1f66d9215a4993f393a5",
+  "verifierSourceSha256": "52bc6594d240fc4f0e9371ce9014d101aa0c0314bcd8a20e3028c2f39cb5ef8d",
+  "profiles": [
+    {
+      "profile": "debug",
+      "exitCode": 0,
+      "recordCount": 81934,
+      "differenceCount": 0,
+      "firstDifferences": [],
+      "executableSha256": "0ff61c2ad532992f7e9748189571b48a17070bfd43557d16ca42d729e71a1190",
+      "outputSha256": "1c801d86d98ec22b43c599da4729e1cbee78b8ce7f4d68e336407cea99a38bf5",
+      "allJavaObservationsMatch": true
+    },
+    {
+      "profile": "release",
+      "exitCode": 0,
+      "recordCount": 81934,
+      "differenceCount": 0,
+      "firstDifferences": [],
+      "executableSha256": "b7b3f34e895b9e60678d2e0bc11b4fd7f47b438e9ccb4da84e0eb3ab8d1ac51e",
+      "outputSha256": "1c801d86d98ec22b43c599da4729e1cbee78b8ce7f4d68e336407cea99a38bf5",
+      "allJavaObservationsMatch": true
+    }
+  ],
+  "scope": "Packaged SwampSurfaceFeature material graph/private getMaterial, real Minecraft 26.2 biome-info noise, and projected Java float-vs-double material threshold comparisons. Dense negative/distant coordinates and boundary values.",
+  "notCovered": [
+    "Full marsh block-placement loop",
+    "Heightmap/fluid/write semantics in actual worlds",
+    "Natural scenery, structures or performance"
+  ]
+}

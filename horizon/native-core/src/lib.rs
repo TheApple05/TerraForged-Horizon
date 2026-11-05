@@ -55,4 +55,5 @@ pub mod worley;
 
 pub mod classic_pillars;
 
+pub mod marsh_sampler;
 pub mod pillar_sampler;
