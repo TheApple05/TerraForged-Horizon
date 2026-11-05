@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "completedAtUtc": "2026-11-05T00:15:40.026558+00:00",
+  "checks": [
+    {
+      "command": [
+        "cargo",
+        "+stable",
+        "fmt",
+        "--manifest-path",
+        "horizon/native-core/Cargo.toml",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "cargo",
+        "+stable",
+        "clippy",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "horizon/native-core/Cargo.toml",
+        "--lib",
+        "--bin",
+        "marsh_sampler_probe",
+        "--",
+        "-D",
+        "warnings",
+        "-A",
+        "clippy::too_many_arguments"
+      ],
+      "exitCode": 0,
+      "logSha256": "b1899d80017cd098ae3e5fda1658f453f441cbc32d0d3dbef707ae6cb668ee80"
+    },
+    {
+      "command": [
+        "cargo",
+        "+stable",
+        "test",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "horizon/native-core/Cargo.toml",
+        "--lib"
+      ],
+      "exitCode": 0,
+      "logSha256": "bca0dd367742125d5fd4de2c9575ac7d2421d87bba7d734db65515b72b86efbc"
+    }
+  ],
+  "clippyAllowance": "Existing native-core arity allowance"
+}
