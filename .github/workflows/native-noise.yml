@@ -59,6 +59,8 @@ jobs:
           python horizon/tools/verify_marsh_sampler.py --report build/qa/ci/native-marsh-material-sampler.json
       - name: Fetch locked registry adapter libraries
         run: cargo fetch --locked --manifest-path horizon/native-adapter/Cargo.toml
+      - name: Check independently captured spawn centers
+        run: python horizon/tools/verify_native_spawn.py --report build/qa/ci/native-spawn-centers.json
       - name: Check native biome resource transformations
         run: |
           cargo fmt --manifest-path horizon/native-adapter/Cargo.toml --check
