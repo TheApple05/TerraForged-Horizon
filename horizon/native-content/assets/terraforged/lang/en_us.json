@@ -1,3 +1,20 @@
 {
-  "generator.terraforged.default": "TerraForged"
+  "generator.terraforged.default": "TerraForged",
+  "biome.reterraforged.bryce": "Bryce",
+  "biome.reterraforged.cold_steppe": "Cold Steppe",
+  "biome.reterraforged.cold_marshland": "Cold Marshland",
+  "biome.reterraforged.fir_forest": "Fir Forest",
+  "biome.reterraforged.flower_plains": "Flower Plains",
+  "biome.reterraforged.frozen_lake": "Frozen Lake",
+  "biome.reterraforged.frozen_marsh": "Frozen Marsh",
+  "biome.reterraforged.lake": "Lake",
+  "biome.reterraforged.marshland": "Marshland",
+  "biome.reterraforged.savanna_scrub": "Savanna Scrub",
+  "biome.reterraforged.shattered_savanna_scrub": "Shattered Savanna Scrub",
+  "biome.reterraforged.snowy_fir_forest": "Snowy Fir Forest",
+  "biome.reterraforged.snowy_taiga_scrub": "Snowy Taiga Scrub",
+  "biome.reterraforged.steppe": "Steppe",
+  "biome.reterraforged.stone_forest": "Stone Forest",
+  "biome.reterraforged.taiga_scrub": "Taiga Scrub",
+  "biome.reterraforged.warm_beach": "Warm Beach"
 }

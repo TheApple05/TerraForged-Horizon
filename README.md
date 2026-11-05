@@ -6,9 +6,9 @@ The **Minecraft Java 26.2 Fabric and NeoForge port** lives separately in [TerraF
 
 ## Development status
 
-This is an experimental source-built port. The latest checkpoint covers procedural terrain, native world selection, and bounded client creation, saving, and reopening checks. Classic biome resources and features, broad visual quality, controlled performance, and general modpack support remain incomplete.
+This is an experimental source-built port. The current integration restores all 17 classic variants in live biome queries and generated chunk data, and runs the native pillar and marsh features through real generation regions. Client/save/launcher qualification for this integration, broad visual quality, controlled native performance, and general modpack support remain incomplete.
 
-See [native world selection](docs/horizon/native-world-selector.md), [current-engine client evidence](docs/horizon/current-engine-client.md), and the [component overview](horizon/README.md) for the exact scope. The older finite prepared-world bridge is retained separately from procedural generation.
+See [classic runtime integration](docs/horizon/classic-runtime-integration.md), [native world selection](docs/horizon/native-world-selector.md), [current-engine client evidence](docs/horizon/current-engine-client.md), and the [component overview](horizon/README.md) for the exact scope. The older finite prepared-world bridge is retained separately from procedural generation.
 
 ## Build and verify
 

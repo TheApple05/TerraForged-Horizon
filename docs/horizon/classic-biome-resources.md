@@ -19,8 +19,10 @@ fixed count 1, preserving the distinct feature identities used by ordering.
 The result includes eight placed-feature definitions, three configured-feature
 definitions and inherited tag additions. The configured definitions **require**
 native classic-pillar and swamp-surface implementations. Returning their JSON
-is not evidence that those algorithms execute. This module is not yet installed
-in the native pipeline, client registry or renderer.
+is not evidence that those algorithms execute. The later
+[runtime integration](classic-runtime-integration.md) installs these definitions
+in the generation pipeline and separately checks live/stored variants and real
+feature placement. Client registry and renderer acceptance remains separate.
 
 ## Verification
 

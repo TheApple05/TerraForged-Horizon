@@ -74,11 +74,23 @@ pub fn open(
     )
     .map_err(|error| resource(error.to_string()))?;
     let weak = Arc::downgrade(&kernel);
+    let classic = preset.original["miscellaneous"]["classicBiomeVariants"]
+        .as_bool()
+        .ok_or_else(|| resource("native classicBiomeVariants must be boolean"))?;
+    let mapper = Arc::new(terraforged_biomes::ClassicMapper::new(
+        kernel.clone(),
+        classic,
+    ));
+    let features = Arc::new(terraforged_features::NativeFeatureDecoder::new(
+        kernel.clone(),
+        seed,
+        classic,
+    )?);
     let inner = terraforged_registry::with_state(
         state,
         || -> Result<Arc<dyn SeededPipeline>, GeneratorError> {
             if legacy {
-                Ok(Arc::new(Pipeline::new(
+                Ok(Arc::new(Pipeline::new_with_extensions(
                     data,
                     seed,
                     LegacyRandom::new(seed),
@@ -86,9 +98,11 @@ pub fn open(
                     &settings,
                     with_structures,
                     Some(level),
+                    Some(mapper),
+                    Some(features),
                 )?))
             } else {
-                Ok(Arc::new(Pipeline::new(
+                Ok(Arc::new(Pipeline::new_with_extensions(
                     data,
                     seed,
                     XoroshiroRandom::new(seed),
@@ -96,6 +110,8 @@ pub fn open(
                     &settings,
                     with_structures,
                     Some(level),
+                    Some(mapper),
+                    Some(features),
                 )?))
             }
         },
