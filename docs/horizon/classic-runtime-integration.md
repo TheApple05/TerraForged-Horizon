@@ -65,6 +65,32 @@ no game files are downloaded or committed. Reports retain exact probe, engine,
 configuration and executable hashes. They are acceptance records for those
 specific bytes, not a general Java/Horizon whole-world parity claim.
 
+The [completed UI/save run](../validation/horizon-native-classic-ui-final-v3.json)
+uses the exact staged native.dev4 package on host `b33109ad`. It creates the
+default preset through the UI, checks a healthy natural survival spawn, renders
+all 17 natural classic locations, saves and exits, and reopens in a fresh client
+before generating distant terrain. Both clients exit cleanly. Full saved biome
+vectors match native generation for 18 chunks after the first save and 19 after
+the second: 56,832 stored quart values in total. The seed, native level stem and
+structures/bonus-chest flags also match. This is saved-biome and factory
+selection acceptance, not independent whole-world Java parity.
+
+Frozen marsh is the first teleport in that run and becomes visible in 30.2
+seconds. Some other locations take several minutes; these uncontrolled UI waits
+do not establish acceptable native performance. The original high-camera stone
+forest image obscures its pillar shafts in fog. The completed
+[lower-camera follow-up](../validation/horizon-native-lower-pillars-v1.json)
+shows the connected shafts, caps and ground. It plays only an ordinary copy of
+the completed QA world; source-world and checked resource hashes stay unchanged.
+Both lower views pass agent visual smoke review, with independent Java scenery
+parity and player beauty acceptance remaining outside that scope.
+
+These are unmodified screenshots from the lower-camera follow-up:
+
+![Native stone forest geometry smoke view](../images/native-dev4-stone-forest.png)
+
+![Native Bryce geometry smoke view](../images/native-dev4-bryce.png)
+
 ## Host APIs and remaining work
 
 The integration uses the narrow feature execution and world-owned decoder APIs
@@ -77,11 +103,16 @@ matches 40,898 actual Java observations in debug and release.
 
 For the host change, six renderer biome tests and 581 core/world tests pass;
 seven core/world tests are ignored. Formatting, Clippy and public-tree checks
-pass. The broad Windows renderer suite was stopped after exceeding 20 minutes;
-it is not a passing suite. The Python run retains the previously observed
-missing `/bin/bash` failure. No full GPU or vanilla parity pass is claimed.
+pass. The [fresh Windows suite](../validation/horizon-host-renderer-python-v1.json)
+completes all 1,430 listed renderer cases serially: 1,387 pass and 43 retain
+their suite-defined ignored status. It uses Vulkan by default, with some GPU
+tests explicitly exercising DirectX 12 too. The complete Python suite passes
+663 tests with 13 skips after choosing the installed Git Bash only in the
+validation child's PATH. The old parallel renderer timeout and failed WSL-stub
+run are retained as history. Parallel GPU-test execution and full vanilla
+parity are not qualified by the new passes.
 
-Still open: renderer metadata and save/reopen integration for these variants,
-independent whole-feature Java block parity, mixed features and structures,
+Still open: ignored renderer/resource cases and independent whole-feature Java
+block parity, mixed features and structures,
 source carver configuration, standard launcher installation, scenery review,
 controlled native performance and native mod combinations.

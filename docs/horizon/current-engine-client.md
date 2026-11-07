@@ -1,5 +1,10 @@
 # Current Horizon engine and client evidence
 
+For the latest native.dev4 all-17 client/save acceptance and current limitations,
+see [classic runtime integration](classic-runtime-integration.md) and the
+[reviewed recovery report](issues-2026-11-07.md). The records below retain their
+earlier engine pins and narrower acceptance scopes.
+
 The current integration advances to the [world selector API and real creation
 checks](native-world-selector.md) at commit `61680d714bad3496a0ca5cef31537166f1232c4b`.
 The following source/client checks describe the earlier integration pin

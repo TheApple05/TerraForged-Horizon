@@ -1,0 +1,21 @@
+{
+  "status": "published-unmodified-qa-previews",
+  "scope": "Lower-camera geometry smoke views, not Java scenery parity or player beauty acceptance",
+  "sourceReportSha256": "bbf9ddbd707fd6907aa5ab6dfffa51e78853caa4b946d49f9d7dcca6b1fd3931",
+  "images": [
+    {
+      "biome": "reterraforged:stone_forest",
+      "sourceScreenshot": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-lower-pillars-v1\\lower-stone_forest.png",
+      "publishedPath": "docs/images/native-dev4-stone-forest.png",
+      "sha256": "54d49c33c7ba307d0a1072c46201dddeeb26d962d50da3b427e3d3831b7fb711",
+      "operation": "Unmodified ordinary file copy; no image editing"
+    },
+    {
+      "biome": "reterraforged:bryce",
+      "sourceScreenshot": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-lower-pillars-v1\\lower-bryce.png",
+      "publishedPath": "docs/images/native-dev4-bryce.png",
+      "sha256": "274219d169c03f6a71e1862b793fa0df4545b8c5a3e4aa46020c13a93227f88f",
+      "operation": "Unmodified ordinary file copy; no image editing"
+    }
+  ]
+}
