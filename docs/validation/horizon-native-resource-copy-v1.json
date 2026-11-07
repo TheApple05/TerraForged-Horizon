@@ -1,0 +1,25 @@
+{
+  "status": "passed-prepared-resource-copy-integrity",
+  "verifierSha256": "b3451c838069b5e2aa2933e77185960cda210a7adee92f1e9275e1058aa2d176",
+  "files": 41,
+  "copyStatistics": {
+    "status": "copied",
+    "workers": 8,
+    "maxPendingFiles": 16,
+    "filesDiscovered": 41,
+    "bytesDiscovered": 220416,
+    "filesCopied": 41,
+    "bytesCopied": 220416,
+    "directoriesCopied": 3,
+    "enumerationComplete": true,
+    "elapsedSeconds": 0.03100000000000591
+  },
+  "exactBytesPreserved": true,
+  "sourceUnchanged": true,
+  "independentOrdinaryCopies": true,
+  "emptyDirectoryPreserved": true,
+  "unsafeDestinationRejected": true,
+  "copyErrorPropagated": true,
+  "gameLaunched": false,
+  "completedAtUtc": "2026-11-07T22:37:17.636518+00:00"
+}

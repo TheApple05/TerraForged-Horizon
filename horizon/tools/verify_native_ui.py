@@ -1,9 +1,63 @@
 """Create a native world through real UI controls, then save, reopen and inspect FULL chunks."""
 from __future__ import annotations
-import argparse,datetime as dt,hashlib,json,math,os,shutil,subprocess,time,zipfile
+import argparse,datetime as dt,hashlib,json,math,os,shutil,stat,subprocess,time,zipfile
+from concurrent.futures import FIRST_COMPLETED,ThreadPoolExecutor,wait
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def copy_prepared_resources(source,destination,progress,workers=8):
+    """Copy ordinary files into a fresh tree with bounded parallel I/O."""
+    if not 1<=workers<=8:raise ValueError('Resource copy supports one to eight workers')
+    def plain_stat(path):
+        value=path.lstat()
+        if stat.S_ISLNK(value.st_mode) or getattr(value,'st_file_attributes',0)&getattr(stat,'FILE_ATTRIBUTE_REPARSE_POINT',0):
+            raise ValueError('Resource copy refuses links or reparse points: '+str(path))
+        return value
+    if not stat.S_ISDIR(plain_stat(source).st_mode):raise ValueError('Prepared resource source must be a directory')
+    if destination.resolve().is_relative_to(source.resolve()):raise ValueError('Resource copy destination must be outside its source')
+    destination.mkdir(exist_ok=False)
+    started=time.monotonic();last_progress=started;pending={};directories=[]
+    statistics={'status':'copying','workers':workers,'maxPendingFiles':workers*2,'filesDiscovered':0,'bytesDiscovered':0,'filesCopied':0,'bytesCopied':0,'directoriesCopied':0,'enumerationComplete':False,'elapsedSeconds':0}
+    def publish(force=False):
+        nonlocal last_progress
+        now=time.monotonic()
+        if force or now-last_progress>=2:
+            statistics['elapsedSeconds']=now-started;progress(dict(statistics));last_progress=now
+    def finish_files():
+        completed,_=wait(pending,return_when=FIRST_COMPLETED)
+        for future in completed:
+            size=pending.pop(future);future.result()
+            statistics['filesCopied']+=1;statistics['bytesCopied']+=size
+        publish()
+    def walk_error(error):raise error
+    publish(True)
+    try:
+        with ThreadPoolExecutor(max_workers=workers,thread_name_prefix='prepared-resource-copy') as executor:
+            try:
+                for current,children,files in os.walk(source,followlinks=False,onerror=walk_error):
+                    current=Path(current);plain_stat(current);relative=current.relative_to(source);target=destination/relative
+                    if relative!=Path('.'):target.mkdir()
+                    directories.append((current,target));statistics['directoriesCopied']+=1
+                    for child in children:plain_stat(current/child)
+                    for name in files:
+                        path=current/name;metadata=plain_stat(path)
+                        if not stat.S_ISREG(metadata.st_mode):raise ValueError('Resource copy requires regular files: '+str(path))
+                        statistics['filesDiscovered']+=1;statistics['bytesDiscovered']+=metadata.st_size
+                        pending[executor.submit(shutil.copy2,path,target/name)]=metadata.st_size
+                        if len(pending)>=workers*2:finish_files()
+                        publish()
+                statistics['enumerationComplete']=True;publish(True)
+                while pending:finish_files()
+            except BaseException:
+                for future in pending:future.cancel()
+                raise
+        for original,copied in reversed(directories):shutil.copystat(original,copied,follow_symlinks=False)
+        statistics['status']='copied';publish(True)
+    except BaseException as error:
+        statistics['status']='failed';statistics['error']=str(error);publish(True)
+        raise
+    return dict(statistics)
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ('workspace','resources','hmod','report'):parser.add_argument('--'+name,required=True,type=Path)
@@ -149,7 +203,9 @@ def main():
             checkpoint('rendered '+name)
     try:
         checkpoint('copying prepared resources')
-        shutil.copytree(source,resources)
+        def copy_progress(value):
+            report['preparedResourceCopy']=value;checkpoint('copying prepared resources')
+        copy_prepared_resources(source,resources,copy_progress)
         if not all(sha(resources/name)==digest for name,digest in before.items()):raise ValueError('Copied resources differ')
         probe=workspace/'crates/horizon-client-lib/qa/terraforged_save_fixture.rs'
         if probe.read_bytes()!=(ROOT/'horizon/tests/rust/save_fixture_probe.rs').read_bytes():raise ValueError('Staged save probe differs')
@@ -242,8 +298,9 @@ def main():
                 try:process.wait(timeout=10)
                 except subprocess.TimeoutExpired:process.kill();process.wait()
         if log is not None:log.close()
-        report['checkedResourcesUnchanged']=all(sha(source/name)==digest for name,digest in before.items());report['checkedResourceCopyUnchanged']=resources.exists() and all(sha(resources/name)==digest for name,digest in before.items());report['checkedResourceFilesSha256']=before
-        if not report['checkedResourcesUnchanged'] or not report['checkedResourceCopyUnchanged']:report['status']='failed';report['error']='Checked original or copied resources changed'
+        report['checkedResourcesUnchanged']=all((source/name).is_file() and sha(source/name)==digest for name,digest in before.items());report['checkedResourceCopyUnchanged']=resources.exists() and all((resources/name).is_file() and sha(resources/name)==digest for name,digest in before.items());report['checkedResourceFilesSha256']=before
+        if not report['checkedResourcesUnchanged'] or not report['checkedResourceCopyUnchanged']:
+            report['status']='failed';report['resourceIntegrityError']='Checked original or copied resources changed or are incomplete';report.setdefault('error',report['resourceIntegrityError'])
         report['completedAtUtc']=dt.datetime.now(dt.timezone.utc).isoformat();checkpoint('completed')
     print(json.dumps({k:report.get(k) for k in ('status','error','horizonRevision','completedAtUtc')},indent=2));return 0 if report['status'].startswith('passed-') else 1
 if __name__=='__main__':raise SystemExit(main())

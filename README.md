@@ -10,6 +10,8 @@ This is an experimental source-built port. The current integration restores all 
 
 See [classic runtime integration](docs/horizon/classic-runtime-integration.md), [native world selection](docs/horizon/native-world-selector.md), [current-engine client evidence](docs/horizon/current-engine-client.md), and the [component overview](horizon/README.md) for the exact scope. The older finite prepared-world bridge is retained separately from procedural generation.
 
+The [reviewed issue and recovery report](docs/horizon/issues-2026-11-07.md) records CI recovery, loading observations, incomplete acceptance gates, and retained failed attempts.
+
 ## Build and verify
 
 With stable Rust installed, from this repository root:
