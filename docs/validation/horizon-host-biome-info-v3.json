@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-independent-host-biome-info-noise",
+  "completedAtUtc": "2026-11-05T01:11:56.873617+00:00",
+  "hostBaseRevision": "b33109ad199d2e149c80c8dc7d97f879c4f4ffec",
+  "hostSourceSha256": {
+    "crates/horizon-core/src/noise/simplex.rs": "5c63ed5861599c13bcb3f7f3d5d42373f1fafc8541549c0576dd4b28d3fef1ee",
+    "crates/horizon-world/src/worldgen/biome_temperature.rs": "a220307a1f88c0cb493dbc77cb247490908e0a265e4572036d5c112ea1715fe8",
+    "crates/horizon-world/examples/native_biome_info_noise.rs": "762eeb7855a8dfc60278ab9661beb827159d71c5b4f089005f12654ad17f69a7"
+  },
+  "referenceMetadataSha256": "710d03d1ba1da82facdba87d0bcf28d9b9bddf69192e3969cbce33e71012fa75",
+  "verifierSourceSha256": "c7c307413b334cdff204a7ea3e813653ba140264f56628575ed3a7bfad86d3f0",
+  "profiles": [
+    {
+      "profile": "debug",
+      "exitCode": 0,
+      "records": 40898,
+      "differenceCount": 0,
+      "firstDifferences": [],
+      "executableSha256": "e19cb043b4782e0dedcb876972c128c8ec45a7c42a5a46c1da22871e797eeb6c",
+      "outputSha256": "d6f9ca7a54e4d96066af58cee3f40eaf195659c44bdc4c34b98e02c6e99a1bad",
+      "allJavaObservationsMatch": true
+    },
+    {
+      "profile": "release",
+      "exitCode": 0,
+      "records": 40898,
+      "differenceCount": 0,
+      "firstDifferences": [],
+      "executableSha256": "aed2378427a65a93bfd10f5c8667dc9c9c482d27b2b62ba2c1dea2f73cb84fb5",
+      "outputSha256": "d6f9ca7a54e4d96066af58cee3f40eaf195659c44bdc4c34b98e02c6e99a1bad",
+      "allJavaObservationsMatch": true
+    }
+  ],
+  "scope": "Unrounded biome-info noise at 20,449 dense/negative/distant block coordinates and its positive/no-positive classification; 40,898 Java observations per profile.",
+  "gameFilesReadOrDownloaded": false,
+  "notCovered": [
+    "Marsh material graph (qualified separately)",
+    "Full marsh block placement",
+    "All vanilla temperature or precipitation behavior",
+    "Game visuals/performance/modpack compatibility"
+  ]
+}

@@ -60,13 +60,15 @@ fn generated_biomes(
 }
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = std::env::args().collect();
-    assert_eq!(
-        args.len(),
-        5,
-        "expected init/check, fresh QA world path, own preset JSON and own prepared resources"
+    assert!(
+        matches!(args.len(), 5 | 6),
+        "expected action, world, preset, resources and optional classic targets"
     );
     let world = Path::new(&args[2]);
-    let ui = matches!(args[1].as_str(), "check_ui" | "check_ui_all");
+    let ui = matches!(
+        args[1].as_str(),
+        "check_ui" | "check_ui_all" | "check_ui_classic" | "check_ui_all_classic"
+    );
     if args[1] == "init" {
         if world.exists() {
             return Err("Refusing to replace an existing world".into());
@@ -170,7 +172,33 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         None,
     )?;
     let mut checks = Vec::new();
-    for pos in [ChunkPos::new(0, 0), ChunkPos::new(1024, -2048)] {
+    let targets: Option<Value> = args
+        .get(5)
+        .map(|path| -> Result<_, Box<dyn std::error::Error>> {
+            Ok(serde_json::from_str(&fs::read_to_string(path)?)?)
+        })
+        .transpose()?;
+    let mut positions = vec![ChunkPos::new(0, 0), ChunkPos::new(1024, -2048)];
+    if let Some(targets) = &targets {
+        for target in targets["targets"]
+            .as_object()
+            .ok_or("classic target object missing")?
+            .values()
+        {
+            let pos = ChunkPos::new(
+                (target["x"].as_i64().ok_or("target x missing")? as i32) >> 4,
+                (target["z"].as_i64().ok_or("target z missing")? as i32) >> 4,
+            );
+            if !positions.contains(&pos) {
+                positions.push(pos);
+            }
+        }
+    }
+    let all = matches!(
+        args[1].as_str(),
+        "check_all" | "check_ui_all" | "check_ui_all_classic"
+    );
+    for pos in positions {
         let native = generated_biomes(&selected, pos)?;
         let vanilla = generated_biomes(&vanilla_generator, pos)?;
         assert_ne!(
@@ -178,8 +206,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             "chosen chunk must distinguish native generation from vanilla"
         );
         let mut stored_hash = None;
-        if matches!(args[1].as_str(), "check_all" | "check_ui_all")
-            || (matches!(args[1].as_str(), "check" | "check_ui") && pos == ChunkPos::new(0, 0))
+        if all
+            || (matches!(args[1].as_str(), "check" | "check_ui" | "check_ui_classic")
+                && pos != ChunkPos::new(1024, -2048))
         {
             let region_pos = pos.region();
             let mut region = RegionFile::open(world.join(format!(
@@ -205,6 +234,20 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 stored, native,
                 "game-saved biomes must match the native factory, not a vanilla fallback"
             );
+            if let Some(targets) = &targets {
+                for (name, target) in targets["targets"].as_object().unwrap() {
+                    let x = target["x"].as_i64().unwrap() as i32;
+                    let y = target["y"].as_i64().unwrap() as i32;
+                    let z = target["z"].as_i64().unwrap() as i32;
+                    if (x >> 4, z >> 4) == (pos.x, pos.z) {
+                        assert_eq!(
+                            biomes.get(chunk.biome(x & 15, y, z & 15)).name,
+                            *name,
+                            "classic biome absent from saved FULL chunk"
+                        );
+                    }
+                }
+            }
             stored_hash = Some(fingerprint(&stored));
         }
         checks.push(json!({"chunk":[pos.x,pos.z],"quartBiomes":native.len(),"nativeBiomeFingerprint":fingerprint(&native),"vanillaBiomeFingerprint":fingerprint(&vanilla),"storedBiomeFingerprint":stored_hash}));
