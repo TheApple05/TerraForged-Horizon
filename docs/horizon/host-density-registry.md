@@ -9,7 +9,7 @@ Vanilla resources continue through the original decoder.
 The state owns its kernel and bounded resolved noise registry. Its world seed is
 narrowed to i32 for source noise functions, matching `MixinRandomState`'s marker
 visitor. Separately compiled clamp children keep their own cache namespace.
-The native sampler cache retains its normal eight-tile default; the fixed oracle
+The native sampler cache retains its normal 32-tile default; the fixed oracle
 working set explicitly requests the supported capacity of 32.
 
 Registry activation is synchronous and thread-local. A private guard restores

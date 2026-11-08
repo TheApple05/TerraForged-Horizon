@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-read-only-evidence-review",
+  "reviewedAtUtc": "2026-11-08T03:43:57.716064+00:00",
+  "scope": "Independent comparison of derived export metrics/provenance against three local raw report receipts and exact stdout/stderr; no runtime executed and no export files edited.",
+  "reviewedFilesSha256": {
+    "SUMMARY.md": "d9b6f6e358a94d9a5c4a023dc757784d4ab4c732e88930c638c41654f4b0d63f",
+    "export-manifest.json": "dc35450320d44819481c70f84193d9d2dd108e2cc6c2b50bc6de66a97f31b334",
+    "SHA256SUMS.txt": "72ad411cc83179a0324cdde64807e1263176f8c61fd24b383d5ebb97874be910",
+    "provenance.json": "8744adbb9efe3f6f75864ac6f0f0337cc5bb86d79068f8624f9c7f52c36e647c",
+    "build-guard-reconciliation.json": "deba37052f109d5ad16ae92d6e75bced71a361b9edb60866258fe46484cbc401",
+    "summaries/matrix-v1.json": "d9057c2921aeb3e1afde13bc5d682d898b02ab4dc62a3566729556b2d51b463f",
+    "summaries/confirmation-v1.json": "0ee91cc147dae3c4974de8d85b23fa74923be9b0ce3f8cc5cbd90099aabcd19f",
+    "summaries/radius12-v1.json": "ef0acc8861c351b80147729e5b00ab8441be2cf6d234d59a658f0a4d13541c17",
+    "diffs/diagnostic-source.diff": "7b8848350234d7a297bf3f7d4c6291c42c4148b998784eed9e72deb861964870",
+    "diffs/radius12-runner.diff": "96f74c64347f110b3167b0d56fc6de91eaf0ef658eef5917ce019a3b7515c1c1"
+  },
+  "rawReportsSha256": {
+    "matrix-v1": "b8db960d4d13e6720822bf27d2bfaf31b2ef337058888eaf99d74360f2612b78",
+    "confirmation-v1": "1ab505cbceae768d9efe84fab710bcf36adef9a34b4418f9f904e7c46dbe6472",
+    "radius12-v1": "25a22fea41b1d059ba7711fb04af2e001f5baae2ee0308bf66f94f83c38c6963"
+  },
+  "checks": {
+    "casesCompared": 15,
+    "caseScalarFieldsCompared": 180,
+    "cacheFieldsCompared": 150,
+    "independentMeasuredTraceRecounts": 15,
+    "traceMissBuildEvictionWaitKeyRepeatCountsAndWaitSumsMatched": true,
+    "exactExportLogCopiesVerified": 30,
+    "localProvenanceArtifactHashesVerified": 23,
+    "manifestFileEntriesVerified": 38,
+    "sha256SumsLinesVerified": 39,
+    "completeExportInventoryMatchesManifest": true,
+    "originalHistoricalSnapshotFiles": 5186,
+    "originalBeforeAfterBuildConfirmationRadius12MapsEquivalent": true,
+    "resourceRelativeInventoryFiles": 1543,
+    "resourceCompactInventoryFingerprintVerified": true,
+    "sourceCopyMapFiles": 5162,
+    "normalizedSourceDiffHunksMatchOriginal": true,
+    "runnerDiffExactBytesMatchOriginal": true,
+    "descriptiveConfirmationMediansMatch": true,
+    "radius12Capacity8TraceLimitAndLowerBoundsCorrect": true,
+    "crossCapacityChecksumsAndChildExitCodesMatch": true,
+    "noMetricsOrProvenanceCorrectionsRequired": true
+  },
+  "buildReconciliation": {
+    "rawBuildGuardStatus": "failed",
+    "cargoExitCode": 0,
+    "changedCopiedInputs": [
+      "crates/horizon-client/examples/gen_light_native_stem.rs"
+    ],
+    "soleAmendmentMatchesApprovedReceipt": true,
+    "derivedExcerptMatchesRawAndReviewedReceipts": true,
+    "compiledExecutableHashVerified": true,
+    "rawBuildReceiptUnmodified": true
+  },
+  "bounds": [
+    "Metrics are diagnostic observations under uncontrolled shared host workload; matrix additionally records compiler contention.",
+    "Radius12 capacity8 measured cache counts and wait sums are lower bounds because the process trace cap was reached.",
+    "Wait sums overlap across callers; Windows cpu_s is unavailable and job timing uses thread-cycle estimates.",
+    "No full-client, meshing, new-package default-view acceptance, independent Java parity or sustained background-ring result is established.",
+    "Fast background-enabled capacity16/32 cases show local miss keys only; no sustained remote-ring overlap is inferred.",
+    "Historical original-source inventory maps were compared; current production sources were not requalified by this review.",
+    "No Git commit identity is inferred for copied staged source.",
+    "The immutable evidence export is separate from this review receipt and Cell excerpt."
+  ]
+}

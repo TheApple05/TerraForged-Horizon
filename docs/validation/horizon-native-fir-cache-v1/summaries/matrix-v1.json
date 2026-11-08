@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 1,
+  "run": "matrix-v1",
+  "scope": "Compiler-contention diagnostic",
+  "radius": 6,
+  "mesh": false,
+  "seed": 8675309,
+  "center": [
+    0,
+    -2731
+  ],
+  "workers": 15,
+  "periodMilliseconds": 2,
+  "repeatPerProcess": 1,
+  "timeoutSeconds": 600,
+  "sevenFreshHomesPerCase": true,
+  "audioDiscordSelfUpdateTelemetryOff": true,
+  "orderedCases": [
+    {
+      "order": 1,
+      "capacity": 8,
+      "backgroundRings": false,
+      "pid": 30116,
+      "startedAtUtc": "2026-11-08T03:19:41.843029+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:20:42.704443+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 22.9010604,
+      "childWallSeconds": 60.85899999999674,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 971038720,
+      "peakRssMiB": 926.0546875,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 467,
+      "maximumEventNumber": 541,
+      "perCacheMeasuredPhase": {
+        "0x21335e41a70": {
+          "missBegin": 70,
+          "buildFinish": 70,
+          "evictions": 62,
+          "flightWaits": 199,
+          "flightWaitSeconds": 179.26567500000002,
+          "capacityWaits": 66,
+          "capacityWaitSeconds": 27.363327000000005,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 50,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/matrix-v1/01-capacity8-bgfalse/stdout.log",
+          "sha256": "8f5271352c4f6476792e6bbe0411cb04eaeb8a8656d198e84af1ab711211c58c",
+          "bytes": 857
+        },
+        "stderr.log": {
+          "file": "logs/matrix-v1/01-capacity8-bgfalse/stderr.log",
+          "sha256": "72929d4cd8f475d8f0fe5efe27f2f7e23b704b9ca5b8b5d3c806eba7cf1daf27",
+          "bytes": 74033
+        }
+      }
+    },
+    {
+      "order": 2,
+      "capacity": 16,
+      "backgroundRings": false,
+      "pid": 22936,
+      "startedAtUtc": "2026-11-08T03:20:44.575569+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:20:57.288498+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 6.7530583,
+      "childWallSeconds": 12.71900000000096,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 969580544,
+      "peakRssMiB": 924.6640625,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 101,
+      "maximumEventNumber": 157,
+      "perCacheMeasuredPhase": {
+        "0x2bfaa4ee330": {
+          "missBegin": 20,
+          "buildFinish": 20,
+          "evictions": 4,
+          "flightWaits": 57,
+          "flightWaitSeconds": 29.139462999999992,
+          "capacityWaits": 0,
+          "capacityWaitSeconds": 0.0,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 0,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/matrix-v1/02-capacity16-bgfalse/stdout.log",
+          "sha256": "b7672e2fb0702bf3629f6d0f091ff19ec992f2b748579444d1eb51f3342414d4",
+          "bytes": 853
+        },
+        "stderr.log": {
+          "file": "logs/matrix-v1/02-capacity16-bgfalse/stderr.log",
+          "sha256": "a69424562ced2bf5ea2a01d2193798edb2560aa65965801d8e03b91c5d0d8837",
+          "bytes": 21709
+        }
+      }
+    },
+    {
+      "order": 3,
+      "capacity": 32,
+      "backgroundRings": false,
+      "pid": 33224,
+      "startedAtUtc": "2026-11-08T03:20:59.251691+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:21:12.104613+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 6.3112575,
+      "childWallSeconds": 12.84400000000096,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 970194944,
+      "peakRssMiB": 925.25,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 99,
+      "maximumEventNumber": 147,
+      "perCacheMeasuredPhase": {
+        "0x1db148be5d0": {
+          "missBegin": 20,
+          "buildFinish": 20,
+          "evictions": 0,
+          "flightWaits": 59,
+          "flightWaitSeconds": 27.47175699999999,
+          "capacityWaits": 0,
+          "capacityWaitSeconds": 0.0,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 0,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/matrix-v1/03-capacity32-bgfalse/stdout.log",
+          "sha256": "a2e4745dd5984038494ea7a03eed22d241e98e4798d332d9b315c8c666d2a62d",
+          "bytes": 853
+        },
+        "stderr.log": {
+          "file": "logs/matrix-v1/03-capacity32-bgfalse/stderr.log",
+          "sha256": "352392144e03989df644287a561a357bb56b16d36dbe46851f23f3d438b80f04",
+          "bytes": 20624
+        }
+      }
+    },
+    {
+      "order": 4,
+      "capacity": 8,
+      "backgroundRings": true,
+      "pid": 29536,
+      "startedAtUtc": "2026-11-08T03:21:13.949716+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:21:50.925564+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 31.1209561,
+      "childWallSeconds": 36.98500000000058,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 969793536,
+      "peakRssMiB": 924.8671875,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": true
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 977,
+      "maximumEventNumber": 1044,
+      "perCacheMeasuredPhase": {
+        "0x1b703498cd0": {
+          "missBegin": 136,
+          "buildFinish": 135,
+          "evictions": 127,
+          "flightWaits": 234,
+          "flightWaitSeconds": 215.9905209999999,
+          "capacityWaits": 345,
+          "capacityWaitSeconds": 62.328184000000014,
+          "uniqueMissKeys": 56,
+          "repeatMissBegins": 80,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/matrix-v1/04-capacity8-bgtrue/stdout.log",
+          "sha256": "6265bc22fafab8401f1456b7f16b0789226f522a84e0798f661c5e164b711c5c",
+          "bytes": 854
+        },
+        "stderr.log": {
+          "file": "logs/matrix-v1/04-capacity8-bgtrue/stderr.log",
+          "sha256": "d03954eb11738361f96c302b1b52500f94a9fe8ce080e65c3938b70c82f4e86e",
+          "bytes": 139260
+        }
+      }
+    },
+    {
+      "order": 5,
+      "capacity": 16,
+      "backgroundRings": true,
+      "pid": 32552,
+      "startedAtUtc": "2026-11-08T03:21:53.023025+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:22:05.301488+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 6.8179804,
+      "childWallSeconds": 12.28099999999904,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 972353536,
+      "peakRssMiB": 927.30859375,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": true
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 101,
+      "maximumEventNumber": 155,
+      "perCacheMeasuredPhase": {
+        "0x25f1bc76e80": {
+          "missBegin": 20,
+          "buildFinish": 20,
+          "evictions": 4,
+          "flightWaits": 57,
+          "flightWaitSeconds": 29.213926999999998,
+          "capacityWaits": 0,
+          "capacityWaitSeconds": 0.0,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 0,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/matrix-v1/05-capacity16-bgtrue/stdout.log",
+          "sha256": "4fc28f820355094fe0392735672b68e8c62baf74a4d7d24fe8ac8c1ced8f2124",
+          "bytes": 852
+        },
+        "stderr.log": {
+          "file": "logs/matrix-v1/05-capacity16-bgtrue/stderr.log",
+          "sha256": "692d1357b3d0b4b94b4ba49adedec1fff87d36dea8a3ea5f0a9a2fc4b6590b90",
+          "bytes": 21427
+        }
+      }
+    },
+    {
+      "order": 6,
+      "capacity": 32,
+      "backgroundRings": true,
+      "pid": 24220,
+      "startedAtUtc": "2026-11-08T03:22:08.228899+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:22:21.577242+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 6.8114457999999996,
+      "childWallSeconds": 13.342999999997119,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 969236480,
+      "peakRssMiB": 924.3359375,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": true
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 97,
+      "maximumEventNumber": 148,
+      "perCacheMeasuredPhase": {
+        "0x23066dcfa90": {
+          "missBegin": 20,
+          "buildFinish": 20,
+          "evictions": 0,
+          "flightWaits": 57,
+          "flightWaitSeconds": 29.19087100000001,
+          "capacityWaits": 0,
+          "capacityWaitSeconds": 0.0,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 0,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/matrix-v1/06-capacity32-bgtrue/stdout.log",
+          "sha256": "3e121afa47a4d0b8e985257b46a87d9afe50f1c504f0945e0d8907a894665c8f",
+          "bytes": 859
+        },
+        "stderr.log": {
+          "file": "logs/matrix-v1/06-capacity32-bgtrue/stderr.log",
+          "sha256": "99acf5a2c0fd3596aa42be2c3fddcff618377117638bd207416707e247b33e6f",
+          "bytes": 20542
+        }
+      }
+    }
+  ],
+  "allExitZero": true,
+  "allInputsUnchanged": true,
+  "allChecksumsMatchWithinRun": true,
+  "checksumReference": "d5f67a39776cb08d",
+  "checksumReferenceMeaning": "Prior radius6 stock reference; no new independent Java parity verification by these runs.",
+  "rawReportSha256": "b8db960d4d13e6720822bf27d2bfaf31b2ef337058888eaf99d74360f2612b78"
+}

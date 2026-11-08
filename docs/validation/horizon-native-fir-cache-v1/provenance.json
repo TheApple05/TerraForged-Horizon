@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-11-08T03:38:45.708739+00:00",
+  "purpose": "D-only reviewable evidence copies; not published.",
+  "executableSha256": "e9a098e19adc7ece0319ae24e033c1272b6baec45f5389232edf8a12ee743725",
+  "executableIncluded": false,
+  "resourcesWorldsAccountsIncluded": false,
+  "noGitCommitIdentityAssertedForStagedSource": true,
+  "sourceCopyFiles": 5162,
+  "originalFilesCheckedUnchangedAfterFinalRun": 5186,
+  "allOriginalHashesMatchInitialSnapshot": true,
+  "unchangedProductionDefaultsAtMeasurement": {
+    "cacheCapacity": 8,
+    "maxInFlight": 4
+  },
+  "diagnosticCapacities": [
+    8,
+    16,
+    32
+  ],
+  "capacityOverride": "QA_NATIVE_CACHE_CAPACITY",
+  "flightCapChanged": false,
+  "traceEnvironment": "HORIZON_QA_TILE_TRACE=1",
+  "traceLimitPerProcess": 2000,
+  "workload": {
+    "seed": 8675309,
+    "center": [
+      0,
+      -2731
+    ],
+    "radiusByRun": {
+      "matrix-v1": 6,
+      "confirmation-v1": 6,
+      "radius12-v1": 12
+    },
+    "workers": 15,
+    "periodMilliseconds": 2,
+    "repeat": 1,
+    "json": true,
+    "mesh": false
+  },
+  "runtimeEnvironment": {
+    "HORIZON_NO_AUDIO": "1",
+    "HORIZON_NO_DISCORD": "1",
+    "HORIZON_LAUNCHER_NO_SELF_UPDATE": "1",
+    "HORIZON_TELEMETRY_URL": "off",
+    "HORIZON_JOB_THREADS": "15",
+    "GEN_LIGHT_TRACE": "1",
+    "HORIZON_QA_TILE_TRACE": "1"
+  },
+  "freshHomeVariables": [
+    "HORIZON_HOME",
+    "HORIZON_LAUNCHER_HOME",
+    "XDG_DATA_HOME",
+    "XDG_CONFIG_HOME",
+    "HORIZON_LAUNCHER_TRASH",
+    "HORIZON_LAUNCHER_CLIPBOARD",
+    "HORIZON_LAUNCHER_DESKTOP"
+  ],
+  "childArguments": [
+    "PREPARED_RESOURCES",
+    "--seed",
+    "8675309",
+    "--center",
+    "0",
+    "-2731",
+    "--radius",
+    "RADIUS",
+    "--threads",
+    "15",
+    "--period-ms",
+    "2",
+    "--repeat",
+    "1",
+    "--json"
+  ],
+  "backgroundArgument": "--background-rings only in matrix cases explicitly marked true; warmup false and measured true validated.",
+  "buildRecipe": {
+    "command": [
+      "cargo",
+      "build",
+      "--manifest-path",
+      "DIAGNOSTIC_STAGE/Cargo.toml",
+      "--profile",
+      "fast",
+      "--offline",
+      "--locked",
+      "-p",
+      "horizon-client-lib",
+      "--example",
+      "gen_light_native_stem"
+    ],
+    "CARGO_BUILD_JOBS": "2",
+    "CARGO_TARGET_DIR": "DEDICATED_QA_TARGET"
+  },
+  "resourcesFingerprint": {
+    "files": 1543,
+    "sha256OfRelativePathSortedCompactJson": "00dfc185baa48f74c695af1e2f87142c03a7177d673695c215d2b682d3f94826",
+    "inventoryIncluded": false,
+    "canonicalization": "UTF-8 json.dumps(relative-path-to-sha256 map,sort_keys=True,separators=(comma,colon)); relative paths use /."
+  },
+  "localArtifactSha256": {
+    "runs/matrix-v1/report.json": "b8db960d4d13e6720822bf27d2bfaf31b2ef337058888eaf99d74360f2612b78",
+    "runs/matrix-v1/results-summary.json": "14aeeca385f25d86f2ee1ce06398e76c73672a4ae9df50a161e93dc6d131d688",
+    "runs/confirmation-v1/report.json": "1ab505cbceae768d9efe84fab710bcf36adef9a34b4418f9f904e7c46dbe6472",
+    "runs/confirmation-v1/results-summary.json": "eb01e04738b67d0b65ff4ee82cc86a08efd1fd39753de71e8dd4706f1c112775",
+    "runs/radius12-v1/report.json": "25a22fea41b1d059ba7711fb04af2e001f5baae2ee0308bf66f94f83c38c6963",
+    "runs/radius12-v1/results-summary.json": "e2a8b109642e9311a39c0064eaa434fd38a79070091e3205ef5c602b2311fafc",
+    "originals-before-sha256.json": "3080f6830c4dc37cd827353eb3ca7704ef1851109cead69ba848037191121966",
+    "originals-after-build-sha256.json": "3080f6830c4dc37cd827353eb3ca7704ef1851109cead69ba848037191121966",
+    "originals-after-confirmation-v1-sha256.json": "74bdd724e970eff4d047f1c5a706859d936f1b9ec4382a5acc94312178e4e441",
+    "originals-after-radius12-v1-sha256.json": "74bdd724e970eff4d047f1c5a706859d936f1b9ec4382a5acc94312178e4e441",
+    "copied-source-after-build-sha256.json": "3a7e65c22de4620a38fe30292e55f9efb20a13bbfe7b042ecbf8a5bdde8ae340",
+    "source-copy-map.json": "14820d0e82c7c72fd39d2fb7c07ed49b1167abfe7a3d0ff4b11974e828959b06",
+    "cargo-path-audit.json": "38569ba474efb4c87a587aae17cf8638905b7c8aaa79c776069eafbfc7bfd304",
+    "diagnostic-receipt.json": "00aa7c96921b127c0312ee1d8b599d6727137ee9d9ae8f7f5bb8604a6b3680ae",
+    "diagnostic-changes.diff": "c03b267bea298f226e07752c4c08bc00760691638552ceefe3e15c4101ef0f5b",
+    "run_cases.py": "a25f8c0237f144597604702227cd09181f2fd588e5d5dbdd601aec52e1e4a713",
+    "run_radius12_cases.py": "43412ee775f44120b7f6711bef96748ef47fee6c4c6eadacfbd07f5cf0c96c6b",
+    "radius12-runner.diff": "96f74c64347f110b3167b0d56fc6de91eaf0ef658eef5917ce019a3b7515c1c1",
+    "radius12-runner-preparation.json": "08bf5389d8826cbafcb3fb8e2fc86c2f31ca85c71e83d4cc06c236c45daab3d5",
+    "build-v1/report.json": "2364ab6e2763a457d32e5c01711c56478eaff40b47c10a5e7e7400237c980c1e",
+    "build-v1/reviewed-result.json": "1cf50323dd4d168a1efce99c815fd29446ee202305a5566cb7b58345e77e581f",
+    "build-v1/approved-source-amendment.json": "ab4d7605b68ff8634269f79dd315abf7b1d16f234dfdc60670ec6a4b5f64902a",
+    "build-v1/cargo-build.log": "952350310d1e0603f65bad7ed2fb99d58d7e35fb3849811d57a0640972c0bd79"
+  },
+  "exportTransforms": {
+    "rawLogs": "Exact byte copies; SHA validated against original per-case receipts.",
+    "runnerDiff": "Exact byte copy.",
+    "sourceDiff": "Only ---/+++ header machine prefixes normalized to old-stage/ and diagnostic-stage/; source hunks unchanged.",
+    "summaries": "Derived compact JSON; machine paths/full fingerprint inventories omitted.",
+    "buildGuardReconciliation": "Derived excerpt preserving failed raw guard and separate reviewed reconciliation."
+  },
+  "limits": [
+    "Shared host uncontrolled in confirmation/radius12; matrix was compiler-contention diagnostic.",
+    "No full-client/default-view validation performed by this probe.",
+    "No sustained background-ring acceptance: fast capacity16/32 background trials did not show remote-key overlap.",
+    "Radius12 baseline is capacity8 observation, not independent Java parity.",
+    "Capacity8 radius12 trace counts are lower bounds.",
+    "Windows cpu_s zero is unavailable; job seconds are calibrated thread-cycle estimates.",
+    "Wait duration sums overlap across callers."
+  ]
+}

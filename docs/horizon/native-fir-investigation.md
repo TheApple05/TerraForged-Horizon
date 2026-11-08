@@ -1,6 +1,6 @@
 # Fir-forest loading investigation
 
-Investigation date: November 7, 2026 (Pacific). The slow live-client waits remain unresolved. Native.dev5 generation reaches visible fir forest, but earlier all-17 sequences recorded roughly 180–184 seconds at this target. Those are live-client observations, not isolated generation times.
+Investigation date: November 7, 2026 (Pacific). Native.dev5 reaches visible fir forest, but earlier all-17 sequences recorded roughly 180–184 seconds at this target. Those are live-client observations, not isolated generation times. Subsequent tracing establishes repeated tile construction in the measured streaming pipeline. Native.dev7 raises the bounded cache from eight to 32 completed tiles; updated-client acceptance remains separate from these diagnostics.
 
 ## Generation and lighting probe
 
@@ -20,6 +20,28 @@ On Windows the probe's process `cpu_s` is unavailable and prints zero. Coordinat
 
 The earlier 19-by-19 proto batch generated 361 protos in row order before decoration. Streaming requests 285 closest-first and overlaps stages, with at most 45 generation jobs queued/running for these 15 workers. Its biome halo has a geographic upper bound of 12 direct native tile keys, while the shared native sampler retains eight completed tiles and allows four builds. Structure-candidate queries can extend that footprint; the geographic bound is not a measured cache-miss count.
 
-The actual game also starts a background stronghold-ring search, which the batch and pipeline probe omit. That search can query remote mapped biomes through the same sampler. Request order, cache rebuilding/waits and background searches are hypotheses for the remaining cost; none has yet been established as the cause.
+The actual game also starts a background stronghold-ring search, which the original batch and pipeline probe omit. That search can query remote mapped biomes through the same sampler. The subsequent QA copy can enable this search only for its measured generator. At capacity eight its trace includes remote keys, but the faster 16/32-tile trials contain only local keys. Those trials do not establish sustained background-search overlap or its full live-client cost.
 
-A separate source-only QA workspace is being prepared for bounded cache-miss, eviction and wait tracing, with optional background-ring and cache-capacity experiments. Those overrides do not exist in the production package. The production cache remains eight tiles/four builds. Changes require measured evidence, output checks and a reviewed memory tradeoff.
+A separate source-only QA workspace adds bounded miss/eviction/wait tracing and optional background-ring/capacity experiments. These overrides and trace code are absent from the production package. The [unaltered evidence export](../validation/horizon-native-fir-cache-v1/SUMMARY.md) retains 30 exact logs, three compact run summaries, source/runner diffs, provenance and hashes for all 15 child processes. Its [independent review](../validation/horizon-native-fir-cache-review-v1.json) checks the metrics and raw logs. Full raw reports and fingerprint inventories remain locally preserved under their recorded hashes.
+
+## Capacity decision
+
+At radius six, three fresh alternating 8/16-tile pairs take 20.351/6.446, 20.290/6.402 and 21.363/6.386 seconds. Capacity eight completes 70, 65 and 73 tile builds for the same 20 keys; capacity 16 completes 20 each, with no repeated misses. Every run matches the prior stock block/light checksum `d5f67a39776cb08d`.
+
+The host's default viewing distance is 12, and the probe sets the same streaming radius. A separate larger workload produces 529 lit columns:
+
+- Eight tiles: 183.768 seconds; at least 266 completed builds and 237 repeated misses. Its 2,000-event trace limit makes cache counts and wait sums lower bounds.
+- 16 tiles: 35.228 seconds; 127 completed builds and 90 repeated misses.
+- 32 tiles: 13.383 seconds; 40 completed builds and three repeated misses.
+
+All three exit zero and match the radius-12 capacity-eight observation checksum `15e9296ae1b6c062`. This is cross-capacity consistency, not an independent Java reference or byte-for-byte world comparison. Source, executable and checked resource hashes remain unchanged. Their own-process peak working sets are approximately 925–927 MiB; that observation does not imply the larger cache costs no memory.
+
+These are ordered observations on a shared, uncontrolled host, with meshing disabled. Radius 12 has one observation per capacity. The repeated smaller workload and measured rebuild counts support choosing the existing supported maximum of 32 rather than tuning only for radius six. They do not establish a general speedup, frame rate, complete loading time or broad modpack performance. Concurrency remains four; no worker cap, generation algorithm, saved preset or schema changes.
+
+## Memory and correctness checks
+
+The [compiler-layout receipt](../validation/horizon-native-cell-layout-v1.json) verifies a 96-byte `Cell` with the actual Rust 1.99.1 GNU compiler/target and the exact packaged source. At factor three with the builtin one-chunk border, 32 tiles retain at most 75 MiB of cell backing, 56.25 MiB more than eight. Four simultaneous builds add at most 9.375 MiB of backing. Two-chunk-border presets retain 108 MiB plus 13.5 MiB building. These are per-sampler payload calculations; caller-retained Arcs, allocator/map overhead, filter scratch and river caches are additional.
+
+The [existing lifecycle checks](../validation/horizon-native-cache-dev7-lifecycle-v1.json) pass five tests in each debug/release profile: failed/unwound work retries, LRU ownership/eviction, same-key construction sharing, clear during construction and bounded distinct-key concurrency. Generated-cell and genuine new-package client/save qualification are tracked separately.
+
+The diagnostic build's raw input guard remains failed because one explicitly approved measured-only-background correction happened during dependency compilation. Cargo exited zero, and the separate reconciliation records exact before/after hashes and timing. The failed raw receipt was preserved. No failed runtime result was relabeled as passing.
