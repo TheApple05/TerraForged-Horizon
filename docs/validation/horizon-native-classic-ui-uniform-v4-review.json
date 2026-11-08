@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-ui-create-save-reopen-and-visible-rendering-with-limits",
+  "reviewer": "Independent Codex subagent",
+  "reviewedAtUtc": "2026-11-08T02:47:39.939806+00:00",
+  "scope": "All21 originals of qualified native.dev5 cold-steppe-first repetition; no saved-world bytes included",
+  "rawReport": {
+    "path": "docs/validation/horizon-native-classic-ui-uniform-v4.json",
+    "sha256": "02fecf1f37ff31939142c3298540e0ab5ee9759b107609c08dc48ffb4b43e2e4",
+    "status": "passed-native-ui-create-reopen-smoke-awaiting-image-review",
+    "completedAtUtc": "2026-11-08T02:43:35.454726+00:00"
+  },
+  "artifactIdentity": {
+    "horizonRevision": "1860b66439c6c0c07afd1a13252c1cf9405fb38e",
+    "hmodSha256": "5c08e728846c45437541a740a58fa7524058ec171debb324e672be41c1aae247",
+    "qualifiedReportPath": "docs/validation/horizon-native-classic-ui-uniform-v3.json",
+    "qualifiedReportSha256": "c7a2bf33a3c18a690ce4c02209e9d6fff2bba5bf4b08ca854851e3d1bb90f86c",
+    "binarySha256": {
+      "horizon-client.exe": "d2aa55137c1a19cf76cc079a7a05187f6bf5582f71c36737ee265853d2cd794a",
+      "horizon-ctl.exe": "39d044232b4ee7f20f1167e84823695be0779acbc0653e147880dfee8ddaf7d2",
+      "terraforged_save_fixture.exe": "069c95fd5c5c9e4c380d2b323c2d8c97d0fedeb940c0d9a91021c7177cfc9c8c"
+    },
+    "allBinaryHashesMatchQualifiedBeforeCopyAfterCopyAndReview": true,
+    "compilationPerformed": false,
+    "originalVerifierSourceSha256AtPreparation": "5fbfe7f67a107d9e59058e56c335da5f0c616fdea54b297dd94818a058ac03e1",
+    "qaOnlyVerifierSourceSha256": "37edab50f7df0936d4c78b81b19bcc8d845576c6f46d853576c5d5f70c0f590f",
+    "qaOnlyVerifierDiffSha256": "da25efa6a247539a566ac936591b4b581453ea75c50f15fe79b931140d7433b8"
+  },
+  "uiAndTraversal": {
+    "creationViaUi": true,
+    "qaSpawnSupplied": false,
+    "healthyGroundedSurvivalSpawn": true,
+    "isolatedHomeDirectoryCount": 7,
+    "isolatedHomeDirectoryNames": [
+      "horizon_home",
+      "horizon_launcher_clipboard",
+      "horizon_launcher_desktop",
+      "horizon_launcher_home",
+      "horizon_launcher_trash",
+      "xdg_config_home",
+      "xdg_data_home"
+    ],
+    "classicViewsTraversed": 17,
+    "classicFirstTarget": "reterraforged:cold_steppe",
+    "classicFirstTargetBeforeOrigin": true,
+    "originalIntendedTargetOrderRepeated": true,
+    "classicTargetOrder": [
+      "reterraforged:cold_steppe",
+      "reterraforged:bryce",
+      "reterraforged:cold_marshland",
+      "reterraforged:fir_forest",
+      "reterraforged:flower_plains",
+      "reterraforged:frozen_lake",
+      "reterraforged:frozen_marsh",
+      "reterraforged:lake",
+      "reterraforged:marshland",
+      "reterraforged:savanna_scrub",
+      "reterraforged:shattered_savanna_scrub",
+      "reterraforged:snowy_fir_forest",
+      "reterraforged:snowy_taiga_scrub",
+      "reterraforged:steppe",
+      "reterraforged:stone_forest",
+      "reterraforged:taiga_scrub",
+      "reterraforged:warm_beach"
+    ]
+  },
+  "clients": [
+    {
+      "index": 0,
+      "pid": 31852,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "requestedShutdown": "control-quit"
+    },
+    {
+      "index": 1,
+      "pid": 24044,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "requestedShutdown": "control-quit"
+    }
+  ],
+  "savedFullBiomeChecks": {
+    "runs": [
+      {
+        "index": 0,
+        "action": "check_ui_classic",
+        "status": "passed-native-save-fixture-reader",
+        "chunkChecks": 19,
+        "storedFullChunkChecks": 18,
+        "quartBiomeValuesPerChunk": 1536,
+        "storedQuartBiomeValueComparisons": 27648,
+        "allStoredFingerprintsMatchNative": true,
+        "allNativeFingerprintsDifferFromVanilla": true,
+        "worldPresetUiReader": true,
+        "structuresEnabled": true
+      },
+      {
+        "index": 1,
+        "action": "check_ui_all_classic",
+        "status": "passed-native-save-fixture-reader",
+        "chunkChecks": 19,
+        "storedFullChunkChecks": 19,
+        "quartBiomeValuesPerChunk": 1536,
+        "storedQuartBiomeValueComparisons": 29184,
+        "allStoredFingerprintsMatchNative": true,
+        "allNativeFingerprintsDifferFromVanilla": true,
+        "worldPresetUiReader": true,
+        "structuresEnabled": true
+      }
+    ],
+    "storedFullChunkCheckObservationsAcrossRuns": 37,
+    "uniqueStoredChunksAcrossRuns": 19,
+    "storedQuartBiomeValueComparisonsAcrossRuns": 56832,
+    "probeUsesFullVectorEqualityAssert": true,
+    "probeSourcePath": "horizon/tests/rust/save_fixture_probe.rs",
+    "probeSourceSha256": "ff08f1dc032aef15b455a07af49a636e83eb726e27b2d1d6b7673e5c9802c6b1",
+    "probeAssertionLines": "233-236",
+    "probeAlsoAssertsNamedClassicBiomeAtSavedTarget": true,
+    "readerProcessZeroExitRequiredByDriver": true,
+    "reviewIndependentlyReexecutedSavedVectorReader": false,
+    "reviewComparedAllRecordedFingerprints": true
+  },
+  "integrity": {
+    "checkedOriginalPreparedResourcesUnchanged": true,
+    "checkedCopiedPreparedResourcesUnchanged": true,
+    "checkedResourceFileCount": 29,
+    "allPreparedAssetsIndividuallyHashed": false,
+    "priorFailedV2WorldFileCount": 91,
+    "priorFailedV2WorldStillUnchanged": true,
+    "priorFailedV2WorldFileMapSha256": "fb1583db4d622b4ac2bf4a6872a6b9199a394bc14195794ba3fef3af8ec43d23"
+  },
+  "images": {
+    "expectedCount": 21,
+    "inspectedCount": 21,
+    "allActualHashesMatchReport": true,
+    "blankOrLoadingScreenObserved": false,
+    "obviousMissingOrCheckerboardTextureArtifactObserved": false,
+    "sourceGeometryParityEstablished": false,
+    "nightOrDuskLimitedImages": [
+      "classic-frozen_marsh.png",
+      "classic-lake.png",
+      "classic-marshland.png",
+      "classic-savanna_scrub.png",
+      "classic-shattered_savanna_scrub.png",
+      "classic-snowy_fir_forest.png",
+      "classic-snowy_taiga_scrub.png",
+      "classic-steppe.png"
+    ],
+    "screenshots": [
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/native-preset-ui.png",
+        "actualSha256": "41bffd35fc6c6a0d50637d7e33da9b0b0f8ee3c95c9bb795b462fbd06a847c57",
+        "reportedSha256": "41bffd35fc6c6a0d50637d7e33da9b0b0f8ee3c95c9bb795b462fbd06a847c57",
+        "hashMatchesReport": true,
+        "observation": "TerraForged world type, seed8675309, structures ON and bonus chest OFF are legible; UI renders correctly.",
+        "visualPass": true,
+        "limited": false
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/natural-spawn.png",
+        "actualSha256": "a4bfcb121d3f56012412095629d90b20aa1464aac602cf30e15ee8043013fbfc",
+        "reportedSha256": "a4bfcb121d3f56012412095629d90b20aa1464aac602cf30e15ee8043013fbfc",
+        "hashMatchesReport": true,
+        "observation": "Grounded snowy grass/gravel/stone terrain renders coherently with full hearts and food HUD; no blank or missing textures visible.",
+        "visualPass": true,
+        "limited": false
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-cold_steppe.png",
+        "actualSha256": "8b075ad3010893fe52ada666cc9232540bffd46482469b017e2b523121a99150",
+        "reportedSha256": "8b075ad3010893fe52ada666cc9232540bffd46482469b017e2b523121a99150",
+        "hashMatchesReport": true,
+        "observation": "Snow and grass cover steep mountain terrain; coherent textures with large hard far cutoffs at the high camera/RD6 view, limiting geometric extent assessment.",
+        "visualPass": true,
+        "limited": true,
+        "biome": "reterraforged:cold_steppe",
+        "dayTime": 1367,
+        "timeOfDay": 1367
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/game-0.png",
+        "actualSha256": "62609a70514df319d65667877fe361c60901c7178c349adda24b8c7facd90fa8",
+        "reportedSha256": "62609a70514df319d65667877fe361c60901c7178c349adda24b8c7facd90fa8",
+        "hashMatchesReport": true,
+        "observation": "Mixed birch/conifer woodland, flowers and grass/dirt terrain render coherently, with peripheral RD6 clipping.",
+        "visualPass": true,
+        "limited": true
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-bryce.png",
+        "actualSha256": "e364c6735b1c7817fea1035d1c7552ea6bd13cf9504b832cdade0bd2f3a7d33f",
+        "reportedSha256": "e364c6735b1c7817fea1035d1c7552ea6bd13cf9504b832cdade0bd2f3a7d33f",
+        "hashMatchesReport": true,
+        "observation": "Orange/banded hoodoo pillars and grass/stone terrain render. Very high camera leaves most frame sky; RD6 fog/cutoff limits geometric source-parity assessment.",
+        "visualPass": true,
+        "limited": true,
+        "biome": "reterraforged:bryce",
+        "dayTime": 3912,
+        "timeOfDay": 3912
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-cold_marshland.png",
+        "actualSha256": "9bdb45f912838bdf1b0b9defdd015598a66a178f608d3f36495d5ac098bc5d39",
+        "reportedSha256": "9bdb45f912838bdf1b0b9defdd015598a66a178f608d3f36495d5ac098bc5d39",
+        "hashMatchesReport": true,
+        "observation": "Tall conifers, orange/grass ground, rocks and shallow water render coherently; isolated leaf fragments at far clipped edges and RD6/high camera limit distant assessment.",
+        "visualPass": true,
+        "limited": true,
+        "biome": "reterraforged:cold_marshland",
+        "dayTime": 7547,
+        "timeOfDay": 7547
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-fir_forest.png",
+        "actualSha256": "acdbf6121c704d48081ce4e2fda71438c905b40a1607837c4d3c36e297bafaf1",
+        "reportedSha256": "acdbf6121c704d48081ce4e2fda71438c905b40a1607837c4d3c36e297bafaf1",
+        "hashMatchesReport": true,
+        "observation": "Conifer forest, green terrain, small water depression and structure detail render coherently; hard far cutoffs and detached peripheral foliage at RD6/high camera limit extent assessment.",
+        "visualPass": true,
+        "limited": true,
+        "biome": "reterraforged:fir_forest",
+        "dayTime": 9584,
+        "timeOfDay": 9584
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-flower_plains.png",
+        "actualSha256": "aea50aa4a2377c05f31ac2510fb3a1b9c1aa878e2f0cb51c595ff5ab229b88ae",
+        "reportedSha256": "aea50aa4a2377c05f31ac2510fb3a1b9c1aa878e2f0cb51c595ff5ab229b88ae",
+        "hashMatchesReport": true,
+        "observation": "Green terrain, mixed foliage and colored flowers render coherently; clipped far terrain/foliage edges and high camera/RD6 limit extent assessment.",
+        "visualPass": true,
+        "limited": true,
+        "biome": "reterraforged:flower_plains",
+        "dayTime": 10875,
+        "timeOfDay": 10875
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/game-1.png",
+        "actualSha256": "e90eff6942fb48f837e6f52d4b316bdd9788a02d7f03cf37823945bc603df206",
+        "reportedSha256": "e90eff6942fb48f837e6f52d4b316bdd9788a02d7f03cf37823945bc603df206",
+        "hashMatchesReport": true,
+        "observation": "Sandy desert, cacti, dry vegetation and shallow water trench render coherently in daylight after reopen; no blank or missing textures visible.",
+        "visualPass": true,
+        "limited": false
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-frozen_lake.png",
+        "actualSha256": "83d8c4300db37ffa9db7772f3e916869bd88af7a9f865639451ef5085581592b",
+        "reportedSha256": "83d8c4300db37ffa9db7772f3e916869bd88af7a9f865639451ef5085581592b",
+        "hashMatchesReport": true,
+        "observation": "Textured frozen lake, snowy banks, conifers and ice spikes render coherently; hard far cutoffs at high camera/RD6 limit geometric extent assessment.",
+        "visualPass": true,
+        "limited": true,
+        "biome": "reterraforged:frozen_lake",
+        "dayTime": 11424,
+        "timeOfDay": 11424
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-frozen_marsh.png",
+        "actualSha256": "8f157f127e389f880383d2b4b6afe7cc9cfc777f77b1caddb3e65d7d8372b11c",
+        "reportedSha256": "8f157f127e389f880383d2b4b6afe7cc9cfc777f77b1caddb3e65d7d8372b11c",
+        "hashMatchesReport": true,
+        "observation": "Snowy marsh islands, ice channels and snow-capped conifers render coherently in dusk lighting; dusk color shift and RD6 clipping limit visual comparison.",
+        "visualPass": true,
+        "limited": true,
+        "lightingLimited": true,
+        "biome": "reterraforged:frozen_marsh",
+        "dayTime": 12206,
+        "timeOfDay": 12206
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-lake.png",
+        "actualSha256": "8baf174792a4bd311f167d3c31d5b6773872c4913230d4d3a7f23ff6cde3f542",
+        "reportedSha256": "8baf174792a4bd311f167d3c31d5b6773872c4913230d4d3a7f23ff6cde3f542",
+        "hashMatchesReport": true,
+        "observation": "Lake shoreline, water and grassy terraces remain visible under dark night lighting; no blank/loading screen, but darkness and RD6 clipping limit texture/color assessment.",
+        "visualPass": true,
+        "limited": true,
+        "lightingLimited": true,
+        "biome": "reterraforged:lake",
+        "dayTime": 14350,
+        "timeOfDay": 14350
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-marshland.png",
+        "actualSha256": "5f7fffe9459868e16bea98570c1caf15eac9e42ebd48f90da65fcfb13a6f6b0b",
+        "reportedSha256": "5f7fffe9459868e16bea98570c1caf15eac9e42ebd48f90da65fcfb13a6f6b0b",
+        "hashMatchesReport": true,
+        "observation": "Steep grass/dirt slope, patchy marsh ground, conifers and water are visible at night; darkness limits texture/color assessment and the slope-facing camera/RD6 limits whole-biome geometry.",
+        "visualPass": true,
+        "limited": true,
+        "lightingLimited": true,
+        "biome": "reterraforged:marshland",
+        "dayTime": 15240,
+        "timeOfDay": 15240
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-savanna_scrub.png",
+        "actualSha256": "c1fdb41b5d8d0b15f562f7345c270e8cc77df421543b02e53ba9c5c82f1f04f7",
+        "reportedSha256": "c1fdb41b5d8d0b15f562f7345c270e8cc77df421543b02e53ba9c5c82f1f04f7",
+        "hashMatchesReport": true,
+        "observation": "Dry grass terraces, pale sand and layered terracotta are visible at night; darkness limits texture/color assessment and high-camera RD6 clips terrain extent.",
+        "visualPass": true,
+        "limited": true,
+        "lightingLimited": true,
+        "biome": "reterraforged:savanna_scrub",
+        "dayTime": 17650,
+        "timeOfDay": 17650
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-shattered_savanna_scrub.png",
+        "actualSha256": "fb1c9ddeb6cd233987011c1c89f1a9b283c28566d8e3d981088d3f0001fb6bbf",
+        "reportedSha256": "fb1c9ddeb6cd233987011c1c89f1a9b283c28566d8e3d981088d3f0001fb6bbf",
+        "hashMatchesReport": true,
+        "observation": "Coastal water, sand, mixed foliage and dry scrub ground are visible at night with no blank/loading screen; darkness and hard RD6 cutoffs limit texture and geometry assessment.",
+        "visualPass": true,
+        "limited": true,
+        "lightingLimited": true,
+        "biome": "reterraforged:shattered_savanna_scrub",
+        "dayTime": 18660,
+        "timeOfDay": 18660
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-snowy_fir_forest.png",
+        "actualSha256": "c188136e9f0d2f558300893a8d8d26527b0b76cc72ae367927dc23148c4647ea",
+        "reportedSha256": "c188136e9f0d2f558300893a8d8d26527b0b76cc72ae367927dc23148c4647ea",
+        "hashMatchesReport": true,
+        "observation": "Snow-capped conifers, snowy terrain and distant ice-spike features render at night; snow contrast preserves visible geometry, but dark foliage/color and RD6 edges limit comparison.",
+        "visualPass": true,
+        "limited": true,
+        "lightingLimited": true,
+        "biome": "reterraforged:snowy_fir_forest",
+        "dayTime": 20086,
+        "timeOfDay": 20086
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-snowy_taiga_scrub.png",
+        "actualSha256": "7ff060a4d85f7664c98acad3e13141ada0ce2ef61ce142dc340a526c59013ba8",
+        "reportedSha256": "7ff060a4d85f7664c98acad3e13141ada0ce2ef61ce142dc340a526c59013ba8",
+        "hashMatchesReport": true,
+        "observation": "Snow-covered rolling terrain, scrub and several conifers render at night; darkness limits texture/color comparison while RD6/far-edge clipping limits extent assessment.",
+        "visualPass": true,
+        "limited": true,
+        "lightingLimited": true,
+        "biome": "reterraforged:snowy_taiga_scrub",
+        "dayTime": 20880,
+        "timeOfDay": 20880
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-steppe.png",
+        "actualSha256": "abb51702956e5adde32597698980c288cf6cd1e5e828676e06ed981fedaacb8f",
+        "reportedSha256": "abb51702956e5adde32597698980c288cf6cd1e5e828676e06ed981fedaacb8f",
+        "hashMatchesReport": true,
+        "observation": "Dry terraced hills and scrub render in dim predawn lighting; low light and high-camera RD6 fog/cutoffs limit comparison.",
+        "visualPass": true,
+        "limited": true,
+        "lightingLimited": true,
+        "biome": "reterraforged:steppe",
+        "dayTime": 22998,
+        "timeOfDay": 22998
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-stone_forest.png",
+        "actualSha256": "d0dbe6541e666ad8d50e3f723f32510476e40527c24902aa495c1b6c653654ee",
+        "reportedSha256": "d0dbe6541e666ad8d50e3f723f32510476e40527c24902aa495c1b6c653654ee",
+        "hashMatchesReport": true,
+        "observation": "Textured foliage and some near stone-column faces render in daylight, but most distant column bodies/ground are fogged from this high view, leaving detached cap-like silhouettes. Stone-pillar geometry remains inconclusive.",
+        "visualPass": true,
+        "limited": true,
+        "geometryAssessment": "inconclusive",
+        "biome": "reterraforged:stone_forest",
+        "dayTime": 25496,
+        "timeOfDay": 1496
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-taiga_scrub.png",
+        "actualSha256": "f7f96a453b815b3f87a3ad05ed47ac5a36596a5b4e3d211c1fbb322899e10122",
+        "reportedSha256": "f7f96a453b815b3f87a3ad05ed47ac5a36596a5b4e3d211c1fbb322899e10122",
+        "hashMatchesReport": true,
+        "observation": "Tall/small conifers, green terraced slopes, orange ground patches and rocks render coherently in daylight; distant fog/RD6 clips extent.",
+        "visualPass": true,
+        "limited": true,
+        "biome": "reterraforged:taiga_scrub",
+        "dayTime": 26772,
+        "timeOfDay": 2772
+      },
+      {
+        "path": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v4/classic-warm_beach.png",
+        "actualSha256": "e70915626853e62372f60b8ea08eda5a47061685881743a68f82868289195707",
+        "reportedSha256": "e70915626853e62372f60b8ea08eda5a47061685881743a68f82868289195707",
+        "hashMatchesReport": true,
+        "observation": "Coastal dry grass, sandy bank, water/underwater plants, sheep and scrub render coherently in daylight; distant fog/clipped foliage limits extent assessment.",
+        "visualPass": true,
+        "limited": true,
+        "biome": "reterraforged:warm_beach",
+        "dayTime": 27220,
+        "timeOfDay": 3220
+      }
+    ]
+  },
+  "reproductionLimits": {
+    "historicalExitReproduced": false,
+    "historicalCauseEstablished": false,
+    "exactHistoricalConditionsRepeated": false,
+    "timingClassification": "CONTENDED NONPERFORMANCE: compilers may be active",
+    "controlledPerformanceConclusion": false,
+    "daylightDifference": {
+      "v2SeparateManualNoonFreezeAfterColdSteppe": true,
+      "v2ControlReceiptPath": "build/qa/horizon/native-uniform-carvers-v1/horizon-native-classic-ui-uniform-v2/qa-daylight-controls.json",
+      "v2ControlReceiptSha256": "75ecedce09ca6c7f1f4c171e11793326a54043df5ec30cb4744809e00900bdb8",
+      "v2PostColdSteppeCaptureDayTime": 6000,
+      "v4NoAddedDaylightControlsInQaDriver": true,
+      "v4ClassicCaptureDayTimeRange": [
+        1367,
+        27220
+      ],
+      "v4SpansDuskNightAndNextDay": true
+    },
+    "visualLimits": [
+      "Night/dusk limits texture and color assessment for8 captures.",
+      "High cameras and render distance6 show hard cutoffs, detached peripheral foliage and fog.",
+      "Stone forest high view remains geometrically inconclusive; Bryce high view remains limited.",
+      "This review does not establish independent Java whole-feature geometry, structure placement, modpack or performance acceptance."
+    ]
+  }
+}

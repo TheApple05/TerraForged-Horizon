@@ -45,3 +45,13 @@ The copied world did not reproduce the exit. That result does not identify or fi
 ## Future exit evidence
 
 The UI verifier now records each launch PID and command, the error-time child code with an unsigned hexadecimal representation, cleanup actions applied only to its own Popen child, and the final code after cleanup. An exit already observed before cleanup is kept separate from verifier-requested quit, termination or kill. Three small shutdown regressions and the existing fresh-stage fixture regression pass. Independent review also exercised an exit between polls and a termination failure. No global crash-handler, event-audit or security settings were changed.
+
+## Fresh cold-steppe-first repetition
+
+The [unaltered v4 raw report](../validation/horizon-native-classic-ui-uniform-v4.json) completes all 17 targets in the original cold-steppe-first order, then saves, reopens in a second client process, generates distant terrain and saves again. It reuses the exact qualified native.dev5 client/control/save-reader binaries, with their hashes asserted before and after resource copying. Both processes exit zero (`0x00000000`). The raw SHA-256 is `02fecf1f37ff31939142c3298540e0ab5ee9759b107609c08dc48ffb4b43e2e4`.
+
+The first FULL-chunk read checks 18 stored chunks and 27,648 quart-biome entries; the reopened read checks 19 and 29,184. These are 56,832 comparisons over 37 observations of 19 unique chunks. The Rust reader asserts complete stored/native vector equality, and every recorded stored/native fingerprint matches while differing from vanilla. The 29 checked original/copied resource files stay unchanged. The original failed world's 91-file hash map also remains unchanged.
+
+The [independent v4 review](../validation/horizon-native-classic-ui-uniform-v4-review.json) inspects all 21 PNGs and matches their actual hashes. Eight dusk/night captures limit texture/color assessment. Render-distance-six cutoffs and the high camera remain visible; the high stone-forest view is inconclusive for lower geometry and Bryce is limited. This repetition does not replace the separate lower-view checks or establish complete Java scenery parity.
+
+This is an order/workload repetition, not an exact recreation of every old condition. Daylight advances naturally from reported time 1,367 to 27,220; the failed v2 had a separate noon-freeze intervention. Compilation overlaps the run. No performance conclusion or historical-cause fix is claimed. The unexplained exit did not recur.
