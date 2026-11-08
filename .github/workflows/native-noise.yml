@@ -35,6 +35,8 @@ jobs:
           persist-credentials: false
       - name: Install stable Rust
         run: rustup toolchain install stable --profile minimal --component clippy --component rustfmt
+      - name: Check client benchmark acceptance guards
+        run: python horizon/tools/benchmark_native_client.py --self-test
       - name: Check independent Java fixtures
         shell: bash
         run: |

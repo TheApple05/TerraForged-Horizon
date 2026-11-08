@@ -5,10 +5,11 @@ Timings include the integrated server, streaming and renderer; they are not pure
 kernel timings. A separate UI run must qualify natural spawn and structures.
 """
 from __future__ import annotations
-import argparse, datetime as dt, hashlib, json, math, os, platform, shutil, statistics, subprocess, time
+import argparse, datetime as dt, hashlib, json, math, os, platform, shutil, statistics, subprocess, sys, time
 from pathlib import Path
 from benchmark_kernel_sampler import memory_reader
 from verify_native_ui import copy_prepared_resources, exit_details, shutdown_owned_client
+from client_exclusivity import ExclusiveClientGuard, horizon_client_pids
 
 ROOT = Path(__file__).resolve().parents[2]
 STAGES = {'queued', 'generating', 'decorating', 'finishing', 'lighting', 'meshing'}
@@ -107,6 +108,8 @@ class Readiness:
 
 
 def self_test():
+    from client_exclusivity import self_test as exclusivity_self_test
+    exclusivity_self_test()
     from tempfile import TemporaryDirectory
     from unittest.mock import patch
     with TemporaryDirectory() as folder:
@@ -195,12 +198,13 @@ def client_session(args, version, row, phase, targets, game, world, resources, e
     if hmod: command += ['--dev-mod', str(hmod)]
     evidence['command'] = command
     started = time.monotonic(); process = None; read_rss = lambda: None; close_rss = lambda: None
-    peak_rss = 0; sequence = 0
+    peak_rss = 0; sequence = 0; exclusive = None
     with (folder / 'game.log').open('x', encoding='utf-8') as log, (folder / 'control.jsonl').open('x', encoding='utf-8') as control_log:
         def control(words, timeout=10):
             nonlocal sequence, peak_rss
             sequence += 1; at = time.monotonic(); entry = {'sequence': sequence, 'words': words, 'elapsedSeconds': at - started, 'timeoutSeconds': timeout}
             try:
+                if exclusive is not None and words[0] != 'quit': evidence['exclusiveClients'] = exclusive.check()
                 if process.poll() is not None: raise RuntimeError('Owned client exited: ' + str(exit_details(process.returncode)))
                 result = subprocess.run([str(args.ctl), '--socket', str(endpoint), '--timeout', str(timeout), *words], cwd=game, env=env, capture_output=True, text=True, timeout=timeout + 2)
                 entry.update(exit_details(result.returncode)); entry.update(stdout=result.stdout, stderr=result.stderr)
@@ -273,14 +277,18 @@ def client_session(args, version, row, phase, targets, game, world, resources, e
                 item.update(elapsedSeconds=time.monotonic() - at, completedAtUtc=utc()); checkpoint(f'{version} {phase} {label}: {item["status"]}')
 
         try:
+            if getattr(args, 'exclusive_clients', False) and (others := horizon_client_pids()):
+                raise RuntimeError('Other Horizon clients must exit before timing: ' + str(others))
             process = subprocess.Popen(command, cwd=game, env=env, stdout=log, stderr=subprocess.STDOUT,
                                        creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
             evidence['pid'] = process.pid
+            if getattr(args, 'exclusive_clients', False): exclusive = ExclusiveClientGuard(process.pid)
             try: read_rss, close_rss, evidence['residentMetric'] = memory_reader(process.pid)
             except Exception as error: evidence['residentMetricError'] = str(error)
             checkpoint(f'{version} {phase} client started')
             deadline = started + args.startup_timeout
             while True:
+                if exclusive is not None: evidence['exclusiveClients'] = exclusive.check()
                 try:
                     initial = control(['status'], 5)
                     if initial.get('player'): break
@@ -330,14 +338,25 @@ def client_session(args, version, row, phase, targets, game, world, resources, e
         except BaseException as error:
             evidence.update(status='failed', error=str(error), errorType=type(error).__name__); raise
         finally:
+            already_failed = sys.exc_info()[0] is not None
+            exclusive_error = None
             if process is not None:
                 shutdown_owned_client(process, lambda: control(['quit'], 15), evidence.setdefault('cleanup', {}))
+            if exclusive is not None:
+                try:
+                    exclusive.close(); evidence['exclusiveClients'] = exclusive.snapshot()
+                    if not already_failed: exclusive.check()
+                except RuntimeError as error:
+                    if not already_failed:
+                        exclusive_error = error
+                        evidence.update(status='failed', error=str(error), errorType=type(error).__name__)
             peak_rss = max(peak_rss, read_rss() or 0); close_rss()
             evidence.update(processPeakResidentBytes=peak_rss, elapsedSeconds=time.monotonic() - started, completedAtUtc=utc())
             control_log.flush(); log.flush()
             evidence['gameLogSha256'] = sha(folder / 'game.log'); evidence['controlLogSha256'] = sha(folder / 'control.jsonl')
             if (folder / 'smoke.json').is_file(): evidence['smokeReportSha256'] = sha(folder / 'smoke.json')
             checkpoint(f'{version} {phase} client {evidence["status"]}')
+            if exclusive_error is not None: raise exclusive_error
 
 
 def main():
@@ -348,6 +367,7 @@ def main():
     parser.add_argument('--startup-timeout', type=int, default=240)
     parser.add_argument('--load-timeout', type=int, default=600)
     parser.add_argument('--self-test', action='store_true')
+    parser.add_argument('--exclusive-clients', action='store_true', help='Reject runs if another Horizon client is observed')
     args = parser.parse_args()
     if args.self_test: self_test(); return 0
     for name in ('baseline_client', 'candidate_client', 'ctl', 'fixture', 'resources', 'work', 'report'):
@@ -365,6 +385,8 @@ def main():
     before = checked_resources(args.resources)
     args.work.mkdir(parents=True)
     shutil.copy2(Path(__file__), args.work / 'verifier-source.py')
+    if args.exclusive_clients:
+        shutil.copy2(ROOT / 'horizon/tools/client_exclusivity.py', args.work / 'client_exclusivity.py')
     report = {'schemaVersion': 1, 'status': 'running', 'startedAtUtc': utc(), 'order': ['baseline', 'candidate', 'candidate', 'baseline'],
               'scope': 'Real integrated native client: supplied seed8675309 spectator spawn, structures disabled, offscreen1280x720, FPS cap60. Cold destination residence, server-stage quiet and renderer readiness are distinct end-to-end observations; no pure chunk-generation throughput claim.',
               'conditions': {'seed': 8675309, 'qaSpawnSupplied': True, 'structuresEnabled': False, 'renderDistanceChunks': args.render_distance, 'simulationDistanceChunks': 5, 'sharedWorkerThreads': 4, 'frameRateCap': 60, 'statusIntervalSeconds': .5, 'serverMemoryIntervalSeconds': 2, 'stableViewSeconds': 1},
@@ -375,6 +397,8 @@ def main():
               'checkedSourceResourcesSha256': before, 'verifierSha256': sha(Path(__file__)), 'runs': []}
     report['artifacts'] = {name: {'path': str(value), 'sha256': sha(value)} for name in ('baseline_client', 'candidate_client', 'ctl', 'fixture', 'baseline_hmod', 'candidate_hmod') if (value := getattr(args, name)) is not None}
     report['presetSha256'] = sha(ROOT / 'horizon/native-content/data/terraforged/worldgen/world_preset/default.json')
+    report['exclusiveHorizonClientsRequired'] = args.exclusive_clients
+    if args.exclusive_clients: report['exclusiveClientGuardSourceSha256'] = sha(ROOT / 'horizon/tools/client_exclusivity.py')
     def checkpoint(phase):
         report.update(phase=phase, updatedAtUtc=utc())
         args.report.parent.mkdir(parents=True, exist_ok=True)
