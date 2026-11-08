@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-corrected-fir-image-review-with-render-distance-limits",
+  "reviewedAtUtc": "2026-11-08T03:57:42.837662+00:00",
+  "rawReportSha256": "71a275dbb8fe0dd5c3b3a634063992af7348f2588402b4f96c6e0f46a8115e0a",
+  "imageSha256": "8f647d0e09f37212415faca1899bfbe619d44665f718e6a27a653d04826f74fa",
+  "clientExitCode": 0,
+  "beforeActualAngles": [
+    135.0,
+    45.0
+  ],
+  "afterActualAngles": [
+    135.0,
+    45.0
+  ],
+  "preAndPostAngleError": 0,
+  "imageObservation": "Fir-area forest terrain and tree textures clearly visible; no blank frame or missing texture.",
+  "limits": [
+    "Separate offscreen camera capture on an ordinary copy; not GUI Play or a rerun of the baseline.",
+    "Render distance 6 boundary cutoff and a tiny isolated leaf-like fragment at the distant edge limit complete scenery conclusions.",
+    "No independent Java whole-feature or geometric parity.",
+    "The original baseline remains failed and its original fir camera limitation is unchanged."
+  ],
+  "originalBaselineReportUnchanged": true
+}

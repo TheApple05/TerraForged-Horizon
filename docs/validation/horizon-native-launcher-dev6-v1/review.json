@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-evidence-export-review-original-run-remains-failed",
+  "reviewedAtUtc": "2026-11-08T03:57:42.837662+00:00",
+  "rawRunStatus": "failed",
+  "rawRunReportSha256": "4dc73b50f5c165bce1993368c687f87f3b44defc910ba2608e0325db54da2369",
+  "scriptSha256": "990e6c5023a25ae8b189803130b99c33347993fd86fe5fae7b945e9841266035",
+  "planSha256": "6635eef568ece5dc0cb935b2b8ad129f144d13f70eb063185b1e419281ab0556",
+  "normalizationAuditSha256": "39b3ee55a14428eb5efa1d6fa5439a385e5c23f3eefaff625a8cb26fef28ed8f",
+  "cameraAuditSha256": "aa042e99074aa3f82de4b87ebc29203c565b517132ff3369dc2b85ffd82a29f7",
+  "runtimeSupervisorExitCode": 1,
+  "clientExitCodes": [
+    0,
+    0
+  ],
+  "all15OriginalImageHashesVerified": true,
+  "images": [
+    {
+      "file": "classic-fir_forest.png",
+      "sha256": "85d10500b8f10b94598023f60c901f68c143c4c58625bd48bd7b40c12f5df04b",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "limited-requested-angle"
+    },
+    {
+      "file": "classic-frozen_marsh.png",
+      "sha256": "8a565423da8b174609449ace9c680fd1037e7a52ed2039145d2366b553d14bcc",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "classic-shattered_savanna_scrub.png",
+      "sha256": "e68830564d41c18de6fa9dc216871b86a745719c09b1317de4645dd6407ef7bd",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "custom-block-placed.png",
+      "sha256": "9a0aac17b6e9889492a7c688cecab5b57adcfaaac5ea5982e4cb4470d11c336e",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "custom-block-reopened.png",
+      "sha256": "18c6ec08681f43ab2261ecdec80385e3a36e727591046b5d127e81da59a4a81c",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "custom-recipe-crafted.png",
+      "sha256": "6f33230a1174298decc3513914a85173ad250593bae42cd1f76b30ff114b63ca",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "custom-recipe-result.png",
+      "sha256": "3bb868d6d23728a7596afd53fd17993e0042f35598ad1d1bd00f15277414f665",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "game-0.png",
+      "sha256": "e860ec2766fe99b74653e335074e84739337f426e9ee9a447178d977b770eac0",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "game-1.png",
+      "sha256": "11666955dca184b110d01494ba0de6142f53f47adacf489e17edff69c9691f08",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "hud-off.png",
+      "sha256": "efe79e241040d25dbc0f6d308650f514f303a2a0d5bcb41c30b49553292eeb52",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "hud-on.png",
+      "sha256": "19d9085e0a0952bd49237b4b861f679d06d8312054bd18a7b2cdd23cc4c7b51d",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "hud-where.png",
+      "sha256": "828651bcad0aadfeff8c26f2b4e0f7223114cfee168d3d59ecc502f0fe97c02b",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "installed-mods-screen.png",
+      "sha256": "00d5f1811e69f90c8d10ec45786dd7c011b14f15fe44d929e2e3e8d16e93b0ce",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "native-preset-ui.png",
+      "sha256": "d2a50a6f94e61289d9d7e90ea2e7683802194a1ccee8147d10a8da179d778b0a",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    },
+    {
+      "file": "natural-spawn.png",
+      "sha256": "68d96b4a1591062bd97496d04f1b9e296f8ab3e6c60e849b2460c8bf9ad10c9e",
+      "matchesRawReport": true,
+      "visuallyInspected": true,
+      "flag": "pass-visible-content"
+    }
+  ],
+  "representativeImagesIncluded": [
+    "hud-on.png",
+    "installed-mods-screen.png",
+    "custom-recipe-crafted.png",
+    "custom-block-reopened.png"
+  ],
+  "observations": [
+    "The native preset UI shows TerraForged, seed 8675309, structures ON and bonus chest OFF. Natural spawn shows full hearts and visible snow and terrain.",
+    "The HUD panel visibly hides and returns; /where client chat is visible. The Mods screen lists all three installed packages ON.",
+    "Actual survival crafting displays amethyst plus glowstone dust, yields the custom purple cube, consumes the ingredients and leaves the output in inventory.",
+    "The placed custom cube and stone support render before save and after reopen. The light API reports stored block light 7 and adjacent 6; the crafted item remains present.",
+    "Frozen marsh, shattered savanna, origin and distant terrain are visible and textured. Default view and complete scenery parity are not inferred."
+  ],
+  "normalizationReview": {
+    "separateAuditStatus": "separate-audit-passed-known-preferences-order-normalization",
+    "lockedFilesAudited": 26,
+    "byteHashMismatches": 1,
+    "mismatch": "horizon-mods.txt line order only",
+    "sameExactLineMultiset": true,
+    "sortedOriginalBytesMatchNormalized": true,
+    "resourceFilesInIndependentAudit": 28180,
+    "expectedAndAuditedInventoryHashesMatch": true,
+    "resourceInventorySha256": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6",
+    "resourceInventoryBytesIncluded": false,
+    "thisReviewRehashedAllResourceFiles": false,
+    "basis": "Exact audit plus identical before/after 28180-file inventory SHA; current locked files were rehashed independently."
+  },
+  "crossRevisionSaveReaderChecks": [
+    {
+      "runIndex": 0,
+      "action": "check_ui_classic",
+      "status": "passed-native-save-fixture-reader",
+      "storedFullChunks": 4,
+      "quartBiomeValuesCompared": 6144,
+      "scope": "Cross-revision old1860 reader versus f43 save, not exact f43 reader qualification."
+    },
+    {
+      "runIndex": 1,
+      "action": "check_ui_all_classic",
+      "status": "passed-native-save-fixture-reader",
+      "storedFullChunks": 5,
+      "quartBiomeValuesCompared": 7680,
+      "scope": "Cross-revision old1860 reader versus f43 save, not exact f43 reader qualification."
+    }
+  ],
+  "customBlockChunk": [
+    2,
+    0
+  ],
+  "customBlockOutsideOldReaderCheckedChunks": true,
+  "bounds": [
+    "The raw driver status and exit 1 are retained. This review does not relabel the overall baseline as passed.",
+    "The baseline uses an actual visible window and swapchain; it differs from the old offscreen acceptance run.",
+    "The original fir image has yaw 9454687 and pitch 90 rather than the requested 135/45 after native-input-classified events. Their source is unidentified.",
+    "Render distance 6 fog and cutoff limit scenery coverage. No independent Java whole-feature or geometric source parity is established.",
+    "Launcher GUI Play, developer offline dispatch and authenticated Play are not covered by this direct client run.",
+    "Save checks use the historical 1860 probe for cross-revision compatibility, not exact f43 save-reader qualification.",
+    "Elapsed times are not controlled performance evidence.",
+    "The long TerraForged Mods label clips on the right. The entering recipe toast is clipped in the result image but complete in the crafted image.",
+    "The corrected fir follow-up is separately qualified offscreen on an ordinary copy. It does not replace or repair the failed baseline."
+  ],
+  "excludedData": [
+    "World/save bytes",
+    "Prepared resources and game asset bytes",
+    "Executables or native mod packages",
+    "Account/session files",
+    "Control socket/token file",
+    "Unrelated desktop or application data"
+  ]
+}

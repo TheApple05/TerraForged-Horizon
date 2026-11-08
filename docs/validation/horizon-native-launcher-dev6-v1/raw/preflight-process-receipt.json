@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "C:\\Users\\Main\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\verify_installed_native_ui.py"
+  ],
+  "scope": "Reviewed revision2 default preflight only; --run absent; no game started",
+  "startedAtUtc": "2026-11-08T03:38:22.411183+00:00",
+  "pid": 22844,
+  "exitCode": 0,
+  "exitCodeUnsignedHex": "0x00000000",
+  "elapsedSeconds": 15.34400000000096,
+  "completedAtUtc": "2026-11-08T03:38:37.756285+00:00"
+}

@@ -1,0 +1,2999 @@
+{
+  "status": "passed-corrected-fir-offscreen-angle-verified-awaiting-image-review",
+  "scope": "Corrected offscreen screenshot only; baseline already proved actual-window Vulkan presentation. Not a rerun or GUI Play test.",
+  "startedAtUtc": "2026-11-08T03:52:47.914417+00:00",
+  "operations": [
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0001-state",
+      "startedAtUtc": "2026-11-08T03:53:08.898681+00:00",
+      "pid": 15580,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0002-state",
+      "startedAtUtc": "2026-11-08T03:53:09.928294+00:00",
+      "pid": 37244,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.014999999999417923
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0003-state",
+      "startedAtUtc": "2026-11-08T03:53:10.950978+00:00",
+      "pid": 31512,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.03200000000288128
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0004-state",
+      "startedAtUtc": "2026-11-08T03:53:11.980272+00:00",
+      "pid": 8608,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0005-state",
+      "startedAtUtc": "2026-11-08T03:53:13.006435+00:00",
+      "pid": 38072,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.01599999999962165
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0006-state",
+      "startedAtUtc": "2026-11-08T03:53:14.032849+00:00",
+      "pid": 38676,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.01599999999962165
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0007-state",
+      "startedAtUtc": "2026-11-08T03:53:15.052875+00:00",
+      "pid": 38636,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.0470000000022992
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0008-state",
+      "startedAtUtc": "2026-11-08T03:53:16.108647+00:00",
+      "pid": 38192,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0009-state",
+      "startedAtUtc": "2026-11-08T03:53:17.134409+00:00",
+      "pid": 38188,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0010-state",
+      "startedAtUtc": "2026-11-08T03:53:18.161177+00:00",
+      "pid": 34524,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.01599999999962165
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0011-state",
+      "startedAtUtc": "2026-11-08T03:53:19.186862+00:00",
+      "pid": 31092,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0012-state",
+      "startedAtUtc": "2026-11-08T03:53:20.216283+00:00",
+      "pid": 32520,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.4219999999986612
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0013-state",
+      "startedAtUtc": "2026-11-08T03:53:21.642650+00:00",
+      "pid": 34192,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.014999999999417923
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0014-state",
+      "startedAtUtc": "2026-11-08T03:53:22.674134+00:00",
+      "pid": 31472,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.10900000000037835
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0015-state",
+      "startedAtUtc": "2026-11-08T03:53:23.794436+00:00",
+      "pid": 33340,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.9690000000009604
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0016-state",
+      "startedAtUtc": "2026-11-08T03:53:25.766110+00:00",
+      "pid": 32464,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0017-state",
+      "startedAtUtc": "2026-11-08T03:53:26.798771+00:00",
+      "pid": 9604,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.014999999999417923
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0018-state",
+      "startedAtUtc": "2026-11-08T03:53:27.827655+00:00",
+      "pid": 38604,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.03200000000288128
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0019-state",
+      "startedAtUtc": "2026-11-08T03:53:28.850773+00:00",
+      "pid": 34612,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.014999999999417923
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0020-state",
+      "startedAtUtc": "2026-11-08T03:53:29.878232+00:00",
+      "pid": 34216,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0021-state",
+      "startedAtUtc": "2026-11-08T03:53:30.913268+00:00",
+      "pid": 35552,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.01599999999962165
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0022-state",
+      "startedAtUtc": "2026-11-08T03:53:31.937928+00:00",
+      "pid": 33652,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0023-state",
+      "startedAtUtc": "2026-11-08T03:53:32.966626+00:00",
+      "pid": 14304,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0024-state",
+      "startedAtUtc": "2026-11-08T03:53:33.991100+00:00",
+      "pid": 38160,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0025-state",
+      "startedAtUtc": "2026-11-08T03:53:35.034291+00:00",
+      "pid": 13200,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.01599999999962165
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0026-state",
+      "startedAtUtc": "2026-11-08T03:53:36.062640+00:00",
+      "pid": 38320,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0027-state",
+      "startedAtUtc": "2026-11-08T03:53:37.088941+00:00",
+      "pid": 36732,
+      "exitCode": 3,
+      "exitCodeUnsignedHex": "0x00000003",
+      "elapsedSeconds": 0.01599999999962165
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0028-state",
+      "startedAtUtc": "2026-11-08T03:53:38.112580+00:00",
+      "pid": 14684,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.9690000000009604
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0029-state",
+      "startedAtUtc": "2026-11-08T03:53:40.085633+00:00",
+      "pid": 13120,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.046999999998661224
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0030-state",
+      "startedAtUtc": "2026-11-08T03:53:41.138956+00:00",
+      "pid": 36148,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "command",
+        "gamemode spectator @s"
+      ],
+      "label": "ctl-0031-command",
+      "startedAtUtc": "2026-11-08T03:53:41.173174+00:00",
+      "pid": 38728,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.07800000000133878
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "command",
+        "tp @s 0.5 118 -43691.5"
+      ],
+      "label": "ctl-0032-command",
+      "startedAtUtc": "2026-11-08T03:53:41.251935+00:00",
+      "pid": 28192,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.046999999998661224
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0033-status",
+      "startedAtUtc": "2026-11-08T03:53:41.301915+00:00",
+      "pid": 32084,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0470000000022992
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0034-block",
+      "startedAtUtc": "2026-11-08T03:53:41.354999+00:00",
+      "pid": 37584,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0035-status",
+      "startedAtUtc": "2026-11-08T03:53:41.889692+00:00",
+      "pid": 31104,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0036-block",
+      "startedAtUtc": "2026-11-08T03:53:41.927748+00:00",
+      "pid": 30756,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.062000000001717126
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0037-status",
+      "startedAtUtc": "2026-11-08T03:53:42.489555+00:00",
+      "pid": 17456,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0038-block",
+      "startedAtUtc": "2026-11-08T03:53:42.522191+00:00",
+      "pid": 5868,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0039-status",
+      "startedAtUtc": "2026-11-08T03:53:43.057622+00:00",
+      "pid": 22284,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0040-block",
+      "startedAtUtc": "2026-11-08T03:53:43.087211+00:00",
+      "pid": 11532,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0041-status",
+      "startedAtUtc": "2026-11-08T03:53:43.622685+00:00",
+      "pid": 14308,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06299999999828287
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0042-block",
+      "startedAtUtc": "2026-11-08T03:53:43.690066+00:00",
+      "pid": 8536,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06300000000192085
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0043-status",
+      "startedAtUtc": "2026-11-08T03:53:44.255441+00:00",
+      "pid": 36960,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.10900000000037835
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0044-block",
+      "startedAtUtc": "2026-11-08T03:53:44.366376+00:00",
+      "pid": 38132,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.046999999998661224
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0045-status",
+      "startedAtUtc": "2026-11-08T03:53:44.924626+00:00",
+      "pid": 4924,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.062000000001717126
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0046-block",
+      "startedAtUtc": "2026-11-08T03:53:44.989689+00:00",
+      "pid": 21356,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0047-status",
+      "startedAtUtc": "2026-11-08T03:53:45.522544+00:00",
+      "pid": 15296,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0048-block",
+      "startedAtUtc": "2026-11-08T03:53:45.554013+00:00",
+      "pid": 36692,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0049-status",
+      "startedAtUtc": "2026-11-08T03:53:46.090786+00:00",
+      "pid": 37428,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0050-block",
+      "startedAtUtc": "2026-11-08T03:53:46.121401+00:00",
+      "pid": 33964,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0051-status",
+      "startedAtUtc": "2026-11-08T03:53:46.658603+00:00",
+      "pid": 16492,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0470000000022992
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0052-block",
+      "startedAtUtc": "2026-11-08T03:53:46.721185+00:00",
+      "pid": 38012,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0053-status",
+      "startedAtUtc": "2026-11-08T03:53:47.257870+00:00",
+      "pid": 33212,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0054-block",
+      "startedAtUtc": "2026-11-08T03:53:47.288332+00:00",
+      "pid": 37100,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0055-status",
+      "startedAtUtc": "2026-11-08T03:53:47.823076+00:00",
+      "pid": 38052,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.03200000000288128
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0056-block",
+      "startedAtUtc": "2026-11-08T03:53:47.855163+00:00",
+      "pid": 38792,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0057-status",
+      "startedAtUtc": "2026-11-08T03:53:48.389855+00:00",
+      "pid": 37996,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0058-block",
+      "startedAtUtc": "2026-11-08T03:53:48.421695+00:00",
+      "pid": 32976,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.07800000000133878
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0059-status",
+      "startedAtUtc": "2026-11-08T03:53:48.991955+00:00",
+      "pid": 20256,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06299999999828287
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0060-block",
+      "startedAtUtc": "2026-11-08T03:53:49.055039+00:00",
+      "pid": 37368,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0061-status",
+      "startedAtUtc": "2026-11-08T03:53:49.590905+00:00",
+      "pid": 17456,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0062-block",
+      "startedAtUtc": "2026-11-08T03:53:49.620640+00:00",
+      "pid": 38768,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0063-status",
+      "startedAtUtc": "2026-11-08T03:53:50.157591+00:00",
+      "pid": 27696,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0064-block",
+      "startedAtUtc": "2026-11-08T03:53:50.188329+00:00",
+      "pid": 36172,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0065-status",
+      "startedAtUtc": "2026-11-08T03:53:50.725169+00:00",
+      "pid": 37728,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06199999999807915
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0066-block",
+      "startedAtUtc": "2026-11-08T03:53:50.787884+00:00",
+      "pid": 31580,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0067-status",
+      "startedAtUtc": "2026-11-08T03:53:51.324243+00:00",
+      "pid": 37144,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.03200000000288128
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0068-block",
+      "startedAtUtc": "2026-11-08T03:53:51.354728+00:00",
+      "pid": 4680,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0069-status",
+      "startedAtUtc": "2026-11-08T03:53:51.890850+00:00",
+      "pid": 37912,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0070-block",
+      "startedAtUtc": "2026-11-08T03:53:51.920670+00:00",
+      "pid": 33920,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0071-status",
+      "startedAtUtc": "2026-11-08T03:53:52.458299+00:00",
+      "pid": 34612,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06299999999828287
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0072-block",
+      "startedAtUtc": "2026-11-08T03:53:52.523794+00:00",
+      "pid": 37704,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.062000000001717126
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0073-status",
+      "startedAtUtc": "2026-11-08T03:53:53.092409+00:00",
+      "pid": 15252,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0074-block",
+      "startedAtUtc": "2026-11-08T03:53:53.176589+00:00",
+      "pid": 35436,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0075-status",
+      "startedAtUtc": "2026-11-08T03:53:53.723890+00:00",
+      "pid": 33500,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0076-block",
+      "startedAtUtc": "2026-11-08T03:53:53.754984+00:00",
+      "pid": 38776,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0077-status",
+      "startedAtUtc": "2026-11-08T03:53:54.289764+00:00",
+      "pid": 34980,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0078-block",
+      "startedAtUtc": "2026-11-08T03:53:54.324146+00:00",
+      "pid": 15232,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.03200000000288128
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0079-status",
+      "startedAtUtc": "2026-11-08T03:53:54.856541+00:00",
+      "pid": 38380,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0080-block",
+      "startedAtUtc": "2026-11-08T03:53:54.888109+00:00",
+      "pid": 28848,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0081-status",
+      "startedAtUtc": "2026-11-08T03:53:55.423705+00:00",
+      "pid": 38448,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.062000000001717126
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0082-block",
+      "startedAtUtc": "2026-11-08T03:53:55.488622+00:00",
+      "pid": 29296,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0083-status",
+      "startedAtUtc": "2026-11-08T03:53:56.023037+00:00",
+      "pid": 33340,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0084-block",
+      "startedAtUtc": "2026-11-08T03:53:56.055248+00:00",
+      "pid": 33724,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0085-status",
+      "startedAtUtc": "2026-11-08T03:53:56.589921+00:00",
+      "pid": 30292,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0086-block",
+      "startedAtUtc": "2026-11-08T03:53:56.622803+00:00",
+      "pid": 37104,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06299999999828287
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0087-status",
+      "startedAtUtc": "2026-11-08T03:53:57.194803+00:00",
+      "pid": 36912,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.01600000000325963
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0088-block",
+      "startedAtUtc": "2026-11-08T03:53:57.221376+00:00",
+      "pid": 3216,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0089-status",
+      "startedAtUtc": "2026-11-08T03:53:57.756969+00:00",
+      "pid": 19504,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0090-block",
+      "startedAtUtc": "2026-11-08T03:53:57.788695+00:00",
+      "pid": 34828,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0091-status",
+      "startedAtUtc": "2026-11-08T03:53:58.323270+00:00",
+      "pid": 38000,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06300000000192085
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0092-block",
+      "startedAtUtc": "2026-11-08T03:53:58.391097+00:00",
+      "pid": 38012,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06199999999807915
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0093-status",
+      "startedAtUtc": "2026-11-08T03:53:58.959068+00:00",
+      "pid": 34832,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0094-block",
+      "startedAtUtc": "2026-11-08T03:53:58.987904+00:00",
+      "pid": 35608,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0095-status",
+      "startedAtUtc": "2026-11-08T03:53:59.524747+00:00",
+      "pid": 34976,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0096-block",
+      "startedAtUtc": "2026-11-08T03:53:59.554892+00:00",
+      "pid": 38860,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0097-status",
+      "startedAtUtc": "2026-11-08T03:54:00.090317+00:00",
+      "pid": 38052,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0098-block",
+      "startedAtUtc": "2026-11-08T03:54:00.120810+00:00",
+      "pid": 35188,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0099-status",
+      "startedAtUtc": "2026-11-08T03:54:00.656265+00:00",
+      "pid": 25112,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0100-block",
+      "startedAtUtc": "2026-11-08T03:54:00.688708+00:00",
+      "pid": 38496,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0101-status",
+      "startedAtUtc": "2026-11-08T03:54:01.225173+00:00",
+      "pid": 35740,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06199999999807915
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0102-block",
+      "startedAtUtc": "2026-11-08T03:54:01.290035+00:00",
+      "pid": 7052,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06300000000192085
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0103-status",
+      "startedAtUtc": "2026-11-08T03:54:01.861825+00:00",
+      "pid": 38272,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.046999999998661224
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0104-block",
+      "startedAtUtc": "2026-11-08T03:54:01.923119+00:00",
+      "pid": 36940,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0105-status",
+      "startedAtUtc": "2026-11-08T03:54:02.456629+00:00",
+      "pid": 31104,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06299999999828287
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0106-block",
+      "startedAtUtc": "2026-11-08T03:54:02.522993+00:00",
+      "pid": 3404,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0107-status",
+      "startedAtUtc": "2026-11-08T03:54:03.057179+00:00",
+      "pid": 28848,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0108-block",
+      "startedAtUtc": "2026-11-08T03:54:03.088117+00:00",
+      "pid": 15448,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0109-status",
+      "startedAtUtc": "2026-11-08T03:54:03.648724+00:00",
+      "pid": 32072,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0110-block",
+      "startedAtUtc": "2026-11-08T03:54:03.690926+00:00",
+      "pid": 38376,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.01600000000325963
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0111-status",
+      "startedAtUtc": "2026-11-08T03:54:04.223895+00:00",
+      "pid": 31472,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0112-block",
+      "startedAtUtc": "2026-11-08T03:54:04.255643+00:00",
+      "pid": 38120,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0113-status",
+      "startedAtUtc": "2026-11-08T03:54:04.791365+00:00",
+      "pid": 33960,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0114-block",
+      "startedAtUtc": "2026-11-08T03:54:04.821466+00:00",
+      "pid": 37728,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.03200000000288128
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0115-status",
+      "startedAtUtc": "2026-11-08T03:54:05.357391+00:00",
+      "pid": 37696,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06199999999807915
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0116-block",
+      "startedAtUtc": "2026-11-08T03:54:05.425193+00:00",
+      "pid": 37980,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0470000000022992
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0117-status",
+      "startedAtUtc": "2026-11-08T03:54:05.993722+00:00",
+      "pid": 30628,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0118-block",
+      "startedAtUtc": "2026-11-08T03:54:06.021572+00:00",
+      "pid": 37692,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0119-status",
+      "startedAtUtc": "2026-11-08T03:54:06.556418+00:00",
+      "pid": 33744,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.031000000002677552
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0120-block",
+      "startedAtUtc": "2026-11-08T03:54:06.589172+00:00",
+      "pid": 18392,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0121-status",
+      "startedAtUtc": "2026-11-08T03:54:07.126648+00:00",
+      "pid": 36236,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.01599999999962165
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0122-block",
+      "startedAtUtc": "2026-11-08T03:54:07.154559+00:00",
+      "pid": 37288,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0123-status",
+      "startedAtUtc": "2026-11-08T03:54:07.690663+00:00",
+      "pid": 37160,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.03200000000288128
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0124-block",
+      "startedAtUtc": "2026-11-08T03:54:07.725324+00:00",
+      "pid": 11740,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06199999999807915
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0125-status",
+      "startedAtUtc": "2026-11-08T03:54:08.291395+00:00",
+      "pid": 34976,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0126-block",
+      "startedAtUtc": "2026-11-08T03:54:08.321807+00:00",
+      "pid": 38860,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.03200000000288128
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0127-status",
+      "startedAtUtc": "2026-11-08T03:54:08.859287+00:00",
+      "pid": 23388,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0128-block",
+      "startedAtUtc": "2026-11-08T03:54:08.888002+00:00",
+      "pid": 38768,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "status"
+      ],
+      "label": "ctl-0129-status",
+      "startedAtUtc": "2026-11-08T03:54:09.425003+00:00",
+      "pid": 38792,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.062000000001717126
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "block",
+        "0",
+        "70",
+        "-43692"
+      ],
+      "label": "ctl-0130-block",
+      "startedAtUtc": "2026-11-08T03:54:09.490357+00:00",
+      "pid": 16812,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "command",
+        "tp @s 0.5 118 -43691.5 135 45"
+      ],
+      "label": "ctl-0131-command",
+      "startedAtUtc": "2026-11-08T03:54:09.527077+00:00",
+      "pid": 25752,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.07800000000133878
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "wait",
+        "20"
+      ],
+      "label": "ctl-0132-wait",
+      "startedAtUtc": "2026-11-08T03:54:09.603872+00:00",
+      "pid": 33508,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 1.0469999999986612
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0133-state",
+      "startedAtUtc": "2026-11-08T03:54:10.655995+00:00",
+      "pid": 21180,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.030999999999039574
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0134-state",
+      "startedAtUtc": "2026-11-08T03:54:10.691059+00:00",
+      "pid": 13760,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06300000000192085
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "screenshot",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\corrected-fir-135-45.png"
+      ],
+      "label": "ctl-0135-screenshot",
+      "startedAtUtc": "2026-11-08T03:54:10.756970+00:00",
+      "pid": 21660,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.48400000000037835
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "state"
+      ],
+      "label": "ctl-0136-state",
+      "startedAtUtc": "2026-11-08T03:54:11.241749+00:00",
+      "pid": 26704,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.0319999999992433
+    },
+    {
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+        "quit"
+      ],
+      "label": "ctl-0137-quit",
+      "startedAtUtc": "2026-11-08T03:54:11.279017+00:00",
+      "pid": 22324,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.062000000001717126
+    }
+  ],
+  "angleChecks": [
+    {
+      "label": "absolute rotation attempt 1",
+      "requested": [
+        135,
+        45
+      ],
+      "actual": [
+        135.0,
+        45.0
+      ],
+      "yawModuloError": 0.0,
+      "pitchError": 0.0,
+      "state": {
+        "busy": null,
+        "dialog": {
+          "open": null,
+          "screen": null
+        },
+        "dimension": "minecraft:overworld",
+        "gamemode": "spectator",
+        "held": {
+          "count": 1,
+          "item": "qa_glow:glowing_amethyst"
+        },
+        "input": {
+          "counts": {
+            "agent": 4,
+            "game": 0,
+            "user": 0
+          },
+          "events": 4,
+          "last_origin": "agent",
+          "last_user_age_s": null,
+          "recording": null,
+          "replay": null,
+          "user_since_agent": 0
+        },
+        "looking_at": {
+          "block": null,
+          "entity": null,
+          "kind": "none"
+        },
+        "menu": null,
+        "mining": null,
+        "paused": false,
+        "player": {
+          "absorption": 0.0,
+          "air": 300,
+          "block_pos": [
+            0,
+            118,
+            -43692
+          ],
+          "death_time": null,
+          "effects": [],
+          "eye": [
+            0.5,
+            119.62000000476837,
+            -43691.5
+          ],
+          "fall_flying": false,
+          "flying": true,
+          "food": 20,
+          "fov_modifier": 1.0999999,
+          "health": 20.0,
+          "hurt_time": 0,
+          "on_ground": false,
+          "pitch": 45.0,
+          "portal_effect": 0.0,
+          "position": [
+            0.5,
+            118.0,
+            -43691.5
+          ],
+          "saturation": 5.0,
+          "shield_cooldown": 0,
+          "sneaking": false,
+          "sprinting": false,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xp": {
+            "level": 0,
+            "progress": 0.0,
+            "total": 0
+          },
+          "yaw": 135.0
+        },
+        "pointer_grabbed": true,
+        "screen": "playing",
+        "selected": 9,
+        "sleeping": null,
+        "swings": 0,
+        "ticks": 641,
+        "time": {
+          "day": 0,
+          "day_time": 4512,
+          "time_of_day": 4512
+        },
+        "using": null,
+        "weather": {
+          "raining": false,
+          "thundering": false
+        },
+        "world": "TerraForged UI QA"
+      }
+    },
+    {
+      "label": "immediately before screenshot",
+      "requested": [
+        135,
+        45
+      ],
+      "actual": [
+        135.0,
+        45.0
+      ],
+      "yawModuloError": 0.0,
+      "pitchError": 0.0,
+      "state": {
+        "busy": null,
+        "dialog": {
+          "open": null,
+          "screen": null
+        },
+        "dimension": "minecraft:overworld",
+        "gamemode": "spectator",
+        "held": {
+          "count": 1,
+          "item": "qa_glow:glowing_amethyst"
+        },
+        "input": {
+          "counts": {
+            "agent": 4,
+            "game": 0,
+            "user": 0
+          },
+          "events": 4,
+          "last_origin": "agent",
+          "last_user_age_s": null,
+          "recording": null,
+          "replay": null,
+          "user_since_agent": 0
+        },
+        "looking_at": {
+          "block": null,
+          "entity": null,
+          "kind": "none"
+        },
+        "menu": null,
+        "mining": null,
+        "paused": false,
+        "player": {
+          "absorption": 0.0,
+          "air": 300,
+          "block_pos": [
+            0,
+            118,
+            -43692
+          ],
+          "death_time": null,
+          "effects": [],
+          "eye": [
+            0.5,
+            119.62000000476837,
+            -43691.5
+          ],
+          "fall_flying": false,
+          "flying": true,
+          "food": 20,
+          "fov_modifier": 1.0999999,
+          "health": 20.0,
+          "hurt_time": 0,
+          "on_ground": false,
+          "pitch": 45.0,
+          "portal_effect": 0.0,
+          "position": [
+            0.5,
+            118.0,
+            -43691.5
+          ],
+          "saturation": 5.0,
+          "shield_cooldown": 0,
+          "sneaking": false,
+          "sprinting": false,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xp": {
+            "level": 0,
+            "progress": 0.0,
+            "total": 0
+          },
+          "yaw": 135.0
+        },
+        "pointer_grabbed": true,
+        "screen": "playing",
+        "selected": 9,
+        "sleeping": null,
+        "swings": 0,
+        "ticks": 642,
+        "time": {
+          "day": 0,
+          "day_time": 4513,
+          "time_of_day": 4513
+        },
+        "using": null,
+        "weather": {
+          "raining": false,
+          "thundering": false
+        },
+        "world": "TerraForged UI QA"
+      }
+    },
+    {
+      "label": "immediately after screenshot",
+      "requested": [
+        135,
+        45
+      ],
+      "actual": [
+        135.0,
+        45.0
+      ],
+      "yawModuloError": 0.0,
+      "pitchError": 0.0,
+      "state": {
+        "busy": null,
+        "dialog": {
+          "open": null,
+          "screen": null
+        },
+        "dimension": "minecraft:overworld",
+        "gamemode": "spectator",
+        "held": {
+          "count": 1,
+          "item": "qa_glow:glowing_amethyst"
+        },
+        "input": {
+          "counts": {
+            "agent": 5,
+            "game": 0,
+            "user": 0
+          },
+          "events": 5,
+          "last_origin": "agent",
+          "last_user_age_s": null,
+          "recording": null,
+          "replay": null,
+          "user_since_agent": 0
+        },
+        "looking_at": {
+          "block": null,
+          "entity": null,
+          "kind": "none"
+        },
+        "menu": null,
+        "mining": null,
+        "paused": false,
+        "player": {
+          "absorption": 0.0,
+          "air": 300,
+          "block_pos": [
+            0,
+            118,
+            -43692
+          ],
+          "death_time": null,
+          "effects": [],
+          "eye": [
+            0.5,
+            119.62000000476837,
+            -43691.5
+          ],
+          "fall_flying": false,
+          "flying": true,
+          "food": 20,
+          "fov_modifier": 1.0999999,
+          "health": 20.0,
+          "hurt_time": 0,
+          "on_ground": false,
+          "pitch": 45.0,
+          "portal_effect": 0.0,
+          "position": [
+            0.5,
+            118.0,
+            -43691.5
+          ],
+          "saturation": 5.0,
+          "shield_cooldown": 0,
+          "sneaking": false,
+          "sprinting": false,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xp": {
+            "level": 0,
+            "progress": 0.0,
+            "total": 0
+          },
+          "yaw": 135.0
+        },
+        "pointer_grabbed": true,
+        "screen": "playing",
+        "selected": 9,
+        "sleeping": null,
+        "swings": 0,
+        "ticks": 653,
+        "time": {
+          "day": 0,
+          "day_time": 4525,
+          "time_of_day": 4525
+        },
+        "using": null,
+        "weather": {
+          "raining": false,
+          "thundering": false
+        },
+        "world": "TerraForged UI QA"
+      }
+    }
+  ],
+  "frozenInputsAtLaunch": {
+    "lockedFilesSha256": {
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-client.exe": "50b71406d8dc2f661e4a783c4774d4cd6877d459b04ad3b8e9d0586a59e6f6ab",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe": "39d044232b4ee7f20f1167e84823695be0779acbc0653e147880dfee8ddaf7d2",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\native-mods.json": "b1771da176f79908716513b0f547fba691c22d2f03f8f93066fe62aa3240e9f5",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\research-lock.json": "eac45913fbfef00bf8902548511593e413b097644c4c1761b74839081c83bbac",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\pack.json": "c13968971822f642d8b388f54bf29922e03d352fa5ada0ae8689ff7d22b929ab",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\terraforged_launcher_qa-0.1.0.hpack": "a8120f30f5048c7f16621ba9225744a2f2270021abba80112377177172cad153",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-native-mods\\terraforged_native.hmod": "c9845ee3a3d036ef1f0dea379358c240efbb25a6c7156457c385166fd0dd235f",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-native-mods\\coords_hud.hnmod": "432376fad3062b3517e274d3b8c0d0b52fc5d6de2aee20a0b340c8cab5a8cf08",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-mods\\qa_glow.hmod": "4668519cb92c15612d9c15f394a828252fc39abfb09c4d30ad3e961b6de40b4c",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-mods.txt": "d33604c2fe7c0ab40c1ce301c3e5d36d9df29e7d390009786610fe070d6f4e79",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\all-classic-targets.json": "290cbee65a6f524eb2782ffdc9444e2cdc1373fe631ff1a00da1793bcaf23029",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\dev6-package-receipt.json": "2823d4cf96b960c893f5c8130062b4a0f93333022a9779888bbd3091bf41bb51",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\dev6-stage-result.json": "d0f0947e669fed76a013b28db2306f55aef45564881eeddaa7ab5653ee8f1fd6",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\environment.json": "6bd2642e4bd8573b05b40cdf0e95b9158106fce18c157cb0e4e7f6dc6d7714d8",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\installed-horizon-native.json": "5f6edf418df2e2899f7c3cc8aea30240acd49effadc6c61a1ade6e5306dd5d3b",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\installed-native-mods.json": "b1771da176f79908716513b0f547fba691c22d2f03f8f93066fe62aa3240e9f5",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\native-build-receipt.json": "65b9549a214abaf7b86e6ee948dfff95123d3ce6d2149489bfc7da299648ec47",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\old-save-probe-source.rs": "ff08f1dc032aef15b455a07af49a636e83eb726e27b2d1d6b7673e5c9802c6b1",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\resources-sha256.json": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\selected-classic-targets.json": "430684cf2297a426b469bf7ae7704ae4a0f5c43882d3958bf76d79c2ab11bb6e",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\terraforged_save_fixture.exe": "069c95fd5c5c9e4c380d2b323c2d8c97d0fedeb940c0d9a91021c7177cfc9c8c",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\verify_native_ui.original.py": "5fbfe7f67a107d9e59058e56c335da5f0c616fdea54b297dd94818a058ac03e1",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\world-preset.json": "f2dfb9594cb6a1ccf708e79ea42d8cd3174568beec2bff98543913fba27152f3",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\bin\\horizon-launcher.exe": "e544cd14695a3edcb3bb738d8896088c17dc42ea80078718e81054470ff9b0a2",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\verify_installed_native_ui.py": "990e6c5023a25ae8b189803130b99c33347993fd86fe5fae7b945e9841266035",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\old-probe-qualification.json": "c7a2bf33a3c18a690ce4c02209e9d6fff2bba5bf4b08ca854851e3d1bb90f86c"
+    },
+    "resourceFiles": 28180,
+    "resourceInventorySha256": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6"
+  },
+  "client": {
+    "argv": [
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-client.exe",
+      "--resources",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\.local\\horizon-client\\26.3",
+      "--game-dir",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game",
+      "--home",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game",
+      "--name",
+      "TerraForgedQA",
+      "--offscreen",
+      "--control",
+      "--control-socket",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\control.json",
+      "--render-distance",
+      "6",
+      "--width",
+      "1280",
+      "--height",
+      "720",
+      "--timeout-seconds",
+      "900",
+      "--smoke-report",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\smoke.json",
+      "--world",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game\\saves\\TerraForged UI QA"
+    ],
+    "pid": 38368,
+    "cwd": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game",
+    "sevenHomes": {
+      "HORIZON_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\game",
+      "HORIZON_LAUNCHER_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\launcher",
+      "XDG_DATA_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\xdg-data",
+      "XDG_CONFIG_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\xdg-config",
+      "HORIZON_LAUNCHER_TRASH": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\trash",
+      "HORIZON_LAUNCHER_CLIPBOARD": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\clipboard\\clipboard.data",
+      "HORIZON_LAUNCHER_DESKTOP": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\homes\\desktop"
+    },
+    "exitCode": 0,
+    "exitCodeUnsignedHex": "0x00000000"
+  },
+  "phase": "completed",
+  "lastTerrainStatus": {
+    "block_entities": 6,
+    "border": {
+      "center": [
+        0.0,
+        0.0
+      ],
+      "size": 59999968.0
+    },
+    "carts": [],
+    "chunks": 118,
+    "creative": false,
+    "day_time": 4488,
+    "debug": {
+      "advanced_tooltips": false,
+      "chunk_borders": false,
+      "clipboard": null,
+      "hitboxes": false,
+      "overlay": false,
+      "pause_menu": true,
+      "pause_on_lost_focus": false
+    },
+    "destroying": [],
+    "dimension": "minecraft:overworld",
+    "dirty_light": 0,
+    "display": {
+      "height": 1080,
+      "refresh_hz": 60,
+      "scale": 1.0,
+      "width": 1920
+    },
+    "fangs_vertices": 0,
+    "fight": {
+      "alive_crystals": 0,
+      "crystal_list": [],
+      "crystals": 0,
+      "dragon": null,
+      "exit_portal": null,
+      "killed": false,
+      "players": false,
+      "respawn": null
+    },
+    "fishing": null,
+    "fps": 29.99922,
+    "frames": 912,
+    "generated_chunks": 206,
+    "heard": {
+      "minecraft:block.grass.break": 2
+    },
+    "held": {
+      "count": 1,
+      "item": "qa_glow:glowing_amethyst"
+    },
+    "input": {
+      "counts": {
+        "agent": 2,
+        "game": 0,
+        "user": 0
+      },
+      "events": 2,
+      "last_origin": "agent",
+      "last_user_age_s": null,
+      "recording": null,
+      "replay": null,
+      "user_since_agent": 0
+    },
+    "keys": [],
+    "lightning": {
+      "bolts": 0,
+      "flash": 0,
+      "flashes": 0,
+      "struck": 0
+    },
+    "lod": {
+      "active_tiles": 0,
+      "cached_tiles": 0,
+      "detail_target_columns": 0,
+      "distance": 0,
+      "effective_distance": 0,
+      "far_detail": "full",
+      "levels": [],
+      "pending_observations": 0,
+      "refined_samples": 0,
+      "refined_target_columns": 0,
+      "resident_quads": 0,
+      "sampled_target_tiles": 0,
+      "source": "none",
+      "source_attempted": false,
+      "target_tiles": 0,
+      "terrain_distance": 6
+    },
+    "maps": [],
+    "meshed_sections": 1949,
+    "mobs": 12,
+    "music": null,
+    "name_tags": [],
+    "objects": [
+      {
+        "color": "magenta",
+        "id": 70,
+        "kind": "minecraft:cushion",
+        "position": [
+          11.5,
+          67.9375,
+          -43725.5
+        ],
+        "yaw": 90.0
+      },
+      {
+        "color": "magenta",
+        "id": 71,
+        "kind": "minecraft:cushion",
+        "position": [
+          11.5,
+          67.9375,
+          -43723.5
+        ],
+        "yaw": 90.0
+      },
+      {
+        "color": "magenta",
+        "id": 72,
+        "kind": "minecraft:cushion",
+        "position": [
+          12.5,
+          67.9375,
+          -43724.5
+        ],
+        "yaw": 90.0
+      }
+    ],
+    "offhand": null,
+    "particles": {},
+    "pending_chunks": 0,
+    "pending_uploads": 0,
+    "physical_keys": [],
+    "pickups": {},
+    "pitch": 20.0,
+    "player": {
+      "food": 20,
+      "health": 20.0,
+      "max_health": null,
+      "on_ground": false,
+      "position": [
+        0.5,
+        118.0,
+        -43691.5
+      ],
+      "velocity": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "projectiles": [],
+    "render_distance": 6,
+    "renderer": {
+      "arena_bytes": 31457280,
+      "backend": "Vulkan",
+      "culled_sections": [
+        [
+          18,
+          48
+        ],
+        0.09006051
+      ],
+      "device_type": "discrete",
+      "drawn_sections": 48,
+      "driver": "NVIDIA 616.92",
+      "gpu": "NVIDIA GeForce RTX 3090",
+      "gpu_allocated_bytes": 212752272,
+      "gpu_culling": false,
+      "gpu_fading": null,
+      "gpu_frame": false,
+      "gpu_reserved_bytes": 295968768,
+      "present_mode": "Immediate",
+      "resident_sections": 563,
+      "section_draw_calls": 2,
+      "section_draws": 80,
+      "section_vertex_bytes": 16429560,
+      "size": [
+        1280,
+        720
+      ],
+      "uploaded_bytes": 21153552,
+      "vendor": "nvidia"
+    },
+    "riding": null,
+    "rockets": 0,
+    "screen": "playing",
+    "selected": 9,
+    "server": {
+      "address": "local",
+      "chat": [
+        "Teleported TerraForgedQA to 0.500000, 118.000000, -43691.500000"
+      ],
+      "chunks": 118,
+      "dead_players": [],
+      "decode_errors": 0,
+      "dimension": "minecraft:overworld",
+      "entities": {
+        "minecraft:chicken": 2,
+        "minecraft:cushion": 3,
+        "minecraft:item": 18,
+        "minecraft:rabbit": 1,
+        "minecraft:sheep": 5,
+        "minecraft:wolf": 4
+      },
+      "entity_id": 24,
+      "food": 20,
+      "game_mode": 3,
+      "health": 20.0,
+      "joined": true,
+      "loaded": true,
+      "lying_players": [],
+      "name": "TerraForgedQA",
+      "own_body": false,
+      "player_equipment": [],
+      "player_model": true,
+      "player_positions": [],
+      "players": [
+        "TerraForgedQA"
+      ],
+      "status": "Loading terrain...",
+      "text_display_vertices": 0,
+      "text_displays": 0
+    },
+    "sidebar": null,
+    "sounds": {
+      "channels": 0,
+      "decoded": 0,
+      "decoded_mib": 0,
+      "events": [],
+      "handles": 0,
+      "instances": 0,
+      "playing": 0,
+      "queued": 0,
+      "ticking": 0,
+      "used": [
+        0,
+        0
+      ]
+    },
+    "stopped_sounds": {},
+    "streaming": {
+      "decorating": 0,
+      "finishing": 0,
+      "generating": 0,
+      "lighting": 0,
+      "meshing": 0,
+      "protos": 0,
+      "queued": 0
+    },
+    "target": null,
+    "ticks": 617,
+    "tridents": 0,
+    "uptime_seconds": 32.1422597,
+    "using": null,
+    "yaw": 135.0
+  },
+  "beforeScreenshot": {
+    "label": "immediately before screenshot",
+    "requested": [
+      135,
+      45
+    ],
+    "actual": [
+      135.0,
+      45.0
+    ],
+    "yawModuloError": 0.0,
+    "pitchError": 0.0,
+    "state": {
+      "busy": null,
+      "dialog": {
+        "open": null,
+        "screen": null
+      },
+      "dimension": "minecraft:overworld",
+      "gamemode": "spectator",
+      "held": {
+        "count": 1,
+        "item": "qa_glow:glowing_amethyst"
+      },
+      "input": {
+        "counts": {
+          "agent": 4,
+          "game": 0,
+          "user": 0
+        },
+        "events": 4,
+        "last_origin": "agent",
+        "last_user_age_s": null,
+        "recording": null,
+        "replay": null,
+        "user_since_agent": 0
+      },
+      "looking_at": {
+        "block": null,
+        "entity": null,
+        "kind": "none"
+      },
+      "menu": null,
+      "mining": null,
+      "paused": false,
+      "player": {
+        "absorption": 0.0,
+        "air": 300,
+        "block_pos": [
+          0,
+          118,
+          -43692
+        ],
+        "death_time": null,
+        "effects": [],
+        "eye": [
+          0.5,
+          119.62000000476837,
+          -43691.5
+        ],
+        "fall_flying": false,
+        "flying": true,
+        "food": 20,
+        "fov_modifier": 1.0999999,
+        "health": 20.0,
+        "hurt_time": 0,
+        "on_ground": false,
+        "pitch": 45.0,
+        "portal_effect": 0.0,
+        "position": [
+          0.5,
+          118.0,
+          -43691.5
+        ],
+        "saturation": 5.0,
+        "shield_cooldown": 0,
+        "sneaking": false,
+        "sprinting": false,
+        "velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "xp": {
+          "level": 0,
+          "progress": 0.0,
+          "total": 0
+        },
+        "yaw": 135.0
+      },
+      "pointer_grabbed": true,
+      "screen": "playing",
+      "selected": 9,
+      "sleeping": null,
+      "swings": 0,
+      "ticks": 642,
+      "time": {
+        "day": 0,
+        "day_time": 4513,
+        "time_of_day": 4513
+      },
+      "using": null,
+      "weather": {
+        "raining": false,
+        "thundering": false
+      },
+      "world": "TerraForged UI QA"
+    }
+  },
+  "afterScreenshot": {
+    "label": "immediately after screenshot",
+    "requested": [
+      135,
+      45
+    ],
+    "actual": [
+      135.0,
+      45.0
+    ],
+    "yawModuloError": 0.0,
+    "pitchError": 0.0,
+    "state": {
+      "busy": null,
+      "dialog": {
+        "open": null,
+        "screen": null
+      },
+      "dimension": "minecraft:overworld",
+      "gamemode": "spectator",
+      "held": {
+        "count": 1,
+        "item": "qa_glow:glowing_amethyst"
+      },
+      "input": {
+        "counts": {
+          "agent": 5,
+          "game": 0,
+          "user": 0
+        },
+        "events": 5,
+        "last_origin": "agent",
+        "last_user_age_s": null,
+        "recording": null,
+        "replay": null,
+        "user_since_agent": 0
+      },
+      "looking_at": {
+        "block": null,
+        "entity": null,
+        "kind": "none"
+      },
+      "menu": null,
+      "mining": null,
+      "paused": false,
+      "player": {
+        "absorption": 0.0,
+        "air": 300,
+        "block_pos": [
+          0,
+          118,
+          -43692
+        ],
+        "death_time": null,
+        "effects": [],
+        "eye": [
+          0.5,
+          119.62000000476837,
+          -43691.5
+        ],
+        "fall_flying": false,
+        "flying": true,
+        "food": 20,
+        "fov_modifier": 1.0999999,
+        "health": 20.0,
+        "hurt_time": 0,
+        "on_ground": false,
+        "pitch": 45.0,
+        "portal_effect": 0.0,
+        "position": [
+          0.5,
+          118.0,
+          -43691.5
+        ],
+        "saturation": 5.0,
+        "shield_cooldown": 0,
+        "sneaking": false,
+        "sprinting": false,
+        "velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "xp": {
+          "level": 0,
+          "progress": 0.0,
+          "total": 0
+        },
+        "yaw": 135.0
+      },
+      "pointer_grabbed": true,
+      "screen": "playing",
+      "selected": 9,
+      "sleeping": null,
+      "swings": 0,
+      "ticks": 653,
+      "time": {
+        "day": 0,
+        "day_time": 4525,
+        "time_of_day": 4525
+      },
+      "using": null,
+      "weather": {
+        "raining": false,
+        "thundering": false
+      },
+      "world": "TerraForged UI QA"
+    }
+  },
+  "screenshot": {
+    "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev6-fir-corrected-v1\\corrected-fir-135-45.png",
+    "sha256": "8f647d0e09f37212415faca1899bfbe619d44665f718e6a27a653d04826f74fa"
+  },
+  "frozenInputsAfter": {
+    "lockedFilesSha256": {
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-client.exe": "50b71406d8dc2f661e4a783c4774d4cd6877d459b04ad3b8e9d0586a59e6f6ab",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe": "39d044232b4ee7f20f1167e84823695be0779acbc0653e147880dfee8ddaf7d2",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\native-mods.json": "b1771da176f79908716513b0f547fba691c22d2f03f8f93066fe62aa3240e9f5",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\research-lock.json": "eac45913fbfef00bf8902548511593e413b097644c4c1761b74839081c83bbac",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\pack.json": "c13968971822f642d8b388f54bf29922e03d352fa5ada0ae8689ff7d22b929ab",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\terraforged_launcher_qa-0.1.0.hpack": "a8120f30f5048c7f16621ba9225744a2f2270021abba80112377177172cad153",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-native-mods\\terraforged_native.hmod": "c9845ee3a3d036ef1f0dea379358c240efbb25a6c7156457c385166fd0dd235f",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-native-mods\\coords_hud.hnmod": "432376fad3062b3517e274d3b8c0d0b52fc5d6de2aee20a0b340c8cab5a8cf08",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-mods\\qa_glow.hmod": "4668519cb92c15612d9c15f394a828252fc39abfb09c4d30ad3e961b6de40b4c",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-mods.txt": "d33604c2fe7c0ab40c1ce301c3e5d36d9df29e7d390009786610fe070d6f4e79",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\all-classic-targets.json": "290cbee65a6f524eb2782ffdc9444e2cdc1373fe631ff1a00da1793bcaf23029",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\dev6-package-receipt.json": "2823d4cf96b960c893f5c8130062b4a0f93333022a9779888bbd3091bf41bb51",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\dev6-stage-result.json": "d0f0947e669fed76a013b28db2306f55aef45564881eeddaa7ab5653ee8f1fd6",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\environment.json": "6bd2642e4bd8573b05b40cdf0e95b9158106fce18c157cb0e4e7f6dc6d7714d8",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\installed-horizon-native.json": "5f6edf418df2e2899f7c3cc8aea30240acd49effadc6c61a1ade6e5306dd5d3b",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\installed-native-mods.json": "b1771da176f79908716513b0f547fba691c22d2f03f8f93066fe62aa3240e9f5",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\native-build-receipt.json": "65b9549a214abaf7b86e6ee948dfff95123d3ce6d2149489bfc7da299648ec47",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\old-save-probe-source.rs": "ff08f1dc032aef15b455a07af49a636e83eb726e27b2d1d6b7673e5c9802c6b1",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\resources-sha256.json": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\selected-classic-targets.json": "430684cf2297a426b469bf7ae7704ae4a0f5c43882d3958bf76d79c2ab11bb6e",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\terraforged_save_fixture.exe": "069c95fd5c5c9e4c380d2b323c2d8c97d0fedeb940c0d9a91021c7177cfc9c8c",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\verify_native_ui.original.py": "5fbfe7f67a107d9e59058e56c335da5f0c616fdea54b297dd94818a058ac03e1",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\world-preset.json": "f2dfb9594cb6a1ccf708e79ea42d8cd3174568beec2bff98543913fba27152f3",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\bin\\horizon-launcher.exe": "e544cd14695a3edcb3bb738d8896088c17dc42ea80078718e81054470ff9b0a2",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\verify_installed_native_ui.py": "990e6c5023a25ae8b189803130b99c33347993fd86fe5fae7b945e9841266035",
+      "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\old-probe-qualification.json": "c7a2bf33a3c18a690ce4c02209e9d6fff2bba5bf4b08ca854851e3d1bb90f86c"
+    },
+    "resourceFiles": 28180,
+    "resourceInventorySha256": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6"
+  },
+  "baselineWorldUnchanged": true,
+  "baselineReportUnchanged": true,
+  "copiedArchivesUnchanged": true,
+  "completedAtUtc": "2026-11-08T03:55:06.885499+00:00"
+}
