@@ -76,3 +76,43 @@ project's own approved public-client registration must be configured in the
 launcher build (or its supported runtime override), then genuine sign-in and
 Play must pass. Do not borrow another launcher's OAuth application ID or claim
 that an offline/direct-client test qualifies authentication.
+
+## Verified Prism session path (new launcher candidate)
+
+[Horizon PR14](https://github.com/TheApple05/horizon/pull/14) adds an explicit
+Prism session import without using Prism's Microsoft refresh token or OAuth app
+ID. The active session passes Minecraft's live ownership and matching-profile
+checks and the launcher's forced Play authentication check. The user confirms
+normal GUI Play reached an in-game world. This is user-reported launcher Play
+acceptance; the world preset was not independently inspected, and this does not
+qualify a final packaged TerraForged candidate or Horizon's own OAuth flow.
+
+The static Windows candidate passes 512 library tests and 97 executable tests
+(eight intentional ignores total), warnings-denied Clippy and the system-DLL
+import check. The generated command reference is updated. Session expiry still
+requires refresh in Prism and reimport. No account files or identifiers belong
+in published evidence. Computer use was stopped at the user's request.
+
+## Exploration attempts and coordination
+
+The first extended run was rejected when another Horizon client started. A
+later cold-region harness incorrectly rejected intentional revisits; its raw
+failure is preserved. The next two attempts lost their game/control connection.
+One cleanup initially obscured the natural exit code by terminating the process
+too soon; the helper now allows five seconds to observe natural completion.
+Five shutdown/UI regression tests pass, including a real child exiting after
+its control connection closes.
+
+The repeat captures exit **0** without forced termination. Inspection of the
+active chat **Improve Horizon world gen** then establishes external cancellation:
+that chat explicitly issued `quit` to the exploration-v3 and exploration-v4
+control endpoints to run exclusive measurements, and parked the v2 test EXEs.
+Its `live-runtime-v3/setup/closed-other-client.json` independently records the
+v3 PID, endpoint, successful quit and timestamp. These are cancelled tests, not
+evidence of a reproduced runtime crash. Raw failed verdicts remain unchanged;
+the older historical unexplained exit is not resolved by this finding.
+
+Do not launch competing clients or restore parked binaries while that exclusive
+job is active. A completed extended exploration/save/reopen test, multiple
+seeds, interrupted-save recovery, supported preview upgrades and final exact
+release-artifact qualification remain open.

@@ -1,0 +1,14 @@
+{
+  "observedAtLocal": "2026-11-08T09:52:35-08:00",
+  "clientPid": 10260,
+  "driverPid": 19020,
+  "driver": "TerraForged-Horizon-stable/build/qa/run-revisit-v3.py",
+  "client": "live-runtime-v2/bin/candidate/horizon-client.exe",
+  "action": "horizon-ctl --socket exploration-v3/homes/horizon_home/control-resume.json quit",
+  "controlResponse": {
+    "ok": true
+  },
+  "checkedAtUtc": "2026-11-08T17:52:59.560895+00:00",
+  "clientAndDriverAbsentAfterQuit": true,
+  "scope": "Closed separate old scratch-QA client before any timed v3 cohorts; no player homes touched"
+}

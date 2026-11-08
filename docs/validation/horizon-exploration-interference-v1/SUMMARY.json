@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "status": "excluded-incomplete-exploration-attempts-not-runtime-crash-qualification",
+  "reviewedAtUtc": "2026-11-08T18:04:16.730387+00:00",
+  "attempts": [
+    {
+      "attempt": 1,
+      "rawPath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-stable\\build\\qa\\exploration-v1.json",
+      "rawSha256": "893b717694e898e88e31a14d4156f8f2a4fb255af4d1b7b601f3513e2e7527f2",
+      "rawStatus": "failed",
+      "rawError": "Exclusive-client observation failed; timing invalid: {'ownedPid': 46440, 'intervalSeconds': 0.25, 'samples': 885, 'maximumClientCount': 2, 'firstOtherClients': {'pids': [36920], 'atUtc': '2026-11-08T17:39:34.042023+00:00'}, 'watchError': None}",
+      "classification": "isolation guard saw another client; excluded",
+      "sessions": {
+        "primary": {
+          "status": "failed",
+          "error": "Exclusive-client observation failed; timing invalid: {'ownedPid': 46440, 'intervalSeconds': 0.25, 'samples': 885, 'maximumClientCount': 2, 'firstOtherClients': {'pids': [36920], 'atUtc': '2026-11-08T17:39:34.042023+00:00'}, 'watchError': None}",
+          "exitCode": null,
+          "cleanup": {
+            "pid": 46440,
+            "initialExit": {
+              "exitCode": null,
+              "exitCodeUnsignedHex": null
+            },
+            "actions": [
+              "control-quit"
+            ],
+            "finalExit": {
+              "exitCode": 0,
+              "exitCodeUnsignedHex": "0x00000000"
+            },
+            "elapsedSeconds": 0.875,
+            "completedAtUtc": "2026-11-08T17:39:35.499604+00:00"
+          },
+          "elapsedSeconds": 249.34399999999732
+        }
+      }
+    },
+    {
+      "attempt": 2,
+      "rawPath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-stable\\build\\qa\\exploration-v2.json",
+      "rawSha256": "32de7fcdb4f794cb94f3cedd8f0a3b2530c37fef22ac9b242cc4e42554e181ec",
+      "rawStatus": "failed",
+      "rawError": "Cold destination region already exists: C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-stable\\build\\qa\\exploration-v2\\homes\\horizon_home\\saves\\NativeQA\\dimensions\\minecraft\\overworld\\region\\r.72.-108.mca",
+      "classification": "harness incorrectly required intentional revisits to be cold; excluded",
+      "sessions": {
+        "primary": {
+          "status": "failed",
+          "error": "Cold destination region already exists: C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-stable\\build\\qa\\exploration-v2\\homes\\horizon_home\\saves\\NativeQA\\dimensions\\minecraft\\overworld\\region\\r.72.-108.mca",
+          "exitCode": null,
+          "cleanup": {
+            "pid": 24868,
+            "initialExit": {
+              "exitCode": null,
+              "exitCodeUnsignedHex": null
+            },
+            "actions": [
+              "control-quit"
+            ],
+            "finalExit": {
+              "exitCode": 0,
+              "exitCodeUnsignedHex": "0x00000000"
+            },
+            "elapsedSeconds": 0.9060000000026776,
+            "completedAtUtc": "2026-11-08T17:47:35.306137+00:00"
+          },
+          "elapsedSeconds": 429.4689999999973
+        }
+      }
+    },
+    {
+      "attempt": 3,
+      "rawPath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-stable\\build\\qa\\exploration-v3.json",
+      "rawSha256": "c4de3649c0205f62a3fc2d9c17fe42ec11f68dd05775584318274517585d0737",
+      "rawStatus": "failed",
+      "rawError": "Control block exited 1",
+      "classification": "other active chat sent quit to this exact endpoint; independently corroborated by PID/receipt",
+      "sessions": {
+        "resume": {
+          "status": "failed",
+          "error": "Control block exited 1",
+          "exitCode": null,
+          "cleanup": {
+            "pid": 10260,
+            "initialExit": {
+              "exitCode": null,
+              "exitCodeUnsignedHex": null
+            },
+            "actions": [
+              "control-quit",
+              "own-process-terminate"
+            ],
+            "gracefulError": "Control quit exited 3",
+            "finalExit": {
+              "exitCode": 1,
+              "exitCodeUnsignedHex": "0x00000001"
+            },
+            "elapsedSeconds": 0.062000000005355105,
+            "completedAtUtc": "2026-11-08T17:52:47.757621+00:00"
+          },
+          "elapsedSeconds": 206.46900000001187
+        }
+      }
+    },
+    {
+      "attempt": 4,
+      "rawPath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-stable\\build\\qa\\exploration-v4.json",
+      "rawSha256": "55fb39e33e708a9803683d63390193684dcec05cae40e4c8e21b2588eb45c954",
+      "rawStatus": "failed",
+      "rawError": "Control block exited 1",
+      "classification": "other active chat sent quit to this exact endpoint; natural exit zero observed",
+      "sessions": {
+        "resume": {
+          "status": "failed",
+          "error": "Control block exited 1",
+          "exitCode": null,
+          "cleanup": {
+            "pid": 42276,
+            "initialExit": {
+              "exitCode": null,
+              "exitCodeUnsignedHex": null
+            },
+            "actions": [
+              "control-quit",
+              "wait-after-control-error"
+            ],
+            "gracefulError": "Control quit exited 3",
+            "finalExit": {
+              "exitCode": 0,
+              "exitCodeUnsignedHex": "0x00000000"
+            },
+            "elapsedSeconds": 0.11000000000058208,
+            "completedAtUtc": "2026-11-08T18:00:00.743852+00:00"
+          },
+          "elapsedSeconds": 75.04700000000594
+        }
+      }
+    }
+  ],
+  "externalThread": {
+    "title": "Improve Horizon world gen",
+    "threadId": "01a1b940-0fe6-7562-a1ba-d2d5bed93045",
+    "v3CorroboratingReceiptSha256": "586a4e3d8f6de867d11d3436383176e9a7d56260d444375677611ba6684c17cc",
+    "v4Evidence": "Read-only thread history contains horizon-ctl --socket exploration-v4/homes/horizon_home/control-resume.json quit; raw cleanup observes natural exit 0"
+  },
+  "missingExecutablePreflight": "exploration-v5 refused to launch after the other job renamed v2 executables to .paused-for-exclusive-v3; no replacement was attempted",
+  "scope": "Raw failed verdicts remain unchanged. Extended exploration acceptance remains open. These observations do not resolve older historical unexplained exits."
+}
