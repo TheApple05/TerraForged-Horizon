@@ -1,0 +1,978 @@
+{
+  "scope": "Smoothing filter only; one iteration on deterministic 160x160 tile backing (factor3 border1), clone and full-height checksum excluded from timer; two warmups, six trials per radius",
+  "order": [
+    "baseline",
+    "candidate",
+    "candidate",
+    "baseline"
+  ],
+  "startedContext": "Balanced baseline/candidate/candidate/baseline process order, each two warmups then six trials per radius; existing workstation background load not controlled",
+  "finishedAtUtc": "2026-11-08T04:01:10.878732+00:00",
+  "allHeightChecksumsMatch": true,
+  "observations": [
+    {
+      "radius": 1.8,
+      "trialsPerVersion": 12,
+      "baselineMedianMs": 0.7545499999999999,
+      "candidateMedianMs": 0.3486,
+      "reductionPercent": 53.800278311576434,
+      "speedup": 2.1645152036718303,
+      "perBatchMediansMs": {
+        "baseline": [
+          0.97035,
+          0.744
+        ],
+        "candidate": [
+          0.34945,
+          0.34665
+        ]
+      },
+      "heightChecksum": "61fa9d2d8d7017d5"
+    },
+    {
+      "radius": 8,
+      "trialsPerVersion": 12,
+      "baselineMedianMs": 7.490500000000001,
+      "candidateMedianMs": 3.1287499999999997,
+      "reductionPercent": 58.230425205260005,
+      "speedup": 2.394087095485418,
+      "perBatchMediansMs": {
+        "baseline": [
+          7.490500000000001,
+          7.4803999999999995
+        ],
+        "candidate": [
+          3.1251,
+          3.14205
+        ]
+      },
+      "heightChecksum": "6b6cc7d9e5a5f7ce"
+    },
+    {
+      "radius": 32,
+      "trialsPerVersion": 12,
+      "baselineMedianMs": 49.2942,
+      "candidateMedianMs": 23.04785,
+      "reductionPercent": 53.24429648924214,
+      "speedup": 2.138776501929681,
+      "perBatchMediansMs": {
+        "baseline": [
+          53.31405,
+          47.69845
+        ],
+        "candidate": [
+          22.88705,
+          23.425349999999998
+        ]
+      },
+      "heightChecksum": "4b7a7870bc18f0ee"
+    }
+  ],
+  "runs": [
+    {
+      "index": 0,
+      "mode": "baseline",
+      "measurement": {
+        "scope": "Smoothing filter only; one iteration on deterministic 160x160 tile backing (factor3 border1), clone and full-height checksum excluded from timer; two warmups, six trials per radius",
+        "baseChecksum": "e6ef489a4449d114",
+        "observations": [
+          {
+            "radius": 1.8,
+            "trial": 0,
+            "seconds": 0.0007491,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 1,
+            "seconds": 0.0009901,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 2,
+            "seconds": 0.0009973,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 3,
+            "seconds": 0.0009839,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 4,
+            "seconds": 0.0009568,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 5,
+            "seconds": 0.0009504,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 8,
+            "trial": 0,
+            "seconds": 0.0074755,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 1,
+            "seconds": 0.0075055,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 2,
+            "seconds": 0.0103039,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 3,
+            "seconds": 0.0073354,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 4,
+            "seconds": 0.0077817,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 5,
+            "seconds": 0.0073502,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 32,
+            "trial": 0,
+            "seconds": 0.045119,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 1,
+            "seconds": 0.0626329,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 2,
+            "seconds": 0.0532009,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 3,
+            "seconds": 0.0534272,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 4,
+            "seconds": 0.0539827,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 5,
+            "seconds": 0.0452807,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          }
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "mode": "candidate",
+      "measurement": {
+        "scope": "Smoothing filter only; one iteration on deterministic 160x160 tile backing (factor3 border1), clone and full-height checksum excluded from timer; two warmups, six trials per radius",
+        "baseChecksum": "e6ef489a4449d114",
+        "observations": [
+          {
+            "radius": 1.8,
+            "trial": 0,
+            "seconds": 0.0003504,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 1,
+            "seconds": 0.0003431,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 2,
+            "seconds": 0.000435,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 3,
+            "seconds": 0.0003485,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 4,
+            "seconds": 0.0003546,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 5,
+            "seconds": 0.0003472,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 8,
+            "trial": 0,
+            "seconds": 0.0031282,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 1,
+            "seconds": 0.0032008,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 2,
+            "seconds": 0.0031108,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 3,
+            "seconds": 0.003122,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 4,
+            "seconds": 0.0031175,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 5,
+            "seconds": 0.0031699,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 32,
+            "trial": 0,
+            "seconds": 0.0231433,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 1,
+            "seconds": 0.0227922,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 2,
+            "seconds": 0.0228217,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 3,
+            "seconds": 0.0229524,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 4,
+            "seconds": 0.0227695,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 5,
+            "seconds": 0.0268636,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "mode": "candidate",
+      "measurement": {
+        "scope": "Smoothing filter only; one iteration on deterministic 160x160 tile backing (factor3 border1), clone and full-height checksum excluded from timer; two warmups, six trials per radius",
+        "baseChecksum": "e6ef489a4449d114",
+        "observations": [
+          {
+            "radius": 1.8,
+            "trial": 0,
+            "seconds": 0.0004499,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 1,
+            "seconds": 0.0003487,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 2,
+            "seconds": 0.0003413,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 3,
+            "seconds": 0.0003446,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 4,
+            "seconds": 0.0004033,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 5,
+            "seconds": 0.0003409,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 8,
+            "trial": 0,
+            "seconds": 0.0031548,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 1,
+            "seconds": 0.0031263,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 2,
+            "seconds": 0.0032034,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 3,
+            "seconds": 0.0034009,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 4,
+            "seconds": 0.0031293,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 5,
+            "seconds": 0.0031238,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 32,
+            "trial": 0,
+            "seconds": 0.0228828,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 1,
+            "seconds": 0.025195,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 2,
+            "seconds": 0.0250043,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 3,
+            "seconds": 0.0228689,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 4,
+            "seconds": 0.0232594,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 5,
+            "seconds": 0.0235913,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "mode": "baseline",
+      "measurement": {
+        "scope": "Smoothing filter only; one iteration on deterministic 160x160 tile backing (factor3 border1), clone and full-height checksum excluded from timer; two warmups, six trials per radius",
+        "baseChecksum": "e6ef489a4449d114",
+        "observations": [
+          {
+            "radius": 1.8,
+            "trial": 0,
+            "seconds": 0.0007513,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 1,
+            "seconds": 0.0007367,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 2,
+            "seconds": 0.0007359,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 3,
+            "seconds": 0.0007571,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 4,
+            "seconds": 0.00073,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 1.8,
+            "trial": 5,
+            "seconds": 0.000752,
+            "heightChecksum": "61fa9d2d8d7017d5"
+          },
+          {
+            "radius": 8,
+            "trial": 0,
+            "seconds": 0.0074535,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 1,
+            "seconds": 0.0075073,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 2,
+            "seconds": 0.0075463,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 3,
+            "seconds": 0.0095272,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 4,
+            "seconds": 0.0073983,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 8,
+            "trial": 5,
+            "seconds": 0.0072342,
+            "heightChecksum": "6b6cc7d9e5a5f7ce"
+          },
+          {
+            "radius": 32,
+            "trial": 0,
+            "seconds": 0.0467306,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 1,
+            "seconds": 0.0537425,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 2,
+            "seconds": 0.0464631,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 3,
+            "seconds": 0.0486663,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 4,
+            "seconds": 0.0499221,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          },
+          {
+            "radius": 32,
+            "trial": 5,
+            "seconds": 0.0457356,
+            "heightChecksum": "4b7a7870bc18f0ee"
+          }
+        ]
+      }
+    }
+  ],
+  "fileSha256": {
+    "smoothing_bench.rs": "1ecdbcc0b80a3cce04936a36a4202a78289baee25e64f179059e307103b9167f",
+    "smoothing-baseline.exe": "c49036d92ccd036f2da58f9ef5bf458eb1dda8f173be8f8313095d1b3fb78ef0",
+    "smoothing-candidate.exe": "01836b780257f9b0bad9f1f56e62409f93333cade79cdc890ed8c6fd7995be9c"
+  },
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-pc-windows-msvc\nrelease: 1.99.1\nLLVM version: 23.1.1\n",
+  "baselineCommit": "f46d02fa0c06ec21e60e2cb9ac26e7bd6b166661",
+  "candidateSourceSha256Lf": {
+    "horizon\\native-core\\src\\graph.rs": "80ffd8157a8e9e7c3a9f1716433ecf67811fb0b8851924c907f81f7e6f30398a",
+    "horizon\\native-core\\src\\tile_filters_basic.rs": "0bcd32d06ef43b1484210bee20aed476768d251713126fb8766b3a1fc2c3cd1d"
+  },
+  "schemaVersion": 1,
+  "status": "passed-smoothing-speed-and-stability-only",
+  "benchmarkHarnessSource": "use std::{hint::black_box, time::Instant};\nuse terraforged_native_core::{\n    layout::Levels,\n    preset::SmoothingSettings,\n    terrain::TerrainRegistry,\n    tile::TileBuffer,\n    tile_filters_basic::Smoothing,\n};\n\nfn checksum(tile: &TileBuffer) -> u64 {\n    tile.cells.iter().fold(0xcbf29ce484222325, |hash, cell| {\n        (hash ^ u64::from(cell.height.to_bits())).wrapping_mul(0x100000001b3)\n    })\n}\n\nfn main() -> Result<(), Box<dyn std::error::Error>> {\n    let levels = Levels::new(320, 63);\n    let terrains = TerrainRegistry::new();\n    let terrain_count = terrains.iter().count();\n    let mut base = TileBuffer::new(0, 0, 3, 1)?;\n    for (index, cell) in base.cells.iter_mut().enumerate() {\n        let x = index as u32 % 160;\n        let z = index as u32 / 160;\n        let hash = x.wrapping_mul(1_664_525) ^ z.wrapping_mul(1_013_904_223);\n        cell.height = 0.15 + ((hash >> 8) & 65535) as f32 / 65535.0 * 0.7;\n        cell.erosion_mask = index % 17 == 0;\n        cell.terrain = index % terrain_count;\n        cell.terrain_region_edge = (index % 31) as f32 / 30.0;\n        cell.river_mask = (index % 23) as f32 / 22.0;\n    }\n    println!(\"{{\\\"scope\\\":\\\"Smoothing filter only; one iteration on deterministic 160x160 tile backing (factor3 border1), clone and full-height checksum excluded from timer; two warmups, six trials per radius\\\",\\\"baseChecksum\\\":\\\"{:016x}\\\",\\\"observations\\\":[\", checksum(&base));\n    for (radius_index, radius) in [1.8_f32, 8.0, 32.0].into_iter().enumerate() {\n        let filter = Smoothing::new(SmoothingSettings {\n            iterations: 1,\n            smoothing_radius: radius,\n            smoothing_rate: 0.9,\n        }, levels);\n        let mut expected = None;\n        for _ in 0..2 {\n            let mut tile = base.clone();\n            filter.apply(&mut tile, 1, &terrains)?;\n            expected = Some(black_box(checksum(&tile)));\n        }\n        for trial in 0..6 {\n            let mut tile = base.clone();\n            let start = Instant::now();\n            filter.apply(black_box(&mut tile), 1, black_box(&terrains))?;\n            let seconds = start.elapsed().as_secs_f64();\n            let hash = black_box(checksum(&tile));\n            assert_eq!(Some(hash), expected, \"nondeterministic smoothing output\");\n            if radius_index != 0 || trial != 0 { println!(\",\"); }\n            print!(\"{{\\\"radius\\\":{},\\\"trial\\\":{},\\\"seconds\\\":{},\\\"heightChecksum\\\":\\\"{:016x}\\\"}}\", radius, trial, seconds, hash);\n        }\n    }\n    println!(\"]}}\");\n    Ok(())\n}\n",
+  "validation": {
+    "sampledColumns": {
+      "status": "passed-original-kernel-cached-columns",
+      "recordsPerProfile": 196608,
+      "fieldsPerProfile": 4718592,
+      "profiles": [
+        {
+          "profile": "debug",
+          "exitCode": 0,
+          "differenceCount": 0,
+          "firstDifferences": [],
+          "outputSha256": "4dd3ba627da0bac37859a54468970946cbfede5dd900d8fc183f85565caa1a6f",
+          "samplerGuardsObserved": true,
+          "allJavaValuesMatch": true
+        },
+        {
+          "profile": "release",
+          "exitCode": 0,
+          "differenceCount": 0,
+          "firstDifferences": [],
+          "outputSha256": "4dd3ba627da0bac37859a54468970946cbfede5dd900d8fc183f85565caa1a6f",
+          "samplerGuardsObserved": true,
+          "allJavaValuesMatch": true
+        }
+      ],
+      "sourceSha256Lf": {
+        "horizon/native-core/src/bin/biome_probe.rs": "3b0afe8eddf02c79b44e855f2873c15ad5d20f8b24e6b153281def0f095bdc65",
+        "horizon/native-core/src/bin/cell_foundation_probe.rs": "93868fd06719515e63e1197b551d05ee260dc2eaee62d698fa68ee07044c8cbb",
+        "horizon/native-core/src/bin/classic_pillar_math_probe.rs": "be5a112ce86cfe1fb581444d8a34882880e5777921b7fb5d9fd29c8fdde4ecae",
+        "horizon/native-core/src/bin/core_probe.rs": "2135bffcbc11eb44efc5b5fb9290c004877d52e28acea3585465efbffa8485b4",
+        "horizon/native-core/src/bin/java_random_probe.rs": "81fbeab12d071a8d410b4c3fb6f92fb7eb4fa72e9e708e0fd0cd680e436ae5e4",
+        "horizon/native-core/src/bin/math_probe.rs": "d59d6066dd3ab530c01f1b130d367469a48ce2bf63aab5ee8467177821bbe20e",
+        "horizon/native-core/src/bin/noise_cellular_probe.rs": "51ffd88f5d336eeab041bf348f0ec609be6dfad1eca6981ab563a0e1a0ddb9e8",
+        "horizon/native-core/src/bin/noise_composition_probe.rs": "41c700b6e80149a052b629198be0e1697bdd8b94de6571666a47b48b2ef962a4",
+        "horizon/native-core/src/bin/noise_family_probe.rs": "7c832f40f9a405decb3b28135427bac776267fa40342cecf1ef584cbf0bfa01a",
+        "horizon/native-core/src/bin/noise_final_probe.rs": "2306f40a423accd957c8a053b39b8564b712cacebc3620db46e5dbd387bcf92d",
+        "horizon/native-core/src/bin/noise_probe.rs": "365ddc9f8419d0865d77f47d245327232a72d9d212def9efb1f45b4fcc892660",
+        "horizon/native-core/src/bin/noise_shaping_probe.rs": "a9dd6228d310db541328477e31d8964b6b7923edb7aac084b497165686d0da43",
+        "horizon/native-core/src/bin/noise_sources_probe.rs": "ec86d45f5a28f4f589c906ea86f1c04256a3f5fe2a795741bec74a9559835b00",
+        "horizon/native-core/src/bin/noise_visitor_probe.rs": "d21d3b05b954d04233593eca1d3c01307491e1c4809420e9fb4474f90e13338a",
+        "horizon/native-core/src/bin/pillar_sampler_probe.rs": "221ddc7c13cffab2e2bc35a49f6f2e7cc2f654d84c0d28265e57849de845f79d",
+        "horizon/native-core/src/bin/power_probe.rs": "d1590fd2bc8666e2e1b4cfe7299c5a87ce6c099391bf770ddba304b5c000635e",
+        "horizon/native-core/src/bin/scalar_probe.rs": "96aee09dbbbf80bb388e74404bbf7f9443bb6d34d38894f551eae4ff5cf92758",
+        "horizon/native-core/src/bin/terrain_probe.rs": "953b4a326242df705bd647c7787c21203018c7528042019bc6a35502e555941d",
+        "horizon/native-core/src/bin/utility_probe.rs": "293b0003ff5cd147c3aeeeafad73f486e8935e4563286fc127616b7f577c8ebc",
+        "horizon/native-core/src/biome.rs": "c4790b89dd4a4c61df95a59a5bffc814c2751127fe068ba39a97eca50815195b",
+        "horizon/native-core/src/bounds.rs": "77b0996102fa212a12d4d82c7ff7af18c9d77fe4f87fa50e06e1860ae7bbaa8d",
+        "horizon/native-core/src/cell.rs": "427dc603546d4139f7e299dcefd4da667d58e094e95ea0dc65ce71293b4705e2",
+        "horizon/native-core/src/classic_biomes.rs": "e4cba0102c2b2b86ff8fd03300c0f3dae5120de6c563e7afe96412488eb3d24a",
+        "horizon/native-core/src/classic_pillars.rs": "b3058b177cc3212d4eed52f5e6f69b12e8dbd0711ba42dacddc5ed96910c2b05",
+        "horizon/native-core/src/climate.rs": "89756e2e9ad3832284bd2de23627ddd365310455e42cb3be29864f59e891bb4e",
+        "horizon/native-core/src/continent.rs": "b21113a3d6b3affe39aff8af17a6757ce72c8430234ee5bfb0792d8eab9ed6cf",
+        "horizon/native-core/src/data/biome-types.bin": "3f1db49ae1ae89f8a1224a2534f9b5a3ff313a747047a1ad4257eb73384900c7",
+        "horizon/native-core/src/data/noiseutil-sine.bin": "f2999391380fe1b7a8deb687380fdb51b278fa88ffb8201e9beb2ae125a9db81",
+        "horizon/native-core/src/density_primitives.rs": "8b5481057562c16e11190147c52d1eef3f2ab1f5c9dc7c40ab3f21e3da56bd31",
+        "horizon/native-core/src/domain.rs": "e3b8099f0517d7741012fe1c1e30552d0959f07086806245bd749959216437b4",
+        "horizon/native-core/src/erosion.rs": "8be6d70300e572672bc8b56c90067fed900bb85852b53a49282e5e0c90635b4e",
+        "horizon/native-core/src/fast_random.rs": "475dbaf5fb1b3a71b159c4d4d4ed4d1b1b66677aef151e54721eb951513f024f",
+        "horizon/native-core/src/graph.rs": "80ffd8157a8e9e7c3a9f1716433ecf67811fb0b8851924c907f81f7e6f30398a",
+        "horizon/native-core/src/heightmap.rs": "d17eb830c2efcc48ab51b9fd56bd9380ff9d27def561773540681777386ee35f",
+        "horizon/native-core/src/java_random.rs": "d9b4afea6861a4653ef18549cc2569a857e360ddc63990327860ec6de33a03b1",
+        "horizon/native-core/src/kernel_sampler.rs": "52c9337e4c3e858b99e3187ef543cd7781a367c8a261f5e868af03ee0d39426f",
+        "horizon/native-core/src/lake.rs": "6a877b9e81dd55f8b50a0417193077f521d3bc50994f89b4e6c896885eb944fe",
+        "horizon/native-core/src/layout.rs": "8113aeb702abd0ce0782c27b4179038e131cc3a90cbd1fafc4a24c708d43903d",
+        "horizon/native-core/src/lib.rs": "dbf3f60d574aadd537f9cd40e16c4764cea91785162f1c601ecc85e98779bc13",
+        "horizon/native-core/src/line.rs": "55679d7b6a7d39444dfc53a8c05489523c8adc2aa234f1acbfdeaf0c6e6361d7",
+        "horizon/native-core/src/math_table.rs": "b0faed96a906cf8c5add80da348ff2e525f11f603e32dd6c25fd0766227a0a2a",
+        "horizon/native-core/src/noise_util.rs": "1c5935351876aa360a167470a8ed778632b6be0d4435a43376447fda9f62d5a5",
+        "horizon/native-core/src/noise_vectors.rs": "aca424593d1b9c3fef680ea1920fcbcc9f8b7208b8fa3bb739b77d174602dfd0",
+        "horizon/native-core/src/noises.rs": "48f32c133c8a9cc8612668664728c4de2e31bdc6e26e9224ed3f754d84b53f4d",
+        "horizon/native-core/src/perlin.rs": "6dcbf9cc7281e7567bffd3974612ce8d742fbe6dfd3bf663e7bc99f396f1897b",
+        "horizon/native-core/src/perlin2.rs": "028fab2a85af2b79e2dfe115cf2c0a1abd550dcdc21dc663ecd5a41ef0b1a981",
+        "horizon/native-core/src/pillar_sampler.rs": "71174a4ce5bac9de31190161e60847792fc920586b1c732ede6007488e2d9c6a",
+        "horizon/native-core/src/populator.rs": "8f9afb27d419d733357e3ea21c5182036b755b92c5e6e798281731b15dc1f608",
+        "horizon/native-core/src/pos_util.rs": "09237ff99c85e800b07e965d2af4b8cbc5132b1525ae51930f74212728dfcb6f",
+        "horizon/native-core/src/preset.rs": "331c2cfc9174ce2748facf124f83c54b352c6db2c74a3541220908d42714a72a",
+        "horizon/native-core/src/region.rs": "66a5c74375f688826f1d5392ed8d5ea2a73ab3bf48d97d32206e62f5395944c3",
+        "horizon/native-core/src/ridges.rs": "90319d54e4393469489330afb46451856c6f02291abe5aca8b312c987843b1f5",
+        "horizon/native-core/src/river.rs": "3d78000028110b3d03d17613c41adfba7e12dc1cf42453ff40e5f336d3d9c003",
+        "horizon/native-core/src/river_cache.rs": "49694672a5f5c83f25dd0edfa69fa0605834da0c30cf1ff177967e1508e42a82",
+        "horizon/native-core/src/river_carver.rs": "8f4ec3539811687950fde4bd4f528ca05cf621c466771926ca0bab37bd73d0ee",
+        "horizon/native-core/src/river_config.rs": "9a96107a07ec98b4391ecd8fb7b2651038dd89e3d2c7aa1d75829057053fad33",
+        "horizon/native-core/src/river_domain.rs": "06c314e81dceda49fee35e55d2eaf840dce4a9fcb424ac76d4442ff36ff3ab84",
+        "horizon/native-core/src/river_generator.rs": "9318db0879f045e156f2c1b9e670305ca32d48e316a08f972eb32566d2f46d86",
+        "horizon/native-core/src/river_network.rs": "9d914c74883db2370e7b48f75e4bf5c80f0baac3209ebbdb91148b7f31a912d4",
+        "horizon/native-core/src/river_warp.rs": "19486ef5e6e81e09a647c4cf5b393b433bbbf435fee6785246da95e68f999c2e",
+        "horizon/native-core/src/rivermap.rs": "71e3b2950a3b118e6d5393d777a718a7cea150b17a4fb081b09d41bb13c14065",
+        "horizon/native-core/src/seed.rs": "7c296bc1bc07539034fd4f704e41b298d621173e9dd18158551ad7d78cf64430",
+        "horizon/native-core/src/simplex.rs": "09a9fa3aea602d3da6310c467af93fd6bc3fc96418094d828b4af1ee30c95b47",
+        "horizon/native-core/src/simplex2.rs": "0f2614e82178bc148180a76d13c8fd814a3e5aadd2c6e02a3cac9b250f963d1c",
+        "horizon/native-core/src/sources.rs": "0187f37e59fb6c21a5c62a1754beaf11dae8e51057835b45664c32106d7ddca3",
+        "horizon/native-core/src/terrain.rs": "119f99a192200b41aea878aa56dcf7164f7aebfbfe55b5f5f694404ced83403b",
+        "horizon/native-core/src/terrain_factories.rs": "91c5de80770fd84833aa78ef20c7dab4490732d41b30f9cd4b7071baf83ada5c",
+        "horizon/native-core/src/terrain_provider.rs": "774501e9604f91e60862d5f92942f037395cce61280c656252f147d7426b0d9a",
+        "horizon/native-core/src/tile.rs": "81370a4bc170f2ce0d039e93d48b5742641547387a4b0763937ab75e34c094eb",
+        "horizon/native-core/src/tile_erosion.rs": "54247c812bbb45ce72927d597e26f01342f7fab7c5688d9292832a52842b744e",
+        "horizon/native-core/src/tile_filters_basic.rs": "0bcd32d06ef43b1484210bee20aed476768d251713126fb8766b3a1fc2c3cd1d",
+        "horizon/native-core/src/tile_work_cache.rs": "fab1b7ea7e7b13bb305f5221930838c626347c1dd3c4af439c5ee2f277b11743",
+        "horizon/native-core/src/volcano.rs": "f8a60c110aa43958807a7d2178ab64d291476c2262c585d78e37fa6476c4a84c",
+        "horizon/native-core/src/wetland.rs": "06e74c3604f6c5841567c75e5ad8a4c95a812b7ddd4f563c7f0ca23b41cf3dc9",
+        "horizon/native-core/src/world_filters.rs": "f51570e0a9498ce7624c8d4c80f64a8bfe1502115b6e811d2af1ee7411fc3d3f",
+        "horizon/native-core/src/worley.rs": "f4d95f87851d6bf5bb2682620caf51f6de1604eee46abc4a13a7485eea734789",
+        "horizon/native-adapter/src/bin/classic_biome_data_probe.rs": "882e5726ecc01974a2d58dfdde009445c0e7e31a2452829923845e3533dadea3",
+        "horizon/native-adapter/src/bin/classic_biome_probe.rs": "c11c66b15e504a7a257241a8fdf88851f8279df73f1415770e5a58302272ed99",
+        "horizon/native-adapter/src/bin/continent_probe.rs": "758574fb1f9b743f60ed17c8faeeaf47eb3d5133db6ad60179bd44c0b5f0478b",
+        "horizon/native-adapter/src/bin/density_primitive_probe.rs": "356e703bedd97584252686d30982a4d733380d924be673f021da62499c62fe28",
+        "horizon/native-adapter/src/bin/heightmap_climate_probe.rs": "88896a58d965656aea2ef7a8f0550702b46a05c2db58dbc2426ae40b86f4fa04",
+        "horizon/native-adapter/src/bin/kernel_cell_probe.rs": "2cb060c7367cf0c144bfedfa2acb3e28ba60dfe8ad3b59208dfdbd24984b9e71",
+        "horizon/native-adapter/src/bin/kernel_sampler_bench.rs": "971996fa73a00514c36740aa7e6ad133621c9e6a4b25cc2ea4ede92b9a5fa0e7",
+        "horizon/native-adapter/src/bin/kernel_sampler_probe.rs": "46718918e02efbb804d272f6565db73b57bc2890014984a787486f7d47351a6c",
+        "horizon/native-adapter/src/bin/kernel_terrain_probe.rs": "da5f2356c573638a72a305f29bd0515a0e537d36897a228bed86009bc64ff515",
+        "horizon/native-adapter/src/bin/populator_probe.rs": "df3bb50ebefaddf665a287e8f7dd2bf9890f3cf74287786525d2e93655476122",
+        "horizon/native-adapter/src/bin/preset_probe.rs": "b4decaa545c6e86a1ec705c1149e850be71a880c884852de6716b627014b116f",
+        "horizon/native-adapter/src/bin/registry_probe.rs": "b1399f0b00304580135e6e635e646696f8bea948963bfdcbdbba9aa824a67696",
+        "horizon/native-adapter/src/bin/river_carver_probe.rs": "7b78231d8e17fe76816885a9fee567864ee49657370bc50108fadb967228737b",
+        "horizon/native-adapter/src/bin/river_foundation_probe.rs": "3af9395fd0aa8f273584d6fab846a6d7f1cab7353b96706388f5f4a3fd97c0e8",
+        "horizon/native-adapter/src/bin/river_network_probe.rs": "c2bb75611c11c9ee4dcb3c41ea6573de9c6bb1f190664d57f0c71b0581051092",
+        "horizon/native-adapter/src/bin/support/mod.rs": "06bae08c99e116069fa17f25208cbb35f9b7ab25fc457c5bf63adf6b70d1264d",
+        "horizon/native-adapter/src/bin/terrain_factory_probe.rs": "04278e60fef4a02dbd9a9ee5a20cde038842c5be6c63289f463741a2c1c2dac6",
+        "horizon/native-adapter/src/bin/terrain_provider_probe.rs": "be40abab3d56c7117ac76742c4bea644dbcaea8f52e437519d5299936efb78a9",
+        "horizon/native-adapter/src/bin/tile_filter_probe.rs": "cfb54c37b03df9dc6bb48d454b9265e347a238651bc2958e385d28edde64020f",
+        "horizon/native-adapter/src/classic_biome_data.rs": "fce602598383e6c4aa7bee1e2b3c9c379b9cff46167f91e9ce63540586223795",
+        "horizon/native-adapter/src/lib.rs": "8f83858067052c9de00b400a972c6419789852fae43b60924cd3758ef07f5e58",
+        "horizon/native-adapter/src/noise_registry.rs": "ec09f42a267ece497f202be1b16de8f8be4b4395b1de7ff3e1ad252e38c50de4",
+        "horizon/native-adapter/src/preset.rs": "e0fd1c662391b8fbb8ed1684d0709ed81d97cbe7e3aa991766a294fb88498b58",
+        "horizon/native-adapter/src/router.rs": "f9eb3c4cafb9b096efd44f6cf44153d6da7cddaa1b076000035ab320515aa41f"
+      }
+    },
+    "javaFilters": {
+      "status": "passed-tile-filters-and-zoomed-cells-only",
+      "recordsPerProfile": 125104,
+      "fieldsPerProfile": 3151416,
+      "profiles": [
+        {
+          "profile": "debug",
+          "exitCode": 0,
+          "outputSha256": "e346a932b92e10aa1f216d61da4241151fdea07e0f5f7c729bb903e0fe2bc8c7",
+          "differenceCount": 0,
+          "firstDifferences": [],
+          "rejectionGuardsObserved": true,
+          "allJavaValuesMatch": true
+        },
+        {
+          "profile": "release",
+          "exitCode": 0,
+          "outputSha256": "e346a932b92e10aa1f216d61da4241151fdea07e0f5f7c729bb903e0fe2bc8c7",
+          "differenceCount": 0,
+          "firstDifferences": [],
+          "rejectionGuardsObserved": true,
+          "allJavaValuesMatch": true
+        }
+      ],
+      "sourceSha256Lf": {
+        "horizon/native-adapter/Cargo.lock": "5b9264ab576d315c2f1d5c893fb050ab6bbf24369b3d68b2c50a42e772f234ae",
+        "horizon/native-adapter/Cargo.toml": "b2af89a7c40eb26f25bbc4c942713eaafc8e16da08f370f97d158a9f73484d04",
+        "horizon/native-adapter/src/bin/classic_biome_data_probe.rs": "882e5726ecc01974a2d58dfdde009445c0e7e31a2452829923845e3533dadea3",
+        "horizon/native-adapter/src/bin/classic_biome_probe.rs": "c11c66b15e504a7a257241a8fdf88851f8279df73f1415770e5a58302272ed99",
+        "horizon/native-adapter/src/bin/continent_probe.rs": "758574fb1f9b743f60ed17c8faeeaf47eb3d5133db6ad60179bd44c0b5f0478b",
+        "horizon/native-adapter/src/bin/density_primitive_probe.rs": "356e703bedd97584252686d30982a4d733380d924be673f021da62499c62fe28",
+        "horizon/native-adapter/src/bin/heightmap_climate_probe.rs": "88896a58d965656aea2ef7a8f0550702b46a05c2db58dbc2426ae40b86f4fa04",
+        "horizon/native-adapter/src/bin/kernel_cell_probe.rs": "2cb060c7367cf0c144bfedfa2acb3e28ba60dfe8ad3b59208dfdbd24984b9e71",
+        "horizon/native-adapter/src/bin/kernel_sampler_bench.rs": "971996fa73a00514c36740aa7e6ad133621c9e6a4b25cc2ea4ede92b9a5fa0e7",
+        "horizon/native-adapter/src/bin/kernel_sampler_probe.rs": "46718918e02efbb804d272f6565db73b57bc2890014984a787486f7d47351a6c",
+        "horizon/native-adapter/src/bin/kernel_terrain_probe.rs": "da5f2356c573638a72a305f29bd0515a0e537d36897a228bed86009bc64ff515",
+        "horizon/native-adapter/src/bin/populator_probe.rs": "df3bb50ebefaddf665a287e8f7dd2bf9890f3cf74287786525d2e93655476122",
+        "horizon/native-adapter/src/bin/preset_probe.rs": "b4decaa545c6e86a1ec705c1149e850be71a880c884852de6716b627014b116f",
+        "horizon/native-adapter/src/bin/registry_probe.rs": "b1399f0b00304580135e6e635e646696f8bea948963bfdcbdbba9aa824a67696",
+        "horizon/native-adapter/src/bin/river_carver_probe.rs": "7b78231d8e17fe76816885a9fee567864ee49657370bc50108fadb967228737b",
+        "horizon/native-adapter/src/bin/river_foundation_probe.rs": "3af9395fd0aa8f273584d6fab846a6d7f1cab7353b96706388f5f4a3fd97c0e8",
+        "horizon/native-adapter/src/bin/river_network_probe.rs": "c2bb75611c11c9ee4dcb3c41ea6573de9c6bb1f190664d57f0c71b0581051092",
+        "horizon/native-adapter/src/bin/support/mod.rs": "06bae08c99e116069fa17f25208cbb35f9b7ab25fc457c5bf63adf6b70d1264d",
+        "horizon/native-adapter/src/bin/terrain_factory_probe.rs": "04278e60fef4a02dbd9a9ee5a20cde038842c5be6c63289f463741a2c1c2dac6",
+        "horizon/native-adapter/src/bin/terrain_provider_probe.rs": "be40abab3d56c7117ac76742c4bea644dbcaea8f52e437519d5299936efb78a9",
+        "horizon/native-adapter/src/bin/tile_filter_probe.rs": "cfb54c37b03df9dc6bb48d454b9265e347a238651bc2958e385d28edde64020f",
+        "horizon/native-adapter/src/classic_biome_data.rs": "fce602598383e6c4aa7bee1e2b3c9c379b9cff46167f91e9ce63540586223795",
+        "horizon/native-adapter/src/lib.rs": "8f83858067052c9de00b400a972c6419789852fae43b60924cd3758ef07f5e58",
+        "horizon/native-adapter/src/noise_registry.rs": "ec09f42a267ece497f202be1b16de8f8be4b4395b1de7ff3e1ad252e38c50de4",
+        "horizon/native-adapter/src/preset.rs": "e0fd1c662391b8fbb8ed1684d0709ed81d97cbe7e3aa991766a294fb88498b58",
+        "horizon/native-adapter/src/router.rs": "f9eb3c4cafb9b096efd44f6cf44153d6da7cddaa1b076000035ab320515aa41f",
+        "horizon/native-core/Cargo.lock": "51e811941ccbf1984b0a3a36b105742bb4053403c4adb5ac5acffbef3b80fa40",
+        "horizon/native-core/Cargo.toml": "90828d3f94df0a4249961250593854170168ab2de8191bc4d7d9540394152366",
+        "horizon/native-core/src/bin/biome_probe.rs": "3b0afe8eddf02c79b44e855f2873c15ad5d20f8b24e6b153281def0f095bdc65",
+        "horizon/native-core/src/bin/cell_foundation_probe.rs": "93868fd06719515e63e1197b551d05ee260dc2eaee62d698fa68ee07044c8cbb",
+        "horizon/native-core/src/bin/classic_pillar_math_probe.rs": "be5a112ce86cfe1fb581444d8a34882880e5777921b7fb5d9fd29c8fdde4ecae",
+        "horizon/native-core/src/bin/core_probe.rs": "2135bffcbc11eb44efc5b5fb9290c004877d52e28acea3585465efbffa8485b4",
+        "horizon/native-core/src/bin/java_random_probe.rs": "81fbeab12d071a8d410b4c3fb6f92fb7eb4fa72e9e708e0fd0cd680e436ae5e4",
+        "horizon/native-core/src/bin/math_probe.rs": "d59d6066dd3ab530c01f1b130d367469a48ce2bf63aab5ee8467177821bbe20e",
+        "horizon/native-core/src/bin/noise_cellular_probe.rs": "51ffd88f5d336eeab041bf348f0ec609be6dfad1eca6981ab563a0e1a0ddb9e8",
+        "horizon/native-core/src/bin/noise_composition_probe.rs": "41c700b6e80149a052b629198be0e1697bdd8b94de6571666a47b48b2ef962a4",
+        "horizon/native-core/src/bin/noise_family_probe.rs": "7c832f40f9a405decb3b28135427bac776267fa40342cecf1ef584cbf0bfa01a",
+        "horizon/native-core/src/bin/noise_final_probe.rs": "2306f40a423accd957c8a053b39b8564b712cacebc3620db46e5dbd387bcf92d",
+        "horizon/native-core/src/bin/noise_probe.rs": "365ddc9f8419d0865d77f47d245327232a72d9d212def9efb1f45b4fcc892660",
+        "horizon/native-core/src/bin/noise_shaping_probe.rs": "a9dd6228d310db541328477e31d8964b6b7923edb7aac084b497165686d0da43",
+        "horizon/native-core/src/bin/noise_sources_probe.rs": "ec86d45f5a28f4f589c906ea86f1c04256a3f5fe2a795741bec74a9559835b00",
+        "horizon/native-core/src/bin/noise_visitor_probe.rs": "d21d3b05b954d04233593eca1d3c01307491e1c4809420e9fb4474f90e13338a",
+        "horizon/native-core/src/bin/pillar_sampler_probe.rs": "221ddc7c13cffab2e2bc35a49f6f2e7cc2f654d84c0d28265e57849de845f79d",
+        "horizon/native-core/src/bin/power_probe.rs": "d1590fd2bc8666e2e1b4cfe7299c5a87ce6c099391bf770ddba304b5c000635e",
+        "horizon/native-core/src/bin/scalar_probe.rs": "96aee09dbbbf80bb388e74404bbf7f9443bb6d34d38894f551eae4ff5cf92758",
+        "horizon/native-core/src/bin/terrain_probe.rs": "953b4a326242df705bd647c7787c21203018c7528042019bc6a35502e555941d",
+        "horizon/native-core/src/bin/utility_probe.rs": "293b0003ff5cd147c3aeeeafad73f486e8935e4563286fc127616b7f577c8ebc",
+        "horizon/native-core/src/biome.rs": "c4790b89dd4a4c61df95a59a5bffc814c2751127fe068ba39a97eca50815195b",
+        "horizon/native-core/src/bounds.rs": "77b0996102fa212a12d4d82c7ff7af18c9d77fe4f87fa50e06e1860ae7bbaa8d",
+        "horizon/native-core/src/cell.rs": "427dc603546d4139f7e299dcefd4da667d58e094e95ea0dc65ce71293b4705e2",
+        "horizon/native-core/src/classic_biomes.rs": "e4cba0102c2b2b86ff8fd03300c0f3dae5120de6c563e7afe96412488eb3d24a",
+        "horizon/native-core/src/classic_pillars.rs": "b3058b177cc3212d4eed52f5e6f69b12e8dbd0711ba42dacddc5ed96910c2b05",
+        "horizon/native-core/src/climate.rs": "89756e2e9ad3832284bd2de23627ddd365310455e42cb3be29864f59e891bb4e",
+        "horizon/native-core/src/continent.rs": "b21113a3d6b3affe39aff8af17a6757ce72c8430234ee5bfb0792d8eab9ed6cf",
+        "horizon/native-core/src/data/biome-types.bin": "3f1db49ae1ae89f8a1224a2534f9b5a3ff313a747047a1ad4257eb73384900c7",
+        "horizon/native-core/src/data/noiseutil-sine.bin": "f2999391380fe1b7a8deb687380fdb51b278fa88ffb8201e9beb2ae125a9db81",
+        "horizon/native-core/src/density_primitives.rs": "8b5481057562c16e11190147c52d1eef3f2ab1f5c9dc7c40ab3f21e3da56bd31",
+        "horizon/native-core/src/domain.rs": "e3b8099f0517d7741012fe1c1e30552d0959f07086806245bd749959216437b4",
+        "horizon/native-core/src/erosion.rs": "8be6d70300e572672bc8b56c90067fed900bb85852b53a49282e5e0c90635b4e",
+        "horizon/native-core/src/fast_random.rs": "475dbaf5fb1b3a71b159c4d4d4ed4d1b1b66677aef151e54721eb951513f024f",
+        "horizon/native-core/src/graph.rs": "80ffd8157a8e9e7c3a9f1716433ecf67811fb0b8851924c907f81f7e6f30398a",
+        "horizon/native-core/src/heightmap.rs": "d17eb830c2efcc48ab51b9fd56bd9380ff9d27def561773540681777386ee35f",
+        "horizon/native-core/src/java_random.rs": "d9b4afea6861a4653ef18549cc2569a857e360ddc63990327860ec6de33a03b1",
+        "horizon/native-core/src/kernel_sampler.rs": "52c9337e4c3e858b99e3187ef543cd7781a367c8a261f5e868af03ee0d39426f",
+        "horizon/native-core/src/lake.rs": "6a877b9e81dd55f8b50a0417193077f521d3bc50994f89b4e6c896885eb944fe",
+        "horizon/native-core/src/layout.rs": "8113aeb702abd0ce0782c27b4179038e131cc3a90cbd1fafc4a24c708d43903d",
+        "horizon/native-core/src/lib.rs": "dbf3f60d574aadd537f9cd40e16c4764cea91785162f1c601ecc85e98779bc13",
+        "horizon/native-core/src/line.rs": "55679d7b6a7d39444dfc53a8c05489523c8adc2aa234f1acbfdeaf0c6e6361d7",
+        "horizon/native-core/src/math_table.rs": "b0faed96a906cf8c5add80da348ff2e525f11f603e32dd6c25fd0766227a0a2a",
+        "horizon/native-core/src/noise_util.rs": "1c5935351876aa360a167470a8ed778632b6be0d4435a43376447fda9f62d5a5",
+        "horizon/native-core/src/noise_vectors.rs": "aca424593d1b9c3fef680ea1920fcbcc9f8b7208b8fa3bb739b77d174602dfd0",
+        "horizon/native-core/src/noises.rs": "48f32c133c8a9cc8612668664728c4de2e31bdc6e26e9224ed3f754d84b53f4d",
+        "horizon/native-core/src/perlin.rs": "6dcbf9cc7281e7567bffd3974612ce8d742fbe6dfd3bf663e7bc99f396f1897b",
+        "horizon/native-core/src/perlin2.rs": "028fab2a85af2b79e2dfe115cf2c0a1abd550dcdc21dc663ecd5a41ef0b1a981",
+        "horizon/native-core/src/pillar_sampler.rs": "71174a4ce5bac9de31190161e60847792fc920586b1c732ede6007488e2d9c6a",
+        "horizon/native-core/src/populator.rs": "8f9afb27d419d733357e3ea21c5182036b755b92c5e6e798281731b15dc1f608",
+        "horizon/native-core/src/pos_util.rs": "09237ff99c85e800b07e965d2af4b8cbc5132b1525ae51930f74212728dfcb6f",
+        "horizon/native-core/src/preset.rs": "331c2cfc9174ce2748facf124f83c54b352c6db2c74a3541220908d42714a72a",
+        "horizon/native-core/src/region.rs": "66a5c74375f688826f1d5392ed8d5ea2a73ab3bf48d97d32206e62f5395944c3",
+        "horizon/native-core/src/ridges.rs": "90319d54e4393469489330afb46451856c6f02291abe5aca8b312c987843b1f5",
+        "horizon/native-core/src/river.rs": "3d78000028110b3d03d17613c41adfba7e12dc1cf42453ff40e5f336d3d9c003",
+        "horizon/native-core/src/river_cache.rs": "49694672a5f5c83f25dd0edfa69fa0605834da0c30cf1ff177967e1508e42a82",
+        "horizon/native-core/src/river_carver.rs": "8f4ec3539811687950fde4bd4f528ca05cf621c466771926ca0bab37bd73d0ee",
+        "horizon/native-core/src/river_config.rs": "9a96107a07ec98b4391ecd8fb7b2651038dd89e3d2c7aa1d75829057053fad33",
+        "horizon/native-core/src/river_domain.rs": "06c314e81dceda49fee35e55d2eaf840dce4a9fcb424ac76d4442ff36ff3ab84",
+        "horizon/native-core/src/river_generator.rs": "9318db0879f045e156f2c1b9e670305ca32d48e316a08f972eb32566d2f46d86",
+        "horizon/native-core/src/river_network.rs": "9d914c74883db2370e7b48f75e4bf5c80f0baac3209ebbdb91148b7f31a912d4",
+        "horizon/native-core/src/river_warp.rs": "19486ef5e6e81e09a647c4cf5b393b433bbbf435fee6785246da95e68f999c2e",
+        "horizon/native-core/src/rivermap.rs": "71e3b2950a3b118e6d5393d777a718a7cea150b17a4fb081b09d41bb13c14065",
+        "horizon/native-core/src/seed.rs": "7c296bc1bc07539034fd4f704e41b298d621173e9dd18158551ad7d78cf64430",
+        "horizon/native-core/src/simplex.rs": "09a9fa3aea602d3da6310c467af93fd6bc3fc96418094d828b4af1ee30c95b47",
+        "horizon/native-core/src/simplex2.rs": "0f2614e82178bc148180a76d13c8fd814a3e5aadd2c6e02a3cac9b250f963d1c",
+        "horizon/native-core/src/sources.rs": "0187f37e59fb6c21a5c62a1754beaf11dae8e51057835b45664c32106d7ddca3",
+        "horizon/native-core/src/terrain.rs": "119f99a192200b41aea878aa56dcf7164f7aebfbfe55b5f5f694404ced83403b",
+        "horizon/native-core/src/terrain_factories.rs": "91c5de80770fd84833aa78ef20c7dab4490732d41b30f9cd4b7071baf83ada5c",
+        "horizon/native-core/src/terrain_provider.rs": "774501e9604f91e60862d5f92942f037395cce61280c656252f147d7426b0d9a",
+        "horizon/native-core/src/tile.rs": "81370a4bc170f2ce0d039e93d48b5742641547387a4b0763937ab75e34c094eb",
+        "horizon/native-core/src/tile_erosion.rs": "54247c812bbb45ce72927d597e26f01342f7fab7c5688d9292832a52842b744e",
+        "horizon/native-core/src/tile_filters_basic.rs": "0bcd32d06ef43b1484210bee20aed476768d251713126fb8766b3a1fc2c3cd1d",
+        "horizon/native-core/src/tile_work_cache.rs": "fab1b7ea7e7b13bb305f5221930838c626347c1dd3c4af439c5ee2f277b11743",
+        "horizon/native-core/src/volcano.rs": "f8a60c110aa43958807a7d2178ab64d291476c2262c585d78e37fa6476c4a84c",
+        "horizon/native-core/src/wetland.rs": "06e74c3604f6c5841567c75e5ad8a4c95a812b7ddd4f563c7f0ca23b41cf3dc9",
+        "horizon/native-core/src/world_filters.rs": "f51570e0a9498ce7624c8d4c80f64a8bfe1502115b6e811d2af1ee7411fc3d3f",
+        "horizon/native-core/src/worley.rs": "f4d95f87851d6bf5bb2682620caf51f6de1604eee46abc4a13a7485eea734789"
+      }
+    },
+    "terraceNoise": {
+      "status": "passed-noise-foundation-only",
+      "recordsPerProfile": 151228,
+      "valuesPerProfile": 198780,
+      "profiles": [
+        {
+          "profile": "debug",
+          "exitCode": 0,
+          "outputSha256": "6ee12ad602acbe044bf26cc0556e5388c3c284ba9912dda3f42262b9450d1d54",
+          "differenceCount": 0,
+          "firstDifferences": [],
+          "constructorGuardsObserved": true,
+          "allJavaValuesMatch": true
+        },
+        {
+          "profile": "release",
+          "exitCode": 0,
+          "outputSha256": "6ee12ad602acbe044bf26cc0556e5388c3c284ba9912dda3f42262b9450d1d54",
+          "differenceCount": 0,
+          "firstDifferences": [],
+          "constructorGuardsObserved": true,
+          "allJavaValuesMatch": true
+        }
+      ],
+      "sourceSha256Lf": {
+        "horizon/native-core/src/bin/biome_probe.rs": "3b0afe8eddf02c79b44e855f2873c15ad5d20f8b24e6b153281def0f095bdc65",
+        "horizon/native-core/src/bin/cell_foundation_probe.rs": "93868fd06719515e63e1197b551d05ee260dc2eaee62d698fa68ee07044c8cbb",
+        "horizon/native-core/src/bin/classic_pillar_math_probe.rs": "be5a112ce86cfe1fb581444d8a34882880e5777921b7fb5d9fd29c8fdde4ecae",
+        "horizon/native-core/src/bin/core_probe.rs": "2135bffcbc11eb44efc5b5fb9290c004877d52e28acea3585465efbffa8485b4",
+        "horizon/native-core/src/bin/java_random_probe.rs": "81fbeab12d071a8d410b4c3fb6f92fb7eb4fa72e9e708e0fd0cd680e436ae5e4",
+        "horizon/native-core/src/bin/math_probe.rs": "d59d6066dd3ab530c01f1b130d367469a48ce2bf63aab5ee8467177821bbe20e",
+        "horizon/native-core/src/bin/noise_cellular_probe.rs": "51ffd88f5d336eeab041bf348f0ec609be6dfad1eca6981ab563a0e1a0ddb9e8",
+        "horizon/native-core/src/bin/noise_composition_probe.rs": "41c700b6e80149a052b629198be0e1697bdd8b94de6571666a47b48b2ef962a4",
+        "horizon/native-core/src/bin/noise_family_probe.rs": "7c832f40f9a405decb3b28135427bac776267fa40342cecf1ef584cbf0bfa01a",
+        "horizon/native-core/src/bin/noise_final_probe.rs": "2306f40a423accd957c8a053b39b8564b712cacebc3620db46e5dbd387bcf92d",
+        "horizon/native-core/src/bin/noise_probe.rs": "365ddc9f8419d0865d77f47d245327232a72d9d212def9efb1f45b4fcc892660",
+        "horizon/native-core/src/bin/noise_shaping_probe.rs": "a9dd6228d310db541328477e31d8964b6b7923edb7aac084b497165686d0da43",
+        "horizon/native-core/src/bin/noise_sources_probe.rs": "ec86d45f5a28f4f589c906ea86f1c04256a3f5fe2a795741bec74a9559835b00",
+        "horizon/native-core/src/bin/noise_visitor_probe.rs": "d21d3b05b954d04233593eca1d3c01307491e1c4809420e9fb4474f90e13338a",
+        "horizon/native-core/src/bin/pillar_sampler_probe.rs": "221ddc7c13cffab2e2bc35a49f6f2e7cc2f654d84c0d28265e57849de845f79d",
+        "horizon/native-core/src/bin/power_probe.rs": "d1590fd2bc8666e2e1b4cfe7299c5a87ce6c099391bf770ddba304b5c000635e",
+        "horizon/native-core/src/bin/scalar_probe.rs": "96aee09dbbbf80bb388e74404bbf7f9443bb6d34d38894f551eae4ff5cf92758",
+        "horizon/native-core/src/bin/terrain_probe.rs": "953b4a326242df705bd647c7787c21203018c7528042019bc6a35502e555941d",
+        "horizon/native-core/src/bin/utility_probe.rs": "293b0003ff5cd147c3aeeeafad73f486e8935e4563286fc127616b7f577c8ebc",
+        "horizon/native-core/src/biome.rs": "c4790b89dd4a4c61df95a59a5bffc814c2751127fe068ba39a97eca50815195b",
+        "horizon/native-core/src/bounds.rs": "77b0996102fa212a12d4d82c7ff7af18c9d77fe4f87fa50e06e1860ae7bbaa8d",
+        "horizon/native-core/src/cell.rs": "427dc603546d4139f7e299dcefd4da667d58e094e95ea0dc65ce71293b4705e2",
+        "horizon/native-core/src/classic_biomes.rs": "e4cba0102c2b2b86ff8fd03300c0f3dae5120de6c563e7afe96412488eb3d24a",
+        "horizon/native-core/src/classic_pillars.rs": "b3058b177cc3212d4eed52f5e6f69b12e8dbd0711ba42dacddc5ed96910c2b05",
+        "horizon/native-core/src/climate.rs": "89756e2e9ad3832284bd2de23627ddd365310455e42cb3be29864f59e891bb4e",
+        "horizon/native-core/src/continent.rs": "b21113a3d6b3affe39aff8af17a6757ce72c8430234ee5bfb0792d8eab9ed6cf",
+        "horizon/native-core/src/density_primitives.rs": "8b5481057562c16e11190147c52d1eef3f2ab1f5c9dc7c40ab3f21e3da56bd31",
+        "horizon/native-core/src/domain.rs": "e3b8099f0517d7741012fe1c1e30552d0959f07086806245bd749959216437b4",
+        "horizon/native-core/src/erosion.rs": "8be6d70300e572672bc8b56c90067fed900bb85852b53a49282e5e0c90635b4e",
+        "horizon/native-core/src/fast_random.rs": "475dbaf5fb1b3a71b159c4d4d4ed4d1b1b66677aef151e54721eb951513f024f",
+        "horizon/native-core/src/graph.rs": "80ffd8157a8e9e7c3a9f1716433ecf67811fb0b8851924c907f81f7e6f30398a",
+        "horizon/native-core/src/heightmap.rs": "d17eb830c2efcc48ab51b9fd56bd9380ff9d27def561773540681777386ee35f",
+        "horizon/native-core/src/java_random.rs": "d9b4afea6861a4653ef18549cc2569a857e360ddc63990327860ec6de33a03b1",
+        "horizon/native-core/src/kernel_sampler.rs": "52c9337e4c3e858b99e3187ef543cd7781a367c8a261f5e868af03ee0d39426f",
+        "horizon/native-core/src/lake.rs": "6a877b9e81dd55f8b50a0417193077f521d3bc50994f89b4e6c896885eb944fe",
+        "horizon/native-core/src/layout.rs": "8113aeb702abd0ce0782c27b4179038e131cc3a90cbd1fafc4a24c708d43903d",
+        "horizon/native-core/src/lib.rs": "dbf3f60d574aadd537f9cd40e16c4764cea91785162f1c601ecc85e98779bc13",
+        "horizon/native-core/src/line.rs": "55679d7b6a7d39444dfc53a8c05489523c8adc2aa234f1acbfdeaf0c6e6361d7",
+        "horizon/native-core/src/math_table.rs": "b0faed96a906cf8c5add80da348ff2e525f11f603e32dd6c25fd0766227a0a2a",
+        "horizon/native-core/src/noise_util.rs": "1c5935351876aa360a167470a8ed778632b6be0d4435a43376447fda9f62d5a5",
+        "horizon/native-core/src/noise_vectors.rs": "aca424593d1b9c3fef680ea1920fcbcc9f8b7208b8fa3bb739b77d174602dfd0",
+        "horizon/native-core/src/noises.rs": "48f32c133c8a9cc8612668664728c4de2e31bdc6e26e9224ed3f754d84b53f4d",
+        "horizon/native-core/src/perlin.rs": "6dcbf9cc7281e7567bffd3974612ce8d742fbe6dfd3bf663e7bc99f396f1897b",
+        "horizon/native-core/src/perlin2.rs": "028fab2a85af2b79e2dfe115cf2c0a1abd550dcdc21dc663ecd5a41ef0b1a981",
+        "horizon/native-core/src/pillar_sampler.rs": "71174a4ce5bac9de31190161e60847792fc920586b1c732ede6007488e2d9c6a",
+        "horizon/native-core/src/populator.rs": "8f9afb27d419d733357e3ea21c5182036b755b92c5e6e798281731b15dc1f608",
+        "horizon/native-core/src/pos_util.rs": "09237ff99c85e800b07e965d2af4b8cbc5132b1525ae51930f74212728dfcb6f",
+        "horizon/native-core/src/preset.rs": "331c2cfc9174ce2748facf124f83c54b352c6db2c74a3541220908d42714a72a",
+        "horizon/native-core/src/region.rs": "66a5c74375f688826f1d5392ed8d5ea2a73ab3bf48d97d32206e62f5395944c3",
+        "horizon/native-core/src/ridges.rs": "90319d54e4393469489330afb46451856c6f02291abe5aca8b312c987843b1f5",
+        "horizon/native-core/src/river.rs": "3d78000028110b3d03d17613c41adfba7e12dc1cf42453ff40e5f336d3d9c003",
+        "horizon/native-core/src/river_cache.rs": "49694672a5f5c83f25dd0edfa69fa0605834da0c30cf1ff177967e1508e42a82",
+        "horizon/native-core/src/river_carver.rs": "8f4ec3539811687950fde4bd4f528ca05cf621c466771926ca0bab37bd73d0ee",
+        "horizon/native-core/src/river_config.rs": "9a96107a07ec98b4391ecd8fb7b2651038dd89e3d2c7aa1d75829057053fad33",
+        "horizon/native-core/src/river_domain.rs": "06c314e81dceda49fee35e55d2eaf840dce4a9fcb424ac76d4442ff36ff3ab84",
+        "horizon/native-core/src/river_generator.rs": "9318db0879f045e156f2c1b9e670305ca32d48e316a08f972eb32566d2f46d86",
+        "horizon/native-core/src/river_network.rs": "9d914c74883db2370e7b48f75e4bf5c80f0baac3209ebbdb91148b7f31a912d4",
+        "horizon/native-core/src/river_warp.rs": "19486ef5e6e81e09a647c4cf5b393b433bbbf435fee6785246da95e68f999c2e",
+        "horizon/native-core/src/rivermap.rs": "71e3b2950a3b118e6d5393d777a718a7cea150b17a4fb081b09d41bb13c14065",
+        "horizon/native-core/src/seed.rs": "7c296bc1bc07539034fd4f704e41b298d621173e9dd18158551ad7d78cf64430",
+        "horizon/native-core/src/simplex.rs": "09a9fa3aea602d3da6310c467af93fd6bc3fc96418094d828b4af1ee30c95b47",
+        "horizon/native-core/src/simplex2.rs": "0f2614e82178bc148180a76d13c8fd814a3e5aadd2c6e02a3cac9b250f963d1c",
+        "horizon/native-core/src/sources.rs": "0187f37e59fb6c21a5c62a1754beaf11dae8e51057835b45664c32106d7ddca3",
+        "horizon/native-core/src/terrain.rs": "119f99a192200b41aea878aa56dcf7164f7aebfbfe55b5f5f694404ced83403b",
+        "horizon/native-core/src/terrain_factories.rs": "91c5de80770fd84833aa78ef20c7dab4490732d41b30f9cd4b7071baf83ada5c",
+        "horizon/native-core/src/terrain_provider.rs": "774501e9604f91e60862d5f92942f037395cce61280c656252f147d7426b0d9a",
+        "horizon/native-core/src/tile.rs": "81370a4bc170f2ce0d039e93d48b5742641547387a4b0763937ab75e34c094eb",
+        "horizon/native-core/src/tile_erosion.rs": "54247c812bbb45ce72927d597e26f01342f7fab7c5688d9292832a52842b744e",
+        "horizon/native-core/src/tile_filters_basic.rs": "0bcd32d06ef43b1484210bee20aed476768d251713126fb8766b3a1fc2c3cd1d",
+        "horizon/native-core/src/tile_work_cache.rs": "fab1b7ea7e7b13bb305f5221930838c626347c1dd3c4af439c5ee2f277b11743",
+        "horizon/native-core/src/volcano.rs": "f8a60c110aa43958807a7d2178ab64d291476c2262c585d78e37fa6476c4a84c",
+        "horizon/native-core/src/wetland.rs": "06e74c3604f6c5841567c75e5ad8a4c95a812b7ddd4f563c7f0ca23b41cf3dc9",
+        "horizon/native-core/src/world_filters.rs": "f51570e0a9498ce7624c8d4c80f64a8bfe1502115b6e811d2af1ee7411fc3d3f",
+        "horizon/native-core/src/worley.rs": "f4d95f87851d6bf5bb2682620caf51f6de1604eee46abc4a13a7485eea734789",
+        "horizon/native-core/src/data/biome-types.bin": "3f1db49ae1ae89f8a1224a2534f9b5a3ff313a747047a1ad4257eb73384900c7",
+        "horizon/native-core/src/data/noiseutil-sine.bin": "f2999391380fe1b7a8deb687380fdb51b278fa88ffb8201e9beb2ae125a9db81",
+        "horizon/native-core/Cargo.toml": "90828d3f94df0a4249961250593854170168ab2de8191bc4d7d9540394152366",
+        "horizon/native-core/Cargo.lock": "51e811941ccbf1984b0a3a36b105742bb4053403c4adb5ac5acffbef3b80fa40"
+      }
+    },
+    "cacheLifecycle": {
+      "status": "passed-tile-cache-lifecycle-only",
+      "profiles": [
+        {
+          "profile": "debug",
+          "exitCode": 0,
+          "passed": true,
+          "testNames": [
+            "lru_touch_eviction_and_clear_release_owned_values",
+            "failed_or_unwound_work_can_retry_without_cache_publication",
+            "clear_during_build_does_not_republish_old_generation",
+            "concurrent_readers_share_one_build_and_one_arc",
+            "distinct_builds_run_in_parallel_with_bounded_slots"
+          ],
+          "stdoutSha256": "8685d256dbf2626bcd3ab7e3684ee35a55b18497413b89d3b1b15cfc8e66a166",
+          "stderrSha256": "122f2cd3bfc32b01c9a0a19df9d10d8c09a970423cdf0b3f53d986a5e9953b62"
+        },
+        {
+          "profile": "release",
+          "exitCode": 0,
+          "passed": true,
+          "testNames": [
+            "lru_touch_eviction_and_clear_release_owned_values",
+            "failed_or_unwound_work_can_retry_without_cache_publication",
+            "clear_during_build_does_not_republish_old_generation",
+            "concurrent_readers_share_one_build_and_one_arc",
+            "distinct_builds_run_in_parallel_with_bounded_slots"
+          ],
+          "stdoutSha256": "ec6e65dd3acb6b60e3bf6bdd18ac830827588ac7bf91e5c2977b753753229efd",
+          "stderrSha256": "a4ce0e84e6418faaaa4bef72ff98c6ed35b1cefe6b7dcf1589845b282622faf4"
+        }
+      ],
+      "sourceSha256Lf": {
+        "horizon/native-core/src/tile_work_cache.rs": "fab1b7ea7e7b13bb305f5221930838c626347c1dd3c4af439c5ee2f277b11743",
+        "horizon/native-core/src/kernel_sampler.rs": "52c9337e4c3e858b99e3187ef543cd7781a367c8a261f5e868af03ee0d39426f",
+        "horizon/native-core/src/graph.rs": "80ffd8157a8e9e7c3a9f1716433ecf67811fb0b8851924c907f81f7e6f30398a",
+        "horizon/native-core/Cargo.toml": "90828d3f94df0a4249961250593854170168ab2de8191bc4d7d9540394152366",
+        "horizon/native-core/Cargo.lock": "51e811941ccbf1984b0a3a36b105742bb4053403c4adb5ac5acffbef3b80fa40"
+      }
+    },
+    "coreLibrary-debug": {
+      "status": "passed",
+      "tests": 8
+    },
+    "coreLibrary-release": {
+      "status": "passed",
+      "tests": 8
+    }
+  },
+  "notValidated": [
+    "Live Horizon client or server performance",
+    "Whole chunk generation throughput or FPS",
+    "Save/reopen or modpack compatibility",
+    "Linux execution in this session"
+  ]
+}

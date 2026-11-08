@@ -27,6 +27,12 @@ from bypassing noise construction limits. The probe observes relevant rejects.
 These bounds deliberately reject some raw Java inputs; arbitrary degenerate,
 nonfinite and out-of-domain behavior remains unqualified.
 
+Terrace evaluation now propagates a NaN input before converting it to a step
+index. A finite resource graph such as mapping a constant's zero-width source
+range can produce NaN; this previously panicked with an out-of-bounds index.
+The regression reproduces that graph and checks finite and infinite endpoints.
+This is a native crash guard, not a claim of Java parity for malformed arithmetic.
+
 The Erosion boilerplate draft was DeepSeek job
 `1e5ff967158c42d09145ad106d570ca9` (estimated USD 0.0028443). Codex added missing
 Clone/Debug derivation, reviewed all operation order and seed use, integrated it,

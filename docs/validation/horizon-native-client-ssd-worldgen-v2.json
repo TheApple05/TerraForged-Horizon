@@ -1,0 +1,2160 @@
+{
+  "schemaVersion": 2,
+  "status": "passed-targeted-ssd-native-client-qa",
+  "completedAtUtc": "2026-11-08T06:13:13.623475+00:00",
+  "scope": "Actual source-built Windows Horizon 26.3 client, offscreen Vulkan1280x720; six accepted scratch worlds, twelve clean exits, structures-disabled ABBA plus two structures-enabled UI worlds. No whole-client speedup claim.",
+  "source": {
+    "baselineCommit": "ed818ecc0371e1627192e1abdccb0a744f51f890",
+    "candidateCommit": "3770a6076d3ed0a42bd16219f79ae154ff516828",
+    "packageVersion": "0.1.0-native.dev7",
+    "game": "26.3",
+    "horizon": "f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d",
+    "mixins": "e8cd0aa38cffef49cb2e088ef716baa107148c02",
+    "buildProfile": "fast",
+    "stageInputFilesPerVariant": 84,
+    "changedInputs": {
+      "horizon/native-core/src/graph.rs": {
+        "baseline": "37733a92ffa8d7653f37c56dc4d2992708e39e41b799b2dbcda0123a2b161bde",
+        "candidate": "80ffd8157a8e9e7c3a9f1716433ecf67811fb0b8851924c907f81f7e6f30398a"
+      },
+      "horizon/native-core/src/tile_filters_basic.rs": {
+        "baseline": "b311076e6ab41fe6bfe87e1cb8d12ff7259a445c564c6c2f01287c174780f9a0",
+        "candidate": "0bcd32d06ef43b1484210bee20aed476768d251713126fb8766b3a1fc2c3cd1d"
+      }
+    },
+    "hostSourceArchiveSha256": "0c55315db2d3e56ec00fc32874275e6eb4a3bbacd9441b01664d206da11f81a9",
+    "differingPackageEntries": [
+      "mixins/terraforged_native/kernel/src/graph.rs",
+      "mixins/terraforged_native/kernel/src/tile_filters_basic.rs"
+    ],
+    "versionIdentitySource": "Verified copied package metadata manifests and archived horizon-mod.toml; engine revision also matches both actual stage receipts. Repository default config is not the tested stage identity."
+  },
+  "storageHost": {
+    "observedAtUtc": "2026-11-08T05:35:09.8711331Z",
+    "cpu": {
+      "Name": "11th Gen Intel(R) Core(TM) i9-11900K @ 3.50GHz",
+      "NumberOfCores": 8,
+      "NumberOfLogicalProcessors": 16
+    },
+    "volumes": [
+      {
+        "driveLetter": "C",
+        "diskNumber": 1,
+        "model": "WDS100T3XHC-00SJG0",
+        "busType": "NVMe",
+        "sizeBytes": 1000204886016,
+        "freeBytes": 113796612096
+      },
+      {
+        "driveLetter": "D",
+        "diskNumber": 0,
+        "model": "ST4000DM004-2CV104",
+        "busType": "SATA",
+        "sizeBytes": 4000787030016,
+        "freeBytes": 3115305435136
+      }
+    ],
+    "otherHostLoadControlled": false,
+    "scope": "Read-only hardware observation; QA runtime copies and all new scratch data use C NVMe. Other tasks were left running."
+  },
+  "storageHostReceipt": {
+    "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\storage-host.json",
+    "sha256": "cc51503430a155919a8addf6737fe753c4d696d03b80470e421b1ae8e590fdeb"
+  },
+  "hostLoadObservation": {
+    "observedAtUtc": "2026-11-08T06:06:32.4602960Z",
+    "otherHorizonClientCount": 2,
+    "otherHorizonClients": [
+      {
+        "Id": 27620,
+        "Path": "C:\\Users\\Main\\Documents\\Codex\\Horizon ViaFabricPlus\\.local\\updater\\state\\runs\\17-a0164152aa3a\\bin\\horizon-client.exe"
+      },
+      {
+        "Id": 46920,
+        "Path": "C:\\Users\\Main\\Documents\\Codex\\Horizon ViaFabricPlus\\horizon-parity-12181\\.local\\parity-target\\fast\\horizon-client.exe"
+      }
+    ],
+    "otherHostLoadControlled": false,
+    "scope": "Read-only observation during candidate structures-v2. These are outside this test bin root and were left running. CPU/GPU/storage contention prevents a controlled speed claim."
+  },
+  "ssdCopyReceipt": {
+    "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\ssd-copy.json",
+    "sha256": "2f1d90a536fda83046ee16afdcb5ef88d15013a851a81c016317b2cbd1d1304a"
+  },
+  "verifiedCopiedArtifacts": [
+    {
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\worldgen-live-v1\\bin\\baseline\\horizon-client.exe",
+      "destination": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\baseline\\horizon-client.exe",
+      "bytes": 93311488,
+      "sourceSha256": "aa4d7d4f2e906f91cd26358029070a90a6f907cdc041df81313b796fdf9f1e87",
+      "destinationSha256": "aa4d7d4f2e906f91cd26358029070a90a6f907cdc041df81313b796fdf9f1e87",
+      "ordinaryFile": true
+    },
+    {
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\worldgen-live-v1\\bin\\baseline\\horizon-ctl.exe",
+      "destination": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\baseline\\horizon-ctl.exe",
+      "bytes": 1454080,
+      "sourceSha256": "36d30c6d690f6571ae2df4b9dc67c0ef4605c0cdcfcefe01ec7145d645295694",
+      "destinationSha256": "36d30c6d690f6571ae2df4b9dc67c0ef4605c0cdcfcefe01ec7145d645295694",
+      "ordinaryFile": true
+    },
+    {
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\worldgen-live-v1\\bin\\baseline\\terraforged_save_fixture.exe",
+      "destination": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\baseline\\terraforged_save_fixture.exe",
+      "bytes": 11685376,
+      "sourceSha256": "aadcc70a834cd6212d026bffdf9dc9ef8fa8dedf9e52ff2e3779a76fb3469a05",
+      "destinationSha256": "aadcc70a834cd6212d026bffdf9dc9ef8fa8dedf9e52ff2e3779a76fb3469a05",
+      "ordinaryFile": true
+    },
+    {
+      "source": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\distributions\\terraforged-horizon-26.3-0.1.0-native.dev7.hmod",
+      "destination": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\packages\\baseline.hmod",
+      "bytes": 160194,
+      "sourceSha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+      "destinationSha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+      "ordinaryFile": true
+    },
+    {
+      "source": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\distributions\\terraforged-horizon-26.3-0.1.0-native.dev7.hmod.json",
+      "destination": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\packages\\baseline.hmod.json",
+      "bytes": 12834,
+      "sourceSha256": "60584a1a23368211b784f9746ef3c8ade10a3538894c3b1804e7a905a0472465",
+      "destinationSha256": "60584a1a23368211b784f9746ef3c8ade10a3538894c3b1804e7a905a0472465",
+      "ordinaryFile": true
+    },
+    {
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\worldgen-live-v1\\bin\\candidate\\horizon-client.exe",
+      "destination": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\candidate\\horizon-client.exe",
+      "bytes": 93311488,
+      "sourceSha256": "af68bd2678b1dfcdeb34968f1d95dfbaebc877ee81d6992387aaf680a248e555",
+      "destinationSha256": "af68bd2678b1dfcdeb34968f1d95dfbaebc877ee81d6992387aaf680a248e555",
+      "ordinaryFile": true
+    },
+    {
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\worldgen-live-v1\\bin\\candidate\\horizon-ctl.exe",
+      "destination": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\candidate\\horizon-ctl.exe",
+      "bytes": 1454080,
+      "sourceSha256": "d3e3bd48b78e3876ea352b0fe997b46314be0692381f58e96650e71246c77646",
+      "destinationSha256": "d3e3bd48b78e3876ea352b0fe997b46314be0692381f58e96650e71246c77646",
+      "ordinaryFile": true
+    },
+    {
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\worldgen-live-v1\\bin\\candidate\\terraforged_save_fixture.exe",
+      "destination": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\candidate\\terraforged_save_fixture.exe",
+      "bytes": 11685376,
+      "sourceSha256": "172f3a8804c660cf3f4dd818d279959434b66ac46ecd8dd969ffb60ba67fd589",
+      "destinationSha256": "172f3a8804c660cf3f4dd818d279959434b66ac46ecd8dd969ffb60ba67fd589",
+      "ordinaryFile": true
+    },
+    {
+      "source": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\distributions\\live-worldgen-candidate-v1.hmod",
+      "destination": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\packages\\candidate.hmod",
+      "bytes": 161460,
+      "sourceSha256": "048a601a82714851e3515d7a0c09be56dfa77aff549b4a2dbee6f6ff721c4406",
+      "destinationSha256": "048a601a82714851e3515d7a0c09be56dfa77aff549b4a2dbee6f6ff721c4406",
+      "ordinaryFile": true
+    },
+    {
+      "source": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\distributions\\live-worldgen-candidate-v1.hmod.json",
+      "destination": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\packages\\candidate.hmod.json",
+      "bytes": 12816,
+      "sourceSha256": "ea362c81d2bc49bf2d757ac95a38977aa2b63433ace783a8075d2eea2799ea91",
+      "destinationSha256": "ea362c81d2bc49bf2d757ac95a38977aa2b63433ace783a8075d2eea2799ea91",
+      "ordinaryFile": true
+    }
+  ],
+  "oldQaStop": {
+    "status": "stopped-old-qa-confirmed",
+    "confirmedAtUtc": "2026-11-08T05:17:54.8771433Z",
+    "oldClientExited": true,
+    "remainingOwnedIds": [],
+    "otherHorizonIds": [
+      41796
+    ],
+    "emptyArrayNormalizationNote": "Null entries from PowerShell empty-member enumeration were filtered; the original receipt remains unchanged and hashed."
+  },
+  "oldQaStopReceipt": {
+    "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\old-qa-stop-confirmed.json",
+    "sha256": "3eb0f3354c9d58067f8aa2c36a5ee33094ef53be4d6519f14b4e778aea1ed4f7"
+  },
+  "abba": {
+    "rawReport": {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2.json",
+      "sha256": "a0175e2b48796b29c1d2d3c722d8113a95d286ee81f2cca3cdbaef95b9fe8bc4"
+    },
+    "conditions": {
+      "seed": 8675309,
+      "qaSpawnSupplied": true,
+      "structuresEnabled": false,
+      "renderDistanceChunks": 12,
+      "simulationDistanceChunks": 5,
+      "sharedWorkerThreads": 4,
+      "frameRateCap": 60,
+      "statusIntervalSeconds": 0.5,
+      "serverMemoryIntervalSeconds": 2,
+      "stableViewSeconds": 1
+    },
+    "scope": "Real integrated native client: supplied seed8675309 spectator spawn, structures disabled, offscreen1280x720, FPS cap60. Cold destination residence, server-stage quiet and renderer readiness are distinct end-to-end observations; no pure chunk-generation throughput claim.",
+    "counterSemantics": {
+      "generated_chunks": "Received and disk-loaded columns too; used only as a readiness change signal, never as a fresh-generation count",
+      "server_generation.caches": "Host pipeline census, not TerraForged tile/river counts",
+      "serverGenerationLightQuiet": "queued/generating/decorating/finishing/lighting zero; meshing excluded",
+      "serverQuiet": "All server stages zero except protos; first observation gated on requested residence and changed/full view",
+      "viewReady": "Two fresh quiet server samples and client/render readiness, stable resident counts for at least one second"
+    },
+    "artifacts": {
+      "baseline_client": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\baseline\\horizon-client.exe",
+        "sha256": "aa4d7d4f2e906f91cd26358029070a90a6f907cdc041df81313b796fdf9f1e87"
+      },
+      "candidate_client": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\candidate\\horizon-client.exe",
+        "sha256": "af68bd2678b1dfcdeb34968f1d95dfbaebc877ee81d6992387aaf680a248e555"
+      },
+      "ctl": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\baseline\\horizon-ctl.exe",
+        "sha256": "36d30c6d690f6571ae2df4b9dc67c0ef4605c0cdcfcefe01ec7145d645295694"
+      },
+      "fixture": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\baseline\\terraforged_save_fixture.exe",
+        "sha256": "aadcc70a834cd6212d026bffdf9dc9ef8fa8dedf9e52ff2e3779a76fb3469a05"
+      },
+      "baseline_hmod": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\packages\\baseline.hmod",
+        "sha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355"
+      },
+      "candidate_hmod": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\packages\\candidate.hmod",
+        "sha256": "048a601a82714851e3515d7a0c09be56dfa77aff549b4a2dbee6f6ff721c4406"
+      }
+    },
+    "verifierSourceSha256": "2e09958a00736f01d2cca8a319b7cb012748a6310d0dd9581f00749ce3f28845",
+    "summary": {
+      "fir_forest": {
+        "firstTargetResidentSeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              4.65599999999904,
+              4.765999999999622
+            ],
+            "candidate": [
+              5.1709999999984575,
+              7.25
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 4.710999999999331,
+            "candidate": 6.210499999999229
+          }
+        },
+        "firstServerGenerationLightQuietSeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              18.67199999999866,
+              21.04699999999866
+            ],
+            "candidate": [
+              23.187000000001717,
+              17.468999999997322
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 19.85949999999866,
+            "candidate": 20.32799999999952
+          }
+        },
+        "firstServerQuietSeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              18.67199999999866,
+              21.04699999999866
+            ],
+            "candidate": [
+              23.187000000001717,
+              17.468999999997322
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 19.85949999999866,
+            "candidate": 20.32799999999952
+          }
+        },
+        "viewReadySeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              25.81199999999808,
+              24.875
+            ],
+            "candidate": [
+              28.95300000000134,
+              27.0
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 25.34349999999904,
+            "candidate": 27.97650000000067
+          }
+        }
+      },
+      "cold_steppe": {
+        "firstTargetResidentSeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              2.4530000000013388,
+              2.3280000000013388
+            ],
+            "candidate": [
+              2.6559999999990396,
+              3.3440000000009604
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 2.3905000000013388,
+            "candidate": 3.0
+          }
+        },
+        "firstServerGenerationLightQuietSeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              19.25,
+              22.93699999999808
+            ],
+            "candidate": [
+              16.45300000000134,
+              15.93800000000192
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 21.09349999999904,
+            "candidate": 16.19550000000163
+          }
+        },
+        "firstServerQuietSeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              19.25,
+              22.93699999999808
+            ],
+            "candidate": [
+              16.45300000000134,
+              15.93800000000192
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 21.09349999999904,
+            "candidate": 16.19550000000163
+          }
+        },
+        "viewReadySeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              22.9220000000023,
+              27.79699999999866
+            ],
+            "candidate": [
+              20.15599999999904,
+              24.81300000000192
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 25.35950000000048,
+            "candidate": 22.48450000000048
+          }
+        }
+      },
+      "bryce": {
+        "firstTargetResidentSeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              5.062999999998283,
+              5.7810000000026776
+            ],
+            "candidate": [
+              4.78099999999904,
+              7.547000000002299
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 5.42200000000048,
+            "candidate": 6.164000000000669
+          }
+        },
+        "firstServerGenerationLightQuietSeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              24.42199999999866,
+              28.937000000001717
+            ],
+            "candidate": [
+              25.375,
+              22.59400000000096
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 26.67950000000019,
+            "candidate": 23.98450000000048
+          }
+        },
+        "firstServerQuietSeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              24.42199999999866,
+              28.937000000001717
+            ],
+            "candidate": [
+              25.375,
+              22.59400000000096
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 26.67950000000019,
+            "candidate": 23.98450000000048
+          }
+        },
+        "viewReadySeconds": {
+          "secondsByVersion": {
+            "baseline": [
+              31.71900000000096,
+              35.38999999999942
+            ],
+            "candidate": [
+              34.375,
+              31.31300000000192
+            ]
+          },
+          "completeAbba": true,
+          "medianSeconds": {
+            "baseline": 33.55450000000019,
+            "candidate": 32.84400000000096
+          }
+        }
+      }
+    },
+    "runs": [
+      {
+        "index": 0,
+        "variant": "baseline",
+        "status": "passed",
+        "resourceCopySeconds": 95.65599999999904,
+        "sessions": {
+          "primary": {
+            "status": "passed",
+            "exitCode": 0,
+            "pid": 7340,
+            "playerControlReadySeconds": 94.53099999999904,
+            "processPeakResidentBytes": 2390102016,
+            "residentMetric": "Windows PeakWorkingSetSize",
+            "gameLogSha256": "73ca70209c0a47e3a374925a99e348935648e0ee0e481dae098e52148ab676d7",
+            "controlLogSha256": "a40f5425c8a12128902bcad76a5cf49d52b13efff972595dcc80364ffc3d506a",
+            "views": [
+              {
+                "label": "initial",
+                "target": [
+                  8,
+                  100,
+                  8
+                ],
+                "camera": [
+                  8.5,
+                  130.0,
+                  8.5
+                ],
+                "firstTargetResidentSeconds": 96.76499999999942,
+                "firstServerGenerationLightQuietSeconds": 105.375,
+                "firstServerQuietSeconds": 105.375,
+                "viewReadySeconds": 114.34299999999712,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\primary\\initial.png",
+                  "sha256": "3cb6f2a8fff5f4118ea581de5fe866f50754b3772d6f9ff67ed96a9c72749814"
+                }
+              },
+              {
+                "label": "fir_forest",
+                "target": [
+                  0,
+                  70,
+                  -43692
+                ],
+                "camera": [
+                  0.5,
+                  118,
+                  -43691.5
+                ],
+                "firstTargetResidentSeconds": 4.65599999999904,
+                "firstServerGenerationLightQuietSeconds": 18.67199999999866,
+                "firstServerQuietSeconds": 18.67199999999866,
+                "viewReadySeconds": 25.81199999999808,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\primary\\fir_forest.png",
+                  "sha256": "f8e4b38df788e5044b18085fbd49ec2c941c9ee61748d92532153e179c0b9e7b"
+                }
+              },
+              {
+                "label": "cold_steppe",
+                "target": [
+                  -126976,
+                  136,
+                  76052
+                ],
+                "camera": [
+                  -126975.5,
+                  184,
+                  76052.5
+                ],
+                "firstTargetResidentSeconds": 2.4530000000013388,
+                "firstServerGenerationLightQuietSeconds": 19.25,
+                "firstServerQuietSeconds": 19.25,
+                "viewReadySeconds": 22.9220000000023,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\primary\\cold_steppe.png",
+                  "sha256": "fd42ba33e0a962dd2375e72f9d6d46d83204714e2a685bf9c8490f3526fc2f8b"
+                }
+              },
+              {
+                "label": "bryce",
+                "target": [
+                  -118532,
+                  99,
+                  -107012
+                ],
+                "camera": [
+                  -118531.5,
+                  195,
+                  -107011.5
+                ],
+                "firstTargetResidentSeconds": 5.062999999998283,
+                "firstServerGenerationLightQuietSeconds": 24.42199999999866,
+                "firstServerQuietSeconds": 24.42199999999866,
+                "viewReadySeconds": 31.71900000000096,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\primary\\bryce.png",
+                  "sha256": "057f8b1dbf523eedbb40696c39243e272aa5464b8c9ae9816c89975ce98184ee"
+                }
+              }
+            ]
+          },
+          "reopen": {
+            "status": "passed",
+            "exitCode": 0,
+            "pid": 7440,
+            "playerControlReadySeconds": 6.860000000000582,
+            "processPeakResidentBytes": 749338624,
+            "residentMetric": "Windows PeakWorkingSetSize",
+            "gameLogSha256": "60d8d78f31d180fc95dd4565cec1a1070aceecc3be4111309b729d41b80fd63e",
+            "controlLogSha256": "2ef6008e5cf9b3f109146df69dab607276394aaac0ebb46ab07faef902426db8",
+            "views": [
+              {
+                "label": "initial",
+                "target": [
+                  -118532,
+                  99,
+                  -107012
+                ],
+                "camera": [
+                  -118531.5,
+                  195,
+                  -107011.5
+                ],
+                "firstTargetResidentSeconds": 7.172000000002299,
+                "firstServerGenerationLightQuietSeconds": 22.1720000000023,
+                "firstServerQuietSeconds": 22.1720000000023,
+                "viewReadySeconds": 25.7970000000023,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\reopen\\initial.png",
+                  "sha256": "ce76d37099f245ceb3b0f1463ed228209bdd699f643189568558994bc813be08"
+                }
+              },
+              {
+                "label": "distant",
+                "target": [
+                  16392,
+                  65,
+                  -32760
+                ],
+                "camera": [
+                  16392.0,
+                  80.0,
+                  -32760.0
+                ],
+                "firstTargetResidentSeconds": 2.047000000002299,
+                "firstServerGenerationLightQuietSeconds": 19.985000000000582,
+                "firstServerQuietSeconds": 19.985000000000582,
+                "viewReadySeconds": 24.64099999999962,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\reopen\\distant.png",
+                  "sha256": "67d12f76ae101cedcc97061f1555c47ae0396751ecaa0b4bf18a9bc9cbf5c42e"
+                }
+              }
+            ]
+          }
+        },
+        "savedFullChunkChecks": [
+          {
+            "chunk": [
+              0,
+              0
+            ],
+            "nativeBiomeFingerprint": "6dc1096e04abd195",
+            "quartBiomes": 1536,
+            "storedBiomeFingerprint": "6dc1096e04abd195",
+            "vanillaBiomeFingerprint": "a2b7d896db159325"
+          },
+          {
+            "chunk": [
+              1024,
+              -2048
+            ],
+            "nativeBiomeFingerprint": "b0019eca975291a5",
+            "quartBiomes": 1536,
+            "storedBiomeFingerprint": "b0019eca975291a5",
+            "vanillaBiomeFingerprint": "60e84b83a1657725"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "variant": "candidate",
+        "status": "passed",
+        "resourceCopySeconds": 19.014999999999418,
+        "sessions": {
+          "primary": {
+            "status": "passed",
+            "exitCode": 0,
+            "pid": 15588,
+            "playerControlReadySeconds": 109.2970000000023,
+            "processPeakResidentBytes": 2390040576,
+            "residentMetric": "Windows PeakWorkingSetSize",
+            "gameLogSha256": "2b31bb6fc59b0415e4a0a05043c4b241bc122178e150c56ab1c3854f9fe5847d",
+            "controlLogSha256": "56aff2110b0762087db54d2b55c3d4b0ca514b07cffd8415541e52f95e8243eb",
+            "views": [
+              {
+                "label": "initial",
+                "target": [
+                  8,
+                  100,
+                  8
+                ],
+                "camera": [
+                  8.5,
+                  130.0,
+                  8.5
+                ],
+                "firstTargetResidentSeconds": 109.81300000000192,
+                "firstServerGenerationLightQuietSeconds": 120.48500000000058,
+                "firstServerQuietSeconds": 120.48500000000058,
+                "viewReadySeconds": 131.53200000000288,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\primary\\initial.png",
+                  "sha256": "162b092b2a6051fff6513f7cded270e50b0fb969a59881ee6be65b1dba473412"
+                }
+              },
+              {
+                "label": "fir_forest",
+                "target": [
+                  0,
+                  70,
+                  -43692
+                ],
+                "camera": [
+                  0.5,
+                  118,
+                  -43691.5
+                ],
+                "firstTargetResidentSeconds": 5.1709999999984575,
+                "firstServerGenerationLightQuietSeconds": 23.187000000001717,
+                "firstServerQuietSeconds": 23.187000000001717,
+                "viewReadySeconds": 28.95300000000134,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\primary\\fir_forest.png",
+                  "sha256": "48ba12f120d82c7049597841234034bb443b8bcf0166fe6eeb33ff5cd3c6ca30"
+                }
+              },
+              {
+                "label": "cold_steppe",
+                "target": [
+                  -126976,
+                  136,
+                  76052
+                ],
+                "camera": [
+                  -126975.5,
+                  184,
+                  76052.5
+                ],
+                "firstTargetResidentSeconds": 2.6559999999990396,
+                "firstServerGenerationLightQuietSeconds": 16.45300000000134,
+                "firstServerQuietSeconds": 16.45300000000134,
+                "viewReadySeconds": 20.15599999999904,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\primary\\cold_steppe.png",
+                  "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c"
+                }
+              },
+              {
+                "label": "bryce",
+                "target": [
+                  -118532,
+                  99,
+                  -107012
+                ],
+                "camera": [
+                  -118531.5,
+                  195,
+                  -107011.5
+                ],
+                "firstTargetResidentSeconds": 4.78099999999904,
+                "firstServerGenerationLightQuietSeconds": 25.375,
+                "firstServerQuietSeconds": 25.375,
+                "viewReadySeconds": 34.375,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\primary\\bryce.png",
+                  "sha256": "2e3286f0c379e1c01dc07708289777589e2bdef461c4191bcd2c90e266eecd3e"
+                }
+              }
+            ]
+          },
+          "reopen": {
+            "status": "passed",
+            "exitCode": 0,
+            "pid": 41712,
+            "playerControlReadySeconds": 6.75,
+            "processPeakResidentBytes": 971976704,
+            "residentMetric": "Windows PeakWorkingSetSize",
+            "gameLogSha256": "d91f025a7e3932e7ac0531825b540d6d614646d5402c8fe0d5d76e83ca18c20f",
+            "controlLogSha256": "9a0495d8b720612bb671850de2c2f5b20725d1fa87c226a67b755592aea8e90d",
+            "views": [
+              {
+                "label": "initial",
+                "target": [
+                  -118532,
+                  99,
+                  -107012
+                ],
+                "camera": [
+                  -118531.5,
+                  195,
+                  -107011.5
+                ],
+                "firstTargetResidentSeconds": 7.264999999999418,
+                "firstServerGenerationLightQuietSeconds": 22.15599999999904,
+                "firstServerQuietSeconds": 22.15599999999904,
+                "viewReadySeconds": 30.093000000000757,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\reopen\\initial.png",
+                  "sha256": "9d2e5b7b3aa41ce80d85d262c7f1e0943469b19881b11ee8bf4a3d33d2d9e65d"
+                }
+              },
+              {
+                "label": "distant",
+                "target": [
+                  16392,
+                  65,
+                  -32760
+                ],
+                "camera": [
+                  16392.0,
+                  80.0,
+                  -32760.0
+                ],
+                "firstTargetResidentSeconds": 2.125,
+                "firstServerGenerationLightQuietSeconds": 20.531000000002678,
+                "firstServerQuietSeconds": 20.531000000002678,
+                "viewReadySeconds": 24.23400000000038,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\reopen\\distant.png",
+                  "sha256": "f6af3fdc9b956596502327faca98dec218df1980f53b27109daf52123fd923a2"
+                }
+              }
+            ]
+          }
+        },
+        "savedFullChunkChecks": [
+          {
+            "chunk": [
+              0,
+              0
+            ],
+            "nativeBiomeFingerprint": "6dc1096e04abd195",
+            "quartBiomes": 1536,
+            "storedBiomeFingerprint": "6dc1096e04abd195",
+            "vanillaBiomeFingerprint": "a2b7d896db159325"
+          },
+          {
+            "chunk": [
+              1024,
+              -2048
+            ],
+            "nativeBiomeFingerprint": "b0019eca975291a5",
+            "quartBiomes": 1536,
+            "storedBiomeFingerprint": "b0019eca975291a5",
+            "vanillaBiomeFingerprint": "60e84b83a1657725"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "variant": "candidate",
+        "status": "passed",
+        "resourceCopySeconds": 19.65700000000288,
+        "sessions": {
+          "primary": {
+            "status": "passed",
+            "exitCode": 0,
+            "pid": 44836,
+            "playerControlReadySeconds": 120.32800000000134,
+            "processPeakResidentBytes": 2373062656,
+            "residentMetric": "Windows PeakWorkingSetSize",
+            "gameLogSha256": "b7448ba55352790a5119ccb933c44877bd6f18fba8bd4d83714c37bbcc485421",
+            "controlLogSha256": "f3ec118580535af598e25e524210ee6b322068455e97789e08560ca7057d5fde",
+            "views": [
+              {
+                "label": "initial",
+                "target": [
+                  8,
+                  100,
+                  8
+                ],
+                "camera": [
+                  8.5,
+                  130.0,
+                  8.5
+                ],
+                "firstTargetResidentSeconds": 120.70300000000134,
+                "firstServerGenerationLightQuietSeconds": 128.48400000000038,
+                "firstServerQuietSeconds": 128.48400000000038,
+                "viewReadySeconds": 139.60900000000038,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\primary\\initial.png",
+                  "sha256": "4f9444da556a5b55df4e3c38a32fe947079c6318b0fe87e4b64136c43e0c626a"
+                }
+              },
+              {
+                "label": "fir_forest",
+                "target": [
+                  0,
+                  70,
+                  -43692
+                ],
+                "camera": [
+                  0.5,
+                  118,
+                  -43691.5
+                ],
+                "firstTargetResidentSeconds": 7.25,
+                "firstServerGenerationLightQuietSeconds": 17.468999999997322,
+                "firstServerQuietSeconds": 17.468999999997322,
+                "viewReadySeconds": 27.0,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\primary\\fir_forest.png",
+                  "sha256": "fce3b66a7805e84646c42f93a9c08b06e1d93235f1b30f670fac6808f1001948"
+                }
+              },
+              {
+                "label": "cold_steppe",
+                "target": [
+                  -126976,
+                  136,
+                  76052
+                ],
+                "camera": [
+                  -126975.5,
+                  184,
+                  76052.5
+                ],
+                "firstTargetResidentSeconds": 3.3440000000009604,
+                "firstServerGenerationLightQuietSeconds": 15.93800000000192,
+                "firstServerQuietSeconds": 15.93800000000192,
+                "viewReadySeconds": 24.81300000000192,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\primary\\cold_steppe.png",
+                  "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c"
+                }
+              },
+              {
+                "label": "bryce",
+                "target": [
+                  -118532,
+                  99,
+                  -107012
+                ],
+                "camera": [
+                  -118531.5,
+                  195,
+                  -107011.5
+                ],
+                "firstTargetResidentSeconds": 7.547000000002299,
+                "firstServerGenerationLightQuietSeconds": 22.59400000000096,
+                "firstServerQuietSeconds": 22.59400000000096,
+                "viewReadySeconds": 31.31300000000192,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\primary\\bryce.png",
+                  "sha256": "136387bee5e7c4ae906afedbe053eadf9c9a783153d459e1ca7ffa662fed12dd"
+                }
+              }
+            ],
+            "stabilityStress": {
+              "status": "passed",
+              "scope": "Untimed cancellation/unload stress after all primary speed samples",
+              "elapsedSeconds": 23.889999999999418,
+              "farRegionFilesExistedBefore": [
+                {
+                  "camera": [
+                    262144.0,
+                    200.0,
+                    262144.0
+                  ],
+                  "regionFileExisted": false
+                },
+                {
+                  "camera": [
+                    -262144.0,
+                    200.0,
+                    -262144.0
+                  ],
+                  "regionFileExisted": false
+                }
+              ],
+              "teleports": 6,
+              "settleViewReadySeconds": 18.92199999999866
+            }
+          },
+          "reopen": {
+            "status": "passed",
+            "exitCode": 0,
+            "pid": 27772,
+            "playerControlReadySeconds": 7.15599999999904,
+            "processPeakResidentBytes": 958906368,
+            "residentMetric": "Windows PeakWorkingSetSize",
+            "gameLogSha256": "0a9d8fab8f21c0792a31535e58d8c8dc8a562be61489bf7b29a9e7f235622f29",
+            "controlLogSha256": "b5f88810fb4437f35bf41a7427fa5281c8eb736b448b6a29ff483a487b53613f",
+            "views": [
+              {
+                "label": "initial",
+                "target": [
+                  -118532,
+                  99,
+                  -107012
+                ],
+                "camera": [
+                  -118531.5,
+                  195,
+                  -107011.5
+                ],
+                "firstTargetResidentSeconds": 7.578000000001339,
+                "firstServerGenerationLightQuietSeconds": 21.65599999999904,
+                "firstServerQuietSeconds": 21.65599999999904,
+                "viewReadySeconds": 26.65599999999904,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\reopen\\initial.png",
+                  "sha256": "255bd9067e73e0da5e42d0bea19cd7309ae766537d5d64afdb53552aeb7cd1b6"
+                }
+              },
+              {
+                "label": "distant",
+                "target": [
+                  16392,
+                  65,
+                  -32760
+                ],
+                "camera": [
+                  16392.0,
+                  80.0,
+                  -32760.0
+                ],
+                "firstTargetResidentSeconds": 4.78099999999904,
+                "firstServerGenerationLightQuietSeconds": 17.545999999998457,
+                "firstServerQuietSeconds": 17.545999999998457,
+                "viewReadySeconds": 21.20300000000134,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\reopen\\distant.png",
+                  "sha256": "92261459acd27bec319aea3a542f2596b464241c1a5257f86944ca701cd6cf81"
+                }
+              }
+            ]
+          }
+        },
+        "savedFullChunkChecks": [
+          {
+            "chunk": [
+              0,
+              0
+            ],
+            "nativeBiomeFingerprint": "6dc1096e04abd195",
+            "quartBiomes": 1536,
+            "storedBiomeFingerprint": "6dc1096e04abd195",
+            "vanillaBiomeFingerprint": "a2b7d896db159325"
+          },
+          {
+            "chunk": [
+              1024,
+              -2048
+            ],
+            "nativeBiomeFingerprint": "b0019eca975291a5",
+            "quartBiomes": 1536,
+            "storedBiomeFingerprint": "b0019eca975291a5",
+            "vanillaBiomeFingerprint": "60e84b83a1657725"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "variant": "baseline",
+        "status": "passed",
+        "resourceCopySeconds": 62.29699999999866,
+        "sessions": {
+          "primary": {
+            "status": "passed",
+            "exitCode": 0,
+            "pid": 23452,
+            "playerControlReadySeconds": 99.32800000000134,
+            "processPeakResidentBytes": 2373050368,
+            "residentMetric": "Windows PeakWorkingSetSize",
+            "gameLogSha256": "ae6e87e92484fda2f3e0b865ce8dd18409e89c2ccad2bc4375d58737ac805833",
+            "controlLogSha256": "16055754378e493d192052484ce1b455ffca7395136da46d4c26c5a71920d454",
+            "views": [
+              {
+                "label": "initial",
+                "target": [
+                  8,
+                  100,
+                  8
+                ],
+                "camera": [
+                  8.5,
+                  130.0,
+                  8.5
+                ],
+                "firstTargetResidentSeconds": 101.95300000000134,
+                "firstServerGenerationLightQuietSeconds": 106.82800000000134,
+                "firstServerQuietSeconds": 106.82800000000134,
+                "viewReadySeconds": 110.61000000000058,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\primary\\initial.png",
+                  "sha256": "9d1fb3cffc30d60867644741a70269d24fa7f175041f6be3a8d56cc0deb589d2"
+                }
+              },
+              {
+                "label": "fir_forest",
+                "target": [
+                  0,
+                  70,
+                  -43692
+                ],
+                "camera": [
+                  0.5,
+                  118,
+                  -43691.5
+                ],
+                "firstTargetResidentSeconds": 4.765999999999622,
+                "firstServerGenerationLightQuietSeconds": 21.04699999999866,
+                "firstServerQuietSeconds": 21.04699999999866,
+                "viewReadySeconds": 24.875,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\primary\\fir_forest.png",
+                  "sha256": "b33b464eaffc5923998ae95b99c1a94f5a4f71223061823308bab57711cde9fe"
+                }
+              },
+              {
+                "label": "cold_steppe",
+                "target": [
+                  -126976,
+                  136,
+                  76052
+                ],
+                "camera": [
+                  -126975.5,
+                  184,
+                  76052.5
+                ],
+                "firstTargetResidentSeconds": 2.3280000000013388,
+                "firstServerGenerationLightQuietSeconds": 22.93699999999808,
+                "firstServerQuietSeconds": 22.93699999999808,
+                "viewReadySeconds": 27.79699999999866,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\primary\\cold_steppe.png",
+                  "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c"
+                }
+              },
+              {
+                "label": "bryce",
+                "target": [
+                  -118532,
+                  99,
+                  -107012
+                ],
+                "camera": [
+                  -118531.5,
+                  195,
+                  -107011.5
+                ],
+                "firstTargetResidentSeconds": 5.7810000000026776,
+                "firstServerGenerationLightQuietSeconds": 28.937000000001717,
+                "firstServerQuietSeconds": 28.937000000001717,
+                "viewReadySeconds": 35.38999999999942,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\primary\\bryce.png",
+                  "sha256": "aba85379c4aafd4e10f38b2893609d9ae2949e00f4b1a3b64b22e28ca527f5ce"
+                }
+              }
+            ]
+          },
+          "reopen": {
+            "status": "passed",
+            "exitCode": 0,
+            "pid": 39944,
+            "playerControlReadySeconds": 11.56199999999808,
+            "processPeakResidentBytes": 948826112,
+            "residentMetric": "Windows PeakWorkingSetSize",
+            "gameLogSha256": "13c61e636f3257211af189fd2060226111e00c961fab5473371fc75a30ec8c3d",
+            "controlLogSha256": "4de24a24a96ed1d3a5aa95156cf715fda9129247a0f8dc66f95952051baf1a5d",
+            "views": [
+              {
+                "label": "initial",
+                "target": [
+                  -118532,
+                  99,
+                  -107012
+                ],
+                "camera": [
+                  -118531.5,
+                  195,
+                  -107011.5
+                ],
+                "firstTargetResidentSeconds": 12.515999999999622,
+                "firstServerGenerationLightQuietSeconds": 27.32800000000134,
+                "firstServerQuietSeconds": 27.32800000000134,
+                "viewReadySeconds": 32.70300000000134,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\reopen\\initial.png",
+                  "sha256": "ff4f72586a36c4bd67b99bfe3bf8299ded5236a6c8cbb1ee1f9d0ec09381c076"
+                }
+              },
+              {
+                "label": "distant",
+                "target": [
+                  16392,
+                  65,
+                  -32760
+                ],
+                "camera": [
+                  16392.0,
+                  80.0,
+                  -32760.0
+                ],
+                "firstTargetResidentSeconds": 4.859000000000378,
+                "firstServerGenerationLightQuietSeconds": 23.281000000002678,
+                "firstServerQuietSeconds": 23.281000000002678,
+                "viewReadySeconds": 29.07800000000134,
+                "screenshot": {
+                  "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\reopen\\distant.png",
+                  "sha256": "d920a595d3b4eaa9471502653a9883997e4bf36e0bc0dc2f6c5c6204106335c8"
+                }
+              }
+            ]
+          }
+        },
+        "savedFullChunkChecks": [
+          {
+            "chunk": [
+              0,
+              0
+            ],
+            "nativeBiomeFingerprint": "6dc1096e04abd195",
+            "quartBiomes": 1536,
+            "storedBiomeFingerprint": "6dc1096e04abd195",
+            "vanillaBiomeFingerprint": "a2b7d896db159325"
+          },
+          {
+            "chunk": [
+              1024,
+              -2048
+            ],
+            "nativeBiomeFingerprint": "b0019eca975291a5",
+            "quartBiomes": 1536,
+            "storedBiomeFingerprint": "b0019eca975291a5",
+            "vanillaBiomeFingerprint": "60e84b83a1657725"
+          }
+        ]
+      }
+    ],
+    "speedConclusion": "Mixed end-to-end destination waits; no consistent whole-client speedup established. Candidate initial-launch/player-control observations were slower in both processes. Only two observations per variant; other host CPU/GPU/storage load was uncontrolled.",
+    "checkedSourceAndCopiedInputsUnchanged": true
+  },
+  "structuresEnabledUi": {
+    "baseline": {
+      "rawReport": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2.json",
+        "sha256": "63b2457505372f31ffb924d5611d608a43e9ca39ff653e0862ce359e2673aac6"
+      },
+      "verifierSourceSha256": "6838c1aa84193f6da28d976eeed5e88eb948692b96168b200874b970adb88e02",
+      "sourceStageSha256": "3ba759d2a1ca785bf3710ae4ca93a7832bf91175b1f3cbdcb5044556166a4418",
+      "prebuiltValidation": {
+        "ssdCopyReceipt": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\ssd-copy.json",
+        "ssdCopyReceiptSha256": "2f1d90a536fda83046ee16afdcb5ef88d15013a851a81c016317b2cbd1d1304a",
+        "stageResultSha256": "3ba759d2a1ca785bf3710ae4ca93a7832bf91175b1f3cbdcb5044556166a4418",
+        "buildReceiptSha256": "aeffa7e3ff9a532f14633e14a3b0057c4ebcb4108d2ee118fcb3bf63f90cf544",
+        "binariesSha256": {
+          "horizon-client.exe": "aa4d7d4f2e906f91cd26358029070a90a6f907cdc041df81313b796fdf9f1e87",
+          "horizon-ctl.exe": "36d30c6d690f6571ae2df4b9dc67c0ef4605c0cdcfcefe01ec7145d645295694",
+          "terraforged_save_fixture.exe": "aadcc70a834cd6212d026bffdf9dc9ef8fa8dedf9e52ff2e3779a76fb3469a05"
+        },
+        "artifactSha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+        "packageMetadataSha256": "60584a1a23368211b784f9746ef3c8ade10a3538894c3b1804e7a905a0472465",
+        "sourceSnapshot": {
+          "inputSourceRoot": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance",
+          "snapshotRoot": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\source-snapshots\\baseline",
+          "fileCount": 84,
+          "manifest": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\source-snapshots\\baseline.json",
+          "manifestSha256": "7ac719c3bbc946ff0cbbe0dbb2a11b4272404877018bd8a31735efdfdc242808"
+        }
+      },
+      "workerConfiguration": "Horizon default; HORIZON_JOB_THREADS removed",
+      "renderDistanceChunks": 12,
+      "simulationDistanceChunks": 3,
+      "frameRateCap": 30,
+      "qaSpawnSupplied": false,
+      "creationViaUi": true,
+      "structuresEnabled": true,
+      "creationToPlayingSeconds": 23.78099999999904,
+      "creationToHealthyGroundedSeconds": 25.29699999999866,
+      "creationToVisibleSeconds": 51.63999999999942,
+      "naturalSpawn": {
+        "position": [
+          2297.5,
+          120.0,
+          -6649.5
+        ],
+        "health": 20.0,
+        "food": 20,
+        "on_ground": true
+      },
+      "views": [
+        {
+          "label": "natural-spawn",
+          "target": [
+            2297,
+            120,
+            -6650
+          ],
+          "camera": [
+            2297.5,
+            120.0,
+            -6649.5
+          ],
+          "timingOrigin": "readiness validation began",
+          "firstTargetResidentSeconds": 0.21900000000096043,
+          "firstServerGenerationLightQuietSeconds": 5.625,
+          "firstServerQuietSeconds": 5.625,
+          "viewReadySeconds": 20.57800000000134
+        },
+        {
+          "label": "reterraforged:fir_forest",
+          "target": [
+            0,
+            70,
+            -43692
+          ],
+          "camera": [
+            0.5,
+            118,
+            -43691.5
+          ],
+          "timingOrigin": "teleport-command including camera setup",
+          "firstTargetResidentSeconds": 6.5,
+          "firstServerGenerationLightQuietSeconds": 26.062000000001717,
+          "firstServerQuietSeconds": 26.062000000001717,
+          "viewReadySeconds": 68.68700000000172
+        },
+        {
+          "label": "reterraforged:cold_steppe",
+          "target": [
+            -126976,
+            136,
+            76052
+          ],
+          "camera": [
+            -126975.5,
+            184,
+            76052.5
+          ],
+          "timingOrigin": "teleport-command including camera setup",
+          "firstTargetResidentSeconds": 5.109000000000378,
+          "firstServerGenerationLightQuietSeconds": 22.93699999999808,
+          "firstServerQuietSeconds": 22.93699999999808,
+          "viewReadySeconds": 31.03099999999904
+        },
+        {
+          "label": "reterraforged:bryce",
+          "target": [
+            -118532,
+            99,
+            -107012
+          ],
+          "camera": [
+            -118531.5,
+            195,
+            -107011.5
+          ],
+          "timingOrigin": "teleport-command including camera setup",
+          "firstTargetResidentSeconds": 8.59400000000096,
+          "firstServerGenerationLightQuietSeconds": 25.79699999999866,
+          "firstServerQuietSeconds": 25.79699999999866,
+          "viewReadySeconds": 51.79699999999866
+        },
+        {
+          "label": "origin",
+          "target": [
+            8,
+            75,
+            8
+          ],
+          "camera": [
+            8.5,
+            90,
+            8.5
+          ],
+          "timingOrigin": "teleport-command including camera setup",
+          "firstTargetResidentSeconds": 1.5939999999973224,
+          "firstServerGenerationLightQuietSeconds": 8.890999999999622,
+          "firstServerQuietSeconds": 8.890999999999622,
+          "viewReadySeconds": 35.78099999999904
+        },
+        {
+          "label": "reopened-distant-terrain",
+          "target": [
+            16392,
+            65,
+            -32760
+          ],
+          "camera": [
+            16392,
+            80,
+            -32760
+          ],
+          "timingOrigin": "teleport-command including camera setup",
+          "firstTargetResidentSeconds": 3.139999999999418,
+          "firstServerGenerationLightQuietSeconds": 16.75,
+          "firstServerQuietSeconds": 16.75,
+          "viewReadySeconds": 22.687000000001717
+        }
+      ],
+      "runs": [
+        {
+          "index": 0,
+          "exitCode": 0,
+          "savedStructuresEnabled": true,
+          "savedFullChunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "6dc1096e04abd195",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "6dc1096e04abd195",
+              "vanillaBiomeFingerprint": "a2b7d896db159325"
+            },
+            {
+              "chunk": [
+                -7409,
+                -6689
+              ],
+              "nativeBiomeFingerprint": "8783b43d91ed3b5e",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "8783b43d91ed3b5e",
+              "vanillaBiomeFingerprint": "b2a8c6d27f73de2a"
+            },
+            {
+              "chunk": [
+                -7936,
+                4753
+              ],
+              "nativeBiomeFingerprint": "6efe12dc15809f89",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "6efe12dc15809f89",
+              "vanillaBiomeFingerprint": "fa67e6f0d36517fb"
+            },
+            {
+              "chunk": [
+                0,
+                -2731
+              ],
+              "nativeBiomeFingerprint": "bbbefcacc9ec1ec5",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "bbbefcacc9ec1ec5",
+              "vanillaBiomeFingerprint": "925f73fc4f6c49c5"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "exitCode": 0,
+          "savedStructuresEnabled": true,
+          "savedFullChunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "6dc1096e04abd195",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "6dc1096e04abd195",
+              "vanillaBiomeFingerprint": "a2b7d896db159325"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "b0019eca975291a5",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "b0019eca975291a5",
+              "vanillaBiomeFingerprint": "60e84b83a1657725"
+            },
+            {
+              "chunk": [
+                -7409,
+                -6689
+              ],
+              "nativeBiomeFingerprint": "8783b43d91ed3b5e",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "8783b43d91ed3b5e",
+              "vanillaBiomeFingerprint": "b2a8c6d27f73de2a"
+            },
+            {
+              "chunk": [
+                -7936,
+                4753
+              ],
+              "nativeBiomeFingerprint": "6efe12dc15809f89",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "6efe12dc15809f89",
+              "vanillaBiomeFingerprint": "fa67e6f0d36517fb"
+            },
+            {
+              "chunk": [
+                0,
+                -2731
+              ],
+              "nativeBiomeFingerprint": "bbbefcacc9ec1ec5",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "bbbefcacc9ec1ec5",
+              "vanillaBiomeFingerprint": "925f73fc4f6c49c5"
+            }
+          ]
+        }
+      ],
+      "checkedOriginalAndCopiedResourceFilesUnchanged": true,
+      "prebuiltArtifactsAndPackageUnchanged": true,
+      "visualReview": "Seven images accepted for above-ground rendering smoke",
+      "visibleStructureObservation": "Desert village buildings are visible in the reopened distant view; placement completeness and correctness are not established",
+      "verifierSourceSnapshot": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2\\verifier-source.py",
+        "sha256": "6838c1aa84193f6da28d976eeed5e88eb948692b96168b200874b970adb88e02"
+      }
+    },
+    "candidate": {
+      "rawReport": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2.json",
+        "sha256": "e037b3906c4dfa868a8d199213469b3035ae59e1e7e975ec652ba29f91b370cf"
+      },
+      "verifierSourceSha256": "6838c1aa84193f6da28d976eeed5e88eb948692b96168b200874b970adb88e02",
+      "sourceStageSha256": "356ba121994accbf0557723e9fbc5746928b964d8a7a4cb7f9d17801dce0ea5a",
+      "prebuiltValidation": {
+        "ssdCopyReceipt": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\ssd-copy.json",
+        "ssdCopyReceiptSha256": "2f1d90a536fda83046ee16afdcb5ef88d15013a851a81c016317b2cbd1d1304a",
+        "stageResultSha256": "356ba121994accbf0557723e9fbc5746928b964d8a7a4cb7f9d17801dce0ea5a",
+        "buildReceiptSha256": "07309d0a32edd729c381c02d9f8a2508b33216bda5b131b1db7330cebc102859",
+        "binariesSha256": {
+          "horizon-client.exe": "af68bd2678b1dfcdeb34968f1d95dfbaebc877ee81d6992387aaf680a248e555",
+          "horizon-ctl.exe": "d3e3bd48b78e3876ea352b0fe997b46314be0692381f58e96650e71246c77646",
+          "terraforged_save_fixture.exe": "172f3a8804c660cf3f4dd818d279959434b66ac46ecd8dd969ffb60ba67fd589"
+        },
+        "artifactSha256": "048a601a82714851e3515d7a0c09be56dfa77aff549b4a2dbee6f6ff721c4406",
+        "packageMetadataSha256": "ea362c81d2bc49bf2d757ac95a38977aa2b63433ace783a8075d2eea2799ea91",
+        "sourceSnapshot": {
+          "inputSourceRoot": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa",
+          "snapshotRoot": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\source-snapshots\\candidate",
+          "fileCount": 84,
+          "manifest": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\source-snapshots\\candidate.json",
+          "manifestSha256": "94db3d32c8bf059ebd98d2b8c2f64d6ec6fd8b88d858f533e430f7d46afe1141"
+        }
+      },
+      "workerConfiguration": "Horizon default; HORIZON_JOB_THREADS removed",
+      "renderDistanceChunks": 12,
+      "simulationDistanceChunks": 3,
+      "frameRateCap": 30,
+      "qaSpawnSupplied": false,
+      "creationViaUi": true,
+      "structuresEnabled": true,
+      "creationToPlayingSeconds": 43.28099999999904,
+      "creationToHealthyGroundedSeconds": 44.56299999999828,
+      "creationToVisibleSeconds": 65.2029999999977,
+      "naturalSpawn": {
+        "position": [
+          2295.5,
+          123.0,
+          -6662.5
+        ],
+        "health": 20.0,
+        "food": 20,
+        "on_ground": true
+      },
+      "views": [
+        {
+          "label": "natural-spawn",
+          "target": [
+            2295,
+            123,
+            -6663
+          ],
+          "camera": [
+            2295.5,
+            123.0,
+            -6662.5
+          ],
+          "timingOrigin": "readiness validation began",
+          "firstTargetResidentSeconds": 0.2970000000022992,
+          "firstServerGenerationLightQuietSeconds": 5.047000000002299,
+          "firstServerQuietSeconds": 5.047000000002299,
+          "viewReadySeconds": 15.34400000000096
+        },
+        {
+          "label": "reterraforged:fir_forest",
+          "target": [
+            0,
+            70,
+            -43692
+          ],
+          "camera": [
+            0.5,
+            118,
+            -43691.5
+          ],
+          "timingOrigin": "teleport-command including camera setup",
+          "firstTargetResidentSeconds": 11.75,
+          "firstServerGenerationLightQuietSeconds": 31.139999999999418,
+          "firstServerQuietSeconds": 31.139999999999418,
+          "viewReadySeconds": 43.38999999999942
+        },
+        {
+          "label": "reterraforged:cold_steppe",
+          "target": [
+            -126976,
+            136,
+            76052
+          ],
+          "camera": [
+            -126975.5,
+            184,
+            76052.5
+          ],
+          "timingOrigin": "teleport-command including camera setup",
+          "firstTargetResidentSeconds": 4.812999999998283,
+          "firstServerGenerationLightQuietSeconds": 22.79699999999866,
+          "firstServerQuietSeconds": 22.79699999999866,
+          "viewReadySeconds": 28.23399999999674
+        },
+        {
+          "label": "reterraforged:bryce",
+          "target": [
+            -118532,
+            99,
+            -107012
+          ],
+          "camera": [
+            -118531.5,
+            195,
+            -107011.5
+          ],
+          "timingOrigin": "teleport-command including camera setup",
+          "firstTargetResidentSeconds": 8.281999999999243,
+          "firstServerGenerationLightQuietSeconds": 31.92199999999866,
+          "firstServerQuietSeconds": 31.92199999999866,
+          "viewReadySeconds": 63.26599999999962
+        },
+        {
+          "label": "origin",
+          "target": [
+            8,
+            75,
+            8
+          ],
+          "camera": [
+            8.5,
+            90,
+            8.5
+          ],
+          "timingOrigin": "teleport-command including camera setup",
+          "firstTargetResidentSeconds": 1.764999999999418,
+          "firstServerGenerationLightQuietSeconds": 11.562000000001717,
+          "firstServerQuietSeconds": 11.562000000001717,
+          "viewReadySeconds": 33.73400000000038
+        },
+        {
+          "label": "reopened-distant-terrain",
+          "target": [
+            16392,
+            65,
+            -32760
+          ],
+          "camera": [
+            16392,
+            80,
+            -32760
+          ],
+          "timingOrigin": "teleport-command including camera setup",
+          "firstTargetResidentSeconds": 4.015999999999622,
+          "firstServerGenerationLightQuietSeconds": 19.15599999999904,
+          "firstServerQuietSeconds": 19.15599999999904,
+          "viewReadySeconds": 29.485000000000582
+        }
+      ],
+      "runs": [
+        {
+          "index": 0,
+          "exitCode": 0,
+          "savedStructuresEnabled": true,
+          "savedFullChunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "6dc1096e04abd195",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "6dc1096e04abd195",
+              "vanillaBiomeFingerprint": "a2b7d896db159325"
+            },
+            {
+              "chunk": [
+                -7409,
+                -6689
+              ],
+              "nativeBiomeFingerprint": "8783b43d91ed3b5e",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "8783b43d91ed3b5e",
+              "vanillaBiomeFingerprint": "b2a8c6d27f73de2a"
+            },
+            {
+              "chunk": [
+                -7936,
+                4753
+              ],
+              "nativeBiomeFingerprint": "6efe12dc15809f89",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "6efe12dc15809f89",
+              "vanillaBiomeFingerprint": "fa67e6f0d36517fb"
+            },
+            {
+              "chunk": [
+                0,
+                -2731
+              ],
+              "nativeBiomeFingerprint": "bbbefcacc9ec1ec5",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "bbbefcacc9ec1ec5",
+              "vanillaBiomeFingerprint": "925f73fc4f6c49c5"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "exitCode": 0,
+          "savedStructuresEnabled": true,
+          "savedFullChunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "6dc1096e04abd195",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "6dc1096e04abd195",
+              "vanillaBiomeFingerprint": "a2b7d896db159325"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "b0019eca975291a5",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "b0019eca975291a5",
+              "vanillaBiomeFingerprint": "60e84b83a1657725"
+            },
+            {
+              "chunk": [
+                -7409,
+                -6689
+              ],
+              "nativeBiomeFingerprint": "8783b43d91ed3b5e",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "8783b43d91ed3b5e",
+              "vanillaBiomeFingerprint": "b2a8c6d27f73de2a"
+            },
+            {
+              "chunk": [
+                -7936,
+                4753
+              ],
+              "nativeBiomeFingerprint": "6efe12dc15809f89",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "6efe12dc15809f89",
+              "vanillaBiomeFingerprint": "fa67e6f0d36517fb"
+            },
+            {
+              "chunk": [
+                0,
+                -2731
+              ],
+              "nativeBiomeFingerprint": "bbbefcacc9ec1ec5",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "bbbefcacc9ec1ec5",
+              "vanillaBiomeFingerprint": "925f73fc4f6c49c5"
+            }
+          ]
+        }
+      ],
+      "checkedOriginalAndCopiedResourceFilesUnchanged": true,
+      "prebuiltArtifactsAndPackageUnchanged": true,
+      "visualReview": "Seven images accepted for above-ground rendering smoke",
+      "visibleStructureObservation": "Desert village buildings are visible in the reopened distant view; placement completeness and correctness are not established",
+      "verifierSourceSnapshot": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2\\verifier-source.py",
+        "sha256": "6838c1aa84193f6da28d976eeed5e88eb948692b96168b200874b970adb88e02"
+      }
+    }
+  },
+  "stability": {
+    "acceptedWorlds": 6,
+    "cleanClientExits": 12,
+    "uniqueCheckedFullChunkBiomeVectors": 18,
+    "storedQuartBiomeEntriesAcrossUniqueCheckedChunks": 27648,
+    "savedVectorComparison": "Fixture compares complete stored vectors with actual native factory and requires a different vanilla vector; diagnostic fingerprints are retained here.",
+    "rapidTeleportCancellationUnloadStress": "Six teleports on candidate ABBA run2, then drained server/client/render queues, save/reopen and exact saved biome checks passed. Stress excluded from speed summaries.",
+    "nativeCacheCensusObserved": false,
+    "memoryConclusion": "Windows PeakWorkingSetSize recorded per ABBA process; no long-soak leak claim. Candidate run2 includes extra stress and is not a matched memory workload."
+  },
+  "logs": [
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\primary\\game.log",
+      "sha256": "73ca70209c0a47e3a374925a99e348935648e0ee0e481dae098e52148ab676d7",
+      "lines": 25,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\reopen\\game.log",
+      "sha256": "60d8d78f31d180fc95dd4565cec1a1070aceecc3be4111309b729d41b80fd63e",
+      "lines": 23,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\primary\\game.log",
+      "sha256": "2b31bb6fc59b0415e4a0a05043c4b241bc122178e150c56ab1c3854f9fe5847d",
+      "lines": 25,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\reopen\\game.log",
+      "sha256": "d91f025a7e3932e7ac0531825b540d6d614646d5402c8fe0d5d76e83ca18c20f",
+      "lines": 23,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\primary\\game.log",
+      "sha256": "b7448ba55352790a5119ccb933c44877bd6f18fba8bd4d83714c37bbcc485421",
+      "lines": 31,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\reopen\\game.log",
+      "sha256": "0a9d8fab8f21c0792a31535e58d8c8dc8a562be61489bf7b29a9e7f235622f29",
+      "lines": 23,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\primary\\game.log",
+      "sha256": "ae6e87e92484fda2f3e0b865ce8dd18409e89c2ccad2bc4375d58737ac805833",
+      "lines": 25,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\reopen\\game.log",
+      "sha256": "13c61e636f3257211af189fd2060226111e00c961fab5473371fc75a30ec8c3d",
+      "lines": 23,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2\\game-0.log",
+      "sha256": "ebe200a1fd7ffd4af9dce2333db82580814e61aab62f2658a148acc2a9b7cd9e",
+      "lines": 26,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2\\game-1.log",
+      "sha256": "0b0ce4f963a028ea86ab4ca004684d43e49bdd20c0918cf2e5e2f2b0e24236dd",
+      "lines": 23,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2\\game-0.log",
+      "sha256": "9192e4e884fd73f9cc8c963d24f4bc0d6fcbe7cdfbfc1b5e92830cc7d1f0c50c",
+      "lines": 26,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2\\game-1.log",
+      "sha256": "0564c19db532ad03d1bab7b10bbc828c381eff86f9ec16af47ddc0b66d746fab",
+      "lines": 23,
+      "errorPanicWarningMatches": 0,
+      "oneModContentActivationObserved": true
+    }
+  ],
+  "visualReview": {
+    "imagesReviewed": 39,
+    "detailObscuredImages": 1,
+    "images": [
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\primary\\initial.png",
+        "sha256": "3cb6f2a8fff5f4118ea581de5fe866f50754b3772d6f9ff67ed96a9c72749814",
+        "scope": "ABBA primary initial",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\primary\\fir_forest.png",
+        "sha256": "f8e4b38df788e5044b18085fbd49ec2c941c9ee61748d92532153e179c0b9e7b",
+        "scope": "ABBA primary fir_forest",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\primary\\cold_steppe.png",
+        "sha256": "fd42ba33e0a962dd2375e72f9d6d46d83204714e2a685bf9c8490f3526fc2f8b",
+        "scope": "ABBA primary cold_steppe",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\primary\\bryce.png",
+        "sha256": "057f8b1dbf523eedbb40696c39243e272aa5464b8c9ae9816c89975ce98184ee",
+        "scope": "ABBA primary bryce",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\reopen\\initial.png",
+        "sha256": "ce76d37099f245ceb3b0f1463ed228209bdd699f643189568558994bc813be08",
+        "scope": "ABBA reopen initial",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\0-baseline\\reopen\\distant.png",
+        "sha256": "67d12f76ae101cedcc97061f1555c47ae0396751ecaa0b4bf18a9bc9cbf5c42e",
+        "scope": "ABBA reopen distant",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\primary\\initial.png",
+        "sha256": "162b092b2a6051fff6513f7cded270e50b0fb969a59881ee6be65b1dba473412",
+        "scope": "ABBA primary initial",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\primary\\fir_forest.png",
+        "sha256": "48ba12f120d82c7049597841234034bb443b8bcf0166fe6eeb33ff5cd3c6ca30",
+        "scope": "ABBA primary fir_forest",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\primary\\cold_steppe.png",
+        "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c",
+        "scope": "ABBA primary cold_steppe",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\primary\\bryce.png",
+        "sha256": "2e3286f0c379e1c01dc07708289777589e2bdef461c4191bcd2c90e266eecd3e",
+        "scope": "ABBA primary bryce",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\reopen\\initial.png",
+        "sha256": "9d2e5b7b3aa41ce80d85d262c7f1e0943469b19881b11ee8bf4a3d33d2d9e65d",
+        "scope": "ABBA reopen initial",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\1-candidate\\reopen\\distant.png",
+        "sha256": "f6af3fdc9b956596502327faca98dec218df1980f53b27109daf52123fd923a2",
+        "scope": "ABBA reopen distant",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\primary\\initial.png",
+        "sha256": "4f9444da556a5b55df4e3c38a32fe947079c6318b0fe87e4b64136c43e0c626a",
+        "scope": "ABBA primary initial",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\primary\\fir_forest.png",
+        "sha256": "fce3b66a7805e84646c42f93a9c08b06e1d93235f1b30f670fac6808f1001948",
+        "scope": "ABBA primary fir_forest",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\primary\\cold_steppe.png",
+        "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c",
+        "scope": "ABBA primary cold_steppe",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\primary\\bryce.png",
+        "sha256": "136387bee5e7c4ae906afedbe053eadf9c9a783153d459e1ca7ffa662fed12dd",
+        "scope": "ABBA primary bryce",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\primary\\stress-settle.png",
+        "sha256": "b795b483331de7dd1378be61600f207343f1709bc4efbd00933f2ead47f8e5f9",
+        "scope": "Untimed rapid teleport settle",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\reopen\\initial.png",
+        "sha256": "255bd9067e73e0da5e42d0bea19cd7309ae766537d5d64afdb53552aeb7cd1b6",
+        "scope": "ABBA reopen initial",
+        "review": "white cloud-like overlay obscures detail; cause unverified, silhouette only"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\2-candidate\\reopen\\distant.png",
+        "sha256": "92261459acd27bec319aea3a542f2596b464241c1a5257f86944ca701cd6cf81",
+        "scope": "ABBA reopen distant",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\primary\\initial.png",
+        "sha256": "9d1fb3cffc30d60867644741a70269d24fa7f175041f6be3a8d56cc0deb589d2",
+        "scope": "ABBA primary initial",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\primary\\fir_forest.png",
+        "sha256": "b33b464eaffc5923998ae95b99c1a94f5a4f71223061823308bab57711cde9fe",
+        "scope": "ABBA primary fir_forest",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\primary\\cold_steppe.png",
+        "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c",
+        "scope": "ABBA primary cold_steppe",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\primary\\bryce.png",
+        "sha256": "aba85379c4aafd4e10f38b2893609d9ae2949e00f4b1a3b64b22e28ca527f5ce",
+        "scope": "ABBA primary bryce",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\reopen\\initial.png",
+        "sha256": "ff4f72586a36c4bd67b99bfe3bf8299ded5236a6c8cbb1ee1f9d0ec09381c076",
+        "scope": "ABBA reopen initial",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\abba-v2\\3-baseline\\reopen\\distant.png",
+        "sha256": "d920a595d3b4eaa9471502653a9883997e4bf36e0bc0dc2f6c5c6204106335c8",
+        "scope": "ABBA reopen distant",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2\\native-preset-ui.png",
+        "sha256": "7edae0d98a0346eae29b27242c81c675d1b0e01945dc0af0d9cea9cd082fd33f",
+        "scope": "UI baseline",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2\\natural-spawn.png",
+        "sha256": "2175953abef524cf2e99eaa83057522047ba5767cafdf116bc857506c6278ad7",
+        "scope": "UI baseline",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2\\classic-fir_forest.png",
+        "sha256": "4dff5f2597eae21d3088434bdbf385dacdc5a1bd29fc085ed7612f04bf02da7c",
+        "scope": "UI baseline reterraforged:fir_forest",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2\\classic-cold_steppe.png",
+        "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c",
+        "scope": "UI baseline reterraforged:cold_steppe",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2\\classic-bryce.png",
+        "sha256": "259263b359c248f1a3790180968351773a72b65af29845e156d57005934d3859",
+        "scope": "UI baseline reterraforged:bryce",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2\\game-0.png",
+        "sha256": "f9898487c3acd2184fac9ff21e8103839c3a06a713afa482d24562658e6a95d1",
+        "scope": "UI baseline session 0",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v2\\game-1.png",
+        "sha256": "f46d5f57b05db9b0eda7a784b0507e5fcd435c1653a6af70cbe1eff755ace361",
+        "scope": "UI baseline session 1",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2\\native-preset-ui.png",
+        "sha256": "357fc31bff3b1bd12d64d693551de7fa046829227a80d1bec80994ec334d7dd6",
+        "scope": "UI candidate",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2\\natural-spawn.png",
+        "sha256": "d59708e7bc7099bcfa7092142f4a61dca30f4799fe602504dd680c531b26660d",
+        "scope": "UI candidate",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2\\classic-fir_forest.png",
+        "sha256": "9af949e734bf595c11dee299ec789abfe795fd995a0b1d0836bae387aba3c601",
+        "scope": "UI candidate reterraforged:fir_forest",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2\\classic-cold_steppe.png",
+        "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c",
+        "scope": "UI candidate reterraforged:cold_steppe",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2\\classic-bryce.png",
+        "sha256": "6e9487ff7b00f9969218638d725b96eca47cb107f02151c5db618433c6607716",
+        "scope": "UI candidate reterraforged:bryce",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2\\game-0.png",
+        "sha256": "d0e37fe67510bde21ae9eed48b876338a79b072240e9296fdf6cadd8bed63446",
+        "scope": "UI candidate session 0",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      },
+      {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-candidate-v2\\game-1.png",
+        "sha256": "be967e94126433ec6008e0e6db0b6ef0518c5d1e84791c1bdf81afcfa9753726",
+        "scope": "UI candidate session 1",
+        "review": "above-ground rendering smoke accepted; no obvious voids, tears or missing textures"
+      }
+    ],
+    "scope": "Above-ground native rendering smoke only, constrained by camera height and fog. One candidate2 reopen-initial frame has a white cloud-like overlay; other clear Bryce views cover that location. No full block/feature parity claim.",
+    "clearScopedSmokeImages": 38
+  },
+  "excludedAttempts": [
+    {
+      "kind": "Previous HDD QA benchmark",
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\worldgen-live-v1\\abba-v1.json",
+      "reason": "One startup deadline failure under HDD/build contention, then remaining old driver/client stopped at user request. Not counted as a worldgen performance or stability pass.",
+      "rawReport": {
+        "path": "D:\\Codex-QA\\TerraForged-Horizon\\worldgen-live-v1\\abba-v1.json",
+        "sha256": "31ce247f041d1b34395b738fce6dfd60c524a9d7ef21b8dd629e516d4febc86e"
+      }
+    },
+    {
+      "kind": "Structures baseline v1 harness failure",
+      "rawReport": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\structures-baseline-v1.json",
+        "sha256": "b49fc04f07d13b5c50a19656c2836e22fb21ec697e796d9975c4909d2cd3d01d"
+      },
+      "diagnosis": {
+        "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\ui-baseline-v1-harness-diagnosis.json",
+        "sha256": "6172d5206888adfdb0505e2b18d25342e625c0c1afa5ec9d9e0a0fd664c2f419"
+      },
+      "reason": "Two clean clients and saved checks, but timing helper overwrote resource hash map with game status. Preserved failed evidence; corrected helper tested mutations/status-map rejection, then both variants rerun fresh as v2."
+    }
+  ],
+  "checks": {
+    "clientComparisonSelfTest": "passed before actual ABBA",
+    "uiResourceIntegrityMutationAndInvalidMapSelfTest": "passed before both v2 UI runs",
+    "checkedResourceFilesSha256": {
+      "horizon-prepare.json": "5e5ab6316e2ebec4705abe4495266564b7897557f0194dad037f05823a266094",
+      "horizon-resources.json": "db3d64ba7b779dbda278aded406318940cdf37674fbdd2d1128fd20ea5e31c42",
+      "facts.json": "1d24883ee807b0b71473f0bbf8ed548ddaf712148caeb3fcc7aa13ab973a97b0",
+      "worldgen/biome_parameters/nether.json": "26188f1278c9ea2c737a9b0acb5c0c0d4d40c8b3b4eb7ab2526b4791c1493110",
+      "worldgen/biome_parameters/overworld.json": "ca63573e405dba0ef1010d6b324feeaa7d6b5c4dc895ffb6daf0988f1e44ef79",
+      "worldgen/biome_tags.json": "4006b76c24f616cb457a6fdad816db9b27f4528fe6daaed5747f1f79cf6225cf",
+      "worldgen/biomes.json": "9b26dc3b662627dc3bbbf8da209f287882ce79ff4daf8f454b994ddc7510df99",
+      "worldgen/block_flags.json": "fa2a580d2157e1a137bf4ea5ab73f77601f5aa2b165246d8c34699c7dd2b06d7",
+      "worldgen/block_tags.json": "36975358262568f32bf84778d63d9989a36e7394ed4796d70a34809a8f4a64f0",
+      "worldgen/blocks/placement-definitions.json": "f8a972ec87c2352500af6481158a3192bdbf699951025639bea744e4127b97c4",
+      "worldgen/blocks/structure-blocks.json": "b7a06d839993527c3b7290e57fded16aed71b283de123d4b50e3aad75b73b842",
+      "worldgen/blocks/survival-extra-definitions.json": "170f2db5bc97a49fa25cc249540aa7f04beea455cdbaf43742ed9415f5090a02",
+      "worldgen/blocks/survival-rules.json": "8805c18b3195bb1eac1f1e5281333df56e2892505f64023e5403c58ce2ec4368",
+      "worldgen/carvers.json": "b09cf69ff328cad7836da8cd9565d0fb7ecf8bc35aebf17815f40f32a6a0ca4e",
+      "worldgen/conditions.json": "54a470a4513fb34a23e0fe66b0a5129a468dbd0002f5b2839437a9861a6005b9",
+      "worldgen/densities.json": "28fe94e1b7cf3a06edfa2337319c03b5374c15bf18235570ee76e9c498c2f450",
+      "worldgen/feature_tags.json": "d66b2f97400514fc3c03b0dd8a60a93257071ab274dc132f41b79d6a454b074a",
+      "worldgen/features.json": "1dc5430167695697df7077ae0ef1d1a652265e05c47634f2fc3f04750d697431",
+      "worldgen/fluid_tags.json": "f1e5eb6d22ea7effbb118a2282709cfdeef1bfae4516b775a55ad7a4df29d7d0",
+      "worldgen/noises.json": "310b240c9b70586bb704ca44a915766a8d41d6a073183324c37184fcb317a992",
+      "worldgen/placed_features.json": "f49132b63263b9e8d763175860c1c90a10dc9977f01820fa878624e06434f136",
+      "worldgen/processor_lists.json": "379cb308ae3126cf85dbc25f95934bd48207103da44b15e7d4be5fae3c1a25b1",
+      "worldgen/rules.json": "b55f222351487a07b3e96c437d07368015c428d3d0475c5287114171397d66d9",
+      "worldgen/settings.json": "dcc7d892420fb3faadab36c935ef0d2d8709a038a8fb944c00e354f417b3b586",
+      "worldgen/state_providers.json": "ad62f6d6be27b3b2d4223fe4c2e45558e1ed79fddceb4acbbff2d049c59f4a6e",
+      "worldgen/structure_sets.json": "636fb973c14d8b31b5fa83668a448e180721fddcc659c8e9f2beb6f21da80a3d",
+      "worldgen/structures.json": "b4bb5a1283d68745c1939ac0f2e5523970c1a0f734ada1038ba496a592d4aa6f",
+      "worldgen/template_pools.json": "c9f648c6bd163f1427832d54a78640dcb48e0648a13e212fc18b2d4a4d41a844",
+      "worldgen/world_presets.json": "14012a0d843e669038b0f347ed5b214b5179086679ccee5670bef9cf03c1a497"
+    },
+    "sourceArtifactsAndPackageIdentityVerified": true,
+    "gameAssetsOrWorldsCommitted": false,
+    "finalComparisonSelfTest": "passed after all accepted clients exited",
+    "finalPythonCompile": "benchmark_native_client.py and corrected local UI verifier passed"
+  },
+  "notCovered": [
+    "Controlled or statistically significant whole-client speedup",
+    "Long-running soak/leak qualification",
+    "Multiplayer and broader modpacks/shader packs",
+    "All classic biomes/presets and full Java terrain/block/feature parity",
+    "Complete structure placement correctness/coverage",
+    "Standard launcher installation or published release"
+  ],
+  "finalProcessCleanup": {
+    "status": "no-owned-client-or-qa-driver-processes-remain",
+    "observedAtUtc": "2026-11-08T06:14:32.1254957Z",
+    "ownedHorizonClients": [],
+    "ownedQaDrivers": [],
+    "otherHorizonClientIds": [],
+    "scope": "Read-only ownership check by test binary roots and unique driver arguments; other work was left running."
+  },
+  "finalProcessCleanupReceipt": {
+    "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\setup\\final-process-cleanup.json",
+    "sha256": "9e3c78b7b9595e51bb425e2869ec866d519999dce1e4d36a80d0c6ab80f98395"
+  }
+}

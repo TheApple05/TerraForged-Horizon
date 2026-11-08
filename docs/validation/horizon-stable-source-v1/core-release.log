@@ -1,0 +1,16 @@
+   Compiling terraforged-native-core v0.1.0 (C:\Users\Main\Documents\Codex\TerraForged-Horizon-stable\horizon\native-core)
+    Finished `release` profile [optimized] target(s) in 5.53s
+     Running unittests src\lib.rs (horizon\native-core\target\release\deps\terraforged_native_core-c836dcd9961aa960.exe)
+
+running 8 tests
+test graph::tests::terrace_propagates_nan_without_indexing_outside_steps ... ok
+test tile_filters_basic::tests::smoothing_skips_nonfinite_and_oversized_radii ... ok
+test tile_work_cache::tests::lru_touch_eviction_and_clear_release_owned_values ... ok
+test tile_filters_basic::tests::smoothing_matches_original_bits_for_radii_masks_and_tile_borders ... ok
+test tile_work_cache::tests::failed_or_unwound_work_can_retry_without_cache_publication ... ok
+test tile_work_cache::tests::clear_during_build_does_not_republish_old_generation ... ok
+test tile_work_cache::tests::concurrent_readers_share_one_build_and_one_arc ... ok
+test tile_work_cache::tests::distinct_builds_run_in_parallel_with_bounded_slots ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
