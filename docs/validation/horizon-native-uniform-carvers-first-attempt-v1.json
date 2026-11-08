@@ -1,0 +1,163 @@
+{
+  "status": "failed",
+  "startedAtUtc": "2026-11-08T00:09:59.729477+00:00",
+  "runs": [
+    {
+      "label": "build-benchmark",
+      "command": [
+        "cargo",
+        "+stable",
+        "build",
+        "--offline",
+        "--locked",
+        "--profile",
+        "fast",
+        "-p",
+        "horizon-world",
+        "--example",
+        "chunkgen_native_stem"
+      ],
+      "status": "completed",
+      "pid": 28800,
+      "elapsedSeconds": 105.40599999999995,
+      "exitCode": 0,
+      "logSha256": "73684f24287fb3042f8251e72432a5d806ec7db5593bfdfe139113a578464436",
+      "bench": []
+    },
+    {
+      "label": "uniform-trial0",
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\chunkgen_native_stem.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--size",
+        "5",
+        "--threads",
+        "4",
+        "--center",
+        "-7936",
+        "4753",
+        "--no-decorate",
+        "--json",
+        "--no-map",
+        "--world-stem",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+        "--snapshot",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\uniform-trial0"
+      ],
+      "status": "completed",
+      "pid": 29372,
+      "elapsedSeconds": 5.219000000000051,
+      "exitCode": 0,
+      "logSha256": "88dd1f92e4f727d6e74c255a71e9fc5acce642dbefb015db3775f445cc660bfe",
+      "bench": [
+        {
+          "biomes_ms_chunk": 153.289772,
+          "carvers_ms_chunk": 0.674212,
+          "chunks": 25,
+          "cpu_s": 0.0,
+          "noise_ms_chunk": 3.579676,
+          "phase": "proto",
+          "structures_ms_chunk": 109.652116,
+          "surface_ms_chunk": 3.9003159999999997,
+          "threads": 4,
+          "wall_s": 1.8116278000000001
+        }
+      ],
+      "snapshotSha256": "bb6a44a89bd28672eab03f9a05c4f50b710b92ff3e6b4dce3a99dda46b76e39f",
+      "snapshotMatchesBaseline": true
+    },
+    {
+      "label": "uniform-trial1",
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\chunkgen_native_stem.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--size",
+        "5",
+        "--threads",
+        "4",
+        "--center",
+        "-7936",
+        "4753",
+        "--no-decorate",
+        "--json",
+        "--no-map",
+        "--world-stem",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+        "--snapshot",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\uniform-trial1"
+      ],
+      "status": "completed",
+      "pid": 29500,
+      "elapsedSeconds": 6.015999999999622,
+      "exitCode": 0,
+      "logSha256": "ab14fea45eadc61ebd1580f6fe5f25fae6b3f6f53b3adf69e2983f5a0cff360f",
+      "bench": [
+        {
+          "biomes_ms_chunk": 165.72209600000002,
+          "carvers_ms_chunk": 0.8183799999999999,
+          "chunks": 25,
+          "cpu_s": 0.0,
+          "noise_ms_chunk": 4.258424,
+          "phase": "proto",
+          "structures_ms_chunk": 126.449712,
+          "surface_ms_chunk": 5.04548,
+          "threads": 4,
+          "wall_s": 2.0277361
+        }
+      ],
+      "snapshotSha256": "bb6a44a89bd28672eab03f9a05c4f50b710b92ff3e6b4dce3a99dda46b76e39f",
+      "snapshotMatchesBaseline": true
+    },
+    {
+      "label": "uniform-trial2",
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\chunkgen_native_stem.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--size",
+        "5",
+        "--threads",
+        "4",
+        "--center",
+        "-7936",
+        "4753",
+        "--no-decorate",
+        "--json",
+        "--no-map",
+        "--world-stem",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+        "--snapshot",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\uniform-trial2"
+      ],
+      "status": "running",
+      "pid": 29988,
+      "elapsedSeconds": 0.0
+    }
+  ],
+  "scope": "25 cold-steppe proto chunks; exact ordered terrain snapshot compared to the qualified cache-8 baseline; no decoration, FPS or general modpack claim.",
+  "phase": "uniform-trial2",
+  "updatedAtUtc": "2026-11-08T00:12:13.531474+00:00",
+  "cacheCopy": {
+    "status": "copied",
+    "workers": 8,
+    "maxPendingFiles": 16,
+    "filesDiscovered": 6692,
+    "bytesDiscovered": 10337494712,
+    "filesCopied": 6692,
+    "bytesCopied": 10337494712,
+    "directoriesCopied": 696,
+    "enumerationComplete": true,
+    "elapsedSeconds": 16.735000000000582
+  },
+  "qaSourceSha256": "3b1805ebd327589a9d971a3259d9f8375b63939c2a01336069efc4247c834f7b",
+  "executableSha256": "b1682ab1bc51f07ad7fcb4e6d66d32d3a69a3ee7ef3f3ea7c090a30d0ca1b6f6",
+  "baselineSnapshotSha256": "bb6a44a89bd28672eab03f9a05c4f50b710b92ff3e6b4dce3a99dda46b76e39f",
+  "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\Main\\\\Documents\\\\Codex\\\\TerraForged-Horizon-performance\\\\build\\\\qa\\\\horizon\\\\native-uniform-carvers-v1\\\\measurement.tmp' -> 'C:\\\\Users\\\\Main\\\\Documents\\\\Codex\\\\TerraForged-Horizon-performance\\\\build\\\\qa\\\\horizon\\\\native-uniform-carvers-v1\\\\measurement.json'",
+  "errorType": "PermissionError",
+  "completedAtUtc": "2026-11-08T00:12:13.531474+00:00"
+}

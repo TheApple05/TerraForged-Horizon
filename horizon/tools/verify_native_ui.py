@@ -58,6 +58,16 @@ def copy_prepared_resources(source,destination,progress,workers=8):
         raise
     return dict(statistics)
 
+def prepare_save_fixture(workspace,source):
+    dest=workspace/'crates/horizon-client-lib/qa/terraforged_save_fixture.rs'
+    if dest.exists() and dest.read_bytes()!=source.read_bytes():raise ValueError('Existing QA probe differs')
+    dest.parent.mkdir(parents=True,exist_ok=True)
+    if not dest.exists():shutil.copy2(source,dest)
+    manifest=workspace/'crates/horizon-client-lib/Cargo.toml';text=manifest.read_text(encoding='utf-8')
+    addition='\n[[bin]]\nname = "terraforged_save_fixture"\npath = "qa/terraforged_save_fixture.rs"\n'
+    if 'name = "terraforged_save_fixture"' not in text:manifest.write_text(text+addition,encoding='utf-8',newline='\n')
+    elif addition.strip() not in text:raise ValueError('Conflicting fixture target')
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ('workspace','resources','hmod','report'):parser.add_argument('--'+name,required=True,type=Path)
@@ -207,9 +217,9 @@ def main():
             report['preparedResourceCopy']=value;checkpoint('copying prepared resources')
         copy_prepared_resources(source,resources,copy_progress)
         if not all(sha(resources/name)==digest for name,digest in before.items()):raise ValueError('Copied resources differ')
-        probe=workspace/'crates/horizon-client-lib/qa/terraforged_save_fixture.rs'
-        if probe.read_bytes()!=(ROOT/'horizon/tests/rust/save_fixture_probe.rs').read_bytes():raise ValueError('Staged save probe differs')
-        report['fixtureProbeSha256']=sha(probe)
+        manifest=workspace/'crates/horizon-client-lib/Cargo.toml';report['qaManifestBeforeSha256']=sha(manifest)
+        prepare_save_fixture(workspace,ROOT/'horizon/tests/rust/save_fixture_probe.rs')
+        report['qaManifestAfterSha256']=sha(manifest);report['fixtureProbeSha256']=sha(workspace/'crates/horizon-client-lib/qa/terraforged_save_fixture.rs')
         checkpoint('building exact staged artifacts')
         run(['cargo','+stable','build','--offline','--locked','--manifest-path',str(workspace/'Cargo.toml'),'--profile','fast','-p','horizon-client','-p','horizon-client-lib','--bin','horizon-client','--bin','horizon-ctl','--bin','terraforged_save_fixture'],'build',1200)
         report['artifactsSha256']={p.name:sha(p) for p in (client,ctl,fixture)}

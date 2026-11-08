@@ -1,9 +1,9 @@
 [mod]
 id = "terraforged_native"
-version = "0.1.0-native.dev4"
+version = "0.1.0-native.dev5"
 
 [compatibility]
-horizon_revision = "b33109ad199d2e149c80c8dc7d97f879c4f4ffec"
+horizon_revision = "1860b66439c6c0c07afd1a13252c1cf9405fb38e"
 
 [[crate]]
 id = "kernel"

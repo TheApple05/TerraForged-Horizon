@@ -34,7 +34,7 @@ jobs:
         run: |
           git init build/qa/horizon/host-source
           git -C build/qa/horizon/host-source remote add origin https://github.com/TheApple05/horizon.git
-          git -C build/qa/horizon/host-source fetch --depth=1 origin b33109ad199d2e149c80c8dc7d97f879c4f4ffec
+          git -C build/qa/horizon/host-source fetch --depth=1 origin 1860b66439c6c0c07afd1a13252c1cf9405fb38e
           git -C build/qa/horizon/host-source checkout --detach FETCH_HEAD
           git init build/qa/horizon/mixin-source
           git -C build/qa/horizon/mixin-source remote add origin https://github.com/horizon-rust/horizon-mixins.git
@@ -58,6 +58,9 @@ jobs:
             packages=(-p horizon-world)
           fi
           cargo clippy --offline --locked --manifest-path build/qa/horizon/ci-host/staged/Cargo.toml "${packages[@]}" --lib -- -D warnings
+      - name: Check fresh UI save-probe setup
+        if: matrix.mode == 'ui'
+        run: python horizon/tools/test_native_ui_fixture.py
       - name: Check density observations
         if: matrix.mode == 'graph' || matrix.mode == 'registry'
         shell: bash
