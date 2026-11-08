@@ -1,6 +1,6 @@
 [mod]
 id = "terraforged_native"
-version = "0.1.0-native.dev7"
+version = "0.1.0"
 
 [compatibility]
 horizon_revision = "f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d"
