@@ -2,6 +2,9 @@
 
 **Qualification is in progress. This is not a published stable release.**
 The version number freezes the proposed package identity; it does not certify it.
+The replacement candidate uses the Windows GNU system allocator to address
+private-commit growth found in RC.1. Its fresh installed-build and sustained
+qualification are pending.
 
 The intended scope is Windows x64, Vulkan, Minecraft 26.3, singleplayer and the
 bundled `terraforged:default` overworld preset. This independent, unofficial
@@ -110,6 +113,6 @@ scenery parity are outside the intended first stable scope. Vanilla, Nether and
 End retain the pinned engine's behavior. This mod does not certify the whole
 Horizon client or every upstream Minecraft feature.
 
-Native source pins: Horizon `f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d`,
+Native source pins: Horizon `685a756423731d1cf9f511911eabe9ef023d10d4`,
 horizon-mixins `e8cd0aa38cffef49cb2e088ef716baa107148c02`. The compatible
 launcher source is [fork commit 62e533e](https://github.com/TheApple05/horizon/commit/62e533e009eb2fa58cbe10948f2e453fa00b94f2).

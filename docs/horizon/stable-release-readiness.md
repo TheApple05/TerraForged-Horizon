@@ -213,3 +213,18 @@ The [selected final-package results](../validation/horizon-0.1.0-v1/SUMMARY.json
 already retain the bounded installed multi-seed, Play and copied-world recovery
 checks without publishing account files, resources or worlds. Their overall
 status explicitly keeps this memory gate open.
+
+A matched twelve-region diagnostic now isolates the allocator choice with one
+persistent control session per process. The unmodified GNU client finishes at
+5,202.7 MiB private commit; the same frozen generation sources built with the
+existing system-allocator feature finish at 1,557.1 MiB. Both exit cleanly.
+Independent saved FULL vectors for the system-allocator run pass 6,144 quart
+comparisons. These are bounded diagnostics, not the missing forty-five-minute
+qualification. The [comparison](../validation/horizon-allocator-comparison-v1/comparison.json)
+records the exact executable hashes and per-view private/resident measurements.
+
+The replacement engine pin `685a756423731d1cf9f511911eabe9ef023d10d4` changes
+only default allocator selection in the client executable for Windows GNU.
+Explicit diagnostic allocator features remain available. Generation sources,
+cache limits and terrain arithmetic are unchanged. A new package, public
+installation and genuine native build must be qualified before promotion.
