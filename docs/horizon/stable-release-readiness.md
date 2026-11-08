@@ -138,3 +138,21 @@ the pinned Rust toolchain. No privately prepared-resource tree is copied into
 that installation. Its [safe preparation receipt](../validation/horizon-seed-recovery-v1/public-install-preparation.json)
 records the unrecognized sound-index warning and successful per-file validation.
 The final HMOD, exact installed native build and Play gates remain pending.
+
+## Frozen 0.1.0 candidate and manual-install correction
+
+The [0.1.0 qualification candidate](https://github.com/TheApple05/TerraForged-Horizon/releases/tag/v0.1.0-rc.1)
+contains the frozen HMOD, compatible launcher ZIP, native source ZIP and
+checksums. All four public downloads match their local hashes. The new HMOD's
+entry set is unchanged from the tested source candidate; every generation-code
+and content byte matches. Only four metadata entries change version/display
+text and the README heading. This is not final installed-client acceptance.
+
+The fresh public installation exposed an omitted manual-setup step. A copied
+native archive remains off until `horizon-mods.txt` explicitly contains
+`mod.terraforged_native:true`. The CLI `mods enable` only resolves entries the
+browser installed, so it cannot enable this manually placed archive. The
+[Windows instructions](windows-0.1.0-release.md) now include that line while
+preserving other preferences. Both the original refused build and rejected CLI
+enable attempt remain recorded. The next attempt has passed the trust refusal
+and started the real pinned-source native build; its result is pending.

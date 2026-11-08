@@ -59,6 +59,17 @@ window; it disables upstream self-update for this fork process.
    GitHub native-mod installer currently selects `.hnmod` downloads, so use
    this manual placement for the combined `.hmod`.
 
+   In the same instance's `horizon-mods.txt`, add this line, keeping any existing
+   settings for other mods:
+
+   ```text
+   mod.terraforged_native:true
+   ```
+
+   Manually copied native archives start off. The CLI `mods enable` command only
+   handles browser-installed entries; manual installation needs this explicit
+   opt-in before `native-build`.
+
 5. Compile and select the instance:
 
    ```bat
