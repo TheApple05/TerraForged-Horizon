@@ -1,0 +1,115 @@
+{
+  "status": "prepared-and-byte-verified-not-yet-published",
+  "tag": "v0.1.0-native.dev7",
+  "nativeSourceCommit": "ed818ecc0371e1627192e1abdccb0a744f51f890",
+  "hostSourceCommit": "f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d",
+  "hostMergeCommit": "948904435cdf33b3bcbf052de55bbfeea128cc2e",
+  "mixinsCommit": "e8cd0aa38cffef49cb2e088ef716baa107148c02",
+  "assets": [
+    {
+      "name": "terraforged-horizon-26.3-0.1.0-native.dev7.hmod",
+      "bytes": 160194,
+      "sha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355"
+    },
+    {
+      "name": "terraforged-horizon-launcher-windows-x64-native.dev7.zip",
+      "bytes": 21044686,
+      "sha256": "31204be698ac665162bfe760d5a4096a0a6c32af72d4e0f2d66dc0a4843a8ecb"
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 239,
+      "sha256": "e3b7948cf8524e3a07e7693dce5a84bfd94d3f8f75f333860ef7b389fc5f4b72"
+    }
+  ],
+  "launcherZipEntries": [
+    {
+      "path": "TerraForged-Horizon-Launcher/crates/horizon-theme/fonts/OFL-BricolageGrotesque.txt",
+      "bytes": 4643,
+      "sha256": "b2d8bb11b03bbc5bc27fc8f0bf66934c6628da30df0c681c684854b4fe678162"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/crates/horizon-theme/fonts/OFL-Geist.txt",
+      "bytes": 4475,
+      "sha256": "b575251c79e87131200f86f3ef83a11aa0699a888ef5bba5d8f28f39cc7340c7"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/crates/horizon-theme/fonts/OFL-PixelifySans.txt",
+      "bytes": 4488,
+      "sha256": "b66ba46f511a851ab09998b5a5a9fdbb102545a3864cb993095e1745996873a7"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/crates/horizon-theme/icons/glass/LICENSE-hugeicons.txt",
+      "bytes": 1087,
+      "sha256": "32572fc25e1c26d4204bc521d8d5a204f1fc5ca7ca9f10b6e0bf367056e32827"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/crates/horizon-theme/icons/pixel/LICENSE-pixelarticons.txt",
+      "bytes": 1093,
+      "sha256": "3c6cc71a89cf7026ee11dd82e288e631761f023186b24217579916c82db7e683"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/horizon-launcher.exe",
+      "bytes": 59622400,
+      "sha256": "0d5f250705896eeded0e6800c03de961835bcd389f96d6ba908fe2bdb598f468"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/LICENSE",
+      "bytes": 1120,
+      "sha256": "06b767be20580df3cd9ad6231aa9e775451d21bdf7f594fddb94523b7e363fb9"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/README.txt",
+      "bytes": 2141,
+      "sha256": "6ae6187b28874cc3b1fa9c2db51a2e87f89eb6eae78fdedddffc9a6cac4b5c1f"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/Start-TerraForged-Horizon.cmd",
+      "bytes": 103,
+      "sha256": "9219407c9db6f8e2fcbce1c555e6cfaa927e1a8ac3b703911df858ecf11d6ba6"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/third_party/libmimalloc-sys/c_src/mimalloc/v3/LICENSE",
+      "bytes": 1117,
+      "sha256": "815e7954241acbb5a81cd72583e6a0b52bb7308c70cd06f445d70bcfe58936d4"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/third_party/libmimalloc-sys/LICENSE.txt",
+      "bytes": 1079,
+      "sha256": "c53dff74c2f74f66393de83548002c1f60ca962d5ddf5920c4ae2cc2c54e1489"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/third_party/naga/LICENSE.APACHE",
+      "bytes": 10349,
+      "sha256": "6d1d968fb225eca367cb7f0b8831ab012a35d92b547e945e17ef8e7b05c3e5cc"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/third_party/naga/LICENSE.MIT",
+      "bytes": 1099,
+      "sha256": "2f388b63a5061c4e62e1bf8a1873fd6179cf9220183688a4f928e017fffb0f2a"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/third_party/wgpu-hal/LICENSE.APACHE",
+      "bytes": 10349,
+      "sha256": "6d1d968fb225eca367cb7f0b8831ab012a35d92b547e945e17ef8e7b05c3e5cc"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/third_party/wgpu-hal/LICENSE.MIT",
+      "bytes": 1099,
+      "sha256": "2f388b63a5061c4e62e1bf8a1873fd6179cf9220183688a4f928e017fffb0f2a"
+    },
+    {
+      "path": "TerraForged-Horizon-Launcher/THIRD_PARTY_NOTICES.md",
+      "bytes": 10008,
+      "sha256": "0e912356e996a69ed6657102d4913607b5b4c142b491a1dca4d0c1d25945e232"
+    }
+  ],
+  "selfUpdatePolicy": "Use the included CMD wrapper to disable upstream self-update for this fork process.",
+  "excluded": [
+    "Minecraft resources",
+    "compiled game client",
+    "saves/worlds",
+    "accounts/sessions"
+  ],
+  "qualification": "Exact HMOD + launcher hashes qualified locally; ZIP extraction checked byte-for-byte. GUI/authenticated Play and fresh public install remain untested."
+}

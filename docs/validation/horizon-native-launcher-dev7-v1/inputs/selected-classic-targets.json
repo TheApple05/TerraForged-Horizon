@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "seed": 8675309,
+  "targets": {
+    "reterraforged:fir_forest": {
+      "x": 0,
+      "y": 70,
+      "z": -43692
+    },
+    "reterraforged:frozen_marsh": {
+      "x": -104064,
+      "y": 63,
+      "z": -12168
+    },
+    "reterraforged:shattered_savanna_scrub": {
+      "x": 100428,
+      "y": 74,
+      "z": 42832
+    }
+  },
+  "sourceJavaReport": "docs/validation/classic-biome-dev23-fabric-corpus.json",
+  "sourceJavaReportSha256": "4e9190382bbd9fd3a63611b2625b543b85d45c7133ac78b5236a301f189baf02",
+  "scope": "Three selected direct local UI/save checks; unselected targets and launcher GUI Play are not covered."
+}

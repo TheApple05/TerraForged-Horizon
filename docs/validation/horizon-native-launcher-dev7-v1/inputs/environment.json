@@ -1,0 +1,34 @@
+{
+  "overrides": {
+    "HORIZON_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game",
+    "HORIZON_LAUNCHER_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher",
+    "XDG_DATA_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\xdg-data",
+    "XDG_CONFIG_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\xdg-config",
+    "HORIZON_LAUNCHER_TRASH": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\trash",
+    "HORIZON_LAUNCHER_CLIPBOARD": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\clipboard\\clipboard.data",
+    "HORIZON_LAUNCHER_DESKTOP": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\desktop",
+    "HORIZON_NO_AUDIO": "1",
+    "HORIZON_NO_DISCORD": "1",
+    "HORIZON_LAUNCHER_NO_SELF_UPDATE": "1",
+    "HORIZON_TELEMETRY_URL": "off",
+    "HORIZON_NO_KEYCHAIN": "1",
+    "HORIZON_LAUNCHER_LOCATION_FILE": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\location.json",
+    "HORIZON_MOD_INDEX": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\local-index.json"
+  },
+  "remove": [
+    "HORIZON_GITHUB_TOKEN",
+    "GITHUB_TOKEN",
+    "GH_TOKEN",
+    "GH_ENTERPRISE_TOKEN",
+    "HORIZON_ACCOUNT_SESSIONS",
+    "HORIZON_SESSION_FILE",
+    "HORIZON_DISCORD_IPC_DIR",
+    "HORIZON_MSA_MICROSOFT_ENDPOINT"
+  ],
+  "containsCredentials": false,
+  "removePrefixes": [
+    "HORIZON_",
+    "TERRAFORGED_HORIZON_"
+  ],
+  "applyOrder": "Copy normal process environment; remove named variables and prefixes; apply these overrides last."
+}

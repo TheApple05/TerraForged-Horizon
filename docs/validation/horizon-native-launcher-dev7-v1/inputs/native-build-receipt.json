@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "status": "built-installed-new-pack-pin-verified-no-game-launch",
+  "startedAtUtc": "2026-11-08T03:50:53.236496+00:00",
+  "scope": "Genuine launcher registry/Hpack install and native source build; no game launch.",
+  "packId": "terraforged_launcher_qa_dev7",
+  "environmentOverrides": {
+    "HORIZON_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game",
+    "HORIZON_LAUNCHER_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher",
+    "XDG_DATA_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\xdg-data",
+    "XDG_CONFIG_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\xdg-config",
+    "HORIZON_LAUNCHER_TRASH": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\trash",
+    "HORIZON_LAUNCHER_CLIPBOARD": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\clipboard\\clipboard.data",
+    "HORIZON_LAUNCHER_DESKTOP": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\desktop",
+    "HORIZON_NO_AUDIO": "1",
+    "HORIZON_NO_DISCORD": "1",
+    "HORIZON_LAUNCHER_NO_SELF_UPDATE": "1",
+    "HORIZON_TELEMETRY_URL": "off",
+    "HORIZON_NO_KEYCHAIN": "1",
+    "HORIZON_LAUNCHER_LOCATION_FILE": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\location.json",
+    "HORIZON_MOD_INDEX": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\local-index.json",
+    "CARGO_BUILD_JOBS": "4",
+    "CARGO_NET_OFFLINE": "true"
+  },
+  "inputsSha256Before": {
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\run_install_build.py": "3398dcbf26a7a85366d40af9ac5d1dc3cd6c5ec3513d814e4fe969e7689c5078",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-target-release\\release\\horizon-launcher.exe": "e544cd14695a3edcb3bb738d8896088c17dc42ea80078718e81054470ff9b0a2",
+    "D:\\Codex-QA\\TerraForged-Horizon\\packager-target\\release\\cargo-horizon-mod.exe": "c364bb8fdf423dbc3a357ec87d90a61d666606f1af42834b97c57311a4d1d0db",
+    "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\distributions\\terraforged-horizon-26.3-0.1.0-native.dev7.hmod": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\local-index.json": "1af5598204a716ca503073c27d953059ccdc02265f62509a53dd3541e2ec3b18",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\terraforged_launcher_qa_dev7-0.1.0.hpack": "304748f5489448833be00f67b59cf356a19c566494038f3e3afe386d451cb9c6",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\official\\coords_hud-2.0.0.hnmod": "432376fad3062b3517e274d3b8c0d0b52fc5d6de2aee20a0b340c8cab5a8cf08",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\qa_glow\\target\\horizon-mod\\qa_glow.hmod": "4668519cb92c15612d9c15f394a828252fc39abfb09c4d30ad3e961b6de40b4c"
+  },
+  "commands": [
+    {
+      "id": "pack-check",
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\packager-target\\release\\cargo-horizon-mod.exe",
+        "check",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\terraforged_launcher_qa_dev7-0.1.0.hpack",
+        "--kind",
+        "modpack",
+        "--json"
+      ],
+      "startedAtUtc": "2026-11-08T03:50:53.236496+00:00",
+      "timeoutSeconds": 120,
+      "pid": 37240,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "completedAtUtc": "2026-11-08T03:50:53.264286+00:00",
+      "elapsedSeconds": 0.01599999999962165,
+      "logsSha256": {
+        "pack-check.stdout.log": "cb8da0f78f81e14969f19dfdae51abae37af0928b2528171967e901c47155ce6",
+        "pack-check.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "pack-install",
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-target-release\\release\\horizon-launcher.exe",
+        "mods",
+        "install",
+        "terraforged_launcher_qa_dev7",
+        "--source",
+        "horizon",
+        "--json"
+      ],
+      "startedAtUtc": "2026-11-08T03:50:53.271290+00:00",
+      "timeoutSeconds": 180,
+      "pid": 37268,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "completedAtUtc": "2026-11-08T03:50:54.328545+00:00",
+      "elapsedSeconds": 1.0459999999984575,
+      "logsSha256": {
+        "pack-install.stdout.log": "ed53a0e2af3e79fc1161a72b538fd33c198e01b5680601f95a86419db5a0a67c",
+        "pack-install.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "pack-mod-list",
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-target-release\\release\\horizon-launcher.exe",
+        "mods",
+        "list",
+        "--instance",
+        "pack:terraforged_launcher_qa_dev7",
+        "--json"
+      ],
+      "startedAtUtc": "2026-11-08T03:50:54.337539+00:00",
+      "timeoutSeconds": 120,
+      "pid": 37048,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "completedAtUtc": "2026-11-08T03:50:54.355536+00:00",
+      "elapsedSeconds": 0.01599999999962165,
+      "logsSha256": {
+        "pack-mod-list.stdout.log": "8e82dd1e1276ff4cff55cc1ee4682ff860cc8d883e9c32099d90197e81fc5a9c",
+        "pack-mod-list.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "native-build",
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-target-release\\release\\horizon-launcher.exe",
+        "native-build",
+        "--instance",
+        "pack:terraforged_launcher_qa_dev7",
+        "--version",
+        "1860b66439c6c0c07afd1a13252c1cf9405fb38e",
+        "--profile",
+        "performance",
+        "--trust-native-code"
+      ],
+      "startedAtUtc": "2026-11-08T03:50:54.366536+00:00",
+      "timeoutSeconds": 7200,
+      "pid": 16916,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "completedAtUtc": "2026-11-08T03:56:04.312394+00:00",
+      "elapsedSeconds": 309.9379999999983,
+      "logsSha256": {
+        "native-build.stdout.log": "008f408c53e685d501b7b87a43bf832a8df3eaa33e466a83c23f9987fb8fe43c",
+        "native-build.stderr.log": "263521fc3adde0597ef4a2398f72a16c1a2eeda69bae15c245eab956423dad2d"
+      }
+    },
+    {
+      "id": "instance-list",
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-target-release\\release\\horizon-launcher.exe",
+        "instance",
+        "list",
+        "--json"
+      ],
+      "startedAtUtc": "2026-11-08T03:56:04.334180+00:00",
+      "timeoutSeconds": 120,
+      "pid": 16484,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "completedAtUtc": "2026-11-08T03:56:04.406738+00:00",
+      "elapsedSeconds": 0.06299999999828287,
+      "logsSha256": {
+        "instance-list.stdout.log": "c507e08538b90dc26b0412d76044e4fcdc9a97ac7dad28d1f7dbe49a1366e7e2",
+        "instance-list.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "gameExecuted": false,
+  "authenticationAttempted": false,
+  "builtClientCachePrepopulated": false,
+  "minecraftOrResourceDownloadsRequested": false,
+  "installedArchiveVerification": [
+    {
+      "id": "terraforged_native",
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa_dev7\\home\\horizon-native-mods\\terraforged_native.hmod",
+      "sha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+      "bytes": 160194
+    },
+    {
+      "id": "coords_hud",
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa_dev7\\home\\horizon-native-mods\\coords_hud.hnmod",
+      "sha256": "432376fad3062b3517e274d3b8c0d0b52fc5d6de2aee20a0b340c8cab5a8cf08",
+      "bytes": 4932
+    },
+    {
+      "id": "qa_glow",
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa_dev7\\home\\horizon-mods\\qa_glow.hmod",
+      "sha256": "4668519cb92c15612d9c15f394a828252fc39abfb09c4d30ad3e961b6de40b4c",
+      "bytes": 2393
+    }
+  ],
+  "modsList": [
+    {
+      "source": "horizon",
+      "project": "terraforged_native",
+      "slug": "terraforged_native",
+      "title": "TerraForged Native",
+      "kind": "mod",
+      "version": "0.1.0-native.dev7",
+      "number": "0.1.0-native.dev7",
+      "file": "horizon-native-mods/terraforged_native.hmod",
+      "checksum": "SHA-256:ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+      "page": "https://playhorizon.dev/mods/terraforged_native",
+      "dependency": false,
+      "verdict": "Unsigned"
+    },
+    {
+      "source": "horizon",
+      "project": "coords_hud",
+      "slug": "coords_hud",
+      "title": "Coordinates HUD",
+      "kind": "mod",
+      "version": "2.0.0",
+      "number": "2.0.0",
+      "file": "horizon-native-mods/coords_hud.hnmod",
+      "checksum": "SHA-256:432376fad3062b3517e274d3b8c0d0b52fc5d6de2aee20a0b340c8cab5a8cf08",
+      "page": "https://playhorizon.dev/mods/coords_hud",
+      "dependency": false,
+      "verdict": "Unsigned"
+    },
+    {
+      "source": "horizon",
+      "project": "qa_glow",
+      "slug": "qa_glow",
+      "title": "QA Glow",
+      "kind": "mod",
+      "version": "0.1.0",
+      "number": "0.1.0",
+      "file": "horizon-mods/qa_glow.hmod",
+      "checksum": "SHA-256:4668519cb92c15612d9c15f394a828252fc39abfb09c4d30ad3e961b6de40b4c",
+      "page": "https://playhorizon.dev/mods/qa_glow",
+      "dependency": false,
+      "verdict": "Unsigned"
+    }
+  ],
+  "nativeVersion": "native-f43eebf-9667ade2485e",
+  "selectedInstance": {
+    "id": "pack:terraforged_launcher_qa_dev7",
+    "name": "TerraForged Launcher QA dev7",
+    "kind": "pack",
+    "home": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa_dev7\\home",
+    "icon": null,
+    "group": null,
+    "selected": false,
+    "version": "native-f43eebf-9667ade2485e",
+    "java": null,
+    "played_secs": 0,
+    "last_played_ms": null
+  },
+  "preservedDev6Instance": {
+    "id": "pack:terraforged_launcher_qa",
+    "name": "TerraForged Launcher QA",
+    "kind": "pack",
+    "home": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+    "icon": null,
+    "group": null,
+    "selected": true,
+    "version": "native-f43eebf-f53fc548a368",
+    "java": null,
+    "played_secs": 0,
+    "last_played_ms": null
+  },
+  "nativeBuildRecord": {
+    "base": "1860b66439c6c0c07afd1a13252c1cf9405fb38e",
+    "horizon": "f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d",
+    "base_horizon": "1860b66439c6c0c07afd1a13252c1cf9405fb38e",
+    "pinned_by": [
+      "terraforged_native"
+    ],
+    "on_base": false,
+    "horizon_mixins": "e8cd0aa38cffef49cb2e088ef716baa107148c02",
+    "hooks": 1,
+    "rust": "1.99.1",
+    "profile": "performance",
+    "target": "client",
+    "mods": [
+      {
+        "id": "coords_hud",
+        "version": "2.0.0",
+        "sha256": "b3b4aafeddef493545543f664be8deed37f5805e550d238158854c86fc6f4671"
+      },
+      {
+        "id": "terraforged_native",
+        "version": "0.1.0-native.dev7",
+        "sha256": "966e31f3971ba062d4986f8bce3167339c45dd26f5c680e2a9b7f0c56f3da58e"
+      }
+    ]
+  },
+  "nativeBuildRecordSha256": "cfb0ab1c98bdeae19617b81b254238afb07d38d02656b33dda95ee0f8ac7b6fe",
+  "builtClientSha256": "6a87351e5c85b83d728e55cfd6597cc90917b286a42fd16c8b819911fae6cd85",
+  "stagedSamplerSources": [
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\native\\stage\\native-crates\\terraforged_native\\kernel\\src\\kernel_sampler.rs",
+      "sha256": "282d4c5f48e2e0abd7d948b1a65a696d771ea846487cc38b0e606b8b497cd7ec"
+    }
+  ],
+  "internalBuildLogSha256": "fab7539ea8fa79696543d2e030ca8ce23e40829e4627e79286a347ede0a251ce",
+  "inputsSha256After": {
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\run_install_build.py": "3398dcbf26a7a85366d40af9ac5d1dc3cd6c5ec3513d814e4fe969e7689c5078",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-target-release\\release\\horizon-launcher.exe": "e544cd14695a3edcb3bb738d8896088c17dc42ea80078718e81054470ff9b0a2",
+    "D:\\Codex-QA\\TerraForged-Horizon\\packager-target\\release\\cargo-horizon-mod.exe": "c364bb8fdf423dbc3a357ec87d90a61d666606f1af42834b97c57311a4d1d0db",
+    "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\distributions\\terraforged-horizon-26.3-0.1.0-native.dev7.hmod": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\local-index.json": "1af5598204a716ca503073c27d953059ccdc02265f62509a53dd3541e2ec3b18",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\terraforged_launcher_qa_dev7-0.1.0.hpack": "304748f5489448833be00f67b59cf356a19c566494038f3e3afe386d451cb9c6",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\official\\coords_hud-2.0.0.hnmod": "432376fad3062b3517e274d3b8c0d0b52fc5d6de2aee20a0b340c8cab5a8cf08",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\fixtures-v2\\qa_glow\\target\\horizon-mod\\qa_glow.hmod": "4668519cb92c15612d9c15f394a828252fc39abfb09c4d30ad3e961b6de40b4c"
+  },
+  "inputsUnchanged": true,
+  "protectedDev6Changes": [],
+  "protectedDev6FilesChecked": 18,
+  "completedAtUtc": "2026-11-08T03:56:04.774895+00:00"
+}

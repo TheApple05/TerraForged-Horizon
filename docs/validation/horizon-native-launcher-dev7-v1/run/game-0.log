@@ -1,0 +1,44 @@
+Horizon 0.1.0
+Horizon: content from 2 mod(s) in D:\Codex-QA\TerraForged-Horizon\launcher-standard-v1\homes\game\horizon-packs\terraforged_launcher_qa_dev7\home\.horizon-cache\mod-content
+Horizon: block sprites: 1291 layers at 64 px (largest 64 px, budget 256 MiB)
+load core tables: 56.96s
+load pack tables: 57.08s
+load items: 58.01s
+Horizon: resources loaded in 58.9s; 35724 block states, 1659 items, 84 biomes; 15 worker threads
+Horizon: no sound: audio off: HORIZON_NO_AUDIO is set
+Horizon: control socket D:\Codex-QA\TerraForged-Horizon\launcher-standard-v1\homes\game\horizon-packs\terraforged_launcher_qa_dev7\home\qa-default-view-control.json
+Horizon renderer: NVIDIA GeForce RTX 3090 (Vulkan, DiscreteGpu)
+Horizon renderer: requesting the device (driver NVIDIA 616.92) with features [TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | MAPPABLE_PRIMARY_BUFFERS | MULTI_DRAW_INDIRECT_COUNT | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | SHADER_EARLY_DEPTH_TEST | SUBGROUP | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE] and the adapter's limits (buffers up to 1099511627776 bytes, storage bindings up to 2147483644 bytes, 2048 texture layers)
+Horizon renderer: creating the pipelines
+Horizon renderer: pipelines ready (multi-draw on, occlusion culling on, GPU culling available, GPU timer on)
+Horizon renderer: acquiring the first frame
+Horizon renderer: submitting the first frame
+Horizon: first frame after 2371 ms
+Horizon: worldgen data loaded in 377.5786ms
+Horizon: live features ready in 58.5085ms
+[20:43:39] [Server thread/INFO]: TerraForgedQA[/127.0.0.1:0] logged in with entity id 1 at (2292.5, 118.0, -6649.5)
+[20:43:39] [Server thread/INFO]: System chat: TerraForgedQA joined the game
+[20:43:43] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 2292.500000, 118.000000, -6649.500000]
+Saving and pausing game...
+[20:43:54] [Server thread/INFO]: System chat: [TerraForgedQA: Gave 1 [Block of Amethyst] to TerraForgedQA]
+[20:43:54] [Server thread/INFO]: System chat: [TerraForgedQA: Gave 1 [Glowstone Dust] to TerraForgedQA]
+[20:43:57] [Server thread/INFO]: System chat: [TerraForgedQA: Set own game mode to Spectator Mode]
+[20:43:57] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 0.500000, 118.000000, -43691.500000]
+[20:43:57] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 0.500000, 118.000000, -43691.500000]
+[20:44:25] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 0.500000, 118.000000, -43691.500000]
+[20:44:27] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to -104063.500000, 111.000000, -12167.500000]
+[20:44:27] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to -104063.500000, 111.000000, -12167.500000]
+[20:44:38] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to -104063.500000, 111.000000, -12167.500000]
+[20:44:40] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 100428.500000, 122.000000, 42832.500000]
+[20:44:40] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 100428.500000, 122.000000, 42832.500000]
+[20:44:50] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 100428.500000, 122.000000, 42832.500000]
+[20:44:51] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 8.500000, 90.000000, 8.500000]
+[20:44:52] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 8.500000, 90.000000, 8.500000]
+[20:45:02] [Server thread/INFO]: System chat: [TerraForgedQA: Set own game mode to Creative Mode]
+[20:45:02] [Server thread/INFO]: System chat: [TerraForgedQA: Changed the block at 40, 299, 8]
+[20:45:02] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 40.500000, 301.000000, 11.500000]
+[20:45:06] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 40.500000, 301.000000, 11.500000]
+[20:45:08] [Server thread/INFO]: System chat: [TerraForgedQA: Set own game mode to Spectator Mode]
+[20:45:08] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 8.500000, 90.000000, 8.500000]
+[20:45:08] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 8.500000, 90.000000, 8.500000]
+Horizon: disconnected: Server closed

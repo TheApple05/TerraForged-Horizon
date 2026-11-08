@@ -55,3 +55,7 @@ The first FULL-chunk read checks 18 stored chunks and 27,648 quart-biome entries
 The [independent v4 review](../validation/horizon-native-classic-ui-uniform-v4-review.json) inspects all 21 PNGs and matches their actual hashes. Eight dusk/night captures limit texture/color assessment. Render-distance-six cutoffs and the high camera remain visible; the high stone-forest view is inconclusive for lower geometry and Bryce is limited. This repetition does not replace the separate lower-view checks or establish complete Java scenery parity.
 
 This is an order/workload repetition, not an exact recreation of every old condition. Daylight advances naturally from reported time 1,367 to 27,220; the failed v2 had a separate noon-freeze intervention. Compilation overlaps the run. No performance conclusion or historical-cause fix is claimed. The unexplained exit did not recur.
+
+## Later launcher-installed native.dev7 check
+
+The [final installed-client acceptance](native-launcher-modpack-validation.md) creates a fresh world and completes selected fir/marsh/savanna visits, custom-content save/reopen and distant generation at full distance 12. Both recorded client processes exit zero through requested control shutdown. A separate copied-world structure close-up also exits zero. These later clean runs retain explicit exit codes and immutable reports; they do not identify the historical unexplained termination.

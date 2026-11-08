@@ -1,0 +1,141 @@
+{
+  "status": "passed-static-launcher-qualification",
+  "sourceCommit": "f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d",
+  "launcherSha256": "0d5f250705896eeded0e6800c03de961835bcd389f96d6ba908fe2bdb598f468",
+  "compiledLauncher": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\bin\\horizon-launcher-static.exe",
+  "commands": [
+    {
+      "label": "launcher-imports",
+      "argv": [
+        "python",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged\\build\\qa\\horizon\\launcher-modpack-worktree\\tools\\check_imports.py",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\bin\\horizon-launcher-static.exe"
+      ],
+      "expectedExitCode": 0,
+      "startedAtUtc": "2026-11-08T04:26:36.647206+00:00",
+      "pid": 37808,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.2180000000007567,
+      "stdoutSha256": "300b16e0087ae75aeab2f0ff9188ac42efaf210ba69fde8baa27e56cb4df07ff",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "client-imports",
+      "argv": [
+        "python",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged\\build\\qa\\horizon\\launcher-modpack-worktree\\tools\\check_imports.py",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-9667ade2485e\\horizon-client.exe"
+      ],
+      "expectedExitCode": 0,
+      "startedAtUtc": "2026-11-08T04:26:36.903930+00:00",
+      "pid": 39548,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.2649999999994179,
+      "stdoutSha256": "e53e7e972cdcd8a6d82d88aa5392fd7a0883c40c1548d4dcb36f5d4d15e6ab8b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "static-tests",
+      "argv": [
+        "cargo",
+        "+stable",
+        "test",
+        "--offline",
+        "--locked",
+        "--release",
+        "--manifest-path",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged\\build\\qa\\horizon\\launcher-modpack-worktree\\launcher\\Cargo.toml",
+        "--lib",
+        "--bin",
+        "horizon-launcher"
+      ],
+      "expectedExitCode": 0,
+      "startedAtUtc": "2026-11-08T04:26:37.179153+00:00",
+      "pid": 40216,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 275.75,
+      "stdoutSha256": "052bb0362d9ab55d0391f04cec938cffea7acf51fb9ca95d0062172b696581af",
+      "stderrSha256": "c87b0d429201d8208ef44b4ec09c9384314f35187b52f2dd29d45e4671896bcc"
+    },
+    {
+      "label": "version",
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\bin\\horizon-launcher-static.exe",
+        "--version"
+      ],
+      "expectedExitCode": 0,
+      "startedAtUtc": "2026-11-08T04:31:13.014968+00:00",
+      "pid": 38536,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 1.1559999999990396,
+      "stdoutSha256": "1a8532aeac169954aa820adcb2acb061e898ee1b7bbd9d2124faa826021bf40d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "cached-native-build",
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\bin\\horizon-launcher-static.exe",
+        "native-build",
+        "--instance",
+        "pack:terraforged_launcher_qa_dev7",
+        "--version",
+        "1860b66439c6c0c07afd1a13252c1cf9405fb38e",
+        "--profile",
+        "performance",
+        "--trust-native-code"
+      ],
+      "expectedExitCode": 0,
+      "startedAtUtc": "2026-11-08T04:31:14.180591+00:00",
+      "pid": 40396,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 2.0940000000009604,
+      "stdoutSha256": "5e9eeb6c75632ce849d4d7b54a03c2825fe50c4ed7e57783b543d64a3cc90c95",
+      "stderrSha256": "71c421eb30a8077e2d04b807bfdcec1d6b1931a9bfc90a83cd04c88df836e7e2"
+    },
+    {
+      "label": "strict-owner-gate",
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\bin\\horizon-launcher-static.exe",
+        "play",
+        "--instance",
+        "pack:terraforged_launcher_qa_dev7"
+      ],
+      "expectedExitCode": 1,
+      "startedAtUtc": "2026-11-08T04:31:16.299339+00:00",
+      "pid": 40560,
+      "exitCode": 1,
+      "exitCodeUnsignedHex": "0x00000001",
+      "elapsedSeconds": 0.046999999998661224,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "076488869801450409af2fcefbcb9d042baf4c13612b9db770b41d435d028ccf"
+    }
+  ],
+  "nativeVersion": "native-f43eebf-9667ade2485e",
+  "startedAtUtc": "2026-11-08T04:26:36.646205+00:00",
+  "before": {
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-9667ade2485e\\native-mods.json": "cfb0ab1c98bdeae19617b81b254238afb07d38d02656b33dda95ee0f8ac7b6fe",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-9667ade2485e\\horizon-client.exe": "6a87351e5c85b83d728e55cfd6597cc90917b286a42fd16c8b819911fae6cd85"
+  },
+  "testSummaries": [
+    [
+      "510",
+      "0",
+      "7"
+    ],
+    [
+      "97",
+      "0",
+      "1"
+    ]
+  ],
+  "after": {
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-9667ade2485e\\native-mods.json": "cfb0ab1c98bdeae19617b81b254238afb07d38d02656b33dda95ee0f8ac7b6fe",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-9667ade2485e\\horizon-client.exe": "6a87351e5c85b83d728e55cfd6597cc90917b286a42fd16c8b819911fae6cd85"
+  },
+  "completedAtUtc": "2026-11-08T04:31:16.526100+00:00"
+}

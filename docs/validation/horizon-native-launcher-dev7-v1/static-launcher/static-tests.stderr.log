@@ -1,0 +1,10 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling gpui-fast-windows v0.1.13
+   Compiling quote v1.0.47
+   Compiling syn v2.0.119
+   Compiling horizon-mod-api-gen v0.1.0 (C:\Users\Main\Documents\Codex\TerraForged\build\qa\horizon\launcher-modpack-worktree\crates\horizon-mod-api-gen)
+   Compiling gpui-fast-platform v0.1.13
+   Compiling horizon-launcher v0.2.0 (C:\Users\Main\Documents\Codex\TerraForged\build\qa\horizon\launcher-modpack-worktree\launcher)
+    Finished `release` profile [optimized] target(s) in 4m 25s
+     Running unittests src\lib.rs (D:\Codex-QA\TerraForged-Horizon\launcher-static-v1\target\release\deps\horizon_launcher-e4e9c4689f662ba6.exe)
+     Running unittests src\main.rs (D:\Codex-QA\TerraForged-Horizon\launcher-static-v1\target\release\deps\horizon_launcher-8c0e9e26db6c9081.exe)

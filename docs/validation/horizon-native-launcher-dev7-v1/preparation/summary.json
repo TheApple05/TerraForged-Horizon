@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-11-08T03:57:03.574658+00:00",
+  "status": "built-installed-new-pack-pin-verified-no-game-launch",
+  "scope": "Genuine launcher registry/Hpack install and native source build; no game launch.",
+  "report": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\launcher-run-v1\\report.json",
+  "reportSha256": "ff82e2894a488c4a44e6553ac1762c67b1ed44708ed34833015d7a677c3944d4",
+  "packId": "terraforged_launcher_qa_dev7",
+  "packHome": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa_dev7\\home",
+  "nativeVersion": "native-f43eebf-9667ade2485e",
+  "nativeBuildSeconds": 309.9379999999983,
+  "allCommandsExitZero": true,
+  "commands": [
+    {
+      "id": "pack-check",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.01599999999962165,
+      "pid": 37240
+    },
+    {
+      "id": "pack-install",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 1.0459999999984575,
+      "pid": 37268
+    },
+    {
+      "id": "pack-mod-list",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.01599999999962165,
+      "pid": 37048
+    },
+    {
+      "id": "native-build",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 309.9379999999983,
+      "pid": 16916
+    },
+    {
+      "id": "instance-list",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "elapsedSeconds": 0.06299999999828287,
+      "pid": 16484
+    }
+  ],
+  "horizonRevision": "f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d",
+  "mixinsRevision": "e8cd0aa38cffef49cb2e088ef716baa107148c02",
+  "profile": "performance",
+  "toolchain": "1.99.1",
+  "compiledClientSha256": "6a87351e5c85b83d728e55cfd6597cc90917b286a42fd16c8b819911fae6cd85",
+  "nativeBuildRecordSha256": "cfb0ab1c98bdeae19617b81b254238afb07d38d02656b33dda95ee0f8ac7b6fe",
+  "installedArchives": [
+    {
+      "id": "terraforged_native",
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa_dev7\\home\\horizon-native-mods\\terraforged_native.hmod",
+      "sha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+      "bytes": 160194
+    },
+    {
+      "id": "coords_hud",
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa_dev7\\home\\horizon-native-mods\\coords_hud.hnmod",
+      "sha256": "432376fad3062b3517e274d3b8c0d0b52fc5d6de2aee20a0b340c8cab5a8cf08",
+      "bytes": 4932
+    },
+    {
+      "id": "qa_glow",
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa_dev7\\home\\horizon-mods\\qa_glow.hmod",
+      "sha256": "4668519cb92c15612d9c15f394a828252fc39abfb09c4d30ad3e961b6de40b4c",
+      "bytes": 2393
+    }
+  ],
+  "sourceInputsUnchanged": true,
+  "stagedSamplerSources": [
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\native\\stage\\native-crates\\terraforged_native\\kernel\\src\\kernel_sampler.rs",
+      "sha256": "282d4c5f48e2e0abd7d948b1a65a696d771ea846487cc38b0e606b8b497cd7ec"
+    }
+  ],
+  "artifactSourceInventorySha256": "2abbb8127b76929ad92126bd780d1af186ef1698774d95b8db89cffda4f0772a",
+  "stagedNativeSourceInventorySha256": "5773a987bbe8cc247795f81e7ea44f7386e7908d2ea934b649a73112f994238a",
+  "stagedNativeSourceFiles": 68,
+  "observedCargoCompilingCrateNames": [
+    "terraforged-kernel",
+    "horizon-core",
+    "horizon-world",
+    "horizon-assets",
+    "horizon-shaders",
+    "horizon-optifine",
+    "horizon-client-core",
+    "horizon-protocol",
+    "horizon-client-input",
+    "horizon-items",
+    "horizon-command",
+    "horizon-client-render",
+    "horizon-server-files",
+    "horizon-client-lib",
+    "horizon-client"
+  ],
+  "observedCompileCrateCount": 15,
+  "cacheReuseEvidence": "Same private Rust/source/tools/target paths and performance profile; observed Incremental rebuild: mods terraforged_native, with only kernel/downstream Horizon compiling lines. Cargo progress total includes reused units.",
+  "oldPackPreserved": {
+    "id": "pack:terraforged_launcher_qa",
+    "name": "TerraForged Launcher QA",
+    "kind": "pack",
+    "home": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+    "icon": null,
+    "group": null,
+    "selected": true,
+    "version": "native-f43eebf-f53fc548a368",
+    "java": null,
+    "played_secs": 0,
+    "last_played_ms": null
+  },
+  "protectedBaselineFilesChecked": 18,
+  "protectedBaselineHashesUnchanged": true,
+  "protectedBeforeSha256": "ed63f7472a46df9d2fd9bd69e5d9eb05c9f30ed86bd82932acc149a5db28964c",
+  "protectedAfterSha256": "ed63f7472a46df9d2fd9bd69e5d9eb05c9f30ed86bd82932acc149a5db28964c",
+  "oldFixtureAndArchiveMutated": false,
+  "gameExecuted": false,
+  "authenticationAttempted": false,
+  "minecraftResourceDownloadsRequested": false,
+  "nativeClientCachePrepopulated": false,
+  "nextAcceptance": "Root-coordinated new actual pack UI create/cold-fir/save at default view12. Existing dev7 QA template must bind exact new pack/home/nativeVersion, retaining owner/auth gates. No runtime/save/background acceptance claimed."
+}
