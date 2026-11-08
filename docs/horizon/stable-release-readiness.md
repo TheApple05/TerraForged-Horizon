@@ -57,3 +57,12 @@ Windows automation can now enumerate the isolated launcher window, but its
 screenshot capture times out and accessibility exposes only the window frame.
 Until observed otherwise, normal GUI and authenticated Play remain unverified.
 Do not reuse the earlier missing-kernel explanation as the current failure.
+
+The actual published static launcher also fails `account sign-in` with:
+`This build of the launcher has no Microsoft sign-in (HORIZON_MSA_CLIENT_ID), so it can't start the game.`
+Neither a user nor machine runtime client-ID override was configured when checked.
+This is a product configuration blocker, separate from screen capture. The
+project's own approved public-client registration must be configured in the
+launcher build (or its supported runtime override), then genuine sign-in and
+Play must pass. Do not borrow another launcher's OAuth application ID or claim
+that an offline/direct-client test qualifies authentication.
