@@ -169,3 +169,30 @@ preparation while still hashing an optional development receipt when present.
 Eight UI/setup/shutdown regression tests and the readiness self-test pass.
 Installed world creation, sustained generation, upgrade and Play acceptance are
 now running or pending; the successful build alone does not qualify them.
+
+Authenticated CLI Play then creates a default TerraForged survival world with
+structures enabled, a healthy grounded player and a clean exit. Its first-run
+accessibility Continue action and image review are recorded. The user also
+confirms normal GUI Play and new-world entry with this exact candidate profile,
+while reporting the disabled Customize button. The native preset editor is
+unimplemented; the Windows guide now states that limit prominently.
+
+The first final-client classic tour is deliberately cancelled by its owner
+after reaching fourteen views: its strict readiness predicate waits for all
+client meshing to stop at stone forest, despite complete generation and 637
+resident columns. The pinned engine explicitly includes block/light/fluid
+remeshing of already drawn sections in that counter. This is an unaccepted
+attempt, with the raw failure, clean quit and cancellation explanation retained.
+The benchmark still requires full mesh idleness by default. A separate explicit
+functional policy permits ongoing client remeshing while requiring complete
+residence, quiet server generation/lighting, stable visible renderer residence,
+and no pending chunks/uploads; it records the actual meshing count. Self-tests
+verify that active generation, missing target residence and pending uploads
+still refuse readiness. A fresh all-classic/extended run uses this policy.
+
+The first interruption scenario also remains unaccepted: generation becomes
+quiet before its fresh region is saved, so it times out without killing the
+client. The replacement first saves one corner of a distant region, checks
+that the intended next chunk's Anvil header slot is empty, then interrupts new
+generation in that region. Neither scenario claims to simulate torn sector
+writes or a power loss.

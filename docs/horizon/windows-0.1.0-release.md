@@ -7,6 +7,9 @@ The intended scope is Windows x64, Vulkan, Minecraft 26.3, singleplayer and the
 bundled `terraforged:default` overworld preset. This independent, unofficial
 native Rust port is separate from the Java 26.2 Fabric/NeoForge version.
 
+**Customize is disabled in this native version.** The preset editor has not
+been ported; world creation uses the bundled TerraForged default preset.
+
 ## Candidate downloads
 
 - `terraforged-horizon-26.3-0.1.0.hmod`: whole native source/content package.
@@ -82,7 +85,8 @@ window; it disables upstream self-update for this fork process.
    native build can take much longer than an incremental rebuild.
 
 6. Open `Start-TerraForged-Horizon.cmd`, choose Play, and select the TerraForged
-   world type when creating a world. Keep a backup before opening an existing
+   world type when creating a world. The Customize button remains disabled;
+   use the default preset. Keep a backup before opening an existing
    preview world. Upgrade support is pending the copied-world acceptance test.
 
 When the imported Minecraft session expires, refresh it in Prism and repeat the
