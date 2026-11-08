@@ -134,6 +134,7 @@ def main():
             if path.is_file() and archive.read('mixins/terraforged_native/'+path.relative_to(workspace.parent/'mods/terraforged_native').as_posix())!=path.read_bytes():raise ValueError('Packaged source differs from staged bundle')
     work=workspace.parent/a.report.stem;work.mkdir(exist_ok=False);shutil.copy2(Path(__file__),work/'verifier-source.py')
     env=dict(os.environ,CARGO_BUILD_JOBS='4',CARGO_NET_OFFLINE='true',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1',HORIZON_TELEMETRY_URL='off',HORIZON_PLAYER_NAME='TerraForgedQA',TERRAFORGED_QA_SEED=str(a.seed))
+    for key in ('HORIZON_SESSION_FILE','HORIZON_ACCOUNT_SESSIONS'):env.pop(key,None)
     env.pop('CARGO_TARGET_DIR',None)
     for name in ('HORIZON_HOME','HORIZON_LAUNCHER_HOME','XDG_DATA_HOME','XDG_CONFIG_HOME','HORIZON_LAUNCHER_TRASH','HORIZON_LAUNCHER_CLIPBOARD','HORIZON_LAUNCHER_DESKTOP'):
         path=work/'homes'/name.lower();path.mkdir(parents=True);env[name]=str(path.resolve())

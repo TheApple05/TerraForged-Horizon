@@ -410,7 +410,7 @@ def main():
             folder = args.work / f'{index}-{version}'; folder.mkdir()
             row = {'index': index, 'version': version, 'status': 'running', 'work': str(folder), 'startedAtUtc': utc()}; report['runs'].append(row)
             env = dict(os.environ, **QA_ENV)
-            env.pop('HORIZON_SESSION_FILE', None)
+            for key in ('HORIZON_SESSION_FILE', 'HORIZON_ACCOUNT_SESSIONS'): env.pop(key, None)
             row['qaHomeOverrides'] = {}
             for key in HOME_KEYS:
                 path = folder / 'homes' / key.lower(); path.mkdir(parents=True); env[key] = str(path); row['qaHomeOverrides'][key] = str(path)
