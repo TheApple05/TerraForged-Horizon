@@ -1,9 +1,20 @@
 """Save-probe setup works on fresh stages and rejects conflicting QA inputs."""
 import tempfile,tomllib,unittest
 from pathlib import Path
-from verify_native_ui import prepare_save_fixture
+from verify_native_ui import checked_resources, prepare_save_fixture
 
 class SaveFixtureTests(unittest.TestCase):
+    def test_public_resources_and_optional_development_receipt(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'worldgen').mkdir()
+            for name in ('horizon-resources.json','facts.json','worldgen/noise.json'):(root/name).write_text('{}')
+            public=checked_resources(root)
+            self.assertEqual(set(public),{'horizon-resources.json','facts.json','worldgen/noise.json'})
+            (root/'horizon-prepare.json').write_text('{}')
+            self.assertEqual(checked_resources(root),dict(public,**{'horizon-prepare.json':public['facts.json']}))
+            (root/'facts.json').unlink()
+            with self.assertRaises(FileNotFoundError):checked_resources(root)
+
     def test_fresh_stage_and_repeat_preserve_exact_inputs(self):
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder);source=root/'probe.rs';source.write_text('fn main() {}\n',encoding='utf-8')

@@ -1,0 +1,2702 @@
+{
+  "status": "passed-45-minute-classic-and-cold-generation-save-reopen-image-qualification",
+  "rawReportSha256": "c30142f573489f6a179192e3b24a858dc0ee77c938bd9fcf2ebe888de0ea76ff",
+  "seed": 8675309,
+  "realUiCreation": true,
+  "qaSpawnOverride": false,
+  "structuresEnabled": true,
+  "survivalCreationAndDeathRespawnThenSpectatorExploration": true,
+  "renderDistance": 12,
+  "simulationDistance": 12,
+  "frameRateCap": 30,
+  "worldSessionSeconds": 2717.625,
+  "newCentralRegions": 156,
+  "classicTargets": [
+    "reterraforged:stone_forest",
+    "reterraforged:bryce",
+    "reterraforged:cold_marshland",
+    "reterraforged:cold_steppe",
+    "reterraforged:fir_forest",
+    "reterraforged:flower_plains",
+    "reterraforged:frozen_lake",
+    "reterraforged:frozen_marsh",
+    "reterraforged:lake",
+    "reterraforged:marshland",
+    "reterraforged:savanna_scrub",
+    "reterraforged:shattered_savanna_scrub",
+    "reterraforged:snowy_fir_forest",
+    "reterraforged:snowy_taiga_scrub",
+    "reterraforged:steppe",
+    "reterraforged:taiga_scrub",
+    "reterraforged:warm_beach"
+  ],
+  "cleanClientExits": 2,
+  "classicSavedQuartComparisons": 56832,
+  "lateSavedQuartComparisons": 9216,
+  "savedBiomeChecks": [
+    {
+      "action": "check_ui_classic",
+      "chunkChecks": [
+        {
+          "chunk": [
+            0,
+            0
+          ],
+          "nativeBiomeFingerprint": "6dc1096e04abd195",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "6dc1096e04abd195",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            1024,
+            -2048
+          ],
+          "nativeBiomeFingerprint": "b0019eca975291a5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": null,
+          "vanillaBiomeFingerprint": "60e84b83a1657725"
+        },
+        {
+          "chunk": [
+            -7409,
+            -6689
+          ],
+          "nativeBiomeFingerprint": "8783b43d91ed3b5e",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "8783b43d91ed3b5e",
+          "vanillaBiomeFingerprint": "b2a8c6d27f73de2a"
+        },
+        {
+          "chunk": [
+            -1056,
+            1561
+          ],
+          "nativeBiomeFingerprint": "bed5c889a632da7b",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "bed5c889a632da7b",
+          "vanillaBiomeFingerprint": "cb0ad8f73f933cb5"
+        },
+        {
+          "chunk": [
+            -7936,
+            4753
+          ],
+          "nativeBiomeFingerprint": "6efe12dc15809f89",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "6efe12dc15809f89",
+          "vanillaBiomeFingerprint": "fa67e6f0d36517fb"
+        },
+        {
+          "chunk": [
+            0,
+            -2731
+          ],
+          "nativeBiomeFingerprint": "bbbefcacc9ec1ec5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "bbbefcacc9ec1ec5",
+          "vanillaBiomeFingerprint": "925f73fc4f6c49c5"
+        },
+        {
+          "chunk": [
+            4288,
+            -4214
+          ],
+          "nativeBiomeFingerprint": "b557c35fdfd97325",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "b557c35fdfd97325",
+          "vanillaBiomeFingerprint": "cab0113ba0cf3b25"
+        },
+        {
+          "chunk": [
+            -4980,
+            2066
+          ],
+          "nativeBiomeFingerprint": "dd7fa78720cb09a5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "dd7fa78720cb09a5",
+          "vanillaBiomeFingerprint": "deb086dff0cd5325"
+        },
+        {
+          "chunk": [
+            -6504,
+            -761
+          ],
+          "nativeBiomeFingerprint": "529f0564a1a51c2b",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "529f0564a1a51c2b",
+          "vanillaBiomeFingerprint": "4963294d19c355e5"
+        },
+        {
+          "chunk": [
+            3552,
+            955
+          ],
+          "nativeBiomeFingerprint": "bf81a04c6d45544b",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "bf81a04c6d45544b",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            -6408,
+            -1660
+          ],
+          "nativeBiomeFingerprint": "1510f28a8a4ae089",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "1510f28a8a4ae089",
+          "vanillaBiomeFingerprint": "2c5d94418b64e923"
+        },
+        {
+          "chunk": [
+            4416,
+            -2596
+          ],
+          "nativeBiomeFingerprint": "63793a9eef856a9b",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "63793a9eef856a9b",
+          "vanillaBiomeFingerprint": "47895c7ffd3c1a2a"
+        },
+        {
+          "chunk": [
+            6276,
+            2677
+          ],
+          "nativeBiomeFingerprint": "dd58881001321e25",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "dd58881001321e25",
+          "vanillaBiomeFingerprint": "916f8a30ee420d45"
+        },
+        {
+          "chunk": [
+            -7808,
+            -3877
+          ],
+          "nativeBiomeFingerprint": "88019ee182b7bae5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "88019ee182b7bae5",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            -1792,
+            3539
+          ],
+          "nativeBiomeFingerprint": "2e075184b9f355bc",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "2e075184b9f355bc",
+          "vanillaBiomeFingerprint": "bce0570ff2fd7b25"
+        },
+        {
+          "chunk": [
+            4256,
+            8012
+          ],
+          "nativeBiomeFingerprint": "92be7f8c14837b9a",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "92be7f8c14837b9a",
+          "vanillaBiomeFingerprint": "a543c2675de0d2da"
+        },
+        {
+          "chunk": [
+            6300,
+            -6280
+          ],
+          "nativeBiomeFingerprint": "43ce7d2954d19b71",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "43ce7d2954d19b71",
+          "vanillaBiomeFingerprint": "b78fe8383109a325"
+        },
+        {
+          "chunk": [
+            -7872,
+            2595
+          ],
+          "nativeBiomeFingerprint": "c360868682a3a9e5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "c360868682a3a9e5",
+          "vanillaBiomeFingerprint": "ebf3a908127fca18"
+        },
+        {
+          "chunk": [
+            2721,
+            7066
+          ],
+          "nativeBiomeFingerprint": "27e81b4eab122f95",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "27e81b4eab122f95",
+          "vanillaBiomeFingerprint": "2a03d27c090f8725"
+        }
+      ],
+      "overworldSettings": "terraforged:overworld",
+      "qaSpawnSupplied": false,
+      "seed": 8675309,
+      "status": "passed-native-save-fixture-reader",
+      "structuresEnabled": true,
+      "worldPresetUiReader": true,
+      "worldSpawn": [
+        2288,
+        116,
+        -6656
+      ]
+    },
+    {
+      "action": "check_ui_all_classic",
+      "chunkChecks": [
+        {
+          "chunk": [
+            0,
+            0
+          ],
+          "nativeBiomeFingerprint": "6dc1096e04abd195",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "6dc1096e04abd195",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            1024,
+            -2048
+          ],
+          "nativeBiomeFingerprint": "b0019eca975291a5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "b0019eca975291a5",
+          "vanillaBiomeFingerprint": "60e84b83a1657725"
+        },
+        {
+          "chunk": [
+            -7409,
+            -6689
+          ],
+          "nativeBiomeFingerprint": "8783b43d91ed3b5e",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "8783b43d91ed3b5e",
+          "vanillaBiomeFingerprint": "b2a8c6d27f73de2a"
+        },
+        {
+          "chunk": [
+            -1056,
+            1561
+          ],
+          "nativeBiomeFingerprint": "bed5c889a632da7b",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "bed5c889a632da7b",
+          "vanillaBiomeFingerprint": "cb0ad8f73f933cb5"
+        },
+        {
+          "chunk": [
+            -7936,
+            4753
+          ],
+          "nativeBiomeFingerprint": "6efe12dc15809f89",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "6efe12dc15809f89",
+          "vanillaBiomeFingerprint": "fa67e6f0d36517fb"
+        },
+        {
+          "chunk": [
+            0,
+            -2731
+          ],
+          "nativeBiomeFingerprint": "bbbefcacc9ec1ec5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "bbbefcacc9ec1ec5",
+          "vanillaBiomeFingerprint": "925f73fc4f6c49c5"
+        },
+        {
+          "chunk": [
+            4288,
+            -4214
+          ],
+          "nativeBiomeFingerprint": "b557c35fdfd97325",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "b557c35fdfd97325",
+          "vanillaBiomeFingerprint": "cab0113ba0cf3b25"
+        },
+        {
+          "chunk": [
+            -4980,
+            2066
+          ],
+          "nativeBiomeFingerprint": "dd7fa78720cb09a5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "dd7fa78720cb09a5",
+          "vanillaBiomeFingerprint": "deb086dff0cd5325"
+        },
+        {
+          "chunk": [
+            -6504,
+            -761
+          ],
+          "nativeBiomeFingerprint": "529f0564a1a51c2b",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "529f0564a1a51c2b",
+          "vanillaBiomeFingerprint": "4963294d19c355e5"
+        },
+        {
+          "chunk": [
+            3552,
+            955
+          ],
+          "nativeBiomeFingerprint": "bf81a04c6d45544b",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "bf81a04c6d45544b",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            -6408,
+            -1660
+          ],
+          "nativeBiomeFingerprint": "1510f28a8a4ae089",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "1510f28a8a4ae089",
+          "vanillaBiomeFingerprint": "2c5d94418b64e923"
+        },
+        {
+          "chunk": [
+            4416,
+            -2596
+          ],
+          "nativeBiomeFingerprint": "63793a9eef856a9b",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "63793a9eef856a9b",
+          "vanillaBiomeFingerprint": "47895c7ffd3c1a2a"
+        },
+        {
+          "chunk": [
+            6276,
+            2677
+          ],
+          "nativeBiomeFingerprint": "dd58881001321e25",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "dd58881001321e25",
+          "vanillaBiomeFingerprint": "916f8a30ee420d45"
+        },
+        {
+          "chunk": [
+            -7808,
+            -3877
+          ],
+          "nativeBiomeFingerprint": "88019ee182b7bae5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "88019ee182b7bae5",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            -1792,
+            3539
+          ],
+          "nativeBiomeFingerprint": "2e075184b9f355bc",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "2e075184b9f355bc",
+          "vanillaBiomeFingerprint": "bce0570ff2fd7b25"
+        },
+        {
+          "chunk": [
+            4256,
+            8012
+          ],
+          "nativeBiomeFingerprint": "92be7f8c14837b9a",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "92be7f8c14837b9a",
+          "vanillaBiomeFingerprint": "a543c2675de0d2da"
+        },
+        {
+          "chunk": [
+            6300,
+            -6280
+          ],
+          "nativeBiomeFingerprint": "43ce7d2954d19b71",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "43ce7d2954d19b71",
+          "vanillaBiomeFingerprint": "b78fe8383109a325"
+        },
+        {
+          "chunk": [
+            -7872,
+            2595
+          ],
+          "nativeBiomeFingerprint": "c360868682a3a9e5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "c360868682a3a9e5",
+          "vanillaBiomeFingerprint": "ebf3a908127fca18"
+        },
+        {
+          "chunk": [
+            2721,
+            7066
+          ],
+          "nativeBiomeFingerprint": "27e81b4eab122f95",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "27e81b4eab122f95",
+          "vanillaBiomeFingerprint": "2a03d27c090f8725"
+        }
+      ],
+      "overworldSettings": "terraforged:overworld",
+      "qaSpawnSupplied": false,
+      "seed": 8675309,
+      "status": "passed-native-save-fixture-reader",
+      "structuresEnabled": true,
+      "worldPresetUiReader": true,
+      "worldSpawn": [
+        2288,
+        116,
+        -6656
+      ]
+    }
+  ],
+  "lateSavedChecks": {
+    "status": "passed-late-session-six-chunk-save-check",
+    "exitCode": 0,
+    "readerSha256": "a9aead19742023f212c21b619599f69ea077c7811de85e5687597a331d0108cd",
+    "readerSourceSha256": "7ee77be3ec87c17cd01f787ff6a1c013e173ee4a70e090b85eab9da6aaf983be",
+    "sourceRunSha256": "c30142f573489f6a179192e3b24a858dc0ee77c938bd9fcf2ebe888de0ea76ff",
+    "selectedChunkPositions": [
+      [
+        0,
+        0
+      ],
+      [
+        512,
+        -768
+      ],
+      [
+        3072,
+        -4608
+      ],
+      [
+        6144,
+        -9216
+      ],
+      [
+        26112,
+        -39168
+      ],
+      [
+        79872,
+        -119808
+      ]
+    ],
+    "scope": "Independent early1/6/12,mid51,last156 andorigin saved FULL biome vectors after the actual45minute/reopen run. Generation code unchanged between readerf43 and game685; not UI proof or full block/feature parity.",
+    "storedQuartComparisons": 9216,
+    "chunkChecks": [
+      {
+        "chunk": [
+          0,
+          0
+        ],
+        "nativeBiomeFingerprint": "6dc1096e04abd195",
+        "quartBiomes": 1536,
+        "storedBiomeFingerprint": "6dc1096e04abd195",
+        "vanillaBiomeFingerprint": "a2b7d896db159325"
+      },
+      {
+        "chunk": [
+          512,
+          -768
+        ],
+        "nativeBiomeFingerprint": "4becfc9c0e070725",
+        "quartBiomes": 1536,
+        "storedBiomeFingerprint": "4becfc9c0e070725",
+        "vanillaBiomeFingerprint": "e57f61375bf743f8"
+      },
+      {
+        "chunk": [
+          3072,
+          -4608
+        ],
+        "nativeBiomeFingerprint": "148dad8e59bad8e5",
+        "quartBiomes": 1536,
+        "storedBiomeFingerprint": "148dad8e59bad8e5",
+        "vanillaBiomeFingerprint": "cab0113ba0cf3b25"
+      },
+      {
+        "chunk": [
+          6144,
+          -9216
+        ],
+        "nativeBiomeFingerprint": "814bd2eb17534325",
+        "quartBiomes": 1536,
+        "storedBiomeFingerprint": "814bd2eb17534325",
+        "vanillaBiomeFingerprint": "88a5bf7426279565"
+      },
+      {
+        "chunk": [
+          26112,
+          -39168
+        ],
+        "nativeBiomeFingerprint": "cab0113ba0cf3b25",
+        "quartBiomes": 1536,
+        "storedBiomeFingerprint": "cab0113ba0cf3b25",
+        "vanillaBiomeFingerprint": "7c4f2a11e75ecc25"
+      },
+      {
+        "chunk": [
+          79872,
+          -119808
+        ],
+        "nativeBiomeFingerprint": "cab0113ba0cf3b25",
+        "quartBiomes": 1536,
+        "storedBiomeFingerprint": "cab0113ba0cf3b25",
+        "vanillaBiomeFingerprint": "7daf5d1bbc439025"
+      }
+    ],
+    "readerOutputSha256": "452237791cb47043e4f8e3adad39c01ac91647dac38e85260b3b198715c71725"
+  },
+  "memoryDefinition": "Windows private/pagefile commit, not live Rust heap. Resident values are current working-set samples.",
+  "reportedPeakPrivateCommitMiB": 2574.8,
+  "maximumSampledPrivateCommitMiB": 2116.5,
+  "maximumSampledResidentMiB": 1269.1,
+  "memoryCurve": [
+    {
+      "label": "natural-spawn",
+      "target": [
+        2296,
+        124,
+        -6665
+      ],
+      "privateCommitMiB": 1275.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 723.0
+    },
+    {
+      "label": "healthy-respawn",
+      "target": [
+        2282,
+        112,
+        -6663
+      ],
+      "privateCommitMiB": 1294.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 746.8
+    },
+    {
+      "label": "reterraforged:stone_forest",
+      "target": [
+        100812,
+        72,
+        -100468
+      ],
+      "privateCommitMiB": 1405.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 786.0
+    },
+    {
+      "label": "origin",
+      "target": [
+        8,
+        75,
+        8
+      ],
+      "privateCommitMiB": 1417.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 783.5
+    },
+    {
+      "label": "reterraforged:bryce",
+      "target": [
+        -118532,
+        99,
+        -107012
+      ],
+      "privateCommitMiB": 1323.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 786.2
+    },
+    {
+      "label": "reterraforged:cold_marshland",
+      "target": [
+        -16896,
+        63,
+        24988
+      ],
+      "privateCommitMiB": 1589.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 956.5
+    },
+    {
+      "label": "reterraforged:cold_steppe",
+      "target": [
+        -126976,
+        136,
+        76052
+      ],
+      "privateCommitMiB": 1522.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 892.2
+    },
+    {
+      "label": "reterraforged:fir_forest",
+      "target": [
+        0,
+        70,
+        -43692
+      ],
+      "privateCommitMiB": 1536.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 904.9
+    },
+    {
+      "label": "reterraforged:flower_plains",
+      "target": [
+        68608,
+        71,
+        -67424
+      ],
+      "privateCommitMiB": 1436.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 896.8
+    },
+    {
+      "label": "reterraforged:frozen_lake",
+      "target": [
+        -79680,
+        63,
+        33060
+      ],
+      "privateCommitMiB": 1573.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 972.5
+    },
+    {
+      "label": "reterraforged:frozen_marsh",
+      "target": [
+        -104064,
+        63,
+        -12168
+      ],
+      "privateCommitMiB": 1614.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 981.8
+    },
+    {
+      "label": "reterraforged:lake",
+      "target": [
+        56832,
+        63,
+        15280
+      ],
+      "privateCommitMiB": 1619.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 986.8
+    },
+    {
+      "label": "reterraforged:marshland",
+      "target": [
+        -102528,
+        63,
+        -26552
+      ],
+      "privateCommitMiB": 1641.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1006.7
+    },
+    {
+      "label": "reterraforged:savanna_scrub",
+      "target": [
+        70656,
+        80,
+        -41536
+      ],
+      "privateCommitMiB": 1643.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1009.0
+    },
+    {
+      "label": "reterraforged:shattered_savanna_scrub",
+      "target": [
+        100428,
+        74,
+        42832
+      ],
+      "privateCommitMiB": 1545.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1005.9
+    },
+    {
+      "label": "reterraforged:snowy_fir_forest",
+      "target": [
+        -124928,
+        76,
+        -62032
+      ],
+      "privateCommitMiB": 1506.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 872.2
+    },
+    {
+      "label": "reterraforged:snowy_taiga_scrub",
+      "target": [
+        -28672,
+        98,
+        56636
+      ],
+      "privateCommitMiB": 1498.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 864.0
+    },
+    {
+      "label": "reterraforged:steppe",
+      "target": [
+        68096,
+        144,
+        128192
+      ],
+      "privateCommitMiB": 1542.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 881.1
+    },
+    {
+      "label": "reterraforged:taiga_scrub",
+      "target": [
+        -125952,
+        72,
+        41532
+      ],
+      "privateCommitMiB": 1610.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 951.5
+    },
+    {
+      "label": "reterraforged:warm_beach",
+      "target": [
+        43540,
+        63,
+        113064
+      ],
+      "privateCommitMiB": 1609.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 948.4
+    },
+    {
+      "label": "extended-region-1",
+      "target": [
+        8200,
+        100,
+        -12280
+      ],
+      "privateCommitMiB": 1614.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 954.7
+    },
+    {
+      "label": "extended-region-2",
+      "target": [
+        16392,
+        100,
+        -24568
+      ],
+      "privateCommitMiB": 1514.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 951.2
+    },
+    {
+      "label": "extended-region-3",
+      "target": [
+        24584,
+        100,
+        -36856
+      ],
+      "privateCommitMiB": 1589.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1026.2
+    },
+    {
+      "label": "extended-region-4",
+      "target": [
+        32776,
+        100,
+        -49144
+      ],
+      "privateCommitMiB": 1589.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1026.4
+    },
+    {
+      "label": "extended-region-5",
+      "target": [
+        40968,
+        100,
+        -61432
+      ],
+      "privateCommitMiB": 1590.2,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1027.0
+    },
+    {
+      "label": "extended-region-6",
+      "target": [
+        49160,
+        100,
+        -73720
+      ],
+      "privateCommitMiB": 1812.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1053.8
+    },
+    {
+      "label": "extended-region-7",
+      "target": [
+        57352,
+        100,
+        -86008
+      ],
+      "privateCommitMiB": 1537.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 974.2
+    },
+    {
+      "label": "extended-region-8",
+      "target": [
+        65544,
+        100,
+        -98296
+      ],
+      "privateCommitMiB": 1617.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1052.3
+    },
+    {
+      "label": "extended-region-9",
+      "target": [
+        73736,
+        100,
+        -110584
+      ],
+      "privateCommitMiB": 1548.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 985.9
+    },
+    {
+      "label": "extended-region-10",
+      "target": [
+        81928,
+        100,
+        -122872
+      ],
+      "privateCommitMiB": 1464.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 902.3
+    },
+    {
+      "label": "extended-region-11",
+      "target": [
+        90120,
+        100,
+        -135160
+      ],
+      "privateCommitMiB": 1699.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1038.3
+    },
+    {
+      "label": "extended-region-12",
+      "target": [
+        98312,
+        100,
+        -147448
+      ],
+      "privateCommitMiB": 1630.2,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1065.4
+    },
+    {
+      "label": "extended-region-13",
+      "target": [
+        106504,
+        100,
+        -159736
+      ],
+      "privateCommitMiB": 1623.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1059.6
+    },
+    {
+      "label": "extended-region-14",
+      "target": [
+        114696,
+        100,
+        -172024
+      ],
+      "privateCommitMiB": 1547.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 984.3
+    },
+    {
+      "label": "extended-region-15",
+      "target": [
+        122888,
+        100,
+        -184312
+      ],
+      "privateCommitMiB": 1754.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1093.9
+    },
+    {
+      "label": "extended-region-16",
+      "target": [
+        131080,
+        100,
+        -196600
+      ],
+      "privateCommitMiB": 1503.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 938.2
+    },
+    {
+      "label": "extended-region-17",
+      "target": [
+        139272,
+        100,
+        -208888
+      ],
+      "privateCommitMiB": 1753.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1092.2
+    },
+    {
+      "label": "extended-region-18",
+      "target": [
+        147464,
+        100,
+        -221176
+      ],
+      "privateCommitMiB": 1617.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1053.5
+    },
+    {
+      "label": "extended-region-19",
+      "target": [
+        155656,
+        100,
+        -233464
+      ],
+      "privateCommitMiB": 1623.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1058.1
+    },
+    {
+      "label": "extended-region-20",
+      "target": [
+        163848,
+        100,
+        -245752
+      ],
+      "privateCommitMiB": 1675.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1109.9
+    },
+    {
+      "label": "extended-region-21",
+      "target": [
+        172040,
+        100,
+        -258040
+      ],
+      "privateCommitMiB": 1717.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1086.8
+    },
+    {
+      "label": "extended-region-22",
+      "target": [
+        180232,
+        100,
+        -270328
+      ],
+      "privateCommitMiB": 1678.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1015.9
+    },
+    {
+      "label": "extended-region-23",
+      "target": [
+        188424,
+        100,
+        -282616
+      ],
+      "privateCommitMiB": 1593.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1027.7
+    },
+    {
+      "label": "extended-region-24",
+      "target": [
+        196616,
+        100,
+        -294904
+      ],
+      "privateCommitMiB": 1703.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1038.4
+    },
+    {
+      "label": "extended-region-25",
+      "target": [
+        204808,
+        100,
+        -307192
+      ],
+      "privateCommitMiB": 1679.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1111.9
+    },
+    {
+      "label": "extended-region-26",
+      "target": [
+        213000,
+        100,
+        -319480
+      ],
+      "privateCommitMiB": 1603.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1037.0
+    },
+    {
+      "label": "extended-region-27",
+      "target": [
+        221192,
+        100,
+        -331768
+      ],
+      "privateCommitMiB": 1700.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1039.1
+    },
+    {
+      "label": "extended-region-28",
+      "target": [
+        229384,
+        100,
+        -344056
+      ],
+      "privateCommitMiB": 1658.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 989.3
+    },
+    {
+      "label": "extended-region-29",
+      "target": [
+        237576,
+        100,
+        -356344
+      ],
+      "privateCommitMiB": 1636.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1067.5
+    },
+    {
+      "label": "extended-region-30",
+      "target": [
+        245768,
+        100,
+        -368632
+      ],
+      "privateCommitMiB": 1636.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1070.0
+    },
+    {
+      "label": "extended-region-31",
+      "target": [
+        253960,
+        100,
+        -380920
+      ],
+      "privateCommitMiB": 1734.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1072.9
+    },
+    {
+      "label": "extended-region-32",
+      "target": [
+        262152,
+        100,
+        -393208
+      ],
+      "privateCommitMiB": 1808.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1146.5
+    },
+    {
+      "label": "extended-region-33",
+      "target": [
+        270344,
+        100,
+        -405496
+      ],
+      "privateCommitMiB": 1709.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1143.8
+    },
+    {
+      "label": "extended-region-34",
+      "target": [
+        278536,
+        100,
+        -417784
+      ],
+      "privateCommitMiB": 1599.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1066.4
+    },
+    {
+      "label": "extended-region-35",
+      "target": [
+        286728,
+        100,
+        -430072
+      ],
+      "privateCommitMiB": 1539.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 971.3
+    },
+    {
+      "label": "extended-region-36",
+      "target": [
+        294920,
+        100,
+        -442360
+      ],
+      "privateCommitMiB": 1714.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1051.9
+    },
+    {
+      "label": "extended-region-37",
+      "target": [
+        303112,
+        100,
+        -454648
+      ],
+      "privateCommitMiB": 1611.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 947.1
+    },
+    {
+      "label": "extended-region-38",
+      "target": [
+        311304,
+        100,
+        -466936
+      ],
+      "privateCommitMiB": 1718.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1047.7
+    },
+    {
+      "label": "extended-region-39",
+      "target": [
+        319496,
+        100,
+        -479224
+      ],
+      "privateCommitMiB": 1727.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1064.8
+    },
+    {
+      "label": "extended-region-40",
+      "target": [
+        327688,
+        100,
+        -491512
+      ],
+      "privateCommitMiB": 1508.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 945.0
+    },
+    {
+      "label": "extended-region-41",
+      "target": [
+        335880,
+        100,
+        -503800
+      ],
+      "privateCommitMiB": 1669.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1040.6
+    },
+    {
+      "label": "extended-region-42",
+      "target": [
+        344072,
+        100,
+        -516088
+      ],
+      "privateCommitMiB": 1505.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 942.1
+    },
+    {
+      "label": "extended-region-43",
+      "target": [
+        352264,
+        100,
+        -528376
+      ],
+      "privateCommitMiB": 1704.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1041.1
+    },
+    {
+      "label": "extended-region-44",
+      "target": [
+        360456,
+        100,
+        -540664
+      ],
+      "privateCommitMiB": 1704.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1045.1
+    },
+    {
+      "label": "extended-region-45",
+      "target": [
+        368648,
+        100,
+        -552952
+      ],
+      "privateCommitMiB": 1797.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1138.5
+    },
+    {
+      "label": "extended-region-46",
+      "target": [
+        376840,
+        100,
+        -565240
+      ],
+      "privateCommitMiB": 1699.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1039.1
+    },
+    {
+      "label": "extended-region-47",
+      "target": [
+        385032,
+        100,
+        -577528
+      ],
+      "privateCommitMiB": 1727.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1067.6
+    },
+    {
+      "label": "extended-region-48",
+      "target": [
+        393224,
+        100,
+        -589816
+      ],
+      "privateCommitMiB": 1637.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1068.6
+    },
+    {
+      "label": "extended-region-49",
+      "target": [
+        401416,
+        100,
+        -602104
+      ],
+      "privateCommitMiB": 1666.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1000.7
+    },
+    {
+      "label": "extended-region-50",
+      "target": [
+        409608,
+        100,
+        -614392
+      ],
+      "privateCommitMiB": 1735.2,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1168.2
+    },
+    {
+      "label": "extended-region-51",
+      "target": [
+        417800,
+        100,
+        -626680
+      ],
+      "privateCommitMiB": 1653.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1089.4
+    },
+    {
+      "label": "extended-region-52",
+      "target": [
+        425992,
+        100,
+        -638968
+      ],
+      "privateCommitMiB": 1750.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1090.8
+    },
+    {
+      "label": "extended-region-53",
+      "target": [
+        434184,
+        100,
+        -651256
+      ],
+      "privateCommitMiB": 1726.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 997.7
+    },
+    {
+      "label": "extended-region-54",
+      "target": [
+        442376,
+        100,
+        -663544
+      ],
+      "privateCommitMiB": 1835.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1172.7
+    },
+    {
+      "label": "extended-region-55",
+      "target": [
+        450568,
+        100,
+        -675832
+      ],
+      "privateCommitMiB": 1765.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1103.5
+    },
+    {
+      "label": "extended-region-56",
+      "target": [
+        458760,
+        100,
+        -688120
+      ],
+      "privateCommitMiB": 1553.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 985.5
+    },
+    {
+      "label": "extended-region-57",
+      "target": [
+        466952,
+        100,
+        -700408
+      ],
+      "privateCommitMiB": 1744.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1176.7
+    },
+    {
+      "label": "extended-region-58",
+      "target": [
+        475144,
+        100,
+        -712696
+      ],
+      "privateCommitMiB": 1669.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1103.8
+    },
+    {
+      "label": "extended-region-59",
+      "target": [
+        483336,
+        100,
+        -724984
+      ],
+      "privateCommitMiB": 1667.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1102.0
+    },
+    {
+      "label": "extended-region-60",
+      "target": [
+        491528,
+        100,
+        -737272
+      ],
+      "privateCommitMiB": 1550.2,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 982.6
+    },
+    {
+      "label": "extended-region-61",
+      "target": [
+        499720,
+        100,
+        -749560
+      ],
+      "privateCommitMiB": 1669.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1002.6
+    },
+    {
+      "label": "extended-region-62",
+      "target": [
+        507912,
+        100,
+        -761848
+      ],
+      "privateCommitMiB": 1896.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1232.9
+    },
+    {
+      "label": "extended-region-63",
+      "target": [
+        516104,
+        100,
+        -774136
+      ],
+      "privateCommitMiB": 1579.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1010.9
+    },
+    {
+      "label": "extended-region-64",
+      "target": [
+        524296,
+        100,
+        -786424
+      ],
+      "privateCommitMiB": 1735.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1162.7
+    },
+    {
+      "label": "extended-region-65",
+      "target": [
+        532488,
+        100,
+        -798712
+      ],
+      "privateCommitMiB": 1670.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1005.4
+    },
+    {
+      "label": "extended-region-66",
+      "target": [
+        540680,
+        100,
+        -811000
+      ],
+      "privateCommitMiB": 1670.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1099.8
+    },
+    {
+      "label": "extended-region-67",
+      "target": [
+        548872,
+        100,
+        -823288
+      ],
+      "privateCommitMiB": 1670.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1102.5
+    },
+    {
+      "label": "extended-region-68",
+      "target": [
+        557064,
+        100,
+        -835576
+      ],
+      "privateCommitMiB": 1846.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1181.7
+    },
+    {
+      "label": "extended-region-69",
+      "target": [
+        565256,
+        100,
+        -847864
+      ],
+      "privateCommitMiB": 1770.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1106.5
+    },
+    {
+      "label": "extended-region-70",
+      "target": [
+        573448,
+        100,
+        -860152
+      ],
+      "privateCommitMiB": 1771.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1107.7
+    },
+    {
+      "label": "extended-region-71",
+      "target": [
+        581640,
+        100,
+        -872440
+      ],
+      "privateCommitMiB": 1673.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1106.9
+    },
+    {
+      "label": "extended-region-72",
+      "target": [
+        589832,
+        100,
+        -884728
+      ],
+      "privateCommitMiB": 1673.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1106.6
+    },
+    {
+      "label": "extended-region-73",
+      "target": [
+        598024,
+        100,
+        -897016
+      ],
+      "privateCommitMiB": 1672.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1009.5
+    },
+    {
+      "label": "extended-region-74",
+      "target": [
+        606216,
+        100,
+        -909304
+      ],
+      "privateCommitMiB": 1750.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1077.8
+    },
+    {
+      "label": "extended-region-75",
+      "target": [
+        614408,
+        100,
+        -921592
+      ],
+      "privateCommitMiB": 1842.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1174.6
+    },
+    {
+      "label": "extended-region-76",
+      "target": [
+        622600,
+        100,
+        -933880
+      ],
+      "privateCommitMiB": 1843.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1178.1
+    },
+    {
+      "label": "extended-region-77",
+      "target": [
+        630792,
+        100,
+        -946168
+      ],
+      "privateCommitMiB": 1672.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1106.3
+    },
+    {
+      "label": "extended-region-78",
+      "target": [
+        638984,
+        100,
+        -958456
+      ],
+      "privateCommitMiB": 1673.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1106.7
+    },
+    {
+      "label": "extended-region-79",
+      "target": [
+        647176,
+        100,
+        -970744
+      ],
+      "privateCommitMiB": 1565.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 998.2
+    },
+    {
+      "label": "extended-region-80",
+      "target": [
+        655368,
+        100,
+        -983032
+      ],
+      "privateCommitMiB": 1677.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1108.2
+    },
+    {
+      "label": "extended-region-81",
+      "target": [
+        663560,
+        100,
+        -995320
+      ],
+      "privateCommitMiB": 1788.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1125.8
+    },
+    {
+      "label": "extended-region-82",
+      "target": [
+        671752,
+        100,
+        -1007608
+      ],
+      "privateCommitMiB": 1789.2,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1126.4
+    },
+    {
+      "label": "extended-region-83",
+      "target": [
+        679944,
+        100,
+        -1019896
+      ],
+      "privateCommitMiB": 1694.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1127.2
+    },
+    {
+      "label": "extended-region-84",
+      "target": [
+        688136,
+        100,
+        -1032184
+      ],
+      "privateCommitMiB": 1683.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1020.3
+    },
+    {
+      "label": "extended-region-85",
+      "target": [
+        696328,
+        100,
+        -1044472
+      ],
+      "privateCommitMiB": 1665.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1093.0
+    },
+    {
+      "label": "extended-region-86",
+      "target": [
+        704520,
+        100,
+        -1056760
+      ],
+      "privateCommitMiB": 1760.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1095.1
+    },
+    {
+      "label": "extended-region-87",
+      "target": [
+        712712,
+        100,
+        -1069048
+      ],
+      "privateCommitMiB": 1674.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1107.1
+    },
+    {
+      "label": "extended-region-88",
+      "target": [
+        720904,
+        100,
+        -1081336
+      ],
+      "privateCommitMiB": 1674.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1107.9
+    },
+    {
+      "label": "extended-region-89",
+      "target": [
+        729096,
+        100,
+        -1093624
+      ],
+      "privateCommitMiB": 1679.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1011.8
+    },
+    {
+      "label": "extended-region-90",
+      "target": [
+        737288,
+        100,
+        -1105912
+      ],
+      "privateCommitMiB": 1846.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1176.5
+    },
+    {
+      "label": "extended-region-91",
+      "target": [
+        745480,
+        100,
+        -1118200
+      ],
+      "privateCommitMiB": 1794.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1126.4
+    },
+    {
+      "label": "extended-region-92",
+      "target": [
+        753672,
+        100,
+        -1130488
+      ],
+      "privateCommitMiB": 1697.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1128.8
+    },
+    {
+      "label": "extended-region-93",
+      "target": [
+        761864,
+        100,
+        -1142776
+      ],
+      "privateCommitMiB": 1794.2,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1130.4
+    },
+    {
+      "label": "extended-region-94",
+      "target": [
+        770056,
+        100,
+        -1155064
+      ],
+      "privateCommitMiB": 1772.2,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1205.1
+    },
+    {
+      "label": "extended-region-95",
+      "target": [
+        778248,
+        100,
+        -1167352
+      ],
+      "privateCommitMiB": 1870.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1206.7
+    },
+    {
+      "label": "extended-region-96",
+      "target": [
+        786440,
+        100,
+        -1179640
+      ],
+      "privateCommitMiB": 1763.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1095.4
+    },
+    {
+      "label": "extended-region-97",
+      "target": [
+        794632,
+        100,
+        -1191928
+      ],
+      "privateCommitMiB": 1775.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1111.2
+    },
+    {
+      "label": "extended-region-98",
+      "target": [
+        802824,
+        100,
+        -1204216
+      ],
+      "privateCommitMiB": 1679.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1111.3
+    },
+    {
+      "label": "extended-region-99",
+      "target": [
+        811016,
+        100,
+        -1216504
+      ],
+      "privateCommitMiB": 1679.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1111.7
+    },
+    {
+      "label": "extended-region-100",
+      "target": [
+        819208,
+        100,
+        -1228792
+      ],
+      "privateCommitMiB": 1667.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1004.1
+    },
+    {
+      "label": "extended-region-101",
+      "target": [
+        827400,
+        100,
+        -1241080
+      ],
+      "privateCommitMiB": 1783.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1209.5
+    },
+    {
+      "label": "extended-region-102",
+      "target": [
+        835592,
+        100,
+        -1253368
+      ],
+      "privateCommitMiB": 1768.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1101.3
+    },
+    {
+      "label": "extended-region-103",
+      "target": [
+        843784,
+        100,
+        -1265656
+      ],
+      "privateCommitMiB": 1679.2,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1015.4
+    },
+    {
+      "label": "extended-region-104",
+      "target": [
+        851976,
+        100,
+        -1277944
+      ],
+      "privateCommitMiB": 1705.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1038.4
+    },
+    {
+      "label": "extended-region-105",
+      "target": [
+        860168,
+        100,
+        -1290232
+      ],
+      "privateCommitMiB": 1686.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1116.2
+    },
+    {
+      "label": "extended-region-106",
+      "target": [
+        868360,
+        100,
+        -1302520
+      ],
+      "privateCommitMiB": 1805.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1141.5
+    },
+    {
+      "label": "extended-region-107",
+      "target": [
+        876552,
+        100,
+        -1314808
+      ],
+      "privateCommitMiB": 1709.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1141.7
+    },
+    {
+      "label": "extended-region-108",
+      "target": [
+        884744,
+        100,
+        -1327096
+      ],
+      "privateCommitMiB": 1707.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1140.7
+    },
+    {
+      "label": "extended-region-109",
+      "target": [
+        892936,
+        100,
+        -1339384
+      ],
+      "privateCommitMiB": 1772.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1141.5
+    },
+    {
+      "label": "extended-region-110",
+      "target": [
+        901128,
+        100,
+        -1351672
+      ],
+      "privateCommitMiB": 1708.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1141.6
+    },
+    {
+      "label": "extended-region-111",
+      "target": [
+        909320,
+        100,
+        -1363960
+      ],
+      "privateCommitMiB": 1804.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1142.1
+    },
+    {
+      "label": "extended-region-112",
+      "target": [
+        917512,
+        100,
+        -1376248
+      ],
+      "privateCommitMiB": 1676.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1142.7
+    },
+    {
+      "label": "extended-region-113",
+      "target": [
+        925704,
+        100,
+        -1388536
+      ],
+      "privateCommitMiB": 1694.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1024.1
+    },
+    {
+      "label": "extended-region-114",
+      "target": [
+        933896,
+        100,
+        -1400824
+      ],
+      "privateCommitMiB": 1675.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1098.0
+    },
+    {
+      "label": "extended-region-115",
+      "target": [
+        942088,
+        100,
+        -1413112
+      ],
+      "privateCommitMiB": 1799.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1133.2
+    },
+    {
+      "label": "extended-region-116",
+      "target": [
+        950280,
+        100,
+        -1425400
+      ],
+      "privateCommitMiB": 1778.9,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1210.9
+    },
+    {
+      "label": "extended-region-117",
+      "target": [
+        958472,
+        100,
+        -1437688
+      ],
+      "privateCommitMiB": 1702.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1134.9
+    },
+    {
+      "label": "extended-region-118",
+      "target": [
+        966664,
+        100,
+        -1449976
+      ],
+      "privateCommitMiB": 1724.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1045.4
+    },
+    {
+      "label": "extended-region-119",
+      "target": [
+        974856,
+        100,
+        -1462264
+      ],
+      "privateCommitMiB": 1874.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1207.3
+    },
+    {
+      "label": "extended-region-120",
+      "target": [
+        983048,
+        100,
+        -1474552
+      ],
+      "privateCommitMiB": 1775.2,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1102.5
+    },
+    {
+      "label": "extended-region-121",
+      "target": [
+        991240,
+        100,
+        -1486840
+      ],
+      "privateCommitMiB": 1810.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1143.0
+    },
+    {
+      "label": "extended-region-122",
+      "target": [
+        999432,
+        100,
+        -1499128
+      ],
+      "privateCommitMiB": 1807.2,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1144.2
+    },
+    {
+      "label": "extended-region-123",
+      "target": [
+        1007624,
+        100,
+        -1511416
+      ],
+      "privateCommitMiB": 1701.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1134.9
+    },
+    {
+      "label": "extended-region-124",
+      "target": [
+        1015816,
+        100,
+        -1523704
+      ],
+      "privateCommitMiB": 1794.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1131.4
+    },
+    {
+      "label": "extended-region-125",
+      "target": [
+        1024008,
+        100,
+        -1535992
+      ],
+      "privateCommitMiB": 1602.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1034.0
+    },
+    {
+      "label": "extended-region-126",
+      "target": [
+        1032200,
+        100,
+        -1548280
+      ],
+      "privateCommitMiB": 1681.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1109.4
+    },
+    {
+      "label": "extended-region-127",
+      "target": [
+        1040392,
+        100,
+        -1560568
+      ],
+      "privateCommitMiB": 1779.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1112.0
+    },
+    {
+      "label": "extended-region-128",
+      "target": [
+        1048584,
+        100,
+        -1572856
+      ],
+      "privateCommitMiB": 1782.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1117.6
+    },
+    {
+      "label": "extended-region-129",
+      "target": [
+        1056776,
+        100,
+        -1585144
+      ],
+      "privateCommitMiB": 1686.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1117.9
+    },
+    {
+      "label": "extended-region-130",
+      "target": [
+        1064968,
+        100,
+        -1597432
+      ],
+      "privateCommitMiB": 1790.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1123.7
+    },
+    {
+      "label": "extended-region-131",
+      "target": [
+        1073160,
+        100,
+        -1609720
+      ],
+      "privateCommitMiB": 1788.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1118.2
+    },
+    {
+      "label": "extended-region-132",
+      "target": [
+        1081352,
+        100,
+        -1622008
+      ],
+      "privateCommitMiB": 1571.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1005.9
+    },
+    {
+      "label": "extended-region-133",
+      "target": [
+        1089544,
+        100,
+        -1634296
+      ],
+      "privateCommitMiB": 1688.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1118.3
+    },
+    {
+      "label": "extended-region-134",
+      "target": [
+        1097736,
+        100,
+        -1646584
+      ],
+      "privateCommitMiB": 1693.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1028.7
+    },
+    {
+      "label": "extended-region-135",
+      "target": [
+        1105928,
+        100,
+        -1658872
+      ],
+      "privateCommitMiB": 1679.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1112.0
+    },
+    {
+      "label": "extended-region-136",
+      "target": [
+        1114120,
+        100,
+        -1671160
+      ],
+      "privateCommitMiB": 1757.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1191.6
+    },
+    {
+      "label": "extended-region-137",
+      "target": [
+        1122312,
+        100,
+        -1683448
+      ],
+      "privateCommitMiB": 1789.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1126.7
+    },
+    {
+      "label": "extended-region-138",
+      "target": [
+        1130504,
+        100,
+        -1695736
+      ],
+      "privateCommitMiB": 1869.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1206.9
+    },
+    {
+      "label": "extended-region-139",
+      "target": [
+        1138696,
+        100,
+        -1708024
+      ],
+      "privateCommitMiB": 1698.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1132.9
+    },
+    {
+      "label": "extended-region-140",
+      "target": [
+        1146888,
+        100,
+        -1720312
+      ],
+      "privateCommitMiB": 1701.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1034.7
+    },
+    {
+      "label": "extended-region-141",
+      "target": [
+        1155080,
+        100,
+        -1732600
+      ],
+      "privateCommitMiB": 1744.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1110.4
+    },
+    {
+      "label": "extended-region-142",
+      "target": [
+        1163272,
+        100,
+        -1744888
+      ],
+      "privateCommitMiB": 1778.7,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1113.8
+    },
+    {
+      "label": "extended-region-143",
+      "target": [
+        1171464,
+        100,
+        -1757176
+      ],
+      "privateCommitMiB": 1805.5,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1142.3
+    },
+    {
+      "label": "extended-region-144",
+      "target": [
+        1179656,
+        100,
+        -1769464
+      ],
+      "privateCommitMiB": 1709.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1143.0
+    },
+    {
+      "label": "extended-region-145",
+      "target": [
+        1187848,
+        100,
+        -1781752
+      ],
+      "privateCommitMiB": 1688.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1022.3
+    },
+    {
+      "label": "extended-region-146",
+      "target": [
+        1196040,
+        100,
+        -1794040
+      ],
+      "privateCommitMiB": 1668.3,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1095.0
+    },
+    {
+      "label": "extended-region-147",
+      "target": [
+        1204232,
+        100,
+        -1806328
+      ],
+      "privateCommitMiB": 1599.4,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1030.0
+    },
+    {
+      "label": "extended-region-148",
+      "target": [
+        1212424,
+        100,
+        -1818616
+      ],
+      "privateCommitMiB": 1599.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1029.9
+    },
+    {
+      "label": "extended-region-149",
+      "target": [
+        1220616,
+        100,
+        -1830904
+      ],
+      "privateCommitMiB": 1673.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1102.5
+    },
+    {
+      "label": "extended-region-150",
+      "target": [
+        1228808,
+        100,
+        -1843192
+      ],
+      "privateCommitMiB": 1793.0,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1126.1
+    },
+    {
+      "label": "extended-region-151",
+      "target": [
+        1237000,
+        100,
+        -1855480
+      ],
+      "privateCommitMiB": 1791.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1129.7
+    },
+    {
+      "label": "extended-region-152",
+      "target": [
+        1245192,
+        100,
+        -1867768
+      ],
+      "privateCommitMiB": 1791.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1129.8
+    },
+    {
+      "label": "extended-region-153",
+      "target": [
+        1253384,
+        100,
+        -1880056
+      ],
+      "privateCommitMiB": 1791.8,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1129.6
+    },
+    {
+      "label": "extended-region-154",
+      "target": [
+        1261576,
+        100,
+        -1892344
+      ],
+      "privateCommitMiB": 1695.6,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1130.0
+    },
+    {
+      "label": "extended-region-155",
+      "target": [
+        1269768,
+        100,
+        -1904632
+      ],
+      "privateCommitMiB": 1780.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1107.9
+    },
+    {
+      "label": "extended-region-156",
+      "target": [
+        1277960,
+        100,
+        -1916920
+      ],
+      "privateCommitMiB": 1692.1,
+      "reportedPeakPrivateCommitMiB": 2574.8,
+      "residentMiB": 1114.8
+    },
+    {
+      "label": "reopened-distant-terrain",
+      "target": [
+        16392,
+        65,
+        -32760
+      ],
+      "privateCommitMiB": 1115.9,
+      "reportedPeakPrivateCommitMiB": 1232.0,
+      "residentMiB": 675.0
+    }
+  ],
+  "imageReview": {
+    "status": "passed-all-final-main-image-reviews",
+    "rawReportSha256": "c30142f573489f6a179192e3b24a858dc0ee77c938bd9fcf2ebe888de0ea76ff",
+    "images": [
+      {
+        "file": "native-preset-ui.png",
+        "sha256": "711b3eca9ad9673d85ac87384167eaeba6e65d409b0ad0fa4af49ef8acd7b8c1",
+        "reviewed": true,
+        "note": "World tab shows TerraForged, seed8675309, structures ON, bonus chest OFF and a disabled Customize button as approved for 0.1.0. Labels and footer are visible."
+      },
+      {
+        "file": "natural-spawn.png",
+        "sha256": "2edcd548c3f4b2d0b9e18396e9004c62a3714ab76c8b7949a652d5844274a471",
+        "reviewed": true,
+        "note": "Full hearts and food; rendered snowy stone/grass slopes and nearby orange foliage. Grounded state is separately asserted by control; no loading overlay or missing-terrain image observed."
+      },
+      {
+        "file": "death-screen.png",
+        "sha256": "2a7aefb442d069fabffdc54d5ca5d2f614eb3002c2fbbdd27d72cf4281042e66",
+        "reviewed": true,
+        "note": "Expected commanded death presents You Died, Respawn and Title Screen controls over the same rendered terrain."
+      },
+      {
+        "file": "healthy-respawn.png",
+        "sha256": "fe02fb83ab4d27bc33ee2997ec7d9af88f9c4e651a21b4ae4c9a7230e9757db8",
+        "reviewed": true,
+        "note": "Full health/food after respawn; close dirt and orange leaves frame snowy terrain. The narrow camera view does not establish a wide panorama."
+      },
+      {
+        "file": "classic-stone_forest.png",
+        "sha256": "1e15f3104082216ff44d6b9732469f9cc39981f75bfa89b603dbb088d827408f",
+        "reviewed": true,
+        "note": "Sky/clouds occupy most of this camera view with jungle canopy at the bottom. Rendering is present, but this image does not establish stone-pillar scenery or full biome-feature parity; the saved target-biome assertion remains separate."
+      },
+      {
+        "file": "game-0.png",
+        "sha256": "d5ea947621149a0bcea8aa0dca4f99eadfa34defa0ded9f769fa7f3fba1ba2b7",
+        "reviewed": true,
+        "note": "Rendered birch forest and flowered clearing at origin, with adjacent open grass and normal distant fog; no loading overlay observed."
+      },
+      {
+        "file": "classic-bryce.png",
+        "sha256": "80bd15a6e104425720a06f4b18b23759618243a8a2b29dba02b556670d730386",
+        "reviewed": true,
+        "note": "Visible orange/red pillar formations on rolling badlands, beside desert and jungle terrain. Distant detail is fog-limited; no full Java feature/scenery parity claim."
+      },
+      {
+        "file": "classic-cold_marshland.png",
+        "sha256": "7cbe67108a3dc8f57a20e79b6a473c3ba3dd0ac51af7748ed3db53675beff7ac",
+        "reviewed": true,
+        "note": "Tall conifer forest, river/wet ground and light stone/moss-like outcrops render coherently. This camera sees adjacent forest and water; no full historical marsh-feature parity claim."
+      },
+      {
+        "file": "classic-cold_steppe.png",
+        "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c",
+        "reviewed": true,
+        "note": "Open rolling green terrain transitions to snow-covered slopes with sparse distant trees. Distant detail is fog-limited."
+      },
+      {
+        "file": "classic-fir_forest.png",
+        "sha256": "32a9ef5d127689bb889ba5db7ca8815e3eca711e391bff5bac484f129e21375e",
+        "reviewed": true,
+        "note": "Dense conifers, water pockets and village-adjacent terrain render. A tiny bright pink/purple decoration remains unidentified at this distance. Independent read-only review finds no clear black/magenta missing-texture quadrants or debug-block diagnosis; current game log has no matching missing/failed-texture warnings. Exact block/species identity and full historical scenery parity are not established.",
+        "observation": "No confirmed defect; exact identity not qualified."
+      },
+      {
+        "file": "classic-flower_plains.png",
+        "sha256": "e72b859d55d989dce0fbfd394cebe6cbc1b5d1d07556c8338b9c45a7c0100556",
+        "reviewed": true,
+        "note": "Rolling green woodland and open areas with visible mixed flower patches; no loading overlay or missing terrain observed."
+      },
+      {
+        "file": "classic-frozen_lake.png",
+        "sha256": "0cb786020abf53d032e9800f363d3ce7ec3d2a3c66578ebd8a249afcc1bbfd6c",
+        "reviewed": true,
+        "note": "Wide frozen water beside snowy shore, conifers and ice-spike terrain; distant detail is fog-limited."
+      },
+      {
+        "file": "classic-frozen_marsh.png",
+        "sha256": "bcf0ae101faee47275a87048f9cc82c348926da4af4ebee02b9d50a0f9357e1b",
+        "reviewed": true,
+        "note": "Snowy low ground with an irregular frozen-water network and conifers renders coherently."
+      },
+      {
+        "file": "classic-lake.png",
+        "sha256": "d384c94f7fed5d79bd733d3b5c9ae651c5b41ba571a758c045b48990bc0a6345",
+        "reviewed": true,
+        "note": "Camera overlooks adjoining grassy coastal terrain with visible water around the edges, animals and pumpkins. This view does not establish whole historical lake shape or every feature."
+      },
+      {
+        "file": "classic-marshland.png",
+        "sha256": "f2ff52ad58062ff3b01daaa43880188f5efefbb0854b77db8aca44bb759a48a6",
+        "reviewed": true,
+        "note": "Wet textured low ground with light stone patches, steep grassy slopes, conifers and water renders coherently; full Java marsh-feature parity is not asserted."
+      },
+      {
+        "file": "classic-savanna_scrub.png",
+        "sha256": "6ba63b659739df47ca2794e42c10e4fd5e40c32001f320e06bed9fbebb0b50b6",
+        "reviewed": true,
+        "note": "Dry grass, sand and banded badlands slopes with sparse scrub are rendered. The camera covers a biome transition."
+      },
+      {
+        "file": "classic-shattered_savanna_scrub.png",
+        "sha256": "fd4d2b300a4a33c0726fa2ed3a9dae94ad097745abf851376c478d3b83007bfb",
+        "reviewed": true,
+        "note": "Dry scrub at foreground transitions to a forested coast and ocean with a visible shipwreck-like structure. This camera does not establish historical shattered-savanna landform parity."
+      },
+      {
+        "file": "classic-snowy_fir_forest.png",
+        "sha256": "970c5d25a23df71633ae8d17b280e128abc4f1f35bf1639f0762e7908e82fc4d",
+        "reviewed": true,
+        "note": "Snow-covered conifer forest beside ice spikes and stepped snowy terrain; distant detail is fog-limited."
+      },
+      {
+        "file": "classic-snowy_taiga_scrub.png",
+        "sha256": "625f1dd93930ad86ef2e92068943310d794e1c5534334bd0d6ef613766251a15",
+        "reviewed": true,
+        "note": "Snowy rolling slopes with sparse small conifers and adjoining taller forest render coherently."
+      },
+      {
+        "file": "classic-steppe.png",
+        "sha256": "5a8a36f00795ef421be3ade4e274a0a768be17cd642e318ba15a3c927959b19a",
+        "reviewed": true,
+        "note": "Open dry-grass hills and a transition to greener ground are visible, with small animals and normal distant fog."
+      },
+      {
+        "file": "classic-taiga_scrub.png",
+        "sha256": "6d859ff591edf93f8323705cc83d9883d819dce5dc26df92a7881bd264a7574b",
+        "reviewed": true,
+        "note": "Conifers on steep grassy slopes above wet/stone-patched low terrain; no loading overlay observed."
+      },
+      {
+        "file": "classic-warm_beach.png",
+        "sha256": "6cae076185e78db29cd40d5ed47c5d8849195daecb6111bc131626af6cff9a2b",
+        "reviewed": true,
+        "note": "Warm coastal water and a small sandy edge adjoin savanna grass/acacias, animals and pumpkins. The camera mostly sees adjoining land, not a broad beach panorama."
+      },
+      {
+        "file": "extended-region-1.png",
+        "sha256": "dba1a99c59fe73942a1f6dbb4923a35f79f40456b5745782c14f2d208351e772",
+        "reviewed": true,
+        "note": "High camera sees clouds, ocean and underwater vegetation with the normal fog/draw-distance limit. It does not establish inland scenery."
+      },
+      {
+        "file": "extended-region-17.png",
+        "sha256": "fc7a4bc222579b13245ff5682319b2b641106f541b550515dd8125489ae294bf",
+        "reviewed": true,
+        "note": "Nighttime high camera shows clouds, stars, a bright celestial body and very dark ocean. Darkness and camera height limit terrain-detail assessment; readiness/chunk data are separate evidence."
+      },
+      {
+        "file": "extended-region-37.png",
+        "sha256": "f5e15a19909897ad00c995c68b17b1e4568667b62b5623123eda4ea771b6cb13",
+        "reviewed": true,
+        "note": "Nighttime high camera is dominated by dark clouds, stars and faint ocean; it is not a detailed terrain/scenery assessment. Separate readiness data confirm resident generated columns."
+      },
+      {
+        "file": "extended-region-61.png",
+        "sha256": "7286aa2278d84f17a46f9e44d958d240803de3505b8437f45a3408f5b7c39be3",
+        "reviewed": true,
+        "note": "Daylight high camera shows dense conifers and a snowy hill below cloud height. Sky/clouds occupy much of the frame; distant terrain remains fog-limited."
+      },
+      {
+        "file": "extended-region-83.png",
+        "sha256": "a3ab883332cfe16cfea58b02da7d5fb9f6d1fceda7928923d9ad02ac9843d413",
+        "reviewed": true,
+        "note": "Daylight view over snowy slopes, scattered conifers and ice formations. Large clouds partly obscure the high-camera view; distant detail is fog-limited."
+      },
+      {
+        "file": "extended-region-106.png",
+        "sha256": "d361b0c380e94fc7225e402c5624bc41e646e4758e3282186c4d475f10c50a9c",
+        "reviewed": true,
+        "note": "Nighttime clouds and dark ocean dominate the high camera; a small coast is faintly visible. This is not detailed surface-feature evidence."
+      },
+      {
+        "file": "extended-region-128.png",
+        "sha256": "e948b817685b639f9abbd6a0f1d95b9552fe0bd4601fa50a08702b78b987b44d",
+        "reviewed": true,
+        "note": "Nighttime high camera shows stars, dark clouds and faint ocean. Darkness and camera height limit terrain-detail assessment."
+      },
+      {
+        "file": "extended-region-149.png",
+        "sha256": "33cacdea350c8ebdacdd914269f4d5b3057e18ddfeffe130ae70e4a6c5312972",
+        "reviewed": true,
+        "note": "Daylight high camera shows clear ocean, underwater vegetation/coral-like formations and large clouds. Draw distance/fog and camera height limit fine detail."
+      },
+      {
+        "file": "extended-generation-final.png",
+        "sha256": "fc5e0d513d8dd83b42544233e5f26083241ed3e63c2ce5d5f089dd18354b840b",
+        "reviewed": true,
+        "note": "Final high camera shows a grassy valley/river and water edge below clouds. The cloud layer partly obscures terrain; no full scenery-parity claim."
+      },
+      {
+        "file": "game-1.png",
+        "sha256": "f7582472a38c4cef5cb5fb0c804e0f368f4a350cf3fdae01dd417657fa83d3eb",
+        "reviewed": true,
+        "note": "After reopening, the distant view renders desert terrain, water channels, cacti with pink blossoms and a village-like structure. No loading overlay is visible; full structure placement or historical Java scenery parity is not asserted."
+      }
+    ]
+  },
+  "renderReadinessPolicy": "Functional: complete resident columns, two fresh quiet server samples, stable visible renderer residence and no pending chunks/uploads; record ongoing client remeshing without requiring it to stop. Not an all-meshing-idle timing.",
+  "scope": "Functional generation and save/reopen smoke on this setup. Persistent control transport. No full historical Java scenery/feature, all-meshing-idle timing, isolated FPS, hardware minimum or multi-hour stability claim."
+}

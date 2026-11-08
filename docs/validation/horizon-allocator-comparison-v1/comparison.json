@@ -1,0 +1,374 @@
+{
+  "status": "passed-bounded-allocator-comparison-not-final-release-qualification",
+  "completedAtUtc": "2026-11-08T21:57:08.322201+00:00",
+  "scope": "Same frozen f43 generation sources, GNU fast profile, seed, real UI survival creation, death/respawn, and identical origin plus twelve new-region coordinates. Natural spawn/respawn landing positions differ within the spawn area and are recorded. One persistent control session each. Sequential local diagnostic, no controlled FPS claim. System build uses existing system-allocator feature; production fix and fresh final artifact require separate qualification.",
+  "memoryDefinition": "Windows process private/pagefile commit, not live Rust heap; resident bytes are separate.",
+  "runs": {
+    "default": {
+      "rawReportSha256": "9a2f41dd29bb65aca57f4401f284ab1b5bef09b1c5a6f894462635559c11739f",
+      "clientSha256": "011349e00fd1918c62cf23a9a5dabc342cce4ecac131710c0788a79e99b7b8ce",
+      "controlTransportSourceSha256": "243090e27749a8e19432d21b98c8471f4e56f7a6161efecf2f7f7425d204627c",
+      "views": [
+        {
+          "label": "natural-spawn",
+          "target": [
+            2294,
+            119,
+            -6652
+          ],
+          "privateCommitMiB": 2638.5,
+          "residentMiB": 960.0,
+          "processPeakPrivateCommitMiB": 2833.3
+        },
+        {
+          "label": "healthy-respawn",
+          "target": [
+            2288,
+            120,
+            -6666
+          ],
+          "privateCommitMiB": 2696.8,
+          "residentMiB": 972.9,
+          "processPeakPrivateCommitMiB": 2843.4
+        },
+        {
+          "label": "origin",
+          "target": [
+            8,
+            75,
+            8
+          ],
+          "privateCommitMiB": 3241.1,
+          "residentMiB": 1116.3,
+          "processPeakPrivateCommitMiB": 3342.6
+        },
+        {
+          "label": "extended-region-1",
+          "target": [
+            8200,
+            100,
+            -12280
+          ],
+          "privateCommitMiB": 3334.2,
+          "residentMiB": 1027.2,
+          "processPeakPrivateCommitMiB": 3639.8
+        },
+        {
+          "label": "extended-region-2",
+          "target": [
+            16392,
+            100,
+            -24568
+          ],
+          "privateCommitMiB": 3376.7,
+          "residentMiB": 1158.3,
+          "processPeakPrivateCommitMiB": 3639.8
+        },
+        {
+          "label": "extended-region-3",
+          "target": [
+            24584,
+            100,
+            -36856
+          ],
+          "privateCommitMiB": 3544.9,
+          "residentMiB": 1111.1,
+          "processPeakPrivateCommitMiB": 3697.4
+        },
+        {
+          "label": "extended-region-4",
+          "target": [
+            32776,
+            100,
+            -49144
+          ],
+          "privateCommitMiB": 3679.0,
+          "residentMiB": 1148.5,
+          "processPeakPrivateCommitMiB": 3909.6
+        },
+        {
+          "label": "extended-region-5",
+          "target": [
+            40968,
+            100,
+            -61432
+          ],
+          "privateCommitMiB": 3756.5,
+          "residentMiB": 1150.3,
+          "processPeakPrivateCommitMiB": 3943.7
+        },
+        {
+          "label": "extended-region-6",
+          "target": [
+            49160,
+            100,
+            -73720
+          ],
+          "privateCommitMiB": 4138.2,
+          "residentMiB": 1316.3,
+          "processPeakPrivateCommitMiB": 4140.5
+        },
+        {
+          "label": "extended-region-7",
+          "target": [
+            57352,
+            100,
+            -86008
+          ],
+          "privateCommitMiB": 4197.8,
+          "residentMiB": 1196.6,
+          "processPeakPrivateCommitMiB": 4385.5
+        },
+        {
+          "label": "extended-region-8",
+          "target": [
+            65544,
+            100,
+            -98296
+          ],
+          "privateCommitMiB": 4398.0,
+          "residentMiB": 1341.8,
+          "processPeakPrivateCommitMiB": 4404.5
+        },
+        {
+          "label": "extended-region-9",
+          "target": [
+            73736,
+            100,
+            -110584
+          ],
+          "privateCommitMiB": 4570.5,
+          "residentMiB": 1247.7,
+          "processPeakPrivateCommitMiB": 4728.1
+        },
+        {
+          "label": "extended-region-10",
+          "target": [
+            81928,
+            100,
+            -122872
+          ],
+          "privateCommitMiB": 4726.8,
+          "residentMiB": 1287.6,
+          "processPeakPrivateCommitMiB": 4874.4
+        },
+        {
+          "label": "extended-region-11",
+          "target": [
+            90120,
+            100,
+            -135160
+          ],
+          "privateCommitMiB": 5130.6,
+          "residentMiB": 1407.5,
+          "processPeakPrivateCommitMiB": 5221.0
+        },
+        {
+          "label": "extended-region-12",
+          "target": [
+            98312,
+            100,
+            -147448
+          ],
+          "privateCommitMiB": 5202.7,
+          "residentMiB": 1474.4,
+          "processPeakPrivateCommitMiB": 5273.9
+        }
+      ],
+      "exitCode": 0,
+      "sourceCommit": "f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d",
+      "hmodSha256": "68a2aaae97c3e16b9c8deb4f6095febef7201de94e7fe443746756b200926709",
+      "creationViaUi": true,
+      "structuresEnabled": true,
+      "renderDistanceChunks": 12,
+      "simulationDistanceChunks": 12
+    },
+    "system": {
+      "rawReportSha256": "4ffd9431b0c6a7307a7c2e7d749ce252a0104c6d5470434bd44ed64c98169b0e",
+      "clientSha256": "075c09a701c1015b6282afb9c1fb860cd923801b4ed360a8e0e734a585c7f45d",
+      "controlTransportSourceSha256": "243090e27749a8e19432d21b98c8471f4e56f7a6161efecf2f7f7425d204627c",
+      "views": [
+        {
+          "label": "natural-spawn",
+          "target": [
+            2296,
+            120,
+            -6651
+          ],
+          "privateCommitMiB": 1377.5,
+          "residentMiB": 835.2,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "healthy-respawn",
+          "target": [
+            2292,
+            118,
+            -6651
+          ],
+          "privateCommitMiB": 1404.8,
+          "residentMiB": 864.9,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "origin",
+          "target": [
+            8,
+            75,
+            8
+          ],
+          "privateCommitMiB": 1538.9,
+          "residentMiB": 941.0,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-1",
+          "target": [
+            8200,
+            100,
+            -12280
+          ],
+          "privateCommitMiB": 1580.1,
+          "residentMiB": 960.0,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-2",
+          "target": [
+            16392,
+            100,
+            -24568
+          ],
+          "privateCommitMiB": 1490.4,
+          "residentMiB": 967.4,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-3",
+          "target": [
+            24584,
+            100,
+            -36856
+          ],
+          "privateCommitMiB": 1492.6,
+          "residentMiB": 968.7,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-4",
+          "target": [
+            32776,
+            100,
+            -49144
+          ],
+          "privateCommitMiB": 1367.8,
+          "residentMiB": 839.9,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-5",
+          "target": [
+            40968,
+            100,
+            -61432
+          ],
+          "privateCommitMiB": 1490.3,
+          "residentMiB": 904.9,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-6",
+          "target": [
+            49160,
+            100,
+            -73720
+          ],
+          "privateCommitMiB": 1447.2,
+          "residentMiB": 921.1,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-7",
+          "target": [
+            57352,
+            100,
+            -86008
+          ],
+          "privateCommitMiB": 1395.6,
+          "residentMiB": 874.3,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-8",
+          "target": [
+            65544,
+            100,
+            -98296
+          ],
+          "privateCommitMiB": 1536.6,
+          "residentMiB": 1011.4,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-9",
+          "target": [
+            73736,
+            100,
+            -110584
+          ],
+          "privateCommitMiB": 1453.2,
+          "residentMiB": 928.5,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-10",
+          "target": [
+            81928,
+            100,
+            -122872
+          ],
+          "privateCommitMiB": 1458.7,
+          "residentMiB": 935.1,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-11",
+          "target": [
+            90120,
+            100,
+            -135160
+          ],
+          "privateCommitMiB": 1627.9,
+          "residentMiB": 1008.1,
+          "processPeakPrivateCommitMiB": 2577.3
+        },
+        {
+          "label": "extended-region-12",
+          "target": [
+            98312,
+            100,
+            -147448
+          ],
+          "privateCommitMiB": 1557.1,
+          "residentMiB": 1032.5,
+          "processPeakPrivateCommitMiB": 2577.3
+        }
+      ],
+      "exitCode": 0,
+      "sourceCommit": "f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d",
+      "hmodSha256": "68a2aaae97c3e16b9c8deb4f6095febef7201de94e7fe443746756b200926709",
+      "creationViaUi": true,
+      "structuresEnabled": true,
+      "renderDistanceChunks": 12,
+      "simulationDistanceChunks": 12
+    }
+  },
+  "proposedEngineFix": "685a756423731d1cf9f511911eabe9ef023d10d4",
+  "fixSourceScope": "Only crates/horizon-client/src/main.rs changes from f43: Windows GNU default uses System; explicit diagnostic features preserved. No generation/cache arithmetic changes.",
+  "notCovered": [
+    "Fresh production fix artifact",
+    "45-minute sustained generation",
+    "Other platforms or allocators",
+    "Full feature/scenery parity"
+  ]
+}

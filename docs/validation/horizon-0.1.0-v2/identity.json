@@ -1,0 +1,21 @@
+{
+  "status": "frozen-production-inputs-match-installed-candidate",
+  "packageFreezeCommit": "33e8cf9dd3ced0efdd6152d47c76e1f4a28c8aa2",
+  "horizonRevision": "685a756423731d1cf9f511911eabe9ef023d10d4",
+  "mixinsRevision": "e8cd0aa38cffef49cb2e088ef716baa107148c02",
+  "launcherSourceRevision": "62e533e009eb2fa58cbe10948f2e453fa00b94f2",
+  "nativeVersion": "native-685a756-7e7f7568a3fa",
+  "profile": "performance",
+  "nativeTarget": "Windows x64 GNU",
+  "sha256": {
+    "launcher": "19a0d66fd05f0e65d42b6386d6ac6a2d45f32c88c0678fa4e3aefae8ceaa813e",
+    "client": "64a9d133abfe5df727446f71dd0309378dcddbe1f7fa27851e3ece250e9fa660",
+    "ctl": "3b8b33c8adecf245295c317e6ca9e0c9a1bc238a296558b58cdb73685560e656",
+    "hmod": "33389ff6902bfe6bf6571c7f16213e31711f115a4f2136e618dc7b980175da0d"
+  },
+  "installedNativeRecordSha256": "6405d512f81d9e2ba3b07881e733b08e931d28bf4d5971169d9cbd88c5820a55",
+  "stageResultSha256": "4c2fa0340073204717b041c0fdcbb105d825beca2d7cb4874f9221245fd06480",
+  "unchangedInputFileCount": 84,
+  "rawInstalledValidationSha256": "40492c5df11f0bc3119464de0931dae1fa728cd09a9858d9e088c12562ab18fc",
+  "readerScope": "Independent MSVC reader at f43 and GNU installed game at 685a756: generation sources are byte-identical; only main.rs allocator selection differs. Not the same executable/profile."
+}

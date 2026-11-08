@@ -8,7 +8,7 @@ from __future__ import annotations
 import argparse, datetime as dt, hashlib, json, math, os, platform, shutil, statistics, subprocess, sys, time
 from pathlib import Path
 from benchmark_kernel_sampler import memory_reader
-from verify_native_ui import copy_prepared_resources, exit_details, shutdown_owned_client
+from verify_native_ui import checked_resources, copy_prepared_resources, exit_details, shutdown_owned_client
 from client_exclusivity import ExclusiveClientGuard, horizon_client_pids
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -58,8 +58,9 @@ def near(status, camera):
 
 class Readiness:
     """Confirm both ends of the integrated client; never infer work from an empty queue alone."""
-    def __init__(self, camera, distance, initial_counts=None):
+    def __init__(self, camera, distance, initial_counts=None, *, require_mesh_idle=True):
         self.camera = camera
+        self.require_mesh_idle = require_mesh_idle
         self.minimum = int(.8 * math.pi * distance ** 2)
         self.initial_counts = initial_counts
         self.counts_changed = False
@@ -93,7 +94,7 @@ class Readiness:
         renderer = status.get('renderer') or {}
         ready = (gate and self.server_streak >= 2 and elapsed - self.memory_at <= 5
                  and status.get('pending_chunks') == 0 and status.get('pending_uploads') == 0
-                 and quiet(status.get('streaming'))
+                 and quiet(status.get('streaming'), ignore_meshing=not self.require_mesh_idle)
                  and renderer.get('resident_sections', 0) > 0 and renderer.get('drawn_sections', 0) > 0)
         view_counts = (*counts, renderer.get('resident_sections'))
         if not ready:
@@ -103,6 +104,8 @@ class Readiness:
         else: self.view_samples += 1
         if ready and self.view_samples >= 2 and elapsed - self.view_since >= 1:
             self.metrics.setdefault('viewReadySeconds', elapsed)
+            self.metrics['clientMeshingAtViewReady'] = dict(status['streaming']).get('meshing', 0)
+            self.metrics['requiresClientMeshIdle'] = self.require_mesh_idle
             return True
         return False
 
@@ -146,6 +149,17 @@ def self_test():
     assert quiet({**status['streaming'], 'meshing': 1}, ignore_meshing=True)
     assert not quiet({**status['streaming'], 'meshing': 1})
     assert not quiet({**status['streaming'], 'queued': float('nan')})
+    updating = {**status, 'streaming': {**status['streaming'], 'meshing': 3}}
+    functional = Readiness([1., 90., 2.], 6, require_mesh_idle=False)
+    strict = Readiness([1., 90., 2.], 6)
+    for elapsed in (6, 8, 9):
+        functional_ready = functional.observe(updating, {'loaded': True}, memory, elapsed, True)
+        assert not strict.observe(updating, {'loaded': True}, memory, elapsed, True)
+    assert functional_ready and functional.metrics['clientMeshingAtViewReady'] == 3
+    assert not functional.observe({**updating, 'pending_uploads': 1}, {'loaded': True}, memory, 10, True)
+    assert not functional.observe(updating, {'loaded': False}, memory, 11, True)
+    generating = {**updating, 'streaming': {**updating['streaming'], 'generating': 1}}
+    assert not functional.observe(generating, {'loaded': True}, memory, 12, True)
     working = Readiness([1., 90., 2.], 6, (0, 0))
     busy_server = {'server_columns': {'columns': 120}, 'server_generation': {'stages': {**status['streaming'], 'meshing': 1}}}
     assert not working.observe(status, {'loaded': True}, busy_server, 1, True)
@@ -156,13 +170,6 @@ def self_test():
         assert not blocked.observe({**status, 'pending_uploads': 1}, {'loaded': True}, memory, elapsed, True)
     assert not blocked.observe(status, {'loaded': True}, memory, 20)  # Stale server observations cannot pass.
     print('NATIVE_CLIENT_BENCH_SELF_TEST_OK target position queues protos staleMemory stableWindow')
-
-
-def checked_resources(source):
-    files = [source / name for name in ('horizon-prepare.json', 'horizon-resources.json', 'facts.json')]
-    files += sorted((source / 'worldgen').rglob('*.json'))
-    if not (source / 'worldgen').is_dir(): raise ValueError('Prepared worldgen directory missing')
-    return {p.relative_to(source).as_posix(): sha(p) for p in files}
 
 
 def unchanged(source, expected):

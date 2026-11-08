@@ -1,7 +1,39 @@
 # Stable release qualification
 
 Target: Windows x64, Horizon / Minecraft 26.3, default TerraForged preset.
-Status: **not yet qualified for stable**. A date is not an acceptance result.
+Status: **final installed default-preset candidate qualified for Windows 0.1.0**.
+
+The [final selected results](../validation/horizon-0.1.0-v2/SUMMARY.json) replace
+the earlier open memory gate: the real installed replacement ran 2,717.625
+seconds, visited all 17 classic targets and 156 fresh central regions, then
+saved/reopened and exited cleanly twice. Reported peak Windows private commit
+was 2,574.8 MiB; maximum sampled current commit was 2,116.5 MiB. This is a
+bounded functional qualification, not a multi-hour or isolated FPS benchmark.
+
+Three additional seeds passed six clean exits and 13,824 stored-value checks.
+A copied standalone native.dev7 world passed upgrade, marker/inventory
+preservation, one intentional owned kill during active generation and repeated
+reopen. Independent readers checked 84,480 saved quart biome values across the
+suite, including repeated origin checks. All recorded screenshots were reviewed;
+underground, foliage, cloud and nighttime camera limits are explicit.
+
+The exact replacement also passed ownership-gated installed CLI Play, healthy
+survival creation and a clean game exit. Earlier user-confirmed GUI Play was
+RC.1; it is not represented as a new manual GUI confirmation of RC.2. The
+launcher source and executable are unchanged. Computer use remains off.
+
+The release promotes the verified RC.2 HMOD/launcher bytes. The source archive
+is rebuilt from the final merged source, with all 84 production inputs checked
+against the frozen package. Publication separately verifies final CI, merged
+tree identity, uploaded hashes and fresh unauthenticated public downloads.
+Customize stays disabled in 0.1.0 by the user's decision; implementation follows
+shipment in separate development work. TerraForged alone, default preset,
+singleplayer and Windows x64 Vulkan define the qualified scope.
+
+## Historical gates and retained attempts
+
+The sections below retain the earlier requirements, incomplete states and
+failed attempts in chronological context; their pending wording is historical.
 
 The published native.dev7 remains an experimental preview. The smoothing and
 terrace fixes on this branch are a candidate; existing client binaries and
@@ -138,3 +170,93 @@ the pinned Rust toolchain. No privately prepared-resource tree is copied into
 that installation. Its [safe preparation receipt](../validation/horizon-seed-recovery-v1/public-install-preparation.json)
 records the unrecognized sound-index warning and successful per-file validation.
 The final HMOD, exact installed native build and Play gates remain pending.
+
+## Frozen 0.1.0 candidate and manual-install correction
+
+The [0.1.0 qualification candidate](https://github.com/TheApple05/TerraForged-Horizon/releases/tag/v0.1.0-rc.1)
+contains the frozen HMOD, compatible launcher ZIP, native source ZIP and
+checksums. All four public downloads match their local hashes. The new HMOD's
+entry set is unchanged from the tested source candidate; every generation-code
+and content byte matches. Only four metadata entries change version/display
+text and the README heading. This is not final installed-client acceptance.
+
+The fresh public installation exposed an omitted manual-setup step. A copied
+native archive remains off until `horizon-mods.txt` explicitly contains
+`mod.terraforged_native:true`. The CLI `mods enable` only resolves entries the
+browser installed, so it cannot enable this manually placed archive. The
+[Windows instructions](windows-0.1.0-release.md) now include that line while
+preserving other preferences. Both the original refused build and rejected CLI
+enable attempt remain recorded. The next attempt passes the trust refusal,
+compiles the actual downloaded HMOD and installs native version
+`native-f43eebf-99bd42e244c2`. Its record contains only TerraForged 0.1.0 with the
+intended engine and mixin pins. The installed client SHA-256 is
+`011349e00fd1918c62cf23a9a5dabc342cce4ecac131710c0788a79e99b7b8ce`.
+
+Public `prepare --minecraft` exits zero for that version too. The QA wrapper
+then rejects an obsolete development-only `horizon-prepare.json` requirement.
+That raw failure is preserved; a separate validation uses the launcher's actual
+`horizon-resources.json`, verifies the manifest's facts digest and hashes the
+required facts/worldgen files. The shared QA resource check now accepts public
+preparation while still hashing an optional development receipt when present.
+Eight UI/setup/shutdown regression tests and the readiness self-test pass.
+Installed world creation, sustained generation, upgrade and Play acceptance are
+now running or pending; the successful build alone does not qualify them.
+
+Authenticated CLI Play then creates a default TerraForged survival world with
+structures enabled, a healthy grounded player and a clean exit. Its first-run
+accessibility Continue action and image review are recorded. The user also
+confirms normal GUI Play and new-world entry with this exact candidate profile,
+while reporting the disabled Customize button. The native preset editor is
+unimplemented; the Windows guide now states that limit prominently.
+
+The first final-client classic tour is deliberately cancelled by its owner
+after reaching fourteen views: its strict readiness predicate waits for all
+client meshing to stop at stone forest, despite complete generation and 637
+resident columns. The pinned engine explicitly includes block/light/fluid
+remeshing of already drawn sections in that counter. This is an unaccepted
+attempt, with the raw failure, clean quit and cancellation explanation retained.
+The benchmark still requires full mesh idleness by default. A separate explicit
+functional policy permits ongoing client remeshing while requiring complete
+residence, quiet server generation/lighting, stable visible renderer residence,
+and no pending chunks/uploads; it records the actual meshing count. Self-tests
+verify that active generation, missing target residence and pending uploads
+still refuse readiness. A fresh all-classic/extended run uses this policy.
+
+The first interruption scenario also remains unaccepted: generation becomes
+quiet before its fresh region is saved, so it times out without killing the
+client. The replacement first saves one corner of a distant region, checks
+that the intended next chunk's Anvil header slot is empty, then interrupts new
+generation in that region. Neither scenario claims to simulate torn sector
+writes or a power loss.
+
+The fresh functional tour renders all seventeen targets and completes fifty-one
+new central regions. It is then deliberately stopped for Windows commit
+headroom, before the required forty-five minutes. The owned test process has
+19,714,428,928 private bytes, 3,581,722,624 resident bytes and 63 threads at the
+stop. Its raw failure and explicit owner-stop receipt remain unchanged; it is
+not a spontaneous crash or an accepted sustained run. Growth continues across
+a structure-cache rollover, so bounded chunk/cache entry counts do not establish
+safe memory use. A title-only diagnostic attributes a smaller increase to new
+control connections; stationary-world connection reuse and a diagnostic-only
+live-allocation census are being checked. Stable promotion remains held until
+the growth is explained or fixed and sustained qualification completes.
+
+The [selected final-package results](../validation/horizon-0.1.0-v1/SUMMARY.json)
+already retain the bounded installed multi-seed, Play and copied-world recovery
+checks without publishing account files, resources or worlds. Their overall
+status explicitly keeps this memory gate open.
+
+A matched twelve-region diagnostic now isolates the allocator choice with one
+persistent control session per process. The unmodified GNU client finishes at
+5,202.7 MiB private commit; the same frozen generation sources built with the
+existing system-allocator feature finish at 1,557.1 MiB. Both exit cleanly.
+Independent saved FULL vectors for the system-allocator run pass 6,144 quart
+comparisons. These are bounded diagnostics, not the missing forty-five-minute
+qualification. The [comparison](../validation/horizon-allocator-comparison-v1/comparison.json)
+records the exact executable hashes and per-view private/resident measurements.
+
+The replacement engine pin `685a756423731d1cf9f511911eabe9ef023d10d4` changes
+only default allocator selection in the client executable for Windows GNU.
+Explicit diagnostic allocator features remain available. Generation sources,
+cache limits and terrain arithmetic are unchanged. A new package, public
+installation and genuine native build must be qualified before promotion.

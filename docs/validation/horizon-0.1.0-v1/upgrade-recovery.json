@@ -1,0 +1,255 @@
+{
+  "status": "passed-bounded-preview-upgrade-and-owned-generation-interruption",
+  "oldHmodSha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+  "oldClientSha256": "2ac392c3ee3a9db86f760763aa5a7a4f118ee4b2864f4b621b0c845344612586",
+  "newHmodSha256": "68a2aaae97c3e16b9c8deb4f6095febef7201de94e7fe443746756b200926709",
+  "newClientSha256": "011349e00fd1918c62cf23a9a5dabc342cce4ecac131710c0788a79e99b7b8ce",
+  "sessions": {
+    "preview": {
+      "exitCode": 0,
+      "status": "passed",
+      "goldBlockPresent": true,
+      "diamondCount": 3,
+      "processPeakResidentBytes": 2372120576
+    },
+    "region-setup": {
+      "exitCode": 0,
+      "status": "passed",
+      "goldBlockPresent": true,
+      "diamondCount": 3,
+      "processPeakResidentBytes": 2410315776
+    },
+    "interrupted": {
+      "exitCode": 1,
+      "status": "passed-expected-owned-process-interruption",
+      "goldBlockPresent": true,
+      "diamondCount": 3,
+      "processPeakResidentBytes": 1114152960
+    },
+    "recovered": {
+      "exitCode": 0,
+      "status": "passed",
+      "goldBlockPresent": true,
+      "diamondCount": 3,
+      "processPeakResidentBytes": 954118144
+    },
+    "verified": {
+      "exitCode": 0,
+      "status": "passed",
+      "goldBlockPresent": true,
+      "diamondCount": 3,
+      "processPeakResidentBytes": 906670080
+    }
+  },
+  "cleanClientExits": 4,
+  "intentionalOwnedProcessKills": 1,
+  "newChunkHeaderAbsentBeforeInterruption": true,
+  "existingRegionBytesBeforeNewGeneration": 3178496,
+  "generationAtInterruption": {
+    "caches": [
+      [
+        "biome_chunks",
+        0,
+        0.0
+      ],
+      [
+        "carver_biomes",
+        0,
+        null
+      ],
+      [
+        "start_chunks",
+        0,
+        null
+      ],
+      [
+        "start_lists",
+        0,
+        null
+      ]
+    ],
+    "light_views": 0,
+    "light_views_mb": 0.0,
+    "proto_biomes_mb": 0.0,
+    "proto_blocks_mb": 0.0,
+    "proto_heightmaps_mb": 0.0,
+    "proto_other_terrain_mb": 0.0,
+    "proto_records_mb": 0.0,
+    "proto_section_lists_mb": 0.0,
+    "proto_sections_by_bits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "protos": 0,
+    "protos_mb": 0.0,
+    "stages": [
+      [
+        "queued",
+        8
+      ],
+      [
+        "generating",
+        12
+      ],
+      [
+        "protos",
+        0
+      ],
+      [
+        "decorating",
+        0
+      ],
+      [
+        "finishing",
+        0
+      ],
+      [
+        "lighting",
+        0
+      ],
+      [
+        "meshing",
+        0
+      ]
+    ]
+  },
+  "savedQuartComparisons": 4608,
+  "chunkChecks": [
+    {
+      "chunk": [
+        0,
+        0
+      ],
+      "nativeBiomeFingerprint": "6dc1096e04abd195",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "6dc1096e04abd195",
+      "vanillaBiomeFingerprint": "a2b7d896db159325"
+    },
+    {
+      "chunk": [
+        1024,
+        -2048
+      ],
+      "nativeBiomeFingerprint": "b0019eca975291a5",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "b0019eca975291a5",
+      "vanillaBiomeFingerprint": "60e84b83a1657725"
+    },
+    {
+      "chunk": [
+        48611,
+        -55556
+      ],
+      "nativeBiomeFingerprint": "70c0424a69618025",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "70c0424a69618025",
+      "vanillaBiomeFingerprint": "b8e078cf89b792ca"
+    }
+  ],
+  "originalScratchSaveUnchanged": true,
+  "resourcesAndArtifactsUnchanged": true,
+  "rawReportSha256": "f4d6c338482e3734cb5062d6994b520690fcd61bcdbed9c882cd51293d2ba4cd",
+  "readerBinarySha256": "eca1b2694db3b88f8e6ee06ba4a965ab3b2d0a40e407022dec2d04ac773f45de",
+  "readerSourceSha256": "f3ba807ee9a3a7b16f4ce634bfe80f8f24ab8b8feb0f64654f323b13e07811ed",
+  "readerOutputSha256": "18b1680016c7b5c066f8e792e73e23bc09afcbb68da9ea1f1d8780cff6a2bb6a",
+  "imageReview": {
+    "status": "passed-all-thirteen-image-reviews",
+    "reviewedAtUtc": "2026-11-08T21:01:36.963931+00:00",
+    "rawReportSha256": "f4d6c338482e3734cb5062d6994b520690fcd61bcdbed9c882cd51293d2ba4cd",
+    "images": [
+      {
+        "file": "preview/initial.png",
+        "sha256": "b923f25be7e8bd0bfa6b76925f5be765174b87acb3ae8343a3099d4aca987375",
+        "reviewed": true,
+        "note": "Rendered desert surface, cactus/vegetation and water channel; no loading overlay."
+      },
+      {
+        "file": "preview/committed-marker-area.png",
+        "sha256": "4473af459fbe282b5e16bdea8a72d16a4a9044cacb43c071c5131dc15448a83d",
+        "reviewed": true,
+        "note": "Rendered birch forest/grass/flowers at origin; marker at Y250 and inventory are verified by control state, not this view."
+      },
+      {
+        "file": "region-setup/initial.png",
+        "sha256": "4f1aea865d39028912b568f3f7234fce7300ee3e51041fe8b89847963149000e",
+        "reviewed": true,
+        "note": "Rendered same origin forest after upgrade, no loading overlay."
+      },
+      {
+        "file": "region-setup/committed-marker-area.png",
+        "sha256": "867ec99d5796830f66886426624b14d41813d8fdc17bf54c032fca5a748fc50d",
+        "reviewed": true,
+        "note": "Rendered same origin forest with expected teleport chat, no loading overlay; marker/inventory checked independently."
+      },
+      {
+        "file": "region-setup/saved-corner-of-far-region.png",
+        "sha256": "526404a0265cf702de54fc0a459b73563f34680df24f807f0c5022eef16994a5",
+        "reviewed": true,
+        "note": "Close snow/stone/dirt terrain with visible emerald ore, no loading overlay; camera limits panorama."
+      },
+      {
+        "file": "interrupted/initial.png",
+        "sha256": "2b62313e4398a5288397d1eed6dbd2c9c2a7404c90dcd9e24e3c0a9dd376f4b1",
+        "reviewed": true,
+        "note": "Previously saved snow/stone corner renders after reopen; no loading overlay."
+      },
+      {
+        "file": "interrupted/committed-marker-area.png",
+        "sha256": "018cdb2a5175035336c7fc82bae92f43aa379d142ad651702ff5772d3faad350",
+        "reviewed": true,
+        "note": "Origin forest remains rendered before new-generation interruption; marker/inventory checked by control."
+      },
+      {
+        "file": "recovered/initial.png",
+        "sha256": "cc39ba4ecbb83080160775ab560eed2a007eb586e154e7fddf0db2e1a0b8a20c",
+        "reviewed": true,
+        "note": "Previously saved snowy corner renders after intentional process termination; no loading overlay."
+      },
+      {
+        "file": "recovered/committed-marker-area.png",
+        "sha256": "639871958121f1c0464eceb8dd366d077f18645e837e5dd38dadbef9edb004ab",
+        "reviewed": true,
+        "note": "Origin forest remains rendered after recovery; marker/inventory checked by control."
+      },
+      {
+        "file": "recovered/completed-interrupted-region.png",
+        "sha256": "3a7b330e6a890b7509fc6b71c490392b3cefaa92c775d7a6a6a9f0cb218eb533",
+        "reviewed": true,
+        "note": "Recovered destination has continuous grass slopes, birch forest and cows; no loading overlay or missing foreground."
+      },
+      {
+        "file": "recovered/distant.png",
+        "sha256": "b76ef6f5c8cac4b6e457eb30f44e4b7908a33c543f4d9f6f026c887978e16d47",
+        "reviewed": true,
+        "note": "Saved desert surface and water channel render on revisit, no loading overlay."
+      },
+      {
+        "file": "verified/initial.png",
+        "sha256": "a359de4563bc16ec2286743552f51194ba20c03684041f33a42460697796882f",
+        "reviewed": true,
+        "note": "Same saved desert surface renders on another reopen; no loading overlay."
+      },
+      {
+        "file": "verified/committed-marker-area.png",
+        "sha256": "c00e1b888caa5018e751e6f895e39339f186144a62757c3579dfceb5c23033fe",
+        "reviewed": true,
+        "note": "Origin forest remains visible at sunset, darkening limits detail. Marker/inventory checked independently."
+      }
+    ]
+  },
+  "scope": "Standalone native.dev7 upgrade on an ordinary copied scratch world. Gold block and three diamonds survive; existing far-region header confirms new destination was unsaved before generation. One owned child intentionally killed during active generation; repaired destination and repeated clean reopens. No torn-sector write or power-loss guarantee."
+}

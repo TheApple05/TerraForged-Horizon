@@ -35,9 +35,9 @@ def main():
     native={'schema':1,'id':'terraforged_native','version':version,'game':'26.3','horizon':r['horizonRevision'],'mixins':MIXINS}
     entries['horizon-native.json']=(json.dumps(native,indent=2)+'\n').encode()
     entries['horizon-mod.toml']=('''id = "terraforged_native"
-name = "TerraForged native prototype"
+name = "TerraForged for Horizon"
 version = "'''+version+'''"
-description = "Experimental procedural TerraForged terrain for the pinned test engine."
+description = "Procedural TerraForged terrain for the pinned Horizon 26.3 engine."
 authors = ["TerraForged Revival contributors"]
 api = "0.2"
 side = "both"
@@ -47,14 +47,14 @@ namespaces = ["terraforged", "reterraforged"]
     entries['mixins/terraforged_native/LICENSE-HORIZON']=(stage/'pristine/LICENSE').read_bytes()
     for original,destination in [('licenses/ReTerraForged-MIT.txt','LICENSE-RETERRAFORGED'),('licenses/TerraForged-MIT.txt','LICENSE-TERRAFORGED'),('horizon/LICENSE','LICENSE')]:
         entries['mixins/terraforged_native/'+destination]=(ROOT/original).read_bytes()
-    entries['mixins/terraforged_native/README-TERRAFORGED.txt']=('TerraForged native prototype for Horizon 26.3\n\nRequires Horizon source '+r['horizonRevision']+' from TheApple05/horizon. See repository validation reports for hash-specific installation, client and save evidence; this package alone does not qualify modpack/player use.\nSelect terraforged:default for the native overworld. Vanilla, Nether and End keep their engine behavior.\nAll 17 classic biome variants and native pillar/marsh features are included. Qualification reports apply only to their recorded package hashes. Source carver settings, full Java feature parity, broad performance and mod combinations remain unfinished.\nThis source package contains no Minecraft files or terrain snapshots.\n').encode()
+    entries['mixins/terraforged_native/README-TERRAFORGED.txt']=('TerraForged for Horizon 26.3\n\nRequires Horizon source '+r['horizonRevision']+' from TheApple05/horizon. See repository validation reports for hash-specific installation, client and save evidence; this package alone does not qualify modpack/player use.\nSelect terraforged:default for the native overworld. Vanilla, Nether and End keep their engine behavior.\nAll 17 classic biome variants and native pillar/marsh features are included. Qualification reports apply only to their recorded package hashes. Source carver settings, full Java feature parity, broad performance and mod combinations remain unfinished.\nThis source package contains no Minecraft files or terrain snapshots.\n').encode()
     output.parent.mkdir(parents=True,exist_ok=True)
     with zipfile.ZipFile(output,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
         for name,data in sorted(entries.items()):
             info=zipfile.ZipInfo(name,(1980,1,1,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o100644<<16;z.writestr(info,data)
     with zipfile.ZipFile(output) as z:
         if z.namelist()!=sorted(entries) or any(z.read(name)!=data for name,data in entries.items()):raise ValueError('Packaged bytes differ')
-    report={'schemaVersion':1,'status':'packaged-procedural-native-prototype-not-player-qualified','artifact':str(output),'sha256':sha(output.read_bytes()),
+    report={'schemaVersion':1,'status':'packaged-procedural-native-source-not-player-qualified','artifact':str(output),'sha256':sha(output.read_bytes()),
         'stageResultSha256':sha(raw),'manifest':native,'entrySha256':{n:sha(b) for n,b in sorted(entries.items())},
         'containsMinecraftResources':False,'containsTerrainSnapshots':False,'containsJavaOrQaRuntimeBinaries':False,
         'notCovered':['Actual hmod loader installation','Native client rendering','Full native biome/feature restoration','Save/modpack/player acceptance']}

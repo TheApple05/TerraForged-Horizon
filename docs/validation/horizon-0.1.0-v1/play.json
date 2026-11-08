@@ -1,0 +1,25 @@
+{
+  "status": "passed-authenticated-cli-play-and-user-reported-gui-entry",
+  "cliPlay": {
+    "liveOwnerGate": true,
+    "offlineFallbackReported": false,
+    "preset": "terraforged:default",
+    "structuresEnabled": true,
+    "healthyGroundedSurvival": true,
+    "cleanExitCode": 0,
+    "rawReportSha256": "8e720de38e2cb836b61ec8a6869612c267c42890d3b8cdeaafa6ce310104d329",
+    "firstRunAccessibilityContinueRecorded": true,
+    "imageSha256": "e60ae2589e0227104587a5b4d585691f0918328a2665933cae72aff120f971fb",
+    "imageReview": "Full hearts/hunger and visible snowy stone/grass foreground; fog limits distant mountain scenery, no loading overlay. No account identifiers displayed in image."
+  },
+  "guiPlay": {
+    "kind": "user reported, no independent desktop observation",
+    "launchAndNewWorldEntryConfirmed": true,
+    "userSaveQuitNotSeparatelyConfirmed": true,
+    "customizeDisabledReported": true,
+    "customizeEditorImplemented": false
+  },
+  "computerUse": "off at user request",
+  "containsAccountValues": false,
+  "sessionScope": "Current Minecraft access session imported from Prism with ownership/profile checks. No approved project Microsoft app ID; no use of Prism OAuth application ID or Microsoft refresh token. Refresh in Prism and reimport on expiry."
+}

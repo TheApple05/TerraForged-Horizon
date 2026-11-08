@@ -1,0 +1,33 @@
+{
+  "status": "passed-authenticated-installed-cli-play-with-earlier-gui-evidence",
+  "cliPlay": {
+    "liveOwnerGate": true,
+    "offlineFallbackReported": false,
+    "preset": "terraforged:default",
+    "structuresEnabled": true,
+    "healthyGroundedSurvival": true,
+    "cleanExitCode": 0,
+    "rawReportSha256": "4a72a4fd54cfb2000cb3d82da531688137b4ccc2642b42516543d175c02fc018",
+    "firstRunAccessibilityOnboardingDisabledInThisFreshQaInstance": true,
+    "imageSha256": "0844e1a12a1793e77f317d5fbaa504c08b1191c7ff5ffd9fdb2d47c2542163bc",
+    "imageReview": {
+      "file": "authenticated-play.png",
+      "sha256": "0844e1a12a1793e77f317d5fbaa504c08b1191c7ff5ffd9fdb2d47c2542163bc",
+      "reviewed": true,
+      "observation": "Full hearts/food, grounded survival view beside snow, grass and gravel. World is rendered without a loading overlay. Close terrain limits the panorama."
+    },
+    "exitPropagation": "The unchanged launcher62e533e cli.rs attached() waits for the game and returns failure for a nonzero exit."
+  },
+  "earlierGuiPlay": {
+    "kind": "User reported RC.1 GUI Play and new-world entry, no independent desktop observation. Not a new RC.2 manual confirmation.",
+    "clientSha256": "011349e00fd1918c62cf23a9a5dabc342cce4ecac131710c0788a79e99b7b8ce",
+    "hmodSha256": "68a2aaae97c3e16b9c8deb4f6095febef7201de94e7fe443746756b200926709",
+    "launcherBytesUnchanged": true,
+    "launchAndNewWorldEntryConfirmed": true,
+    "userSaveQuitNotSeparatelyConfirmed": true,
+    "customizeDisabledReported": true
+  },
+  "computerUse": "off at user request",
+  "containsAccountValues": false,
+  "sessionScope": "Current Minecraft access session imported from Prism with ownership/profile checks. No approved project Microsoft app ID; no use of Prism OAuth application ID or Microsoft refresh token. Refresh in Prism and reimport on expiry."
+}
