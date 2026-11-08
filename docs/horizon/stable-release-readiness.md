@@ -154,5 +154,18 @@ native archive remains off until `horizon-mods.txt` explicitly contains
 browser installed, so it cannot enable this manually placed archive. The
 [Windows instructions](windows-0.1.0-release.md) now include that line while
 preserving other preferences. Both the original refused build and rejected CLI
-enable attempt remain recorded. The next attempt has passed the trust refusal
-and started the real pinned-source native build; its result is pending.
+enable attempt remain recorded. The next attempt passes the trust refusal,
+compiles the actual downloaded HMOD and installs native version
+`native-f43eebf-99bd42e244c2`. Its record contains only TerraForged 0.1.0 with the
+intended engine and mixin pins. The installed client SHA-256 is
+`011349e00fd1918c62cf23a9a5dabc342cce4ecac131710c0788a79e99b7b8ce`.
+
+Public `prepare --minecraft` exits zero for that version too. The QA wrapper
+then rejects an obsolete development-only `horizon-prepare.json` requirement.
+That raw failure is preserved; a separate validation uses the launcher's actual
+`horizon-resources.json`, verifies the manifest's facts digest and hashes the
+required facts/worldgen files. The shared QA resource check now accepts public
+preparation while still hashing an optional development receipt when present.
+Eight UI/setup/shutdown regression tests and the readiness self-test pass.
+Installed world creation, sustained generation, upgrade and Play acceptance are
+now running or pending; the successful build alone does not qualify them.

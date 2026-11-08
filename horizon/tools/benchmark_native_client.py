@@ -8,7 +8,7 @@ from __future__ import annotations
 import argparse, datetime as dt, hashlib, json, math, os, platform, shutil, statistics, subprocess, sys, time
 from pathlib import Path
 from benchmark_kernel_sampler import memory_reader
-from verify_native_ui import copy_prepared_resources, exit_details, shutdown_owned_client
+from verify_native_ui import checked_resources, copy_prepared_resources, exit_details, shutdown_owned_client
 from client_exclusivity import ExclusiveClientGuard, horizon_client_pids
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -156,13 +156,6 @@ def self_test():
         assert not blocked.observe({**status, 'pending_uploads': 1}, {'loaded': True}, memory, elapsed, True)
     assert not blocked.observe(status, {'loaded': True}, memory, 20)  # Stale server observations cannot pass.
     print('NATIVE_CLIENT_BENCH_SELF_TEST_OK target position queues protos staleMemory stableWindow')
-
-
-def checked_resources(source):
-    files = [source / name for name in ('horizon-prepare.json', 'horizon-resources.json', 'facts.json')]
-    files += sorted((source / 'worldgen').rglob('*.json'))
-    if not (source / 'worldgen').is_dir(): raise ValueError('Prepared worldgen directory missing')
-    return {p.relative_to(source).as_posix(): sha(p) for p in files}
 
 
 def unchanged(source, expected):

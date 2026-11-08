@@ -6,6 +6,14 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
+def checked_resources(source):
+    files=[source/name for name in ('horizon-resources.json','facts.json')]
+    # Direct development preparation may also leave this receipt; public launcher preparation does not.
+    if (source/'horizon-prepare.json').exists():files.append(source/'horizon-prepare.json')
+    if not (source/'worldgen').is_dir():raise ValueError('Prepared worldgen directory missing')
+    files+=sorted((source/'worldgen').rglob('*.json'))
+    return {p.relative_to(source).as_posix():sha(p) for p in files}
+
 def seed_value(text):
     try:value=int(text)
     except ValueError:raise argparse.ArgumentTypeError('Seed must be a signed 64-bit integer') from None
@@ -140,8 +148,7 @@ def main():
         path=work/'homes'/name.lower();path.mkdir(parents=True);env[name]=str(path.resolve())
     game=Path(env['HORIZON_HOME']);socket=game/'control.sock';resources=work/'prepared-resources'
     (game/'options.txt').write_text('onboardAccessibility:false\nrenderDistance:6\nsimulationDistance:3\nmaxFps:30\ntutorialStep:none\n',encoding='utf-8')
-    checked=[source/'horizon-prepare.json',source/'horizon-resources.json',source/'facts.json']+sorted((source/'worldgen').rglob('*.json'))
-    before={path.relative_to(source).as_posix():sha(path) for path in checked}
+    before=checked_resources(source)
     report={'schemaVersion':2,'status':'running','startedAtUtc':dt.datetime.now(dt.timezone.utc).isoformat(),'horizonRevision':stage['horizonRevision'],'stageResultSha256':sha(stage_file),'verifierSourceSha256':sha(work/'verifier-source.py'),'hmodSha256':sha(artifact),'qaSpawnSupplied':False,'creationViaUi':True,'structuresEnabled':True,'commandsEnabledViaUiForQa':True,'renderDistanceChunks':6,'gameAssetsDownloaded':False,'runs':[],'visibilityChecks':[],'notCovered':['All 17 native biome resources/features','Source carver configuration','Original TerraForged spawn-height and player-placement parity','Structure placement coverage','Standard launcher native-build installation','Controlled native performance and mod combinations']}
     if a.classic:
         report['classicTargetsSha256']=sha(targets_file);report['classicRenderedViews']=[];report['classicTargetOrder']=target_names
