@@ -1,0 +1,26 @@
+{
+  "status": "unmodified-qualified-smoke-previews",
+  "hmodSha256": "5c08e728846c45437541a740a58fa7524058ec171debb324e672be41c1aae247",
+  "sourceLowerReportSha256": "7f5b5a2845f123c313d7418cb53b14af39656237a9c38f1af0706a97f64ac6ed",
+  "visualReviewSha256": "076d9584900491f7411ebe85659eadd71d83726dd79f779136d67bc9f56f9333",
+  "images": [
+    {
+      "biome": "reterraforged:stone_forest",
+      "source": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-lower-pillars-uniform-v1\\lower-stone_forest.png",
+      "publishedPath": "docs/images/native-dev5-stone-forest.png",
+      "sha256": "109c41a778b178a82034778bc56321e74f73fdaa61dd7cd0768a38cef34e43e4",
+      "edited": false
+    },
+    {
+      "biome": "reterraforged:bryce",
+      "source": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-lower-pillars-uniform-v1\\lower-bryce.png",
+      "publishedPath": "docs/images/native-dev5-bryce.png",
+      "sha256": "654772f418ac10b9294dc92df8425de865ef0a73f2aa8c58cb852ee1ba6649ff",
+      "edited": false
+    }
+  ],
+  "notEstablished": [
+    "Independent whole-feature Java geometry parity",
+    "User aesthetic approval"
+  ]
+}

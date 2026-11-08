@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "reviewKind": "read-only screenshot review",
+  "reviewedAtUtc": "2026-11-08T01:21:04.480327+00:00",
+  "status": "passed-visible-rendering-with-limits",
+  "scope": "21 successful v3 original PNGs plus 2 lower pillar followup PNGs; failed v2 excluded",
+  "sourceReports": [
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\docs\\validation\\horizon-native-classic-ui-uniform-v3.json",
+      "sha256": "c7a2bf33a3c18a690ce4c02209e9d6fff2bba5bf4b08ca854851e3d1bb90f86c",
+      "status": "passed-native-ui-create-reopen-smoke-awaiting-image-review"
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\docs\\validation\\horizon-native-lower-pillars-uniform-v1.json",
+      "sha256": "7f5b5a2845f123c313d7418cb53b14af39656237a9c38f1af0706a97f64ac6ed",
+      "status": "raw-pass-awaiting-image-review"
+    }
+  ],
+  "originalReviewReceiptPath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\candidate-visual-review-v3.json",
+  "originalImagesInspected": 21,
+  "supplementalLowerImagesInspected": 2,
+  "totalImagesInspected": 23,
+  "allImagesVisuallyInspected": true,
+  "allReportedScreenshotHashesMatch": true,
+  "blankOrLoadingScreenFound": false,
+  "obviousMissingOrCheckerboardTexturesFound": false,
+  "stonePillarPresenceConfirmedByLowerView": true,
+  "bryceHoodooPresenceConfirmedByLowerView": true,
+  "geometricSourceParityEstablished": false,
+  "limits": [
+    "Original high stone forest view remains geometrically inconclusive; lower followup clearly shows stone-column bodies.",
+    "Original high Bryce view remains limited; lower followup clearly shows banded hoodoo bodies.",
+    "RD6 fog, clipped terrain and foliage limit several originals.",
+    "Shattered savanna scrub original includes command chat overlay.",
+    "These screenshots confirm coherent visible rendering and pillar presence, not full independent geometric source parity.",
+    "No game controls, process operations, source edits, raw-report edits or player-profile reads performed."
+  ],
+  "screenshots": [
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\native-preset-ui.png",
+      "actualSha256": "1257f37ab75e521e80d61d04c45d7bdd433d2057d0a8a92d24518a9bd9420ad8",
+      "reportedSha256": "1257f37ab75e521e80d61d04c45d7bdd433d2057d0a8a92d24518a9bd9420ad8",
+      "hashMatchesReport": true,
+      "observation": "TerraForged world type, seed8675309, structures ON and bonus chest OFF are legible; UI renders correctly.",
+      "visualPass": true,
+      "limited": false
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\natural-spawn.png",
+      "actualSha256": "1f9198b36f7f289ef8cc260c9e5ff884d55f2f7354ddd313f878a73221e0fbd9",
+      "reportedSha256": "1f9198b36f7f289ef8cc260c9e5ff884d55f2f7354ddd313f878a73221e0fbd9",
+      "hashMatchesReport": true,
+      "observation": "Gravel/stone, snow, grass and dirt render coherently at ground level; full hearts and food HUD visible.",
+      "visualPass": true,
+      "limited": false
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-shattered_savanna_scrub.png",
+      "actualSha256": "103ec919014c0f4aa98b2bb6979c870c88872adf43e879b722e7b3ba08292cfe",
+      "reportedSha256": "103ec919014c0f4aa98b2bb6979c870c88872adf43e879b722e7b3ba08292cfe",
+      "hashMatchesReport": true,
+      "observation": "Textured coastal water and underwater plants, sand, dense green foliage and yellow scrub ground render. Chat overlay obscures lower-middle area; high camera/RD6 limits terrain-shape assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\game-0.png",
+      "actualSha256": "ef80e429cff7b283dd139335cc2e902b45803a7bee77de1c14272faa71fe93e0",
+      "reportedSha256": "ef80e429cff7b283dd139335cc2e902b45803a7bee77de1c14272faa71fe93e0",
+      "hashMatchesReport": true,
+      "observation": "Mixed birch/conifer forest canopy, ground flowers, grass and sheep render coherently; minor distant detached/clipped foliage at edge.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-bryce.png",
+      "actualSha256": "2f82064d07dae23bd8df30cf2de989919fe299ec215dd91241590a5c8da47b0a",
+      "reportedSha256": "2f82064d07dae23bd8df30cf2de989919fe299ec215dd91241590a5c8da47b0a",
+      "hashMatchesReport": true,
+      "observation": "Orange and striped hoodoo pillars and grass/stone terrain render. Most frame is sky; RD6 fog/cutoff and high camera limit geometric source-parity assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-cold_marshland.png",
+      "actualSha256": "fa9ef059842ccd1905251a03d53ceac6728a9df33fb31544fbe19f2f4b5d3c1e",
+      "reportedSha256": "fa9ef059842ccd1905251a03d53ceac6728a9df33fb31544fbe19f2f4b5d3c1e",
+      "hashMatchesReport": true,
+      "observation": "Large conifers, orange/grass ground, shallow water and rocks render coherently. Several detached leaf strips at far clipped edges; high camera/RD6 limits horizon assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-cold_steppe.png",
+      "actualSha256": "f5cc87922c509f057d7f2a3fc7d9d07c9393b2fae5a41fb3203c8186209fef9d",
+      "reportedSha256": "f5cc87922c509f057d7f2a3fc7d9d07c9393b2fae5a41fb3203c8186209fef9d",
+      "hashMatchesReport": true,
+      "observation": "Snow and grass cover steep mountain terrain; no blank or obvious missing textures. High camera/RD6 creates hard far-edge cutoff and limits distant terrain-shape assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-fir_forest.png",
+      "actualSha256": "deb8d13c7be83d7fd89fe2064c86889ba1f582b85a3bc58df27e0001a8873e2d",
+      "reportedSha256": "deb8d13c7be83d7fd89fe2064c86889ba1f582b85a3bc58df27e0001a8873e2d",
+      "hashMatchesReport": true,
+      "observation": "Fir/conifer forest, green terrain, small water depression and structure detail render coherently. Clipped peripheral foliage/high-camera RD6 horizon limits remain.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-flower_plains.png",
+      "actualSha256": "d8c85f6831f6c9bbd7b0bef39c137091ca624376a95254bb5071452d4fbdf658",
+      "reportedSha256": "d8c85f6831f6c9bbd7b0bef39c137091ca624376a95254bb5071452d4fbdf658",
+      "hashMatchesReport": true,
+      "observation": "Green terrain, mixed foliage and several patches of pink/red/white flowers render coherently. Faded detached foliage at distant RD6 clipped edges limits horizon assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-frozen_lake.png",
+      "actualSha256": "ec28409ae9a571c1e404f8def03847660986f375cd427827d170dc978643a41e",
+      "reportedSha256": "ec28409ae9a571c1e404f8def03847660986f375cd427827d170dc978643a41e",
+      "hashMatchesReport": true,
+      "observation": "Broad textured frozen lake, snow-covered banks, conifers and many ice-spike features render. Distant fog/RD6 and high camera limit horizon geometry assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-frozen_marsh.png",
+      "actualSha256": "84824a2c7eec037b9409510648d2c60afa9bff4b4e31cc3b53ea8fb00c3c552a",
+      "reportedSha256": "84824a2c7eec037b9409510648d2c60afa9bff4b4e31cc3b53ea8fb00c3c552a",
+      "hashMatchesReport": true,
+      "observation": "Snow-covered marsh islands, textured ice channels, snowy conifers and reeds render coherently. High camera/RD6 fog/clipping limits horizon geometry assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-lake.png",
+      "actualSha256": "4e6788f72e34470d843cb3f649cc3042b9db0cf5fcd5d0aab83f8b8337f721dc",
+      "reportedSha256": "4e6788f72e34470d843cb3f649cc3042b9db0cf5fcd5d0aab83f8b8337f721dc",
+      "hashMatchesReport": true,
+      "observation": "Textured transparent lake water, underwater plants, grass terraces, sand/stone banks and cows render coherently. Hard far-edge terrain cutoff occupies substantial view, limiting geometric extent assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-marshland.png",
+      "actualSha256": "2f0bb1881875746812d0afd3683fa8688e2834dfd5550b1ca8291aedb1c7e549",
+      "reportedSha256": "2f0bb1881875746812d0afd3683fa8688e2834dfd5550b1ca8291aedb1c7e549",
+      "hashMatchesReport": true,
+      "observation": "Steep dirt/grass slope, exposed stone, patchy marsh ground/reeds, conifers and river render coherently. Slope-facing camera and distant fog/RD6 limit whole-biome shape assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-savanna_scrub.png",
+      "actualSha256": "28cb78a84d3cb80a68267c727ba2feffbec1c6885dd00bf8298356356392c741",
+      "reportedSha256": "28cb78a84d3cb80a68267c727ba2feffbec1c6885dd00bf8298356356392c741",
+      "hashMatchesReport": true,
+      "observation": "Dry yellow-green terraced ground, pale sand and layered terracotta render coherently. Hard clipped terrain edge/high camera RD6 limits geometric extent assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-snowy_fir_forest.png",
+      "actualSha256": "336fe11d0a645fb21cde4ba1ae915dffae3165969d03fff7a4bfbaaaabbb4357",
+      "reportedSha256": "336fe11d0a645fb21cde4ba1ae915dffae3165969d03fff7a4bfbaaaabbb4357",
+      "hashMatchesReport": true,
+      "observation": "Dense snow-capped conifers on snowy terraced ground render coherently. Fog, detached foliage and a sharp far-edge gap/cutoff are visible at RD6; horizon assessment limited.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-snowy_taiga_scrub.png",
+      "actualSha256": "062789ca5cf86b2d4fb0c5c6224ff1a543480fb18504fdd90653f00be83309a1",
+      "reportedSha256": "062789ca5cf86b2d4fb0c5c6224ff1a543480fb18504fdd90653f00be83309a1",
+      "hashMatchesReport": true,
+      "observation": "Snow-covered rolling/terraced terrain with scattered scrub plants and exposed grass/dirt edges renders coherently. Hard far cutoff/high camera RD6 limits terrain extent assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-steppe.png",
+      "actualSha256": "a98e1c8d58d017a5e0c5c965d049dc64a4749f779f181e9a32d8490d5635af35",
+      "reportedSha256": "a98e1c8d58d017a5e0c5c965d049dc64a4749f779f181e9a32d8490d5635af35",
+      "hashMatchesReport": true,
+      "observation": "Dry yellow-green scrub/grass and steep terraced hills render coherently, with a ridge opening visible. Large hard terrain cutoffs/high camera RD6 limit geometric extent assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-stone_forest.png",
+      "actualSha256": "2c05eb14c2fedc15263a78da1b325c79a0ad39a5ad1869df2fc4c43418ea1a8e",
+      "reportedSha256": "2c05eb14c2fedc15263a78da1b325c79a0ad39a5ad1869df2fc4c43418ea1a8e",
+      "hashMatchesReport": true,
+      "observation": "Foliage and some near stone-column faces render, but most distant column bodies/ground are fogged or absent from this very high view, leaving detached cap-like foliage silhouettes. Geometric stone-pillar assessment inconclusive; lower camera required.",
+      "visualPass": true,
+      "limited": true,
+      "geometryAssessment": "inconclusive"
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-taiga_scrub.png",
+      "actualSha256": "8d29abfaf7f43b66eeb7cec98ccb9dfb7f62458ed93ded7d03002fb1b84549b4",
+      "reportedSha256": "8d29abfaf7f43b66eeb7cec98ccb9dfb7f62458ed93ded7d03002fb1b84549b4",
+      "hashMatchesReport": true,
+      "observation": "Tall and small conifers, green terraced slopes, orange ground patches, rocks and small openings render coherently. Distant fog and clipped edges limit extent assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\classic-warm_beach.png",
+      "actualSha256": "93424df25a5b6aa169cfe4d97f21be5bf8a4316523440f9942410b3898326435",
+      "reportedSha256": "93424df25a5b6aa169cfe4d97f21be5bf8a4316523440f9942410b3898326435",
+      "hashMatchesReport": true,
+      "observation": "Yellow-green coastal ground meets pale sandy bank and transparent water with underwater plants; sheep, scrub, a tree and pumpkins render. Distant fog/clipped foliage limits extent assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\game-1.png",
+      "actualSha256": "af570d0fdd5f0ba402cd4da6b83bb4ad644e6357060ab093a8aebdeefd768691",
+      "reportedSha256": "af570d0fdd5f0ba402cd4da6b83bb4ad644e6357060ab093a8aebdeefd768691",
+      "hashMatchesReport": true,
+      "observation": "Pale sandy desert, shallow water trench, cacti, dry vegetation and clouds render coherently; no blank or obvious missing textures.",
+      "visualPass": true,
+      "limited": false
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-lower-pillars-uniform-v1\\lower-stone_forest.png",
+      "actualSha256": "109c41a778b178a82034778bc56321e74f73fdaa61dd7cd0768a38cef34e43e4",
+      "reportedSha256": "109c41a778b178a82034778bc56321e74f73fdaa61dd7cd0768a38cef34e43e4",
+      "hashMatchesReport": true,
+      "observation": "Tall textured stone-column bodies with grass and dirt bands, jungle foliage and vines render clearly. Distant cap-like shapes are adjacent savanna trees on visible ground. Lower view resolves visible stone-pillar presence ambiguity.",
+      "visualPass": true,
+      "limited": true,
+      "stonePillarBodiesVisible": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-lower-pillars-uniform-v1\\lower-bryce.png",
+      "actualSha256": "654772f418ac10b9294dc92df8425de865ef0a73f2aa8c58cb852ee1ba6649ff",
+      "reportedSha256": "654772f418ac10b9294dc92df8425de865ef0a73f2aa8c58cb852ee1ba6649ff",
+      "hashMatchesReport": true,
+      "observation": "Several coherent orange, yellow and brown banded hoodoo pillars render clearly with exposed stone and grass slopes. Lower view confirms visible hoodoo bodies.",
+      "visualPass": true,
+      "limited": true,
+      "bryceHoodooBodiesVisible": true
+    }
+  ]
+}

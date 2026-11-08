@@ -12,7 +12,7 @@ See [classic runtime integration](docs/horizon/classic-runtime-integration.md), 
 
 The [reviewed issue and recovery report](docs/horizon/issues-2026-11-07.md) records CI recovery, loading observations, incomplete acceptance gates, and retained failed attempts.
 
-The native.dev5 [carver performance candidate](docs/horizon/native-carver-performance.md) preserves six exact terrain snapshots and reduces median generation time for the measured batch from 5.98 to 1.85 seconds. Fresh client/save qualification and CI for that candidate are in progress; native.dev4 remains the completed functional baseline.
+The native.dev5 [carver performance update](docs/horizon/native-carver-performance.md) preserves six exact terrain snapshots and reduces median generation time for the measured batch from 5.98 to 1.85 seconds. Its fresh all-17 client/save run, 56,832 stored biome checks and 23-image smoke review pass. General native loading performance remains unfinished; diagnostic batches do not reproduce some longer live waits.
 
 ## Build and verify
 

@@ -1,0 +1,54 @@
+{
+  "status": "profiled-fir-proto-and-decoration",
+  "startedAtUtc": "2026-11-08T01:24:01.622836+00:00",
+  "command": [
+    "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\chunkgen_native_stem.exe",
+    "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\prepared-resources",
+    "--seed",
+    "8675309",
+    "--size",
+    "19",
+    "--threads",
+    "15",
+    "--center",
+    "0",
+    "-2731",
+    "--json",
+    "--no-map",
+    "--world-stem",
+    "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+    "--snapshot",
+    "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\fir-halo15\\terrain"
+  ],
+  "executableSha256": "b1682ab1bc51f07ad7fcb4e6d66d32d3a69a3ee7ef3f3ea7c090a30d0ca1b6f6",
+  "scope": "Exact fir-forest location, 361 proto chunks and 289 decorated interiors. Prepared benchmark only; no full streaming/lighting/FPS acceptance.",
+  "exitCode": 0,
+  "bench": [
+    {
+      "biomes_ms_chunk": 26.321853462603883,
+      "carvers_ms_chunk": 17.87359113573407,
+      "chunks": 361,
+      "cpu_s": 0.0,
+      "noise_ms_chunk": 66.30991939058171,
+      "phase": "proto",
+      "structures_ms_chunk": 194.5715966759003,
+      "surface_ms_chunk": 4.884726038781163,
+      "threads": 15,
+      "wall_s": 7.7888337
+    },
+    {
+      "chunks": 289,
+      "phase": "decorate",
+      "wall_s": 0.1069626
+    }
+  ],
+  "snapshots": {
+    "terrain-decorated.bin": "e9730625f222db0cb2e0ea460ecce18cd50b9f14ca4f5daa679d4c4e9f5cf3f8",
+    "terrain-terrain.bin": "0cf6da966ba6e261e02ef79502300246610457a6256ac308bf8c261c169eeb57"
+  },
+  "logs": {
+    "stdout.log": "65d94956631ba44030004b13afe41a9f511866f8ecf1d45650d242b00f33a328",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "completedAtUtc": "2026-11-08T01:24:13.560629+00:00"
+}

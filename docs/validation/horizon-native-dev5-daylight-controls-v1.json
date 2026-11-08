@@ -1,0 +1,20 @@
+{
+  "purpose": "Keep remaining QA screenshots in daylight after healthy natural survival spawn and first shattered-savanna capture. Seed and generation flags remain unchanged.",
+  "initialNaturalSpawnAlreadyCaptured": true,
+  "commands": [
+    {
+      "command": "gamerule advance_time false",
+      "exitCode": 0,
+      "stdout": "{\"chat\":[\"Game rule advance_time is now set to false\"],\"ok\":true}\n",
+      "stderr": "",
+      "completedAtUtc": "2026-11-08T00:54:36.071260+00:00"
+    },
+    {
+      "command": "time set noon",
+      "exitCode": 0,
+      "stdout": "{\"chat\":[\"Set minecraft:overworld to time marker minecraft:noon\"],\"ok\":true}\n",
+      "stderr": "",
+      "completedAtUtc": "2026-11-08T00:54:36.122524+00:00"
+    }
+  ]
+}

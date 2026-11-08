@@ -1,0 +1,54 @@
+{
+  "status": "profiled-fir-proto-and-decoration",
+  "startedAtUtc": "2026-11-08T01:20:36.330439+00:00",
+  "command": [
+    "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\chunkgen_native_stem.exe",
+    "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\prepared-resources",
+    "--seed",
+    "8675309",
+    "--size",
+    "5",
+    "--threads",
+    "4",
+    "--center",
+    "0",
+    "-2731",
+    "--json",
+    "--no-map",
+    "--world-stem",
+    "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+    "--snapshot",
+    "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\fir-profile\\terrain"
+  ],
+  "executableSha256": "b1682ab1bc51f07ad7fcb4e6d66d32d3a69a3ee7ef3f3ea7c090a30d0ca1b6f6",
+  "scope": "Exact fir-forest location, 25 proto chunks and nine decorated interiors. Prepared benchmark only; no full streaming/lighting/FPS acceptance.",
+  "exitCode": 0,
+  "bench": [
+    {
+      "biomes_ms_chunk": 135.095348,
+      "carvers_ms_chunk": 0.545324,
+      "chunks": 25,
+      "cpu_s": 0.0,
+      "noise_ms_chunk": 145.93294,
+      "phase": "proto",
+      "structures_ms_chunk": 185.161404,
+      "surface_ms_chunk": 3.4012000000000002,
+      "threads": 4,
+      "wall_s": 2.9420019
+    },
+    {
+      "chunks": 9,
+      "phase": "decorate",
+      "wall_s": 0.0222728
+    }
+  ],
+  "snapshots": {
+    "terrain-decorated.bin": "9b87689b9a370b46a0dccb2fd154bce9992a8be5f2397474e8e63e597b7c6c6a",
+    "terrain-terrain.bin": "f1ea6cdf8daf691514cff3c25045d95aa3019d1deacf4bfa18b5fb7ec9c3aafc"
+  },
+  "logs": {
+    "stdout.log": "295485d97c9a8d9ee61be4748e84a303f6ae9693484712b4c166d513cb8664dd",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "completedAtUtc": "2026-11-08T01:20:42.169865+00:00"
+}
