@@ -5,6 +5,28 @@ from concurrent.futures import FIRST_COMPLETED,ThreadPoolExecutor,wait
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+
+def exit_details(code):
+    return {'exitCode':code,'exitCodeUnsignedHex':None if code is None else f'0x{code & 0xffffffff:08x}'}
+
+def shutdown_owned_client(process,quit_client,evidence):
+    """Record the initial exit separately from any action taken on this Popen child."""
+    started=time.monotonic();evidence.update(pid=process.pid,initialExit=exit_details(process.poll()),actions=[])
+    try:
+        if process.poll() is None:
+            try:
+                evidence['actions'].append('control-quit');quit_client();process.wait(timeout=20)
+            except Exception as error:
+                evidence['gracefulError']=str(error)
+                if process.poll() is None:
+                    evidence['actions'].append('own-process-terminate');process.terminate()
+                    try:process.wait(timeout=10)
+                    except subprocess.TimeoutExpired:
+                        if process.poll() is None:
+                            evidence['actions'].append('own-process-kill');process.kill()
+                        process.wait(timeout=10)
+    finally:
+        evidence.update(finalExit=exit_details(process.poll()),elapsedSeconds=time.monotonic()-started,completedAtUtc=dt.datetime.now(dt.timezone.utc).isoformat())
 def copy_prepared_resources(source,destination,progress,workers=8):
     """Copy ordinary files into a fresh tree with bounded parallel I/O."""
     if not 1<=workers<=8:raise ValueError('Resource copy supports one to eight workers')
@@ -289,7 +311,9 @@ def main():
             state=control(['state']);image=screenshot(f'game-{index}')
             if a.classic and index==0 and not a.classic_target:render_classic_targets(target_names[1:] if a.classic_first else target_names)
             checkpoint(f'saving client {index}')
-            control(['quit'],120);code=process.wait(timeout=120);process=None;log.close();log=None
+            report['clientLaunches'][-1]['requestedShutdown']='control-quit'
+            control(['quit'],120);code=process.wait(timeout=120)
+            report['clientLaunches'][-1].update(exit_details(code));process=None;log.close();log=None
             if code:raise RuntimeError(f'Client exit {code}')
             action='check_ui_all' if index else 'check_ui'
             arguments=[]
@@ -303,14 +327,15 @@ def main():
         report['status']='passed-native-ui-create-reopen-smoke-awaiting-image-review';report['renderedImagesNeedReview']=True
     except Exception as error:
         report['status']='failed';report['error']=str(error)
-        if process is not None:report['clientExitCodeOnError']=process.poll()
+        if process is not None:
+            report['clientExitCodeOnError']=process.poll()
+            report['clientExitOnError']=exit_details(report['clientExitCodeOnError'])
     finally:
-        if process is not None and process.poll() is None:
-            try:subprocess.run([str(ctl),'--socket',str(socket),'quit'],cwd=game,env=env,capture_output=True,timeout=20);process.wait(timeout=20)
-            except Exception:
-                process.terminate()
-                try:process.wait(timeout=10)
-                except subprocess.TimeoutExpired:process.kill();process.wait()
+        if process is not None:
+            cleanup=report.setdefault('clientCleanup',{})
+            try:shutdown_owned_client(process,lambda:subprocess.run([str(ctl),'--socket',str(socket),'quit'],cwd=game,env=env,capture_output=True,timeout=20,check=True),cleanup)
+            except Exception as error:
+                report['cleanupError']=str(error);report['status']='failed'
         if log is not None:log.close()
         report['checkedResourcesUnchanged']=all((source/name).is_file() and sha(source/name)==digest for name,digest in before.items());report['checkedResourceCopyUnchanged']=resources.exists() and all((resources/name).is_file() and sha(resources/name)==digest for name,digest in before.items());report['checkedResourceFilesSha256']=before
         if not report['checkedResourcesUnchanged'] or not report['checkedResourceCopyUnchanged']:
