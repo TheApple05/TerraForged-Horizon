@@ -1,5 +1,9 @@
 # Current Horizon engine and client evidence
 
+For the native.dev7 baseline versus smoothing/NaN-patched Windows builds, see the
+[SSD world generation client checks](ssd-worldgen-client.md). These include
+structures-enabled UI worlds and preserve mixed speed observations.
+
 For the latest native.dev5 all-17 client/save acceptance and current limitations,
 see [classic runtime integration](classic-runtime-integration.md) and the
 [reviewed recovery report](issues-2026-11-07.md). The records below retain their

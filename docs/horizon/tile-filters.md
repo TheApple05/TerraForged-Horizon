@@ -53,8 +53,9 @@ smoothing iterations to 0..64, radius to 0..64, and requires finite rates/volume
 These are explicit supported-input limits, not claims that Java rejects all
 outside values. One owning WorldFilters caches its last immutable erosion brush
 set with Arc sharing, matching the source's last-size reuse. Tile arrays are fresh
-owned values, not a process-wide pool. A bounded production tile cache is separate
-remaining integration work.
+owned values, not a process-wide pool. Production terrain caching is separate
+from these filter operations. The [SSD client checks](ssd-worldgen-client.md)
+record actual baseline/patched runtime coverage and its performance limits.
 
 The basic modifier/smoothing/steepness draft used DeepSeek job
 `f07108a9f8514216a44eef626874ee2e` (estimated USD 0.0025212, separate from Codex).
