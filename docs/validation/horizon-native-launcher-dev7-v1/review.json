@@ -1,0 +1,669 @@
+{
+  "status": "reviewed-passed-scoped-local-launcher-client-save-acceptance",
+  "reviewedAtUtc": "2026-11-08T05:19:20.503231+00:00",
+  "reviewer": "Codex root; manual image inspection and independent receipt/hash assertions",
+  "rawVerdictPreserved": "passed-direct-installed-client-ui-save-qa-awaiting-image-review",
+  "rawReportSha256": "282bf18e4971ff7478eff5eaed8a3a4aeb47881903111c61e43c7c185b1f478a",
+  "hmodSha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+  "clientSha256": "6a87351e5c85b83d728e55cfd6597cc90917b286a42fd16c8b819911fae6cd85",
+  "staticLauncherSha256": "0d5f250705896eeded0e6800c03de961835bcd389f96d6ba908fe2bdb598f468",
+  "clientExitCodes": [
+    0,
+    0
+  ],
+  "cameraAssertions": 40,
+  "views": [
+    {
+      "label": "natural-spawn",
+      "elapsedSeconds": 2.25,
+      "trackedColumns": 637,
+      "options": {
+        "options": {
+          "renderDistance": {
+            "max": 128,
+            "min": 2,
+            "type": "int",
+            "value": 12
+          },
+          "simulationDistance": {
+            "max": 32,
+            "min": 5,
+            "type": "int",
+            "value": 12
+          }
+        }
+      }
+    },
+    {
+      "label": "reterraforged:fir_forest",
+      "elapsedSeconds": 26.312999999998283,
+      "trackedColumns": 637,
+      "options": {
+        "options": {
+          "renderDistance": {
+            "max": 128,
+            "min": 2,
+            "type": "int",
+            "value": 12
+          },
+          "simulationDistance": {
+            "max": 32,
+            "min": 5,
+            "type": "int",
+            "value": 12
+          }
+        }
+      }
+    },
+    {
+      "label": "reterraforged:frozen_marsh",
+      "elapsedSeconds": 8.78099999999904,
+      "trackedColumns": 637,
+      "options": {
+        "options": {
+          "renderDistance": {
+            "max": 128,
+            "min": 2,
+            "type": "int",
+            "value": 12
+          },
+          "simulationDistance": {
+            "max": 32,
+            "min": 5,
+            "type": "int",
+            "value": 12
+          }
+        }
+      }
+    },
+    {
+      "label": "reterraforged:shattered_savanna_scrub",
+      "elapsedSeconds": 8.187999999998283,
+      "trackedColumns": 637,
+      "options": {
+        "options": {
+          "renderDistance": {
+            "max": 128,
+            "min": 2,
+            "type": "int",
+            "value": 12
+          },
+          "simulationDistance": {
+            "max": 32,
+            "min": 5,
+            "type": "int",
+            "value": 12
+          }
+        }
+      }
+    },
+    {
+      "label": "origin",
+      "elapsedSeconds": 8.687999999998283,
+      "trackedColumns": 637,
+      "options": {
+        "options": {
+          "renderDistance": {
+            "max": 128,
+            "min": 2,
+            "type": "int",
+            "value": 12
+          },
+          "simulationDistance": {
+            "max": 32,
+            "min": 5,
+            "type": "int",
+            "value": 12
+          }
+        }
+      }
+    },
+    {
+      "label": "reopened-distant-terrain",
+      "elapsedSeconds": 14.18699999999808,
+      "trackedColumns": 637,
+      "options": {
+        "options": {
+          "renderDistance": {
+            "max": 128,
+            "min": 2,
+            "type": "int",
+            "value": 12
+          },
+          "simulationDistance": {
+            "max": 32,
+            "min": 5,
+            "type": "int",
+            "value": 12
+          }
+        }
+      }
+    }
+  ],
+  "saveReaderObservations": [
+    {
+      "fullChunks": 4,
+      "quartValues": 6144
+    },
+    {
+      "fullChunks": 5,
+      "quartValues": 7680
+    }
+  ],
+  "saveReaderScope": "Cross-revision read compatibility only; built for historical 1860b664, not exact f43 save qualification.",
+  "integrity": {
+    "lockedFilesVerified": 30,
+    "resourceFilesVerified": 28180,
+    "resourceManifestSha256": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6",
+    "preferencesNormalization": {
+      "originalSha256": "8ec689e16d81a9fb9102c4618b10b9295a12aaf8c2f4f903d883997a1da50b1f",
+      "lockedSha256": "8ec689e16d81a9fb9102c4618b10b9295a12aaf8c2f4f903d883997a1da50b1f",
+      "actualSha256": "d33604c2fe7c0ab40c1ce301c3e5d36d9df29e7d390009786610fe070d6f4e79",
+      "exactLineMultisetsEqual": true,
+      "exactKnownSortedOriginalBytes": true,
+      "allowedKnownOrderNormalization": true
+    }
+  },
+  "imagesReviewed": {
+    "game-0.png": "ff5f25642a66d875a5e5a226cc8d442415222af8f4fbb212fba7a2b7f2b08a8a",
+    "game-1.png": "0083725380d5f3010681fb7c244067a81de14cdbd130a7baad9358a326cc68fc",
+    "classic-fir_forest.png": "9b6d84a8cb56527611b0d134d97bc5ae5b81ec1c98a005b89e4a71ab845f751e",
+    "classic-frozen_marsh.png": "7340690f302d3c844d0fca85ba0bfa66237c087f3278c7e0a873728ef1e5d547",
+    "classic-shattered_savanna_scrub.png": "bf7a71c0324cc952e19bb484ff9ad32a0ff603bc7a102f4bc9906caac845c2ce",
+    "native-preset-ui.png": "8989ec5a1c114b88c02dccfa3e783695f5f9e359bac25dea69e0262193c31072",
+    "natural-spawn.png": "072e8728113427b0f7972e22d57d9c4a13fbf4f1b20b0fc2483bd1d1ee9d513d",
+    "hud-where.png": "71e105dfccdc17077a12dd6a79f62e2535d4f61e93d7cfb236c4d0a35eee39d9",
+    "hud-off.png": "ecb85ce57d89abe1ed7e177eb52642aa418713103a7674b48ed0bb69836b217b",
+    "hud-on.png": "66953fad58392ebf552e9d727ea5f482cf603c5a8f79b8d95919ef4aa1769dd3",
+    "installed-mods-screen.png": "085d81e8a9a5be64869af2a2f0a2ecc85caddac7a11adbfed0a4d4480467698d",
+    "custom-recipe-result.png": "d8d6f75822074e787272ba2e8f185d2372f21eb184eb59dadf40de6c63ea9a21",
+    "custom-recipe-crafted.png": "36eb8ef285a80958cd575cb9749015404ee6703ddecb78116717c69150d3042d",
+    "custom-block-placed.png": "4d29ff6cf66856495926b2d70c506e84af17d52f1d3e8ee502722a77ab19640d",
+    "custom-block-reopened.png": "0eb8864566796feb2b60e4be5e52c1bf3070ec991489ef08346db824f9735042"
+  },
+  "manualImageReview": "All 15 unedited images inspected: healthy spawn, preset, HUD changes, three enabled mods, actual recipe result/crafted item, placed/reopened textured light block, all three target landscapes and reopened distant desert. Terrain coherent in these views. Long TerraForged Mods row clips warning text; name/version/ON remain readable.",
+  "firDetail": {
+    "rawReportSha256": "0651df0ae41fa5f8297661b8da66d25b78b1341b1aca525c1424be7a1a4e69ab",
+    "imageSha256": "d96963a1b54b658edf4b45ab7b1c9c1ebe348c1f3f74c87cf2af3ab9a6e74285",
+    "finding": "White-wool stairs are textured; magenta patches are three magenta minecraft:cushion entities listed by the client, visible beside the structure.",
+    "cushions": [
+      {
+        "color": "magenta",
+        "id": 115,
+        "kind": "minecraft:cushion",
+        "position": [
+          11.5,
+          67.9375,
+          -43725.5
+        ],
+        "yaw": 90.0
+      },
+      {
+        "color": "magenta",
+        "id": 116,
+        "kind": "minecraft:cushion",
+        "position": [
+          11.5,
+          67.9375,
+          -43723.5
+        ],
+        "yaw": 90.0
+      },
+      {
+        "color": "magenta",
+        "id": 117,
+        "kind": "minecraft:cushion",
+        "position": [
+          12.5,
+          67.9375,
+          -43724.5
+        ],
+        "yaw": 90.0
+      }
+    ],
+    "baselineWorldAndReportUnchanged": true,
+    "exitCode": 0
+  },
+  "remainingLimits": [
+    "Launcher GUI Play and its developer-offline dispatch",
+    "Authenticated launcher Play",
+    "Exact f43 save-reader qualification",
+    "Unselected classic biome coverage",
+    "Independent Java whole-feature/scenery parity",
+    "Controlled performance measurements",
+    "Arbitrary modpacks, dedicated server and other OS clients",
+    "Sustained background ring overlap, general FPS or controlled speedup",
+    "Historical unexplained exit cause remains unknown",
+    "Only manual whole-HMOD installation; GitHub native installer selects HNMOD",
+    "Prepared-resource base copied privately; fresh signed-in/public installation not qualified",
+    "No runtime old-save upgrade/migration qualification"
+  ],
+  "excluded": [
+    "Minecraft resource content",
+    "world/save files",
+    "executables",
+    "account/session files"
+  ],
+  "copies": [
+    {
+      "path": "report.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\report.json",
+      "sha256": "282bf18e4971ff7478eff5eaed8a3a4aeb47881903111c61e43c7c185b1f478a",
+      "bytes": 806762
+    },
+    {
+      "path": "plan.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\plan.json",
+      "sha256": "0250091608c7f9e5d02c911b92b02d3dfe2db48968fddb37e35c25e33f65e0c5",
+      "bytes": 10793
+    },
+    {
+      "path": "preflight.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\preflight.json",
+      "sha256": "5e87f8c44b1e74f8f25f7e128c825188839c27c4d811a7609518c1994c81bf48",
+      "bytes": 4271
+    },
+    {
+      "path": "preparation-recovery.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\preparation-recovery.json",
+      "sha256": "27127d5c752e194225bf5972136556e49bc7a2b0bf28f7227f62314fbf23901d",
+      "bytes": 504
+    },
+    {
+      "path": "verify_installed_native_ui.py",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\verify_installed_native_ui.py",
+      "sha256": "b7385c2fbc8971591892c7fb9d7fcd06261ea1024fb80accf4c9552543ceffe2",
+      "bytes": 32860
+    },
+    {
+      "path": "inputs/client-coverage-proof.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\client-coverage-proof.json",
+      "sha256": "b083214b9479a4115fd3b0c19601912c11f4b481df5e2f37872119fd5e56dbbf",
+      "bytes": 23380
+    },
+    {
+      "path": "inputs/dev7-package-receipt.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\dev7-package-receipt.json",
+      "sha256": "60584a1a23368211b784f9746ef3c8ade10a3538894c3b1804e7a905a0472465",
+      "bytes": 12834
+    },
+    {
+      "path": "inputs/dev7-stage-result.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\dev7-stage-result.json",
+      "sha256": "3ba759d2a1ca785bf3710ae4ca93a7832bf91175b1f3cbdcb5044556166a4418",
+      "bytes": 10426
+    },
+    {
+      "path": "inputs/environment.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\environment.json",
+      "sha256": "7ce48d745010f4c265be8b21ec827f91f80def63016a7f2d16e26d621b822ad1",
+      "bytes": 1661
+    },
+    {
+      "path": "inputs/installed-horizon-native.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\installed-horizon-native.json",
+      "sha256": "1cf06954f1c191ebc0d9414a375925f738ddd68c2a66d99a66c586ef886a6a7c",
+      "bytes": 213
+    },
+    {
+      "path": "inputs/installed-native-mods.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\installed-native-mods.json",
+      "sha256": "cfb0ab1c98bdeae19617b81b254238afb07d38d02656b33dda95ee0f8ac7b6fe",
+      "bytes": 598
+    },
+    {
+      "path": "inputs/launcher-qualification.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\launcher-qualification.json",
+      "sha256": "67509e117bee4feabb2ab5e1015376125612d224e3240ba6f832b8637118c2ae",
+      "bytes": 5768
+    },
+    {
+      "path": "inputs/native-build-receipt.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\native-build-receipt.json",
+      "sha256": "ff82e2894a488c4a44e6553ac1762c67b1ed44708ed34833015d7a677c3944d4",
+      "bytes": 13672
+    },
+    {
+      "path": "inputs/old-save-probe-source.rs",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\old-save-probe-source.rs",
+      "sha256": "ff08f1dc032aef15b455a07af49a636e83eb726e27b2d1d6b7673e5c9802c6b1",
+      "bytes": 10753
+    },
+    {
+      "path": "inputs/preferences-original.txt",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\preferences-original.txt",
+      "sha256": "8ec689e16d81a9fb9102c4618b10b9295a12aaf8c2f4f903d883997a1da50b1f",
+      "bytes": 65
+    },
+    {
+      "path": "inputs/selected-classic-targets.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\selected-classic-targets.json",
+      "sha256": "430684cf2297a426b469bf7ae7704ae4a0f5c43882d3958bf76d79c2ab11bb6e",
+      "bytes": 644
+    },
+    {
+      "path": "inputs/static-launcher-build.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\static-launcher-build.json",
+      "sha256": "ede7913749c69f731df645e0c0bd001feff988bdcafdd609b5c3abd095bde765",
+      "bytes": 1233
+    },
+    {
+      "path": "inputs/world-preset.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\inputs\\world-preset.json",
+      "sha256": "f2dfb9594cb6a1ccf708e79ea42d8cd3174568beec2bff98543913fba27152f3",
+      "bytes": 795
+    },
+    {
+      "path": "run/classic-fir_forest.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\classic-fir_forest.png",
+      "sha256": "9b6d84a8cb56527611b0d134d97bc5ae5b81ec1c98a005b89e4a71ab845f751e",
+      "bytes": 1284377
+    },
+    {
+      "path": "run/classic-frozen_marsh.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\classic-frozen_marsh.png",
+      "sha256": "7340690f302d3c844d0fca85ba0bfa66237c087f3278c7e0a873728ef1e5d547",
+      "bytes": 1381383
+    },
+    {
+      "path": "run/classic-shattered_savanna_scrub.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\classic-shattered_savanna_scrub.png",
+      "sha256": "bf7a71c0324cc952e19bb484ff9ad32a0ff603bc7a102f4bc9906caac845c2ce",
+      "bytes": 1317742
+    },
+    {
+      "path": "run/custom-block-placed.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\custom-block-placed.png",
+      "sha256": "4d29ff6cf66856495926b2d70c506e84af17d52f1d3e8ee502722a77ab19640d",
+      "bytes": 78374
+    },
+    {
+      "path": "run/custom-block-reopened.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\custom-block-reopened.png",
+      "sha256": "0eb8864566796feb2b60e4be5e52c1bf3070ec991489ef08346db824f9735042",
+      "bytes": 140750
+    },
+    {
+      "path": "run/custom-recipe-crafted.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\custom-recipe-crafted.png",
+      "sha256": "36eb8ef285a80958cd575cb9749015404ee6703ddecb78116717c69150d3042d",
+      "bytes": 234542
+    },
+    {
+      "path": "run/custom-recipe-result.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\custom-recipe-result.png",
+      "sha256": "d8d6f75822074e787272ba2e8f185d2372f21eb184eb59dadf40de6c63ea9a21",
+      "bytes": 234589
+    },
+    {
+      "path": "run/game-0-saved-biomes.stderr.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\game-0-saved-biomes.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "run/game-0-saved-biomes.stdout.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\game-0-saved-biomes.stdout.log",
+      "sha256": "2dc0af8922a8cafc4d1b6dc78b5a5a65c742d13e71fa143ed5cc8a31e9839ada",
+      "bytes": 2290
+    },
+    {
+      "path": "run/game-0-smoke.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\game-0-smoke.json",
+      "sha256": "22786fd85472764770b345bcfe437d1784b5f0b4d08ecfa5abb519a147d29131",
+      "bytes": 146
+    },
+    {
+      "path": "run/game-0.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\game-0.log",
+      "sha256": "1153d1f93b2bcc47f1e8d3ce1bdae488d33f385e32ff9c5e9ce64217401ac1df",
+      "bytes": 4533
+    },
+    {
+      "path": "run/game-0.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\game-0.png",
+      "sha256": "ff5f25642a66d875a5e5a226cc8d442415222af8f4fbb212fba7a2b7f2b08a8a",
+      "bytes": 1143162
+    },
+    {
+      "path": "run/game-1-saved-biomes.stderr.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\game-1-saved-biomes.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "run/game-1-saved-biomes.stdout.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\game-1-saved-biomes.stdout.log",
+      "sha256": "0d9c3e79c5512ac30aeaca4b32e41e07c39a9f661b877ab8163ac2642bbf020a",
+      "bytes": 2401
+    },
+    {
+      "path": "run/game-1-smoke.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\game-1-smoke.json",
+      "sha256": "f2d87bae1926a24e61d6caedd958ec7ba9c973f9b1f3cf0635284bd722b29003",
+      "bytes": 144
+    },
+    {
+      "path": "run/game-1.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\game-1.log",
+      "sha256": "8e07095bf6f73b6463499b014873acbe676dcc4ff17e99876ca311651df7a467",
+      "bytes": 2430
+    },
+    {
+      "path": "run/game-1.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\game-1.png",
+      "sha256": "0083725380d5f3010681fb7c244067a81de14cdbd130a7baad9358a326cc68fc",
+      "bytes": 810960
+    },
+    {
+      "path": "run/hud-off.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\hud-off.png",
+      "sha256": "ecb85ce57d89abe1ed7e177eb52642aa418713103a7674b48ed0bb69836b217b",
+      "bytes": 457385
+    },
+    {
+      "path": "run/hud-on.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\hud-on.png",
+      "sha256": "66953fad58392ebf552e9d727ea5f482cf603c5a8f79b8d95919ef4aa1769dd3",
+      "bytes": 458698
+    },
+    {
+      "path": "run/hud-where.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\hud-where.png",
+      "sha256": "71e105dfccdc17077a12dd6a79f62e2535d4f61e93d7cfb236c4d0a35eee39d9",
+      "bytes": 462859
+    },
+    {
+      "path": "run/installed-mods-screen.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\installed-mods-screen.png",
+      "sha256": "085d81e8a9a5be64869af2a2f0a2ecc85caddac7a11adbfed0a4d4480467698d",
+      "bytes": 325234
+    },
+    {
+      "path": "run/native-preset-ui.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\native-preset-ui.png",
+      "sha256": "8989ec5a1c114b88c02dccfa3e783695f5f9e359bac25dea69e0262193c31072",
+      "bytes": 457457
+    },
+    {
+      "path": "run/natural-spawn.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-default-view-v1\\run\\natural-spawn.png",
+      "sha256": "072e8728113427b0f7972e22d57d9c4a13fbf4f1b20b0fc2483bd1d1ee9d513d",
+      "bytes": 468331
+    },
+    {
+      "path": "fir-detail/report.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-fir-detail-v1\\report.json",
+      "sha256": "0651df0ae41fa5f8297661b8da66d25b78b1341b1aca525c1424be7a1a4e69ab",
+      "bytes": 147564
+    },
+    {
+      "path": "fir-detail/preparation.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-fir-detail-v1\\preparation.json",
+      "sha256": "fab623f313ad244317c5611a6b826fbe64ad8cea92ee247f49b1e4570d7b9a12",
+      "bytes": 30936
+    },
+    {
+      "path": "fir-detail/capture_fir.py",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-fir-detail-v1\\capture_fir.py",
+      "sha256": "056e095ef2bff7a2da5c8d3cdd624c80bc96bc2930b81dc5a4e33c2dbd238c94",
+      "bytes": 13170
+    },
+    {
+      "path": "fir-detail/fir-structure-close.png",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-fir-detail-v1\\fir-structure-close.png",
+      "sha256": "d96963a1b54b658edf4b45ab7b1c9c1ebe348c1f3f74c87cf2af3ab9a6e74285",
+      "bytes": 1256610
+    },
+    {
+      "path": "fir-detail/game.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-fir-detail-v1\\game.log",
+      "sha256": "991e756ea5a3dcbaa5fe64699867a9ec4267e501e1d872a5b27d44adee879051",
+      "bytes": 2126
+    },
+    {
+      "path": "fir-detail/smoke.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-dev7-fir-detail-v1\\smoke.json",
+      "sha256": "a31746f137c2e18039240c1d0ac1e7a25751f0ba0ea73020314c4acd7637b312",
+      "bytes": 146
+    },
+    {
+      "path": "static-launcher/build-receipt.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\build-receipt.json",
+      "sha256": "ede7913749c69f731df645e0c0bd001feff988bdcafdd609b5c3abd095bde765",
+      "bytes": 1233
+    },
+    {
+      "path": "static-launcher/build.stderr.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\build.stderr.log",
+      "sha256": "c22237f3d38a0eaabba371d18c5214f7dee3916608aa65e9bd9c7cca8e2260a5",
+      "bytes": 14288
+    },
+    {
+      "path": "static-launcher/build.stdout.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\build.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "static-launcher/build_static.py",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\build_static.py",
+      "sha256": "f5c50b5411a033ae1f522a0e0421ab2a5571f7a103aaa935cf2fbd697cd609d8",
+      "bytes": 3010
+    },
+    {
+      "path": "static-launcher/cached-native-build.stderr.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\cached-native-build.stderr.log",
+      "sha256": "71c421eb30a8077e2d04b807bfdcec1d6b1931a9bfc90a83cd04c88df836e7e2",
+      "bytes": 51
+    },
+    {
+      "path": "static-launcher/cached-native-build.stdout.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\cached-native-build.stdout.log",
+      "sha256": "5e9eeb6c75632ce849d4d7b54a03c2825fe50c4ed7e57783b543d64a3cc90c95",
+      "bytes": 71
+    },
+    {
+      "path": "static-launcher/client-imports.stderr.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\client-imports.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "static-launcher/client-imports.stdout.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\client-imports.stdout.log",
+      "sha256": "e53e7e972cdcd8a6d82d88aa5392fd7a0883c40c1548d4dcb36f5d4d15e6ab8b",
+      "bytes": 551
+    },
+    {
+      "path": "static-launcher/launcher-imports.stderr.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\launcher-imports.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "static-launcher/launcher-imports.stdout.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\launcher-imports.stdout.log",
+      "sha256": "300b16e0087ae75aeab2f0ff9188ac42efaf210ba69fde8baa27e56cb4df07ff",
+      "bytes": 543
+    },
+    {
+      "path": "static-launcher/original-portability-diagnostic.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\original-portability-diagnostic.json",
+      "sha256": "1f7027941bebe4344ebb9b727d50765d98e40d1cac08cb89a523ea4cf7d1e908",
+      "bytes": 266
+    },
+    {
+      "path": "static-launcher/original-portability.stderr.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\original-portability.stderr.log",
+      "sha256": "4857015f14c144464fa00070d2969cc326ece68e05ca47ac8bf61f59a913b128",
+      "bytes": 135
+    },
+    {
+      "path": "static-launcher/original-portability.stdout.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\original-portability.stdout.log",
+      "sha256": "621a7a234317ef33fec922fed95cb7c6b3e234a0542cbc5970117d379839527a",
+      "bytes": 754
+    },
+    {
+      "path": "static-launcher/qualification.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\qualification.json",
+      "sha256": "67509e117bee4feabb2ab5e1015376125612d224e3240ba6f832b8637118c2ae",
+      "bytes": 5768
+    },
+    {
+      "path": "static-launcher/qualify.py",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\qualify.py",
+      "sha256": "b67b29569e299036d69534d3c82a107885d8341b9be9671814a757c4f3415841",
+      "bytes": 4587
+    },
+    {
+      "path": "static-launcher/static-tests.stderr.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\static-tests.stderr.log",
+      "sha256": "c87b0d429201d8208ef44b4ec09c9384314f35187b52f2dd29d45e4671896bcc",
+      "bytes": 807
+    },
+    {
+      "path": "static-launcher/static-tests.stdout.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\static-tests.stdout.log",
+      "sha256": "052bb0362d9ab55d0391f04cec938cffea7acf51fb9ca95d0062172b696581af",
+      "bytes": 48493
+    },
+    {
+      "path": "static-launcher/strict-owner-gate.stderr.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\strict-owner-gate.stderr.log",
+      "sha256": "076488869801450409af2fcefbcb9d042baf4c13612b9db770b41d435d028ccf",
+      "bytes": 132
+    },
+    {
+      "path": "static-launcher/strict-owner-gate.stdout.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\strict-owner-gate.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "static-launcher/version.stderr.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\version.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "static-launcher/version.stdout.log",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-static-v1\\version.stdout.log",
+      "sha256": "1a8532aeac169954aa820adcb2acb061e898ee1b7bbd9d2124faa826021bf40d",
+      "bytes": 23
+    },
+    {
+      "path": "preparation/report.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\launcher-run-v1\\report.json",
+      "sha256": "ff82e2894a488c4a44e6553ac1762c67b1ed44708ed34833015d7a677c3944d4",
+      "bytes": 13672
+    },
+    {
+      "path": "preparation/summary.json",
+      "source": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-dev7-preparation-v1\\launcher-run-v1\\summary.json",
+      "sha256": "80d3da78343897d153d9827e8d97dcca493de0d4c0328be9604e6eff411874b9",
+      "bytes": 5373
+    }
+  ]
+}

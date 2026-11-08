@@ -1,0 +1,251 @@
+{
+  "status": "requested-angle-achieved-then-drift-coincided-with-user-classified-input",
+  "rawRunReportSha256": "4dc73b50f5c165bce1993368c687f87f3b44defc910ba2608e0325db54da2369",
+  "events": [
+    {
+      "label": "ctl-0143-state",
+      "utc": "2026-11-08T03:40:40.928376+00:00",
+      "yaw": 0.0,
+      "pitch": 25.0,
+      "inputCounts": {
+        "agent": 52,
+        "game": 2,
+        "user": 2
+      },
+      "lastOrigin": "agent",
+      "lastUserAgeSeconds": 24.9,
+      "replySha256": "e2a67f49145c21818c899ae8f1044e22707c589c8854fc2c47ce9aa660d717a2"
+    },
+    {
+      "label": "ctl-0144-turn",
+      "argv": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+        "--socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\qa-direct-control.json",
+        "turn",
+        "135.0",
+        "20.0"
+      ],
+      "exitCode": 0,
+      "reply": {
+        "ok": true
+      }
+    },
+    {
+      "label": "ctl-0146-status",
+      "utc": "2026-11-08T03:40:42.045910+00:00",
+      "yaw": 135.0,
+      "pitch": 45.0,
+      "inputCounts": {
+        "agent": 54,
+        "game": 2,
+        "user": 2
+      },
+      "lastOrigin": "agent",
+      "lastUserAgeSeconds": 26.0,
+      "replySha256": "c5468287cad06ca9b3001a28c3206fa0cc9a2b39eabbf1883e4f78b5896a6465"
+    },
+    {
+      "label": "ctl-0231-status",
+      "utc": "2026-11-08T03:41:08.435646+00:00",
+      "yaw": 22912.354,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 20
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.3,
+      "replySha256": "75f5cd151058ae4f7d946f9109cf4ecc501b8f12de2d31c696408739bd5855e5"
+    },
+    {
+      "label": "ctl-0233-status",
+      "utc": "2026-11-08T03:41:09.034041+00:00",
+      "yaw": 44691.758,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 36
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.0,
+      "replySha256": "a42ad99e4386a3420cbddeeafb671c2d4006b33188629830e3d57e2e9989617f"
+    },
+    {
+      "label": "ctl-0235-status",
+      "utc": "2026-11-08T03:41:09.599887+00:00",
+      "yaw": 50098.207,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 40
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.5,
+      "replySha256": "9eeacf9e9806d73262884d3a2760fd1aa921e52b9996b90035ee6671372863c0"
+    },
+    {
+      "label": "ctl-0245-status",
+      "utc": "2026-11-08T03:41:12.432002+00:00",
+      "yaw": 304451.44,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 171
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.0,
+      "replySha256": "2f359233ea7dc3ea58e5ef2f9c0f6756b3cc7b9ac0ff345419c89dbe3c75ecfd"
+    },
+    {
+      "label": "ctl-0247-status",
+      "utc": "2026-11-08T03:41:13.006263+00:00",
+      "yaw": 357543.5,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 193
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.6,
+      "replySha256": "a5fa411632564a68bb0677f0c7c3b66f41d3da8a100fc7f3c234b6dc56998894"
+    },
+    {
+      "label": "ctl-0251-status",
+      "utc": "2026-11-08T03:41:14.169434+00:00",
+      "yaw": 1111308.8,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 334
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.0,
+      "replySha256": "581990037e4794c4064cce915cdf120776f78607915a6d3259477403a2999092"
+    },
+    {
+      "label": "ctl-0253-status",
+      "utc": "2026-11-08T03:41:14.734551+00:00",
+      "yaw": 1910764.2,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 537
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.0,
+      "replySha256": "edfdd505826d22f91267f162f9f40203d566297569d610a6f5ee67415ac1003c"
+    },
+    {
+      "label": "ctl-0255-status",
+      "utc": "2026-11-08T03:41:15.304229+00:00",
+      "yaw": 2898193.0,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 818
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.0,
+      "replySha256": "a9fa0d8a373b9aa148ac32a20828275751a308a30a8cb270117ea5fba0a87bc5"
+    },
+    {
+      "label": "ctl-0257-status",
+      "utc": "2026-11-08T03:41:15.900303+00:00",
+      "yaw": 4627558.0,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 1044
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.0,
+      "replySha256": "6efb20a23ca5663f44213ee3daf0785058438440c05465e747e399a1485af7b2"
+    },
+    {
+      "label": "ctl-0259-status",
+      "utc": "2026-11-08T03:41:16.467011+00:00",
+      "yaw": 5766802.0,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 1184
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.2,
+      "replySha256": "43788394d2f21fc15e1c72369aba61c4e1707f97fa846ba6380e187408b4f45c"
+    },
+    {
+      "label": "ctl-0263-status",
+      "utc": "2026-11-08T03:41:17.633834+00:00",
+      "yaw": 5774538.0,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 1185
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.1,
+      "replySha256": "c60a739f73ddc15fc0ec51047cc70cb3e6a802ee8943168b3048874ce1085f5a"
+    },
+    {
+      "label": "ctl-0273-status",
+      "utc": "2026-11-08T03:41:20.566699+00:00",
+      "yaw": 6758415.0,
+      "pitch": 83.70117,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 1306
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.1,
+      "replySha256": "ec8dd8f7dd33b06578e2c6deaafa83b4da1f5a6781cc81f713446b2f3b8911ac"
+    },
+    {
+      "label": "ctl-0275-status",
+      "utc": "2026-11-08T03:41:21.167274+00:00",
+      "yaw": 8073920.0,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 1476
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.1,
+      "replySha256": "3eb490bc9aea2d56a2f15da60b8347d14a8697b2e24cea3e22301388c06540ff"
+    },
+    {
+      "label": "ctl-0277-status",
+      "utc": "2026-11-08T03:41:21.733680+00:00",
+      "yaw": 9454687.0,
+      "pitch": 90.0,
+      "inputCounts": {
+        "agent": 55,
+        "game": 2,
+        "user": 1665
+      },
+      "lastOrigin": "user",
+      "lastUserAgeSeconds": 0.0,
+      "replySha256": "909cad103ec54d7627797e880a0636ec1d8b26af36d9288baf9daf12fb72a6bb"
+    }
+  ],
+  "interpretation": "turn135/20 initially reached135/45. Later user-classified input rose from2 to1665 and final yaw9454687/pitch90. This is the game code classification; the source of the native events is unidentified. No attribution to a person, device or external app.",
+  "originalFirScreenshot": {
+    "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\run\\classic-fir_forest.png",
+    "sha256": "85d10500b8f10b94598023f60c901f68c143c4c58625bd48bd7b40c12f5df04b"
+  },
+  "rawRunRemainsFailed": true
+}

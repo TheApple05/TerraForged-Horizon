@@ -45,3 +45,7 @@ The [compiler-layout receipt](../validation/horizon-native-cell-layout-v1.json) 
 The [existing lifecycle checks](../validation/horizon-native-cache-dev7-lifecycle-v1.json) pass five tests in each debug/release profile: failed/unwound work retries, LRU ownership/eviction, same-key construction sharing, clear during construction and bounded distinct-key concurrency. Generated-cell and genuine new-package client/save qualification are tracked separately.
 
 The diagnostic build's raw input guard remains failed because one explicitly approved measured-only-background correction happened during dependency compilation. Cargo exited zero, and the separate reconciliation records exact before/after hashes and timing. The failed raw receipt was preserved. No failed runtime result was relabeled as passing.
+
+## Installed native.dev7 follow-through
+
+The [final launcher/client report](native-launcher-modpack-validation.md) now records a genuine source build and two clean installed-client exits. At live render/simulation distance 12, fir forest reaches all 637 tracked columns and settled queues in 26.313 seconds. The other selected targets, save/reopen and custom-content persistence pass. This one observation includes the real client; it does not convert the diagnostic series into controlled full-client performance evidence. All 15 final images were inspected. The sampled Java kernel regression matches in both debug/release profiles.

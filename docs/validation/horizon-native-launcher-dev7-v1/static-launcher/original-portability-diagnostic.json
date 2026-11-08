@@ -1,0 +1,6 @@
+{
+  "status": "preserved-failed-import-check",
+  "launcherSha256": "e544cd14695a3edcb3bb738d8896088c17dc42ea80078718e81054470ff9b0a2",
+  "exitCode": 1,
+  "reason": "Original MSVC launcher imports VCRUNTIME140.dll; separately rebuilt static launcher passes."
+}

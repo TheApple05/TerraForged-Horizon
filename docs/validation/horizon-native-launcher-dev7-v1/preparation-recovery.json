@@ -1,0 +1,7 @@
+{
+  "status": "preparation-continued-no-game-launched",
+  "originalFailure": "FileExistsError while creating an already existing private HUD settings directory",
+  "resourceCheckBeforeFailure": "The initial process completed the exact full-resource inventory assertion before reaching mkdir; final preflight will independently repeat it.",
+  "existingShownSha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+  "scope": "No runtime or qualification verdict was changed."
+}

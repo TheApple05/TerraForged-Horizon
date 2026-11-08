@@ -1,0 +1,377 @@
+{
+  "status": "exited",
+  "argv": [
+    "C:\\Users\\Main\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\verify_installed_native_ui.py",
+    "--run"
+  ],
+  "scope": "Authorized single direct-client QA run; launcher GUI Play remains untested",
+  "scriptSha256": "990e6c5023a25ae8b189803130b99c33347993fd86fe5fae7b945e9841266035",
+  "startedAtUtc": "2026-11-08T03:39:33.699355+00:00",
+  "events": [
+    {
+      "elapsedSeconds": 0.02,
+      "phase": "preflight"
+    },
+    {
+      "elapsedSeconds": 18.02,
+      "phase": "command ctl-0003-state",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": []
+    },
+    {
+      "elapsedSeconds": 48.09,
+      "phase": "command ctl-0058-state",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": []
+    },
+    {
+      "elapsedSeconds": 54.11,
+      "phase": "command ctl-0070-block",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [],
+      "visibility": {
+        "label": "natural-spawn",
+        "status": "loading",
+        "elapsedSeconds": 0.125
+      }
+    },
+    {
+      "elapsedSeconds": 60.14,
+      "phase": "command ctl-0098-screen",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [],
+      "visibility": {
+        "label": "natural-spawn",
+        "status": "visible",
+        "elapsedSeconds": 5.375
+      }
+    },
+    {
+      "elapsedSeconds": 69.16,
+      "phase": "command ctl-0150-block",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [],
+      "visibility": {
+        "label": "reterraforged:fir_forest",
+        "status": "loading",
+        "elapsedSeconds": 0.07800000000133878
+      }
+    },
+    {
+      "elapsedSeconds": 99.24,
+      "phase": "loading reterraforged:fir_forest",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [],
+      "visibility": {
+        "label": "reterraforged:fir_forest",
+        "status": "loading",
+        "elapsedSeconds": 30.45300000000134
+      }
+    },
+    {
+      "elapsedSeconds": 117.3,
+      "phase": "teleporting reterraforged:frozen_marsh",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [
+        "reterraforged:fir_forest"
+      ],
+      "visibility": {
+        "label": "reterraforged:fir_forest",
+        "status": "visible",
+        "elapsedSeconds": 48.25
+      }
+    },
+    {
+      "elapsedSeconds": 120.31,
+      "phase": "command ctl-0317-block",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [
+        "reterraforged:fir_forest"
+      ],
+      "visibility": {
+        "label": "reterraforged:frozen_marsh",
+        "status": "loading",
+        "elapsedSeconds": 0.8440000000009604
+      }
+    },
+    {
+      "elapsedSeconds": 144.39,
+      "phase": "command ctl-0394-turn",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh"
+      ],
+      "visibility": {
+        "label": "reterraforged:frozen_marsh",
+        "status": "visible",
+        "elapsedSeconds": 24.46900000000096
+      }
+    },
+    {
+      "elapsedSeconds": 147.41,
+      "phase": "command ctl-0405-status",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh"
+      ],
+      "visibility": {
+        "label": "reterraforged:shattered_savanna_scrub",
+        "status": "loading",
+        "elapsedSeconds": 2.3280000000013388
+      }
+    },
+    {
+      "elapsedSeconds": 153.44,
+      "phase": "command ctl-0425-command",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh",
+        "reterraforged:shattered_savanna_scrub"
+      ],
+      "visibility": {
+        "label": "reterraforged:shattered_savanna_scrub",
+        "status": "visible",
+        "elapsedSeconds": 8.625
+      }
+    },
+    {
+      "elapsedSeconds": 156.45,
+      "phase": "command ctl-0433-block",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh",
+        "reterraforged:shattered_savanna_scrub"
+      ],
+      "visibility": {
+        "label": "origin",
+        "status": "loading",
+        "elapsedSeconds": 0.125
+      }
+    },
+    {
+      "elapsedSeconds": 186.58,
+      "phase": "command ctl-0525-block",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh",
+        "reterraforged:shattered_savanna_scrub"
+      ],
+      "visibility": {
+        "label": "origin",
+        "status": "loading",
+        "elapsedSeconds": 30.64099999999962
+      }
+    },
+    {
+      "elapsedSeconds": 189.59,
+      "phase": "command ctl-0534-command",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 1,
+      "completedRuns": 0,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh",
+        "reterraforged:shattered_savanna_scrub"
+      ],
+      "visibility": {
+        "label": "origin",
+        "status": "visible",
+        "elapsedSeconds": 34.40599999999904
+      }
+    },
+    {
+      "elapsedSeconds": 210.67,
+      "phase": "command ctl-0559-state",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 2,
+      "completedRuns": 1,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh",
+        "reterraforged:shattered_savanna_scrub"
+      ],
+      "visibility": {
+        "label": "origin",
+        "status": "visible",
+        "elapsedSeconds": 34.40599999999904
+      }
+    },
+    {
+      "elapsedSeconds": 222.75,
+      "phase": "command ctl-0588-block",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 2,
+      "completedRuns": 1,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh",
+        "reterraforged:shattered_savanna_scrub"
+      ],
+      "visibility": {
+        "label": "reopened-distant-terrain",
+        "status": "loading",
+        "elapsedSeconds": 2.1559999999990396
+      }
+    },
+    {
+      "elapsedSeconds": 252.89,
+      "phase": "command ctl-0676-block",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 2,
+      "completedRuns": 1,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh",
+        "reterraforged:shattered_savanna_scrub"
+      ],
+      "visibility": {
+        "label": "reopened-distant-terrain",
+        "status": "loading",
+        "elapsedSeconds": 32.17099999999846
+      }
+    },
+    {
+      "elapsedSeconds": 261.92,
+      "phase": "command ctl-0701-quit",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 2,
+      "completedRuns": 1,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh",
+        "reterraforged:shattered_savanna_scrub"
+      ],
+      "visibility": {
+        "label": "reopened-distant-terrain",
+        "status": "visible",
+        "elapsedSeconds": 40.60900000000038
+      }
+    },
+    {
+      "elapsedSeconds": 270.97,
+      "phase": "checked saved FULL chunks 1",
+      "status": "running-direct-installed-client-qa",
+      "clientLaunches": 2,
+      "completedRuns": 2,
+      "renderedBiomes": [
+        "reterraforged:fir_forest",
+        "reterraforged:frozen_marsh",
+        "reterraforged:shattered_savanna_scrub"
+      ],
+      "visibility": {
+        "label": "reopened-distant-terrain",
+        "status": "visible",
+        "elapsedSeconds": 40.60900000000038
+      }
+    }
+  ],
+  "pid": 9944,
+  "elapsedSeconds": 301.09400000000096,
+  "clientLaunches": [
+    {
+      "index": 0,
+      "pid": 14340,
+      "command": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-client.exe",
+        "--resources",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\.local\\horizon-client\\26.3",
+        "--game-dir",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+        "--home",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+        "--name",
+        "TerraForgedQA",
+        "--control",
+        "--control-socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\qa-direct-control.json",
+        "--render-distance",
+        "6",
+        "--width",
+        "1280",
+        "--height",
+        "720",
+        "--timeout-seconds",
+        "3150",
+        "--smoke-report",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\run\\game-0-smoke.json"
+      ],
+      "cwd": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+      "stdoutAndStderrPath": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\run\\game-0.log",
+      "startedAtUtc": "2026-11-08T03:39:49.448533+00:00",
+      "requestedShutdown": "control-quit",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000"
+    },
+    {
+      "index": 1,
+      "pid": 34848,
+      "command": [
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-client.exe",
+        "--resources",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\.local\\horizon-client\\26.3",
+        "--game-dir",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+        "--home",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+        "--name",
+        "TerraForgedQA",
+        "--control",
+        "--control-socket",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\qa-direct-control.json",
+        "--render-distance",
+        "6",
+        "--width",
+        "1280",
+        "--height",
+        "720",
+        "--timeout-seconds",
+        "3150",
+        "--smoke-report",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\run\\game-1-smoke.json",
+        "--world",
+        "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\saves\\TerraForged UI QA"
+      ],
+      "cwd": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+      "stdoutAndStderrPath": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\run\\game-1.log",
+      "startedAtUtc": "2026-11-08T03:43:03.761691+00:00",
+      "requestedShutdown": "control-quit",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000"
+    }
+  ],
+  "exitCode": 1,
+  "exitCodeUnsignedHex": "0x00000001",
+  "completedAtUtc": "2026-11-08T03:44:34.790546+00:00"
+}

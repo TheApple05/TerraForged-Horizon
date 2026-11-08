@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "status": "prepared-reviewed-not-published",
+  "createdAtUtc": "2026-11-08T03:57:42.837662+00:00",
+  "rawRunStatusPreserved": "failed",
+  "rawRunReportSha256": "4dc73b50f5c165bce1993368c687f87f3b44defc910ba2608e0325db54da2369",
+  "exactCopies": [
+    {
+      "path": "raw/report.json",
+      "sha256": "4dc73b50f5c165bce1993368c687f87f3b44defc910ba2608e0325db54da2369",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "raw/plan.json",
+      "sha256": "6635eef568ece5dc0cb935b2b8ad129f144d13f70eb063185b1e419281ab0556",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "raw/preflight.json",
+      "sha256": "86347232a0e471ea12353704a7e24c09595e70433b060cdbf1eebe487456844c",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "raw/preflight-process-receipt.json",
+      "sha256": "03cf49837b2d2cb0ff437be899e74ee3796f9f225ea8f564fa413f999c79f812",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "raw/runtime-supervisor.json",
+      "sha256": "8bea6ca7e8022b211243c071fe370db12c9470cb554563aa4dfa3ab6abf6692b",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "raw/normalization-audit.json",
+      "sha256": "39b3ee55a14428eb5efa1d6fa5439a385e5c23f3eefaff625a8cb26fef28ed8f",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "raw/fir-camera-anomaly-audit.json",
+      "sha256": "aa042e99074aa3f82de4b87ebc29203c565b517132ff3369dc2b85ffd82a29f7",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "raw/preferences-original.txt",
+      "sha256": "8ec689e16d81a9fb9102c4618b10b9295a12aaf8c2f4f903d883997a1da50b1f",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "raw/preferences-normalized.txt",
+      "sha256": "d33604c2fe7c0ab40c1ce301c3e5d36d9df29e7d390009786610fe070d6f4e79",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "tools/verify_installed_native_ui.py",
+      "sha256": "990e6c5023a25ae8b189803130b99c33347993fd86fe5fae7b945e9841266035",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "images/hud-on.png",
+      "sha256": "19d9085e0a0952bd49237b4b861f679d06d8312054bd18a7b2cdd23cc4c7b51d",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "images/installed-mods-screen.png",
+      "sha256": "00d5f1811e69f90c8d10ec45786dd7c011b14f15fe44d929e2e3e8d16e93b0ce",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "images/custom-recipe-crafted.png",
+      "sha256": "6f33230a1174298decc3513914a85173ad250593bae42cd1f76b30ff114b63ca",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "images/custom-block-reopened.png",
+      "sha256": "18c6ec08681f43ab2261ecdec80385e3a36e727591046b5d127e81da59a4a81c",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0143-state.stdout.log",
+      "sha256": "e2a67f49145c21818c899ae8f1044e22707c589c8854fc2c47ce9aa660d717a2",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0144-turn.stdout.log",
+      "sha256": "7d167dac6a0d1dcd20ac46505b63886dd6a8a972fc222a9c7eead0187976895c",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0146-status.stdout.log",
+      "sha256": "c5468287cad06ca9b3001a28c3206fa0cc9a2b39eabbf1883e4f78b5896a6465",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0231-status.stdout.log",
+      "sha256": "75f5cd151058ae4f7d946f9109cf4ecc501b8f12de2d31c696408739bd5855e5",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0233-status.stdout.log",
+      "sha256": "a42ad99e4386a3420cbddeeafb671c2d4006b33188629830e3d57e2e9989617f",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0235-status.stdout.log",
+      "sha256": "9eeacf9e9806d73262884d3a2760fd1aa921e52b9996b90035ee6671372863c0",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0245-status.stdout.log",
+      "sha256": "2f359233ea7dc3ea58e5ef2f9c0f6756b3cc7b9ac0ff345419c89dbe3c75ecfd",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0247-status.stdout.log",
+      "sha256": "a5fa411632564a68bb0677f0c7c3b66f41d3da8a100fc7f3c234b6dc56998894",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0251-status.stdout.log",
+      "sha256": "581990037e4794c4064cce915cdf120776f78607915a6d3259477403a2999092",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0253-status.stdout.log",
+      "sha256": "edfdd505826d22f91267f162f9f40203d566297569d610a6f5ee67415ac1003c",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0255-status.stdout.log",
+      "sha256": "a9fa0d8a373b9aa148ac32a20828275751a308a30a8cb270117ea5fba0a87bc5",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0257-status.stdout.log",
+      "sha256": "6efb20a23ca5663f44213ee3daf0785058438440c05465e747e399a1485af7b2",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0259-status.stdout.log",
+      "sha256": "43788394d2f21fc15e1c72369aba61c4e1707f97fa846ba6380e187408b4f45c",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0263-status.stdout.log",
+      "sha256": "c60a739f73ddc15fc0ec51047cc70cb3e6a802ee8943168b3048874ce1085f5a",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0273-status.stdout.log",
+      "sha256": "ec8dd8f7dd33b06578e2c6deaafa83b4da1f5a6781cc81f713446b2f3b8911ac",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0275-status.stdout.log",
+      "sha256": "3eb490bc9aea2d56a2f15da60b8347d14a8697b2e24cea3e22301388c06540ff",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/camera/ctl-0277-status.stdout.log",
+      "sha256": "909cad103ec54d7627797e880a0636ec1d8b26af36d9288baf9daf12fb72a6bb",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/save-readers/game-0.stdout.log",
+      "sha256": "b05cb78807c19c50bbd85aff61e3d855555c74fe25ff43d9ce58e838337db38f",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "supporting/save-readers/game-1.stdout.log",
+      "sha256": "8dbcf5e62c0352b87f6cc6ed84138e122f3173bdf32225c22ea579af60d9e43e",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "followup/fir-corrected/report.json",
+      "sha256": "71a275dbb8fe0dd5c3b3a634063992af7348f2588402b4f96c6e0f46a8115e0a",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "followup/fir-corrected/corrected-fir-135-45.png",
+      "sha256": "8f647d0e09f37212415faca1899bfbe619d44665f718e6a27a653d04826f74fa",
+      "copyKind": "exact-byte-copy"
+    },
+    {
+      "path": "LICENSE-QA-TOOLS",
+      "sha256": "51df9f0aef4bcc9c4770338b54f60671d577620857b6dd82e3efb7e32ae2e8db",
+      "copyKind": "exact-byte-copy"
+    }
+  ],
+  "reviewSha256": "5f96d1a76fcbe47f33baa76d0b209be73b2f41cd353ba70a02078ec4d13d5cab",
+  "correctedFirReviewSha256": "7b59d4fa87817a4ee02291f0985f08f619ba861b30fe5b41bb51c6feaa5562d3",
+  "credentialScan": {
+    "nonemptyCredentialFields": 0,
+    "commonSecretPatterns": 0,
+    "scope": "All exported text/JSON; screenshots visually inspected."
+  },
+  "files": [
+    {
+      "path": "followup/fir-corrected/corrected-fir-135-45.png",
+      "bytes": 775828,
+      "sha256": "8f647d0e09f37212415faca1899bfbe619d44665f718e6a27a653d04826f74fa"
+    },
+    {
+      "path": "followup/fir-corrected/report.json",
+      "bytes": 112488,
+      "sha256": "71a275dbb8fe0dd5c3b3a634063992af7348f2588402b4f96c6e0f46a8115e0a"
+    },
+    {
+      "path": "followup/fir-corrected/review.json",
+      "bytes": 1062,
+      "sha256": "7b59d4fa87817a4ee02291f0985f08f619ba861b30fe5b41bb51c6feaa5562d3"
+    },
+    {
+      "path": "images/custom-block-reopened.png",
+      "bytes": 182863,
+      "sha256": "18c6ec08681f43ab2261ecdec80385e3a36e727591046b5d127e81da59a4a81c"
+    },
+    {
+      "path": "images/custom-recipe-crafted.png",
+      "bytes": 458493,
+      "sha256": "6f33230a1174298decc3513914a85173ad250593bae42cd1f76b30ff114b63ca"
+    },
+    {
+      "path": "images/hud-on.png",
+      "bytes": 859219,
+      "sha256": "19d9085e0a0952bd49237b4b861f679d06d8312054bd18a7b2cdd23cc4c7b51d"
+    },
+    {
+      "path": "images/installed-mods-screen.png",
+      "bytes": 337514,
+      "sha256": "00d5f1811e69f90c8d10ec45786dd7c011b14f15fe44d929e2e3e8d16e93b0ce"
+    },
+    {
+      "path": "LICENSE-QA-TOOLS",
+      "bytes": 1110,
+      "sha256": "51df9f0aef4bcc9c4770338b54f60671d577620857b6dd82e3efb7e32ae2e8db"
+    },
+    {
+      "path": "raw/fir-camera-anomaly-audit.json",
+      "bytes": 7342,
+      "sha256": "aa042e99074aa3f82de4b87ebc29203c565b517132ff3369dc2b85ffd82a29f7"
+    },
+    {
+      "path": "raw/normalization-audit.json",
+      "bytes": 12355,
+      "sha256": "39b3ee55a14428eb5efa1d6fa5439a385e5c23f3eefaff625a8cb26fef28ed8f"
+    },
+    {
+      "path": "raw/plan.json",
+      "bytes": 9256,
+      "sha256": "6635eef568ece5dc0cb935b2b8ad129f144d13f70eb063185b1e419281ab0556"
+    },
+    {
+      "path": "raw/preferences-normalized.txt",
+      "bytes": 65,
+      "sha256": "d33604c2fe7c0ab40c1ce301c3e5d36d9df29e7d390009786610fe070d6f4e79"
+    },
+    {
+      "path": "raw/preferences-original.txt",
+      "bytes": 65,
+      "sha256": "8ec689e16d81a9fb9102c4618b10b9295a12aaf8c2f4f903d883997a1da50b1f"
+    },
+    {
+      "path": "raw/preflight-process-receipt.json",
+      "bytes": 535,
+      "sha256": "03cf49837b2d2cb0ff437be899e74ee3796f9f225ea8f564fa413f999c79f812"
+    },
+    {
+      "path": "raw/preflight.json",
+      "bytes": 3829,
+      "sha256": "86347232a0e471ea12353704a7e24c09595e70433b060cdbf1eebe487456844c"
+    },
+    {
+      "path": "raw/report.json",
+      "bytes": 920958,
+      "sha256": "4dc73b50f5c165bce1993368c687f87f3b44defc910ba2608e0325db54da2369"
+    },
+    {
+      "path": "raw/runtime-supervisor.json",
+      "bytes": 12628,
+      "sha256": "8bea6ca7e8022b211243c071fe370db12c9470cb554563aa4dfa3ab6abf6692b"
+    },
+    {
+      "path": "review.json",
+      "bytes": 8138,
+      "sha256": "5f96d1a76fcbe47f33baa76d0b209be73b2f41cd353ba70a02078ec4d13d5cab"
+    },
+    {
+      "path": "SUMMARY.md",
+      "bytes": 2064,
+      "sha256": "9c7c879e7fe4fa9a1e2d70ca3b4126e0f999508487b5f81f70e8bb0c392689d4"
+    },
+    {
+      "path": "supporting/camera/ctl-0143-state.stdout.log",
+      "bytes": 1074,
+      "sha256": "e2a67f49145c21818c899ae8f1044e22707c589c8854fc2c47ce9aa660d717a2"
+    },
+    {
+      "path": "supporting/camera/ctl-0144-turn.stdout.log",
+      "bytes": 13,
+      "sha256": "7d167dac6a0d1dcd20ac46505b63886dd6a8a972fc222a9c7eead0187976895c"
+    },
+    {
+      "path": "supporting/camera/ctl-0146-status.stdout.log",
+      "bytes": 3297,
+      "sha256": "c5468287cad06ca9b3001a28c3206fa0cc9a2b39eabbf1883e4f78b5896a6465"
+    },
+    {
+      "path": "supporting/camera/ctl-0231-status.stdout.log",
+      "bytes": 3715,
+      "sha256": "75f5cd151058ae4f7d946f9109cf4ecc501b8f12de2d31c696408739bd5855e5"
+    },
+    {
+      "path": "supporting/camera/ctl-0233-status.stdout.log",
+      "bytes": 3718,
+      "sha256": "a42ad99e4386a3420cbddeeafb671c2d4006b33188629830e3d57e2e9989617f"
+    },
+    {
+      "path": "supporting/camera/ctl-0235-status.stdout.log",
+      "bytes": 3718,
+      "sha256": "9eeacf9e9806d73262884d3a2760fd1aa921e52b9996b90035ee6671372863c0"
+    },
+    {
+      "path": "supporting/camera/ctl-0245-status.stdout.log",
+      "bytes": 7310,
+      "sha256": "2f359233ea7dc3ea58e5ef2f9c0f6756b3cc7b9ac0ff345419c89dbe3c75ecfd"
+    },
+    {
+      "path": "supporting/camera/ctl-0247-status.stdout.log",
+      "bytes": 7872,
+      "sha256": "a5fa411632564a68bb0677f0c7c3b66f41d3da8a100fc7f3c234b6dc56998894"
+    },
+    {
+      "path": "supporting/camera/ctl-0251-status.stdout.log",
+      "bytes": 3889,
+      "sha256": "581990037e4794c4064cce915cdf120776f78607915a6d3259477403a2999092"
+    },
+    {
+      "path": "supporting/camera/ctl-0253-status.stdout.log",
+      "bytes": 3745,
+      "sha256": "edfdd505826d22f91267f162f9f40203d566297569d610a6f5ee67415ac1003c"
+    },
+    {
+      "path": "supporting/camera/ctl-0255-status.stdout.log",
+      "bytes": 3748,
+      "sha256": "a9fa0d8a373b9aa148ac32a20828275751a308a30a8cb270117ea5fba0a87bc5"
+    },
+    {
+      "path": "supporting/camera/ctl-0257-status.stdout.log",
+      "bytes": 3750,
+      "sha256": "6efb20a23ca5663f44213ee3daf0785058438440c05465e747e399a1485af7b2"
+    },
+    {
+      "path": "supporting/camera/ctl-0259-status.stdout.log",
+      "bytes": 3751,
+      "sha256": "43788394d2f21fc15e1c72369aba61c4e1707f97fa846ba6380e187408b4f45c"
+    },
+    {
+      "path": "supporting/camera/ctl-0263-status.stdout.log",
+      "bytes": 3748,
+      "sha256": "c60a739f73ddc15fc0ec51047cc70cb3e6a802ee8943168b3048874ce1085f5a"
+    },
+    {
+      "path": "supporting/camera/ctl-0273-status.stdout.log",
+      "bytes": 3750,
+      "sha256": "ec8dd8f7dd33b06578e2c6deaafa83b4da1f5a6781cc81f713446b2f3b8911ac"
+    },
+    {
+      "path": "supporting/camera/ctl-0275-status.stdout.log",
+      "bytes": 3745,
+      "sha256": "3eb490bc9aea2d56a2f15da60b8347d14a8697b2e24cea3e22301388c06540ff"
+    },
+    {
+      "path": "supporting/camera/ctl-0277-status.stdout.log",
+      "bytes": 3765,
+      "sha256": "909cad103ec54d7627797e880a0636ec1d8b26af36d9288baf9daf12fb72a6bb"
+    },
+    {
+      "path": "supporting/save-readers/game-0.stdout.log",
+      "bytes": 2167,
+      "sha256": "b05cb78807c19c50bbd85aff61e3d855555c74fe25ff43d9ce58e838337db38f"
+    },
+    {
+      "path": "supporting/save-readers/game-1.stdout.log",
+      "bytes": 2278,
+      "sha256": "8dbcf5e62c0352b87f6cc6ed84138e122f3173bdf32225c22ea579af60d9e43e"
+    },
+    {
+      "path": "tools/verify_installed_native_ui.py",
+      "bytes": 29490,
+      "sha256": "990e6c5023a25ae8b189803130b99c33347993fd86fe5fae7b945e9841266035"
+    }
+  ],
+  "fileCountExcludingManifestAndChecksums": 39
+}

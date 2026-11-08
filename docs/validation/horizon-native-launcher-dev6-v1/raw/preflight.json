@@ -1,0 +1,60 @@
+{
+  "status": "preflight-passed-no-game-launched",
+  "scope": "Direct local QA of genuinely launcher-built and installed client; GUI developer-offline Play is blocked and untested. Strict CLI owner gate remains unchanged.",
+  "integrity": {
+    "lockedFilesVerified": 26,
+    "resourceFilesVerified": 28180,
+    "resourceManifestSha256": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6"
+  },
+  "argv": [
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-client.exe",
+    "--resources",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\.local\\horizon-client\\26.3",
+    "--game-dir",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+    "--home",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+    "--name",
+    "TerraForgedQA",
+    "--control",
+    "--control-socket",
+    "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\qa-direct-control.json",
+    "--render-distance",
+    "6",
+    "--width",
+    "1280",
+    "--height",
+    "720",
+    "--timeout-seconds",
+    "3150"
+  ],
+  "cwd": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+  "environmentOverrides": {
+    "HORIZON_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+    "HORIZON_LAUNCHER_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher",
+    "XDG_DATA_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\xdg-data",
+    "XDG_CONFIG_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\xdg-config",
+    "HORIZON_LAUNCHER_TRASH": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\trash",
+    "HORIZON_LAUNCHER_CLIPBOARD": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\clipboard\\clipboard.data",
+    "HORIZON_LAUNCHER_DESKTOP": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\desktop",
+    "HORIZON_NO_AUDIO": "1",
+    "HORIZON_NO_DISCORD": "1",
+    "HORIZON_LAUNCHER_NO_SELF_UPDATE": "1",
+    "HORIZON_TELEMETRY_URL": "off",
+    "HORIZON_NO_KEYCHAIN": "1",
+    "HORIZON_LAUNCHER_LOCATION_FILE": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\location.json",
+    "HORIZON_MOD_INDEX": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\launcher-modpack-fixtures\\local-index.json",
+    "HORIZON_LAUNCHER_EXE": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\bin\\horizon-launcher.exe"
+  },
+  "sevenHomes": {
+    "HORIZON_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home",
+    "HORIZON_LAUNCHER_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher",
+    "XDG_DATA_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\xdg-data",
+    "XDG_CONFIG_HOME": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\xdg-config",
+    "HORIZON_LAUNCHER_TRASH": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\trash",
+    "HORIZON_LAUNCHER_CLIPBOARD": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\clipboard\\clipboard.data",
+    "HORIZON_LAUNCHER_DESKTOP": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\desktop"
+  },
+  "scriptSha256": "990e6c5023a25ae8b189803130b99c33347993fd86fe5fae7b945e9841266035",
+  "planSha256": "6635eef568ece5dc0cb935b2b8ad129f144d13f70eb063185b1e419281ab0556"
+}

@@ -1,0 +1,104 @@
+{
+  "action": "check_ui_all_classic",
+  "chunkChecks": [
+    {
+      "chunk": [
+        0,
+        0
+      ],
+      "nativeBiomeFingerprint": "6dc1096e04abd195",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "6dc1096e04abd195",
+      "vanillaBiomeFingerprint": "a2b7d896db159325"
+    },
+    {
+      "chunk": [
+        1024,
+        -2048
+      ],
+      "nativeBiomeFingerprint": "b0019eca975291a5",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "b0019eca975291a5",
+      "vanillaBiomeFingerprint": "60e84b83a1657725"
+    },
+    {
+      "chunk": [
+        0,
+        -2731
+      ],
+      "nativeBiomeFingerprint": "bbbefcacc9ec1ec5",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "bbbefcacc9ec1ec5",
+      "vanillaBiomeFingerprint": "925f73fc4f6c49c5"
+    },
+    {
+      "chunk": [
+        -6504,
+        -761
+      ],
+      "nativeBiomeFingerprint": "529f0564a1a51c2b",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "529f0564a1a51c2b",
+      "vanillaBiomeFingerprint": "4963294d19c355e5"
+    },
+    {
+      "chunk": [
+        6276,
+        2677
+      ],
+      "nativeBiomeFingerprint": "dd58881001321e25",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "dd58881001321e25",
+      "vanillaBiomeFingerprint": "916f8a30ee420d45"
+    }
+  ],
+  "levelName": "TerraForged UI QA",
+  "notCovered": [
+    "UI world creation",
+    "Natural spawn",
+    "Structures",
+    "Full save/client acceptance without subsequent game runs"
+  ],
+  "overworldSettings": "terraforged:overworld",
+  "position": [
+    16392.5,
+    80.0,
+    -32759.5
+  ],
+  "qaSpawnSupplied": false,
+  "regionFiles": [
+    "r.-1.-1.mca",
+    "r.-1.-85.mca",
+    "r.-1.-86.mca",
+    "r.-1.0.mca",
+    "r.-203.-24.mca",
+    "r.-203.-25.mca",
+    "r.-204.-24.mca",
+    "r.-204.-25.mca",
+    "r.0.-1.mca",
+    "r.0.-85.mca",
+    "r.0.-86.mca",
+    "r.0.0.mca",
+    "r.195.83.mca",
+    "r.195.84.mca",
+    "r.196.83.mca",
+    "r.196.84.mca",
+    "r.3.-13.mca",
+    "r.3.-14.mca",
+    "r.31.-64.mca",
+    "r.31.-65.mca",
+    "r.32.-64.mca",
+    "r.32.-65.mca",
+    "r.4.-13.mca",
+    "r.4.-14.mca"
+  ],
+  "seed": 8675309,
+  "status": "passed-native-save-fixture-reader",
+  "structuresEnabled": true,
+  "worldPresetUiReader": true,
+  "worldSpawn": [
+    2288,
+    116,
+    -6656
+  ]
+}

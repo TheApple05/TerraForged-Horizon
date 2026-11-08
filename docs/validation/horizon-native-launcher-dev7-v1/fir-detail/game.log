@@ -1,0 +1,24 @@
+Horizon 0.1.0
+Horizon: content from 2 mod(s) in D:\Codex-QA\TerraForged-Horizon\launcher-standard-v1\qa-dev7-fir-detail-v1\homes\game\.horizon-cache\mod-content
+Horizon: block sprites: 1291 layers at 64 px (largest 64 px, budget 256 MiB)
+load core tables: 528.11s
+load pack tables: 528.14s
+load items: 529.09s
+Horizon: resources loaded in 531.3s; 35724 block states, 1659 items, 84 biomes; 15 worker threads
+Horizon: no sound: audio off: HORIZON_NO_AUDIO is set
+Horizon: worldgen data loaded in 3.6561767s
+Horizon: control socket D:\Codex-QA\TerraForged-Horizon\launcher-standard-v1\qa-dev7-fir-detail-v1\homes\game\control.json
+Horizon renderer: NVIDIA GeForce RTX 3090 (Vulkan, DiscreteGpu)
+Horizon renderer: requesting the device (driver NVIDIA 616.92) with features [TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | MAPPABLE_PRIMARY_BUFFERS | MULTI_DRAW_INDIRECT_COUNT | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | SHADER_EARLY_DEPTH_TEST | SUBGROUP | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE] and the adapter's limits (buffers up to 1099511627776 bytes, storage bindings up to 2147483644 bytes, 2048 texture layers)
+Horizon renderer: creating the pipelines
+Horizon renderer: pipelines ready (multi-draw on, occlusion culling on, GPU culling available, GPU timer on)
+Horizon: live features ready in 172.442ms
+Horizon: world data preloaded for the launch's world in 5370 ms
+Horizon renderer: acquiring the first frame
+Horizon renderer: submitting the first frame
+Horizon: first frame after 2385 ms
+[21:14:38] [Server thread/INFO]: TerraForgedQA[/127.0.0.1:0] logged in with entity id 21 at (16392.5, 80.0, -32759.5)
+[21:14:38] [Server thread/INFO]: System chat: TerraForgedQA joined the game
+[21:14:39] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 17.500000, 75.000000, -43718.500000]
+[21:15:07] [Server thread/INFO]: System chat: [TerraForgedQA: Teleported TerraForgedQA to 17.500000, 75.000000, -43718.500000]
+Horizon: disconnected: Server closed

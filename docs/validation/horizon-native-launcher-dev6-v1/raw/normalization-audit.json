@@ -1,0 +1,220 @@
+{
+  "status": "separate-audit-passed-known-preferences-order-normalization",
+  "rawRunStatus": "failed",
+  "rawRunReportSha256": "4dc73b50f5c165bce1993368c687f87f3b44defc910ba2608e0325db54da2369",
+  "rawRunExitCode": 1,
+  "doesNotRewriteOrRerunOriginal": true,
+  "planSha256": "6635eef568ece5dc0cb935b2b8ad129f144d13f70eb063185b1e419281ab0556",
+  "preferences": {
+    "sourceExport": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\exports\\terraforged_launcher_qa.zip",
+    "sourceExportSha256": "8cbea2ee56dba3c7780ffede09d1899c53a3a32465080d9ed03eb619d21e1bda",
+    "sourceEntry": "horizon-mods.txt",
+    "originalSha256": "8ec689e16d81a9fb9102c4618b10b9295a12aaf8c2f4f903d883997a1da50b1f",
+    "actualSha256": "d33604c2fe7c0ab40c1ce301c3e5d36d9df29e7d390009786610fe070d6f4e79",
+    "originalLines": [
+      "mod.terraforged_native:true",
+      "mod.coords_hud:true",
+      "mod.qa_glow:true"
+    ],
+    "actualLines": [
+      "mod.coords_hud:true",
+      "mod.qa_glow:true",
+      "mod.terraforged_native:true"
+    ],
+    "exactLineMultisetsEqual": true,
+    "exactSortedOriginalBytesEqualActual": true,
+    "sourceEvidence": "horizon-client-render/src/mod_list.rs:69-103,112: BTreeSet load and sorted serialize/save"
+  },
+  "lockedFileChecks": [
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-client.exe",
+      "expectedSha256": "50b71406d8dc2f661e4a783c4774d4cd6877d459b04ad3b8e9d0586a59e6f6ab",
+      "actualSha256": "50b71406d8dc2f661e4a783c4774d4cd6877d459b04ad3b8e9d0586a59e6f6ab",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\horizon-ctl.exe",
+      "expectedSha256": "39d044232b4ee7f20f1167e84823695be0779acbc0653e147880dfee8ddaf7d2",
+      "actualSha256": "39d044232b4ee7f20f1167e84823695be0779acbc0653e147880dfee8ddaf7d2",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\native-mods.json",
+      "expectedSha256": "b1771da176f79908716513b0f547fba691c22d2f03f8f93066fe62aa3240e9f5",
+      "actualSha256": "b1771da176f79908716513b0f547fba691c22d2f03f8f93066fe62aa3240e9f5",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\launcher\\versions\\native-f43eebf-f53fc548a368\\research-lock.json",
+      "expectedSha256": "eac45913fbfef00bf8902548511593e413b097644c4c1761b74839081c83bbac",
+      "actualSha256": "eac45913fbfef00bf8902548511593e413b097644c4c1761b74839081c83bbac",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\pack.json",
+      "expectedSha256": "c13968971822f642d8b388f54bf29922e03d352fa5ada0ae8689ff7d22b929ab",
+      "actualSha256": "c13968971822f642d8b388f54bf29922e03d352fa5ada0ae8689ff7d22b929ab",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\terraforged_launcher_qa-0.1.0.hpack",
+      "expectedSha256": "a8120f30f5048c7f16621ba9225744a2f2270021abba80112377177172cad153",
+      "actualSha256": "a8120f30f5048c7f16621ba9225744a2f2270021abba80112377177172cad153",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-native-mods\\terraforged_native.hmod",
+      "expectedSha256": "c9845ee3a3d036ef1f0dea379358c240efbb25a6c7156457c385166fd0dd235f",
+      "actualSha256": "c9845ee3a3d036ef1f0dea379358c240efbb25a6c7156457c385166fd0dd235f",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-native-mods\\coords_hud.hnmod",
+      "expectedSha256": "432376fad3062b3517e274d3b8c0d0b52fc5d6de2aee20a0b340c8cab5a8cf08",
+      "actualSha256": "432376fad3062b3517e274d3b8c0d0b52fc5d6de2aee20a0b340c8cab5a8cf08",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-mods\\qa_glow.hmod",
+      "expectedSha256": "4668519cb92c15612d9c15f394a828252fc39abfb09c4d30ad3e961b6de40b4c",
+      "actualSha256": "4668519cb92c15612d9c15f394a828252fc39abfb09c4d30ad3e961b6de40b4c",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\homes\\game\\horizon-packs\\terraforged_launcher_qa\\home\\horizon-mods.txt",
+      "expectedSha256": "8ec689e16d81a9fb9102c4618b10b9295a12aaf8c2f4f903d883997a1da50b1f",
+      "actualSha256": "d33604c2fe7c0ab40c1ce301c3e5d36d9df29e7d390009786610fe070d6f4e79",
+      "exactBytesUnchanged": false,
+      "knownPreferencesOrderOnly": true
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\all-classic-targets.json",
+      "expectedSha256": "290cbee65a6f524eb2782ffdc9444e2cdc1373fe631ff1a00da1793bcaf23029",
+      "actualSha256": "290cbee65a6f524eb2782ffdc9444e2cdc1373fe631ff1a00da1793bcaf23029",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\dev6-package-receipt.json",
+      "expectedSha256": "2823d4cf96b960c893f5c8130062b4a0f93333022a9779888bbd3091bf41bb51",
+      "actualSha256": "2823d4cf96b960c893f5c8130062b4a0f93333022a9779888bbd3091bf41bb51",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\dev6-stage-result.json",
+      "expectedSha256": "d0f0947e669fed76a013b28db2306f55aef45564881eeddaa7ab5653ee8f1fd6",
+      "actualSha256": "d0f0947e669fed76a013b28db2306f55aef45564881eeddaa7ab5653ee8f1fd6",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\environment.json",
+      "expectedSha256": "6bd2642e4bd8573b05b40cdf0e95b9158106fce18c157cb0e4e7f6dc6d7714d8",
+      "actualSha256": "6bd2642e4bd8573b05b40cdf0e95b9158106fce18c157cb0e4e7f6dc6d7714d8",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\installed-horizon-native.json",
+      "expectedSha256": "5f6edf418df2e2899f7c3cc8aea30240acd49effadc6c61a1ade6e5306dd5d3b",
+      "actualSha256": "5f6edf418df2e2899f7c3cc8aea30240acd49effadc6c61a1ade6e5306dd5d3b",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\installed-native-mods.json",
+      "expectedSha256": "b1771da176f79908716513b0f547fba691c22d2f03f8f93066fe62aa3240e9f5",
+      "actualSha256": "b1771da176f79908716513b0f547fba691c22d2f03f8f93066fe62aa3240e9f5",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\native-build-receipt.json",
+      "expectedSha256": "65b9549a214abaf7b86e6ee948dfff95123d3ce6d2149489bfc7da299648ec47",
+      "actualSha256": "65b9549a214abaf7b86e6ee948dfff95123d3ce6d2149489bfc7da299648ec47",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\old-save-probe-source.rs",
+      "expectedSha256": "ff08f1dc032aef15b455a07af49a636e83eb726e27b2d1d6b7673e5c9802c6b1",
+      "actualSha256": "ff08f1dc032aef15b455a07af49a636e83eb726e27b2d1d6b7673e5c9802c6b1",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\resources-sha256.json",
+      "expectedSha256": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6",
+      "actualSha256": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\selected-classic-targets.json",
+      "expectedSha256": "430684cf2297a426b469bf7ae7704ae4a0f5c43882d3958bf76d79c2ab11bb6e",
+      "actualSha256": "430684cf2297a426b469bf7ae7704ae4a0f5c43882d3958bf76d79c2ab11bb6e",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\terraforged_save_fixture.exe",
+      "expectedSha256": "069c95fd5c5c9e4c380d2b323c2d8c97d0fedeb940c0d9a91021c7177cfc9c8c",
+      "actualSha256": "069c95fd5c5c9e4c380d2b323c2d8c97d0fedeb940c0d9a91021c7177cfc9c8c",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\verify_native_ui.original.py",
+      "expectedSha256": "5fbfe7f67a107d9e59058e56c335da5f0c616fdea54b297dd94818a058ac03e1",
+      "actualSha256": "5fbfe7f67a107d9e59058e56c335da5f0c616fdea54b297dd94818a058ac03e1",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\world-preset.json",
+      "expectedSha256": "f2dfb9594cb6a1ccf708e79ea42d8cd3174568beec2bff98543913fba27152f3",
+      "actualSha256": "f2dfb9594cb6a1ccf708e79ea42d8cd3174568beec2bff98543913fba27152f3",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\bin\\horizon-launcher.exe",
+      "expectedSha256": "e544cd14695a3edcb3bb738d8896088c17dc42ea80078718e81054470ff9b0a2",
+      "actualSha256": "e544cd14695a3edcb3bb738d8896088c17dc42ea80078718e81054470ff9b0a2",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\verify_installed_native_ui.py",
+      "expectedSha256": "990e6c5023a25ae8b189803130b99c33347993fd86fe5fae7b945e9841266035",
+      "actualSha256": "990e6c5023a25ae8b189803130b99c33347993fd86fe5fae7b945e9841266035",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    },
+    {
+      "path": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\inputs\\old-probe-qualification.json",
+      "expectedSha256": "c7a2bf33a3c18a690ce4c02209e9d6fff2bba5bf4b08ca854851e3d1bb90f86c",
+      "actualSha256": "c7a2bf33a3c18a690ce4c02209e9d6fff2bba5bf4b08ca854851e3d1bb90f86c",
+      "exactBytesUnchanged": true,
+      "knownPreferencesOrderOnly": false
+    }
+  ],
+  "resourceChecks": {
+    "allExact": true,
+    "files": 28180,
+    "expectedInventorySha256": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6",
+    "actualInventoryPath": "D:\\Codex-QA\\TerraForged-Horizon\\launcher-standard-v1\\qa-direct-native-v1\\normalization-audit-resources-sha256.json",
+    "actualInventorySha256": "5c384cc89c3285010cb2ef9b6900b8644cd732d5b86ec263abac8e924e26c2d6"
+  },
+  "completedAtUtc": "2026-11-08T03:48:57.528816+00:00"
+}
