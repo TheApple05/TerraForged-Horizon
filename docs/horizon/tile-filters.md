@@ -31,6 +31,22 @@ initialization reuses interior offsets in the original order. Nested inversions
 retain each float subtraction rather than canceling them algebraically. Radius
 zero and finite unusual rates are observed without silently substituting defaults.
 
+Smoothing now computes its ordered neighbor offsets, weights and weight sum once
+per pass, preserving in-place traversal and every floating-point addition. Two
+regressions compare the original loop bit for bit across radii, masks, borders
+and repeated passes, and check that unusable radii cannot start an oversized
+precomputation. No preset values or terrain resolution change.
+
+A local release benchmark measures one smoothing pass on a deterministic 160x160
+tile. Balanced baseline/candidate/candidate/baseline runs, with 12 measured trials
+per version and radius, give median times of 0.755 to 0.349 ms at radius 1.8,
+7.491 to 3.129 ms at radius 8, and 49.294 to 23.048 ms at radius 32. Every height
+checksum matches. This is about half the smoothing filter time on this host;
+it does not establish a whole-world generation speedup. Tile cloning and
+checksums are outside the timer, and workstation load was uncontrolled. The
+[report](../validation/horizon-worldgen-speed-stability-v1.json) retains all
+trials, source/executable hashes, the harness and validation results.
+
 Native TileBuffer supports tile factors/borders 0..4. Erosion backings accept
 16..512; WorldFilters bounds droplets/chunk to 0..4096, lifetime to 0..1000,
 smoothing iterations to 0..64, radius to 0..64, and requires finite rates/volumes.

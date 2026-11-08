@@ -941,6 +941,9 @@ impl Noise {
                 ..
             } => {
                 let value = noise_util::clamp_f32(input.compute(x, z, seed), 0.0, 0.999999);
+                if value.is_nan() {
+                    return value;
+                }
                 let index = noise_util::floor_legacy(value * steps.len() as f32) as usize;
                 let step = steps[index];
                 if index == steps.len() - 1 || value < step.lower {
@@ -1425,4 +1428,34 @@ pub(crate) fn java_max(a: f32, b: f32) -> f32 {
         return b;
     }
     if a >= b { a } else { b }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn terrace_propagates_nan_without_indexing_outside_steps() {
+        let zero = Noise::constant(0.0).unwrap();
+        let input = crate::noises::map_range(zero.clone(), 0.0, 1.0).unwrap();
+        assert!(input.compute(0.0, 0.0, 0).is_nan());
+        let terrace =
+            Noise::terrace(input, zero.clone(), zero.clone(), zero.clone(), 0.2, 3).unwrap();
+        assert!(terrace.compute(0.0, 0.0, 0).is_nan());
+        for (value, expected) in [
+            (f32::NEG_INFINITY, 0.0_f32),
+            (-1.0, 0.0),
+            (0.0, 0.0),
+            (0.25, 0.5),
+            (0.5, 0.5),
+            (0.75, 1.0),
+            (1.0, 1.0),
+            (f32::INFINITY, 1.0),
+        ] {
+            let input = Noise::make(Node::Constant(value), 0.0, 1.0, &[]).unwrap();
+            let terrace =
+                Noise::terrace(input, zero.clone(), zero.clone(), zero.clone(), 0.2, 3).unwrap();
+            assert_eq!(terrace.compute(0.0, 0.0, 0).to_bits(), expected.to_bits());
+        }
+    }
 }

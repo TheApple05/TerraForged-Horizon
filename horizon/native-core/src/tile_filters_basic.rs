@@ -113,42 +113,39 @@ impl Smoothing {
         let radius_sq = self.smoothing_radius * self.smoothing_radius;
 
         let total = tile.size.total;
+        if !self.smoothing_radius.is_finite()
+            || self.smoothing_radius <= 0.0
+            || radius >= total - radius
+        {
+            return Ok(());
+        }
         let max_z = total - radius;
         let max_x = total - radius;
+        let mut neighbours = Vec::new();
+        let mut weights = 0.0;
+        for dz in -radius..=radius {
+            for dx in -radius..=radius {
+                let dist2 = (dx * dx + dz * dz) as f32;
+                if dist2 <= radius_sq {
+                    let weight = 1.0 - dist2 / radius_sq;
+                    neighbours.push(((dz * total + dx) as isize, weight));
+                    weights += weight;
+                }
+            }
+        }
 
         let mut z = radius;
         while z < max_z {
             let mut x = radius;
             while x < max_x {
-                let idx = match tile.raw_index(x, z) {
-                    Some(i) => i,
-                    None => {
-                        x += 1;
-                        continue;
-                    }
-                };
+                let idx = (z * total + x) as usize;
                 let cell = tile.cells[idx];
                 if !cell.erosion_mask {
                     let mut total_weighted = 0.0;
-                    let mut weights = 0.0;
-                    let mut dz = -radius;
-                    while dz <= radius {
-                        let mut dx = -radius;
-                        while dx <= radius {
-                            let dist2 = (dx * dx + dz * dz) as f32;
-                            if dist2 <= radius_sq {
-                                let px = x + dx;
-                                let pz = z + dz;
-                                if let Some(neighbour) = tile.get_raw(px, pz) {
-                                    let value = neighbour.height;
-                                    let weight = 1.0 - dist2 / radius_sq;
-                                    total_weighted += value * weight;
-                                    weights += weight;
-                                }
-                            }
-                            dx += 1;
-                        }
-                        dz += 1;
+                    // Interior traversal keeps every offset in bounds; preserve dz/dx sum order.
+                    for &(offset, weight) in &neighbours {
+                        total_weighted +=
+                            tile.cells[(idx as isize + offset) as usize].height * weight;
                     }
                     if weights > 0.0 {
                         let dif = cell.height - total_weighted / weights;
@@ -214,6 +211,120 @@ impl Steepness {
                 x += 1;
             }
             z += 1;
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn original_smoothing_once(
+        smoothing: &Smoothing,
+        tile: &mut TileBuffer,
+        terrains: &TerrainRegistry,
+    ) -> Result<(), GraphError> {
+        let radius = u::round_legacy(smoothing.smoothing_radius + 0.5);
+        let radius_sq = smoothing.smoothing_radius * smoothing.smoothing_radius;
+        let total = tile.size.total;
+        for z in radius..total - radius {
+            for x in radius..total - radius {
+                let Some(index) = tile.raw_index(x, z) else {
+                    continue;
+                };
+                let cell = tile.cells[index];
+                if cell.erosion_mask {
+                    continue;
+                }
+                let mut total_weighted = 0.0;
+                let mut weights = 0.0;
+                for dz in -radius..=radius {
+                    for dx in -radius..=radius {
+                        let dist2 = (dx * dx + dz * dz) as f32;
+                        if dist2 <= radius_sq
+                            && let Some(neighbour) = tile.get_raw(x + dx, z + dz)
+                        {
+                            let weight = 1.0 - dist2 / radius_sq;
+                            total_weighted += neighbour.height * weight;
+                            weights += weight;
+                        }
+                    }
+                }
+                if weights > 0.0 {
+                    let dif = cell.height - total_weighted / weights;
+                    let amount = smoothing.modifier.modify(
+                        &cell,
+                        dif * smoothing.smoothing_rate,
+                        terrains,
+                    )?;
+                    tile.cells[index].height -= amount;
+                }
+            }
+        }
+        Ok(())
+    }
+
+    #[test]
+    fn smoothing_matches_original_bits_for_radii_masks_and_tile_borders() {
+        let terrains = TerrainRegistry::new();
+        for (factor, border) in [(0, 0), (1, 0), (0, 1)] {
+            for radius in [0.0, 1.8, 3.0, 8.0] {
+                let smoothing = Smoothing::new(
+                    SmoothingSettings {
+                        iterations: 3,
+                        smoothing_radius: radius,
+                        smoothing_rate: 0.75,
+                    },
+                    Levels::new(384, 63),
+                );
+                let mut original = TileBuffer::new(-1, 2, factor, border).unwrap();
+                for (index, cell) in original.cells.iter_mut().enumerate() {
+                    cell.height = (index * 37 % 101) as f32 / 125.0 + 0.05;
+                    cell.terrain = if index % 3 == 0 { 9 } else { 8 };
+                    cell.terrain_region_edge = (index % 17) as f32 / 32.0;
+                    cell.river_mask = (index % 13) as f32 / 32.0;
+                    cell.erosion_mask = index % 7 == 0;
+                }
+                let mut optimized = original.clone();
+                for _ in 0..3 {
+                    original_smoothing_once(&smoothing, &mut original, &terrains).unwrap();
+                }
+                smoothing.apply(&mut optimized, 3, &terrains).unwrap();
+                for (index, (expected, actual)) in
+                    original.cells.iter().zip(&optimized.cells).enumerate()
+                {
+                    assert_eq!(
+                        actual.height.to_bits(),
+                        expected.height.to_bits(),
+                        "factor={factor} border={border} radius={radius} index={index}"
+                    );
+                }
+            }
+        }
+    }
+
+    #[test]
+    fn smoothing_skips_nonfinite_and_oversized_radii() {
+        let terrains = TerrainRegistry::new();
+        for radius in [
+            f32::NAN,
+            f32::INFINITY,
+            f32::NEG_INFINITY,
+            f32::MAX,
+            -f32::MAX,
+            8.0,
+        ] {
+            let smoothing = Smoothing::new(
+                SmoothingSettings {
+                    iterations: 1,
+                    smoothing_radius: radius,
+                    smoothing_rate: 1.0,
+                },
+                Levels::new(384, 63),
+            );
+            let mut tile = TileBuffer::new(0, 0, 0, 0).unwrap();
+            smoothing.apply(&mut tile, 1, &terrains).unwrap();
+            assert!(tile.cells.iter().all(|cell| cell.height.to_bits() == 0));
         }
     }
 }
