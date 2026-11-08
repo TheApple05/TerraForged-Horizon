@@ -1,0 +1,36 @@
+{
+  "status": "qualification-in-progress-memory-gate-open",
+  "asOfUtc": "2026-11-08T21:10:26.334935+00:00",
+  "scope": "Windows x64 Vulkan, Minecraft26.3, singleplayer, bundled default preset, TerraForged alone. No whole-Horizon-client stability certification.",
+  "completed": [
+    "Exact public HMOD/launcher downloads and clean native compilation/resource preparation",
+    "Authenticated CLI Play and user-reported exact-candidate GUI entry",
+    "Three additional final-client seeds, six clean exits and13824 saved-quart comparisons",
+    "Copied standalone native.dev7 upgrade, four clean exits, one intentional owned kill during active generation,4608 saved-quart comparisons",
+    "All18multi-seed and13upgrade/recovery images reviewed with explicit camera limits"
+  ],
+  "pending": [
+    "Fresh sustained-generation qualification after private/pagefile commit growth is attributed or fixed. Current extended run intentionally stopped for Windows commit headroom; not an accepted45minute session.",
+    "Final save/reopen and stored all-biome/cold-region reads",
+    "Final extended-run image/memory/frame review",
+    "All7sourceCI at final release commit",
+    "Matching final source ZIP/public-byte verification and stable publication"
+  ],
+  "limitations": [
+    "Native Customize/preset editor unimplemented",
+    "Other OS, multiplayer/dedicated and arbitrary mods/modpacks unqualified",
+    "Full historical Java feature/scenery/spawn-placement parity unqualified",
+    "No power-loss/torn-sector atomicity, isolated FPS/speedup, hardware-minimum or multi-hour-soak claim"
+  ],
+  "observedMemoryBlocker": {
+    "completedNewCentralRegions": 51,
+    "processAtStop": {
+      "Pid": 12944,
+      "ThreadCount": 63,
+      "WorkingSetBytes": 3581722624,
+      "PrivateBytes": 19714428928
+    },
+    "systemFreeCommitKiBBeforeStop": 8727636,
+    "action": "Clean quit requested only for the recorded synthetic test client; raw failure and explicit owner-stop receipt preserved. Not a spontaneous crash. No stable promotion."
+  }
+}

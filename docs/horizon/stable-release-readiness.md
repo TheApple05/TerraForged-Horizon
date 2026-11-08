@@ -196,3 +196,20 @@ client. The replacement first saves one corner of a distant region, checks
 that the intended next chunk's Anvil header slot is empty, then interrupts new
 generation in that region. Neither scenario claims to simulate torn sector
 writes or a power loss.
+
+The fresh functional tour renders all seventeen targets and completes fifty-one
+new central regions. It is then deliberately stopped for Windows commit
+headroom, before the required forty-five minutes. The owned test process has
+19,714,428,928 private bytes, 3,581,722,624 resident bytes and 63 threads at the
+stop. Its raw failure and explicit owner-stop receipt remain unchanged; it is
+not a spontaneous crash or an accepted sustained run. Growth continues across
+a structure-cache rollover, so bounded chunk/cache entry counts do not establish
+safe memory use. A title-only diagnostic attributes a smaller increase to new
+control connections; stationary-world connection reuse and a diagnostic-only
+live-allocation census are being checked. Stable promotion remains held until
+the growth is explained or fixed and sustained qualification completes.
+
+The [selected final-package results](../validation/horizon-0.1.0-v1/SUMMARY.json)
+already retain the bounded installed multi-seed, Play and copied-world recovery
+checks without publishing account files, resources or worlds. Their overall
+status explicitly keeps this memory gate open.

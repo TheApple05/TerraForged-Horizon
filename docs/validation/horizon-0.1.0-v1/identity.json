@@ -1,0 +1,21 @@
+{
+  "status": "frozen-production-inputs-match-installed-candidate",
+  "packageFreezeCommit": "5956c6125f2cf6db93f7478d8f44ca3cac1a6ee4",
+  "horizonRevision": "f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d",
+  "mixinsRevision": "e8cd0aa38cffef49cb2e088ef716baa107148c02",
+  "launcherSourceRevision": "62e533e009eb2fa58cbe10948f2e453fa00b94f2",
+  "nativeVersion": "native-f43eebf-99bd42e244c2",
+  "profile": "performance",
+  "nativeTarget": "Windows x64 GNU",
+  "sha256": {
+    "launcher": "19a0d66fd05f0e65d42b6386d6ac6a2d45f32c88c0678fa4e3aefae8ceaa813e",
+    "client": "011349e00fd1918c62cf23a9a5dabc342cce4ecac131710c0788a79e99b7b8ce",
+    "ctl": "3b8b33c8adecf245295c317e6ca9e0c9a1bc238a296558b58cdb73685560e656",
+    "hmod": "68a2aaae97c3e16b9c8deb4f6095febef7201de94e7fe443746756b200926709"
+  },
+  "installedNativeRecordSha256": "cfa28efa50d34258ff8f8d185767ad89a5c9fb7e4aa369d2e16d8a041af950e7",
+  "stageResultSha256": "032b311d1b829ec516f6f5a61e58bc7622816bf9a2331234820c89ff26425335",
+  "unchangedInputFileCount": 84,
+  "rawInstalledValidationSha256": "1399da2f5a31fa6dccb4b05ca2cb94dd9b840ce9865a04a7fa7f253cb05307fd",
+  "readerScope": "Independent MSVC reader and GNU installed client, identical pinned host/generation sources; not the same executable or profile."
+}
