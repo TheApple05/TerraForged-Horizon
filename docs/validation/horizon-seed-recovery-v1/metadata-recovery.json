@@ -1,0 +1,83 @@
+{
+  "sourceOriginalPreserved": true,
+  "sourceFiles": 62,
+  "sourceBytes": 47817329,
+  "recoveryExit": 0,
+  "binarySha256": "b725d982a5be8b0c896842d3ddc0a16e83c256977c2cb44ebf83fc47b4086e1b",
+  "result": {
+    "corruptCurrentPreserved": true,
+    "seed": 8675309,
+    "status": "passed-metadata-recovery-and-rollback",
+    "windowsLockedBackupRollback": true
+  },
+  "postRecoveryReader": {
+    "action": "check_all",
+    "chunkChecks": [
+      {
+        "chunk": [
+          0,
+          0
+        ],
+        "nativeBiomeFingerprint": "6dc1096e04abd195",
+        "quartBiomes": 1536,
+        "storedBiomeFingerprint": "6dc1096e04abd195",
+        "vanillaBiomeFingerprint": "a2b7d896db159325"
+      },
+      {
+        "chunk": [
+          1024,
+          -2048
+        ],
+        "nativeBiomeFingerprint": "b0019eca975291a5",
+        "quartBiomes": 1536,
+        "storedBiomeFingerprint": "b0019eca975291a5",
+        "vanillaBiomeFingerprint": "60e84b83a1657725"
+      }
+    ],
+    "levelName": "TerraForged native QA",
+    "notCovered": [
+      "UI world creation",
+      "Natural spawn",
+      "Structures",
+      "Full save/client acceptance without subsequent game runs"
+    ],
+    "overworldSettings": "terraforged:overworld",
+    "position": [
+      16392.0,
+      80.0,
+      -32760.0
+    ],
+    "qaSpawnSupplied": true,
+    "regionFiles": [
+      "r.-1.-1.mca",
+      "r.-1.-85.mca",
+      "r.-1.-86.mca",
+      "r.-1.0.mca",
+      "r.-232.-209.mca",
+      "r.-232.-210.mca",
+      "r.-233.-209.mca",
+      "r.-233.-210.mca",
+      "r.-248.148.mca",
+      "r.-248.149.mca",
+      "r.-249.148.mca",
+      "r.-249.149.mca",
+      "r.0.-1.mca",
+      "r.0.-85.mca",
+      "r.0.-86.mca",
+      "r.0.0.mca",
+      "r.31.-64.mca",
+      "r.31.-65.mca",
+      "r.32.-64.mca",
+      "r.32.-65.mca"
+    ],
+    "seed": 8675309,
+    "status": "passed-native-save-fixture-reader",
+    "structuresEnabled": false,
+    "worldPresetUiReader": false,
+    "worldSpawn": [
+      8,
+      100,
+      8
+    ]
+  }
+}

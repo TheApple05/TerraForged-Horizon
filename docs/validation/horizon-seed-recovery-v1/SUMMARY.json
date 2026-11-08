@@ -1,0 +1,531 @@
+{
+  "status": "passed-bounded-multiseed-ui-save-and-metadata-recovery",
+  "scope": "Source-built Windows Vulkan candidate diagnostics, not final packaged or installed release qualification. No performance comparison.",
+  "horizonRevision": "f43eebfc04b73f0c2bbf5048f7a3ab36c240f21d",
+  "runs": [
+    {
+      "seed": 0,
+      "rawReportSha256": "cdf767a9a08b044db766a41acd0cb78cb99d5da3addf6ec3e8e595a7193b0e31",
+      "sourceReportLocal": "build\\qa\\multiseed-ui-v1\\seed-0.json",
+      "exitCodes": [
+        0,
+        0
+      ],
+      "structuresEnabled": true,
+      "naturalSurvivalHealth": 20.0,
+      "creationViaUi": true,
+      "saveChecks": [
+        {
+          "action": "check_ui",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "fac893e8878fb9f5",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "fac893e8878fb9f5",
+              "vanillaBiomeFingerprint": "37eeb4914be850c5"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "39ed1950dbe7232b",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": null,
+              "vanillaBiomeFingerprint": "e0d0c16dc9b00c6b"
+            }
+          ],
+          "levelName": "TerraForged UI QA",
+          "notCovered": [
+            "UI world creation",
+            "Natural spawn",
+            "Structures",
+            "Full save/client acceptance without subsequent game runs"
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "position": [
+            8.5,
+            90.0,
+            8.5
+          ],
+          "qaSpawnSupplied": false,
+          "regionFiles": [
+            "r.-1.-1.mca",
+            "r.-1.0.mca",
+            "r.0.-1.mca",
+            "r.0.0.mca",
+            "r.4.2.mca",
+            "r.4.3.mca",
+            "r.5.2.mca",
+            "r.5.3.mca"
+          ],
+          "seed": 0,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2496,
+            113,
+            1776
+          ]
+        },
+        {
+          "action": "check_ui_all",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "fac893e8878fb9f5",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "fac893e8878fb9f5",
+              "vanillaBiomeFingerprint": "37eeb4914be850c5"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "39ed1950dbe7232b",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "39ed1950dbe7232b",
+              "vanillaBiomeFingerprint": "e0d0c16dc9b00c6b"
+            }
+          ],
+          "levelName": "TerraForged UI QA",
+          "notCovered": [
+            "UI world creation",
+            "Natural spawn",
+            "Structures",
+            "Full save/client acceptance without subsequent game runs"
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "position": [
+            16392.5,
+            80.0,
+            -32759.5
+          ],
+          "qaSpawnSupplied": false,
+          "regionFiles": [
+            "r.-1.-1.mca",
+            "r.-1.0.mca",
+            "r.0.-1.mca",
+            "r.0.0.mca",
+            "r.31.-64.mca",
+            "r.31.-65.mca",
+            "r.32.-64.mca",
+            "r.32.-65.mca",
+            "r.4.2.mca",
+            "r.4.3.mca",
+            "r.5.2.mca",
+            "r.5.3.mca"
+          ],
+          "seed": 0,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2496,
+            113,
+            1776
+          ]
+        }
+      ],
+      "imageSha256": {
+        "game-0.png": "ddb1f1c734369b6e439456a23cad269f713720cb64e03083084c46efe358b7f6",
+        "game-1.png": "ecd0d78a36a36c826aeafd35649a25ea2b1d8d69d5817419bb564eaf067e229b",
+        "native-preset-ui.png": "1afd42bb7c4e5a6a22fd998676444e82992fdf4fc5f8b16dea4717b5850692d7",
+        "natural-spawn.png": "963953a02bd0ae6d3334dc5423ab258ea00aae76711e4d975af40578eb0b386e"
+      },
+      "deathAndRespawn": false
+    },
+    {
+      "seed": -123456789,
+      "rawReportSha256": "f67b4ac866350eb9dbed2b4572d91d551b4a5d260ebf9d6b2982dc4c20f39ec9",
+      "sourceReportLocal": "build\\qa\\multiseed-ui-v2\\seed-negative.json",
+      "exitCodes": [
+        0,
+        0
+      ],
+      "structuresEnabled": true,
+      "naturalSurvivalHealth": 20.0,
+      "creationViaUi": true,
+      "saveChecks": [
+        {
+          "action": "check_ui",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "95851963b165646d",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "95851963b165646d",
+              "vanillaBiomeFingerprint": "a2b7d896db159325"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "0a2b66f5cd162e4d",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": null,
+              "vanillaBiomeFingerprint": "6013892413eea525"
+            }
+          ],
+          "levelName": "TerraForged UI QA",
+          "notCovered": [
+            "UI world creation",
+            "Natural spawn",
+            "Structures",
+            "Full save/client acceptance without subsequent game runs"
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "position": [
+            8.5,
+            90.0,
+            8.5
+          ],
+          "qaSpawnSupplied": false,
+          "regionFiles": [
+            "r.-1.-1.mca",
+            "r.-1.0.mca",
+            "r.0.-1.mca",
+            "r.0.0.mca",
+            "r.4.4.mca",
+            "r.4.5.mca",
+            "r.5.4.mca",
+            "r.5.5.mca"
+          ],
+          "seed": -123456789,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2336,
+            111,
+            2320
+          ]
+        },
+        {
+          "action": "check_ui_all",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "95851963b165646d",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "95851963b165646d",
+              "vanillaBiomeFingerprint": "a2b7d896db159325"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "0a2b66f5cd162e4d",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "0a2b66f5cd162e4d",
+              "vanillaBiomeFingerprint": "6013892413eea525"
+            }
+          ],
+          "levelName": "TerraForged UI QA",
+          "notCovered": [
+            "UI world creation",
+            "Natural spawn",
+            "Structures",
+            "Full save/client acceptance without subsequent game runs"
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "position": [
+            16392.5,
+            80.0,
+            -32759.5
+          ],
+          "qaSpawnSupplied": false,
+          "regionFiles": [
+            "r.-1.-1.mca",
+            "r.-1.0.mca",
+            "r.0.-1.mca",
+            "r.0.0.mca",
+            "r.31.-64.mca",
+            "r.31.-65.mca",
+            "r.32.-64.mca",
+            "r.32.-65.mca",
+            "r.4.4.mca",
+            "r.4.5.mca",
+            "r.5.4.mca",
+            "r.5.5.mca"
+          ],
+          "seed": -123456789,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2336,
+            111,
+            2320
+          ]
+        }
+      ],
+      "imageSha256": {
+        "game-0.png": "c9bb001114ce7b8187e3786167abd6af7a53cc8c45b1bf6b6df6324b6883a37a",
+        "game-1.png": "91e82dd5ea16fe4f0e5ed65f440e7bb6767c661072eac77306e17e5b9aa59703",
+        "healthy-respawn.png": "cfcfef7501a3cb3d4f16aaf9d688047193d45b0d76a59993f0aa1412699684e9",
+        "native-preset-ui.png": "f19bb3132d3e2a24734ecc536329254c4968cdd40e86938abb31936e1c341815",
+        "natural-spawn.png": "2b546a14ee0c420c8e205bca05483ae52d8503078eddf3e8b0e1248766c50395"
+      },
+      "deathAndRespawn": true,
+      "respawnImageLimit": "Captured while loading overlay remained visible; later origin image proves continued play. State checks qualify healthy grounded survival respawn.",
+      "distantImageLimit": "Fixed y80 camera is underground for this seed; cave rendering and saved FULL checks pass, not surface-scenery acceptance."
+    },
+    {
+      "seed": 9223372036854775807,
+      "rawReportSha256": "57393ccc723f627f19df7c5c90414e794133531e8a6fea5435f8bc3e7143d8a0",
+      "sourceReportLocal": "build\\qa\\multiseed-ui-v1\\seed-max.json",
+      "exitCodes": [
+        0,
+        0
+      ],
+      "structuresEnabled": true,
+      "naturalSurvivalHealth": 20.0,
+      "creationViaUi": true,
+      "saveChecks": [
+        {
+          "action": "check_ui",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "ae96223c630eb625",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "ae96223c630eb625",
+              "vanillaBiomeFingerprint": "40eb21c2e9ec94d5"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "5d1fd49971f4eb25",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": null,
+              "vanillaBiomeFingerprint": "13bb4fa0f6947325"
+            }
+          ],
+          "levelName": "TerraForged UI QA",
+          "notCovered": [
+            "UI world creation",
+            "Natural spawn",
+            "Structures",
+            "Full save/client acceptance without subsequent game runs"
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "position": [
+            8.5,
+            90.0,
+            8.5
+          ],
+          "qaSpawnSupplied": false,
+          "regionFiles": [
+            "r.-1.-1.mca",
+            "r.-1.0.mca",
+            "r.0.-1.mca",
+            "r.0.0.mca",
+            "r.3.-13.mca",
+            "r.3.-14.mca",
+            "r.4.-13.mca",
+            "r.4.-14.mca"
+          ],
+          "seed": 9223372036854775807,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2288,
+            154,
+            -6416
+          ]
+        },
+        {
+          "action": "check_ui_all",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "ae96223c630eb625",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "ae96223c630eb625",
+              "vanillaBiomeFingerprint": "40eb21c2e9ec94d5"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "5d1fd49971f4eb25",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "5d1fd49971f4eb25",
+              "vanillaBiomeFingerprint": "13bb4fa0f6947325"
+            }
+          ],
+          "levelName": "TerraForged UI QA",
+          "notCovered": [
+            "UI world creation",
+            "Natural spawn",
+            "Structures",
+            "Full save/client acceptance without subsequent game runs"
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "position": [
+            16392.5,
+            80.0,
+            -32759.5
+          ],
+          "qaSpawnSupplied": false,
+          "regionFiles": [
+            "r.-1.-1.mca",
+            "r.-1.0.mca",
+            "r.0.-1.mca",
+            "r.0.0.mca",
+            "r.3.-13.mca",
+            "r.3.-14.mca",
+            "r.31.-64.mca",
+            "r.31.-65.mca",
+            "r.32.-64.mca",
+            "r.32.-65.mca",
+            "r.4.-13.mca",
+            "r.4.-14.mca"
+          ],
+          "seed": 9223372036854775807,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2288,
+            154,
+            -6416
+          ]
+        }
+      ],
+      "imageSha256": {
+        "game-0.png": "3b04ce914c88b6b445c3cc02e11a33e06081e12c6b6608a91d8486adb9880981",
+        "game-1.png": "9c78ab8e194a5ffac8c87e84faa5313c76ca3cc51e5674cd5996504f4317e749",
+        "native-preset-ui.png": "f6c950760ac176d72326d76cee3698f073ff407ac2a70253c88942a08605b285",
+        "natural-spawn.png": "978777e526a64a97d0457da32334b8558bc379560978db8b145e910b87903aa3"
+      },
+      "deathAndRespawn": false
+    }
+  ],
+  "notCovered": [
+    "Actual power loss or interrupted region writes",
+    "Final stable artifacts",
+    "Upgrade from published previews",
+    "Long exploration",
+    "Other operating systems or dedicated servers"
+  ],
+  "metadataRecovery": {
+    "sourceOriginalPreserved": true,
+    "sourceFiles": 62,
+    "sourceBytes": 47817329,
+    "recoveryExit": 0,
+    "binarySha256": "b725d982a5be8b0c896842d3ddc0a16e83c256977c2cb44ebf83fc47b4086e1b",
+    "result": {
+      "corruptCurrentPreserved": true,
+      "seed": 8675309,
+      "status": "passed-metadata-recovery-and-rollback",
+      "windowsLockedBackupRollback": true
+    },
+    "postRecoveryReader": {
+      "action": "check_all",
+      "chunkChecks": [
+        {
+          "chunk": [
+            0,
+            0
+          ],
+          "nativeBiomeFingerprint": "6dc1096e04abd195",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "6dc1096e04abd195",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            1024,
+            -2048
+          ],
+          "nativeBiomeFingerprint": "b0019eca975291a5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "b0019eca975291a5",
+          "vanillaBiomeFingerprint": "60e84b83a1657725"
+        }
+      ],
+      "levelName": "TerraForged native QA",
+      "notCovered": [
+        "UI world creation",
+        "Natural spawn",
+        "Structures",
+        "Full save/client acceptance without subsequent game runs"
+      ],
+      "overworldSettings": "terraforged:overworld",
+      "position": [
+        16392.0,
+        80.0,
+        -32760.0
+      ],
+      "qaSpawnSupplied": true,
+      "regionFiles": [
+        "r.-1.-1.mca",
+        "r.-1.-85.mca",
+        "r.-1.-86.mca",
+        "r.-1.0.mca",
+        "r.-232.-209.mca",
+        "r.-232.-210.mca",
+        "r.-233.-209.mca",
+        "r.-233.-210.mca",
+        "r.-248.148.mca",
+        "r.-248.149.mca",
+        "r.-249.148.mca",
+        "r.-249.149.mca",
+        "r.0.-1.mca",
+        "r.0.-85.mca",
+        "r.0.-86.mca",
+        "r.0.0.mca",
+        "r.31.-64.mca",
+        "r.31.-65.mca",
+        "r.32.-64.mca",
+        "r.32.-65.mca"
+      ],
+      "seed": 8675309,
+      "status": "passed-native-save-fixture-reader",
+      "structuresEnabled": false,
+      "worldPresetUiReader": false,
+      "worldSpawn": [
+        8,
+        100,
+        8
+      ]
+    }
+  },
+  "frozenDriverSourceSha256": {
+    "verify_multiseed_ui_v1.py": "1acac20c74bd23c2487535822bf30624242c30b4f41a20f431e40e49e193f587",
+    "verify_multiseed_ui_v2.py": "f14e9880a6765d29081583b5f0b404ecf2a0c276ee4bfe6bea20c95154b36261"
+  },
+  "driverScope": "Frozen local adaptations reuse the unchanged client/control/package, verify their original receipt hashes, and substitute only the compiled seed-aware save probe. Production seed parsing and shared shutdown helper are imported from this repository.",
+  "totalStoredQuartComparisons": 13824,
+  "differentFingerprintsAcrossEverySeed": true,
+  "imageReview": "Root inspected all13 original captures directly or in contact sheets. UI seed/preset/structures labels match. Coherent textured surface/ocean views with healthy natural survival HUD. Negative distant camera is underground and respawn image still has a loading overlay; neither qualifies surface scenery. Signed-max spawn foliage limits distant scenery. Raw reports retain their original awaiting-image-review verdicts."
+}
