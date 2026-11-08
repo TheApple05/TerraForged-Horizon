@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-native-classic-natural-source-and-stored-quarts",
+  "horizonRevision": "1049b7158ecbc6f455c0b56cce744ff34f80a27b",
+  "stageResultSha256": "c1600441df675ee38f953ff9d70dea78d9420d4aff648c5a845e784715842a8f",
+  "verifierSourceSha256": "bd349066fec1674d601eddfda24d859acabd1b628a0d9219460911946cee09af",
+  "probeSourceSha256": "374ab237e3f3123d8f1afa40449835b925689cc76f68595f9070ba8352470eaf",
+  "configurationSha256": "caec3168f6e879304e42b64654545b5be07a425dac6651469355d32cd31776c4",
+  "advisoryTargetsSha256": "290cbee65a6f524eb2782ffdc9444e2cdc1373fe631ff1a00da1793bcaf23029",
+  "compileExitCode": 0,
+  "resourceFilesSha256": {
+    "facts.json": "1d24883ee807b0b71473f0bbf8ed548ddaf712148caeb3fcc7aa13ab973a97b0",
+    "worldgen\\biome_parameters\\nether.json": "26188f1278c9ea2c737a9b0acb5c0c0d4d40c8b3b4eb7ab2526b4791c1493110",
+    "worldgen\\biome_parameters\\overworld.json": "ca63573e405dba0ef1010d6b324feeaa7d6b5c4dc895ffb6daf0988f1e44ef79",
+    "worldgen\\biome_tags.json": "4006b76c24f616cb457a6fdad816db9b27f4528fe6daaed5747f1f79cf6225cf",
+    "worldgen\\biomes.json": "9b26dc3b662627dc3bbbf8da209f287882ce79ff4daf8f454b994ddc7510df99",
+    "worldgen\\block_flags.json": "fa2a580d2157e1a137bf4ea5ab73f77601f5aa2b165246d8c34699c7dd2b06d7",
+    "worldgen\\block_tags.json": "36975358262568f32bf84778d63d9989a36e7394ed4796d70a34809a8f4a64f0",
+    "worldgen\\blocks\\placement-definitions.json": "f8a972ec87c2352500af6481158a3192bdbf699951025639bea744e4127b97c4",
+    "worldgen\\blocks\\structure-blocks.json": "b7a06d839993527c3b7290e57fded16aed71b283de123d4b50e3aad75b73b842",
+    "worldgen\\blocks\\survival-extra-definitions.json": "170f2db5bc97a49fa25cc249540aa7f04beea455cdbaf43742ed9415f5090a02",
+    "worldgen\\blocks\\survival-rules.json": "8805c18b3195bb1eac1f1e5281333df56e2892505f64023e5403c58ce2ec4368",
+    "worldgen\\carvers.json": "b09cf69ff328cad7836da8cd9565d0fb7ecf8bc35aebf17815f40f32a6a0ca4e",
+    "worldgen\\conditions.json": "54a470a4513fb34a23e0fe66b0a5129a468dbd0002f5b2839437a9861a6005b9",
+    "worldgen\\densities.json": "28fe94e1b7cf3a06edfa2337319c03b5374c15bf18235570ee76e9c498c2f450",
+    "worldgen\\feature_tags.json": "d66b2f97400514fc3c03b0dd8a60a93257071ab274dc132f41b79d6a454b074a",
+    "worldgen\\features.json": "1dc5430167695697df7077ae0ef1d1a652265e05c47634f2fc3f04750d697431",
+    "worldgen\\fluid_tags.json": "f1e5eb6d22ea7effbb118a2282709cfdeef1bfae4516b775a55ad7a4df29d7d0",
+    "worldgen\\noises.json": "310b240c9b70586bb704ca44a915766a8d41d6a073183324c37184fcb317a992",
+    "worldgen\\placed_features.json": "f49132b63263b9e8d763175860c1c90a10dc9977f01820fa878624e06434f136",
+    "worldgen\\processor_lists.json": "379cb308ae3126cf85dbc25f95934bd48207103da44b15e7d4be5fae3c1a25b1",
+    "worldgen\\rules.json": "b55f222351487a07b3e96c437d07368015c428d3d0475c5287114171397d66d9",
+    "worldgen\\settings.json": "dcc7d892420fb3faadab36c935ef0d2d8709a038a8fb944c00e354f417b3b586",
+    "worldgen\\state_providers.json": "ad62f6d6be27b3b2d4223fe4c2e45558e1ed79fddceb4acbbff2d049c59f4a6e",
+    "worldgen\\structure_sets.json": "636fb973c14d8b31b5fa83668a448e180721fddcc659c8e9f2beb6f21da80a3d",
+    "worldgen\\structures.json": "b4bb5a1283d68745c1939ac0f2e5523970c1a0f734ada1038ba496a592d4aa6f",
+    "worldgen\\template_pools.json": "c9f648c6bd163f1427832d54a78640dcb48e0648a13e212fc18b2d4a4d41a844",
+    "worldgen\\world_presets.json": "14012a0d843e669038b0f347ed5b214b5179086679ccee5670bef9cf03c1a497"
+  },
+  "gameAssetsDownloaded": false,
+  "runs": [
+    {
+      "exitCode": 0,
+      "outputSha256": "8d94ba9c3b591fb0037170f00676566779aab12b1cdfff2864fdc6b85330a631",
+      "observed": {
+        "caveSamples": [
+          "minecraft:dripstone_caves",
+          "minecraft:dripstone_caves",
+          "minecraft:deep_ocean"
+        ],
+        "classicDisabledSamples": [
+          "minecraft:badlands",
+          "minecraft:swamp",
+          "minecraft:old_growth_spruce_taiga",
+          "minecraft:taiga",
+          "minecraft:flower_forest",
+          "minecraft:frozen_river",
+          "minecraft:frozen_river",
+          "minecraft:taiga",
+          "minecraft:swamp",
+          "minecraft:savanna",
+          "minecraft:windswept_savanna",
+          "minecraft:snowy_taiga",
+          "minecraft:snowy_taiga",
+          "minecraft:savanna_plateau",
+          "minecraft:jungle",
+          "minecraft:taiga",
+          "minecraft:savanna"
+        ],
+        "missing": [],
+        "notCovered": [
+          "Feature block placement at these locations",
+          "Independent full-chunk Java parity",
+          "Client metadata/save/launcher/performance"
+        ],
+        "observations": [
+          {
+            "at": [
+              -118532,
+              99,
+              -107012
+            ],
+            "expected": "reterraforged:bryce",
+            "source": "reterraforged:bryce",
+            "stored": "reterraforged:bryce",
+            "surfaceY": 100
+          },
+          {
+            "at": [
+              -126976,
+              136,
+              76052
+            ],
+            "expected": "reterraforged:cold_steppe",
+            "source": "reterraforged:cold_steppe",
+            "stored": "reterraforged:cold_steppe",
+            "surfaceY": 136
+          },
+          {
+            "at": [
+              -16896,
+              63,
+              24988
+            ],
+            "expected": "reterraforged:cold_marshland",
+            "source": "reterraforged:cold_marshland",
+            "stored": "reterraforged:cold_marshland",
+            "surfaceY": 63
+          },
+          {
+            "at": [
+              0,
+              70,
+              -43692
+            ],
+            "expected": "reterraforged:fir_forest",
+            "source": "reterraforged:fir_forest",
+            "stored": "reterraforged:fir_forest",
+            "surfaceY": 71
+          },
+          {
+            "at": [
+              68608,
+              71,
+              -67424
+            ],
+            "expected": "reterraforged:flower_plains",
+            "source": "reterraforged:flower_plains",
+            "stored": "reterraforged:flower_plains",
+            "surfaceY": 71
+          },
+          {
+            "at": [
+              -79680,
+              63,
+              33060
+            ],
+            "expected": "reterraforged:frozen_lake",
+            "source": "reterraforged:frozen_lake",
+            "stored": "reterraforged:frozen_lake",
+            "surfaceY": 63
+          },
+          {
+            "at": [
+              -104064,
+              63,
+              -12168
+            ],
+            "expected": "reterraforged:frozen_marsh",
+            "source": "reterraforged:frozen_marsh",
+            "stored": "reterraforged:frozen_marsh",
+            "surfaceY": 64
+          },
+          {
+            "at": [
+              56832,
+              63,
+              15280
+            ],
+            "expected": "reterraforged:lake",
+            "source": "reterraforged:lake",
+            "stored": "reterraforged:lake",
+            "surfaceY": 64
+          },
+          {
+            "at": [
+              -102528,
+              63,
+              -26552
+            ],
+            "expected": "reterraforged:marshland",
+            "source": "reterraforged:marshland",
+            "stored": "reterraforged:marshland",
+            "surfaceY": 64
+          },
+          {
+            "at": [
+              70656,
+              80,
+              -41536
+            ],
+            "expected": "reterraforged:savanna_scrub",
+            "source": "reterraforged:savanna_scrub",
+            "stored": "reterraforged:savanna_scrub",
+            "surfaceY": 80
+          },
+          {
+            "at": [
+              100428,
+              74,
+              42832
+            ],
+            "expected": "reterraforged:shattered_savanna_scrub",
+            "source": "reterraforged:shattered_savanna_scrub",
+            "stored": "reterraforged:shattered_savanna_scrub",
+            "surfaceY": 74
+          },
+          {
+            "at": [
+              -124928,
+              76,
+              -62032
+            ],
+            "expected": "reterraforged:snowy_fir_forest",
+            "source": "reterraforged:snowy_fir_forest",
+            "stored": "reterraforged:snowy_fir_forest",
+            "surfaceY": 74
+          },
+          {
+            "at": [
+              -28672,
+              98,
+              56636
+            ],
+            "expected": "reterraforged:snowy_taiga_scrub",
+            "source": "reterraforged:snowy_taiga_scrub",
+            "stored": "reterraforged:snowy_taiga_scrub",
+            "surfaceY": 98
+          },
+          {
+            "at": [
+              68096,
+              144,
+              128192
+            ],
+            "expected": "reterraforged:steppe",
+            "source": "reterraforged:steppe",
+            "stored": "reterraforged:steppe",
+            "surfaceY": 143
+          },
+          {
+            "at": [
+              100812,
+              72,
+              -100468
+            ],
+            "expected": "reterraforged:stone_forest",
+            "source": "reterraforged:stone_forest",
+            "stored": "reterraforged:stone_forest",
+            "surfaceY": 73
+          },
+          {
+            "at": [
+              -125952,
+              72,
+              41532
+            ],
+            "expected": "reterraforged:taiga_scrub",
+            "source": "reterraforged:taiga_scrub",
+            "stored": "reterraforged:taiga_scrub",
+            "surfaceY": 73
+          },
+          {
+            "at": [
+              43540,
+              63,
+              113064
+            ],
+            "expected": "reterraforged:warm_beach",
+            "source": "reterraforged:warm_beach",
+            "stored": "reterraforged:warm_beach",
+            "surfaceY": 63
+          }
+        ],
+        "releasedBothKernelOwners": true,
+        "status": "passed-native-classic-natural-source-and-stored-quarts",
+        "worldSeed": 8675309
+      }
+    },
+    {
+      "exitCode": 0,
+      "outputSha256": "8d94ba9c3b591fb0037170f00676566779aab12b1cdfff2864fdc6b85330a631",
+      "observed": {
+        "caveSamples": [
+          "minecraft:dripstone_caves",
+          "minecraft:dripstone_caves",
+          "minecraft:deep_ocean"
+        ],
+        "classicDisabledSamples": [
+          "minecraft:badlands",
+          "minecraft:swamp",
+          "minecraft:old_growth_spruce_taiga",
+          "minecraft:taiga",
+          "minecraft:flower_forest",
+          "minecraft:frozen_river",
+          "minecraft:frozen_river",
+          "minecraft:taiga",
+          "minecraft:swamp",
+          "minecraft:savanna",
+          "minecraft:windswept_savanna",
+          "minecraft:snowy_taiga",
+          "minecraft:snowy_taiga",
+          "minecraft:savanna_plateau",
+          "minecraft:jungle",
+          "minecraft:taiga",
+          "minecraft:savanna"
+        ],
+        "missing": [],
+        "notCovered": [
+          "Feature block placement at these locations",
+          "Independent full-chunk Java parity",
+          "Client metadata/save/launcher/performance"
+        ],
+        "observations": [
+          {
+            "at": [
+              -118532,
+              99,
+              -107012
+            ],
+            "expected": "reterraforged:bryce",
+            "source": "reterraforged:bryce",
+            "stored": "reterraforged:bryce",
+            "surfaceY": 100
+          },
+          {
+            "at": [
+              -126976,
+              136,
+              76052
+            ],
+            "expected": "reterraforged:cold_steppe",
+            "source": "reterraforged:cold_steppe",
+            "stored": "reterraforged:cold_steppe",
+            "surfaceY": 136
+          },
+          {
+            "at": [
+              -16896,
+              63,
+              24988
+            ],
+            "expected": "reterraforged:cold_marshland",
+            "source": "reterraforged:cold_marshland",
+            "stored": "reterraforged:cold_marshland",
+            "surfaceY": 63
+          },
+          {
+            "at": [
+              0,
+              70,
+              -43692
+            ],
+            "expected": "reterraforged:fir_forest",
+            "source": "reterraforged:fir_forest",
+            "stored": "reterraforged:fir_forest",
+            "surfaceY": 71
+          },
+          {
+            "at": [
+              68608,
+              71,
+              -67424
+            ],
+            "expected": "reterraforged:flower_plains",
+            "source": "reterraforged:flower_plains",
+            "stored": "reterraforged:flower_plains",
+            "surfaceY": 71
+          },
+          {
+            "at": [
+              -79680,
+              63,
+              33060
+            ],
+            "expected": "reterraforged:frozen_lake",
+            "source": "reterraforged:frozen_lake",
+            "stored": "reterraforged:frozen_lake",
+            "surfaceY": 63
+          },
+          {
+            "at": [
+              -104064,
+              63,
+              -12168
+            ],
+            "expected": "reterraforged:frozen_marsh",
+            "source": "reterraforged:frozen_marsh",
+            "stored": "reterraforged:frozen_marsh",
+            "surfaceY": 64
+          },
+          {
+            "at": [
+              56832,
+              63,
+              15280
+            ],
+            "expected": "reterraforged:lake",
+            "source": "reterraforged:lake",
+            "stored": "reterraforged:lake",
+            "surfaceY": 64
+          },
+          {
+            "at": [
+              -102528,
+              63,
+              -26552
+            ],
+            "expected": "reterraforged:marshland",
+            "source": "reterraforged:marshland",
+            "stored": "reterraforged:marshland",
+            "surfaceY": 64
+          },
+          {
+            "at": [
+              70656,
+              80,
+              -41536
+            ],
+            "expected": "reterraforged:savanna_scrub",
+            "source": "reterraforged:savanna_scrub",
+            "stored": "reterraforged:savanna_scrub",
+            "surfaceY": 80
+          },
+          {
+            "at": [
+              100428,
+              74,
+              42832
+            ],
+            "expected": "reterraforged:shattered_savanna_scrub",
+            "source": "reterraforged:shattered_savanna_scrub",
+            "stored": "reterraforged:shattered_savanna_scrub",
+            "surfaceY": 74
+          },
+          {
+            "at": [
+              -124928,
+              76,
+              -62032
+            ],
+            "expected": "reterraforged:snowy_fir_forest",
+            "source": "reterraforged:snowy_fir_forest",
+            "stored": "reterraforged:snowy_fir_forest",
+            "surfaceY": 74
+          },
+          {
+            "at": [
+              -28672,
+              98,
+              56636
+            ],
+            "expected": "reterraforged:snowy_taiga_scrub",
+            "source": "reterraforged:snowy_taiga_scrub",
+            "stored": "reterraforged:snowy_taiga_scrub",
+            "surfaceY": 98
+          },
+          {
+            "at": [
+              68096,
+              144,
+              128192
+            ],
+            "expected": "reterraforged:steppe",
+            "source": "reterraforged:steppe",
+            "stored": "reterraforged:steppe",
+            "surfaceY": 143
+          },
+          {
+            "at": [
+              100812,
+              72,
+              -100468
+            ],
+            "expected": "reterraforged:stone_forest",
+            "source": "reterraforged:stone_forest",
+            "stored": "reterraforged:stone_forest",
+            "surfaceY": 73
+          },
+          {
+            "at": [
+              -125952,
+              72,
+              41532
+            ],
+            "expected": "reterraforged:taiga_scrub",
+            "source": "reterraforged:taiga_scrub",
+            "stored": "reterraforged:taiga_scrub",
+            "surfaceY": 73
+          },
+          {
+            "at": [
+              43540,
+              63,
+              113064
+            ],
+            "expected": "reterraforged:warm_beach",
+            "source": "reterraforged:warm_beach",
+            "stored": "reterraforged:warm_beach",
+            "surfaceY": 63
+          }
+        ],
+        "releasedBothKernelOwners": true,
+        "status": "passed-native-classic-natural-source-and-stored-quarts",
+        "worldSeed": 8675309
+      }
+    }
+  ],
+  "executableSha256": "9e2d938ce375e4db06e313a366068bb78cce512b3c199b1eea52e3ac7e9568b3",
+  "freshProcessesAgree": true,
+  "resourcesUnchanged": true,
+  "completedAtUtc": "2026-11-05T00:40:15.098884+00:00"
+}

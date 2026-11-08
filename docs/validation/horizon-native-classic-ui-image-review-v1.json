@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-agent-visual-smoke-review",
+  "reviewedAtUtc": "2026-11-07T23:31:52.170421+00:00",
+  "reviewer": {
+    "agent": "Codex",
+    "task": "native_ui_harness",
+    "method": "Independent manual inspection of every listed original PNG and both lower-camera follow-ups, followed by deterministic evidence hash checks."
+  },
+  "scope": "Agent visual render smoke review of the captured local terrain, textures and UI. This is not Java scenery parity, whole-feature geometry parity, a broad renderer test-suite result, aesthetic approval or user acceptance.",
+  "sourceReports": [
+    {
+      "id": "ui",
+      "path": "docs/validation/horizon-native-classic-ui-final-v3.json",
+      "absolutePath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\docs\\validation\\horizon-native-classic-ui-final-v3.json",
+      "sha256": "64484a58f641ad08f5b281dae40fea7825b53a9404c94bd8eea88ac4cd15d9eb",
+      "status": "passed-native-ui-create-reopen-smoke-awaiting-image-review",
+      "completedAtUtc": "2026-11-07T23:28:06.547424+00:00",
+      "verifierSourceSha256": "b3451c838069b5e2aa2933e77185960cda210a7adee92f1e9275e1058aa2d176"
+    },
+    {
+      "id": "lower",
+      "path": "docs/validation/horizon-native-lower-pillars-v1.json",
+      "absolutePath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\docs\\validation\\horizon-native-lower-pillars-v1.json",
+      "sha256": "bbf9ddbd707fd6907aa5ab6dfffa51e78853caa4b946d49f9d7dcca6b1fd3931",
+      "status": "raw-pass-awaiting-image-review",
+      "completedAtUtc": "2026-11-07T23:29:54.030332+00:00",
+      "verifierSourceSha256": "d460872d163822522897cf35ee7cc76eb19e313eacf11a29f1b6902464d9c4e0"
+    }
+  ],
+  "horizonRevision": "b33109ad199d2e149c80c8dc7d97f879c4f4ffec",
+  "stageResultSha256": "2eafe94577fef4af784a528a3d25671c64f4d707d22b128d8f01db32f2fa93e8",
+  "hmodSha256": "d3ba04504305a5225c294cc94f863224485f0a22e2888630073d228097363d05",
+  "artifactsSha256": {
+    "horizon-client.exe": "4393a62bfde86769a46cfcd4ed040b5e8e38d8ebb9241bdf424393a3894f5a47",
+    "horizon-ctl.exe": "a403745c06ea961fd767c94d9a7eaac32ebf1bc43ddbbce73e1bcc583c228747",
+    "terraforged_save_fixture.exe": "1e70189bf72146146163d72df95cd7d159be8cab166a0db54740bfc5b71991aa"
+  },
+  "imageCount": 23,
+  "originalImageCount": 21,
+  "lowerCameraImageCount": 2,
+  "initialCaptureLimitationsResolvedByLowerViews": true,
+  "originalRawReportsModified": false,
+  "reviewActionsLaunchedGameOrCompiler": false,
+  "evidenceIntegrity": {
+    "all23ImageHashesMatchRawReports": true,
+    "bothUiClientExitCodesZero": true,
+    "lowerCameraClientExitCode": 0,
+    "sourceWorldFilesRehashed": 139,
+    "sourceWorldCompleteFileSetMatchesBeforeMap": true,
+    "sourceWorldUnchanged": true,
+    "copiedWorldFilesRehashed": 139,
+    "copiedWorldStartMatchesSource": true,
+    "sourceWorldOpenedByLowerClient": false,
+    "checkedResourceFilesRehashed": 29,
+    "checkedResourcesUnchanged": true,
+    "stageInputFilesRehashed": 84,
+    "pinnedFilesRehashed": 5,
+    "pinnedFilesUnchanged": true,
+    "lowerRunExecutablesRehashed": 2,
+    "lowerRunGameLogsRehashed": 2
+  },
+  "captureLimits": [
+    "Small render distance and fog limit distant-scene assessment; distant frame boundaries alone are not classified as missing local chunks.",
+    "Original stone-forest and Bryce images retain their individual inconclusive/limited classifications; the two lower-camera views provide the accepted pillar smoke evidence.",
+    "One still frame per view does not establish motion stability, all lighting/weather behavior or broader GPU coverage."
+  ],
+  "notCovered": [
+    "Independent Java scenery or whole-feature block/geometry parity",
+    "User aesthetic approval or user acceptance",
+    "Full renderer/GPU regression suite",
+    "Controlled performance or arbitrary native mod combinations",
+    "Standard launcher installation qualification"
+  ],
+  "images": [
+    {
+      "sourceReport": "ui",
+      "role": "world-creation-selector",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\native-preset-ui.png",
+      "sha256": "8c838c4b5785c44ad2598c516daea042cd9bd4f2eae0524fb116d8ee6ce1e4cb",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "TerraForged label, seed 8675309, structures ON and bonus chest OFF are visible and legible; no obvious control-layout defect observed."
+    },
+    {
+      "sourceReport": "ui",
+      "role": "natural-survival-spawn",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\natural-spawn.png",
+      "sha256": "74751548764d401045faba8fbd8f946db9cb649297fe25fd687c82d422b14af4",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "Snow, gravel and grass render coherently around the player; the captured survival HUD shows full hearts."
+    },
+    {
+      "sourceReport": "ui",
+      "role": "origin-terrain",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\game-0.png",
+      "sha256": "1b8b1e2d42311de69a75fd0c42f6bb65d16e210647af9399e66c21ece1c04236",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area."
+    },
+    {
+      "sourceReport": "ui",
+      "role": "reopened-distant-terrain",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\game-1.png",
+      "sha256": "582db83553eb2e8f2109fb183380204ed96776d07184bbd15080364e410ddb56",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area."
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-frozen_marsh.png",
+      "sha256": "8157015fcdb5e077fe170d42cf8767e00550b80cdf7601f498b33f2a24efbe46",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:frozen_marsh"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-bryce.png",
+      "sha256": "1e006b98699646085cbf975733c786327b0f7e9c5fb4c6ed9a09417f63e760bb",
+      "reviewStatus": "limited-original-high-camera-smoke",
+      "observation": "Nearby colored terracotta pillars and slopes are visible without obvious corrupt faces, but the high camera and fog limit detailed geometry assessment. The separate lower-camera image provides the required closer smoke view.",
+      "biome": "reterraforged:bryce",
+      "limitationResolvedByImage": "lower-bryce.png"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-cold_marshland.png",
+      "sha256": "483f60cbcebe055a9414952c5f5ab56a820de587ba1a9df181a0f46dd8e999a6",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:cold_marshland"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-cold_steppe.png",
+      "sha256": "15a569cb66f87f25c8e5ab75bb3e50f2c1e0432b42a01ef762a0e6ea7ac8eb2c",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:cold_steppe"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-fir_forest.png",
+      "sha256": "7f7d6fcf335197c9b43bef540c090a65b11806aefff660eb6d0f4ae7eb175d89",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:fir_forest"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-flower_plains.png",
+      "sha256": "078fdaac81523fb93e421d33ed8741cdfedcf92b747212398214632f1ba33fc8",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:flower_plains"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-frozen_lake.png",
+      "sha256": "831a7c3c173651c1611a273fd4b02e315992f069a263d882b6c7dd5e2c8d838e",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:frozen_lake"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-lake.png",
+      "sha256": "220ba8cbcb230bf8ca1ae5357dc13fa2221494b0a86852c6f3242051fa8eefdc",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:lake"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-marshland.png",
+      "sha256": "76af17eee0d90a10a7f74622aa70d4c772f57bfe40bb4216f821de5cf97f5c10",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:marshland"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-savanna_scrub.png",
+      "sha256": "66f9c7ddf93d5e58bc394caa75d006a2a90aeb86e33e7d342801819746c14caa",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:savanna_scrub"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-shattered_savanna_scrub.png",
+      "sha256": "248a444f96c983eb0447c5e3d21239b733e0a1779c3c0375e82ea9fa71628db8",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:shattered_savanna_scrub"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-snowy_fir_forest.png",
+      "sha256": "ac8b7609fdac29e516b33fdada79cffb29507a18b4f92e0d0c23f8bdbecedf4e",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:snowy_fir_forest"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-snowy_taiga_scrub.png",
+      "sha256": "062789ca5cf86b2d4fb0c5c6224ff1a543480fb18504fdd90653f00be83309a1",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:snowy_taiga_scrub"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-steppe.png",
+      "sha256": "e4db2c00680ccee95bddf274dd702a8ee640828b23b69720512ca56e8a21439e",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:steppe"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-stone_forest.png",
+      "sha256": "63bc892497812bc04d16e73fc0c8c42184c4fc92419e28ad4c2bb90df1660752",
+      "reviewStatus": "inconclusive-original-high-camera",
+      "observation": "High camera and render-distance fog obscure the ground and stone-pillar shafts; the original image cannot establish local pillar geometry. The separate lower-camera image resolves this capture limitation.",
+      "biome": "reterraforged:stone_forest",
+      "limitationResolvedByImage": "lower-stone_forest.png"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-taiga_scrub.png",
+      "sha256": "eceffa42c325d71a7fe3466b9c714640c6c277a4a2bda8a18e580040b6daa593",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:taiga_scrub"
+    },
+    {
+      "sourceReport": "ui",
+      "role": "classic-biome-render",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\classic-warm_beach.png",
+      "sha256": "afdaba3dcc908f30fec24792c2a5f4d1ceb97453139b43f8ae31d4475e3c086b",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "No obvious local missing textures, unintended terrain voids or corrupt rendered faces observed in the visible area.",
+      "biome": "reterraforged:warm_beach"
+    },
+    {
+      "sourceReport": "lower",
+      "role": "lower-camera-pillar-follow-up",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-lower-pillars-v1\\lower-stone_forest.png",
+      "sha256": "54d49c33c7ba307d0a1072c46201dddeeb26d962d50da3b427e3d3831b7fb711",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "Stone shafts/cliffs, grass caps, nearby ground and vegetation visibly connect coherently; no obvious local texture or face corruption observed. This lower view resolves the original fog/height limitation.",
+      "biome": "reterraforged:stone_forest"
+    },
+    {
+      "sourceReport": "lower",
+      "role": "lower-camera-pillar-follow-up",
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-lower-pillars-v1\\lower-bryce.png",
+      "sha256": "274219d169c03f6a71e1862b793fa0df4545b8c5a3e4aa46020c13a93227f88f",
+      "reviewStatus": "passed-agent-visual-smoke",
+      "observation": "Colored terracotta shafts and bands visibly connect to the surrounding slopes; no obvious local texture or face corruption observed. This lower view resolves the original high-camera detail limitation.",
+      "biome": "reterraforged:bryce"
+    }
+  ]
+}

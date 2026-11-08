@@ -6,7 +6,7 @@ tail is deterministic and checked against the pinned source before replacement.
 import argparse,hashlib,re,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-PIN='61680d714bad3496a0ca5cef31537166f1232c4b'
+PIN='b33109ad199d2e149c80c8dc7d97f879c4f4ffec'
 MARKER='// Pipeline forwarding follows below. Regenerate with the source-only helper.'
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--horizon',type=Path,required=True);p.add_argument('--check',action='store_true');a=p.parse_args()
@@ -41,7 +41,7 @@ def main():
     target=ROOT/'horizon/native-world/world_runtime.rs';head=target.read_text(encoding='utf-8').split(MARKER)[0]
     generated=head+MARKER+'\n// Trait source SHA256: '+hashlib.sha256(trait.encode()).hexdigest()+'\nimpl SeededPipeline for NativePipeline {\n'+'\n'.join(methods)+'\n}\n'
     # rustfmt is the only formatting step; do not mutate the source checkout.
-    formatted=subprocess.run(['rustfmt','+stable','--edition','2024','--emit','stdout'],input=generated,capture_output=True,text=True)
+    formatted=subprocess.run(['rustfmt','+stable','--edition','2024','--emit','stdout'],input=generated,capture_output=True,text=True,encoding='utf-8')
     if formatted.returncode:raise ValueError(formatted.stderr)
     result=formatted.stdout
     if a.check:
