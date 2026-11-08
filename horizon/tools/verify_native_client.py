@@ -22,7 +22,8 @@ def main():
         if sha(ROOT/name)!=digest:raise ValueError('Restage changed source '+name)
     work=workspace.parent/a.report.stem;work.mkdir(exist_ok=False)
     verifier_snapshot=work/'verifier-source.py';shutil.copy2(Path(__file__),verifier_snapshot)
-    env=dict(os.environ,CARGO_BUILD_JOBS='4',CARGO_NET_OFFLINE='true',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1',HORIZON_TELEMETRY_URL='off',HORIZON_PLAYER_NAME='TerraForgedQA')
+    env=dict(os.environ,CARGO_BUILD_JOBS='4',CARGO_NET_OFFLINE='true',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1',HORIZON_TELEMETRY_URL='off',HORIZON_PLAYER_NAME='TerraForgedQA',TERRAFORGED_QA_SEED='8675309')
+    for key in ('HORIZON_SESSION_FILE','HORIZON_ACCOUNT_SESSIONS'):env.pop(key,None)
     for name in ('HORIZON_HOME','HORIZON_LAUNCHER_HOME','XDG_DATA_HOME','XDG_CONFIG_HOME','HORIZON_LAUNCHER_TRASH','HORIZON_LAUNCHER_CLIPBOARD','HORIZON_LAUNCHER_DESKTOP'):
         path=work/'homes'/name.lower();path.mkdir(parents=True);env[name]=str(path.resolve())
     game=Path(env['HORIZON_HOME']);world=game/'saves/NativeQA';socket=game/'control.sock'

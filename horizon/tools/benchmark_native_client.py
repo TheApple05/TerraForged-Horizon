@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 STAGES = {'queued', 'generating', 'decorating', 'finishing', 'lighting', 'meshing'}
 TARGETS = [('fir_forest', (0, 70, -43692)), ('cold_steppe', (-126976, 136, 76052)), ('bryce', (-118532, 99, -107012))]
 HOME_KEYS = ('HORIZON_HOME', 'HORIZON_LAUNCHER_HOME', 'XDG_DATA_HOME', 'XDG_CONFIG_HOME', 'HORIZON_LAUNCHER_TRASH', 'HORIZON_LAUNCHER_CLIPBOARD', 'HORIZON_LAUNCHER_DESKTOP')
-QA_ENV = dict(HORIZON_NO_AUDIO='1', HORIZON_NO_DISCORD='1', HORIZON_LAUNCHER_NO_SELF_UPDATE='1', HORIZON_TELEMETRY_URL='off', HORIZON_PLAYER_NAME='TerraForgedQA', HORIZON_JOB_THREADS='4', RUST_BACKTRACE='1')
+QA_ENV = dict(HORIZON_NO_AUDIO='1', HORIZON_NO_DISCORD='1', HORIZON_LAUNCHER_NO_SELF_UPDATE='1', HORIZON_TELEMETRY_URL='off', HORIZON_PLAYER_NAME='TerraForgedQA', HORIZON_JOB_THREADS='4', RUST_BACKTRACE='1', TERRAFORGED_QA_SEED='8675309')
 
 
 def utc(): return dt.datetime.now(dt.timezone.utc).isoformat()
@@ -410,7 +410,7 @@ def main():
             folder = args.work / f'{index}-{version}'; folder.mkdir()
             row = {'index': index, 'version': version, 'status': 'running', 'work': str(folder), 'startedAtUtc': utc()}; report['runs'].append(row)
             env = dict(os.environ, **QA_ENV)
-            env.pop('HORIZON_SESSION_FILE', None)
+            for key in ('HORIZON_SESSION_FILE', 'HORIZON_ACCOUNT_SESSIONS'): env.pop(key, None)
             row['qaHomeOverrides'] = {}
             for key in HOME_KEYS:
                 path = folder / 'homes' / key.lower(); path.mkdir(parents=True); env[key] = str(path); row['qaHomeOverrides'][key] = str(path)

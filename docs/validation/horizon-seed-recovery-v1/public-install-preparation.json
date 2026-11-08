@@ -1,0 +1,36 @@
+{
+  "install-receipt.json": {
+    "status": "installed-public-base",
+    "baseTag": "v0.2.97",
+    "launcherSha256": "19a0d66fd05f0e65d42b6386d6ac6a2d45f32c88c0678fa4e3aefae8ceaa813e",
+    "startedAtUtc": "2026-11-08T18:48:22.017594+00:00",
+    "exitCode": 0,
+    "elapsedSeconds": 3.2969999999913853
+  },
+  "prepare-receipt.json": {
+    "status": "prepared-via-public-command-from-user-install",
+    "baseTag": "v0.2.97",
+    "livePrismOwnershipAndSelectedReadyAccount": true,
+    "privatePreparedResourcesCopied": false,
+    "startedAtUtc": "2026-11-08T18:48:40.638714+00:00",
+    "exitCode": 0,
+    "elapsedSeconds": 154.125
+  },
+  "rust-install-receipt.json": {
+    "status": "provisioned-via-public-command",
+    "exitCode": 0,
+    "elapsedSeconds": 22.078999999997905
+  },
+  "launcherSource": {
+    "testedCommit": "da182a0f66de21d10f0907587455be09f69f98d9",
+    "mergedCommit": "62e533e009eb2fa58cbe10948f2e453fa00b94f2",
+    "identicalGitTree": "b791800b8064fb80d9d9c558824bb8fe7b716a2c"
+  },
+  "status": "public-base-prepared-final-native-install-pending",
+  "notCovered": [
+    "Final release HMOD or downloaded launcher ZIP",
+    "Native build of final artifact",
+    "Final installed native Play or GUI acceptance"
+  ],
+  "retainedWarning": "The current Prism sound asset index34 hash is not on the preparer known-index list. Its files passed individual SHA-1 validation; preparation exited0."
+}

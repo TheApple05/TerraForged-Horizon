@@ -11,7 +11,7 @@ reports identify their exact source/package hashes, not a future stable build.
 
 - Download the final public launcher and HMOD into a clean installation. Follow
   only the public instructions, including resource preparation and native trust.
-  Complete real sign-in and GUI Play, create a world, save and reopen it, and
+  Complete ownership-checked sign-in/session import and GUI Play, create a world, save and reopen it, and
   exit cleanly. Privately copied prepared resources and direct-client runs do
   not satisfy this gate.
 - Freeze the final source revisions, build profile, launcher, HMOD and SHA-256
@@ -61,21 +61,14 @@ to start alongside another Horizon client and samples for new clients every
 run; it never terminates unrelated processes. Self-tests run on Windows/Linux CI.
 This reduces one known timing confounder; it does not control all host load.
 
-## Current manual gate
+## Historical launcher blocker
 
-Windows automation can now enumerate the isolated launcher window, but its
-screenshot capture times out and accessibility exposes only the window frame.
-Until observed otherwise, normal GUI and authenticated Play remain unverified.
-Do not reuse the earlier missing-kernel explanation as the current failure.
-
-The actual published static launcher also fails `account sign-in` with:
-`This build of the launcher has no Microsoft sign-in (HORIZON_MSA_CLIENT_ID), so it can't start the game.`
-Neither a user nor machine runtime client-ID override was configured when checked.
-This is a product configuration blocker, separate from screen capture. The
-project's own approved public-client registration must be configured in the
-launcher build (or its supported runtime override), then genuine sign-in and
-Play must pass. Do not borrow another launcher's OAuth application ID or claim
-that an offline/direct-client test qualifies authentication.
+Earlier launcher capture attempts timed out; computer use is now off at the
+user's request. The published dev7 static launcher also rejects
+`account sign-in` because no `HORIZON_MSA_CLIENT_ID` is configured. No approved
+project-owned application ID is available. Horizon's own Microsoft sign-in
+flow therefore remains unqualified. Do not borrow another launcher's OAuth ID.
+The supported candidate alternative is the explicit Prism session import below.
 
 ## Verified Prism session path (new launcher candidate)
 
@@ -116,3 +109,32 @@ Do not launch competing clients or restore parked binaries while that exclusive
 job is active. A completed extended exploration/save/reopen test, multiple
 seeds, interrupted-save recovery, supported preview upgrades and final exact
 release-artifact qualification remain open.
+
+## Multi-seed and metadata recovery diagnostics
+
+[Three-seed candidate checks](../validation/horizon-seed-recovery-v1/SUMMARY.json)
+pass for seeds 0, -123456789 and 9223372036854775807. Real world-creation controls
+select TerraForged with structures enabled and healthy natural survival spawn.
+All six client processes exit zero; 13,824 stored-quart comparisons match the
+exact staged native generator. Every selected vector distinguishes it from vanilla. Each seed has a distinct saved
+fingerprint tuple. The negative seed also passes death-screen and healthy,
+grounded survival respawn state checks. All 13 images were reviewed. Its fixed
+distant camera is underground, its respawn image retains a loading overlay, and
+foliage obscures the signed-max spawn's distant view; those images do not qualify
+surface scenery. These are functional source-built diagnostics, not final
+installed-package or performance acceptance.
+
+A copied baseline scratch save passes real metadata recovery: refusal when both
+metadata files are invalid; rollback when Windows locks the valid backup; then
+successful restoration preserving the corrupt current file. The original save
+is unchanged, and the exact-host reader verifies the recovered preset, seed and
+saved FULL biome vectors. This does not simulate a power loss or interrupted
+region-sector writes.
+
+A separate clean installation successfully downloads public base v0.2.97,
+imports a live ownership-checked Prism session, prepares resources through
+`prepare --minecraft` using the user's own Prism installation, and provisions
+the pinned Rust toolchain. No privately prepared-resource tree is copied into
+that installation. Its [safe preparation receipt](../validation/horizon-seed-recovery-v1/public-install-preparation.json)
+records the unrecognized sound-index warning and successful per-file validation.
+The final HMOD, exact installed native build and Play gates remain pending.

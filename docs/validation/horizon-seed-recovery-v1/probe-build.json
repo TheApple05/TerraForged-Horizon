@@ -1,0 +1,27 @@
+{
+  "status": "built-locked-original-dependencies",
+  "startedAtUtc": "2026-11-08T18:32:28.611000+00:00",
+  "stageResultSha256": "356ba121994accbf0557723e9fbc5746928b964d8a7a4cb7f9d17801dce0ea5a",
+  "manifestSha256": "49cd8d0f6a9cf2214bd29ae2c667ada291e8c766599a03416687540103a1c8db",
+  "lockSha256": "008b7256f59586f305309b2e6d0632fc6ead8d0bdacb42c0ebf3ef49bedcdee1",
+  "sourcesSha256": {
+    "src/bin/recovery.rs": "39287e82bf2fa97a91a9fcd6698768456fe9137e953a00b7e6475f348083ed2f",
+    "src/main.rs": "ee1aeddaed160710149e38edc7e10a1f244ddb41acf897b2f7ba4add266072f2"
+  },
+  "targetProfile": "fast",
+  "dependencyVersionsUnchanged": true,
+  "exitCode": 0,
+  "elapsedSeconds": 400.9219999999914,
+  "completedAtUtc": "2026-11-08T18:39:09.565826+00:00",
+  "artifacts": {
+    "terraforged-multiseed-qa.exe": {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-stable\\build\\qa\\multiseed-probe-v1\\bin\\terraforged-multiseed-qa.exe",
+      "sha256": "7e8c9996d0657c67af84f3dc441e81fecb8edcf09c1bf9d55a2c5385a1b41d3c"
+    },
+    "recovery.exe": {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-stable\\build\\qa\\multiseed-probe-v1\\bin\\recovery.exe",
+      "sha256": "b725d982a5be8b0c896842d3ddc0a16e83c256977c2cb44ebf83fc47b4086e1b"
+    }
+  },
+  "binarySha256": "7e8c9996d0657c67af84f3dc441e81fecb8edcf09c1bf9d55a2c5385a1b41d3c"
+}
