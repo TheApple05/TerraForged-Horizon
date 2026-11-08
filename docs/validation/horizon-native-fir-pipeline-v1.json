@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-diagnostic-generation-light-probes-not-live-client-qualification",
+  "horizonRevision": "1860b66439c6c0c07afd1a13252c1cf9405fb38e",
+  "packageVersion": "0.1.0-native.dev5",
+  "sourceReportSha256": "ea12fba603555566a757f9abba34fa5677ab3d1230e14b30e74f0595a19cb25a",
+  "sourceReportPath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\fir-pipeline-v1\\measurement-v1\\report.json",
+  "startedAtUtc": "2026-11-08T02:11:38.412181+00:00",
+  "completedAtUtc": "2026-11-08T02:13:10.954944+00:00",
+  "scope": "Existing streaming generation/light probe; mesh disabled. Stock probe warm-up is outside its measured area. No game/client, launcher, assets download, or production-source change.",
+  "seed": 8675309,
+  "centerChunk": [
+    0,
+    -2731
+  ],
+  "radiusChunks": 6,
+  "workers": 15,
+  "structures": true,
+  "mesh": false,
+  "timingNotes": [
+    "On Windows BENCH.cpu_s is unavailable and reported as zero; it is not measured process CPU time.",
+    "Coordinator and job seconds use calibrated thread-cycle estimates on Windows, not OS process CPU time.",
+    "BENCH.wall_s covers the measured pipeline. Supervisor elapsed time also includes process startup, stock warm-up and final hashing.",
+    "Each setting has one observation; this is not a controlled performance qualification. Other project workloads were not stopped.",
+    "The probe omits the actual game background ring search, persistent saves, live networking, meshing and GPU uploads."
+  ],
+  "probeReceipt": {
+    "createdAtUtc": "2026-11-08T01:58:51.227800+00:00",
+    "scope": "QA-only copied existing gen_light_bench; only generator factory selection differs. Production sources untouched. Mesh disabled by existing probe.",
+    "sourcePath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client\\examples\\gen_light_bench.rs",
+    "sourceSha256": "24eaf11be9500a62c29b6131c218541282d92b6286c4a8d1a1143badf4753aee",
+    "probePath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client\\examples\\gen_light_native_stem.rs",
+    "probeSha256": "3849a4aa88ce14eb9608bd118736afac009ead0877c15a7aaf565295d3765024",
+    "manifestBeforeSha256": "4c3acea21ca0e8fcc8cf1ecc2fd69ae2ed9223502c892e5b1dca0a08784a31d7",
+    "manifestAfterSha256": "9f4622f029d716c6a5beb3f13d817169e241a126484e18aa92b7dd9f23498798"
+  },
+  "runs": [
+    {
+      "mode": "native",
+      "periodMs": 2,
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\gen_light_native_stem.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--center",
+        "0",
+        "-2731",
+        "--radius",
+        "6",
+        "--threads",
+        "15",
+        "--period-ms",
+        "2",
+        "--repeat",
+        "1",
+        "--json"
+      ],
+      "pid": 26440,
+      "startedAtUtc": "2026-11-08T02:11:38.415115+00:00",
+      "completedAtUtc": "2026-11-08T02:12:16.900722+00:00",
+      "elapsedSeconds": 37.84399999999914,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "bench": [
+        {
+          "checksum": "d5f67a39776cb08d",
+          "columns": 149,
+          "coordinator_s": 0.182569692,
+          "cpu_s": 0.0,
+          "half_s": 24.1118103,
+          "jobs": [
+            {
+              "count": 0,
+              "kind": "load",
+              "s": 0.0
+            },
+            {
+              "count": 285,
+              "kind": "generate",
+              "s": 51.619181455
+            },
+            {
+              "count": 213,
+              "kind": "decorate",
+              "s": 1.165314713
+            },
+            {
+              "count": 149,
+              "kind": "finish",
+              "s": 0.049267846
+            },
+            {
+              "count": 149,
+              "kind": "light",
+              "s": 0.230794722
+            },
+            {
+              "count": 0,
+              "kind": "mesh",
+              "s": 0.0
+            },
+            {
+              "count": 72,
+              "kind": "other",
+              "s": 0.021030442
+            }
+          ],
+          "lit": 149,
+          "updates": 2578,
+          "wall_s": 28.1143128,
+          "workers": 15
+        }
+      ],
+      "cleanupActions": [],
+      "logsSha256": {
+        "stdout.log": "ca328d26fb41ecbe8bf60df30ddccbe1b21a834fdad07491cd0cc2624fb807c0",
+        "stderr.log": "b478dcb2a42abbee9a15636ac5cacc7384809ef6e7d0294c15ce9dfcb2a5356a"
+      },
+      "inputsAndCriticalResourcesUnchanged": true,
+      "inputFilesSha256": {
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\gen_light_native_stem.exe": "4d94fb189281e5108346392e49debe3a1fa3a769fc9c9864f8ebeaf895fc935b",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client\\examples\\gen_light_bench.rs": "24eaf11be9500a62c29b6131c218541282d92b6286c4a8d1a1143badf4753aee",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client\\examples\\gen_light_native_stem.rs": "3849a4aa88ce14eb9608bd118736afac009ead0877c15a7aaf565295d3765024",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\fir-pipeline-probe-v1.json": "60e9a5f2fe0e6b98d8c505539575da14a99d7c6181837c2788005aa9380cff9e",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client-lib\\Cargo.toml": "9f4622f029d716c6a5beb3f13d817169e241a126484e18aa92b7dd9f23498798",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\fir-pipeline-v1\\run_probe.py": "bc085abcee4ff37de478e2542d7d65c62e4a6b6bb5fd056f7ff8f17cc2a713a1"
+      },
+      "criticalResourceFilesCount": 29,
+      "criticalResourceMapSha256": "466ae84fdcb3479493feaefaf70c5f273158c3d8b7e4cb625d014e628d52d1ef",
+      "stdoutEvidence": "docs/validation/horizon-native-fir-pipeline-native2-v1.stdout.txt",
+      "stderrEvidence": "docs/validation/horizon-native-fir-pipeline-native2-v1.stderr.txt"
+    },
+    {
+      "mode": "native",
+      "periodMs": 50,
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\gen_light_native_stem.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--center",
+        "0",
+        "-2731",
+        "--radius",
+        "6",
+        "--threads",
+        "15",
+        "--period-ms",
+        "50",
+        "--repeat",
+        "1",
+        "--json"
+      ],
+      "pid": 4064,
+      "startedAtUtc": "2026-11-08T02:12:16.906906+00:00",
+      "completedAtUtc": "2026-11-08T02:12:56.267733+00:00",
+      "elapsedSeconds": 39.29700000000048,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "bench": [
+        {
+          "checksum": "d5f67a39776cb08d",
+          "columns": 149,
+          "coordinator_s": 0.077352826,
+          "cpu_s": 0.0,
+          "half_s": 25.0387617,
+          "jobs": [
+            {
+              "count": 0,
+              "kind": "load",
+              "s": 0.0
+            },
+            {
+              "count": 285,
+              "kind": "generate",
+              "s": 49.09216205
+            },
+            {
+              "count": 213,
+              "kind": "decorate",
+              "s": 1.396698734
+            },
+            {
+              "count": 149,
+              "kind": "finish",
+              "s": 0.055002851
+            },
+            {
+              "count": 149,
+              "kind": "light",
+              "s": 0.247665012
+            },
+            {
+              "count": 0,
+              "kind": "mesh",
+              "s": 0.0
+            },
+            {
+              "count": 74,
+              "kind": "other",
+              "s": 0.022870432
+            }
+          ],
+          "lit": 149,
+          "updates": 1181,
+          "wall_s": 30.5791829,
+          "workers": 15
+        }
+      ],
+      "cleanupActions": [],
+      "logsSha256": {
+        "stdout.log": "1cf12135d6ee94a0e97453ad8a5fe66dad16924f862259333c2ed9c33727ecbb",
+        "stderr.log": "784a9a68e42665dafb6f4269724109097c5f639687395c8517e78bc6e53bfba2"
+      },
+      "inputsAndCriticalResourcesUnchanged": true,
+      "inputFilesSha256": {
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\gen_light_native_stem.exe": "4d94fb189281e5108346392e49debe3a1fa3a769fc9c9864f8ebeaf895fc935b",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client\\examples\\gen_light_bench.rs": "24eaf11be9500a62c29b6131c218541282d92b6286c4a8d1a1143badf4753aee",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client\\examples\\gen_light_native_stem.rs": "3849a4aa88ce14eb9608bd118736afac009ead0877c15a7aaf565295d3765024",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\fir-pipeline-probe-v1.json": "60e9a5f2fe0e6b98d8c505539575da14a99d7c6181837c2788005aa9380cff9e",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client-lib\\Cargo.toml": "9f4622f029d716c6a5beb3f13d817169e241a126484e18aa92b7dd9f23498798",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\fir-pipeline-v1\\run_probe.py": "bc085abcee4ff37de478e2542d7d65c62e4a6b6bb5fd056f7ff8f17cc2a713a1"
+      },
+      "criticalResourceFilesCount": 29,
+      "criticalResourceMapSha256": "466ae84fdcb3479493feaefaf70c5f273158c3d8b7e4cb625d014e628d52d1ef",
+      "stdoutEvidence": "docs/validation/horizon-native-fir-pipeline-native50-v1.stdout.txt",
+      "stderrEvidence": "docs/validation/horizon-native-fir-pipeline-native50-v1.stderr.txt"
+    },
+    {
+      "mode": "vanilla",
+      "periodMs": 2,
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\gen_light_native_stem.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--center",
+        "0",
+        "-2731",
+        "--radius",
+        "6",
+        "--threads",
+        "15",
+        "--period-ms",
+        "2",
+        "--repeat",
+        "1",
+        "--json",
+        "--vanilla"
+      ],
+      "pid": 27616,
+      "startedAtUtc": "2026-11-08T02:12:56.273736+00:00",
+      "completedAtUtc": "2026-11-08T02:13:10.949950+00:00",
+      "elapsedSeconds": 14.436999999999898,
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "bench": [
+        {
+          "checksum": "56a69b31307f9e7f",
+          "columns": 149,
+          "coordinator_s": 0.036350051,
+          "cpu_s": 0.0,
+          "half_s": 0.796295,
+          "jobs": [
+            {
+              "count": 0,
+              "kind": "load",
+              "s": 0.0
+            },
+            {
+              "count": 285,
+              "kind": "generate",
+              "s": 3.589291776
+            },
+            {
+              "count": 213,
+              "kind": "decorate",
+              "s": 0.419576308
+            },
+            {
+              "count": 149,
+              "kind": "finish",
+              "s": 0.047434181
+            },
+            {
+              "count": 149,
+              "kind": "light",
+              "s": 0.242353808
+            },
+            {
+              "count": 0,
+              "kind": "mesh",
+              "s": 0.0
+            },
+            {
+              "count": 71,
+              "kind": "other",
+              "s": 0.019420952
+            }
+          ],
+          "lit": 149,
+          "updates": 754,
+          "wall_s": 0.8462431,
+          "workers": 15
+        }
+      ],
+      "cleanupActions": [],
+      "logsSha256": {
+        "stdout.log": "90064179fab4e812f982ea54223275e438e56b499387536bc68bdcfcd0918ffa",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "inputsAndCriticalResourcesUnchanged": true,
+      "inputFilesSha256": {
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\gen_light_native_stem.exe": "4d94fb189281e5108346392e49debe3a1fa3a769fc9c9864f8ebeaf895fc935b",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client\\examples\\gen_light_bench.rs": "24eaf11be9500a62c29b6131c218541282d92b6286c4a8d1a1143badf4753aee",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client\\examples\\gen_light_native_stem.rs": "3849a4aa88ce14eb9608bd118736afac009ead0877c15a7aaf565295d3765024",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\fir-pipeline-probe-v1.json": "60e9a5f2fe0e6b98d8c505539575da14a99d7c6181837c2788005aa9380cff9e",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\crates\\horizon-client-lib\\Cargo.toml": "9f4622f029d716c6a5beb3f13d817169e241a126484e18aa92b7dd9f23498798",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\fir-pipeline-v1\\run_probe.py": "bc085abcee4ff37de478e2542d7d65c62e4a6b6bb5fd056f7ff8f17cc2a713a1"
+      },
+      "criticalResourceFilesCount": 29,
+      "criticalResourceMapSha256": "466ae84fdcb3479493feaefaf70c5f273158c3d8b7e4cb625d014e628d52d1ef",
+      "stdoutEvidence": "docs/validation/horizon-native-fir-pipeline-vanilla2-v1.stdout.txt",
+      "stderrEvidence": "docs/validation/horizon-native-fir-pipeline-vanilla2-v1.stderr.txt"
+    }
+  ],
+  "nativeBlockAndLightChecksumMatchesAcrossPeriods": true,
+  "notCovered": [
+    "Repeated statistical performance comparison",
+    "Full saved block or biome vectors",
+    "Actual game ring-search contention",
+    "Cache miss, eviction or wait counts",
+    "Modpack frame rate, memory or loading acceptance"
+  ]
+}

@@ -1,0 +1,135 @@
+--- run_cases.py
++++ run_radius12_cases.py
+@@ -1,4 +1,4 @@
+-"""Explicit CAPACITY:BACKGROUND cases; compiler-contention diagnostics, never performance qualification."""
++"""Radius 12 cache cases; cross-capacity consistency on an uncontrolled host, never Java parity."""
+ import argparse
+ import ctypes
+ from ctypes import wintypes
+@@ -18,7 +18,7 @@
+ HOME_KEYS = ('HORIZON_HOME', 'HORIZON_LAUNCHER_HOME', 'XDG_DATA_HOME', 'XDG_CONFIG_HOME',
+              'HORIZON_LAUNCHER_TRASH', 'HORIZON_LAUNCHER_CLIPBOARD', 'HORIZON_LAUNCHER_DESKTOP')
+ TIMEOUT = 600
+-STOCK_CHECKSUM = 'd5f67a39776cb08d'
++RADIUS = 12
+ EVENT = re.compile(r'^QA_TILE event=(\d+)/2000 .*? (MISS begin|MISS build-finish|EVICT|FLIGHT wait|CAPACITY wait) cache=(\S+) key=\((-?\d+),\s*(-?\d+)\)(.*)$')
+ _MEMORY_INFO = None
+ 
+@@ -163,6 +163,14 @@
+     return counters.PeakWorkingSetSize
+ 
+ 
++def matches_baseline(checksum, index, capacity, background, report):
++    if report['baselineChecksum'] is None:
++        if (index, capacity, background) != (1, 8, False):
++            raise ValueError('The first radius 12 checksum must come from capacity 8 without background rings')
++        report['baselineChecksum'] = checksum
++    return checksum == report['baselineChecksum']
++
++
+ def run_case(output, index, capacity, background, sources, report, report_path):
+     work = fresh(output, f'{index:02}-capacity{capacity}-bg{str(background).lower()}')
+     homes = fresh(work, 'homes')
+@@ -171,7 +179,7 @@
+                 'HORIZON_QA_TILE_TRACE': '1', 'QA_NATIVE_CACHE_CAPACITY': str(capacity)}
+     selected.update({key: str(fresh(homes, key.lower())) for key in HOME_KEYS})
+     env = dict(os.environ, **selected)
+-    command = [str(EXE), str(RESOURCES), '--seed', '8675309', '--center', '0', '-2731', '--radius', '6',
++    command = [str(EXE), str(RESOURCES), '--seed', '8675309', '--center', '0', '-2731', '--radius', str(RADIUS),
+                '--threads', '15', '--period-ms', '2', '--repeat', '1', '--json']
+     if background:
+         command.append('--background-rings')
+@@ -262,10 +270,10 @@
+         if process.returncode:
+             raise RuntimeError(f'Diagnostic exit {process.returncode}')
+         case['bench'] = parse_bench((work / 'stdout.log').read_text(encoding='utf-8', errors='replace'), background)
+-        case['outputChecksumMatchesStock'] = case['bench']['checksum'] == STOCK_CHECKSUM
+-        if not case['outputChecksumMatchesStock']:
+-            raise ValueError(f"Output checksum mismatch: expected {STOCK_CHECKSUM}, got {case['bench']['checksum']}")
+-        case['status'] = 'completed-compiler-contention-diagnostic'
++        case['outputChecksumMatchesBaseline'] = matches_baseline(case['bench']['checksum'], index, capacity, background, report)
++        if not case['outputChecksumMatchesBaseline']:
++            raise ValueError(f"Cross-capacity checksum mismatch: baseline {report['baselineChecksum']}, got {case['bench']['checksum']}")
++        case['status'] = 'completed-radius12-diagnostic'
+     except BaseException as error:
+         case.update(status='failed', error=str(error), errorType=type(error).__name__)
+         print(json.dumps({'event': 'case-error', 'case': index, 'capacity': capacity,
+@@ -312,7 +320,7 @@
+         case['logsSha256'] = {name: sha(work / name) for name in ('stdout.log', 'stderr.log') if (work / name).is_file()}
+         case.update(completedAtUtc=utc(), elapsedSeconds=time.monotonic() - started)
+         save(report_path, report)
+-        print(json.dumps({'event': 'case-completed' if case['status'] == 'completed-compiler-contention-diagnostic' else 'case-failed',
++        print(json.dumps({'event': 'case-completed' if case['status'] == 'completed-radius12-diagnostic' else 'case-failed',
+                           'case': index, 'capacity': capacity, 'backgroundRings': background,
+                           'status': case['status'], 'error': case.get('error') or case.get('traceError') or case.get('integrityError') or case.get('rssError'),
+                           'checksum': case.get('bench', {}).get('checksum'), 'peakRssBytesObserved': case['peakRssBytesObserved'],
+@@ -321,6 +329,18 @@
+ 
+ 
+ def self_check():
++    reference = {'baselineChecksum': None}
++    assert matches_baseline('0123456789abcdef', 1, 8, False, reference)
++    assert matches_baseline('0123456789abcdef', 2, 16, False, reference)
++    assert not matches_baseline('fedcba9876543210', 3, 32, False, reference)
++    assert reference['baselineChecksum'] == '0123456789abcdef'
++    for index, capacity, background in ((1, 16, False), (2, 8, False), (1, 8, True)):
++        try:
++            matches_baseline('0123456789abcdef', index, capacity, background, {'baselineChecksum': None})
++        except ValueError:
++            pass
++        else:
++            raise AssertionError('Invalid first checksum observation accepted')
+     assert parse_case('16:true') == (16, True)
+     for value in ('64:true', '8:no'):
+         try:
+@@ -370,7 +390,9 @@
+         self_check()
+         return 0
+     if not args.cases or not args.run_name:
+-        parser.error('Supply a new --run-name and explicit --cases, e.g. 8:false 16:false 8:true')
++        parser.error('Supply a new --run-name and explicit --cases, 8:false 16:false 32:false')
++    if args.cases != [(8, False), (16, False), (32, False)]:
++        parser.error('Radius 12 comparison requires exactly: --cases 8:false 16:false 32:false')
+     diagnostic = json.loads((ROOT / 'diagnostic-receipt.json').read_text(encoding='utf-8'))
+     if not diagnostic.get('compiled') or not diagnostic.get('reviewedBuildResult'):
+         raise ValueError('Reviewed completed diagnostic build receipt is required before any case')
+@@ -393,33 +415,34 @@
+     output = fresh(ROOT / 'runs', args.run_name)
+     report_path = output / 'report.json'
+     report = {'schemaVersion': 1, 'status': 'running', 'startedAtUtc': utc(), 'cases': [],
+-              'scope': 'Compiler-contention diagnostic wall times; not uncontended performance qualification. Mesh remains disabled.',
++              'scope': 'Shared host workload uncontrolled. Radius 12 cross-capacity consistency only, not independent Java parity or full-client qualification. Mesh remains disabled.',
+               'timingNotes': ['Windows BENCH.cpu_s is unavailable and zero; coordinator/job seconds are calibrated thread-cycle estimates.',
+                               'Peak RSS is the greatest own-child OS peak working-set sample; final-query success is recorded.',
+                               'Per-cache counts after the measured marker are lower bounds when the 2000-event trace limit is reached.'],
+               'requestedCases': [{'capacity': c, 'backgroundRings': b} for c, b in args.cases],
+-              'expectedStockChecksum': STOCK_CHECKSUM,
++              'radius': RADIUS, 'baselineChecksum': None,
++              'checksumReference': 'First capacity 8 observation at radius 12; later capacities must match. No radius 6 checksum or independent Java parity claim.',
+               'reviewedBuildResultSha256': sha(reviewed_path)}
+     try:
+         for index, (capacity, background) in enumerate(args.cases, 1):
+             case = run_case(output, index, capacity, background, sources, report, report_path)
+             if not case['inputsUnchanged']:
+                 raise RuntimeError('Stopped remaining cases after an integrity change')
+-            if case['status'] != 'completed-compiler-contention-diagnostic':
++            if case['status'] != 'completed-radius12-diagnostic':
+                 raise RuntimeError('Stopped remaining cases after diagnostic failure or output mismatch')
+             if case.get('errorType') in ('KeyboardInterrupt', 'SystemExit'):
+                 raise RuntimeError('Stopped remaining cases after supervisor interruption')
+         checksums = [case['bench']['checksum'] for case in report['cases'] if 'bench' in case]
+         report['outputChecksums'] = {Path(case['work']).name: case['bench']['checksum'] for case in report['cases'] if 'bench' in case}
+         report['completedChecksumsMatch'] = bool(checksums) and len(set(checksums)) == 1
+-        report['status'] = 'completed-compiler-contention-diagnostics' if all(case['status'] == 'completed-compiler-contention-diagnostic' for case in report['cases']) and report['completedChecksumsMatch'] else 'completed-with-diagnostic-failures'
++        report['status'] = 'completed-radius12-diagnostics' if all(case['status'] == 'completed-radius12-diagnostic' for case in report['cases']) and report['completedChecksumsMatch'] else 'completed-with-diagnostic-failures'
+     except BaseException as error:
+         report.update(status='failed', error=str(error), errorType=type(error).__name__)
+     finally:
+         report['completedAtUtc'] = utc()
+         save(report_path, report)
+     print(report_path)
+-    return 0 if report['status'] == 'completed-compiler-contention-diagnostics' else 1
++    return 0 if report['status'] == 'completed-radius12-diagnostics' else 1
+ 
+ 
+ if __name__ == '__main__':

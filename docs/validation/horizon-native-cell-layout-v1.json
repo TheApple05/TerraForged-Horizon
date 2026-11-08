@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-derived-compiler-cell-layout-excerpt",
+  "derivedAtUtc": "2026-11-08T03:43:57.716064+00:00",
+  "rawReceiptFile": "cell-layout-v1.json",
+  "rawReceiptSha256": "b5ec744610fe1e154f9fdb627e09dcf077af8cc0ede005e4f7765bf20f97ae88",
+  "scope": "Isolated exact source Cell layout with the actual installed native compiler/target; not whole-process allocation telemetry.",
+  "compiler": {
+    "version": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-pc-windows-gnu\nrelease: 1.99.1\nLLVM version: 23.1.1\n",
+    "target": "x86_64-pc-windows-gnu",
+    "compilerSha256": "51a5e64f2668e874b50d9af0f281cfd7a4ee08558ee44ffa1855756b5a78bc52"
+  },
+  "cellSourceSha256": "427dc603546d4139f7e299dcefd4da667d58e094e95ea0dc65ce71293b4705e2",
+  "qaSourceSha256": "70062106cb341549122cb41dac07e66ca260164d16c073b0cfa6e567f0cb3514",
+  "dev6PackagedCellMatches": true,
+  "independentlyVerifiedInstalledDev6PackageCellSource": true,
+  "installedDev6PackageSha256": "c9845ee3a3d036ef1f0dea379358c240efbb25a6c7156457c385166fd0dd235f",
+  "assertedSizeBytes": 96,
+  "assertion": "const _: [(); 96] = [(); std::mem::size_of::<cell::Cell>()];",
+  "compileMode": "Isolated library metadata compilation; edition2024; no executable or game run.",
+  "compileExitCode": 0,
+  "payloadMath": [
+    {
+      "tileFactor": 3,
+      "coreWidthBlocks": 128,
+      "borderChunks": 1,
+      "backingWidthCells": 160,
+      "cellCountPerTile": 25600,
+      "bytesPerCell": 96,
+      "bytesPerTile": 2457600,
+      "tileMiB": 2.34375,
+      "retainedTiles": 32,
+      "retainedCellBackingMiB": 75.0,
+      "additionalRetainedMiBVersus8": 56.25,
+      "maxInFlight": 4,
+      "buildingCellBackingMiB": 9.375,
+      "retainedPlusBuildingCellBackingMiB": 84.375
+    },
+    {
+      "tileFactor": 3,
+      "coreWidthBlocks": 128,
+      "borderChunks": 2,
+      "backingWidthCells": 192,
+      "cellCountPerTile": 36864,
+      "bytesPerCell": 96,
+      "bytesPerTile": 3538944,
+      "tileMiB": 3.375,
+      "retainedTiles": 32,
+      "retainedCellBackingMiB": 108.0,
+      "additionalRetainedMiBVersus8": 81.0,
+      "maxInFlight": 4,
+      "buildingCellBackingMiB": 13.5,
+      "retainedPlusBuildingCellBackingMiB": 121.5
+    }
+  ],
+  "bounds": [
+    "Exact layout applies to this compiler, target and source; it is not a stable Rust serialization ABI guarantee.",
+    "Per-sampler Cell-backing calculations only; not process allocation or RSS telemetry.",
+    "Caller-retained Arc values can survive eviction or clear and are additional.",
+    "Tile/Arc/hash-map overhead, allocator behavior, temporary filtering data, river/brush and other host caches are excluded.",
+    "No executable, metadata artifact, world, account or prepared-resource bytes are included."
+  ]
+}

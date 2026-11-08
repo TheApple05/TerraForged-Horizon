@@ -3,9 +3,13 @@
 KernelSampler now supplies complete filtered cells at arbitrary block coordinates.
 It constructs real tiles on demand; it never reads expected cells or prepared
 chunk snapshots. Negative right shifts, masks and core/halo addressing retain the
-source's behavior. Default options use factor3, eight cached tiles, four concurrent
+source's behavior. Default options use factor3, 32 cached tiles, four concurrent
 builds, and the source's lifetime-derived one/two-chunk border. Explicit supported
 limits are factors/borders 0..4, capacity 1..32 and concurrent builds 1..8.
+
+Native.dev7 raises only retained tile capacity after the [fir-forest cache
+investigation](native-fir-investigation.md). Concurrency and generated cells stay
+unchanged; the larger cache trades bounded memory for fewer repeated builds.
 
 Both debug/release match 196,608 core columns / 4,718,592 fields from the existing
 independent Java kernel corpus across six world seeds. The comparison checks all

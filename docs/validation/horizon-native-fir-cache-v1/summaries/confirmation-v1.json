@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "run": "confirmation-v1",
+  "scope": "Shared host workload uncontrolled",
+  "radius": 6,
+  "mesh": false,
+  "seed": 8675309,
+  "center": [
+    0,
+    -2731
+  ],
+  "workers": 15,
+  "periodMilliseconds": 2,
+  "repeatPerProcess": 1,
+  "timeoutSeconds": 600,
+  "sevenFreshHomesPerCase": true,
+  "audioDiscordSelfUpdateTelemetryOff": true,
+  "orderedCases": [
+    {
+      "order": 1,
+      "capacity": 8,
+      "backgroundRings": false,
+      "pid": 33432,
+      "startedAtUtc": "2026-11-08T03:26:48.185271+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:27:15.679921+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 20.351406,
+      "childWallSeconds": 27.5,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 971505664,
+      "peakRssMiB": 926.5,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 435,
+      "maximumEventNumber": 508,
+      "perCacheMeasuredPhase": {
+        "0x1eab6b6a790": {
+          "missBegin": 70,
+          "buildFinish": 70,
+          "evictions": 62,
+          "flightWaits": 203,
+          "flightWaitSeconds": 167.05681500000003,
+          "capacityWaits": 30,
+          "capacityWaitSeconds": 11.247034000000001,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 50,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/confirmation-v1/01-capacity8-bgfalse/stdout.log",
+          "sha256": "d1e67c60014ef0812cce8a8463571ce5b43e94c4dfccaffbda3cd771f064940b",
+          "bytes": 855
+        },
+        "stderr.log": {
+          "file": "logs/confirmation-v1/01-capacity8-bgfalse/stderr.log",
+          "sha256": "df84af57e9e0018517b5eba831ccb11bf329d01265d0c430fa32749dbe62f338",
+          "bytes": 69595
+        }
+      }
+    },
+    {
+      "order": 2,
+      "capacity": 16,
+      "backgroundRings": false,
+      "pid": 30404,
+      "startedAtUtc": "2026-11-08T03:27:17.651983+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:27:29.502737+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 6.4460086,
+      "childWallSeconds": 11.859000000000378,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 970883072,
+      "peakRssMiB": 925.90625,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 101,
+      "maximumEventNumber": 154,
+      "perCacheMeasuredPhase": {
+        "0x1f9ce6e0940": {
+          "missBegin": 20,
+          "buildFinish": 20,
+          "evictions": 4,
+          "flightWaits": 57,
+          "flightWaitSeconds": 27.900934000000003,
+          "capacityWaits": 0,
+          "capacityWaitSeconds": 0.0,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 0,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/confirmation-v1/02-capacity16-bgfalse/stdout.log",
+          "sha256": "12a57ae19f3aed4080e237b2fb90487124b0bdcfdf8b5cdc4d3c30ca5c977ef4",
+          "bytes": 854
+        },
+        "stderr.log": {
+          "file": "logs/confirmation-v1/02-capacity16-bgfalse/stderr.log",
+          "sha256": "5ed843e2d20ee2d17eec2d208f651654703d0bb08661bfb5d02a8adc9b08bacc",
+          "bytes": 21275
+        }
+      }
+    },
+    {
+      "order": 3,
+      "capacity": 8,
+      "backgroundRings": false,
+      "pid": 21180,
+      "startedAtUtc": "2026-11-08T03:27:31.296509+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:27:58.182428+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 20.2901111,
+      "childWallSeconds": 26.89099999999962,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 971608064,
+      "peakRssMiB": 926.59765625,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 451,
+      "maximumEventNumber": 525,
+      "perCacheMeasuredPhase": {
+        "0x1adc4e831b0": {
+          "missBegin": 65,
+          "buildFinish": 65,
+          "evictions": 57,
+          "flightWaits": 204,
+          "flightWaitSeconds": 160.345178,
+          "capacityWaits": 60,
+          "capacityWaitSeconds": 19.770391999999994,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 45,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/confirmation-v1/03-capacity8-bgfalse/stdout.log",
+          "sha256": "7607cde778e6e0969aaad27a75dc66a25fb5de2ddd21e6a6a888e379c08829d3",
+          "bytes": 854
+        },
+        "stderr.log": {
+          "file": "logs/confirmation-v1/03-capacity8-bgfalse/stderr.log",
+          "sha256": "cfa5dedc71419191b45590ec368a16580bca4cca222c9028ce1ec665fd056db2",
+          "bytes": 71826
+        }
+      }
+    },
+    {
+      "order": 4,
+      "capacity": 16,
+      "backgroundRings": false,
+      "pid": 34004,
+      "startedAtUtc": "2026-11-08T03:28:00.004522+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:28:11.862078+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 6.4017758,
+      "childWallSeconds": 11.859000000000378,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 970862592,
+      "peakRssMiB": 925.88671875,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 100,
+      "maximumEventNumber": 157,
+      "perCacheMeasuredPhase": {
+        "0x1c653998470": {
+          "missBegin": 20,
+          "buildFinish": 20,
+          "evictions": 4,
+          "flightWaits": 56,
+          "flightWaitSeconds": 27.226947,
+          "capacityWaits": 0,
+          "capacityWaitSeconds": 0.0,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 0,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/confirmation-v1/04-capacity16-bgfalse/stdout.log",
+          "sha256": "bc555b4d14c56045da933085f0173b3448386bae0a2c39682af9e0a55b52fa29",
+          "bytes": 854
+        },
+        "stderr.log": {
+          "file": "logs/confirmation-v1/04-capacity16-bgfalse/stderr.log",
+          "sha256": "b8bb6803ca0b38d9d0f1189bb1c8bccc828297429ab253a08cf3b0ad33137268",
+          "bytes": 21696
+        }
+      }
+    },
+    {
+      "order": 5,
+      "capacity": 8,
+      "backgroundRings": false,
+      "pid": 33224,
+      "startedAtUtc": "2026-11-08T03:28:13.738134+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:28:41.032777+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 21.3626987,
+      "childWallSeconds": 27.29699999999866,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 970502144,
+      "peakRssMiB": 925.54296875,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 504,
+      "maximumEventNumber": 572,
+      "perCacheMeasuredPhase": {
+        "0x1f1564ca880": {
+          "missBegin": 73,
+          "buildFinish": 73,
+          "evictions": 65,
+          "flightWaits": 224,
+          "flightWaitSeconds": 175.9210549999999,
+          "capacityWaits": 69,
+          "capacityWaitSeconds": 17.718903000000008,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 53,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/confirmation-v1/05-capacity8-bgfalse/stdout.log",
+          "sha256": "5169fc4b2a7d49ea9b135b3867cdbd62d1b998f21a9be1c5a3f89b1eec67dfa2",
+          "bytes": 856
+        },
+        "stderr.log": {
+          "file": "logs/confirmation-v1/05-capacity8-bgfalse/stderr.log",
+          "sha256": "f915790aad7a7627ace249b58754943e8d9e75ba134f822953a287a8ea3d17c4",
+          "bytes": 77989
+        }
+      }
+    },
+    {
+      "order": 6,
+      "capacity": 16,
+      "backgroundRings": false,
+      "pid": 14004,
+      "startedAtUtc": "2026-11-08T03:28:43.049545+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:28:55.175709+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 6.3859671,
+      "childWallSeconds": 12.125,
+      "checksum": "d5f67a39776cb08d",
+      "columns": 149,
+      "lit": 149,
+      "peakRssBytes": 971042816,
+      "peakRssMiB": 926.05859375,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 102,
+      "maximumEventNumber": 154,
+      "perCacheMeasuredPhase": {
+        "0x250b3dea150": {
+          "missBegin": 20,
+          "buildFinish": 20,
+          "evictions": 4,
+          "flightWaits": 58,
+          "flightWaitSeconds": 27.678023000000003,
+          "capacityWaits": 0,
+          "capacityWaitSeconds": 0.0,
+          "uniqueMissKeys": 20,
+          "repeatMissBegins": 0,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/confirmation-v1/06-capacity16-bgfalse/stdout.log",
+          "sha256": "aae569d918f980afa13a396db57a449a645d699ce9ef073e8e6a974cd2a84cca",
+          "bytes": 863
+        },
+        "stderr.log": {
+          "file": "logs/confirmation-v1/06-capacity16-bgfalse/stderr.log",
+          "sha256": "a9acef9ba36e373b37b785872721f00c9c9687e77cc8466dbb14f5d212b1969c",
+          "bytes": 21287
+        }
+      }
+    }
+  ],
+  "allExitZero": true,
+  "allInputsUnchanged": true,
+  "allChecksumsMatchWithinRun": true,
+  "checksumReference": "d5f67a39776cb08d",
+  "checksumReferenceMeaning": "Prior radius6 stock reference; no new independent Java parity verification by these runs.",
+  "rawReportSha256": "1ab505cbceae768d9efe84fab710bcf36adef9a34b4418f9f904e7c46dbe6472",
+  "rawLabelCorrection": "Unchanged runner raw scope/status says compiler-contention; this is legacy text and does not establish active compilers during this run.",
+  "descriptiveMediansByCapacity": {
+    "8": {
+      "caseCount": 3,
+      "pipelineWallSeconds": 20.351406,
+      "buildFinish": 70,
+      "peakRssBytes": 971505664
+    },
+    "16": {
+      "caseCount": 3,
+      "pipelineWallSeconds": 6.4017758,
+      "buildFinish": 20,
+      "peakRssBytes": 970883072
+    }
+  }
+}

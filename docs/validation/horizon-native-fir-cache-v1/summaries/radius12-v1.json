@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "run": "radius12-v1",
+  "scope": "Shared host workload uncontrolled",
+  "radius": 12,
+  "mesh": false,
+  "seed": 8675309,
+  "center": [
+    0,
+    -2731
+  ],
+  "workers": 15,
+  "periodMilliseconds": 2,
+  "repeatPerProcess": 1,
+  "timeoutSeconds": 600,
+  "sevenFreshHomesPerCase": true,
+  "audioDiscordSelfUpdateTelemetryOff": true,
+  "orderedCases": [
+    {
+      "order": 1,
+      "capacity": 8,
+      "backgroundRings": false,
+      "pid": 27120,
+      "startedAtUtc": "2026-11-08T03:31:26.484878+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:34:36.265688+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 183.7678288,
+      "childWallSeconds": 189.78099999999904,
+      "checksum": "15e9296ae1b6c062",
+      "columns": 529,
+      "lit": 529,
+      "peakRssBytes": 970907648,
+      "peakRssMiB": 925.9296875,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": true,
+      "measuredEventsObserved": 1932,
+      "maximumEventNumber": 2000,
+      "perCacheMeasuredPhase": {
+        "0x1eeefda7440": {
+          "missBegin": 269,
+          "buildFinish": 266,
+          "evictions": 257,
+          "flightWaits": 533,
+          "flightWaitSeconds": 512.6023170000002,
+          "capacityWaits": 607,
+          "capacityWaitSeconds": 183.4537859999999,
+          "uniqueMissKeys": 32,
+          "repeatMissBegins": 237,
+          "countsAreLowerBounds": true
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/radius12-v1/01-capacity8-bgfalse/stdout.log",
+          "sha256": "5b1240c3c88bbf994ae074414483c487dbb88556ca9e470617d41eb4d148ba52",
+          "bytes": 867
+        },
+        "stderr.log": {
+          "file": "logs/radius12-v1/01-capacity8-bgfalse/stderr.log",
+          "sha256": "ca8d8167a08d126a211680153444595954e61ac8006d4187b5df10552d9d87fc",
+          "bytes": 283373
+        }
+      }
+    },
+    {
+      "order": 2,
+      "capacity": 16,
+      "backgroundRings": false,
+      "pid": 33556,
+      "startedAtUtc": "2026-11-08T03:34:39.286047+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:35:20.158669+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 35.2284698,
+      "childWallSeconds": 40.875,
+      "checksum": "15e9296ae1b6c062",
+      "columns": 529,
+      "lit": 529,
+      "peakRssBytes": 970350592,
+      "peakRssMiB": 925.3984375,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 792,
+      "maximumEventNumber": 840,
+      "perCacheMeasuredPhase": {
+        "0x24311aeb450": {
+          "missBegin": 127,
+          "buildFinish": 127,
+          "evictions": 111,
+          "flightWaits": 214,
+          "flightWaitSeconds": 173.73243000000005,
+          "capacityWaits": 213,
+          "capacityWaitSeconds": 52.131785,
+          "uniqueMissKeys": 37,
+          "repeatMissBegins": 90,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/radius12-v1/02-capacity16-bgfalse/stdout.log",
+          "sha256": "9f33e88135263750b1485a6c23535046fe9e079ed6d6f9c335d0b3e43e4aa573",
+          "bytes": 860
+        },
+        "stderr.log": {
+          "file": "logs/radius12-v1/02-capacity16-bgfalse/stderr.log",
+          "sha256": "a3b860417113468ba3c0851438aaa06cff284bf637c99fcb27635d915d993b6a",
+          "bytes": 113717
+        }
+      }
+    },
+    {
+      "order": 3,
+      "capacity": 32,
+      "backgroundRings": false,
+      "pid": 10676,
+      "startedAtUtc": "2026-11-08T03:35:23.598855+00:00",
+      "exitObservedAtUtc": "2026-11-08T03:35:43.383270+00:00",
+      "exitCode": 0,
+      "exitCodeUnsignedHex": "0x00000000",
+      "pipelineWallSeconds": 13.3830625,
+      "childWallSeconds": 19.78099999999904,
+      "checksum": "15e9296ae1b6c062",
+      "columns": 529,
+      "lit": 529,
+      "peakRssBytes": 971587584,
+      "peakRssMiB": 926.578125,
+      "rssFinalQuerySucceeded": true,
+      "peakRssIsLowerBound": false,
+      "inputsUnchanged": true,
+      "phaseMarkers": [
+        {
+          "phase": "warmup",
+          "backgroundRings": false
+        },
+        {
+          "phase": "measured",
+          "backgroundRings": false
+        }
+      ],
+      "traceLimitReached": false,
+      "measuredEventsObserved": 157,
+      "maximumEventNumber": 209,
+      "perCacheMeasuredPhase": {
+        "0x1f5331defa0": {
+          "missBegin": 40,
+          "buildFinish": 40,
+          "evictions": 8,
+          "flightWaits": 68,
+          "flightWaitSeconds": 34.915713000000004,
+          "capacityWaits": 1,
+          "capacityWaitSeconds": 0.125099,
+          "uniqueMissKeys": 37,
+          "repeatMissBegins": 3,
+          "countsAreLowerBounds": false
+        }
+      },
+      "logs": {
+        "stdout.log": {
+          "file": "logs/radius12-v1/03-capacity32-bgfalse/stdout.log",
+          "sha256": "af00c7be27c643a13301a9283bee237fa14702f465ce0fe8f04a05dfa686b580",
+          "bytes": 858
+        },
+        "stderr.log": {
+          "file": "logs/radius12-v1/03-capacity32-bgfalse/stderr.log",
+          "sha256": "46c12049d0cdfbd423ed5d72445859583237d26c7d51d09d42dc24bfafe7b8a7",
+          "bytes": 29074
+        }
+      }
+    }
+  ],
+  "allExitZero": true,
+  "allInputsUnchanged": true,
+  "allChecksumsMatchWithinRun": true,
+  "checksumReference": "15e9296ae1b6c062",
+  "checksumReferenceMeaning": "First unchanged capacity8 radius12 observation; cross-capacity consistency only, not independent Java parity.",
+  "rawReportSha256": "25a22fea41b1d059ba7711fb04af2e001f5baae2ee0308bf66f94f83c38c6963"
+}

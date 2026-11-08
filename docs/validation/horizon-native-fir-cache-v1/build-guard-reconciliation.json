@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "kind": "Derived public excerpt; full raw build receipt remains locally unchanged.",
+  "rawReceiptStatusPreserved": "failed",
+  "cargoExitCode": 0,
+  "cargoExitCodeUnsignedHex": "0x00000000",
+  "buildJobs": 2,
+  "elapsedSeconds": 2386.9209999999985,
+  "rawIntegrityGuardError": "Copied build input changed",
+  "copiedBuildInputsUnchanged": false,
+  "changedCopiedInputs": [
+    "crates/horizon-client/examples/gen_light_native_stem.rs"
+  ],
+  "explanation": "The sole changed copied input was the root-approved measured-only background-ring correction, made before horizon-client-lib/example compilation. Raw before/after hashes and failed guard status are preserved, not overwritten.",
+  "approvedAmendment": {
+    "approvedAtUtc": "2026-11-08T02:43:45.983735+00:00",
+    "reason": "Root correction: background ring searches only for measured generator; warm-up must not spawn a second search thread",
+    "probeSha256Before": "a9a4eb95b0cf2ae056125ed21db8cea08829749cb0f2f21ffa2613980437120a",
+    "clientLibraryCompilationLoggedBeforeAmendment": false,
+    "exampleExecutableExistsBeforeAmendment": false,
+    "buildLogSha256BeforeAmendment": "ea9e4cd597d7f24ca19282e719377ba276afaba6b1a65322dd6a6c5fc0c5a2f0",
+    "amendedAtUtc": "2026-11-08T02:44:54.056940+00:00",
+    "probeSha256After": "2cd5425345193f5c4fd56727625e017a77fcaa8b7a68ec077896c8994f32608a",
+    "clientLibraryCompilationLoggedAfterAmendment": false,
+    "buildLogSha256AfterAmendment": "5d00746e6183ab7851ba3898dbcf120168c4ba78b3946661cb7e1dce70de869e"
+  },
+  "compiledExecutableSha256": "e9a098e19adc7ece0319ae24e033c1272b6baec45f5389232edf8a12ee743725",
+  "rawBuildReceiptSha256": "2364ab6e2763a457d32e5c01711c56478eaff40b47c10a5e7e7400237c980c1e",
+  "reviewedResultSha256": "1cf50323dd4d168a1efce99c815fd29446ee202305a5566cb7b58345e77e581f",
+  "approvedAmendmentSha256": "ab4d7605b68ff8634269f79dd315abf7b1d16f234dfdc60670ec6a4b5f64902a",
+  "cargoBuildLogSha256": "952350310d1e0603f65bad7ed2fb99d58d7e35fb3849811d57a0640972c0bd79",
+  "buildInputsSha256After": {
+    "Cargo.toml": "ce357321b17899ec58bbb82ec600a35600329cb8abdbe91303b91b9e9a8008cb",
+    "crates/horizon-client/examples/gen_light_native_stem.rs": "2cd5425345193f5c4fd56727625e017a77fcaa8b7a68ec077896c8994f32608a",
+    "crates/horizon-core/Cargo.toml": "8ff251d71d8ddb7950d3ed3d7c37a23a0e9f3a1a9d93b375fe2aeefd0859cfb1",
+    "qa-native-sources/kernel/src/kernel_sampler.rs": "b6a967b15785df2a735d9048efa91dcb60a4ef37ef617918b0db85910b176560",
+    "qa-native-sources/kernel/src/tile_work_cache.rs": "7e6f2393093f92c4e60717d0df5c68652dad43d0da3b1fb3c3ec33e0974f7b13",
+    "Cargo.lock": "50628ec6151b40e54d7cd9851bdc5f3df1152edfd6c329f6a8e4a286204b8258"
+  },
+  "warnings": [
+    "Current toolchain deprecates AtomicUsize::fetch_update in favor of try_update; diagnostic code compiled successfully."
+  ]
+}

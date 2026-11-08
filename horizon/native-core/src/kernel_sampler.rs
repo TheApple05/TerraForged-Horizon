@@ -22,7 +22,7 @@ impl SamplerOptions {
         Self {
             tile_factor: 3,
             border_chunks: (preset.filters.erosion.droplet_lifetime / 16).clamp(1, 2),
-            cache_capacity: 8,
+            cache_capacity: 32,
             max_in_flight: 4,
         }
     }

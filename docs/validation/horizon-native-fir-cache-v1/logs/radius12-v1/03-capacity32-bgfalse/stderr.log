@@ -1,0 +1,219 @@
+QA_PIPELINE phase=warmup background_rings=false
+QA_NATIVE_SAMPLER cache_capacity=32 max_in_flight=4 override_present=true
+QA_TILE event=1/2000 elapsed_s=0.000000 thread=ThreadId(29) MISS begin cache=0x1f537f36730 key=(499, -342)
+QA_TILE event=2/2000 elapsed_s=0.000438 thread=ThreadId(32) MISS begin cache=0x1f537f36730 key=(500, -342)
+QA_TILE event=3/2000 elapsed_s=0.209729 thread=ThreadId(32) MISS build-finish cache=0x1f537f36730 key=(500, -342) seconds=0.209107 success=true
+QA_TILE event=5/2000 elapsed_s=0.210025 thread=ThreadId(31) FLIGHT wait cache=0x1f537f36730 key=(500, -342) seconds=0.210014 success=true
+QA_TILE event=4/2000 elapsed_s=0.210280 thread=ThreadId(29) MISS build-finish cache=0x1f537f36730 key=(499, -342) seconds=0.209531 success=true
+QA_TILE event=8/2000 elapsed_s=0.210832 thread=ThreadId(23) FLIGHT wait cache=0x1f537f36730 key=(499, -342) seconds=0.210816 success=true
+QA_TILE event=7/2000 elapsed_s=0.211002 thread=ThreadId(25) FLIGHT wait cache=0x1f537f36730 key=(500, -342) seconds=0.210090 success=true
+QA_TILE event=9/2000 elapsed_s=0.211122 thread=ThreadId(24) FLIGHT wait cache=0x1f537f36730 key=(499, -342) seconds=0.210818 success=true
+QA_TILE event=10/2000 elapsed_s=0.211207 thread=ThreadId(28) FLIGHT wait cache=0x1f537f36730 key=(499, -342) seconds=0.210831 success=true
+QA_TILE event=11/2000 elapsed_s=0.211317 thread=ThreadId(36) FLIGHT wait cache=0x1f537f36730 key=(499, -342) seconds=0.210824 success=true
+QA_TILE event=13/2000 elapsed_s=0.211463 thread=ThreadId(35) FLIGHT wait cache=0x1f537f36730 key=(499, -342) seconds=0.210849 success=true
+QA_TILE event=14/2000 elapsed_s=0.211546 thread=ThreadId(30) FLIGHT wait cache=0x1f537f36730 key=(499, -342) seconds=0.210844 success=true
+QA_TILE event=12/2000 elapsed_s=0.211661 thread=ThreadId(27) FLIGHT wait cache=0x1f537f36730 key=(499, -342) seconds=0.210824 success=true
+QA_TILE event=15/2000 elapsed_s=0.211771 thread=ThreadId(26) FLIGHT wait cache=0x1f537f36730 key=(499, -342) seconds=0.210872 success=true
+QA_TILE event=16/2000 elapsed_s=0.211861 thread=ThreadId(37) FLIGHT wait cache=0x1f537f36730 key=(499, -342) seconds=0.210864 success=true
+QA_TILE event=6/2000 elapsed_s=0.211975 thread=ThreadId(33) FLIGHT wait cache=0x1f537f36730 key=(500, -342) seconds=0.210079 success=true
+QA_TILE event=17/2000 elapsed_s=0.212141 thread=ThreadId(34) FLIGHT wait cache=0x1f537f36730 key=(499, -342) seconds=0.210865 success=true
+QA_TILE event=18/2000 elapsed_s=0.219260 thread=ThreadId(27) MISS begin cache=0x1f537f36730 key=(499, -341)
+QA_TILE event=19/2000 elapsed_s=0.221232 thread=ThreadId(24) MISS begin cache=0x1f537f36730 key=(499, -343)
+QA_TILE event=20/2000 elapsed_s=0.223039 thread=ThreadId(32) MISS begin cache=0x1f537f36730 key=(500, -343)
+QA_TILE event=21/2000 elapsed_s=0.223517 thread=ThreadId(33) MISS begin cache=0x1f537f36730 key=(501, -342)
+QA_TILE event=22/2000 elapsed_s=0.410419 thread=ThreadId(27) MISS build-finish cache=0x1f537f36730 key=(499, -341) seconds=0.191052 success=true
+QA_TILE event=23/2000 elapsed_s=0.410580 thread=ThreadId(36) FLIGHT wait cache=0x1f537f36730 key=(499, -341) seconds=0.188147 success=true
+QA_TILE event=24/2000 elapsed_s=0.410668 thread=ThreadId(30) CAPACITY wait cache=0x1f537f36730 key=(498, -342) seconds=0.159912
+QA_TILE event=25/2000 elapsed_s=0.410741 thread=ThreadId(30) MISS begin cache=0x1f537f36730 key=(498, -342)
+QA_TILE event=26/2000 elapsed_s=0.414819 thread=ThreadId(33) MISS build-finish cache=0x1f537f36730 key=(501, -342) seconds=0.191228 success=true
+QA_TILE event=27/2000 elapsed_s=0.414944 thread=ThreadId(31) FLIGHT wait cache=0x1f537f36730 key=(501, -342) seconds=0.190769 success=true
+QA_TILE event=28/2000 elapsed_s=0.415025 thread=ThreadId(36) CAPACITY wait cache=0x1f537f36730 key=(500, -341) seconds=0.003596
+QA_TILE event=31/2000 elapsed_s=0.415124 thread=ThreadId(36) MISS begin cache=0x1f537f36730 key=(500, -341)
+QA_TILE event=30/2000 elapsed_s=0.415222 thread=ThreadId(37) CAPACITY wait cache=0x1f537f36730 key=(500, -341) seconds=0.000596
+QA_TILE event=29/2000 elapsed_s=0.415304 thread=ThreadId(23) CAPACITY wait cache=0x1f537f36730 key=(500, -341) seconds=0.000363
+QA_TILE event=32/2000 elapsed_s=0.433392 thread=ThreadId(24) MISS build-finish cache=0x1f537f36730 key=(499, -343) seconds=0.212063 success=true
+QA_TILE event=33/2000 elapsed_s=0.435004 thread=ThreadId(32) MISS build-finish cache=0x1f537f36730 key=(500, -343) seconds=0.211867 success=true
+QA_TILE event=34/2000 elapsed_s=0.587288 thread=ThreadId(36) MISS build-finish cache=0x1f537f36730 key=(500, -341) seconds=0.172108 success=true
+QA_TILE event=35/2000 elapsed_s=0.587397 thread=ThreadId(31) FLIGHT wait cache=0x1f537f36730 key=(500, -341) seconds=0.135675 success=true
+QA_TILE event=36/2000 elapsed_s=0.587542 thread=ThreadId(24) FLIGHT wait cache=0x1f537f36730 key=(500, -341) seconds=0.140145 success=true
+QA_TILE event=37/2000 elapsed_s=0.587657 thread=ThreadId(23) FLIGHT wait cache=0x1f537f36730 key=(500, -341) seconds=0.171984 success=true
+QA_TILE event=39/2000 elapsed_s=0.587740 thread=ThreadId(29) FLIGHT wait cache=0x1f537f36730 key=(500, -341) seconds=0.122455 success=true
+QA_TILE event=38/2000 elapsed_s=0.587850 thread=ThreadId(33) FLIGHT wait cache=0x1f537f36730 key=(500, -341) seconds=0.134700 success=true
+QA_TILE event=40/2000 elapsed_s=0.587962 thread=ThreadId(25) FLIGHT wait cache=0x1f537f36730 key=(500, -341) seconds=0.145165 success=true
+QA_TILE event=41/2000 elapsed_s=0.588082 thread=ThreadId(37) FLIGHT wait cache=0x1f537f36730 key=(500, -341) seconds=0.172132 success=true
+QA_TILE event=42/2000 elapsed_s=0.608247 thread=ThreadId(26) MISS begin cache=0x1f537f36730 key=(498, -340)
+QA_TILE event=43/2000 elapsed_s=0.609178 thread=ThreadId(30) MISS build-finish cache=0x1f537f36730 key=(498, -342) seconds=0.198377 success=true
+QA_TILE event=44/2000 elapsed_s=0.616246 thread=ThreadId(29) MISS begin cache=0x1f537f36730 key=(501, -340)
+QA_TILE event=45/2000 elapsed_s=0.871553 thread=ThreadId(29) MISS build-finish cache=0x1f537f36730 key=(501, -340) seconds=0.255006 success=true
+QA_TILE event=46/2000 elapsed_s=0.896292 thread=ThreadId(26) MISS build-finish cache=0x1f537f36730 key=(498, -340) seconds=0.287940 success=true
+QA_TILE event=47/2000 elapsed_s=0.960532 thread=ThreadId(37) MISS begin cache=0x1f537f36730 key=(498, -341)
+QA_TILE event=48/2000 elapsed_s=0.962328 thread=ThreadId(23) MISS begin cache=0x1f537f36730 key=(500, -340)
+QA_TILE event=49/2000 elapsed_s=1.228470 thread=ThreadId(23) MISS build-finish cache=0x1f537f36730 key=(500, -340) seconds=0.266049 success=true
+QA_TILE event=50/2000 elapsed_s=1.233111 thread=ThreadId(23) MISS begin cache=0x1f537f36730 key=(501, -341)
+QA_TILE event=51/2000 elapsed_s=1.241991 thread=ThreadId(37) MISS build-finish cache=0x1f537f36730 key=(498, -341) seconds=0.281349 success=true
+QA_TILE event=52/2000 elapsed_s=1.419664 thread=ThreadId(23) MISS build-finish cache=0x1f537f36730 key=(501, -341) seconds=0.186467 success=true
+QA_PIPELINE phase=measured background_rings=false
+QA_NATIVE_SAMPLER cache_capacity=32 max_in_flight=4 override_present=true
+QA_TILE event=53/2000 elapsed_s=1.654933 thread=ThreadId(23) MISS begin cache=0x1f5331defa0 key=(-1, -342)
+QA_TILE event=54/2000 elapsed_s=1.655044 thread=ThreadId(35) MISS begin cache=0x1f5331defa0 key=(0, -342)
+QA_TILE event=55/2000 elapsed_s=2.573831 thread=ThreadId(23) MISS build-finish cache=0x1f5331defa0 key=(-1, -342) seconds=0.918787 success=true
+QA_TILE event=56/2000 elapsed_s=2.574012 thread=ThreadId(25) FLIGHT wait cache=0x1f5331defa0 key=(-1, -342) seconds=0.919010 success=true
+QA_TILE event=59/2000 elapsed_s=2.574113 thread=ThreadId(27) FLIGHT wait cache=0x1f5331defa0 key=(-1, -342) seconds=0.919051 success=true
+QA_TILE event=57/2000 elapsed_s=2.574236 thread=ThreadId(24) FLIGHT wait cache=0x1f5331defa0 key=(-1, -342) seconds=0.919029 success=true
+QA_TILE event=58/2000 elapsed_s=2.574363 thread=ThreadId(29) FLIGHT wait cache=0x1f5331defa0 key=(-1, -342) seconds=0.919043 success=true
+QA_TILE event=60/2000 elapsed_s=2.574469 thread=ThreadId(36) FLIGHT wait cache=0x1f5331defa0 key=(-1, -342) seconds=0.919078 success=true
+QA_TILE event=61/2000 elapsed_s=2.574591 thread=ThreadId(32) FLIGHT wait cache=0x1f5331defa0 key=(-1, -342) seconds=0.919081 success=true
+QA_TILE event=62/2000 elapsed_s=2.574796 thread=ThreadId(30) FLIGHT wait cache=0x1f5331defa0 key=(-1, -342) seconds=0.919085 success=true
+QA_TILE event=63/2000 elapsed_s=2.574928 thread=ThreadId(34) FLIGHT wait cache=0x1f5331defa0 key=(-1, -342) seconds=0.919096 success=true
+QA_TILE event=64/2000 elapsed_s=2.575617 thread=ThreadId(37) FLIGHT wait cache=0x1f5331defa0 key=(-1, -342) seconds=0.919095 success=true
+QA_TILE event=65/2000 elapsed_s=2.575737 thread=ThreadId(33) FLIGHT wait cache=0x1f5331defa0 key=(-1, -342) seconds=0.919101 success=true
+QA_TILE event=66/2000 elapsed_s=2.579487 thread=ThreadId(24) MISS begin cache=0x1f5331defa0 key=(-2, -342)
+QA_TILE event=67/2000 elapsed_s=2.632680 thread=ThreadId(35) MISS build-finish cache=0x1f5331defa0 key=(0, -342) seconds=0.977565 success=true
+QA_TILE event=68/2000 elapsed_s=2.632785 thread=ThreadId(25) FLIGHT wait cache=0x1f5331defa0 key=(0, -342) seconds=0.043626 success=true
+QA_TILE event=69/2000 elapsed_s=2.632875 thread=ThreadId(37) FLIGHT wait cache=0x1f5331defa0 key=(0, -342) seconds=0.052720 success=true
+QA_TILE event=70/2000 elapsed_s=2.632986 thread=ThreadId(33) FLIGHT wait cache=0x1f5331defa0 key=(0, -342) seconds=0.053500 success=true
+QA_TILE event=71/2000 elapsed_s=2.633110 thread=ThreadId(30) FLIGHT wait cache=0x1f5331defa0 key=(0, -342) seconds=0.054553 success=true
+QA_TILE event=72/2000 elapsed_s=2.633225 thread=ThreadId(27) FLIGHT wait cache=0x1f5331defa0 key=(0, -342) seconds=0.054733 success=true
+QA_TILE event=73/2000 elapsed_s=2.633345 thread=ThreadId(34) FLIGHT wait cache=0x1f5331defa0 key=(0, -342) seconds=0.053932 success=true
+QA_TILE event=74/2000 elapsed_s=2.633468 thread=ThreadId(29) FLIGHT wait cache=0x1f5331defa0 key=(0, -342) seconds=0.055080 success=true
+QA_TILE event=75/2000 elapsed_s=2.633588 thread=ThreadId(31) FLIGHT wait cache=0x1f5331defa0 key=(0, -342) seconds=0.977858 success=true
+QA_TILE event=76/2000 elapsed_s=2.634211 thread=ThreadId(26) FLIGHT wait cache=0x1f5331defa0 key=(0, -342) seconds=0.977817 success=true
+QA_TILE event=77/2000 elapsed_s=2.634616 thread=ThreadId(28) FLIGHT wait cache=0x1f5331defa0 key=(0, -342) seconds=0.977860 success=true
+QA_TILE event=78/2000 elapsed_s=2.637147 thread=ThreadId(29) MISS begin cache=0x1f5331defa0 key=(-1, -341)
+QA_TILE event=79/2000 elapsed_s=2.638327 thread=ThreadId(33) MISS begin cache=0x1f5331defa0 key=(1, -342)
+QA_TILE event=80/2000 elapsed_s=2.639668 thread=ThreadId(31) MISS begin cache=0x1f5331defa0 key=(1, -341)
+QA_TILE event=81/2000 elapsed_s=3.584607 thread=ThreadId(24) MISS build-finish cache=0x1f5331defa0 key=(-2, -342) seconds=1.004995 success=true
+QA_TILE event=82/2000 elapsed_s=3.584725 thread=ThreadId(32) FLIGHT wait cache=0x1f5331defa0 key=(-2, -342) seconds=1.005213 success=true
+QA_TILE event=83/2000 elapsed_s=3.595242 thread=ThreadId(24) MISS begin cache=0x1f5331defa0 key=(0, -341)
+  2 s: 0/529 lit, 0 columns, [("queued", 30), ("generating", 45), ("protos", 5), ("decorating", 0), ("finishing", 0), ("lighting", 0), ("meshing", 0)], waiting e.g. [(-13, -2731), (-12, -2736), (-12, -2735), (-12, -2734)]
+QA_TILE event=84/2000 elapsed_s=4.297694 thread=ThreadId(31) MISS build-finish cache=0x1f5331defa0 key=(1, -341) seconds=1.657917 success=true
+QA_TILE event=85/2000 elapsed_s=4.334199 thread=ThreadId(33) MISS build-finish cache=0x1f5331defa0 key=(1, -342) seconds=1.695777 success=true
+QA_TILE event=86/2000 elapsed_s=4.334383 thread=ThreadId(34) FLIGHT wait cache=0x1f5331defa0 key=(1, -342) seconds=1.695855 success=true
+QA_TILE event=87/2000 elapsed_s=4.344197 thread=ThreadId(29) MISS build-finish cache=0x1f5331defa0 key=(-1, -341) seconds=1.706932 success=true
+QA_TILE event=88/2000 elapsed_s=4.344349 thread=ThreadId(28) FLIGHT wait cache=0x1f5331defa0 key=(-1, -341) seconds=0.000654 success=true
+QA_TILE event=89/2000 elapsed_s=4.344474 thread=ThreadId(30) FLIGHT wait cache=0x1f5331defa0 key=(-1, -341) seconds=0.000672 success=true
+QA_TILE event=90/2000 elapsed_s=4.344599 thread=ThreadId(36) FLIGHT wait cache=0x1f5331defa0 key=(-1, -341) seconds=0.749550 success=true
+QA_TILE event=91/2000 elapsed_s=4.344734 thread=ThreadId(25) FLIGHT wait cache=0x1f5331defa0 key=(-1, -341) seconds=0.753154 success=true
+QA_TILE event=92/2000 elapsed_s=4.344858 thread=ThreadId(37) FLIGHT wait cache=0x1f5331defa0 key=(-1, -341) seconds=0.752900 success=true
+QA_TILE event=93/2000 elapsed_s=4.347564 thread=ThreadId(34) MISS begin cache=0x1f5331defa0 key=(-2, -343)
+QA_TILE event=94/2000 elapsed_s=4.352665 thread=ThreadId(26) MISS begin cache=0x1f5331defa0 key=(0, -343)
+QA_TILE event=95/2000 elapsed_s=4.513049 thread=ThreadId(34) MISS build-finish cache=0x1f5331defa0 key=(-2, -343) seconds=0.165414 success=true
+QA_TILE event=96/2000 elapsed_s=4.671212 thread=ThreadId(24) MISS build-finish cache=0x1f5331defa0 key=(0, -341) seconds=1.075896 success=true
+QA_TILE event=97/2000 elapsed_s=4.671324 thread=ThreadId(34) FLIGHT wait cache=0x1f5331defa0 key=(0, -341) seconds=0.149339 success=true
+QA_TILE event=98/2000 elapsed_s=4.671449 thread=ThreadId(37) FLIGHT wait cache=0x1f5331defa0 key=(0, -341) seconds=0.326364 success=true
+QA_TILE event=99/2000 elapsed_s=4.671563 thread=ThreadId(30) FLIGHT wait cache=0x1f5331defa0 key=(0, -341) seconds=0.326751 success=true
+QA_TILE event=100/2000 elapsed_s=4.671678 thread=ThreadId(31) FLIGHT wait cache=0x1f5331defa0 key=(0, -341) seconds=0.319040 success=true
+QA_TILE event=101/2000 elapsed_s=4.671796 thread=ThreadId(28) FLIGHT wait cache=0x1f5331defa0 key=(0, -341) seconds=0.326892 success=true
+QA_TILE event=102/2000 elapsed_s=4.671882 thread=ThreadId(23) FLIGHT wait cache=0x1f5331defa0 key=(0, -341) seconds=0.318822 success=true
+QA_TILE event=103/2000 elapsed_s=4.672001 thread=ThreadId(32) FLIGHT wait cache=0x1f5331defa0 key=(0, -341) seconds=0.323909 success=true
+QA_TILE event=105/2000 elapsed_s=4.672115 thread=ThreadId(29) FLIGHT wait cache=0x1f5331defa0 key=(0, -341) seconds=0.326574 success=true
+QA_TILE event=104/2000 elapsed_s=4.672237 thread=ThreadId(25) FLIGHT wait cache=0x1f5331defa0 key=(0, -341) seconds=0.325650 success=true
+QA_TILE event=106/2000 elapsed_s=4.686872 thread=ThreadId(24) MISS begin cache=0x1f5331defa0 key=(-2, -340)
+QA_TILE event=107/2000 elapsed_s=4.965477 thread=ThreadId(26) MISS build-finish cache=0x1f5331defa0 key=(0, -343) seconds=0.612729 success=true
+QA_TILE event=108/2000 elapsed_s=4.974787 thread=ThreadId(32) MISS begin cache=0x1f5331defa0 key=(-1, -343)
+QA_TILE event=109/2000 elapsed_s=5.018867 thread=ThreadId(33) MISS begin cache=0x1f5331defa0 key=(1, -340)
+QA_TILE event=110/2000 elapsed_s=5.274951 thread=ThreadId(32) MISS build-finish cache=0x1f5331defa0 key=(-1, -343) seconds=0.299945 success=true
+QA_TILE event=111/2000 elapsed_s=5.275054 thread=ThreadId(34) FLIGHT wait cache=0x1f5331defa0 key=(-1, -343) seconds=0.230068 success=true
+QA_TILE event=112/2000 elapsed_s=5.275143 thread=ThreadId(36) FLIGHT wait cache=0x1f5331defa0 key=(-1, -343) seconds=0.256601 success=true
+QA_TILE event=113/2000 elapsed_s=5.275238 thread=ThreadId(26) FLIGHT wait cache=0x1f5331defa0 key=(-1, -343) seconds=0.262633 success=true
+QA_TILE event=114/2000 elapsed_s=5.275325 thread=ThreadId(35) FLIGHT wait cache=0x1f5331defa0 key=(-1, -343) seconds=0.276468 success=true
+QA_TILE event=115/2000 elapsed_s=5.275422 thread=ThreadId(31) FLIGHT wait cache=0x1f5331defa0 key=(-1, -343) seconds=0.292080 success=true
+QA_TILE event=116/2000 elapsed_s=5.275540 thread=ThreadId(37) FLIGHT wait cache=0x1f5331defa0 key=(-1, -343) seconds=0.285862 success=true
+QA_TILE event=117/2000 elapsed_s=5.275652 thread=ThreadId(30) FLIGHT wait cache=0x1f5331defa0 key=(-1, -343) seconds=0.299512 success=true
+QA_TILE event=118/2000 elapsed_s=5.328794 thread=ThreadId(26) MISS begin cache=0x1f5331defa0 key=(-2, -341)
+QA_TILE event=119/2000 elapsed_s=5.481796 thread=ThreadId(24) MISS build-finish cache=0x1f5331defa0 key=(-2, -340) seconds=0.794839 success=true
+QA_TILE event=120/2000 elapsed_s=5.569941 thread=ThreadId(24) MISS begin cache=0x1f5331defa0 key=(0, -344)
+  4 s: 14/529 lit, 36 columns, [("queued", 31), ("generating", 45), ("protos", 93), ("decorating", 1), ("finishing", 0), ("lighting", 0), ("meshing", 0)], waiting e.g. [(-13, -2731), (-12, -2736), (-12, -2735), (-12, -2734)]
+QA_TILE event=121/2000 elapsed_s=5.962526 thread=ThreadId(24) MISS build-finish cache=0x1f5331defa0 key=(0, -344) seconds=0.392504 success=true
+QA_TILE event=122/2000 elapsed_s=6.035687 thread=ThreadId(33) MISS build-finish cache=0x1f5331defa0 key=(1, -340) seconds=1.016713 success=true
+QA_TILE event=123/2000 elapsed_s=6.136700 thread=ThreadId(35) MISS begin cache=0x1f5331defa0 key=(1, -343)
+QA_TILE event=124/2000 elapsed_s=6.154569 thread=ThreadId(33) MISS begin cache=0x1f5331defa0 key=(0, -340)
+QA_TILE event=125/2000 elapsed_s=6.183079 thread=ThreadId(26) MISS build-finish cache=0x1f5331defa0 key=(-2, -341) seconds=0.854197 success=true
+QA_TILE event=126/2000 elapsed_s=6.183182 thread=ThreadId(32) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.042812 success=true
+QA_TILE event=127/2000 elapsed_s=6.183270 thread=ThreadId(24) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.050976 success=true
+QA_TILE event=129/2000 elapsed_s=6.183406 thread=ThreadId(30) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.086466 success=true
+QA_TILE event=128/2000 elapsed_s=6.183494 thread=ThreadId(23) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.073818 success=true
+QA_TILE event=130/2000 elapsed_s=6.183616 thread=ThreadId(34) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.089944 success=true
+QA_TILE event=131/2000 elapsed_s=6.183755 thread=ThreadId(37) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.595886 success=true
+QA_TILE event=132/2000 elapsed_s=6.183841 thread=ThreadId(27) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.584257 success=true
+QA_TILE event=134/2000 elapsed_s=6.183932 thread=ThreadId(31) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.637177 success=true
+QA_TILE event=133/2000 elapsed_s=6.184061 thread=ThreadId(28) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.052925 success=true
+QA_TILE event=135/2000 elapsed_s=6.184185 thread=ThreadId(36) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.686344 success=true
+QA_TILE event=136/2000 elapsed_s=6.184303 thread=ThreadId(25) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.770480 success=true
+QA_TILE event=137/2000 elapsed_s=6.184422 thread=ThreadId(29) FLIGHT wait cache=0x1f5331defa0 key=(-2, -341) seconds=0.671361 success=true
+QA_TILE event=138/2000 elapsed_s=6.194002 thread=ThreadId(24) MISS begin cache=0x1f5331defa0 key=(2, -343)
+QA_TILE event=139/2000 elapsed_s=7.353071 thread=ThreadId(35) MISS build-finish cache=0x1f5331defa0 key=(1, -343) seconds=1.216275 success=true
+QA_TILE event=140/2000 elapsed_s=7.353230 thread=ThreadId(29) FLIGHT wait cache=0x1f5331defa0 key=(1, -343) seconds=1.141242 success=true
+QA_TILE event=141/2000 elapsed_s=7.368410 thread=ThreadId(33) MISS build-finish cache=0x1f5331defa0 key=(0, -340) seconds=1.213756 success=true
+QA_TILE event=142/2000 elapsed_s=7.388572 thread=ThreadId(24) MISS build-finish cache=0x1f5331defa0 key=(2, -343) seconds=1.194442 success=true
+QA_TILE event=143/2000 elapsed_s=7.412001 thread=ThreadId(27) MISS begin cache=0x1f5331defa0 key=(2, -342)
+QA_TILE event=144/2000 elapsed_s=7.419743 thread=ThreadId(31) MISS begin cache=0x1f5331defa0 key=(-1, -340)
+QA_TILE event=145/2000 elapsed_s=7.430581 thread=ThreadId(36) MISS begin cache=0x1f5331defa0 key=(-2, -344)
+QA_TILE event=146/2000 elapsed_s=7.610186 thread=ThreadId(36) MISS build-finish cache=0x1f5331defa0 key=(-2, -344) seconds=0.179479 success=true
+  6 s: 75/529 lit, 117 columns, [("queued", 34), ("generating", 45), ("protos", 144), ("decorating", 3), ("finishing", 1), ("lighting", 0), ("meshing", 0)], waiting e.g. [(-13, -2731), (-12, -2736), (-12, -2735), (-12, -2734)]
+QA_TILE event=147/2000 elapsed_s=7.725272 thread=ThreadId(36) MISS begin cache=0x1f5331defa0 key=(-3, -342)
+QA_TILE event=148/2000 elapsed_s=7.970153 thread=ThreadId(36) MISS build-finish cache=0x1f5331defa0 key=(-3, -342) seconds=0.244800 success=true
+QA_TILE event=149/2000 elapsed_s=8.283867 thread=ThreadId(27) MISS build-finish cache=0x1f5331defa0 key=(2, -342) seconds=0.871741 success=true
+QA_TILE event=150/2000 elapsed_s=8.310452 thread=ThreadId(28) MISS begin cache=0x1f5331defa0 key=(2, -341)
+QA_TILE event=151/2000 elapsed_s=8.314805 thread=ThreadId(31) MISS build-finish cache=0x1f5331defa0 key=(-1, -340) seconds=0.894938 success=true
+QA_TILE event=152/2000 elapsed_s=8.314950 thread=ThreadId(36) FLIGHT wait cache=0x1f5331defa0 key=(-1, -340) seconds=0.294576 success=true
+QA_TILE event=153/2000 elapsed_s=8.315078 thread=ThreadId(34) FLIGHT wait cache=0x1f5331defa0 key=(-1, -340) seconds=0.829525 success=true
+QA_TILE event=154/2000 elapsed_s=8.315198 thread=ThreadId(37) FLIGHT wait cache=0x1f5331defa0 key=(-1, -340) seconds=0.867550 success=true
+QA_TILE event=156/2000 elapsed_s=8.315311 thread=ThreadId(30) FLIGHT wait cache=0x1f5331defa0 key=(-1, -340) seconds=0.894441 success=true
+QA_TILE event=155/2000 elapsed_s=8.315420 thread=ThreadId(25) FLIGHT wait cache=0x1f5331defa0 key=(-1, -340) seconds=0.892514 success=true
+QA_TILE event=157/2000 elapsed_s=8.315953 thread=ThreadId(24) FLIGHT wait cache=0x1f5331defa0 key=(-1, -340) seconds=0.806724 success=true
+QA_TILE event=158/2000 elapsed_s=8.437439 thread=ThreadId(23) MISS begin cache=0x1f5331defa0 key=(-3, -344)
+QA_TILE event=159/2000 elapsed_s=8.462617 thread=ThreadId(33) MISS begin cache=0x1f5331defa0 key=(-1, -344)
+QA_TILE event=160/2000 elapsed_s=8.663833 thread=ThreadId(23) MISS build-finish cache=0x1f5331defa0 key=(-3, -344) seconds=0.226279 success=true
+QA_TILE event=161/2000 elapsed_s=8.695970 thread=ThreadId(33) MISS build-finish cache=0x1f5331defa0 key=(-1, -344) seconds=0.233225 success=true
+QA_TILE event=162/2000 elapsed_s=8.704581 thread=ThreadId(33) MISS begin cache=0x1f5331defa0 key=(1, -339)
+QA_TILE event=163/2000 elapsed_s=8.879321 thread=ThreadId(24) MISS begin cache=0x1f5331defa0 key=(-2, -339)
+QA_TILE event=164/2000 elapsed_s=9.149964 thread=ThreadId(28) MISS build-finish cache=0x1f5331defa0 key=(2, -341) seconds=0.839373 success=true
+QA_TILE event=165/2000 elapsed_s=9.206427 thread=ThreadId(37) MISS begin cache=0x1f5331defa0 key=(-3, -343)
+QA_TILE event=166/2000 elapsed_s=9.336889 thread=ThreadId(23) MISS begin cache=0x1f5331defa0 key=(-3, -340)
+QA_TILE event=167/2000 elapsed_s=9.543444 thread=ThreadId(37) MISS build-finish cache=0x1f5331defa0 key=(-3, -343) seconds=0.336910 success=true
+QA_TILE event=168/2000 elapsed_s=9.598643 thread=ThreadId(37) MISS begin cache=0x1f5331defa0 key=(2, -344)
+  8 s: 166/529 lit, 227 columns, [("queued", 30), ("generating", 45), ("protos", 259), ("decorating", 0), ("finishing", 0), ("lighting", 0), ("meshing", 0)], waiting e.g. [(-13, -2731), (-12, -2736), (-12, -2735), (-12, -2734)]
+QA_TILE event=169/2000 elapsed_s=10.181683 thread=ThreadId(33) MISS build-finish cache=0x1f5331defa0 key=(1, -339) seconds=1.477018 success=true
+QA_TILE event=170/2000 elapsed_s=10.257119 thread=ThreadId(26) MISS begin cache=0x1f5331defa0 key=(0, -339)
+QA_TILE event=171/2000 elapsed_s=10.421442 thread=ThreadId(24) MISS build-finish cache=0x1f5331defa0 key=(-2, -339) seconds=1.542045 success=true
+QA_TILE event=172/2000 elapsed_s=10.421548 thread=ThreadId(31) CAPACITY wait cache=0x1f5331defa0 key=(1, -344) seconds=0.125099
+QA_TILE event=173/2000 elapsed_s=10.421647 thread=ThreadId(31) MISS begin cache=0x1f5331defa0 key=(1, -344)
+QA_TILE event=174/2000 elapsed_s=10.906540 thread=ThreadId(23) MISS build-finish cache=0x1f5331defa0 key=(-3, -340) seconds=1.569534 success=true
+QA_TILE event=175/2000 elapsed_s=10.906647 thread=ThreadId(24) FLIGHT wait cache=0x1f5331defa0 key=(-3, -340) seconds=0.431683 success=true
+QA_TILE event=176/2000 elapsed_s=10.909862 thread=ThreadId(24) MISS begin cache=0x1f5331defa0 key=(-1, -339)
+QA_TILE event=177/2000 elapsed_s=11.037449 thread=ThreadId(37) MISS build-finish cache=0x1f5331defa0 key=(2, -344) seconds=1.438724 success=true
+QA_TILE event=178/2000 elapsed_s=11.666740 thread=ThreadId(31) MISS build-finish cache=0x1f5331defa0 key=(1, -344) seconds=1.245011 success=true
+  10 s: 208/529 lit, 274 columns, [("queued", 30), ("generating", 45), ("protos", 262), ("decorating", 0), ("finishing", 0), ("lighting", 0), ("meshing", 0)], waiting e.g. [(-13, -2731), (-12, -2736), (-12, -2735), (-12, -2734)]
+QA_TILE event=179/2000 elapsed_s=11.732790 thread=ThreadId(26) MISS build-finish cache=0x1f5331defa0 key=(0, -339) seconds=1.475581 success=true
+QA_TILE event=180/2000 elapsed_s=11.828768 thread=ThreadId(37) MISS begin cache=0x1f5331defa0 key=(-3, -341)
+QA_TILE event=181/2000 elapsed_s=11.861148 thread=ThreadId(24) MISS build-finish cache=0x1f5331defa0 key=(-1, -339) seconds=0.951212 success=true
+QA_TILE event=182/2000 elapsed_s=11.864288 thread=ThreadId(24) MISS begin cache=0x1f5331defa0 key=(-3, -339)
+QA_TILE event=183/2000 elapsed_s=12.354925 thread=ThreadId(37) MISS build-finish cache=0x1f5331defa0 key=(-3, -341) seconds=0.526049 success=true
+QA_TILE event=184/2000 elapsed_s=12.355195 thread=ThreadId(37) EVICT cache=0x1f5331defa0 key=(2, -342) replacement=(-3, -341)
+QA_TILE event=185/2000 elapsed_s=12.386782 thread=ThreadId(37) MISS begin cache=0x1f5331defa0 key=(0, -345)
+QA_TILE event=186/2000 elapsed_s=12.541134 thread=ThreadId(37) MISS build-finish cache=0x1f5331defa0 key=(0, -345) seconds=0.154279 success=true
+QA_TILE event=187/2000 elapsed_s=12.541423 thread=ThreadId(37) EVICT cache=0x1f5331defa0 key=(2, -343) replacement=(0, -345)
+QA_TILE event=188/2000 elapsed_s=12.596310 thread=ThreadId(37) MISS begin cache=0x1f5331defa0 key=(2, -342)
+QA_TILE event=189/2000 elapsed_s=12.596412 thread=ThreadId(24) MISS build-finish cache=0x1f5331defa0 key=(-3, -339) seconds=0.731953 success=true
+QA_TILE event=190/2000 elapsed_s=12.596728 thread=ThreadId(24) EVICT cache=0x1f5331defa0 key=(2, -341) replacement=(-3, -339)
+QA_TILE event=191/2000 elapsed_s=12.631649 thread=ThreadId(33) MISS begin cache=0x1f5331defa0 key=(2, -341)
+QA_TILE event=192/2000 elapsed_s=12.658005 thread=ThreadId(30) MISS begin cache=0x1f5331defa0 key=(2, -339)
+  12 s: 291/529 lit, 368 columns, [("queued", 30), ("generating", 45), ("protos", 326), ("decorating", 0), ("finishing", 0), ("lighting", 0), ("meshing", 0)], waiting e.g. [(-13, -2731), (-12, -2736), (-12, -2735), (-12, -2734)]
+QA_TILE event=193/2000 elapsed_s=13.906255 thread=ThreadId(37) MISS build-finish cache=0x1f5331defa0 key=(2, -342) seconds=1.309862 success=true
+QA_TILE event=194/2000 elapsed_s=13.906638 thread=ThreadId(37) EVICT cache=0x1f5331defa0 key=(-1, -342) replacement=(2, -342)
+QA_TILE event=195/2000 elapsed_s=13.906799 thread=ThreadId(34) FLIGHT wait cache=0x1f5331defa0 key=(2, -342) seconds=0.938017 success=true
+QA_TILE event=196/2000 elapsed_s=13.983153 thread=ThreadId(33) MISS build-finish cache=0x1f5331defa0 key=(2, -341) seconds=1.351393 success=true
+QA_TILE event=197/2000 elapsed_s=13.983484 thread=ThreadId(33) EVICT cache=0x1f5331defa0 key=(1, -339) replacement=(2, -341)
+QA_TILE event=198/2000 elapsed_s=13.983572 thread=ThreadId(37) FLIGHT wait cache=0x1f5331defa0 key=(2, -341) seconds=0.045938 success=true
+QA_TILE event=199/2000 elapsed_s=13.993690 thread=ThreadId(37) MISS begin cache=0x1f5331defa0 key=(3, -342)
+QA_TILE event=200/2000 elapsed_s=13.994139 thread=ThreadId(30) MISS build-finish cache=0x1f5331defa0 key=(2, -339) seconds=1.336018 success=true
+QA_TILE event=201/2000 elapsed_s=13.994416 thread=ThreadId(30) EVICT cache=0x1f5331defa0 key=(2, -344) replacement=(2, -339)
+QA_TILE event=202/2000 elapsed_s=14.453337 thread=ThreadId(37) MISS build-finish cache=0x1f5331defa0 key=(3, -342) seconds=0.459566 success=true
+QA_TILE event=203/2000 elapsed_s=14.453635 thread=ThreadId(37) EVICT cache=0x1f5331defa0 key=(0, -342) replacement=(3, -342)
+QA_TILE event=204/2000 elapsed_s=14.496779 thread=ThreadId(23) MISS begin cache=0x1f5331defa0 key=(2, -343)
+QA_TILE event=205/2000 elapsed_s=15.003414 thread=ThreadId(23) MISS build-finish cache=0x1f5331defa0 key=(2, -343) seconds=0.506517 success=true
+QA_TILE event=206/2000 elapsed_s=15.003784 thread=ThreadId(23) EVICT cache=0x1f5331defa0 key=(0, -339) replacement=(2, -343)
+QA_TILE event=207/2000 elapsed_s=15.003890 thread=ThreadId(26) FLIGHT wait cache=0x1f5331defa0 key=(2, -343) seconds=0.345825 success=true
+QA_TILE event=208/2000 elapsed_s=15.003986 thread=ThreadId(35) FLIGHT wait cache=0x1f5331defa0 key=(2, -343) seconds=0.505822 success=true
+QA_TILE event=209/2000 elapsed_s=15.004084 thread=ThreadId(36) FLIGHT wait cache=0x1f5331defa0 key=(2, -343) seconds=0.482499 success=true

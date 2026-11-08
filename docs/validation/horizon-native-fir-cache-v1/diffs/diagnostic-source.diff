@@ -1,0 +1,261 @@
+--- old-stage/Cargo.toml
++++ diagnostic-stage/Cargo.toml
+@@ -40,7 +40,7 @@
+     "crates/horizon-shader-api",
+     "crates/horizon-release-sign",
+     "xtask",
+-    "native-crates/terraforged_native/kernel",
++    "qa-native-sources/kernel",
+ ]
+ resolver = "2"
+ 
+--- old-stage/crates/horizon-client/examples/gen_light_native_stem.rs
++++ diagnostic-stage/crates/horizon-client/examples/gen_light_native_stem.rs
+@@ -110,14 +110,14 @@
+ 
+ #[allow(clippy::too_many_arguments)]
+ fn run<G: ChunkGenerator>(
+-    generator: G,
++    generator: Arc<G>,
+     context: &Arc<WorkerContext>,
+     center: (i32, i32),
+     radius: i32,
+     threads: usize,
+     period: Duration,
+ ) -> Result<Run, Error> {
+-    let mut streaming = Streaming::new(Arc::new(generator), context.clone(), threads);
++    let mut streaming = Streaming::new(generator, context.clone(), threads);
+     streaming.mesh = false;
+     streaming.center = center;
+     streaming.radius = radius;
+@@ -213,6 +213,7 @@
+     let repeat: usize = flag(&args, "--repeat", 1);
+     let period = Duration::from_millis(flag(&args, "--period-ms", 2));
+     let json = args.iter().any(|a| a == "--json");
++    let background_rings = args.iter().any(|a| a == "--background-rings");
+     let simulate: Option<Vec<f64>> = args
+         .iter()
+         .position(|a| a == "--simulate")
+@@ -286,15 +287,29 @@
+         assets: assets.clone(),
+         render,
+     });
+-    let terrain = || {
+-        if args.iter().any(|a| a == "--vanilla") {
++    let terrain = |rings: bool| {
++        let terrain = if args.iter().any(|a| a == "--vanilla") {
+             VanillaTerrain::new(&root.join("worldgen"), assets.registry, &biomes, seed)
+         } else {
+-            VanillaTerrain::for_world(&root.join("worldgen"), assets.registry, &biomes, seed,
+-                "terraforged:default", "minecraft:overworld", true)
+-        }
++            VanillaTerrain::for_world(
++                &root.join("worldgen"),
++                assets.registry,
++                &biomes,
++                seed,
++                "terraforged:default",
++                "minecraft:overworld",
++                true,
++            )
++        };
++        terrain.map(|terrain| {
++            let terrain = Arc::new(terrain);
++            if rings {
++                terrain.search_rings_behind();
++            }
++            terrain
++        })
+     };
+-    let go = |center, radius, n| -> Result<Run, Error> {
++    let go = |center, radius, n, rings| -> Result<Run, Error> {
+         match &simulate {
+             Some(ms) => {
+                 let ms = |i: usize| Duration::from_secs_f64(ms[i] / 1e3);
+@@ -303,18 +318,20 @@
+                     decorate: ms(1),
+                     finish: ms(2),
+                 };
+-                run(generator, &context, center, radius, n, period)
++                run(Arc::new(generator), &context, center, radius, n, period)
+             }
+-            None => run(terrain()?, &context, center, radius, n, period),
++            None => run(terrain(rings)?, &context, center, radius, n, period),
+         }
+     };
+     // Warm the shared generator data and the code away from the measured area.
+-    go((center.0 + 4000, center.1), 2, n)?;
++    eprintln!("QA_PIPELINE phase=warmup background_rings=false");
++    go((center.0 + 4000, center.1), 2, n, false)?;
+     let pool = horizon_threads::jobs::pool().threads();
+     if pool != n {
+         eprintln!("the worker pool has {pool} threads, not {n} (HORIZON_JOB_THREADS?)");
+     }
+-    let r = go(center, radius, n)?;
++    eprintln!("QA_PIPELINE phase=measured background_rings={background_rings}");
++    let r = go(center, radius, n, background_rings)?;
+     let busy: f64 = r.jobs.iter().map(|j| j.1 as f64).sum::<f64>() / 1e9;
+     println!(
+         "workers {n:2}: {:.2} s ({:.2} s to half), {} columns ({} lit), {:.1} columns/s, {:.1} lit/s, \
+@@ -349,6 +366,7 @@
+             "BENCH {}",
+             serde_json::json!({
+                 "workers": n, "wall_s": r.wall, "half_s": r.half, "columns": r.columns,
++                "background_rings": background_rings,
+                 "lit": r.lit, "cpu_s": r.cpu, "coordinator_s": r.coordinator,
+                 "updates": r.updates, "checksum": format!("{:016x}", r.checksum),
+                 "jobs": r.jobs.iter().map(|(k, ns, c)| serde_json::json!({"kind": k, "s": *ns as f64 / 1e9, "count": c})).collect::<Vec<_>>(),
+--- old-stage/crates/horizon-core/Cargo.toml
++++ diagnostic-stage/crates/horizon-core/Cargo.toml
+@@ -12,7 +12,7 @@
+ 
+ [dependencies]
+ libm = "=0.2.16"
+-terraforged-kernel = { path = "../../native-crates/terraforged_native/kernel" }
++terraforged-kernel = { path = "../../qa-native-sources/kernel" }
+ 
+ [[bin]]
+ name = "horizon-parity"
+--- old-stage/native-crates/terraforged_native/kernel/src/kernel_sampler.rs
++++ diagnostic-stage/qa-native-sources/kernel/src/kernel_sampler.rs
+@@ -19,10 +19,24 @@
+ }
+ impl SamplerOptions {
+     pub fn for_preset(preset: &KernelPreset) -> Self {
++        let requested = std::env::var_os("QA_NATIVE_CACHE_CAPACITY");
++        let cache_capacity = requested
++            .as_ref()
++            .map(|value| {
++                value
++                    .to_str()
++                    .and_then(|value| value.parse().ok())
++                    .unwrap_or(0)
++            })
++            .unwrap_or(8);
++        eprintln!(
++            "QA_NATIVE_SAMPLER cache_capacity={cache_capacity} max_in_flight=4 override_present={}",
++            requested.is_some(),
++        );
+         Self {
+             tile_factor: 3,
+             border_chunks: (preset.filters.erosion.droplet_lifetime / 16).clamp(1, 2),
+-            cache_capacity: 8,
++            cache_capacity,
+             max_in_flight: 4,
+         }
+     }
+--- old-stage/native-crates/terraforged_native/kernel/src/tile_work_cache.rs
++++ diagnostic-stage/qa-native-sources/kernel/src/tile_work_cache.rs
+@@ -2,8 +2,34 @@
+ use crate::{graph::GraphError, tile::TileBuffer};
+ use std::{
+     collections::{HashMap, VecDeque},
+-    sync::{Arc, Condvar, Mutex},
++    io::Write,
++    sync::{
++        Arc, Condvar, Mutex, OnceLock,
++        atomic::{AtomicUsize, Ordering},
++    },
++    time::Instant,
+ };
++// QA-only diagnostics: no hit logging, at most 2,000 events across this process.
++static QA_EVENTS: AtomicUsize = AtomicUsize::new(0);
++static QA_ZERO: OnceLock<Instant> = OnceLock::new();
++static QA_ENABLED: OnceLock<bool> = OnceLock::new();
++fn qa_trace(message: std::fmt::Arguments<'_>) {
++    if !*QA_ENABLED.get_or_init(|| std::env::var_os("HORIZON_QA_TILE_TRACE").is_some()) {
++        return;
++    }
++    if let Ok(event) = QA_EVENTS.fetch_update(Ordering::Relaxed, Ordering::Relaxed, |n| {
++        (n < 2_000).then_some(n + 1)
++    }) {
++        let _ = writeln!(
++            std::io::stderr().lock(),
++            "QA_TILE event={}/2000 elapsed_s={:.6} thread={:?} {message}",
++            event + 1,
++            QA_ZERO.get_or_init(Instant::now).elapsed().as_secs_f64(),
++            std::thread::current().id(),
++        );
++    }
++}
++
+ type R<T> = Result<T, GraphError>;
+ type Key = (i32, i32);
+ #[derive(Debug, Default)]
+@@ -90,13 +116,28 @@
+             }
+             if let Some(flight) = state.flights.get(&key).cloned() {
+                 drop(state);
+-                return flight.wait();
++                let started = Instant::now();
++                let outcome = flight.wait();
++                qa_trace(format_args!(
++                    "FLIGHT wait cache={:p} key={key:?} seconds={:.6} success={}",
++                    self,
++                    started.elapsed().as_secs_f64(),
++                    outcome.is_ok(),
++                ));
++                return outcome;
+             }
+             if state.flights.len() >= self.max_in_flight {
++                let started = Instant::now();
+                 state = self.space.wait(state).map_err(|_| {
+                     GraphError::InvalidSourceParameters("native tile cache poisoned")
+                 })?;
++                let elapsed = started.elapsed();
+                 drop(state);
++                qa_trace(format_args!(
++                    "CAPACITY wait cache={:p} key={key:?} seconds={:.6}",
++                    self,
++                    elapsed.as_secs_f64(),
++                ));
+                 continue;
+             }
+             let flight = Arc::new(Flight::default());
+@@ -111,7 +152,16 @@
+             flight,
+             finished: false,
+         };
+-        guard.finish(build())
++        qa_trace(format_args!("MISS begin cache={:p} key={key:?}", self));
++        let started = Instant::now();
++        let outcome = build();
++        qa_trace(format_args!(
++            "MISS build-finish cache={:p} key={key:?} seconds={:.6} success={}",
++            self,
++            started.elapsed().as_secs_f64(),
++            outcome.is_ok(),
++        ));
++        guard.finish(outcome)
+     }
+     fn publish(
+         &self,
+@@ -120,6 +170,7 @@
+         flight: &Arc<Flight>,
+         outcome: R<Arc<TileBuffer>>,
+     ) -> R<Arc<TileBuffer>> {
++        let mut evicted = None;
+         let outcome = match self.state.lock() {
+             Ok(mut state) => {
+                 if state
+@@ -136,6 +187,7 @@
+                         && let Some(old) = state.order.pop_front()
+                     {
+                         state.tiles.remove(&old);
++                        evicted = Some(old);
+                     }
+                     state.tiles.insert(key, tile.clone());
+                     state.order.push_back(key);
+@@ -146,6 +198,12 @@
+                 "native tile cache poisoned",
+             )),
+         };
++        if let Some(old) = evicted {
++            qa_trace(format_args!(
++                "EVICT cache={:p} key={old:?} replacement={key:?}",
++                self,
++            ));
++        }
+         *flight
+             .outcome
+             .lock()
