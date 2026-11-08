@@ -1,0 +1,630 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-11-08T02:09:44.842107+00:00",
+  "status": "passed-copied-failed-world-two-view-reopen-with-visual-limits",
+  "rawReportPath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\docs\\validation\\horizon-native-failed-world-reopen-v1.json",
+  "rawReportSha256": "2fcaa78cd2bb24e6d4fbd46635a2488b5ad7d0fd35416af4c8e4f66351adddc0",
+  "timingClassification": "CONTENDED NONPERFORMANCE: compilers may be active",
+  "sourceWorldPreserved": true,
+  "sourceFilesBefore": 91,
+  "sourceFilesAfter": 91,
+  "sourceWorldFileMapSha256Before": "fb1583db4d622b4ac2bf4a6872a6b9199a394bc14195794ba3fef3af8ec43d23",
+  "sourceWorldFileMapSha256After": "fb1583db4d622b4ac2bf4a6872a6b9199a394bc14195794ba3fef3af8ec43d23",
+  "copiedWorldFileMapSha256Before": "fb1583db4d622b4ac2bf4a6872a6b9199a394bc14195794ba3fef3af8ec43d23",
+  "copiedWorldFileMapSha256After": "5b81c584d6e9de472eef948ddfdd218ae3be579bf48cc2fa0dfd5c88cf24bc55",
+  "copiedInitialMatchesSource": true,
+  "copiedWorldChangedFiles": [
+    {
+      "path": "data/minecraft/random_sequences.dat_old",
+      "beforeSha256": "4ebcd56d2f7611da40eb9a3689edcb1fa067417755f43245a14fcaf849f41803",
+      "afterSha256": "d785a9a845caefa4715ba726abbf8a20d567e4c458ab62df77eaeb241552eeb3"
+    },
+    {
+      "path": "data/minecraft/weather.dat",
+      "beforeSha256": "7bf81c4fc29d1da8be6771ed9971a2941cf1a46a698ffb50dbf9770668271963",
+      "afterSha256": "eff76c5476deca34d6fe5220bb1837ca8bba0561eb19dab116938362fc73b3b4"
+    },
+    {
+      "path": "data/minecraft/weather.dat_old",
+      "beforeSha256": "3db5b507608ec2e8c239117b7ece5989bd43d20f246f5412c3e36e7bd69121cd",
+      "afterSha256": "7bf81c4fc29d1da8be6771ed9971a2941cf1a46a698ffb50dbf9770668271963"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/data/minecraft/raids.dat",
+      "beforeSha256": "a73b01fcb2b5b21afcff8eeeff3c3a6bafb09ca0b9a80a9e730de9027aaa4ba6",
+      "afterSha256": "71d606fa28443a928282125e87b5a6c75f0f7e1d884ddf1ce92c34960794e635"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/data/minecraft/raids.dat_old",
+      "beforeSha256": "cb478876d1d063936c9321473183e35334e4d9c625889bf60ae76550d36e6132",
+      "afterSha256": "a73b01fcb2b5b21afcff8eeeff3c3a6bafb09ca0b9a80a9e730de9027aaa4ba6"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/entities/r.-201.-52.mca",
+      "beforeSha256": "228f12b066195e02321f65e7f9be2201822aaa13ada708da9d824b60be13dff5",
+      "afterSha256": "9029e5d06e8f401bce03f6016275d7cacc9436d1cfe4a6ab34b0d75c1ff42051"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/entities/r.0.-86.mca",
+      "beforeSha256": "b93fe9cb79f5a89ecd99e725ac9061cf17047ed72f87772f417efbdb73becd4f",
+      "afterSha256": "1e12e1303b48a58018b6fe2df1d1a5f57c06f9039861f16540c5745731454a5e"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/entities/r.195.83.mca",
+      "beforeSha256": null,
+      "afterSha256": "a14c7cdab346fba24734c19e9c37b475ec27605b71897f8596a653ba6aa1b15c"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/entities/r.196.83.mca",
+      "beforeSha256": null,
+      "afterSha256": "a00f418fef4cff79bac231d1e3e1d23831c6a3303e57529078e9dcda74a20f71"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/poi/r.196.83.mca",
+      "beforeSha256": null,
+      "afterSha256": "d6dcb6264ca562090dccf512bb019fad0aad5d273ba24fc183fda9d173d495ac"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/region/r.-1.-86.mca",
+      "beforeSha256": "0af789b57ec00cfc8967f783aa95d2b658f9e9c3f8c577d4fd112aa05c585b31",
+      "afterSha256": "034e4f98801f586605d4df4a8030e095b530b7d1b71ce5dfc31e870933656697"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/region/r.-201.-52.mca",
+      "beforeSha256": "75f6e8d286efcd9188bbcfe958d61d7c43747db21a67da9b769ebeb6de6f7d08",
+      "afterSha256": "ccb287dc6c310f710fe42803c1666cd1f06443fe6a72c8b9e11e3024be10d019"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/region/r.-201.-53.mca",
+      "beforeSha256": "b57ba13104f0409ebde4a1f778a1c024111734ebe9af80ffed27d0752e2a1f3e",
+      "afterSha256": "6d24ea77235b8640de4fd903d9ed5d8ec4f30f53d8db5f7ca8945ab7dc2f72a2"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/region/r.0.-86.mca",
+      "beforeSha256": "51c837da484ceebf46b3be8dfe602799cb710ee3a8f5b3a02a09f5e95c63a851",
+      "afterSha256": "06bab7be6983c13ff209b6543c77ef2a7dc5b2904b56dfe6897d549fcdcd9a60"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/region/r.195.83.mca",
+      "beforeSha256": null,
+      "afterSha256": "e148fd06b30da9fe76546673976aa663433be0861970b2c70ca3ba85df9c9845"
+    },
+    {
+      "path": "dimensions/minecraft/overworld/region/r.196.83.mca",
+      "beforeSha256": null,
+      "afterSha256": "f4d95cb1c127e25c2a3350bd2856405771ddfb7d5a05e9c653787a06e25c4e62"
+    },
+    {
+      "path": "level.dat",
+      "beforeSha256": "54661adc6a5c66f5bdebfa39030b93ae96fc0435994150fc0151646a4cf91711",
+      "afterSha256": "5e3626e87220fa5d8b6cdda715c9a5d4d41e7b50b3f4801a5fe313fbd218f0dd"
+    },
+    {
+      "path": "level.dat_old",
+      "beforeSha256": "ff0b26e3e1d2161b2379aca61cb4c8e63816d67ac80017c9346ffc6f86e537f2",
+      "afterSha256": "54661adc6a5c66f5bdebfa39030b93ae96fc0435994150fc0151646a4cf91711"
+    },
+    {
+      "path": "players/data/a01e3843-e521-3998-958a-f459800e4d11.dat",
+      "beforeSha256": "37da1f573fa6a38df47c0fa580e5a2512d9d2beb8619a79e05fbb03063c63e33",
+      "afterSha256": "2ecee4547343611c073eb49fd097e7143ce99ee85f9852794e02d9569424d2cf"
+    },
+    {
+      "path": "players/data/a01e3843-e521-3998-958a-f459800e4d11.dat_old",
+      "beforeSha256": "81f7225f9def749b9d0879f32368df145e68a4e45664dcb44af1b83b6bb5db0f",
+      "afterSha256": "2ecee4547343611c073eb49fd097e7143ce99ee85f9852794e02d9569424d2cf"
+    },
+    {
+      "path": "players/data/e4a42e3b-0512-326a-a306-ee4c36e6e87e.dat",
+      "beforeSha256": "f858f85ca3cadaff18f9ec92b051a2f4791a3f46fa7034ef03834120e52cc071",
+      "afterSha256": "4d4474b5cf63966a11af5f6e2cf04279c6ef09d9d56cafcf73e1cdf09733e1b2"
+    },
+    {
+      "path": "players/data/e4a42e3b-0512-326a-a306-ee4c36e6e87e.dat_old",
+      "beforeSha256": "169ec928eddc5f0acd663f25af11a3354998ac8c8d38be82690cae4b2eb615d3",
+      "afterSha256": "4d4474b5cf63966a11af5f6e2cf04279c6ef09d9d56cafcf73e1cdf09733e1b2"
+    },
+    {
+      "path": "players/stats/a01e3843-e521-3998-958a-f459800e4d11.json",
+      "beforeSha256": "5e109f1f3fd1c7ccbb30ab8ef63fb42212b5908ee7ea36f0909e0b8449284eab",
+      "afterSha256": "ccbeb652eb0d3e61a16f5d96e3f069ff287e7a945148d8b215ac8cfeec8f64e1"
+    }
+  ],
+  "sourceRegionHeaderProbe": {
+    "dimensions/minecraft/overworld/region/r.-1.-1.mca": {
+      "allocatedSlots": 50,
+      "allocatedSectorCount": 89,
+      "size": 372736,
+      "headerSha256": "07ae925a36c5f30379f9a53ea6a1264cfbf677923c134838b3174f7cde26aed1"
+    },
+    "dimensions/minecraft/overworld/region/r.-1.-86.mca": {
+      "allocatedSlots": 128,
+      "allocatedSectorCount": 250,
+      "size": 1069056,
+      "headerSha256": "c35e426a04a431ef95c2c8a8c4f641ed4ee2038b4b55ae724c993661adc87c45"
+    },
+    "dimensions/minecraft/overworld/region/r.-1.0.mca": {
+      "allocatedSlots": 71,
+      "allocatedSectorCount": 129,
+      "size": 536576,
+      "headerSha256": "8a667084dd4fb6c49159c807e37a4ce3acfc8022f3f65b78d1e6950cc31cf569"
+    },
+    "dimensions/minecraft/overworld/region/r.-156.64.mca": {
+      "allocatedSlots": 209,
+      "allocatedSectorCount": 358,
+      "size": 1474560,
+      "headerSha256": "e7c544a217ee11c395d0ecf12df0e9c7f7113a714f7353908a6067868f39b4dc"
+    },
+    "dimensions/minecraft/overworld/region/r.-200.-52.mca": {
+      "allocatedSlots": 14,
+      "allocatedSectorCount": 15,
+      "size": 69632,
+      "headerSha256": "be28428dc7967c0f90c67a75034a390a84de2acea5bf3bef8af44275671b2ad0"
+    },
+    "dimensions/minecraft/overworld/region/r.-201.-52.mca": {
+      "allocatedSlots": 170,
+      "allocatedSectorCount": 373,
+      "size": 1536000,
+      "headerSha256": "ef6d7bc297d8775f43671f8faa1b6483ea25569789cc21396376465e80bd6ec4"
+    },
+    "dimensions/minecraft/overworld/region/r.-201.-53.mca": {
+      "allocatedSlots": 41,
+      "allocatedSectorCount": 71,
+      "size": 299008,
+      "headerSha256": "addbe38a19dd7d94eaa7ae404fc682db5cf83dabf8380fefadfbc0786bdc5881"
+    },
+    "dimensions/minecraft/overworld/region/r.-204.-24.mca": {
+      "allocatedSlots": 197,
+      "allocatedSectorCount": 344,
+      "size": 1417216,
+      "headerSha256": "a22996d5003c05f37bb0307dd5fe9792846f6dab8470d6397e397976a80d3cb7"
+    },
+    "dimensions/minecraft/overworld/region/r.-204.-25.mca": {
+      "allocatedSlots": 7,
+      "allocatedSectorCount": 7,
+      "size": 36864,
+      "headerSha256": "f77a347a5c45ebcccc38d85ff4f668759fe0b25bd561e4885f3e505d415a8b1b"
+    },
+    "dimensions/minecraft/overworld/region/r.-232.-209.mca": {
+      "allocatedSlots": 105,
+      "allocatedSectorCount": 210,
+      "size": 868352,
+      "headerSha256": "79b7e374a08ac302bd2354ef38688dd167c6c9d28caee9464f086128b26324d8"
+    },
+    "dimensions/minecraft/overworld/region/r.-232.-210.mca": {
+      "allocatedSlots": 100,
+      "allocatedSectorCount": 193,
+      "size": 798720,
+      "headerSha256": "a9d9a58e74a52bf1b0e009e78563e832305cef4d22d112b5fdab2f3fdc76e9f2"
+    },
+    "dimensions/minecraft/overworld/region/r.-248.148.mca": {
+      "allocatedSlots": 109,
+      "allocatedSectorCount": 194,
+      "size": 802816,
+      "headerSha256": "eaf1b7ed161754b98b25496b0412cf6b511d5faa488a118499b5a3643c360a49"
+    },
+    "dimensions/minecraft/overworld/region/r.-249.148.mca": {
+      "allocatedSlots": 109,
+      "allocatedSectorCount": 194,
+      "size": 802816,
+      "headerSha256": "91a6d4fabefe8667b30d6f2d00311f653e10c80b4338598f48c77beb0118fade"
+    },
+    "dimensions/minecraft/overworld/region/r.-33.48.mca": {
+      "allocatedSlots": 103,
+      "allocatedSectorCount": 186,
+      "size": 770048,
+      "headerSha256": "3ea26382d7c2049817f82f5b61d35b8428b7a57d981e457b03308b069c018966"
+    },
+    "dimensions/minecraft/overworld/region/r.-33.49.mca": {
+      "allocatedSlots": 14,
+      "allocatedSectorCount": 18,
+      "size": 81920,
+      "headerSha256": "88aef18c3a75945ab8ba1983e8615abf3c4204179b9781a2c9317a24f73c8e6c"
+    },
+    "dimensions/minecraft/overworld/region/r.-34.48.mca": {
+      "allocatedSlots": 92,
+      "allocatedSectorCount": 168,
+      "size": 696320,
+      "headerSha256": "835638c8503ec438b22ad5a35976e9ae6e25a3acd7d38be556f4f32d16ebd8ac"
+    },
+    "dimensions/minecraft/overworld/region/r.-34.49.mca": {
+      "allocatedSlots": 7,
+      "allocatedSectorCount": 7,
+      "size": 36864,
+      "headerSha256": "1bbf943bccd0a6b276856e4e886a4931d01cd15b2ccb965e72eb0ab9b7e73d1d"
+    },
+    "dimensions/minecraft/overworld/region/r.0.-1.mca": {
+      "allocatedSlots": 61,
+      "allocatedSectorCount": 112,
+      "size": 466944,
+      "headerSha256": "c6567d903db6f1df3a900af18da21a7fffd5826aecaa440fcdfd24fa93a97f47"
+    },
+    "dimensions/minecraft/overworld/region/r.0.-86.mca": {
+      "allocatedSlots": 126,
+      "allocatedSectorCount": 237,
+      "size": 1015808,
+      "headerSha256": "a1b420084dc64678a7d101876e2e55e065a594ea6330bd0e5ed1e2da40db4abc"
+    },
+    "dimensions/minecraft/overworld/region/r.0.0.mca": {
+      "allocatedSlots": 62,
+      "allocatedSectorCount": 119,
+      "size": 495616,
+      "headerSha256": "2d1c8c5d929f2d4d610b0b7eb1434bbde0026efbd008ac7676490bba78d55b11"
+    },
+    "dimensions/minecraft/overworld/region/r.110.29.mca": {
+      "allocatedSlots": 133,
+      "allocatedSectorCount": 242,
+      "size": 999424,
+      "headerSha256": "12b3d36832d273bf58116eea9bee1718cde5bf4e80f949f74cf35c5bbd96699a"
+    },
+    "dimensions/minecraft/overworld/region/r.110.30.mca": {
+      "allocatedSlots": 47,
+      "allocatedSectorCount": 86,
+      "size": 360448,
+      "headerSha256": "f3149af34d33d5c2bd55b472933604506dae73ef1f3416dc115d0ccabb5a42f5"
+    },
+    "dimensions/minecraft/overworld/region/r.111.29.mca": {
+      "allocatedSlots": 146,
+      "allocatedSectorCount": 320,
+      "size": 1318912,
+      "headerSha256": "4baab6cb9768b7c2ed3396fbc521add875085adbf96ebb6e2b0a248d64c40bb2"
+    },
+    "dimensions/minecraft/overworld/region/r.111.30.mca": {
+      "allocatedSlots": 54,
+      "allocatedSectorCount": 105,
+      "size": 438272,
+      "headerSha256": "7b9ca903f6dc135bc0e0e605e361aec522c5267e2dd67ad7417e5c7b411f42b4"
+    },
+    "dimensions/minecraft/overworld/region/r.133.-132.mca": {
+      "allocatedSlots": 90,
+      "allocatedSectorCount": 159,
+      "size": 659456,
+      "headerSha256": "6434b64722e6af863c3df645eabd89a49fa3544c81651a612c55ecfbb2767648"
+    },
+    "dimensions/minecraft/overworld/region/r.134.-132.mca": {
+      "allocatedSlots": 132,
+      "allocatedSectorCount": 261,
+      "size": 1077248,
+      "headerSha256": "e19f2dc4f2e1e5d783e8ca8c6aaef438c1292a3de69ed13c5aa67de4d057c1bb"
+    },
+    "dimensions/minecraft/overworld/region/r.137.-81.mca": {
+      "allocatedSlots": 30,
+      "allocatedSectorCount": 45,
+      "size": 192512,
+      "headerSha256": "6432a3fd7cbf0cdd3fd06cd8943d9c2b766467b25e348b2888298f928f5da505"
+    },
+    "dimensions/minecraft/overworld/region/r.137.-82.mca": {
+      "allocatedSlots": 78,
+      "allocatedSectorCount": 143,
+      "size": 593920,
+      "headerSha256": "9b48f2585be642fb1224a7188422990e197ac00259ff7f06648ce246e727e8ff"
+    },
+    "dimensions/minecraft/overworld/region/r.138.-81.mca": {
+      "allocatedSlots": 39,
+      "allocatedSectorCount": 62,
+      "size": 262144,
+      "headerSha256": "be0b2870aab4a8d03ca3813b36e1fa55d3315b103b392260fcfc2c7a07d9b9a0"
+    },
+    "dimensions/minecraft/overworld/region/r.138.-82.mca": {
+      "allocatedSlots": 82,
+      "allocatedSectorCount": 154,
+      "size": 638976,
+      "headerSha256": "197688563e95923749cb8f8c12ee4c5737dfcfd946d375ee8f5097adcae39ed1"
+    },
+    "dimensions/minecraft/overworld/region/r.4.-13.mca": {
+      "allocatedSlots": 165,
+      "allocatedSectorCount": 341,
+      "size": 1404928,
+      "headerSha256": "4efeaf8a8bc3a4252908df6fbc14993994c092a74257992ebad33b32baed0230"
+    },
+    "dimensions/minecraft/overworld/region/r.4.-14.mca": {
+      "allocatedSlots": 151,
+      "allocatedSectorCount": 302,
+      "size": 1245184,
+      "headerSha256": "f826633e1fcc02f55aeaba605cd6361ee6981ce41bf2e5abb6d8cb87eb5560da"
+    }
+  },
+  "copiedRegionHeaderProbeAfter": {
+    "dimensions/minecraft/overworld/region/r.-1.-1.mca": {
+      "allocatedSlots": 50,
+      "allocatedSectorCount": 89,
+      "size": 372736,
+      "headerSha256": "07ae925a36c5f30379f9a53ea6a1264cfbf677923c134838b3174f7cde26aed1"
+    },
+    "dimensions/minecraft/overworld/region/r.-1.-86.mca": {
+      "allocatedSlots": 128,
+      "allocatedSectorCount": 250,
+      "size": 1077248,
+      "headerSha256": "03b8c699ce8807ae2b4b7d266498ec59d2a3591cc15fd5ca9eea70541ab864df"
+    },
+    "dimensions/minecraft/overworld/region/r.-1.0.mca": {
+      "allocatedSlots": 71,
+      "allocatedSectorCount": 129,
+      "size": 536576,
+      "headerSha256": "8a667084dd4fb6c49159c807e37a4ce3acfc8022f3f65b78d1e6950cc31cf569"
+    },
+    "dimensions/minecraft/overworld/region/r.-156.64.mca": {
+      "allocatedSlots": 209,
+      "allocatedSectorCount": 358,
+      "size": 1474560,
+      "headerSha256": "e7c544a217ee11c395d0ecf12df0e9c7f7113a714f7353908a6067868f39b4dc"
+    },
+    "dimensions/minecraft/overworld/region/r.-200.-52.mca": {
+      "allocatedSlots": 14,
+      "allocatedSectorCount": 15,
+      "size": 69632,
+      "headerSha256": "be28428dc7967c0f90c67a75034a390a84de2acea5bf3bef8af44275671b2ad0"
+    },
+    "dimensions/minecraft/overworld/region/r.-201.-52.mca": {
+      "allocatedSlots": 172,
+      "allocatedSectorCount": 375,
+      "size": 1560576,
+      "headerSha256": "b9ec600e97e32533c723fc9ad2bb96a92c723b9ccee6c119537362f68c7f8aec"
+    },
+    "dimensions/minecraft/overworld/region/r.-201.-53.mca": {
+      "allocatedSlots": 41,
+      "allocatedSectorCount": 71,
+      "size": 311296,
+      "headerSha256": "04fe079d0e3966c4ccf2b1d70c30e044b59f953ccca1ef5205c8003ec94e60cf"
+    },
+    "dimensions/minecraft/overworld/region/r.-204.-24.mca": {
+      "allocatedSlots": 197,
+      "allocatedSectorCount": 344,
+      "size": 1417216,
+      "headerSha256": "a22996d5003c05f37bb0307dd5fe9792846f6dab8470d6397e397976a80d3cb7"
+    },
+    "dimensions/minecraft/overworld/region/r.-204.-25.mca": {
+      "allocatedSlots": 7,
+      "allocatedSectorCount": 7,
+      "size": 36864,
+      "headerSha256": "f77a347a5c45ebcccc38d85ff4f668759fe0b25bd561e4885f3e505d415a8b1b"
+    },
+    "dimensions/minecraft/overworld/region/r.-232.-209.mca": {
+      "allocatedSlots": 105,
+      "allocatedSectorCount": 210,
+      "size": 868352,
+      "headerSha256": "79b7e374a08ac302bd2354ef38688dd167c6c9d28caee9464f086128b26324d8"
+    },
+    "dimensions/minecraft/overworld/region/r.-232.-210.mca": {
+      "allocatedSlots": 100,
+      "allocatedSectorCount": 193,
+      "size": 798720,
+      "headerSha256": "a9d9a58e74a52bf1b0e009e78563e832305cef4d22d112b5fdab2f3fdc76e9f2"
+    },
+    "dimensions/minecraft/overworld/region/r.-248.148.mca": {
+      "allocatedSlots": 109,
+      "allocatedSectorCount": 194,
+      "size": 802816,
+      "headerSha256": "eaf1b7ed161754b98b25496b0412cf6b511d5faa488a118499b5a3643c360a49"
+    },
+    "dimensions/minecraft/overworld/region/r.-249.148.mca": {
+      "allocatedSlots": 109,
+      "allocatedSectorCount": 194,
+      "size": 802816,
+      "headerSha256": "91a6d4fabefe8667b30d6f2d00311f653e10c80b4338598f48c77beb0118fade"
+    },
+    "dimensions/minecraft/overworld/region/r.-33.48.mca": {
+      "allocatedSlots": 103,
+      "allocatedSectorCount": 186,
+      "size": 770048,
+      "headerSha256": "3ea26382d7c2049817f82f5b61d35b8428b7a57d981e457b03308b069c018966"
+    },
+    "dimensions/minecraft/overworld/region/r.-33.49.mca": {
+      "allocatedSlots": 14,
+      "allocatedSectorCount": 18,
+      "size": 81920,
+      "headerSha256": "88aef18c3a75945ab8ba1983e8615abf3c4204179b9781a2c9317a24f73c8e6c"
+    },
+    "dimensions/minecraft/overworld/region/r.-34.48.mca": {
+      "allocatedSlots": 92,
+      "allocatedSectorCount": 168,
+      "size": 696320,
+      "headerSha256": "835638c8503ec438b22ad5a35976e9ae6e25a3acd7d38be556f4f32d16ebd8ac"
+    },
+    "dimensions/minecraft/overworld/region/r.-34.49.mca": {
+      "allocatedSlots": 7,
+      "allocatedSectorCount": 7,
+      "size": 36864,
+      "headerSha256": "1bbf943bccd0a6b276856e4e886a4931d01cd15b2ccb965e72eb0ab9b7e73d1d"
+    },
+    "dimensions/minecraft/overworld/region/r.0.-1.mca": {
+      "allocatedSlots": 61,
+      "allocatedSectorCount": 112,
+      "size": 466944,
+      "headerSha256": "c6567d903db6f1df3a900af18da21a7fffd5826aecaa440fcdfd24fa93a97f47"
+    },
+    "dimensions/minecraft/overworld/region/r.0.-86.mca": {
+      "allocatedSlots": 126,
+      "allocatedSectorCount": 237,
+      "size": 1015808,
+      "headerSha256": "456bdf61841601458fe6b5f5431573f2098abd556171f16c7dc4cc0ce9648bb2"
+    },
+    "dimensions/minecraft/overworld/region/r.0.0.mca": {
+      "allocatedSlots": 62,
+      "allocatedSectorCount": 119,
+      "size": 495616,
+      "headerSha256": "2d1c8c5d929f2d4d610b0b7eb1434bbde0026efbd008ac7676490bba78d55b11"
+    },
+    "dimensions/minecraft/overworld/region/r.110.29.mca": {
+      "allocatedSlots": 133,
+      "allocatedSectorCount": 242,
+      "size": 999424,
+      "headerSha256": "12b3d36832d273bf58116eea9bee1718cde5bf4e80f949f74cf35c5bbd96699a"
+    },
+    "dimensions/minecraft/overworld/region/r.110.30.mca": {
+      "allocatedSlots": 47,
+      "allocatedSectorCount": 86,
+      "size": 360448,
+      "headerSha256": "f3149af34d33d5c2bd55b472933604506dae73ef1f3416dc115d0ccabb5a42f5"
+    },
+    "dimensions/minecraft/overworld/region/r.111.29.mca": {
+      "allocatedSlots": 146,
+      "allocatedSectorCount": 320,
+      "size": 1318912,
+      "headerSha256": "4baab6cb9768b7c2ed3396fbc521add875085adbf96ebb6e2b0a248d64c40bb2"
+    },
+    "dimensions/minecraft/overworld/region/r.111.30.mca": {
+      "allocatedSlots": 54,
+      "allocatedSectorCount": 105,
+      "size": 438272,
+      "headerSha256": "7b9ca903f6dc135bc0e0e605e361aec522c5267e2dd67ad7417e5c7b411f42b4"
+    },
+    "dimensions/minecraft/overworld/region/r.133.-132.mca": {
+      "allocatedSlots": 90,
+      "allocatedSectorCount": 159,
+      "size": 659456,
+      "headerSha256": "6434b64722e6af863c3df645eabd89a49fa3544c81651a612c55ecfbb2767648"
+    },
+    "dimensions/minecraft/overworld/region/r.134.-132.mca": {
+      "allocatedSlots": 132,
+      "allocatedSectorCount": 261,
+      "size": 1077248,
+      "headerSha256": "e19f2dc4f2e1e5d783e8ca8c6aaef438c1292a3de69ed13c5aa67de4d057c1bb"
+    },
+    "dimensions/minecraft/overworld/region/r.137.-81.mca": {
+      "allocatedSlots": 30,
+      "allocatedSectorCount": 45,
+      "size": 192512,
+      "headerSha256": "6432a3fd7cbf0cdd3fd06cd8943d9c2b766467b25e348b2888298f928f5da505"
+    },
+    "dimensions/minecraft/overworld/region/r.137.-82.mca": {
+      "allocatedSlots": 78,
+      "allocatedSectorCount": 143,
+      "size": 593920,
+      "headerSha256": "9b48f2585be642fb1224a7188422990e197ac00259ff7f06648ce246e727e8ff"
+    },
+    "dimensions/minecraft/overworld/region/r.138.-81.mca": {
+      "allocatedSlots": 39,
+      "allocatedSectorCount": 62,
+      "size": 262144,
+      "headerSha256": "be0b2870aab4a8d03ca3813b36e1fa55d3315b103b392260fcfc2c7a07d9b9a0"
+    },
+    "dimensions/minecraft/overworld/region/r.138.-82.mca": {
+      "allocatedSlots": 82,
+      "allocatedSectorCount": 154,
+      "size": 638976,
+      "headerSha256": "197688563e95923749cb8f8c12ee4c5737dfcfd946d375ee8f5097adcae39ed1"
+    },
+    "dimensions/minecraft/overworld/region/r.195.83.mca": {
+      "allocatedSlots": 63,
+      "allocatedSectorCount": 92,
+      "size": 385024,
+      "headerSha256": "84c3386cf6cca7eab42405740458421abcc66ec3f152ca68ae7595b2a9ab9d70"
+    },
+    "dimensions/minecraft/overworld/region/r.196.83.mca": {
+      "allocatedSlots": 231,
+      "allocatedSectorCount": 412,
+      "size": 1695744,
+      "headerSha256": "ba2a1c45292e68893a9b00c046acc7c9b502bda2d8b2120526694cedc301d35c"
+    },
+    "dimensions/minecraft/overworld/region/r.4.-13.mca": {
+      "allocatedSlots": 165,
+      "allocatedSectorCount": 341,
+      "size": 1404928,
+      "headerSha256": "4efeaf8a8bc3a4252908df6fbc14993994c092a74257992ebad33b32baed0230"
+    },
+    "dimensions/minecraft/overworld/region/r.4.-14.mca": {
+      "allocatedSlots": 151,
+      "allocatedSectorCount": 302,
+      "size": 1245184,
+      "headerSha256": "f826633e1fcc02f55aeaba605cd6361ee6981ce41bf2e5abb6d8cb87eb5560da"
+    }
+  },
+  "selectedTargetRegionHeaderProbe": [
+    {
+      "biome": "reterraforged:shattered_savanna_scrub",
+      "chunk": [
+        6276,
+        2677
+      ],
+      "regionPath": "dimensions/minecraft/overworld/region/r.196.83.mca",
+      "original": {
+        "regionExists": false
+      },
+      "copiedAfter": {
+        "regionExists": true,
+        "allocated": true,
+        "sectorOffset": 93,
+        "sectorCount": 2,
+        "timestamp": 1794103680
+      }
+    },
+    {
+      "biome": "reterraforged:fir_forest",
+      "chunk": [
+        0,
+        -2731
+      ],
+      "regionPath": "dimensions/minecraft/overworld/region/r.0.-86.mca",
+      "original": {
+        "regionExists": true,
+        "allocated": true,
+        "sectorOffset": 85,
+        "sectorCount": 2,
+        "timestamp": 1794097909
+      },
+      "copiedAfter": {
+        "regionExists": true,
+        "allocated": true,
+        "sectorOffset": 85,
+        "sectorCount": 2,
+        "timestamp": 1794097909
+      }
+    }
+  ],
+  "probeScope": "Read-only Anvil headers/allocations and file hashes only; not FULL chunk/biome-vector parity",
+  "clientExit": {
+    "pid": 30532,
+    "exitCode": 0,
+    "exitCodeUnsignedHex": "0x00000000",
+    "observedAtUtc": "2026-11-08T02:08:32.898981+00:00"
+  },
+  "clientShutdown": {
+    "startedAtUtc": "2026-11-08T02:08:18.499163+00:00",
+    "pid": 30532,
+    "method": "control-quit",
+    "exitCode": 0,
+    "elapsedSeconds": 14.406999999999243,
+    "completedAtUtc": "2026-11-08T02:08:32.898981+00:00"
+  },
+  "checkedResourcesUnchanged": true,
+  "pinnedFilesUnchanged": true,
+  "gameLogsSha256": {
+    "game.stdout.log": "b88d5b2477bb08aece21e0e40829c953c01c5f178a7eba0f2661a3b62ba0f156",
+    "game.stderr.log": "9f746085245a09ba1db8ae458435943e6f6d8a6368837f717554f9dd4a664028"
+  },
+  "allScreenshotHashesMatch": true,
+  "screenshots": [
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-failed-world-reopen-v1\\reopen-shattered_savanna_scrub.png",
+      "actualSha256": "12d9e07321fe9fc38a5cbe7a9c47e40966bc2abc45b06f03e8712a4073d7f848",
+      "reportedSha256": "12d9e07321fe9fc38a5cbe7a9c47e40966bc2abc45b06f03e8712a4073d7f848",
+      "hashMatchesReport": true,
+      "observation": "Textured coast/water, underwater plants, sand and mixed foliage render coherently; sky-heavy camera and RD6 cutoff limit geometry assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-failed-world-reopen-v1\\reopen-fir_forest.png",
+      "actualSha256": "3dc0d66fd748392545f488ed6744b553ff95efaa5ce601e922241ea1caae18c0",
+      "reportedSha256": "3dc0d66fd748392545f488ed6744b553ff95efaa5ce601e922241ea1caae18c0",
+      "hashMatchesReport": true,
+      "observation": "Textured fir/conifer forest, grassy ground and small water depression render coherently; sky-heavy camera and clipped peripheral foliage/RD6 limit geometry assessment.",
+      "visualPass": true,
+      "limited": true
+    }
+  ],
+  "limits": [
+    "Original unexplained v2 exit was not reproduced by this shorter copied-world reopen.",
+    "This visits shattered savanna scrub then fir forest, not the original cold-steppe-first 17-view workload.",
+    "Contended timings are NONPERFORMANCE.",
+    "High camera/RD6 limits geometric source-parity conclusions."
+  ],
+  "sourceReviewReceiptSha256": "e3c29f778eee8f4e3dd71dc578b6570d1600f683cf5db41e1454c0fc2f756767",
+  "rootReview": {
+    "imagesInspected": 2,
+    "imageHashesMatch": true,
+    "rawIntegrityFlagsChecked": true,
+    "scope": "Coherent texture/terrain smoke only; RD6/high camera limits retained; no full saved biome comparison."
+  }
+}
