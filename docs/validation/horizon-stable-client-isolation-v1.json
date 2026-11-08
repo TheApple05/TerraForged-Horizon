@@ -1,0 +1,554 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-client-isolation-and-functional-save-reopen-only",
+  "reviewedAtUtc": "2026-11-08T17:36:26.113441+00:00",
+  "rawReport": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-stable\\build\\qa\\stable-abba-v1.json",
+  "rawReportSha256": "daa1c517852d986582720decdd2457fea3206aa7577db123211177cb22b8e681",
+  "startedAtUtc": "2026-11-08T17:12:17.470677+00:00",
+  "completedAtUtc": "2026-11-08T17:34:52.569949+00:00",
+  "artifacts": {
+    "baseline_client": {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\baseline\\horizon-client.exe",
+      "sha256": "aa4d7d4f2e906f91cd26358029070a90a6f907cdc041df81313b796fdf9f1e87"
+    },
+    "candidate_client": {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\candidate\\horizon-client.exe",
+      "sha256": "af68bd2678b1dfcdeb34968f1d95dfbaebc877ee81d6992387aaf680a248e555"
+    },
+    "ctl": {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\baseline\\horizon-ctl.exe",
+      "sha256": "36d30c6d690f6571ae2df4b9dc67c0ef4605c0cdcfcefe01ec7145d645295694"
+    },
+    "fixture": {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\bin\\baseline\\terraforged_save_fixture.exe",
+      "sha256": "aadcc70a834cd6212d026bffdf9dc9ef8fa8dedf9e52ff2e3779a76fb3469a05"
+    },
+    "baseline_hmod": {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\packages\\baseline.hmod",
+      "sha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355"
+    },
+    "candidate_hmod": {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-client-qa\\build\\qa\\live-runtime-v2\\packages\\candidate.hmod",
+      "sha256": "048a601a82714851e3515d7a0c09be56dfa77aff549b4a2dbee6f6ff721c4406"
+    }
+  },
+  "conditions": {
+    "seed": 8675309,
+    "qaSpawnSupplied": true,
+    "structuresEnabled": false,
+    "renderDistanceChunks": 12,
+    "simulationDistanceChunks": 5,
+    "sharedWorkerThreads": 4,
+    "frameRateCap": 60,
+    "statusIntervalSeconds": 0.5,
+    "serverMemoryIntervalSeconds": 2,
+    "stableViewSeconds": 1
+  },
+  "sourceResourcesUnchanged": true,
+  "artifactsUnchanged": true,
+  "totalCleanExits": 8,
+  "totalStoredBiomeValues": 12288,
+  "hostLoadNote": {
+    "observedAtUtc": "2026-11-08T17:29:16.4148100Z",
+    "status": "client-isolation-only-not-controlled-host-performance",
+    "reason": "User requested Prism login during qualification; static launcher compilation began during the second candidate world. Other workstation load was not controlled. Use this run for functional save/reopen and client-isolation evidence; exclude a causal speedup claim.",
+    "compileLogCreatedAtUtc": "2026-11-08T17:27:06.0537239Z"
+  },
+  "sourcePackageReceipt": {
+    "path": "build/qa/candidate-source-package-v2.json",
+    "sha256": "e20314262e20c58345dac7fad5b81f11d7164709ca435f625671406c6236ce96",
+    "productionSources": 56,
+    "stagedInputsMatchCurrentWorktree": 84
+  },
+  "runs": [
+    {
+      "version": "baseline",
+      "status": "passed",
+      "sessions": {
+        "primary": {
+          "exitCode": 0,
+          "elapsedSeconds": 137.43700000000536,
+          "processPeakResidentBytes": 2389381120,
+          "exclusiveClients": {
+            "ownedPid": 28560,
+            "intervalSeconds": 0.25,
+            "samples": 489,
+            "maximumClientCount": 1,
+            "firstOtherClients": null,
+            "watchError": null
+          },
+          "gameLogSha256": "957af823a346086a3a7ae754e5190ab07caf7e6a471c6fa623bb3723e55aa659",
+          "controlLogSha256": "14e0b61046764776b437c72554e2052d99451928698883224bb2bc819e47438e",
+          "views": [
+            {
+              "label": "initial",
+              "status": "ready",
+              "elapsedSeconds": 70.23400000001129
+            },
+            {
+              "label": "fir_forest",
+              "status": "ready",
+              "elapsedSeconds": 18.860000000000582
+            },
+            {
+              "label": "cold_steppe",
+              "status": "ready",
+              "elapsedSeconds": 17.75
+            },
+            {
+              "label": "bryce",
+              "status": "ready",
+              "elapsedSeconds": 29.484000000011292
+            }
+          ]
+        },
+        "reopen": {
+          "exitCode": 0,
+          "elapsedSeconds": 58.34399999999732,
+          "processPeakResidentBytes": 770727936,
+          "exclusiveClients": {
+            "ownedPid": 6528,
+            "intervalSeconds": 0.25,
+            "samples": 186,
+            "maximumClientCount": 1,
+            "firstOtherClients": null,
+            "watchError": null
+          },
+          "gameLogSha256": "4a1e229c14650ad126a587a8338163eeaf49c4bba1378a5fd401297273699ad7",
+          "controlLogSha256": "2ba68fd3794c02a1cb319b257387ee3a5b10b98155033d16d399748941deaac5",
+          "views": [
+            {
+              "label": "initial",
+              "status": "ready",
+              "elapsedSeconds": 37.20299999999406
+            },
+            {
+              "label": "distant",
+              "status": "ready",
+              "elapsedSeconds": 20.01600000000326
+            }
+          ]
+        }
+      },
+      "storedChunkChecks": [
+        {
+          "chunk": [
+            0,
+            0
+          ],
+          "nativeBiomeFingerprint": "6dc1096e04abd195",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "6dc1096e04abd195",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            1024,
+            -2048
+          ],
+          "nativeBiomeFingerprint": "b0019eca975291a5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "b0019eca975291a5",
+          "vanillaBiomeFingerprint": "60e84b83a1657725"
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "status": "passed",
+      "sessions": {
+        "primary": {
+          "exitCode": 0,
+          "elapsedSeconds": 253.25,
+          "processPeakResidentBytes": 2372952064,
+          "exclusiveClients": {
+            "ownedPid": 28472,
+            "intervalSeconds": 0.25,
+            "samples": 753,
+            "maximumClientCount": 1,
+            "firstOtherClients": null,
+            "watchError": null
+          },
+          "gameLogSha256": "8fce445eae145b548471977f8171d39edc6f9f911c649205cd629afee25dbee4",
+          "controlLogSha256": "d158ad1faf8fb899310d18cbdc0a86a9abc99939bc03b6f9c3f0e52259972914",
+          "views": [
+            {
+              "label": "initial",
+              "status": "ready",
+              "elapsedSeconds": 109.90599999998813
+            },
+            {
+              "label": "fir_forest",
+              "status": "ready",
+              "elapsedSeconds": 50.187000000005355
+            },
+            {
+              "label": "cold_steppe",
+              "status": "ready",
+              "elapsedSeconds": 38.312999999994645
+            },
+            {
+              "label": "bryce",
+              "status": "ready",
+              "elapsedSeconds": 50.40600000000268
+            }
+          ]
+        },
+        "reopen": {
+          "exitCode": 0,
+          "elapsedSeconds": 79.59300000000803,
+          "processPeakResidentBytes": 747335680,
+          "exclusiveClients": {
+            "ownedPid": 28592,
+            "intervalSeconds": 0.25,
+            "samples": 247,
+            "maximumClientCount": 1,
+            "firstOtherClients": null,
+            "watchError": null
+          },
+          "gameLogSha256": "f82be396c28fac1667cd258b41dce44eb10c195acd1b2661a5daa2a83dc6a657",
+          "controlLogSha256": "240f9b40c7420b82fdb65961005d77f5790e216932fad8631ad8083c2baad359",
+          "views": [
+            {
+              "label": "initial",
+              "status": "ready",
+              "elapsedSeconds": 44.01499999999942
+            },
+            {
+              "label": "distant",
+              "status": "ready",
+              "elapsedSeconds": 32.75
+            }
+          ]
+        }
+      },
+      "storedChunkChecks": [
+        {
+          "chunk": [
+            0,
+            0
+          ],
+          "nativeBiomeFingerprint": "6dc1096e04abd195",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "6dc1096e04abd195",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            1024,
+            -2048
+          ],
+          "nativeBiomeFingerprint": "b0019eca975291a5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "b0019eca975291a5",
+          "vanillaBiomeFingerprint": "60e84b83a1657725"
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "status": "passed",
+      "sessions": {
+        "primary": {
+          "exitCode": 0,
+          "elapsedSeconds": 332.0780000000086,
+          "processPeakResidentBytes": 2373029888,
+          "exclusiveClients": {
+            "ownedPid": 22796,
+            "intervalSeconds": 0.25,
+            "samples": 1046,
+            "maximumClientCount": 1,
+            "firstOtherClients": null,
+            "watchError": null
+          },
+          "gameLogSha256": "edb1fddde80e88564040b7f585bf4b2581b322ec748de861494ecd804293d9d1",
+          "controlLogSha256": "dfb59414a825b94a17eb7b12f66218ae0f929db2af6caaa592534cbee9f28ac9",
+          "views": [
+            {
+              "label": "initial",
+              "status": "ready",
+              "elapsedSeconds": 199.64100000000326
+            },
+            {
+              "label": "fir_forest",
+              "status": "ready",
+              "elapsedSeconds": 46.85899999999674
+            },
+            {
+              "label": "cold_steppe",
+              "status": "ready",
+              "elapsedSeconds": 22.422000000005937
+            },
+            {
+              "label": "bryce",
+              "status": "ready",
+              "elapsedSeconds": 33.562999999994645
+            }
+          ]
+        },
+        "reopen": {
+          "exitCode": 0,
+          "elapsedSeconds": 69.95299999999406,
+          "processPeakResidentBytes": 950251520,
+          "exclusiveClients": {
+            "ownedPid": 47992,
+            "intervalSeconds": 0.25,
+            "samples": 221,
+            "maximumClientCount": 1,
+            "firstOtherClients": null,
+            "watchError": null
+          },
+          "gameLogSha256": "ec2d2c2ffe70fe3ae9775c410e63bd9d81ffc4ad39fbceb65965448bef91bc9a",
+          "controlLogSha256": "a2a5c5c101613ed39a359918f1ee0bcc36781c75a00eba195cd63dba5cd0c694",
+          "views": [
+            {
+              "label": "initial",
+              "status": "ready",
+              "elapsedSeconds": 40.20299999999406
+            },
+            {
+              "label": "distant",
+              "status": "ready",
+              "elapsedSeconds": 27.860000000000582
+            }
+          ]
+        }
+      },
+      "storedChunkChecks": [
+        {
+          "chunk": [
+            0,
+            0
+          ],
+          "nativeBiomeFingerprint": "6dc1096e04abd195",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "6dc1096e04abd195",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            1024,
+            -2048
+          ],
+          "nativeBiomeFingerprint": "b0019eca975291a5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "b0019eca975291a5",
+          "vanillaBiomeFingerprint": "60e84b83a1657725"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "status": "passed",
+      "sessions": {
+        "primary": {
+          "exitCode": 0,
+          "elapsedSeconds": 211.78099999998813,
+          "processPeakResidentBytes": 2372972544,
+          "exclusiveClients": {
+            "ownedPid": 12804,
+            "intervalSeconds": 0.25,
+            "samples": 705,
+            "maximumClientCount": 1,
+            "firstOtherClients": null,
+            "watchError": null
+          },
+          "gameLogSha256": "fe614232af02f75b7293050357560db7237f97d831658cdd8ebbfc5fb244d235",
+          "controlLogSha256": "81bbc379fb7fd34c53623061fafc720944aa19f35256e568cde24b84bac1861a",
+          "views": [
+            {
+              "label": "initial",
+              "status": "ready",
+              "elapsedSeconds": 110.53099999998813
+            },
+            {
+              "label": "fir_forest",
+              "status": "ready",
+              "elapsedSeconds": 27.468000000008033
+            },
+            {
+              "label": "cold_steppe",
+              "status": "ready",
+              "elapsedSeconds": 31.453000000008615
+            },
+            {
+              "label": "bryce",
+              "status": "ready",
+              "elapsedSeconds": 38.85899999999674
+            }
+          ]
+        },
+        "reopen": {
+          "exitCode": 0,
+          "elapsedSeconds": 63.53199999999197,
+          "processPeakResidentBytes": 769339392,
+          "exclusiveClients": {
+            "ownedPid": 47568,
+            "intervalSeconds": 0.25,
+            "samples": 200,
+            "maximumClientCount": 1,
+            "firstOtherClients": null,
+            "watchError": null
+          },
+          "gameLogSha256": "f3ccc6fab27dfe5c82c301f91e5a662f3d90659209e21d95822e17b69fd8fd69",
+          "controlLogSha256": "f390fca1e92f70bbfe587144d62a37a6785459c4aed073660858311a4c154e81",
+          "views": [
+            {
+              "label": "initial",
+              "status": "ready",
+              "elapsedSeconds": 31.860000000000582
+            },
+            {
+              "label": "distant",
+              "status": "ready",
+              "elapsedSeconds": 29.188000000009197
+            }
+          ]
+        }
+      },
+      "storedChunkChecks": [
+        {
+          "chunk": [
+            0,
+            0
+          ],
+          "nativeBiomeFingerprint": "6dc1096e04abd195",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "6dc1096e04abd195",
+          "vanillaBiomeFingerprint": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            1024,
+            -2048
+          ],
+          "nativeBiomeFingerprint": "b0019eca975291a5",
+          "quartBiomes": 1536,
+          "storedBiomeFingerprint": "b0019eca975291a5",
+          "vanillaBiomeFingerprint": "60e84b83a1657725"
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "path": "build\\qa\\stable-abba-v1\\0-baseline\\primary\\bryce.png",
+      "sha256": "b3258492937f2835d4ae5c4635257384ea3dccc16bea0917eba62b99af4fda80"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\0-baseline\\primary\\cold_steppe.png",
+      "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\0-baseline\\primary\\fir_forest.png",
+      "sha256": "6acf5fc27f20457259e68c913791a3599f6e3328173bd8cb7aa41687f0825ee4"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\0-baseline\\primary\\initial.png",
+      "sha256": "8ecad667522a9bd7c43d678261a289cd71f587693719309f561bf04e20c8605e"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\1-candidate\\primary\\bryce.png",
+      "sha256": "b22371e8e7bce9c3115213223dbb9d1ab1df94e70d24c65eab164686c599c55b"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\1-candidate\\primary\\cold_steppe.png",
+      "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\1-candidate\\primary\\fir_forest.png",
+      "sha256": "f8d53f04a7c3f640c376a9e9b8a1ca4edda18d35e2e16b72b23c51b835c3d6e8"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\1-candidate\\primary\\initial.png",
+      "sha256": "761161e737c3d6800171183d4c7a9eb880ecf42e7289ca3670be1481a207b903"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\2-candidate\\primary\\bryce.png",
+      "sha256": "ce0be830bce4fef14d611d0b53c23e89c83c17178908d0f985ab877734c7c460"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\2-candidate\\primary\\cold_steppe.png",
+      "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\2-candidate\\primary\\fir_forest.png",
+      "sha256": "bb01812e4498d6b7b292886f191cd8d4cb11350a1f5170e49b9c307f2f111f95"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\2-candidate\\primary\\initial.png",
+      "sha256": "473865e37afe09d990d9d7fb01c90c0f98bd2aac926e83ce497317aaad667806"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\2-candidate\\primary\\stress-settle.png",
+      "sha256": "b2be6683c64a1cfd29a7061ea631279370f807f80284070b3a6282b8cd07aa10"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\3-baseline\\primary\\bryce.png",
+      "sha256": "af553e327952ab7ea018ae71bab60d82b0eba45c0b3168e747baaf13414e164f"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\3-baseline\\primary\\cold_steppe.png",
+      "sha256": "21654ec19bb083db0a44eb8ad600fbe057b69a0ec6459794c07c22f65f67ef3c"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\3-baseline\\primary\\fir_forest.png",
+      "sha256": "8f8c4586f9bb967a04abbf1b412a87994dd7cabe03847bbb2db9450093edceb2"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\3-baseline\\primary\\initial.png",
+      "sha256": "34fc858662275189ab2ce30929882574294debb3a68777d257156cd87120d2eb"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\0-baseline\\reopen\\distant.png",
+      "sha256": "d9a7ff56617ba97b90cdfce9a1d2d72f5a61b666b6d016d7371ce7dcdc6558f4"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\0-baseline\\reopen\\initial.png",
+      "sha256": "83f4f47791669f78e4f9aa7a51fb70e4c1638fe255b6009d1e7b378601d59828"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\1-candidate\\reopen\\distant.png",
+      "sha256": "ddf49775b7a24a0fa628b4b906450c90ac73968ba0881574a329fcdb0987f389"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\1-candidate\\reopen\\initial.png",
+      "sha256": "b0d4c3dcb1c3b207a9906b697a48c7756a84e3158640d2748066493cafb35846"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\2-candidate\\reopen\\distant.png",
+      "sha256": "a5984166f14ee6c941f91d2c59ee4167a59914b006fe2c3d58c39b9b59f1e6d6"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\2-candidate\\reopen\\initial.png",
+      "sha256": "1f9acc386c6bb29161b57134157774d340548359800621fdcc4e54d4334ae96f"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\3-baseline\\reopen\\distant.png",
+      "sha256": "ffa05b521eb73b47c0de3d822c5dd29b09bf8efc4f368a38a71bfd61a7adf0a7"
+    },
+    {
+      "path": "build\\qa\\stable-abba-v1\\3-baseline\\reopen\\initial.png",
+      "sha256": "699e0a2e7bb020840c4d8e2a9fd7988dc4ff1d40f19de931fa77d085ce370f00"
+    }
+  ],
+  "visualReview": {
+    "method": "Root reviewed a labeled contact sheet of all 25 captures; baseline fir/Bryce also viewed individually",
+    "unobscuredSmokeViews": 22,
+    "cloudObscuredViews": [
+      "1-candidate/primary/bryce.png",
+      "1-candidate/reopen/initial.png",
+      "2-candidate/reopen/initial.png"
+    ],
+    "limit": "Obscured images cannot qualify detailed scenery. Clear second-candidate primary/stress Bryce views cover that destination. Bounded smoke review, not whole-scenery acceptance."
+  },
+  "notCovered": [
+    "Controlled host performance or causal speedup",
+    "Natural survival spawn or structures in this batch",
+    "Multiple seeds",
+    "GUI or authenticated Play",
+    "Old-save upgrade and interrupted-save recovery",
+    "Whole-feature parity",
+    "Dedicated server or multiplayer"
+  ]
+}

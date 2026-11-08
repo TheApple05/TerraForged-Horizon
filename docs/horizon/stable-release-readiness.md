@@ -44,6 +44,12 @@ documented. Do not silently exclude save reliability or sustained exploration.
 - [Candidate SSD client observations](ssd-worldgen-client.md): six worlds and
   twelve clean exits; host contention prevents a controlled performance claim.
 - [Smoothing and terrace evidence](../validation/horizon-worldgen-speed-stability-v1.json).
+- [New client-isolation qualification](../validation/horizon-stable-client-isolation-v1.json):
+  four fresh worlds, eight zero exits and 12,288 saved biome values. All eight
+  processes were observed without another Horizon client. Root reviewed the
+  25-image contact sheet; three cloud-obscured views cannot qualify detailed
+  scenery. Launcher compilation overlapped the later comparison worlds, so
+  this is functional reliability evidence, not a controlled speedup result.
 
 The client benchmark now has an optional `--exclusive-clients` guard. It refuses
 to start alongside another Horizon client and samples for new clients every
