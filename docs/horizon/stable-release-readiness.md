@@ -50,6 +50,10 @@ documented. Do not silently exclude save reliability or sustained exploration.
   25-image contact sheet; three cloud-obscured views cannot qualify detailed
   scenery. Launcher compilation overlapped the later comparison worlds, so
   this is functional reliability evidence, not a controlled speedup result.
+- [Fresh targeted source regressions](../validation/horizon-stable-source-v1/SUMMARY.json):
+  eight core tests in each profile, final-noise and tile-filter Java references,
+  196,608 sampled columns per profile, and cache lifecycle checks all pass in
+  debug and release.
 
 The client benchmark now has an optional `--exclusive-clients` guard. It refuses
 to start alongside another Horizon client and samples for new clients every

@@ -1,0 +1,30 @@
+{
+  "status": "passed-targeted-native-source-regressions",
+  "checkedAtUtc": "2026-11-08T17:41:09.836884+00:00",
+  "coreTestsPerProfile": 8,
+  "profiles": [
+    "debug",
+    "release"
+  ],
+  "scope": [
+    "Terrace nonfinite behavior",
+    "Smoothing numerical equivalence",
+    "Final-noise Java references",
+    "Independent tile-filter references",
+    "196608 original sampled columns per profile",
+    "Cache failure/concurrency/ownership lifecycle"
+  ],
+  "notCovered": [
+    "Full engine or launcher regression",
+    "Live GUI sign-in",
+    "Stable release acceptance"
+  ],
+  "filesSha256": {
+    "cache-lifecycle.json": "7270e8cd1be7a51eeea81476c82819a94eae52e7812710cc8b789a78647777e4",
+    "core-debug.log": "85ae20c136435fca5aff6cb91dfbde92011682a06291a8df3fd00cf5834bc53b",
+    "core-release.log": "bcd511ea04eba2383b45048cf6ecd11bfb12456d1e7997db9c29b9826193869b",
+    "noise-final.json": "aa726b2a85368d7a41b007c3b5fd42c60833b1b7ebd3359d946ea2ab138af941",
+    "sampled-columns.json": "01d8b03b03c04d1949b65684b93f86dcc8528e3be5f2fbf53b9f09b7a4174ed8",
+    "tile-filters.json": "b7eea61431c587ce8c32551ba6984a1509ce33a08217bc846e257f02f0777214"
+  }
+}
