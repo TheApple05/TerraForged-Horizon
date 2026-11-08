@@ -59,6 +59,9 @@ fn generated_biomes(
     Ok(names)
 }
 fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let seed = std::env::var("TERRAFORGED_QA_SEED")
+        .unwrap_or_else(|_| "8675309".into())
+        .parse::<i64>()?;
     let args: Vec<String> = std::env::args().collect();
     assert!(
         matches!(args.len(), 5 | 6),
@@ -75,7 +78,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
         let mut level = Level {
             name: "TerraForged native QA".into(),
-            seed: 8675309,
+            seed,
             game_mode: 3,
             spawn: Some([8.5, 130., 8.5]),
             position: Some([8.5, 130., 8.5]),
@@ -94,7 +97,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         level.write(world)?;
         save::write_world_gen_settings(
             world,
-            8675309,
+            seed,
             WorldGen {
                 structures: false,
                 ..WorldGen::default()
@@ -123,9 +126,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         stem.get("generator").and_then(|g| g.get("settings")),
         Some(&Tag::String("terraforged:overworld".into()))
     );
-    assert_eq!(settings.get("seed"), Some(&Tag::Long(8675309)));
+    assert_eq!(settings.get("seed"), Some(&Tag::Long(seed)));
     let level = Level::read(world).ok_or("real level reader could not reload level")?;
-    assert_eq!(level.seed, 8675309);
+    assert_eq!(level.seed, seed);
     let mut regions = Vec::new();
     let path = world.join("dimensions/minecraft/overworld/region");
     if path.is_dir() {
@@ -157,7 +160,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
     let selected = OverworldGenerator::for_world_with_settings(
         data.clone(),
-        8675309,
+        seed,
         "minecraft:normal",
         "minecraft:overworld",
         false,
@@ -165,7 +168,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     )?;
     let vanilla_generator = OverworldGenerator::for_world_with_settings(
         data,
-        8675309,
+        seed,
         "minecraft:normal",
         "minecraft:overworld",
         false,
@@ -255,7 +258,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!(
         "{}",
         serde_json::to_string_pretty(&json!({
-            "status":"passed-native-save-fixture-reader", "action":args[1],"seed":8675309,
+            "status":"passed-native-save-fixture-reader", "action":args[1],"seed":seed,
             "overworldSettings":"terraforged:overworld","regionFiles":regions,
             "levelName":level.name,"position":level.position,
         "qaSpawnSupplied":!ui,"structuresEnabled":settings.get("generate_structures")==Some(&Tag::Byte(1)),

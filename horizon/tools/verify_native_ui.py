@@ -6,6 +6,12 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
+def seed_value(text):
+    try:value=int(text)
+    except ValueError:raise argparse.ArgumentTypeError('Seed must be a signed 64-bit integer') from None
+    if not -(1<<63)<=value<(1<<63):raise argparse.ArgumentTypeError('Seed must be a signed 64-bit integer')
+    return value
+
 def exit_details(code):
     return {'exitCode':code,'exitCodeUnsignedHex':None if code is None else f'0x{code & 0xffffffff:08x}'}
 
@@ -97,12 +103,14 @@ def prepare_save_fixture(workspace,source):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ('workspace','resources','hmod','report'):parser.add_argument('--'+name,required=True,type=Path)
+    parser.add_argument('--seed',type=seed_value,default=8675309)
     parser.add_argument('--classic',action='store_true',help='Render all 17 natural classic locations and inspect their saved FULL biome vectors')
     target_selection=parser.add_mutually_exclusive_group()
     target_selection.add_argument('--classic-target',action='append',default=[],metavar='BIOME_ID',help='Render only these classic targets, in argument order, before the origin QA teleport; implies --classic')
     target_selection.add_argument('--classic-first',metavar='BIOME_ID',help='Render all classic targets, with this target before the origin QA teleport; implies --classic')
     a=parser.parse_args();workspace=a.workspace.resolve();source=a.resources.resolve();artifact=a.hmod.resolve()
     a.classic=a.classic or bool(a.classic_target) or bool(a.classic_first)
+    if a.classic and a.seed!=8675309:parser.error('Classic target coordinates are qualified only for seed 8675309')
     targets_file=ROOT/'horizon/tests/fixtures/classic-runtime-v1/targets.json'
     target_document=json.loads(targets_file.read_text(encoding='utf-8')) if a.classic else None
     if a.classic_target:
@@ -125,7 +133,7 @@ def main():
         for path in (workspace.parent/'mods/terraforged_native').rglob('*'):
             if path.is_file() and archive.read('mixins/terraforged_native/'+path.relative_to(workspace.parent/'mods/terraforged_native').as_posix())!=path.read_bytes():raise ValueError('Packaged source differs from staged bundle')
     work=workspace.parent/a.report.stem;work.mkdir(exist_ok=False);shutil.copy2(Path(__file__),work/'verifier-source.py')
-    env=dict(os.environ,CARGO_BUILD_JOBS='4',CARGO_NET_OFFLINE='true',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1',HORIZON_TELEMETRY_URL='off',HORIZON_PLAYER_NAME='TerraForgedQA')
+    env=dict(os.environ,CARGO_BUILD_JOBS='4',CARGO_NET_OFFLINE='true',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1',HORIZON_TELEMETRY_URL='off',HORIZON_PLAYER_NAME='TerraForgedQA',TERRAFORGED_QA_SEED=str(a.seed))
     env.pop('CARGO_TARGET_DIR',None)
     for name in ('HORIZON_HOME','HORIZON_LAUNCHER_HOME','XDG_DATA_HOME','XDG_CONFIG_HOME','HORIZON_LAUNCHER_TRASH','HORIZON_LAUNCHER_CLIPBOARD','HORIZON_LAUNCHER_DESKTOP'):
         path=work/'homes'/name.lower();path.mkdir(parents=True);env[name]=str(path.resolve())
@@ -145,10 +153,12 @@ def main():
         else:report['notCovered'].remove('All 17 native biome resources/features')
         report['notCovered'].append('Independent Java whole-feature and scenery parity')
     spawn_reference=ROOT/'horizon/tests/fixtures/native-spawn-v1/values.tsv'
+    report['seed']=a.seed
     if spawn_reference.exists():
         centers=dict(line.split('\t') for line in spawn_reference.read_text(encoding='utf-8').splitlines())
-        report['independentJavaConfiguredSearchCenter']=[int(n) for n in centers['8675309/CONTINENT_CENTER'].split(',')]
-        report['spawnReferenceSha256']=sha(spawn_reference)
+        if (key:=f'{a.seed}/CONTINENT_CENTER') in centers:
+            report['independentJavaConfiguredSearchCenter']=[int(n) for n in centers[key].split(',')]
+            report['spawnReferenceSha256']=sha(spawn_reference)
     process=None;log=None;sequence=0
     suffix='.exe' if os.name=='nt' else '';target=workspace/'target/fast';client=target/('horizon-client'+suffix);ctl=target/('horizon-ctl'+suffix);fixture=target/('terraforged_save_fixture'+suffix)
     def checkpoint(phase):
@@ -277,7 +287,7 @@ def main():
                 if not state['menu']['allow_commands']:click_label('Allow Commands')
                 click_label('World')
                 poll(lambda s:(s.get('menu') or {}).get('tab')=='world',30,'opening World tab')
-                control(['type','--field','seed','--replace','8675309'])
+                control(['type','--field','seed','--replace',str(a.seed)])
                 cycle=[]
                 for step in range(7):
                     state=control(['state']);menu=state.get('menu') or {};cycle.append(menu.get('world_type'))
