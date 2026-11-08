@@ -57,17 +57,44 @@ retry handling to QA report replacement and completes all six alternating runs.
 There is no generator failure recorded in that interrupted attempt.
 
 The [native.dev5 package receipt](../validation/horizon-native-dev5-package-v1.json)
-records its exact source bundle and SHA-256. Its fresh all-17 UI/create/save/reopen
-qualification is in progress, starting with cold steppe. The completed native.dev4
-client/save and visual reports remain the functional baseline until that run
-finishes. Host and native integration CI must also pass before adoption.
+records its exact source bundle and SHA-256. Host protected CI passes on host
+`1860b664`. All five native integration modes and Windows/Linux foundations pass
+on the first published candidate, `8e1a689`; later verifier changes require fresh CI.
+The completed native.dev4 client/save and visual reports remain the functional
+baseline until fresh native.dev5 all-17 acceptance completes.
 
 The [first fresh-stage UI attempt](../validation/horizon-native-classic-ui-uniform-v1.json)
 stopped before compilation or game launch because the save probe was absent.
 The UI verifier had depended on an earlier client verifier preparing that file.
 Both tools now share the existing checked setup, with a regression covering a
 fresh stage, repeated setup and conflicting probe/target rejection. The UI CI
-mode runs that check; a separate fresh client attempt is in progress.
+mode runs that check.
+
+The [second attempt](../validation/horizon-native-classic-ui-uniform-v2.json)
+renders ten variants, including cold steppe in 30.843 seconds and frozen marsh
+in 30.265 seconds, then the client exits during shattered savanna after 3.094
+seconds. There is no completed candidate save check in that run. Its final game
+log contains no panic or normal shutdown trail; targeted Windows Application and
+System event queries succeeded and found no matching application-crash or display
+driver events in the surrounding four-minute window. The old verifier did not
+retain the process exit code, preventing a firm diagnosis. Reviewed CLI,
+event-loop and supervisor paths provide no self-timeout explanation; this does
+not establish the actual cause or prove external termination.
+
+The verifier now records client commands, PIDs and the process exit code on error.
+A fresh [isolated shattered-savanna run](../validation/horizon-native-classic-ui-shattered-v1.json)
+renders that target in 8.109 seconds. Both real clients exit zero, actual saved
+biome checks pass after creation and reopening/distant generation, and checked
+resources stay unchanged. That is selected-target recovery evidence, not an
+all-17 acceptance claim. A further fresh all-17 run starts with shattered savanna
+and retains the stronger diagnostics. The earlier exit remains unexplained.
+
+Fir forest also remains slow: its candidate full-ready check takes 180.156
+seconds, versus 224.203 seconds in the earlier sequence. These are uncontrolled
+client waits with other compilation active. In-flight generation and resident
+proto counts are not throughput measurements. The follow-up diagnostic must
+include real decoration at that exact location before attributing the remaining
+cost to cache pressure, worker count, lighting or streaming.
 
 The broader limits in the [reviewed issues report](issues-2026-11-07.md) remain:
 source carver settings, independent full Java feature parity, launcher

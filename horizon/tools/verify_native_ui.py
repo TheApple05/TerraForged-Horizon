@@ -232,6 +232,8 @@ def main():
             if world:command+=['--world',str(world)]
             checkpoint(f'starting client {index}')
             started=time.monotonic();process=subprocess.Popen(command,cwd=game,env=env,stdout=log,stderr=subprocess.STDOUT,creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
+            report.setdefault('clientLaunches',[]).append({'index':index,'pid':process.pid,'command':command,'startedAtUtc':dt.datetime.now(dt.timezone.utc).isoformat()})
+            checkpoint(f'running client {index}')
             for attempt in range(180):
                 if process.poll() is not None:raise RuntimeError('Client exited during startup')
                 try:control(['state'],5);break
@@ -299,7 +301,9 @@ def main():
             report['runs'].append({'index':index,'exitCode':code,'elapsedSeconds':time.monotonic()-started,'state':state,'visibleTerrainState':rendered,'savedBiomeChecks':saved,'screenshot':image,'gameLogSha256':sha(work/f'game-{index}.log')})
             checkpoint(f'checked saved FULL chunks {index}')
         report['status']='passed-native-ui-create-reopen-smoke-awaiting-image-review';report['renderedImagesNeedReview']=True
-    except Exception as error:report['status']='failed';report['error']=str(error)
+    except Exception as error:
+        report['status']='failed';report['error']=str(error)
+        if process is not None:report['clientExitCodeOnError']=process.poll()
     finally:
         if process is not None and process.poll() is None:
             try:subprocess.run([str(ctl),'--socket',str(socket),'quit'],cwd=game,env=env,capture_output=True,timeout=20);process.wait(timeout=20)
