@@ -1,0 +1,374 @@
+{
+  "status": "passed-final-installed-three-seed-save-and-image-checks",
+  "seeds": [
+    {
+      "seed": 0,
+      "cleanClientExits": 2,
+      "storedQuartComparisons": 4608,
+      "rawReportSha256": "b3794a2190dc9f1536a090de6ac475a11e8cc93cfb39bf2eb32e8e3100c23ffc",
+      "savedBiomeChecks": [
+        {
+          "action": "check_ui",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "fac893e8878fb9f5",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "fac893e8878fb9f5",
+              "vanillaBiomeFingerprint": "37eeb4914be850c5"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "39ed1950dbe7232b",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": null,
+              "vanillaBiomeFingerprint": "e0d0c16dc9b00c6b"
+            }
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "qaSpawnSupplied": false,
+          "seed": 0,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2496,
+            113,
+            1776
+          ]
+        },
+        {
+          "action": "check_ui_all",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "fac893e8878fb9f5",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "fac893e8878fb9f5",
+              "vanillaBiomeFingerprint": "37eeb4914be850c5"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "39ed1950dbe7232b",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "39ed1950dbe7232b",
+              "vanillaBiomeFingerprint": "e0d0c16dc9b00c6b"
+            }
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "qaSpawnSupplied": false,
+          "seed": 0,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2496,
+            113,
+            1776
+          ]
+        }
+      ],
+      "imageReview": {
+        "status": "passed-six-image-reviews-with-camera-limits",
+        "rawReportSha256": "b3794a2190dc9f1536a090de6ac475a11e8cc93cfb39bf2eb32e8e3100c23ffc",
+        "images": [
+          {
+            "file": "native-preset-ui.png",
+            "sha256": "a2fef9ed15e39527d928a49e0ceb22061a5c6b910b5e226197bcbe7303410683",
+            "reviewed": true,
+            "note": "TerraForged selected, seed0, structures ON, Customize disabled as approved."
+          },
+          {
+            "file": "natural-spawn.png",
+            "sha256": "2141364cb79b3ee386f8938026c85c999c6d6f871771ae00cace26dfde498ac9",
+            "reviewed": true,
+            "note": "Grounded badlands slope with vegetation and full hearts/food."
+          },
+          {
+            "file": "death-screen.png",
+            "sha256": "00ec9a347de9d938a1ad288008529ba8c5fddce85155df4468a6452d21e11395",
+            "reviewed": true,
+            "note": "Expected death UI overlays the same rendered terrain."
+          },
+          {
+            "file": "healthy-respawn.png",
+            "sha256": "f542afec381b01163999dd569d9f75cab4e095a34c6328732154b81fd5da4d1c",
+            "reviewed": true,
+            "note": "Healthy respawn on the same badlands slope, full hearts/food."
+          },
+          {
+            "file": "game-0.png",
+            "sha256": "cd6accbe7877a968773a0a2d9c5d803f30a86d990884e5b6f7b226bd99fd8fab",
+            "reviewed": true,
+            "note": "Grassland with flowers and pumpkins renders."
+          },
+          {
+            "file": "game-1.png",
+            "sha256": "6885fbbd2e05b244f545795dfbbadbf7a0c7650adf578f4bbe979f058d738708",
+            "reviewed": true,
+            "note": "Open ocean and underwater vegetation render; this view does not assess inland terrain."
+          }
+        ]
+      }
+    },
+    {
+      "seed": -123456789,
+      "cleanClientExits": 2,
+      "storedQuartComparisons": 4608,
+      "rawReportSha256": "e0a320f234744f6d255ecb067575e0531d8ce3bc589e2d121794be3af7c1ebba",
+      "savedBiomeChecks": [
+        {
+          "action": "check_ui",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "95851963b165646d",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "95851963b165646d",
+              "vanillaBiomeFingerprint": "a2b7d896db159325"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "0a2b66f5cd162e4d",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": null,
+              "vanillaBiomeFingerprint": "6013892413eea525"
+            }
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "qaSpawnSupplied": false,
+          "seed": -123456789,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2336,
+            111,
+            2320
+          ]
+        },
+        {
+          "action": "check_ui_all",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "95851963b165646d",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "95851963b165646d",
+              "vanillaBiomeFingerprint": "a2b7d896db159325"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "0a2b66f5cd162e4d",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "0a2b66f5cd162e4d",
+              "vanillaBiomeFingerprint": "6013892413eea525"
+            }
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "qaSpawnSupplied": false,
+          "seed": -123456789,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2336,
+            111,
+            2320
+          ]
+        }
+      ],
+      "imageReview": {
+        "status": "passed-six-image-reviews-with-camera-limits",
+        "rawReportSha256": "e0a320f234744f6d255ecb067575e0531d8ce3bc589e2d121794be3af7c1ebba",
+        "images": [
+          {
+            "file": "native-preset-ui.png",
+            "sha256": "fe6fe64e3dbb545cd80266df46b3c5fa186bcbbe88abc65b4af267a8b4c4939a",
+            "reviewed": true,
+            "note": "TerraForged selected, signed negative seed, structures ON, Customize disabled as approved."
+          },
+          {
+            "file": "natural-spawn.png",
+            "sha256": "dacaedc78a92c6dfdab0b596ee5176bd025680e9570733cf18997ce4be72e1cb",
+            "reviewed": true,
+            "note": "Grounded hillside beside orange/brown terracotta, full hearts/food."
+          },
+          {
+            "file": "death-screen.png",
+            "sha256": "bb0ed7e8bce115da829458f29a4ae6de19db75623d3823bdb2cd518a94bb5950",
+            "reviewed": true,
+            "note": "Expected death UI overlays the rendered hillside."
+          },
+          {
+            "file": "healthy-respawn.png",
+            "sha256": "06589e43a8218417fd0ba54bc82ec229d1e90920ff1a304fa23f39d3f082256b",
+            "reviewed": true,
+            "note": "Healthy hillside respawn, full hearts/food."
+          },
+          {
+            "file": "game-0.png",
+            "sha256": "32d07d53cc8bf20792c7100f993a09e454b7df7173abd4618ae7eaea42118380",
+            "reviewed": true,
+            "note": "Grassland slopes and distant trees render."
+          },
+          {
+            "file": "game-1.png",
+            "sha256": "917f3d7c1d7c27bfb89771f9b19bed59168c16ffdc1d867abeb05ae31c5608c1",
+            "reviewed": true,
+            "note": "Spectator camera is below terrain, showing cave walls and undersides; limits scenery review and is not a surface panorama."
+          }
+        ]
+      }
+    },
+    {
+      "seed": 9223372036854775807,
+      "cleanClientExits": 2,
+      "storedQuartComparisons": 4608,
+      "rawReportSha256": "7aecf77fcb845e1c4c693144cfd1db439e2607521dc1e2812927843dbbb6fa8c",
+      "savedBiomeChecks": [
+        {
+          "action": "check_ui",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "ae96223c630eb625",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "ae96223c630eb625",
+              "vanillaBiomeFingerprint": "40eb21c2e9ec94d5"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "5d1fd49971f4eb25",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": null,
+              "vanillaBiomeFingerprint": "13bb4fa0f6947325"
+            }
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "qaSpawnSupplied": false,
+          "seed": 9223372036854775807,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2288,
+            154,
+            -6416
+          ]
+        },
+        {
+          "action": "check_ui_all",
+          "chunkChecks": [
+            {
+              "chunk": [
+                0,
+                0
+              ],
+              "nativeBiomeFingerprint": "ae96223c630eb625",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "ae96223c630eb625",
+              "vanillaBiomeFingerprint": "40eb21c2e9ec94d5"
+            },
+            {
+              "chunk": [
+                1024,
+                -2048
+              ],
+              "nativeBiomeFingerprint": "5d1fd49971f4eb25",
+              "quartBiomes": 1536,
+              "storedBiomeFingerprint": "5d1fd49971f4eb25",
+              "vanillaBiomeFingerprint": "13bb4fa0f6947325"
+            }
+          ],
+          "overworldSettings": "terraforged:overworld",
+          "qaSpawnSupplied": false,
+          "seed": 9223372036854775807,
+          "status": "passed-native-save-fixture-reader",
+          "structuresEnabled": true,
+          "worldPresetUiReader": true,
+          "worldSpawn": [
+            2288,
+            154,
+            -6416
+          ]
+        }
+      ],
+      "imageReview": {
+        "status": "passed-six-image-reviews-with-camera-limits",
+        "rawReportSha256": "7aecf77fcb845e1c4c693144cfd1db439e2607521dc1e2812927843dbbb6fa8c",
+        "images": [
+          {
+            "file": "native-preset-ui.png",
+            "sha256": "f8040dedcf66bac2bfea1a27ecb58593ca2eb94faf8c7adc9e1c3ea876f478fd",
+            "reviewed": true,
+            "note": "TerraForged selected, maximum signed seed, structures ON, Customize disabled as approved."
+          },
+          {
+            "file": "natural-spawn.png",
+            "sha256": "acf2451c5abf5233923d321c8d71b038baec68531e6ce256cb21d065d1f01af9",
+            "reviewed": true,
+            "note": "Healthy player on jungle canopy, full hearts/food; foliage limits the ground view."
+          },
+          {
+            "file": "death-screen.png",
+            "sha256": "80f9ef4d09177bc8319798e07d48e6e7caf4e9ac900279a72b8ed685676c0ef5",
+            "reviewed": true,
+            "note": "Expected death UI overlays jungle canopy."
+          },
+          {
+            "file": "healthy-respawn.png",
+            "sha256": "6613b162b0389afd7a393fb9bd0221e6010028f74a426155a454452ba9579893",
+            "reviewed": true,
+            "note": "Healthy respawn among jungle leaves, full hearts/food; foliage obscures the wider terrain."
+          },
+          {
+            "file": "game-0.png",
+            "sha256": "a4cfe4142123d7886ab609d5503dc892a0f32f67a894d914e7dee99efc192000",
+            "reviewed": true,
+            "note": "Ocean and submerged terrain render."
+          },
+          {
+            "file": "game-1.png",
+            "sha256": "70ef39bff85c21cf524e481105201f474b4d64050184dc22df41fc77d32e2aa2",
+            "reviewed": true,
+            "note": "Clear ocean, submerged vegetation and a small structure render; view does not assess inland scenery."
+          }
+        ]
+      }
+    }
+  ],
+  "cleanClientExits": 6,
+  "storedQuartComparisons": 13824,
+  "scope": "Real UI survival creation with structures enabled and QA commands enabled for death/respawn and exploration. Direct installed game client; launcher Play tested separately. Supplemental seed/upgrade cases overlap in independent homes; no isolated timing claim."
+}

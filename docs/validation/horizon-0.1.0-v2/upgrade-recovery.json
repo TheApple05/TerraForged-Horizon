@@ -1,0 +1,255 @@
+{
+  "status": "passed-bounded-preview-upgrade-and-owned-generation-interruption",
+  "oldHmodSha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+  "oldClientSha256": "2ac392c3ee3a9db86f760763aa5a7a4f118ee4b2864f4b621b0c845344612586",
+  "newHmodSha256": "33389ff6902bfe6bf6571c7f16213e31711f115a4f2136e618dc7b980175da0d",
+  "newClientSha256": "64a9d133abfe5df727446f71dd0309378dcddbe1f7fa27851e3ece250e9fa660",
+  "sessions": {
+    "preview": {
+      "exitCode": 0,
+      "status": "passed",
+      "goldBlockPresent": true,
+      "diamondCount": 3,
+      "processPeakResidentBytes": 2372034560
+    },
+    "region-setup": {
+      "exitCode": 0,
+      "status": "passed",
+      "goldBlockPresent": true,
+      "diamondCount": 3,
+      "processPeakResidentBytes": 2537304064
+    },
+    "interrupted": {
+      "exitCode": 1,
+      "status": "passed-expected-owned-process-interruption",
+      "goldBlockPresent": true,
+      "diamondCount": 3,
+      "processPeakResidentBytes": 766414848
+    },
+    "recovered": {
+      "exitCode": 0,
+      "status": "passed",
+      "goldBlockPresent": true,
+      "diamondCount": 3,
+      "processPeakResidentBytes": 863375360
+    },
+    "verified": {
+      "exitCode": 0,
+      "status": "passed",
+      "goldBlockPresent": true,
+      "diamondCount": 3,
+      "processPeakResidentBytes": 795398144
+    }
+  },
+  "cleanClientExits": 4,
+  "intentionalOwnedProcessKills": 1,
+  "newChunkHeaderAbsentBeforeInterruption": true,
+  "existingRegionBytesBeforeNewGeneration": 3207168,
+  "generationAtInterruption": {
+    "caches": [
+      [
+        "biome_chunks",
+        0,
+        0.0
+      ],
+      [
+        "carver_biomes",
+        0,
+        null
+      ],
+      [
+        "start_chunks",
+        0,
+        null
+      ],
+      [
+        "start_lists",
+        0,
+        null
+      ]
+    ],
+    "light_views": 0,
+    "light_views_mb": 0.0,
+    "proto_biomes_mb": 0.0,
+    "proto_blocks_mb": 0.0,
+    "proto_heightmaps_mb": 0.0,
+    "proto_other_terrain_mb": 0.0,
+    "proto_records_mb": 0.0,
+    "proto_section_lists_mb": 0.0,
+    "proto_sections_by_bits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "protos": 0,
+    "protos_mb": 0.0,
+    "stages": [
+      [
+        "queued",
+        8
+      ],
+      [
+        "generating",
+        12
+      ],
+      [
+        "protos",
+        0
+      ],
+      [
+        "decorating",
+        0
+      ],
+      [
+        "finishing",
+        0
+      ],
+      [
+        "lighting",
+        0
+      ],
+      [
+        "meshing",
+        0
+      ]
+    ]
+  },
+  "savedQuartComparisons": 4608,
+  "chunkChecks": [
+    {
+      "chunk": [
+        0,
+        0
+      ],
+      "nativeBiomeFingerprint": "6dc1096e04abd195",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "6dc1096e04abd195",
+      "vanillaBiomeFingerprint": "a2b7d896db159325"
+    },
+    {
+      "chunk": [
+        1024,
+        -2048
+      ],
+      "nativeBiomeFingerprint": "b0019eca975291a5",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "b0019eca975291a5",
+      "vanillaBiomeFingerprint": "60e84b83a1657725"
+    },
+    {
+      "chunk": [
+        48611,
+        -55556
+      ],
+      "nativeBiomeFingerprint": "70c0424a69618025",
+      "quartBiomes": 1536,
+      "storedBiomeFingerprint": "70c0424a69618025",
+      "vanillaBiomeFingerprint": "b8e078cf89b792ca"
+    }
+  ],
+  "originalScratchSaveUnchanged": true,
+  "resourcesAndArtifactsUnchanged": true,
+  "rawReportSha256": "d98e3798086a279cfa95ca501a953fbd9a9df2b3c0f2a1379576b87498254140",
+  "readerBinarySha256": "eca1b2694db3b88f8e6ee06ba4a965ab3b2d0a40e407022dec2d04ac773f45de",
+  "readerSourceSha256": "f3ba807ee9a3a7b16f4ce634bfe80f8f24ab8b8feb0f64654f323b13e07811ed",
+  "readerOutputSha256": "92d5bbdbd85c7fc3e1d0d70ddc8a15b9707427c47c37e1add7dffa41b4cdb715",
+  "imageReview": {
+    "status": "passed-all-thirteen-image-reviews",
+    "rawReportSha256": "d98e3798086a279cfa95ca501a953fbd9a9df2b3c0f2a1379576b87498254140",
+    "images": [
+      {
+        "file": "interrupted/committed-marker-area.png",
+        "sha256": "c59c7ff0fa342487bffa5ed47480e97bcdee0f40579e4dfd16e7b233287584d8",
+        "reviewed": true,
+        "note": "Birch forest, grass and flowers render. Gold block at Y250 and inventory are verified independently by control state, not this camera."
+      },
+      {
+        "file": "interrupted/initial.png",
+        "sha256": "a60fdf5cdaf45a0cfbbfbebc62792816cd9d74fd319664d02727e815af5e62b7",
+        "reviewed": true,
+        "note": "Close snow, dirt and stone slopes render; camera limits panorama. No loading overlay."
+      },
+      {
+        "file": "preview/committed-marker-area.png",
+        "sha256": "35b2c25c9da973c69c3d5279e659be96862e68dba44ed3d570e67b3ebb780710",
+        "reviewed": true,
+        "note": "Birch forest, grass and flowers render. Gold block at Y250 and inventory are verified independently by control state, not this camera."
+      },
+      {
+        "file": "preview/initial.png",
+        "sha256": "32b625e26414e49fde57f8ee23016e79651fc956cb2410c7c69cd32b3ab52aa4",
+        "reviewed": true,
+        "note": "Saved desert, cacti and water channel render; sunset limits detail in the final reopen."
+      },
+      {
+        "file": "recovered/committed-marker-area.png",
+        "sha256": "8be142384462f9de04ff5a417e9f416d6267a99eed27eb0d48a7fffdee71ac09",
+        "reviewed": true,
+        "note": "Birch forest, grass and flowers render. Gold block at Y250 and inventory are verified independently by control state, not this camera."
+      },
+      {
+        "file": "recovered/completed-interrupted-region.png",
+        "sha256": "de2e210aa29a68be67838dea84b4f02c89fc283460e0b011ce4a6dec0ea8fd13",
+        "reviewed": true,
+        "note": "Recovered destination renders continuous grass slopes, birch forest and cows; no loading overlay."
+      },
+      {
+        "file": "recovered/distant.png",
+        "sha256": "e5eabbe4ddfbe2bad1f7b9bf065bac92fc44a8b033f3fbc9332adc80cff988f1",
+        "reviewed": true,
+        "note": "Saved desert, cacti and water channel render; sunset limits detail in the final reopen."
+      },
+      {
+        "file": "recovered/initial.png",
+        "sha256": "56b21ae88d5fbb470fdd054924a20869b395644936cec20ae5f2f1442938e350",
+        "reviewed": true,
+        "note": "Close snow, dirt and stone slopes render; camera limits panorama. No loading overlay."
+      },
+      {
+        "file": "region-setup/committed-marker-area.png",
+        "sha256": "fa45258a34ad49137cbfe439a0ee7656f4de7d391b422bec66b572a342b16a0f",
+        "reviewed": true,
+        "note": "Birch forest, grass and flowers render. Gold block at Y250 and inventory are verified independently by control state, not this camera."
+      },
+      {
+        "file": "region-setup/initial.png",
+        "sha256": "fc13f30f9dff8e2034f34d69f5de6612ccbe656de06c46956647ad0dacafb9f8",
+        "reviewed": true,
+        "note": "Saved origin birch forest and grass render after upgrade; no loading overlay."
+      },
+      {
+        "file": "region-setup/saved-corner-of-far-region.png",
+        "sha256": "1d7a22cc6ae71e2fe9eb2691e71f000fea2540ad2b4622abf17c9117808c145e",
+        "reviewed": true,
+        "note": "Close snow, dirt and stone slopes render; camera limits panorama. No loading overlay."
+      },
+      {
+        "file": "verified/committed-marker-area.png",
+        "sha256": "3846beefcbb6bd1cd0de8fdf21efa9faee21d5e8f4fdb0eb58356ed52a50065d",
+        "reviewed": true,
+        "note": "Birch forest, grass and flowers render; sunset limits detail. Gold block at Y250 and inventory are verified independently by control state, not this camera."
+      },
+      {
+        "file": "verified/initial.png",
+        "sha256": "4adfe71a75d8d2844e112e4f21878fc52efd73d39c914b3a069ff3b276eec5cf",
+        "reviewed": true,
+        "note": "Saved desert, cacti and water channel render; sunset limits detail in the final reopen."
+      }
+    ]
+  },
+  "supplementalConcurrency": "Overlaps independent three-seed functional cases in separate homes; primary45-minute run completed before this overlap. No isolated timing claim.",
+  "scope": "Actual installed native.dev7 client to final installed candidate on an ordinary scratch-save copy, committed gold block and diamond inventory, expected forced termination during active generation, repaired destination and repeated reopen. No power-loss, historical-preview or general performance guarantee."
+}

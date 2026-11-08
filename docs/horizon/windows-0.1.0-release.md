@@ -1,19 +1,19 @@
-# TerraForged 0.1.0 for Horizon: Windows candidate
+# TerraForged 0.1.0 for Horizon: Windows release
 
-**Qualification is in progress. This is not a published stable release.**
-The version number freezes the proposed package identity; it does not certify it.
-The replacement candidate uses the Windows GNU system allocator to address
-private-commit growth found in RC.1. Its fresh installed-build and sustained
-qualification are pending.
+The [0.1.0 release](https://github.com/TheApple05/TerraForged-Horizon/releases/tag/v0.1.0)
+ships the qualified RC.2 HMOD and launcher bytes. Windows GNU uses the system
+allocator to address private-commit growth found in RC.1. The final source
+archive also includes the completed qualification reports and corrected CI pin.
 
-The intended scope is Windows x64, Vulkan, Minecraft 26.3, singleplayer and the
+The supported release scope is Windows x64, Vulkan, Minecraft 26.3, singleplayer and the
 bundled `terraforged:default` overworld preset. This independent, unofficial
 native Rust port is separate from the Java 26.2 Fabric/NeoForge version.
 
 **Customize is disabled in this native version.** The preset editor has not
-been ported; world creation uses the bundled TerraForged default preset.
+been ported; world creation uses the bundled TerraForged default preset. Work
+on the editor follows shipment and does not change these frozen 0.1.0 assets.
 
-## Candidate downloads
+## Downloads
 
 - `terraforged-horizon-26.3-0.1.0.hmod`: whole native source/content package.
 - `terraforged-horizon-launcher-windows-x64-0.1.0.zip`: compatible fork launcher,
@@ -22,10 +22,10 @@ been ported; world creation uses the bundled TerraForged default preset.
 - `SHA256SUMS`: SHA-256 hashes of those files.
 
 No Minecraft assets, compiled game client, worlds, accounts or QA mods belong in
-these downloads. The final public bytes and their installed native build still
-need qualification. See [the current gates](stable-release-readiness.md).
+these downloads. See the [selected qualification results](../validation/horizon-0.1.0-v2/SUMMARY.json)
+and [retained qualification history](stable-release-readiness.md).
 
-## Installation procedure being qualified
+## Installation
 
 Use your own Minecraft Java ownership and a Prism installation containing
 Minecraft 26.3. Extract the launcher ZIP into a new folder and open Command
@@ -90,22 +90,39 @@ window; it disables upstream self-update for this fork process.
 6. Open `Start-TerraForged-Horizon.cmd`, choose Play, and select the TerraForged
    world type when creating a world. The Customize button remains disabled;
    use the default preset. Keep a backup before opening an existing
-   preview world. Upgrade support is pending the copied-world acceptance test.
+   preview world. A copied standalone native.dev7 world passed upgrade and
+   recovery checks; other historical previews have not been qualified.
 
 When the imported Minecraft session expires, refresh it in Prism and repeat the
 import command. Horizon cannot renew that session through Prism's Microsoft
 registration.
 
-## Scope and remaining acceptance
+## Qualification and limits
 
-The candidate retains the dev7 distance-12 terrain cache and adds the tested
+The release retains the dev7 distance-12 terrain cache and adds the tested
 bit-identical smoothing optimization and nonfinite terrace guard. Retained
 tile payload is 75 MiB per sampler; other memory use is additional.
 
-Three source-built seeds, six clean exits, stored native biome comparisons,
-death/respawn state checks and copied metadata recovery pass. Those observations
-do not qualify a different final installed artifact. Sustained exploration,
-preview upgrade/interrupted-session checks and exact installed Play are pending.
+The public RC.2 downloads were verified and genuinely compiled through the
+compatible launcher. Authenticated installed CLI Play passed ownership checks,
+healthy survival creation and a clean game exit. The user previously confirmed
+GUI Play/new-world entry with RC.1; this is separately scoped evidence, not a
+new manual GUI confirmation of RC.2. The launcher executable is unchanged.
+
+The final native client passed three additional seeds (six clean exits),
+creation/death/respawn, all 17 classic targets, a 45-minute exploration session
+with 156 fresh central regions, and clean save/reopen. Independent readers
+checked 84,480 stored quart biome values across the suite, including repeated
+origin checks. The primary exploration run did not overlap the supplemental
+seed/upgrade clients; those supplemental cases overlapped in separate homes.
+This does not establish isolated frame pacing, speedup or hardware minimums.
+
+A scratch copy from standalone native.dev7 preserved a gold block and diamond
+inventory across upgrade, one intentional owned-process kill during active
+generation, recovery and repeated reopen. This does not simulate power loss or
+torn-sector writes. Existing user worlds were not used for destructive tests.
+All recorded screenshots were reviewed with underground, cloud and nighttime
+camera limits; complete historical scenery fidelity is not claimed.
 
 Other operating systems, dedicated servers/multiplayer, arbitrary modpacks,
 Java's preset editor/custom settings, and complete historical Java feature or

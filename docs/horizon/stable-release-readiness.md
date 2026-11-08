@@ -1,7 +1,39 @@
 # Stable release qualification
 
 Target: Windows x64, Horizon / Minecraft 26.3, default TerraForged preset.
-Status: **not yet qualified for stable**. A date is not an acceptance result.
+Status: **final installed default-preset candidate qualified for Windows 0.1.0**.
+
+The [final selected results](../validation/horizon-0.1.0-v2/SUMMARY.json) replace
+the earlier open memory gate: the real installed replacement ran 2,717.625
+seconds, visited all 17 classic targets and 156 fresh central regions, then
+saved/reopened and exited cleanly twice. Reported peak Windows private commit
+was 2,574.8 MiB; maximum sampled current commit was 2,116.5 MiB. This is a
+bounded functional qualification, not a multi-hour or isolated FPS benchmark.
+
+Three additional seeds passed six clean exits and 13,824 stored-value checks.
+A copied standalone native.dev7 world passed upgrade, marker/inventory
+preservation, one intentional owned kill during active generation and repeated
+reopen. Independent readers checked 84,480 saved quart biome values across the
+suite, including repeated origin checks. All recorded screenshots were reviewed;
+underground, foliage, cloud and nighttime camera limits are explicit.
+
+The exact replacement also passed ownership-gated installed CLI Play, healthy
+survival creation and a clean game exit. Earlier user-confirmed GUI Play was
+RC.1; it is not represented as a new manual GUI confirmation of RC.2. The
+launcher source and executable are unchanged. Computer use remains off.
+
+The release promotes the verified RC.2 HMOD/launcher bytes. The source archive
+is rebuilt from the final merged source, with all 84 production inputs checked
+against the frozen package. Publication separately verifies final CI, merged
+tree identity, uploaded hashes and fresh unauthenticated public downloads.
+Customize stays disabled in 0.1.0 by the user's decision; implementation follows
+shipment in separate development work. TerraForged alone, default preset,
+singleplayer and Windows x64 Vulkan define the qualified scope.
+
+## Historical gates and retained attempts
+
+The sections below retain the earlier requirements, incomplete states and
+failed attempts in chronological context; their pending wording is historical.
 
 The published native.dev7 remains an experimental preview. The smoothing and
 terrace fixes on this branch are a candidate; existing client binaries and

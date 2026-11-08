@@ -1,0 +1,27 @@
+{
+  "status": "passed-windows-default-preset-release-qualification",
+  "asOfUtc": "2026-11-08T23:36:14.196229+00:00",
+  "scope": "Windows x64 Vulkan, Minecraft 26.3, singleplayer, bundled default preset, TerraForged alone. No whole-Horizon-client stability certification.",
+  "completed": [
+    "Exact public RC.2 HMOD/launcher downloads and genuine native compilation with verified prepared resources",
+    "Actual generation session exceeding 2700 seconds, all 17 classic targets and clean save/reopen",
+    "Independent classic and early/mid/late saved FULL biome-vector comparisons",
+    "Authenticated installed launcher Play, healthy default survival creation and clean exit; earlier RC.1 user GUI evidence separately scoped",
+    "Three additional final-client seeds and six clean exits",
+    "Copied standalone native.dev7 upgrade, marker/inventory preservation, one intentional owned kill during active generation and repeated reopen",
+    "All recorded image reviews with explicit camera/nighttime limits"
+  ],
+  "sourceCiBaseline": {
+    "head": "b52b9ebe01d29c3d644742f96c64a1c000e30609",
+    "checksPassed": 7,
+    "scope": "Production/source-tool pin baseline. Final release metadata records the final source archive commit; this report avoids self-referential commit identities."
+  },
+  "storedQuartComparisons": 84480,
+  "publicationScope": "This is qualification evidence. Public release existence, final source archive identity and asset checksums are supplied by the release metadata and downloads.",
+  "limitations": [
+    "Customize is disabled in 0.1.0 by user-approved scope; implement it after shipment",
+    "Other OS, multiplayer/dedicated and arbitrary mods/modpacks unqualified",
+    "Full historical Java editor/feature/scenery/spawn-placement parity unqualified",
+    "No power-loss/torn-sector atomicity, isolated FPS/speedup, hardware-minimum or multi-hour-soak claim"
+  ]
+}
