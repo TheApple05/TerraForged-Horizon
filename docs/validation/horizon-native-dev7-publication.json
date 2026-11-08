@@ -1,0 +1,54 @@
+{
+  "status": "published-public-downloads-byte-verified",
+  "releaseId": 438051969,
+  "tag": "v0.1.0-native.dev7",
+  "targetCommit": "a074f9c13f6a0cbf8c3dcaef53945c702fdda50d",
+  "url": "https://github.com/TheApple05/TerraForged-Horizon/releases/tag/v0.1.0-native.dev7",
+  "assets": [
+    {
+      "id": 722991091,
+      "name": "terraforged-horizon-26.3-0.1.0-native.dev7.hmod",
+      "size": 160194,
+      "sha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355",
+      "browserDownloadUrl": "https://github.com/TheApple05/TerraForged-Horizon/releases/download/untagged-d76c0d69b65d0c658cd1/terraforged-horizon-26.3-0.1.0-native.dev7.hmod"
+    },
+    {
+      "id": 722991117,
+      "name": "terraforged-horizon-launcher-windows-x64-native.dev7.zip",
+      "size": 21044686,
+      "sha256": "31204be698ac665162bfe760d5a4096a0a6c32af72d4e0f2d66dc0a4843a8ecb",
+      "browserDownloadUrl": "https://github.com/TheApple05/TerraForged-Horizon/releases/download/untagged-d76c0d69b65d0c658cd1/terraforged-horizon-launcher-windows-x64-native.dev7.zip"
+    },
+    {
+      "id": 722991171,
+      "name": "SHA256SUMS",
+      "size": 239,
+      "sha256": "e3b7948cf8524e3a07e7693dce5a84bfd94d3f8f75f333860ef7b389fc5f4b72",
+      "browserDownloadUrl": "https://github.com/TheApple05/TerraForged-Horizon/releases/download/untagged-d76c0d69b65d0c658cd1/SHA256SUMS"
+    }
+  ],
+  "publishedAtUtc": "2026-11-08T05:25:47Z",
+  "publicVerificationAtUtc": "2026-11-08T05:25:57.718269+00:00",
+  "publicDownloadFiles": [
+    {
+      "name": "terraforged-horizon-26.3-0.1.0-native.dev7.hmod",
+      "bytes": 160194,
+      "sha256": "ab511d1e0daa3670061a91d3ce3900127cb702ddfb60603d2d5dee9fe59fb355"
+    },
+    {
+      "name": "terraforged-horizon-launcher-windows-x64-native.dev7.zip",
+      "bytes": 21044686,
+      "sha256": "31204be698ac665162bfe760d5a4096a0a6c32af72d4e0f2d66dc0a4843a8ecb"
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 239,
+      "sha256": "e3b7948cf8524e3a07e7693dce5a84bfd94d3f8f75f333860ef7b389fc5f4b72"
+    }
+  ],
+  "qaLauncherWindow": {
+    "pid": 28372,
+    "exitCode": 0,
+    "source": "Owned launcher supervisor output; GUI interactions and Play never exercised."
+  }
+}

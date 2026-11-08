@@ -14,6 +14,10 @@ The [reviewed issue and recovery report](docs/horizon/issues-2026-11-07.md) reco
 
 The native.dev5 [carver performance update](docs/horizon/native-carver-performance.md) preserves six exact terrain snapshots and reduces median generation time for the measured batch from 5.98 to 1.85 seconds. Native.dev7's [fir-forest investigation](docs/horizon/native-fir-investigation.md) identifies tile-cache rebuilding and retains the distance-12 working set, at a default retained tile-payload cost of 75 MiB per sampler (56.25 MiB more than before). Controlled full-client performance and sustained background-ring overlap remain unqualified.
 
+## Experimental download
+
+The [native.dev7 release](https://github.com/TheApple05/TerraForged-Horizon/releases/tag/v0.1.0-native.dev7) includes the tested source HMOD, compatible static Windows x64 launcher and checksums. All public downloads were checked against the local qualified bytes. Read the [installation notes and remaining limits](docs/horizon/native-dev7-release.md) before using it in a pack.
+
 ## Build and verify
 
 With stable Rust installed, from this repository root:
