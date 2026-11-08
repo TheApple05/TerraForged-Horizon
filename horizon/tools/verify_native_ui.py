@@ -58,6 +58,16 @@ def copy_prepared_resources(source,destination,progress,workers=8):
         raise
     return dict(statistics)
 
+def prepare_save_fixture(workspace,source):
+    dest=workspace/'crates/horizon-client-lib/qa/terraforged_save_fixture.rs'
+    if dest.exists() and dest.read_bytes()!=source.read_bytes():raise ValueError('Existing QA probe differs')
+    dest.parent.mkdir(parents=True,exist_ok=True)
+    if not dest.exists():shutil.copy2(source,dest)
+    manifest=workspace/'crates/horizon-client-lib/Cargo.toml';text=manifest.read_text(encoding='utf-8')
+    addition='\n[[bin]]\nname = "terraforged_save_fixture"\npath = "qa/terraforged_save_fixture.rs"\n'
+    if 'name = "terraforged_save_fixture"' not in text:manifest.write_text(text+addition,encoding='utf-8',newline='\n')
+    elif addition.strip() not in text:raise ValueError('Conflicting fixture target')
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ('workspace','resources','hmod','report'):parser.add_argument('--'+name,required=True,type=Path)
@@ -207,9 +217,9 @@ def main():
             report['preparedResourceCopy']=value;checkpoint('copying prepared resources')
         copy_prepared_resources(source,resources,copy_progress)
         if not all(sha(resources/name)==digest for name,digest in before.items()):raise ValueError('Copied resources differ')
-        probe=workspace/'crates/horizon-client-lib/qa/terraforged_save_fixture.rs'
-        if probe.read_bytes()!=(ROOT/'horizon/tests/rust/save_fixture_probe.rs').read_bytes():raise ValueError('Staged save probe differs')
-        report['fixtureProbeSha256']=sha(probe)
+        manifest=workspace/'crates/horizon-client-lib/Cargo.toml';report['qaManifestBeforeSha256']=sha(manifest)
+        prepare_save_fixture(workspace,ROOT/'horizon/tests/rust/save_fixture_probe.rs')
+        report['qaManifestAfterSha256']=sha(manifest);report['fixtureProbeSha256']=sha(workspace/'crates/horizon-client-lib/qa/terraforged_save_fixture.rs')
         checkpoint('building exact staged artifacts')
         run(['cargo','+stable','build','--offline','--locked','--manifest-path',str(workspace/'Cargo.toml'),'--profile','fast','-p','horizon-client','-p','horizon-client-lib','--bin','horizon-client','--bin','horizon-ctl','--bin','terraforged_save_fixture'],'build',1200)
         report['artifactsSha256']={p.name:sha(p) for p in (client,ctl,fixture)}
@@ -222,6 +232,8 @@ def main():
             if world:command+=['--world',str(world)]
             checkpoint(f'starting client {index}')
             started=time.monotonic();process=subprocess.Popen(command,cwd=game,env=env,stdout=log,stderr=subprocess.STDOUT,creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
+            report.setdefault('clientLaunches',[]).append({'index':index,'pid':process.pid,'command':command,'startedAtUtc':dt.datetime.now(dt.timezone.utc).isoformat()})
+            checkpoint(f'running client {index}')
             for attempt in range(180):
                 if process.poll() is not None:raise RuntimeError('Client exited during startup')
                 try:control(['state'],5);break
@@ -289,7 +301,9 @@ def main():
             report['runs'].append({'index':index,'exitCode':code,'elapsedSeconds':time.monotonic()-started,'state':state,'visibleTerrainState':rendered,'savedBiomeChecks':saved,'screenshot':image,'gameLogSha256':sha(work/f'game-{index}.log')})
             checkpoint(f'checked saved FULL chunks {index}')
         report['status']='passed-native-ui-create-reopen-smoke-awaiting-image-review';report['renderedImagesNeedReview']=True
-    except Exception as error:report['status']='failed';report['error']=str(error)
+    except Exception as error:
+        report['status']='failed';report['error']=str(error)
+        if process is not None:report['clientExitCodeOnError']=process.poll()
     finally:
         if process is not None and process.poll() is None:
             try:subprocess.run([str(ctl),'--socket',str(socket),'quit'],cwd=game,env=env,capture_output=True,timeout=20);process.wait(timeout=20)

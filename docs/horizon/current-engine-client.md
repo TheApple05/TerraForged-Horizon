@@ -1,6 +1,6 @@
 # Current Horizon engine and client evidence
 
-For the latest native.dev4 all-17 client/save acceptance and current limitations,
+For the latest native.dev5 all-17 client/save acceptance and current limitations,
 see [classic runtime integration](classic-runtime-integration.md) and the
 [reviewed recovery report](issues-2026-11-07.md). The records below retain their
 earlier engine pins and narrower acceptance scopes.
@@ -75,9 +75,11 @@ accepts rendering smoke only. Client terrain queues are empty at the sampled
 readiness points; limited-distance silhouettes are visible, and this does not
 prove all server generation tasks or terrain-fidelity acceptance.
 
-The subsequent UI checks cover ordinary creation and a healthy natural survival
-spawn, while source spawn-algorithm parity remains open. Structures, all 17 native classic biome
-resources and their custom features, source carver configuration, standard
-launcher installation, controlled native performance and mod combinations
-remain open. These native checks do not change the Java 26.2 Fabric/NeoForge
-dev23 release or its separate acceptance results.
+At this earlier client-only checkpoint, ordinary UI creation, natural survival
+spawn, structures, all 17 native classic biome resources and their custom
+features remained unqualified. The latest linked integration record closes its
+documented creation, spawn, all-17 rendering and save scopes. Source spawn-height
+and whole-feature Java parity, source carver configuration, full structure
+coverage, standard launcher installation, controlled native performance and mod
+combinations remain open. These native checks do not rerun or supersede the
+separate Java 26.2 Fabric/NeoForge release evidence.

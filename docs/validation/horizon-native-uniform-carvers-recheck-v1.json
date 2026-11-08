@@ -1,0 +1,269 @@
+{
+  "status": "passed-uniform-carver-native-snapshot-comparison",
+  "startedAtUtc": "2026-11-08T00:12:59.612650+00:00",
+  "runs": [
+    {
+      "label": "recheck-0-baseline",
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\cache-capacity-experiment-v1\\baseline-cap8.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--size",
+        "5",
+        "--threads",
+        "4",
+        "--center",
+        "-7936",
+        "4753",
+        "--no-decorate",
+        "--json",
+        "--no-map",
+        "--world-stem",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+        "--snapshot",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\recheck-0-baseline"
+      ],
+      "executableSha256": "afa0e85945b24a6c1b9a95061c76dc26e37929a58b807bb17685cc5743ae555b",
+      "status": "completed",
+      "exitCode": 0,
+      "logSha256": "d36e2f02ab46b76cd348f1d5afb94e509104a761f08a557c45f0870f8a203a59",
+      "bench": [
+        {
+          "biomes_ms_chunk": 208.012248,
+          "carvers_ms_chunk": 785.027736,
+          "chunks": 25,
+          "cpu_s": 0.0,
+          "noise_ms_chunk": 5.064864,
+          "phase": "proto",
+          "structures_ms_chunk": 50.336264,
+          "surface_ms_chunk": 6.215568000000001,
+          "threads": 4,
+          "wall_s": 6.5959345
+        }
+      ],
+      "snapshotSha256": "bb6a44a89bd28672eab03f9a05c4f50b710b92ff3e6b4dce3a99dda46b76e39f",
+      "snapshotMatchesBaseline": true
+    },
+    {
+      "label": "recheck-0-uniform",
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\chunkgen_native_stem.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--size",
+        "5",
+        "--threads",
+        "4",
+        "--center",
+        "-7936",
+        "4753",
+        "--no-decorate",
+        "--json",
+        "--no-map",
+        "--world-stem",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+        "--snapshot",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\recheck-0-uniform"
+      ],
+      "executableSha256": "b1682ab1bc51f07ad7fcb4e6d66d32d3a69a3ee7ef3f3ea7c090a30d0ca1b6f6",
+      "status": "completed",
+      "exitCode": 0,
+      "logSha256": "b42a81aff6d97c61cab4257ca6af7f8e9beb684f3bb4adb5db298c1db5e3fd52",
+      "bench": [
+        {
+          "biomes_ms_chunk": 156.941044,
+          "carvers_ms_chunk": 0.664408,
+          "chunks": 25,
+          "cpu_s": 0.0,
+          "noise_ms_chunk": 3.61934,
+          "phase": "proto",
+          "structures_ms_chunk": 109.040812,
+          "surface_ms_chunk": 3.95538,
+          "threads": 4,
+          "wall_s": 1.8263009000000001
+        }
+      ],
+      "snapshotSha256": "bb6a44a89bd28672eab03f9a05c4f50b710b92ff3e6b4dce3a99dda46b76e39f",
+      "snapshotMatchesBaseline": true
+    },
+    {
+      "label": "recheck-1-baseline",
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\cache-capacity-experiment-v1\\baseline-cap8.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--size",
+        "5",
+        "--threads",
+        "4",
+        "--center",
+        "-7936",
+        "4753",
+        "--no-decorate",
+        "--json",
+        "--no-map",
+        "--world-stem",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+        "--snapshot",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\recheck-1-baseline"
+      ],
+      "executableSha256": "afa0e85945b24a6c1b9a95061c76dc26e37929a58b807bb17685cc5743ae555b",
+      "status": "completed",
+      "exitCode": 0,
+      "logSha256": "eea816216e31a976f79c9611abe8cd76013a548b3702b6e1d29cc07db0ad9ec7",
+      "bench": [
+        {
+          "biomes_ms_chunk": 148.490176,
+          "carvers_ms_chunk": 674.1085800000001,
+          "chunks": 25,
+          "cpu_s": 0.0,
+          "noise_ms_chunk": 3.8807439999999995,
+          "phase": "proto",
+          "structures_ms_chunk": 36.5908,
+          "surface_ms_chunk": 4.627392,
+          "threads": 4,
+          "wall_s": 5.4291203
+        }
+      ],
+      "snapshotSha256": "bb6a44a89bd28672eab03f9a05c4f50b710b92ff3e6b4dce3a99dda46b76e39f",
+      "snapshotMatchesBaseline": true
+    },
+    {
+      "label": "recheck-1-uniform",
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\chunkgen_native_stem.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--size",
+        "5",
+        "--threads",
+        "4",
+        "--center",
+        "-7936",
+        "4753",
+        "--no-decorate",
+        "--json",
+        "--no-map",
+        "--world-stem",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+        "--snapshot",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\recheck-1-uniform"
+      ],
+      "executableSha256": "b1682ab1bc51f07ad7fcb4e6d66d32d3a69a3ee7ef3f3ea7c090a30d0ca1b6f6",
+      "status": "completed",
+      "exitCode": 0,
+      "logSha256": "81992086fac76c83aa12364e3cfddcae4ef6717a78130b1b6549cf7513d1ffe4",
+      "bench": [
+        {
+          "biomes_ms_chunk": 152.921168,
+          "carvers_ms_chunk": 0.665156,
+          "chunks": 25,
+          "cpu_s": 0.0,
+          "noise_ms_chunk": 3.7252479999999997,
+          "phase": "proto",
+          "structures_ms_chunk": 114.279844,
+          "surface_ms_chunk": 4.143892,
+          "threads": 4,
+          "wall_s": 1.8484551
+        }
+      ],
+      "snapshotSha256": "bb6a44a89bd28672eab03f9a05c4f50b710b92ff3e6b4dce3a99dda46b76e39f",
+      "snapshotMatchesBaseline": true
+    },
+    {
+      "label": "recheck-2-baseline",
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\cache-capacity-experiment-v1\\baseline-cap8.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--size",
+        "5",
+        "--threads",
+        "4",
+        "--center",
+        "-7936",
+        "4753",
+        "--no-decorate",
+        "--json",
+        "--no-map",
+        "--world-stem",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+        "--snapshot",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\recheck-2-baseline"
+      ],
+      "executableSha256": "afa0e85945b24a6c1b9a95061c76dc26e37929a58b807bb17685cc5743ae555b",
+      "status": "completed",
+      "exitCode": 0,
+      "logSha256": "177f0c92765dfc4761f79f88877a415c74f3e0239ba8bfc94073feb96f8b6ad4",
+      "bench": [
+        {
+          "biomes_ms_chunk": 159.500132,
+          "carvers_ms_chunk": 751.4289719999999,
+          "chunks": 25,
+          "cpu_s": 0.0,
+          "noise_ms_chunk": 4.031548,
+          "phase": "proto",
+          "structures_ms_chunk": 37.445448,
+          "surface_ms_chunk": 4.328968000000001,
+          "threads": 4,
+          "wall_s": 5.9824508
+        }
+      ],
+      "snapshotSha256": "bb6a44a89bd28672eab03f9a05c4f50b710b92ff3e6b4dce3a99dda46b76e39f",
+      "snapshotMatchesBaseline": true
+    },
+    {
+      "label": "recheck-2-uniform",
+      "command": [
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\staged\\target\\fast\\examples\\chunkgen_native_stem.exe",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-classic-final-v1\\horizon-native-classic-ui-final-v3\\prepared-resources",
+        "--seed",
+        "8675309",
+        "--size",
+        "5",
+        "--threads",
+        "4",
+        "--center",
+        "-7936",
+        "4753",
+        "--no-decorate",
+        "--json",
+        "--no-map",
+        "--world-stem",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-features\\build\\qa\\horizon\\native-generator-profile-v1\\native-stem.json",
+        "--snapshot",
+        "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\recheck-2-uniform"
+      ],
+      "executableSha256": "b1682ab1bc51f07ad7fcb4e6d66d32d3a69a3ee7ef3f3ea7c090a30d0ca1b6f6",
+      "status": "completed",
+      "exitCode": 0,
+      "logSha256": "9666610d7eb315cb66b9bde1d3fd687f2f15ccfb5f04fb01281129e57d6cc1da",
+      "bench": [
+        {
+          "biomes_ms_chunk": 168.17734800000002,
+          "carvers_ms_chunk": 0.737788,
+          "chunks": 25,
+          "cpu_s": 0.0,
+          "noise_ms_chunk": 3.650216,
+          "phase": "proto",
+          "structures_ms_chunk": 112.97744399999999,
+          "surface_ms_chunk": 4.204676,
+          "threads": 4,
+          "wall_s": 1.9288655000000001
+        }
+      ],
+      "snapshotSha256": "bb6a44a89bd28672eab03f9a05c4f50b710b92ff3e6b4dce3a99dda46b76e39f",
+      "snapshotMatchesBaseline": true
+    }
+  ],
+  "baselineSnapshotSha256": "bb6a44a89bd28672eab03f9a05c4f50b710b92ff3e6b4dce3a99dda46b76e39f",
+  "scope": "Alternating baseline and optimized processes, 25 cold-steppe proto chunks, four workers, structures enabled, decoration disabled. Other project compilation may contend for CPU. Not general native streaming/FPS acceptance.",
+  "previousReportSha256": "0f5a547224baca3b9ed903ca22f54516c025a7b8d81a1dc985845f578b1b6821",
+  "updatedAtUtc": "2026-11-08T00:13:42.456720+00:00",
+  "completedAtUtc": "2026-11-08T00:13:42.456720+00:00"
+}

@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "reviewKind": "read-only screenshot review",
+  "reviewedAtUtc": "2026-11-08T00:53:04.310089+00:00",
+  "status": "partial-failed-run-no-final-pass",
+  "runReportPath": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\docs\\validation\\horizon-native-classic-ui-uniform-v2.json",
+  "runReportSha256": "075c8d244783c97bbf598220236b31e7f8b306460c36f8fcf92a65540a34eee0",
+  "runReportStatus": "failed",
+  "classicViewsInspected": 10,
+  "expectedClassicViews": 17,
+  "totalOriginalsInspected": 13,
+  "expectedTotalOriginals": 21,
+  "allReportedScreenshotHashesMatch": true,
+  "limits": [
+    "Raw v2 failed after 10 of 17 classic views; no completed save/reopen acceptance or all17 claim.",
+    "game-0.png was inspected, but failed raw report supplies no expected screenshot hash.",
+    "High cameras and RD6 cause clipped terrain/foliage and fog; screenshots do not prove geometric source parity.",
+    "No blank, loading screen, checkerboard or obvious missing textures in inspected originals.",
+    "No game/control/process/source or player-profile operations performed."
+  ],
+  "screenshots": [
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\native-preset-ui.png",
+      "actualSha256": "5dce799e747e30530868001708b8f4686ffd5d085aac1bbf983b637201342808",
+      "reportedSha256": "5dce799e747e30530868001708b8f4686ffd5d085aac1bbf983b637201342808",
+      "hashMatchesReport": true,
+      "observation": "TerraForged world type, seed8675309, structures ON and bonus chest OFF are legible; UI renders correctly.",
+      "visualPass": true,
+      "limited": false
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\natural-spawn.png",
+      "actualSha256": "173362ada24c74d136261f722a064abda0711dce430aa1b1d7f41a57bc75eab5",
+      "reportedSha256": "173362ada24c74d136261f722a064abda0711dce430aa1b1d7f41a57bc75eab5",
+      "hashMatchesReport": true,
+      "observation": "Grass, dirt, stone and snow terrain render coherently at ground level; full health and food HUD.",
+      "visualPass": true,
+      "limited": false
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\game-0.png",
+      "actualSha256": "b9075a347b1be831396fd048d41d6b647a3147ea4f896f5d5ef31c2f50b5fb21",
+      "reportedSha256": null,
+      "hashMatchesReport": null,
+      "observation": "Coherent mixed birch/conifer forest canopy, flowers, grass and dirt visible.",
+      "visualPass": true,
+      "limited": false
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\classic-cold_steppe.png",
+      "actualSha256": "3df0171128d3209200b8531c215f5b573b299649404127aa08c044c8a483bc45",
+      "reportedSha256": "3df0171128d3209200b8531c215f5b573b299649404127aa08c044c8a483bc45",
+      "hashMatchesReport": true,
+      "observation": "Snow and grass cover steep mountain terrain; high camera and RD6 create hard far-edge cutoff.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\classic-bryce.png",
+      "actualSha256": "2d9c4d5ac26b484f85e9c5702e14506c2a0a1515905065d44150d18bbed0fe1e",
+      "reportedSha256": "2d9c4d5ac26b484f85e9c5702e14506c2a0a1515905065d44150d18bbed0fe1e",
+      "hashMatchesReport": true,
+      "observation": "Orange and striped hoodoo pillars and grass/stone terrain visibly render; most frame is sky with RD6 fog/cutoff.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\classic-cold_marshland.png",
+      "actualSha256": "0696ca1c36a2c2669f9944a4ae46a1cdfc1422e1176ad1069d82167627018900",
+      "reportedSha256": "0696ca1c36a2c2669f9944a4ae46a1cdfc1422e1176ad1069d82167627018900",
+      "hashMatchesReport": true,
+      "observation": "Large conifers, patchy orange/grass ground, shallow water and rocks render; isolated leaf fragments occur at distant clipped edges.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\classic-fir_forest.png",
+      "actualSha256": "61deaa01c60f041b6ec6a6d0b57ce6c21ea4a8e37140972706da196a49a4cf36",
+      "reportedSha256": "61deaa01c60f041b6ec6a6d0b57ce6c21ea4a8e37140972706da196a49a4cf36",
+      "hashMatchesReport": true,
+      "observation": "Fir/conifer forest, small water depression and structure details render; peripheral clipped foliage.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\classic-flower_plains.png",
+      "actualSha256": "f611ac1cd5861fd8f85af0a92d9d7dffc306b566d134b0a5cb4a3fe9c795bbdc",
+      "reportedSha256": "f611ac1cd5861fd8f85af0a92d9d7dffc306b566d134b0a5cb4a3fe9c795bbdc",
+      "hashMatchesReport": true,
+      "observation": "Green terrain, mixed foliage and scattered colored flowers render; clipped tree and terrain edges.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\classic-frozen_lake.png",
+      "actualSha256": "866b05a67df7615d5377c183feca08feab5de0a018f5adba7d0eb64f72b9c0dd",
+      "reportedSha256": "866b05a67df7615d5377c183feca08feab5de0a018f5adba7d0eb64f72b9c0dd",
+      "hashMatchesReport": true,
+      "observation": "Broad textured frozen lake, snowy banks, conifers and ice-spike features render; abrupt far edges.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\classic-frozen_marsh.png",
+      "actualSha256": "fbdf3fdde741219828b4702293628c6578844dbc2f93ccdd49aa055cdadc6ccf",
+      "reportedSha256": "fbdf3fdde741219828b4702293628c6578844dbc2f93ccdd49aa055cdadc6ccf",
+      "hashMatchesReport": true,
+      "observation": "Snow-covered marsh islands, textured ice channels, snowy conifers and reeds render coherently.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\classic-lake.png",
+      "actualSha256": "eeadb41c1e766bab3aad5ebff28b91d0904a0ffcef256486759c01b03bf0bad0",
+      "reportedSha256": "eeadb41c1e766bab3aad5ebff28b91d0904a0ffcef256486759c01b03bf0bad0",
+      "hashMatchesReport": true,
+      "observation": "Lake shoreline, transparent textured water and underwater plants, grassy terraces, sand and stone banks render coherently.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\classic-marshland.png",
+      "actualSha256": "469f1d2b00daa1225e52273f9faa3aeeb16fb5a2f3b60fda4203976a17cb801c",
+      "reportedSha256": "469f1d2b00daa1225e52273f9faa3aeeb16fb5a2f3b60fda4203976a17cb801c",
+      "hashMatchesReport": true,
+      "observation": "Steep dirt/grass slope, exposed stone, reeds and patchy marsh ground with distant water render; slope-facing camera limits whole-biome assessment.",
+      "visualPass": true,
+      "limited": true
+    },
+    {
+      "path": "C:\\Users\\Main\\Documents\\Codex\\TerraForged-Horizon-performance\\build\\qa\\horizon\\native-uniform-carvers-v1\\horizon-native-classic-ui-uniform-v2\\classic-savanna_scrub.png",
+      "actualSha256": "59c1fe750a10995ff38e72eb0d5f8034c9e6ab178b5e1964b8ca5ec9430d8334",
+      "reportedSha256": "59c1fe750a10995ff38e72eb0d5f8034c9e6ab178b5e1964b8ca5ec9430d8334",
+      "hashMatchesReport": true,
+      "observation": "Dry yellow-green terraces meet pale sand and layered terracotta; coherent textures with high-camera RD6 clipped extent.",
+      "visualPass": true,
+      "limited": true
+    }
+  ]
+}

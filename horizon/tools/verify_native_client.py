@@ -6,6 +6,7 @@ It does not qualify UI creation, natural spawn, native features or performance.
 from __future__ import annotations
 import argparse, datetime as dt, hashlib, json, os, shutil, subprocess, time
 from pathlib import Path
+from verify_native_ui import prepare_save_fixture
 ROOT=Path(__file__).resolve().parents[2]
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -46,15 +47,10 @@ def main():
         # prepared resources. This never invokes a downloader or Java exporter.
         shutil.copytree(source_resources,resources)
         if not all(sha(resources/name)==digest for name,digest in before.items()):raise ValueError('Prepared resource copy differs from the recorded inputs')
-        probe=ROOT/'horizon/tests/rust/save_fixture_probe.rs';dest=workspace/'crates/horizon-client-lib/qa/terraforged_save_fixture.rs'
-        if dest.exists() and dest.read_bytes()!=probe.read_bytes():raise ValueError('Existing QA probe differs')
-        dest.parent.mkdir(parents=True,exist_ok=True)
-        if not dest.exists():shutil.copy2(probe,dest)
-        manifest=workspace/'crates/horizon-client-lib/Cargo.toml';text=manifest.read_text(encoding='utf-8')
-        addition='\n[[bin]]\nname = "terraforged_save_fixture"\npath = "qa/terraforged_save_fixture.rs"\n'
+        probe=ROOT/'horizon/tests/rust/save_fixture_probe.rs'
+        manifest=workspace/'crates/horizon-client-lib/Cargo.toml'
         report['qaManifestBeforeSha256']=sha(manifest)
-        if 'name = "terraforged_save_fixture"' not in text:manifest.write_text(text+addition,encoding='utf-8',newline='\n')
-        elif addition.strip() not in text:raise ValueError('Conflicting fixture target')
+        prepare_save_fixture(workspace,probe)
         report['qaManifestAfterSha256']=sha(manifest);report['fixtureProbeSha256']=sha(probe)
         record_run(['cargo','+stable','build','--offline','--locked','--manifest-path',str(workspace/'Cargo.toml'),'--profile','fast','-p','horizon-client','-p','horizon-client-lib','--bin','horizon-client','--bin','horizon-ctl','--bin','terraforged_save_fixture'],'build',1200)
         suffix='.exe' if os.name=='nt' else '';target=workspace/'target/fast'

@@ -2,7 +2,15 @@
 
 This checkpoint installs the previously qualified policy and resource transformer
 in the native generation pipeline. It remains an experimental source build.
-Client/launcher installation and controlled native performance are separate gates.
+Standard launcher installation and controlled native performance are separate gates.
+
+The latest native.dev5 [performance and acceptance record](native-carver-performance.md)
+qualifies the conditional host carver optimization with a fresh all-17 UI run,
+two clean client exits and 56,832 stored biome comparisons. Its 23-image review
+includes two lower-camera pillar views from an unchanged copy of that saved
+world. Earlier native.dev4 evidence below remains historical, rather than being
+silently relabeled for the newer package. General performance, full Java feature
+parity and native mod combinations remain open.
 
 The native loader derives 17 biome definitions, three configured features and
 eight placed features from the player's existing prepared resources. Native

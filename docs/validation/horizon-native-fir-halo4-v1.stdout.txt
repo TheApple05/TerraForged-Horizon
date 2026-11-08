@@ -1,0 +1,13 @@
+loaded resources in 2.10s
+seeded generator in 207.39ms
+generated 361 proto chunks with 4 threads in 12.57s: 28.7 chunks/s (139.3 ms/chunk/thread)
+  cpu time 0.0 ms/chunk
+  per chunk: biomes 6.88 ms, noise 50.67 ms, surface 4.29 ms, carvers 5.62 ms
+BENCH {"biomes_ms_chunk":6.877339612188367,"carvers_ms_chunk":5.621138504155124,"chunks":361,"cpu_s":0.0,"noise_ms_chunk":50.66838836565097,"phase":"proto","structures_ms_chunk":71.7138083102493,"surface_ms_chunk":4.292431301939057,"threads":4,"wall_s":12.5706256}
+BENCH {"chunks":289,"phase":"decorate","wall_s":0.1936427}
+decorated 289 chunks in 193.64ms: 1492.4 chunks/s; feature roots placed 18300, unsupported 0, failed 0
+structure minecraft:abandoned_camp_taiga start chunk (1, -2733) box [-6, 55, -43741]..[33, 86, -43708]
+structure minecraft:mineshaft start chunk (8, -2721) box [93, -38, -43605]..[195, -23, -43443]
+structure minecraft:mineshaft start chunk (9, -2724) box [93, -19, -43668]..[215, 6, -43540]
+structure minecraft:trail_ruins start chunk (9, -2718) box [120, 62, -43539]..[168, 106, -43466]
+block entities: 13
