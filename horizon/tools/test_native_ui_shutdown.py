@@ -1,5 +1,5 @@
 """Exit evidence distinguishes an unexpected exit from verifier cleanup."""
-import subprocess,unittest
+import subprocess,sys,unittest
 from unittest.mock import Mock
 from verify_native_ui import shutdown_owned_client
 
@@ -20,12 +20,20 @@ class ShutdownTests(unittest.TestCase):
 
     def test_timeout_records_termination_and_kill_without_relabeling_initial_exit(self):
         process=Mock(pid=125);process.poll.return_value=None
-        process.wait.side_effect=[subprocess.TimeoutExpired('own-client',10),None]
+        process.wait.side_effect=[subprocess.TimeoutExpired('own-client',5),subprocess.TimeoutExpired('own-client',10),None]
         process.kill.side_effect=lambda:setattr(process.poll,'return_value',1)
         evidence={};quit_client=Mock(side_effect=RuntimeError('control unavailable'))
         shutdown_owned_client(process,quit_client,evidence)
         self.assertIsNone(evidence['initialExit']['exitCode']);self.assertEqual(evidence['finalExit']['exitCode'],1)
-        self.assertEqual(evidence['actions'],['control-quit','own-process-terminate','own-process-kill'])
+        self.assertEqual(evidence['actions'],['control-quit','wait-after-control-error','own-process-terminate','own-process-kill'])
         self.assertEqual(evidence['gracefulError'],'control unavailable')
+
+    def test_client_finishing_after_control_closes_keeps_its_natural_exit(self):
+        process=subprocess.Popen([sys.executable,'-c','import time; time.sleep(.1)'])
+        evidence={};quit_client=Mock(side_effect=RuntimeError('control already closed'))
+        shutdown_owned_client(process,quit_client,evidence)
+        self.assertIsNone(evidence['initialExit']['exitCode'])
+        self.assertEqual(evidence['finalExit']['exitCode'],0)
+        self.assertEqual(evidence['actions'],['control-quit','wait-after-control-error'])
 
 if __name__=='__main__':unittest.main()

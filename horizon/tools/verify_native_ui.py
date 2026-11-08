@@ -19,6 +19,10 @@ def shutdown_owned_client(process,quit_client,evidence):
             except Exception as error:
                 evidence['gracefulError']=str(error)
                 if process.poll() is None:
+                    evidence['actions'].append('wait-after-control-error')
+                    try:process.wait(timeout=5)
+                    except subprocess.TimeoutExpired:pass
+                if process.poll() is None:
                     evidence['actions'].append('own-process-terminate');process.terminate()
                     try:process.wait(timeout=10)
                     except subprocess.TimeoutExpired:
