@@ -35,6 +35,24 @@ def sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def pruned_workspace(package: dict) -> str:
+    return f'''[workspace]
+members = ["crates/horizon-core", "crates/horizon-world"]
+resolver = "2"
+[workspace.package]
+edition = {json.dumps(package["edition"])}
+license = {json.dumps(package["license"])}
+rust-version = {json.dumps(package["rust-version"])}
+[workspace.lints.clippy]
+too_many_arguments = "allow"
+type_complexity = "allow"
+needless_range_loop = "allow"
+large_enum_variant = "allow"
+[profile.dev]
+debug = 0
+'''
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--horizon", required=True, type=Path)
@@ -84,21 +102,8 @@ def main() -> int:
                 target = ((pristine / member.name).parent / member.linkname).resolve()
                 shutil.copy2(target, pristine / member.name)
     if not a.full:
-        (pristine / "Cargo.toml").write_text('''[workspace]
-members = ["crates/horizon-core", "crates/horizon-world"]
-resolver = "2"
-[workspace.package]
-edition = "2024"
-license = "MIT"
-rust-version = "1.85"
-[workspace.lints.clippy]
-too_many_arguments = "allow"
-type_complexity = "allow"
-needless_range_loop = "allow"
-large_enum_variant = "allow"
-[profile.dev]
-debug = 0
-''', encoding="utf-8", newline="\n")
+        package = tomllib.loads(subprocess.check_output(git + ["show", PIN + ":Cargo.toml"]).decode("utf-8"))["workspace"]["package"]
+        (pristine / "Cargo.toml").write_text(pruned_workspace(package), encoding="utf-8", newline="\n")
     (pristine / ".horizon-revision").write_text(PIN + "\n", encoding="utf-8")
     original_lock = tomllib.loads((pristine / "Cargo.lock").read_text(encoding="utf-8"))
     run = subprocess.run(["cargo", "+stable", "metadata", "--offline", "--locked", "--no-deps", "--format-version", "1", "--manifest-path", str(pristine / "Cargo.toml")] if a.full else ["cargo", "+stable", "update", "--offline", "--workspace", "--manifest-path", str(pristine / "Cargo.toml")], capture_output=True, text=True)
