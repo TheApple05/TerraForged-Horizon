@@ -6,7 +6,7 @@ tail is deterministic and checked against the pinned source before replacement.
 import argparse,hashlib,re,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-PIN='685a756423731d1cf9f511911eabe9ef023d10d4'
+PIN='a07dcafc796864a36270cf7678bd0abda4333dd3'
 MARKER='// Pipeline forwarding follows below. Regenerate with the source-only helper.'
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--horizon',type=Path,required=True);p.add_argument('--check',action='store_true');a=p.parse_args()
