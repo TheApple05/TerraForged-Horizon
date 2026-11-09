@@ -15,7 +15,7 @@ import tarfile
 import tomllib
 
 ROOT = Path(__file__).resolve().parents[2]
-PIN = "a07dcafc796864a36270cf7678bd0abda4333dd3"
+PIN = "592c3fed58b583f3158b75a58484764d5eeb4a82"
 
 
 def add_module(bundle: Path, manifest, file: str, name: str, source: str) -> None:

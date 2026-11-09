@@ -137,7 +137,7 @@ struct NativePipeline {
 }
 
 // Pipeline forwarding follows below. Regenerate with the source-only helper.
-// Trait source SHA256: 5a6b64bd523082bde905ed3da148a7bf260aac093282f32040810c44e3925ee0
+// Trait source SHA256: 499886ceecad3fb2e15ff12c554f0cd171391dace84272b021c8bcce36d86090
 impl SeededPipeline for NativePipeline {
     fn generate(
         &self,
@@ -156,6 +156,9 @@ impl SeededPipeline for NativePipeline {
     fn data(&self) -> &Arc<GeneratorData> {
         self.inner.data()
     }
+    fn native_context(&self) -> (&str, i64, bool) {
+        self.inner.native_context()
+    }
     fn cache_census(&self) -> CacheCensus {
         self.inner.cache_census()
     }
@@ -170,6 +173,9 @@ impl SeededPipeline for NativePipeline {
     }
     fn sea_level(&self) -> i32 {
         self.inner.sea_level()
+    }
+    fn disable_mob_generation(&self) -> bool {
+        self.inner.disable_mob_generation()
     }
     fn level(&self) -> (i32, i32) {
         self.inner.level()
