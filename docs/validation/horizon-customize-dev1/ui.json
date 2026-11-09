@@ -1,0 +1,316 @@
+{
+  "status": "passed-native-create-save-recreate-reopen",
+  "worldsCreatedInSameProcess": 3,
+  "controls": [
+    "Continent size",
+    "Continent irregularity",
+    "Terrain region size",
+    "Terrain height",
+    "Horizontal scale",
+    "Fancy mountains",
+    "Steppe weight",
+    "Plains weight",
+    "Hills weight",
+    "Dales weight",
+    "Plateau weight",
+    "Badlands weight",
+    "Torridonian weight",
+    "Mountain weight",
+    "Volcano weight",
+    "Biome size",
+    "Macro biome size",
+    "Biome warp scale",
+    "Biome warp strength",
+    "Temperature bias",
+    "Moisture bias",
+    "River count",
+    "Main river width",
+    "Branch river width",
+    "Lake chance",
+    "Wetland chance",
+    "Smoothing strength",
+    "Classic biome variants"
+  ],
+  "cancelAndResetPassed": true,
+  "freshWorldSettingsIndependent": true,
+  "recreateRestoresSavedSettings": true,
+  "editedWorldReopenedAndGeneratedFurtherChunks": true,
+  "cleanExitCodes": [
+    0,
+    0
+  ],
+  "views": [
+    {
+      "label": "edited natural spawn",
+      "status": "visible",
+      "camera": [
+        2297.5,
+        81.0,
+        -6652.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1367.4,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 829.5
+      }
+    },
+    {
+      "label": "edited origin",
+      "status": "visible",
+      "camera": [
+        8.5,
+        100.0,
+        8.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1488.9,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 888.9
+      }
+    },
+    {
+      "label": "edited distant",
+      "status": "visible",
+      "camera": [
+        16392.5,
+        100.0,
+        -32759.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1399.1,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 895.5
+      }
+    },
+    {
+      "label": "edited fir-site",
+      "status": "visible",
+      "camera": [
+        0.5,
+        100.0,
+        -43691.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1424.1,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 915.7
+      }
+    },
+    {
+      "label": "classic-off natural spawn",
+      "status": "visible",
+      "camera": [
+        2296.5,
+        124.0,
+        -6664.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1621.5,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 1019.6
+      }
+    },
+    {
+      "label": "classic-off origin",
+      "status": "visible",
+      "camera": [
+        8.5,
+        100.0,
+        8.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1683.1,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 1076.4
+      }
+    },
+    {
+      "label": "classic-off distant",
+      "status": "visible",
+      "camera": [
+        16392.5,
+        100.0,
+        -32759.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1600.0,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 1084.1
+      }
+    },
+    {
+      "label": "classic-off fir-site",
+      "status": "visible",
+      "camera": [
+        0.5,
+        100.0,
+        -43691.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1625.2,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 1109.4
+      }
+    },
+    {
+      "label": "default natural spawn",
+      "status": "visible",
+      "camera": [
+        2293.5,
+        118.0,
+        -6652.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1914.6,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 1204.6
+      }
+    },
+    {
+      "label": "default origin",
+      "status": "visible",
+      "camera": [
+        8.5,
+        100.0,
+        8.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1848.4,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 1234.8
+      }
+    },
+    {
+      "label": "default distant",
+      "status": "visible",
+      "camera": [
+        16392.5,
+        100.0,
+        -32759.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1761.5,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 1245.9
+      }
+    },
+    {
+      "label": "default fir-site",
+      "status": "visible",
+      "camera": [
+        0.5,
+        100.0,
+        -43691.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1888.6,
+        "allocator_peak_commit_mb": 2577.3,
+        "resident_mb": 1276.7
+      }
+    },
+    {
+      "label": "edited reopened further terrain",
+      "status": "visible",
+      "camera": [
+        32776.5,
+        100.0,
+        -65527.5
+      ],
+      "chunks": 637,
+      "process": {
+        "allocator_commit_mb": 1259.9,
+        "allocator_peak_commit_mb": 1298.6,
+        "resident_mb": 815.5
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "editor-defaults-page-1.png",
+      "sha256": "1000c383cc4790f1983c5ba6e73565aedb2c87815a10f958234a19a6e0378e46"
+    },
+    {
+      "file": "editor-defaults-page-2.png",
+      "sha256": "a318c75263442482e4bf1810334deab4b537cda57368aa028fd58d356e2e26f1"
+    },
+    {
+      "file": "editor-defaults-page-3.png",
+      "sha256": "61133f815caa571c15d321d2caab57cab04cde964eb4cede4e92e559d159022b"
+    },
+    {
+      "file": "editor-defaults-page-4.png",
+      "sha256": "edc4f430e8c876611098038c31461bb64a4fbdcb19993f4abc50adeab7c2d862"
+    },
+    {
+      "file": "editor-edited-page-1.png",
+      "sha256": "3e4058a8bd553e2bffb1f49356dc29249a0d5ba8de89dc4c70f868cee6aa8b0b"
+    },
+    {
+      "file": "editor-edited-page-2.png",
+      "sha256": "75feba8be9a8a0faf3060ae262ba390b8864a4fad2cc8a9cb3d815656fa9aab6"
+    },
+    {
+      "file": "editor-edited-page-3.png",
+      "sha256": "e89048b6e9c6b943809efcd4fb0c3964ec58ca0aa06905554bf4520a71f6256a"
+    },
+    {
+      "file": "editor-edited-page-4.png",
+      "sha256": "2ba99a867698339e0eb63d7b41e055f69a21e4c53ce4d3419f3e2854bac39847"
+    },
+    {
+      "file": "edited-natural-spawn.png",
+      "sha256": "67be2546a10c2ee47f2f23e40e802bd568bdbd1039cd79dd8d4063444fe3b081"
+    },
+    {
+      "file": "edited-terrain.png",
+      "sha256": "59776fc476e7791ee0f6247433e6452c9e28b0b74abd3cdeb6846f32d2473766"
+    },
+    {
+      "file": "editor-classic-off.png",
+      "sha256": "6daef0477b58a64134c659b420be5d342a53ffdd322ba3820e3a6f111974e1e6"
+    },
+    {
+      "file": "classic-off-natural-spawn.png",
+      "sha256": "57335565c7a9c069826a2edfcd0c9512b5b2f80677accdae583c50decbf36345"
+    },
+    {
+      "file": "classic-off-terrain.png",
+      "sha256": "01f94e42775610b207e74e0fd575532f140e9eecd054c9fca238c1366abed659"
+    },
+    {
+      "file": "default-natural-spawn.png",
+      "sha256": "a2e008e26115a3c0b8eb0aea30fcbe7662729268b58237cecb65b832edadb1fd"
+    },
+    {
+      "file": "default-terrain.png",
+      "sha256": "0f0f8a2339c402c42cab52da57c3f2202cc3dc1ab8cf60d8ee32aecb89cf1a3d"
+    },
+    {
+      "file": "editor-recreate.png",
+      "sha256": "6e64cfaeb62e371c202a6f6c9aba1e152c1057475e500787f2985e4f164cc8c1"
+    },
+    {
+      "file": "edited-reopened.png",
+      "sha256": "29ef01eab86fda48e32f12b5e93a13d58751df76704876411712b5fcbafd2a37"
+    }
+  ],
+  "all17ImagesReviewed": true,
+  "review": "All four default/edited pages and Re-Create controls readable after shortening Horizontal scale. Natural survival screenshots show full health/food and terrain; spectator terrain views rendered. Reopen screenshot includes ordinary teleport chat overlay. No scenery/FPS benchmark claim.",
+  "notCovered": [
+    "native title key command refuses without a loaded world; keyboard logic covered by isolated Title test",
+    "other OS, multiplayer, arbitrary mods, full Java editor, map preview, import/export",
+    "long-duration editor-world stability"
+  ]
+}

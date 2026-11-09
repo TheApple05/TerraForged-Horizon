@@ -1,0 +1,22 @@
+{
+  "publicTree": "passed",
+  "rustfmt": "passed",
+  "fullWorkspaceClippyWarningsDenied": "passed",
+  "doctests": "passed",
+  "isolatedCustomWorldPresetIntegration": "passed: save/read/refusal and actual Title mouse/keyboard/Done/Cancel/Reset",
+  "nativeAdapter": "3 tests passed: roundtrip, invalid data and each/all exposed min/max through finite native sampler queries; fmt and Clippy-Dwarnings passed",
+  "fullPrReady": "exit1:2610 tests passed,1 unchanged physics test failed; Python663run with1 WSL-bash routing failure; affected7 Python tests passed after selecting installed Git Bash",
+  "baselinePrecisionReproducer": {
+    "status": "reproduced-unchanged-baseline-drop-motion-parity-failure",
+    "baselineCommit": "685a756423731d1cf9f511911eabe9ef023d10d4",
+    "editorHead": "a07dcafc796864a36270cf7678bd0abda4333dd3",
+    "entitiesSourceIdentical": true,
+    "entitiesSourceSha256": "68274ad5763bad0079985235126a53125bace2e4faab3da20a4502a06d9af17d",
+    "coreSourceTreeIdentical": "5c9de89424d93ca41766d217a044d419094541a4",
+    "editorCodeLinked": false,
+    "scope": "Exact baseline function and existing test, using the byte-identical shared core on this Windows toolchain; no editor/client systems linked. Not a whole baseline game run.",
+    "exitCode": 101,
+    "elapsedSeconds": 17.796000000002095
+  },
+  "notClaimed": "No fully green Windows host suite or whole baseline game-suite reproduction. The 1-ULP drop-motion failure was not changed, skipped or assigned a new expected result."
+}

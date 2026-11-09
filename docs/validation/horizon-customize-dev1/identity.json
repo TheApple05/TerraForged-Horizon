@@ -1,0 +1,31 @@
+{
+  "engineCommit": "a07dcafc796864a36270cf7678bd0abda4333dd3",
+  "nativePackageSourceCommit": "5e49f1fa1e266569ebb33cd788d608557622f9f1",
+  "hmodVersion": "0.1.1-customize.dev1",
+  "hmodFile": "terraforged-horizon-26.3-0.1.1-customize.dev1-ui2.hmod",
+  "nativeVersion": "native-a07dcaf-d844c67a0657",
+  "sha256": {
+    "client": "3eeb37f4cfaba690498ee208f23a104e4f77a7ef563d375e5e42da3fea080f60",
+    "ctl": "3b8b33c8adecf245295c317e6ca9e0c9a1bc238a296558b58cdb73685560e656",
+    "hmod": "47def4a62af35635c0646121b655e31a01dfe02283c66917a164dc47640ead3e",
+    "launcher": "19a0d66fd05f0e65d42b6386d6ac6a2d45f32c88c0678fa4e3aefae8ceaa813e"
+  },
+  "sourceStageResultSha256": "7f5f4a1196a8c27843c385d18bc0016f2485830021a6a54e79b5373ff555560f",
+  "scope": "Local genuine launcher build, GNU performance game; not a public download or stable editor release.",
+  "assetsOnlyCorrection": {
+    "changedEntries": [
+      "assets/terraforged/lang/en_us.json"
+    ],
+    "runtimeCodeUnchanged": true,
+    "oldHmodSha256": "2f1e3be55e92915948c06bb6a31b4ee81accf24aadc7ae220627015316efd120",
+    "finalHmodSha256": "47def4a62af35635c0646121b655e31a01dfe02283c66917a164dc47640ead3e",
+    "clientBinaryUnchanged": true
+  },
+  "independentReaderBuild": {
+    "exitCode": 0,
+    "elapsedSeconds": 17.390999999988708,
+    "sourceSha256": "f38af166e55914393fcf7b0b17a528859671b0132012a2e728c64d728433a6ed",
+    "probeSha256": "41b66528d261b475c69efbeef65eaf6f75354199d7fe3c2e091be9bcd43848cb",
+    "initialCompileFailure": "QA probe used reserved Rust2024 identifier gen; renamed world_gen. Original875s build log retained."
+  }
+}

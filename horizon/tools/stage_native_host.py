@@ -15,7 +15,7 @@ import tarfile
 import tomllib
 
 ROOT = Path(__file__).resolve().parents[2]
-PIN = "685a756423731d1cf9f511911eabe9ef023d10d4"
+PIN = "a07dcafc796864a36270cf7678bd0abda4333dd3"
 
 
 def add_module(bundle: Path, manifest, file: str, name: str, source: str) -> None:
@@ -235,7 +235,7 @@ bindings = [
     for file in sorted((ROOT / "horizon/native-core/src").rglob("*")):
         if file.is_file() and "bin" not in file.relative_to(ROOT / "horizon/native-core/src").parts:
             source_files[file.relative_to(ROOT).as_posix()] = sha(file)
-    for name, destination in (("noise_registry.rs", "noise_registry.rs"), ("preset.rs", "preset_input.rs"), ("router.rs", "router.rs"), ("spawn.rs", "spawn.rs"), ("classic_biome_data.rs", "classic_biome_data.rs")):
+    for name, destination in (("noise_registry.rs", "noise_registry.rs"), ("preset.rs", "preset_input.rs"), ("preset_editor.rs", "preset_editor.rs"), ("router.rs", "router.rs"), ("spawn.rs", "spawn.rs"), ("classic_biome_data.rs", "classic_biome_data.rs")):
         file = ROOT / "horizon/native-adapter/src" / name
         source_files[file.relative_to(ROOT).as_posix()] = sha(file)
         (kernel / "src" / destination).write_text(file.read_text(encoding="utf-8").replace("terraforged_native_core::", "crate::"), encoding="utf-8", newline="\n")
@@ -243,7 +243,7 @@ bindings = [
         file = ROOT / "horizon/native-world/world_runtime.rs"
         source_files[file.relative_to(ROOT).as_posix()] = sha(file)
     with (kernel / "src/lib.rs").open("a", encoding="utf-8", newline="\n") as lib:
-        lib.write("\npub mod noise_registry;\npub mod preset_input;\npub mod router;\npub mod spawn;\npub mod classic_biome_data;\npub use serde_json;\n")
+        lib.write("\npub mod noise_registry;\npub mod preset_input;\npub mod preset_editor;\npub mod router;\npub mod spawn;\npub mod classic_biome_data;\npub use serde_json;\n")
     if a.entry:
         data_dir=kernel / "data"
         data_dir.mkdir(exist_ok=True)
