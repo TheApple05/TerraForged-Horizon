@@ -6,7 +6,7 @@ tail is deterministic and checked against the pinned source before replacement.
 import argparse,hashlib,re,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-PIN='c01c08b7b80f21e76915cfdbf70b85a05b273ad7'
+PIN='0c44ce48360b007990d1b83fdd57cd9d98873729'
 MARKER='// Pipeline forwarding follows below. Regenerate with the source-only helper.'
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--horizon',type=Path,required=True);p.add_argument('--check',action='store_true');a=p.parse_args()
@@ -36,7 +36,7 @@ def main():
         elif name=='spawn_position':body='Ok(self.spawn)'
         else:body='self.inner.'+name+'('+', '.join(names)+')'
         methods.append(signature+' {\n'+body+'\n}')
-    expected='generate decorate data native_context cache_census release_caches end_island_origins sea_level disable_mob_generation level surface_sample lod_grid structure_starts structure_start unsupported_features use_saved_start forget_structure_starts ring_positions may_start_answers spawn_position region_random locate set_old_world debug_density_line find_closest_biome noise_biomes jigsaw_pieces'.split()
+    expected='set_saved_starts generate decorate data native_context cache_census release_caches end_island_origins sea_level disable_mob_generation level surface_sample lod_grid structure_starts structure_start unsupported_features use_saved_start forget_structure_starts ring_positions may_start_answers spawn_position region_random locate set_old_world debug_density_line find_closest_biome noise_biomes jigsaw_pieces'.split()
     if method_names!=expected:raise ValueError(f'Pipeline API changed: {method_names}')
     target=ROOT/'horizon/native-world/world_runtime.rs';head=target.read_text(encoding='utf-8').split(MARKER)[0]
     generated=head+MARKER+'\n// Trait source SHA256: '+hashlib.sha256(trait.encode()).hexdigest()+'\nimpl SeededPipeline for NativePipeline {\n'+'\n'.join(methods)+'\n}\n'

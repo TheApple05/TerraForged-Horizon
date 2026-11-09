@@ -15,7 +15,7 @@ import tarfile
 import tomllib
 
 ROOT = Path(__file__).resolve().parents[2]
-PIN = "c01c08b7b80f21e76915cfdbf70b85a05b273ad7"
+PIN = "0c44ce48360b007990d1b83fdd57cd9d98873729"
 
 
 def add_module(bundle: Path, manifest, file: str, name: str, source: str) -> None:
@@ -201,13 +201,13 @@ visibility = "pub"
 
 [[injection]]
 id = "native-world-preset-catalog"
-target = "horizon_client_lib::save::WorldPreset::all"
+target = "horizon_client_lib::save::world_presets::WorldPreset::all"
 kind = "HEAD"
 helper = "register_preset_catalog.rs"
 
 [[injection]]
 id = "native-world-preset-reopen"
-target = "horizon_client_lib::save::WorldPreset::of_generator"
+target = "horizon_client_lib::save::world_presets::WorldPreset::of_generator"
 kind = "HEAD"
 helper = "register_preset_reopen.rs"
 ''')

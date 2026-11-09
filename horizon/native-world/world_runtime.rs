@@ -137,8 +137,11 @@ struct NativePipeline {
 }
 
 // Pipeline forwarding follows below. Regenerate with the source-only helper.
-// Trait source SHA256: 499886ceecad3fb2e15ff12c554f0cd171391dace84272b021c8bcce36d86090
+// Trait source SHA256: a074064a3e6a1fb2c3d98a0f776f4f7fc50c2f003c1b7dda39edbd546cf41acc
 impl SeededPipeline for NativePipeline {
+    fn set_saved_starts(&self, source: Arc<SavedStructureStarts>) {
+        self.inner.set_saved_starts(source)
+    }
     fn generate(
         &self,
         worker: &mut WorkerState,
