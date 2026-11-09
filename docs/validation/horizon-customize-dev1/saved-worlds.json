@@ -1,0 +1,152 @@
+{
+  "status": "passed-customized-and-default-world-settings-and-saved-biomes",
+  "probeSha256": "41b66528d261b475c69efbeef65eaf6f75354199d7fe3c2e091be9bcd43848cb",
+  "probeCompiler": "MSVC fast",
+  "gameCompiler": "GNU performance",
+  "results": {
+    "edited": {
+      "chunkChecks": [
+        {
+          "chunk": [
+            0,
+            0
+          ],
+          "default": "6dc1096e04abd195",
+          "quartBiomes": 1536,
+          "selected": "d60512a1779b7775",
+          "stored": "d60512a1779b7775",
+          "vanilla": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            1024,
+            -2048
+          ],
+          "default": "b0019eca975291a5",
+          "quartBiomes": 1536,
+          "selected": "f9915aef565e1e79",
+          "stored": "f9915aef565e1e79",
+          "vanilla": "60e84b83a1657725"
+        },
+        {
+          "chunk": [
+            0,
+            -2731
+          ],
+          "default": "bbbefcacc9ec1ec5",
+          "quartBiomes": 1536,
+          "selected": "b8157401107f572d",
+          "stored": "b8157401107f572d",
+          "vanilla": "925f73fc4f6c49c5"
+        },
+        {
+          "chunk": [
+            2048,
+            -4096
+          ],
+          "default": "c4b29a2e161c281f",
+          "quartBiomes": 1536,
+          "selected": "29cbf6ff77158725",
+          "stored": "29cbf6ff77158725",
+          "vanilla": "b011156fa6c87325"
+        }
+      ],
+      "customized": true,
+      "differsFromDefault": true,
+      "differsFromVanilla": true,
+      "settingsRoundTripExact": true,
+      "status": "passed-independent-saved-customize-reader",
+      "elapsedSeconds": 11.73399999999674,
+      "worldFilesUnchanged": true
+    },
+    "classic-off": {
+      "chunkChecks": [
+        {
+          "chunk": [
+            0,
+            0
+          ],
+          "default": "6dc1096e04abd195",
+          "quartBiomes": 1536,
+          "selected": "6dc1096e04abd195",
+          "stored": "6dc1096e04abd195",
+          "vanilla": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            1024,
+            -2048
+          ],
+          "default": "b0019eca975291a5",
+          "quartBiomes": 1536,
+          "selected": "b0019eca975291a5",
+          "stored": "b0019eca975291a5",
+          "vanilla": "60e84b83a1657725"
+        },
+        {
+          "chunk": [
+            0,
+            -2731
+          ],
+          "default": "bbbefcacc9ec1ec5",
+          "quartBiomes": 1536,
+          "selected": "5569b4294db97c25",
+          "stored": "5569b4294db97c25",
+          "vanilla": "925f73fc4f6c49c5"
+        }
+      ],
+      "customized": true,
+      "differsFromDefault": true,
+      "differsFromVanilla": true,
+      "settingsRoundTripExact": true,
+      "status": "passed-independent-saved-customize-reader",
+      "elapsedSeconds": 7.953000000008615,
+      "worldFilesUnchanged": true
+    },
+    "default": {
+      "chunkChecks": [
+        {
+          "chunk": [
+            0,
+            0
+          ],
+          "default": "6dc1096e04abd195",
+          "quartBiomes": 1536,
+          "selected": "6dc1096e04abd195",
+          "stored": "6dc1096e04abd195",
+          "vanilla": "a2b7d896db159325"
+        },
+        {
+          "chunk": [
+            1024,
+            -2048
+          ],
+          "default": "b0019eca975291a5",
+          "quartBiomes": 1536,
+          "selected": "b0019eca975291a5",
+          "stored": "b0019eca975291a5",
+          "vanilla": "60e84b83a1657725"
+        },
+        {
+          "chunk": [
+            0,
+            -2731
+          ],
+          "default": "bbbefcacc9ec1ec5",
+          "quartBiomes": 1536,
+          "selected": "bbbefcacc9ec1ec5",
+          "stored": "bbbefcacc9ec1ec5",
+          "vanilla": "925f73fc4f6c49c5"
+        }
+      ],
+      "customized": false,
+      "differsFromDefault": false,
+      "differsFromVanilla": true,
+      "settingsRoundTripExact": true,
+      "status": "passed-independent-saved-customize-reader",
+      "elapsedSeconds": 10.578000000008615,
+      "worldFilesUnchanged": true
+    }
+  },
+  "totalStoredQuartBiomeComparisons": 15360
+}
