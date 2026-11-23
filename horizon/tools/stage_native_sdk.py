@@ -54,14 +54,14 @@ def stage(output: Path) -> None:
     for original, name in ((root / "LICENSE", "LICENSE"), (ROOT / "licenses/ReTerraForged-MIT.txt", "LICENSE-RETERRAFORGED"),
                            (ROOT / "licenses/TerraForged-MIT.txt", "LICENSE-TERRAFORGED")):
         shutil.copyfile(original, output / name)
-    (output / "Cargo.toml").write_text(f"""[package]
+    (output / "Cargo.toml").write_text("""[package]
 name = "mod-terraforged"
 version = "0.1.1"
 edition = "2024"
 publish = false
 
 [dependencies]
-horizon-mod-api = {{ git = "https://github.com/horizon-rust/horizon", rev = "{HORIZON_REVISION}" }}
+horizon-mod-api = { path = ".horizon/sdk/api/crates/horizon-mod-api" }
 """, encoding="utf-8")
     (output / "horizon-mod.toml").write_text(f"""id = "terraforged"
 name = "TerraForged for Horizon"
