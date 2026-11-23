@@ -9,7 +9,7 @@ import shutil
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
-HORIZON_REVISION = "09d03862ee21197a45eaab65e23032fcc3570e77"
+HORIZON_REVISION = "14ce823cbe89808f4ee0cf5f013b438636e21c57"
 
 
 def main() -> int:

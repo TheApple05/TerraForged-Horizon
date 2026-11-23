@@ -9,8 +9,8 @@ For example, `"preset":{"/world/continent/continentScale":750}` sets the contine
 scale to 750. Omitted settings use the bundled preset. Nodes with the same settings
 share a sampler, and nodes with different settings can coexist for the same seed.
 
-This branch requires the [per-world biome mapping API](https://github.com/horizon-rust/horizon/issues/20256).
-Verify the source against a clean checkout of candidate Horizon `09d03862ee21197a45eaab65e23032fcc3570e77`.
+This branch requires the per-world biome mapping API from [Horizon PR #20273](https://github.com/horizon-rust/horizon/pull/20273).
+Verify the source against a clean checkout of candidate Horizon `14ce823cbe89808f4ee0cf5f013b438636e21c57`.
 Fetch the checkout's locked Cargo dependencies before running the offline check.
 
 ```sh
