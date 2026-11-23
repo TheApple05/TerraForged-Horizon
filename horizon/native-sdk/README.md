@@ -25,3 +25,14 @@ continent-centered spawn, configurable biome selection, and classic pillar and
 marsh decoration still need integration. Existing TerraForged worlds use the
 legacy patched runtime until a migrated world passes independent saved-chunk and
 generation checks.
+
+## Classic biome resources
+
+```sh
+python horizon/tools/stage_classic_datapack.py --resources /path/to/prepared/26.3 --output build/qa/classic-data
+```
+
+This stages the classic biome definitions, biome tag additions, and feature
+definitions under `data/` for SDK integration. It resolves inheritance against
+the prepared vanilla registries. The generated `required-native-features.json`
+lists the two native algorithms the integrating mod needs to register.
