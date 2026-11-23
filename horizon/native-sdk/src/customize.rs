@@ -480,7 +480,7 @@ fn visit_cells(
 
 fn visit_targets(
     dimensions: &mut Compound,
-    mut visit: impl FnMut(&mut Compound) -> Option<()>,
+    mut visit: impl FnMut(&mut Compound, &str) -> Option<()>,
 ) -> Option<bool> {
     let Tag::Compound(generator) = dimensions
         .get_mut(&"minecraft:overworld".into())?
@@ -492,7 +492,7 @@ fn visit_targets(
     let mut seen_cell = false;
     visit_cells(settings, 0, &mut |cell| {
         seen_cell = true;
-        visit(cell)
+        visit(cell, "preset")
     })?;
     if !seen_cell {
         return None;
@@ -500,7 +500,7 @@ fn visit_targets(
     if let Some(Tag::Compound(mapper)) = generator.get_mut(&"biome_source".into())
         && declared_type(mapper, "terraforged:classic")
     {
-        visit(mapper)?;
+        visit(mapper, "config")?;
         return Some(true);
     }
     Some(false)
@@ -508,9 +508,9 @@ fn visit_targets(
 
 fn read_overrides(dimensions: &mut Compound) -> Option<(Map<String, Value>, bool)> {
     let mut active = None;
-    let classic = visit_targets(dimensions, |node| {
-        let overrides = match node.get(&"preset".into()) {
-            None => Map::new(),
+    let classic = visit_targets(dimensions, |node, key| {
+        let overrides = match node.get(&key.into()) {
+            None if key == "preset" => Map::new(),
             Some(Tag::Compound(fields)) if fields.len() <= FIELDS.len() => fields
                 .iter()
                 .map(|(key, value)| {
@@ -556,11 +556,11 @@ fn write_overrides(dimensions: &mut Compound, overrides: &Map<String, Value>) ->
     let Some(config) = config else {
         return false;
     };
-    visit_targets(dimensions, |node| {
-        if config.is_empty() {
-            node.remove(&"preset".into());
+    visit_targets(dimensions, |node, key| {
+        if config.is_empty() && key == "preset" {
+            node.remove(&key.into());
         } else {
-            node.insert("preset".into(), Tag::Compound(config.clone()));
+            node.insert(key.into(), Tag::Compound(config.clone()));
         }
         Some(())
     })
@@ -574,7 +574,12 @@ mod tests {
     #[test]
     fn editor_copies_only_its_own_terrain_settings_and_resets_to_defaults() {
         let cell = Tag::compound([("type", Tag::String("terraforged:cell".into()))]);
-        let mapper = Tag::compound([("type", Tag::String("terraforged:classic".into()))]);
+        let base_biomes = Tag::compound([("type", Tag::String("minecraft:multi_noise".into()))]);
+        let mapper = Tag::compound([
+            ("type", Tag::String("terraforged:classic".into())),
+            ("base", base_biomes.clone()),
+            ("config", Tag::Compound(Compound::new())),
+        ]);
         let vanilla = Tag::compound([("type", Tag::String("minecraft:constant".into()))]);
         let overworld = Tag::compound([(
             "generator",
@@ -617,10 +622,10 @@ mod tests {
         assert_eq!(nodes[0], vanilla);
         assert!(nodes[1].get("preset").is_some());
         assert_eq!(nodes[1].get("preset"), nodes[2].get("preset"));
-        assert_eq!(
-            nodes[1].get("preset"),
-            generator.get("biome_source").unwrap().get("preset")
-        );
+        let biome_source = generator.get("biome_source").unwrap();
+        assert_eq!(nodes[1].get("preset"), biome_source.get("config"));
+        assert_eq!(biome_source.get("base"), Some(&base_biomes));
+        assert!(biome_source.get("preset").is_none());
         assert!(write_overrides(&mut dims, &Map::new()));
         assert_eq!(dims, initial);
     }
