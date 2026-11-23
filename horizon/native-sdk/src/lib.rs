@@ -1,9 +1,11 @@
 //! TerraForged terrain nodes for Horizon's public native mod SDK.
-use std::sync::{Arc, Mutex};
+use std::sync::{Arc, Mutex, Weak};
 
 use mod_api::{DensityFunction, DensityFunctionType, Hooks, Registrar, RegistrationContext};
 use serde_json::Value;
-use terraforged_native_adapter::{noise_registry::NoiseRegistry, preset::CellPresetInput};
+use terraforged_native_adapter::{
+    noise_registry::NoiseRegistry, preset::CellPresetInput, preset_editor::apply_overrides,
+};
 use terraforged_native_core::{
     density_primitives::{CellField, clamp_to_nearest_unit},
     graph::Noise,
@@ -22,18 +24,15 @@ struct Terrain {
 }
 
 impl Terrain {
-    fn bundled() -> Result<Self, String> {
-        let preset = CellPresetInput::from_json(PRESET)
-            .map_err(|err| err.to_string())?
-            .kernel;
-        let noises = NoiseRegistry::from_json(NOISES).map_err(|err| err.to_string())?;
-        let noise = |id| noises.get(id).map_err(|err| err.to_string());
-        Ok(Self {
-            preset,
-            ground: noise("reterraforged:terrain/ground")?,
-            edge: noise("reterraforged:climate/biome_edge_shape")?,
-            active: Mutex::default(),
-        })
+    fn build_sampler(&self, seed: i32) -> Result<KernelSampler, String> {
+        KernelSampler::new(
+            &self.preset,
+            seed,
+            self.ground.clone(),
+            self.edge.clone(),
+            SamplerOptions::for_preset(&self.preset),
+        )
+        .map_err(|err| err.to_string())
     }
 
     fn sampler(&self, seed: i64) -> Arc<KernelSampler> {
@@ -46,21 +45,78 @@ impl Terrain {
             return Arc::clone(sampler);
         }
         let sampler = Arc::new(
-            KernelSampler::new(
-                &self.preset,
-                seed,
-                self.ground.clone(),
-                self.edge.clone(),
-                SamplerOptions::for_preset(&self.preset),
-            )
-            .expect("validated bundled TerraForged preset"),
+            self.build_sampler(seed)
+                .expect("validated TerraForged preset"),
         );
         *active = Some((seed, Arc::clone(&sampler)));
         sampler
     }
 }
 
-struct DensityType(Arc<Terrain>);
+struct TerrainCatalog {
+    defaults: Value,
+    bundled: Arc<Terrain>,
+    configured: Mutex<Vec<(Value, Weak<Terrain>)>>,
+}
+
+impl TerrainCatalog {
+    fn bundled() -> Result<Self, String> {
+        let input = CellPresetInput::from_json(PRESET).map_err(|err| err.to_string())?;
+        let noises = NoiseRegistry::from_json(NOISES).map_err(|err| err.to_string())?;
+        let noise = |id| noises.get(id).map_err(|err| err.to_string());
+        let bundled = Arc::new(Terrain {
+            preset: input.kernel,
+            ground: noise("reterraforged:terrain/ground")?,
+            edge: noise("reterraforged:climate/biome_edge_shape")?,
+            active: Mutex::default(),
+        });
+        Ok(Self {
+            defaults: input.original,
+            bundled,
+            configured: Mutex::default(),
+        })
+    }
+
+    fn terrain(&self, settings: Option<&Value>) -> Result<Arc<Terrain>, String> {
+        let Some(settings) = settings else {
+            return Ok(self.bundled.clone());
+        };
+        let overrides = settings
+            .as_object()
+            .ok_or("TerraForged preset settings must be an object")?;
+        if overrides.is_empty() {
+            return Ok(self.bundled.clone());
+        }
+
+        // Cache only live graph owners. This also shares a sampler between nodes of one preset.
+        let mut configured = self.configured.lock().map_err(|err| err.to_string())?;
+        configured.retain(|(_, terrain)| terrain.strong_count() != 0);
+        if let Some(terrain) = configured
+            .iter()
+            .find(|(key, _)| key == settings)
+            .and_then(|(_, terrain)| terrain.upgrade())
+        {
+            return Ok(terrain);
+        }
+        let preset = apply_overrides(&self.defaults, overrides)?;
+        let terrain = Arc::new(Terrain {
+            preset: CellPresetInput::from_value(preset)
+                .map_err(|err| err.to_string())?
+                .kernel,
+            ground: self.bundled.ground.clone(),
+            edge: self.bundled.edge.clone(),
+            active: Mutex::default(),
+        });
+        // Kernel construction validates parameter relationships independently of the seed.
+        terrain.build_sampler(0)?;
+        if configured.len() < 16 {
+            configured.push((settings.clone(), Arc::downgrade(&terrain)));
+        }
+        Ok(terrain)
+    }
+}
+
+struct DensityType(Arc<TerrainCatalog>);
 
 impl DensityFunctionType for DensityType {
     fn decode(&self, json: &str) -> Result<Arc<dyn DensityFunction>, String> {
@@ -79,7 +135,7 @@ impl DensityFunctionType for DensityType {
             }
         };
         Ok(Arc::new(CellDensity {
-            terrain: Arc::clone(&self.0),
+            terrain: self.0.terrain(node.get("preset"))?,
             field,
             quantize_height,
         }))
@@ -164,7 +220,7 @@ struct TerraForged;
 #[mod_api::horizon_mod]
 impl Hooks for TerraForged {
     fn register(&self, registrar: &mut dyn Registrar, _: &RegistrationContext) {
-        let terrain = Terrain::bundled().expect("bundled TerraForged inputs");
+        let terrain = TerrainCatalog::bundled().expect("bundled TerraForged inputs");
         registrar.register_density_function_type("cell", DensityType(Arc::new(terrain)));
     }
 }
@@ -175,8 +231,9 @@ mod tests {
 
     #[test]
     fn decoded_cell_matches_kernel_across_y_and_seed_switches() {
-        let terrain = Arc::new(Terrain::bundled().unwrap());
-        let density_type = DensityType(Arc::clone(&terrain));
+        let catalog = Arc::new(TerrainCatalog::bundled().unwrap());
+        let terrain = catalog.bundled.clone();
+        let density_type = DensityType(catalog);
         assert!(
             density_type
                 .decode(r#"{"field":"height","quantize_height":8}"#)
@@ -220,5 +277,52 @@ mod tests {
                 );
             }
         }
+    }
+
+    #[test]
+    fn custom_presets_are_validated_and_distinct_for_the_same_seed() {
+        let catalog = Arc::new(TerrainCatalog::bundled().unwrap());
+        let density_type = DensityType(catalog.clone());
+        for preset in [
+            r#"null"#,
+            r#"{"unknown":true}"#,
+            r#"{"/world/continent/continentScale":200}"#,
+            r#"{"/world/continent/continentScale":750.5}"#,
+            r#"{"/miscellaneous/classicBiomeVariants":1}"#,
+        ] {
+            assert!(
+                density_type
+                    .decode(&format!(r#"{{"field":"height","preset":{preset}}}"#))
+                    .is_err()
+            );
+        }
+        let overrides = serde_json::json!({"/world/continent/continentScale": 500});
+        let edited = catalog.terrain(Some(&overrides)).unwrap();
+        assert!(Arc::ptr_eq(
+            &edited,
+            &catalog.terrain(Some(&overrides)).unwrap()
+        ));
+        assert!(!Arc::ptr_eq(&edited, &catalog.terrain(None).unwrap()));
+        let default = density_type.decode(r#"{"field":"continent"}"#).unwrap();
+        let custom = density_type
+            .decode(&format!(r#"{{"field":"continent","preset":{overrides}}}"#))
+            .unwrap();
+        let point = [341, 100, -590];
+        let seed = 42;
+        let expected = CellDensity {
+            terrain: edited.clone(),
+            field: CellField::Continent,
+            quantize_height: false,
+        };
+        assert_eq!(
+            custom.sample(point, seed).to_bits(),
+            expected
+                .column(&edited.sampler(seed), point[0], point[2])
+                .to_bits()
+        );
+        assert_ne!(
+            default.sample(point, seed).to_bits(),
+            custom.sample(point, seed).to_bits()
+        );
     }
 }

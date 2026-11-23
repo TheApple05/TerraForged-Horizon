@@ -31,7 +31,11 @@ def stage(output: Path) -> None:
         text = text.replace('include_bytes!("data/', '&include!("data/').replace('.bin");', '.rs");')
         path.write_text(text, encoding="utf-8")
 
-    for name, target in (("noise_registry", "noise_registry"), ("preset", "preset_input")):
+    for name, target in (
+        ("noise_registry", "noise_registry"),
+        ("preset", "preset_input"),
+        ("preset_editor", "preset_editor"),
+    ):
         text = (root / f"native-adapter/src/{name}.rs").read_text(encoding="utf-8")
         text = text.replace("terraforged_native_core::", "crate::").replace("serde_json::", "mod_api::serde_json::")
         (source / f"{target}.rs").write_text(text, encoding="utf-8")
@@ -41,8 +45,9 @@ def stage(output: Path) -> None:
         json_text = (fixtures / f"{name}.json").read_text(encoding="utf-8")
         (tables / f"{name}.rs").write_text(f'r###"{json_text}"###\n', encoding="utf-8")
     sdk = (root / "native-sdk/src/lib.rs").read_text(encoding="utf-8")
-    sdk = sdk.replace("use terraforged_native_adapter::{noise_registry::NoiseRegistry, preset::CellPresetInput};",
-                      "use crate::{noise_registry::NoiseRegistry, preset_input::CellPresetInput};")
+    sdk = sdk.replace("use terraforged_native_adapter::{", "use crate::{").replace(
+        "preset::CellPresetInput", "preset_input::CellPresetInput"
+    )
     sdk = sdk.replace("use terraforged_native_core::", "use crate::").replace("serde_json::", "mod_api::serde_json::")
     for name in ("preset", "noise-registry"):
         sdk = sdk.replace(f'include_str!("../../tests/fixtures/kernel-v1/{name}.json")', f'include!("data/{name}.rs")')
@@ -50,7 +55,10 @@ def stage(output: Path) -> None:
 
     lib = source / "lib.rs"
     text = lib.read_text(encoding="utf-8").replace("#![forbid(unsafe_code)]", "#![deny(unsafe_code)]")
-    lib.write_text(text + "\nmod noise_registry;\nmod preset_input;\nmod sdk;\npub use sdk::hooks;\n", encoding="utf-8")
+    lib.write_text(
+        text + "\nmod noise_registry;\nmod preset_input;\npub mod preset_editor;\nmod sdk;\npub use sdk::hooks;\n",
+        encoding="utf-8",
+    )
     for original, name in ((root / "LICENSE", "LICENSE"), (ROOT / "licenses/ReTerraForged-MIT.txt", "LICENSE-RETERRAFORGED"),
                            (ROOT / "licenses/TerraForged-MIT.txt", "LICENSE-TERRAFORGED")):
         shutil.copyfile(original, output / name)

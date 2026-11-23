@@ -31,7 +31,10 @@ fn optional_int(value: &Value, key: &str, default: i32) -> Result<i32> {
 }
 impl CellPresetInput {
     pub fn from_json(text: &str) -> Result<Self> {
-        let original = json(text)?;
+        Self::from_value(json(text)?)
+    }
+
+    pub fn from_value(original: Value) -> Result<Self> {
         let kernel = KernelPreset {
             world: world(get(&original, "world")?)?,
             terrain: terrain(get(&original, "terrain")?)?,
