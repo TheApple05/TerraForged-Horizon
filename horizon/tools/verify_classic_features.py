@@ -24,9 +24,14 @@ def main():
     if not dest.exists():shutil.copy2(source,dest)
     paths=[resources/'facts.json']+sorted((resources/'worldgen').rglob('*.json'));before={str(path.relative_to(resources)):sha(path) for path in paths}
     env=dict(os.environ,CARGO_NET_OFFLINE='true',CARGO_BUILD_JOBS='4',HORIZON_TELEMETRY_URL='off',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1')
-    command=['cargo','+stable','build','--offline','--locked','--manifest-path',str(workspace/'Cargo.toml'),'-p','horizon-world','--release','--bin',binary]
+    target = workspace / "target"
+    command = [
+        "cargo", "+stable", "build", "--offline", "--locked",
+        "--manifest-path", str(workspace / "Cargo.toml"), "--target-dir", str(target),
+        "-p", "horizon-world", "--release", "--bin", binary,
+    ]
     built=subprocess.run(command,env=env,capture_output=True,text=True,encoding='utf-8',timeout=600);(work/'build.log').write_text(built.stdout+built.stderr,encoding='utf-8')
-    target=Path(env.get('CARGO_TARGET_DIR',str(workspace/'target')));exe=target/'release'/(binary+('.exe' if os.name=='nt' else ''))
+    exe = target / "release" / (binary + (".exe" if os.name == "nt" else ""))
     inputs=ROOT/'horizon/tests/fixtures/host-density-v1/inputs.json';targets=ROOT/'horizon/tests/fixtures/classic-runtime-v1/targets.json'
     report={'schemaVersion':1,'status':'failed','horizonRevision':stage['horizonRevision'],'stageResultSha256':sha(stage_path),'verifierSourceSha256':sha(work/'verifier-source.py'),'probeSourceSha256':sha(source),'configurationSha256':sha(inputs),'advisoryTargetsSha256':sha(targets),'compileExitCode':built.returncode,'resourceFilesSha256':before,'gameAssetsDownloaded':False,'runs':[]}
     outputs=[]
