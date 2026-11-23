@@ -58,9 +58,9 @@ jobs:
             packages=(-p horizon-world)
           fi
           cargo clippy --offline --locked --manifest-path build/qa/horizon/ci-host/staged/Cargo.toml "${packages[@]}" --lib -- -D warnings
-      - name: Check fresh UI setup and owned-client exit evidence
+      - name: Check native verification tools
         if: matrix.mode == 'ui'
-        run: python -m unittest discover -s horizon/tools -p 'test_native_ui_*.py'
+        run: python -m unittest discover -s horizon/tools -p 'test_native_*.py'
       - name: Check density observations
         if: matrix.mode == 'graph' || matrix.mode == 'registry'
         shell: bash

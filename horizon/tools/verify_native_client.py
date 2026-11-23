@@ -53,8 +53,9 @@ def main():
         report['qaManifestBeforeSha256']=sha(manifest)
         prepare_save_fixture(workspace,probe)
         report['qaManifestAfterSha256']=sha(manifest);report['fixtureProbeSha256']=sha(probe)
-        record_run(['cargo','+stable','build','--offline','--locked','--manifest-path',str(workspace/'Cargo.toml'),'--profile','fast','-p','horizon-client','-p','horizon-client-lib','--bin','horizon-client','--bin','horizon-ctl','--bin','terraforged_save_fixture'],'build',1200)
-        suffix='.exe' if os.name=='nt' else '';target=workspace/'target/fast'
+        target_dir=workspace/'target'
+        record_run(['cargo','+stable','build','--offline','--locked','--manifest-path',str(workspace/'Cargo.toml'),'--target-dir',str(target_dir),'--profile','fast','-p','horizon-client','-p','horizon-client-lib','--bin','horizon-client','--bin','horizon-ctl','--bin','terraforged_save_fixture'],'build',1200)
+        suffix='.exe' if os.name=='nt' else '';target=target_dir/'fast'
         client=target/('horizon-client'+suffix);ctl=target/('horizon-ctl'+suffix);fixture=target/('terraforged_save_fixture'+suffix)
         report['artifactsSha256']={path.name:sha(path) for path in (client,ctl,fixture)}
         preset=ROOT/'horizon/native-content/data/terraforged/worldgen/world_preset/default.json'

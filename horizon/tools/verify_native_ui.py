@@ -143,7 +143,6 @@ def main():
     work=workspace.parent/a.report.stem;work.mkdir(exist_ok=False);shutil.copy2(Path(__file__),work/'verifier-source.py')
     env=dict(os.environ,CARGO_BUILD_JOBS='4',CARGO_NET_OFFLINE='true',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1',HORIZON_TELEMETRY_URL='off',HORIZON_PLAYER_NAME='TerraForgedQA',TERRAFORGED_QA_SEED=str(a.seed))
     for key in ('HORIZON_SESSION_FILE','HORIZON_ACCOUNT_SESSIONS'):env.pop(key,None)
-    env.pop('CARGO_TARGET_DIR',None)
     for name in ('HORIZON_HOME','HORIZON_LAUNCHER_HOME','XDG_DATA_HOME','XDG_CONFIG_HOME','HORIZON_LAUNCHER_TRASH','HORIZON_LAUNCHER_CLIPBOARD','HORIZON_LAUNCHER_DESKTOP'):
         path=work/'homes'/name.lower();path.mkdir(parents=True);env[name]=str(path.resolve())
     game=Path(env['HORIZON_HOME']);socket=game/'control.sock';resources=work/'prepared-resources'
@@ -168,7 +167,8 @@ def main():
             report['independentJavaConfiguredSearchCenter']=[int(n) for n in centers[key].split(',')]
             report['spawnReferenceSha256']=sha(spawn_reference)
     process=None;log=None;sequence=0
-    suffix='.exe' if os.name=='nt' else '';target=workspace/'target/fast';client=target/('horizon-client'+suffix);ctl=target/('horizon-ctl'+suffix);fixture=target/('terraforged_save_fixture'+suffix)
+    target_dir=workspace/'target'
+    suffix='.exe' if os.name=='nt' else '';target=target_dir/'fast';client=target/('horizon-client'+suffix);ctl=target/('horizon-ctl'+suffix);fixture=target/('terraforged_save_fixture'+suffix)
     def checkpoint(phase):
         report['phase']=phase;report['updatedAtUtc']=dt.datetime.now(dt.timezone.utc).isoformat()
         a.report.parent.mkdir(parents=True,exist_ok=True)
@@ -265,7 +265,7 @@ def main():
         prepare_save_fixture(workspace,ROOT/'horizon/tests/rust/save_fixture_probe.rs')
         report['qaManifestAfterSha256']=sha(manifest);report['fixtureProbeSha256']=sha(workspace/'crates/horizon-client-lib/qa/terraforged_save_fixture.rs')
         checkpoint('building exact staged artifacts')
-        run(['cargo','+stable','build','--offline','--locked','--manifest-path',str(workspace/'Cargo.toml'),'--profile','fast','-p','horizon-client','-p','horizon-client-lib','--bin','horizon-client','--bin','horizon-ctl','--bin','terraforged_save_fixture'],'build',1200)
+        run(['cargo','+stable','build','--offline','--locked','--manifest-path',str(workspace/'Cargo.toml'),'--target-dir',str(target_dir),'--profile','fast','-p','horizon-client','-p','horizon-client-lib','--bin','horizon-client','--bin','horizon-ctl','--bin','terraforged_save_fixture'],'build',1200)
         report['artifactsSha256']={p.name:sha(p) for p in (client,ctl,fixture)}
         checkpoint('built exact staged artifacts')
         world=None
