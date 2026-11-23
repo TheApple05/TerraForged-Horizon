@@ -54,7 +54,8 @@ def main():
                 data = json.dumps(manifest).encode()
             changed.writestr(name, data)
     env = dict(os.environ, CARGO_BUILD_JOBS='4', CARGO_NET_OFFLINE='true')
-    command = ['cargo', '+stable', 'build', '--quiet', '--offline', '--locked', '--manifest-path', str(workspace/'Cargo.toml'), '-p', 'horizon-mods', '--features', 'index', '--bin', binary]
+    target = workspace/'target'
+    command = ['cargo', '+stable', 'build', '--quiet', '--offline', '--locked', '--manifest-path', str(workspace/'Cargo.toml'), '--target-dir', str(target), '-p', 'horizon-mods', '--features', 'index', '--bin', binary]
     build = subprocess.run(command, capture_output=True, text=True, env=env, timeout=600)
     (output/'build.log').write_text(build.stdout+build.stderr, encoding='utf-8')
     report = {'schemaVersion': 1, 'status': 'failed', 'startedAtUtc': dt.datetime.now(dt.timezone.utc).isoformat(),
@@ -64,7 +65,7 @@ def main():
               'packagedSourcesMatchStagedBundle': True, 'gameAssetsReadOrDownloaded': False,
               'notCovered': ['Native build via launcher', 'Client rendering', 'Save-file round trip', 'Biome/features/structures/spawn/performance/modpack acceptance']}
     if build.returncode == 0:
-        exe = workspace/'target/debug'/(binary + ('.exe' if os.name == 'nt' else ''))
+        exe = target/'debug'/(binary + ('.exe' if os.name == 'nt' else ''))
         run = subprocess.run([str(exe), str(a.original.resolve()), str(a.package.resolve()), str(mismatch)], capture_output=True, text=True, env=env, timeout=60)
         (output/'stdout.json').write_text(run.stdout, encoding='utf-8', newline='\n')
         (output/'stderr.log').write_text(run.stderr, encoding='utf-8')

@@ -55,13 +55,14 @@ def main() -> int:
     shutil.copy2(source, probe)
     base = ["cargo", "+stable", "--color", "never"]
     cargo_manifest = stage / "Cargo.toml"
-    command = base + ["build", "--locked", "--manifest-path", str(cargo_manifest), "-p", "horizon-world", "--example", "terraforged_prepared_probe"]
+    target = stage / "target"
+    command = base + ["build", "--locked", "--manifest-path", str(cargo_manifest), "--target-dir", str(target), "-p", "horizon-world", "--example", "terraforged_prepared_probe"]
     build = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=180)
     (work / "build.log").write_text(build.stdout + build.stderr, encoding="utf-8")
     if build.returncode:
         print(build.stdout + build.stderr)
         return build.returncode
-    executable = stage / "target/debug/examples" / ("terraforged_prepared_probe.exe" if os.name == "nt" else "terraforged_prepared_probe")
+    executable = target / "debug/examples" / ("terraforged_prepared_probe.exe" if os.name == "nt" else "terraforged_prepared_probe")
     if args.build_only:
         print(json.dumps({"status": "compiled-only", "executable": str(executable), "sha256": digest(executable), "runtimeExecuted": False}))
         return 0

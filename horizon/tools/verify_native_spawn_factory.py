@@ -19,9 +19,10 @@ def main():
     work=workspace.parent/a.report.stem;work.mkdir(exist_ok=False);shutil.copy2(Path(__file__),work/'verifier-source.py')
     fixture=ROOT/'horizon/tests/fixtures/native-spawn-v1/values.tsv';centers=dict(line.split('\t') for line in fixture.read_text(encoding='utf-8').splitlines());expected=[int(n) for n in centers['8675309/CONTINENT_CENTER'].split(',')]
     files=[resources/'facts.json']+sorted((resources/'worldgen').rglob('*.json'));before={p.relative_to(resources).as_posix():sha(p) for p in files}
-    env=dict(os.environ,CARGO_BUILD_JOBS='4',CARGO_NET_OFFLINE='true',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1',HORIZON_TELEMETRY_URL='off');env.pop('CARGO_TARGET_DIR',None)
-    build=subprocess.run(['cargo','+stable','build','--offline','--locked','--manifest-path',str(workspace/'Cargo.toml'),'--profile','fast','-p','horizon-world','--bin','terraforged_spawn_search_probe'],capture_output=True,text=True,env=env,timeout=300);(work/'build.log').write_text(build.stdout+build.stderr,encoding='utf-8')
-    exe=workspace/'target/fast'/('terraforged_spawn_search_probe'+('.exe' if os.name=='nt' else ''));runs=[]
+    env=dict(os.environ,CARGO_BUILD_JOBS='4',CARGO_NET_OFFLINE='true',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1',HORIZON_TELEMETRY_URL='off')
+    target=workspace/'target'
+    build=subprocess.run(['cargo','+stable','build','--offline','--locked','--manifest-path',str(workspace/'Cargo.toml'),'--target-dir',str(target),'--profile','fast','-p','horizon-world','--bin','terraforged_spawn_search_probe'],capture_output=True,text=True,env=env,timeout=300);(work/'build.log').write_text(build.stdout+build.stderr,encoding='utf-8')
+    exe=target/'fast'/('terraforged_spawn_search_probe'+('.exe' if os.name=='nt' else ''));runs=[]
     if build.returncode==0:
         for index in range(2):
             for name in ('HORIZON_HOME','HORIZON_LAUNCHER_HOME','XDG_DATA_HOME','XDG_CONFIG_HOME','HORIZON_LAUNCHER_TRASH','HORIZON_LAUNCHER_CLIPBOARD','HORIZON_LAUNCHER_DESKTOP'):

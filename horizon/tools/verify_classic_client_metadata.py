@@ -23,14 +23,15 @@ def main():
     addition='\n[[bin]]\nname = "terraforged_classic_client_metadata"\npath = "qa/terraforged_classic_client_metadata.rs"\n'
     manifest.write_text(manifest.read_text(encoding='utf-8')+addition,encoding='utf-8',newline='\n')
     files=[resources/'facts.json']+sorted((resources/'worldgen').rglob('*.json'));before={str(f.relative_to(resources)):sha(f) for f in files}
-    env=dict(os.environ,CARGO_NET_OFFLINE='true',CARGO_BUILD_JOBS='4',HORIZON_TELEMETRY_URL='off',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1');env.pop('CARGO_TARGET_DIR',None)
+    env=dict(os.environ,CARGO_NET_OFFLINE='true',CARGO_BUILD_JOBS='4',HORIZON_TELEMETRY_URL='off',HORIZON_NO_AUDIO='1',HORIZON_NO_DISCORD='1',HORIZON_LAUNCHER_NO_SELF_UPDATE='1')
     for name in ('HORIZON_HOME','HORIZON_LAUNCHER_HOME','XDG_DATA_HOME','XDG_CONFIG_HOME','HORIZON_LAUNCHER_TRASH','HORIZON_LAUNCHER_CLIPBOARD','HORIZON_LAUNCHER_DESKTOP'):
         directory=work/'homes'/name.lower();directory.mkdir(parents=True);env[name]=str(directory.resolve())
-    build=subprocess.run(['cargo','+stable','build','--offline','--locked','--profile','fast','--manifest-path',str(workspace/'Cargo.toml'),'-p','horizon-client','--bin','terraforged_classic_client_metadata'],env=env,capture_output=True,text=True,encoding='utf-8',timeout=600)
+    target=workspace/'target'
+    build=subprocess.run(['cargo','+stable','build','--offline','--locked','--profile','fast','--manifest-path',str(workspace/'Cargo.toml'),'--target-dir',str(target),'-p','horizon-client','--bin','terraforged_classic_client_metadata'],env=env,capture_output=True,text=True,encoding='utf-8',timeout=600)
     (work/'build.log').write_text(build.stdout+build.stderr,encoding='utf-8')
     report={'schemaVersion':1,'status':'failed','horizonRevision':stage['horizonRevision'],'stageResultSha256':sha(stage_file),'probeSourceSha256':sha(source),'verifierSourceSha256':sha(work/'verifier-source.py'),'qaManifestBeforeSha256':before_manifest,'qaManifestAfterSha256':sha(manifest),'compileExitCode':build.returncode,'resourceFilesSha256':before,'gameAssetsDownloaded':False}
     if build.returncode==0:
-        exe=workspace/'target/fast'/('terraforged_classic_client_metadata'+('.exe' if os.name=='nt' else ''));report['executableSha256']=sha(exe)
+        exe=target/'fast'/('terraforged_classic_client_metadata'+('.exe' if os.name=='nt' else ''));report['executableSha256']=sha(exe)
         run=subprocess.run([str(exe),str(resources),str(work/'metadata-world')],env=env,capture_output=True,timeout=240)
         (work/'output.json').write_bytes(run.stdout);(work/'stderr.log').write_bytes(run.stderr);report['exitCode']=run.returncode;report['outputSha256']=sha(work/'output.json')
         if run.returncode==0:report['observed']=json.loads(run.stdout);report['status']=report['observed']['status']
