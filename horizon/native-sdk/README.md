@@ -24,6 +24,11 @@ noise settings. Vanilla dimensions, biomes, and unaffected density functions
 remain shared. Omit `--resources` for a source project containing only the density
 adapter.
 
+The **Customize** editor writes settings into the new world's Overworld
+density nodes. Use Horizon's **Done** to commit or **Cancel** to discard them.
+The stock Nightly used here predates the upstream fix for restoring custom
+preset identity in Re-Create. [Horizon Re-Create fix](https://github.com/horizon-rust/horizon/pull/20244)
+
 This preset is a development checkpoint for the default terrain. The legacy
 continent-centered spawn, configurable biome selection, and classic pillar and
 marsh decoration still need integration. Existing TerraForged worlds use the

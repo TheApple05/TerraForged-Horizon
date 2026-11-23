@@ -1,10 +1,17 @@
 //! TerraForged terrain nodes for Horizon's public native mod SDK.
 use std::sync::{Arc, Mutex, Weak};
 
-use mod_api::{DensityFunction, DensityFunctionType, Hooks, Registrar, RegistrationContext};
+use mod_api::{
+    ClientHost, DensityFunction, DensityFunctionType, Flow, Hooks, RegisterPresetEditorsEvent,
+    Registrar, RegistrationContext, ScreenClosingEvent, ScreenKeyPressedPreEvent,
+    ScreenMouseButtonPressedPreEvent, ScreenMouseButtonReleasedPreEvent,
+    ScreenMouseDraggedPreEvent, ScreenRenderPostEvent,
+};
 use serde_json::Value;
 use terraforged_native_adapter::{
-    noise_registry::NoiseRegistry, preset::CellPresetInput, preset_editor::apply_overrides,
+    noise_registry::NoiseRegistry,
+    preset::CellPresetInput,
+    preset_editor::{self, apply_overrides},
 };
 use terraforged_native_core::{
     density_primitives::{CellField, clamp_to_nearest_unit},
@@ -15,6 +22,9 @@ use terraforged_native_core::{
 
 const PRESET: &str = include_str!("../../tests/fixtures/kernel-v1/preset.json");
 const NOISES: &str = include_str!("../../tests/fixtures/kernel-v1/noise-registry.json");
+
+#[path = "customize.rs"]
+mod customize;
 
 struct Terrain {
     preset: KernelPreset,
@@ -215,13 +225,63 @@ impl DensityFunction for CellDensity {
 }
 
 #[derive(Default)]
-struct TerraForged;
+struct TerraForged {
+    customize: customize::Customize,
+}
 
 #[mod_api::horizon_mod]
 impl Hooks for TerraForged {
     fn register(&self, registrar: &mut dyn Registrar, _: &RegistrationContext) {
         let terrain = TerrainCatalog::bundled().expect("bundled TerraForged inputs");
         registrar.register_density_function_type("cell", DensityType(Arc::new(terrain)));
+    }
+
+    fn register_preset_editors(
+        &self,
+        _: &RegistrationContext,
+        event: &mut RegisterPresetEditorsEvent<'_>,
+    ) {
+        customize::register(event);
+    }
+
+    fn screen_render_post(&self, host: &dyn ClientHost, event: &mut ScreenRenderPostEvent<'_>) {
+        self.customize.render(host, event);
+    }
+
+    fn screen_closing(&self, _: &dyn ClientHost, event: &mut ScreenClosingEvent<'_>) {
+        self.customize.close(event);
+    }
+
+    fn screen_key_pressed_pre(
+        &self,
+        host: &dyn ClientHost,
+        event: &mut ScreenKeyPressedPreEvent<'_>,
+    ) -> Flow {
+        self.customize.key_pressed(host, event)
+    }
+
+    fn screen_mouse_button_pressed_pre(
+        &self,
+        host: &dyn ClientHost,
+        event: &mut ScreenMouseButtonPressedPreEvent<'_>,
+    ) -> Flow {
+        self.customize.mouse_pressed(host, event)
+    }
+
+    fn screen_mouse_button_released_pre(
+        &self,
+        host: &dyn ClientHost,
+        event: &mut ScreenMouseButtonReleasedPreEvent<'_>,
+    ) -> Flow {
+        self.customize.mouse_released(host, event)
+    }
+
+    fn screen_mouse_dragged_pre(
+        &self,
+        host: &dyn ClientHost,
+        event: &mut ScreenMouseDraggedPreEvent<'_>,
+    ) -> Flow {
+        self.customize.mouse_dragged(host, event)
     }
 }
 

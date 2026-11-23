@@ -63,6 +63,7 @@ def stage(output: Path, resources: Path | None = None) -> None:
     for name in ("preset", "noise-registry"):
         sdk = sdk.replace(f'include_str!("../../tests/fixtures/kernel-v1/{name}.json")', f'include!("data/{name}.rs")')
     (source / "sdk.rs").write_text(sdk, encoding="utf-8")
+    shutil.copyfile(root / "native-sdk/src/customize.rs", source / "customize.rs")
 
     lib = source / "lib.rs"
     text = lib.read_text(encoding="utf-8").replace("#![forbid(unsafe_code)]", "#![deny(unsafe_code)]")
