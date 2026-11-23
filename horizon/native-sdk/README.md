@@ -3,7 +3,11 @@
 The SDK route starts with the bundled TerraForged kernel. A datapack density node can use
 `{"type":"terraforged:cell","field":"height"}` or another name from `CellField`.
 `"quantize_height":true` selects TerraForged's quantized height calculation.
-The mod registers a type and only runs terrain sampling when a density graph calls it.
+An optional `"preset"` object applies validated settings to that node's terrain
+sampler. Its keys are the configuration pointers supported by the legacy editor.
+For example, `"preset":{"/world/continent/continentScale":750}` sets the continent
+scale to 750. Omitted settings use the bundled preset. Nodes with the same settings
+share a sampler, and nodes with different settings can coexist for the same seed.
 
 This branch requires the [per-world biome mapping API](https://github.com/horizon-rust/horizon/issues/20256).
 Verify the source against a clean checkout of candidate Horizon `09d03862ee21197a45eaab65e23032fcc3570e77`.
@@ -24,6 +28,11 @@ to the Create World type selector. The generated preset embeds its own Overworld
 noise settings. Vanilla dimensions, biomes, and unaffected density functions
 remain shared. Omit `--resources` for a source project containing only the density
 adapter.
+
+The **Customize** editor writes settings into the new world's Overworld
+density nodes. Use Horizon's **Done** to commit or **Cancel** to discard them.
+This candidate predates the upstream fix for restoring custom
+preset identity in Re-Create. [Horizon Re-Create fix](https://github.com/horizon-rust/horizon/pull/20244)
 
 This preset is a development checkpoint for the default terrain. The legacy
 continent-centered spawn, configurable biome selection, and classic pillar and
