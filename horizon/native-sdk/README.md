@@ -1,9 +1,13 @@
-# TerraForged density functions for Horizon's native SDK
+# TerraForged terrain for Horizon's native SDK
 
 The SDK route starts with the bundled TerraForged kernel. A datapack density node can use
 `{"type":"terraforged:cell","field":"height"}` or another name from `CellField`.
 `"quantize_height":true` selects TerraForged's quantized height calculation.
-The mod registers a type and only runs terrain sampling when a density graph calls it.
+An optional `"preset"` object applies validated settings to that node's terrain
+sampler. Its keys are the configuration pointers supported by the legacy editor.
+For example, `"preset":{"/world/continent/continentScale":750}` sets the continent
+scale to 750. Omitted settings use the bundled preset. Nodes with the same settings
+share a sampler, and nodes with different settings can coexist for the same seed.
 
 Verify the source against a clean checkout of Horizon `f1bb66f353cf67f2aa4665293fc75c8d91186fc7`.
 Fetch the checkout's locked Cargo dependencies before running the offline check.
