@@ -1,12 +1,16 @@
 //! TerraForged terrain nodes for Horizon's public native mod SDK.
 use std::sync::{Arc, Mutex, Weak};
 
-use mod_api::{DensityFunction, DensityFunctionType, Hooks, Registrar, RegistrationContext};
+use mod_api::{
+    BiomeMapper, BiomeMapperType, DensityFunction, DensityFunctionType, Hooks, Registrar,
+    RegistrationContext,
+};
 use serde_json::Value;
 use terraforged_native_adapter::{
     noise_registry::NoiseRegistry, preset::CellPresetInput, preset_editor::apply_overrides,
 };
 use terraforged_native_core::{
+    classic_biomes,
     density_primitives::{CellField, clamp_to_nearest_unit},
     graph::Noise,
     kernel_sampler::{KernelSampler, SamplerOptions},
@@ -118,6 +122,61 @@ impl TerrainCatalog {
 
 struct DensityType(Arc<TerrainCatalog>);
 
+const CLASSIC_VARIANTS: &str = "/miscellaneous/classicBiomeVariants";
+
+struct ClassicMapperType(Arc<TerrainCatalog>);
+
+impl BiomeMapperType for ClassicMapperType {
+    fn decode(&self, config: &str) -> Result<Arc<dyn BiomeMapper>, String> {
+        let settings: Value = serde_json::from_str(config).map_err(|err| err.to_string())?;
+        let terrain = self.0.terrain(Some(&settings))?;
+        let enabled = settings[CLASSIC_VARIANTS]
+            .as_bool()
+            .or_else(|| self.0.defaults.pointer(CLASSIC_VARIANTS)?.as_bool())
+            .ok_or("missing TerraForged classic biome setting")?;
+        Ok(Arc::new(ClassicMapper { terrain, enabled }))
+    }
+}
+
+struct ClassicMapper {
+    terrain: Arc<Terrain>,
+    enabled: bool,
+}
+
+impl BiomeMapper for ClassicMapper {
+    fn additional_biomes(&self) -> Vec<String> {
+        if self.enabled {
+            classic_biomes::VARIANTS.map(str::to_owned).into()
+        } else {
+            Vec::new()
+        }
+    }
+
+    fn map(&self, base_biome: &str, [x, y, z]: [i32; 3], seed: i64) -> Result<Option<u16>, String> {
+        if !self.enabled || y < 0 || !classic_biomes::eligible(base_biome) {
+            return Ok(None);
+        }
+        let sampler = self.terrain.sampler(seed);
+        let cell = sampler
+            .sample(x.wrapping_mul(4), z.wrapping_mul(4))
+            .map_err(|err| err.to_string())?;
+        let terrain = sampler
+            .heightmap()
+            .terrains
+            .get(cell.terrain)
+            .ok_or("TerraForged biome terrain identity missing")?;
+        let biome = classic_biomes::select(base_biome, &cell, terrain);
+        if biome == base_biome {
+            return Ok(None);
+        }
+        let index = classic_biomes::VARIANTS
+            .iter()
+            .position(|id| *id == biome)
+            .ok_or("TerraForged selected an undeclared biome")?;
+        Ok(Some(index as u16))
+    }
+}
+
 impl DensityFunctionType for DensityType {
     fn decode(&self, json: &str) -> Result<Arc<dyn DensityFunction>, String> {
         let node: Value = serde_json::from_str(json).map_err(|err| err.to_string())?;
@@ -220,8 +279,9 @@ struct TerraForged;
 #[mod_api::horizon_mod]
 impl Hooks for TerraForged {
     fn register(&self, registrar: &mut dyn Registrar, _: &RegistrationContext) {
-        let terrain = TerrainCatalog::bundled().expect("bundled TerraForged inputs");
-        registrar.register_density_function_type("cell", DensityType(Arc::new(terrain)));
+        let terrain = Arc::new(TerrainCatalog::bundled().expect("bundled TerraForged inputs"));
+        registrar.register_density_function_type("cell", DensityType(terrain.clone()));
+        registrar.register_biome_mapper_type("classic", ClassicMapperType(terrain));
     }
 }
 
@@ -324,5 +384,44 @@ mod tests {
             default.sample(point, seed).to_bits(),
             custom.sample(point, seed).to_bits()
         );
+    }
+
+    #[test]
+    fn classic_biome_policy_uses_the_world_configuration() {
+        let catalog = Arc::new(TerrainCatalog::bundled().unwrap());
+        let mapper_type = ClassicMapperType(catalog);
+        let enabled = mapper_type.decode("{}").unwrap();
+        let disabled = mapper_type
+            .decode(r#"{"/miscellaneous/classicBiomeVariants":false}"#)
+            .unwrap();
+        assert_eq!(enabled.additional_biomes(), classic_biomes::VARIANTS);
+        assert!(disabled.additional_biomes().is_empty());
+        assert!(
+            mapper_type
+                .decode(r#"{"/miscellaneous/classicBiomeVariants":2}"#)
+                .is_err()
+        );
+        let seed = 42;
+        // Test the base biome's override policy with real TerraForged cells.
+        for x in (0..128).step_by(8) {
+            let quart = [x, 10, 0];
+            assert_eq!(
+                disabled.map("minecraft:badlands", quart, seed).unwrap(),
+                None
+            );
+            assert_eq!(
+                enabled.map("minecraft:badlands", [x, -1, 0], seed).unwrap(),
+                None
+            );
+            assert_eq!(enabled.map("minecraft:ocean", quart, seed).unwrap(), None);
+            if enabled
+                .map("minecraft:badlands", quart, seed)
+                .unwrap()
+                .is_some()
+            {
+                return;
+            }
+        }
+        panic!("fixture needs a mapped badlands biome");
     }
 }

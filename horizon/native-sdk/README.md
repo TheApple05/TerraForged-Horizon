@@ -1,18 +1,23 @@
-# TerraForged density functions for Horizon's native SDK
+# TerraForged terrain and classic biome mapper for the Horizon SDK candidate
 
 The SDK route starts with the bundled TerraForged kernel. A datapack density node can use
 `{"type":"terraforged:cell","field":"height"}` or another name from `CellField`.
 `"quantize_height":true` selects TerraForged's quantized height calculation.
 The mod registers a type and only runs terrain sampling when a density graph calls it.
 
-Verify the source against a clean checkout of Horizon `f1bb66f353cf67f2aa4665293fc75c8d91186fc7`.
+This branch requires the [per-world biome mapping API](https://github.com/horizon-rust/horizon/issues/20256).
+Verify the source against a clean checkout of candidate Horizon `09d03862ee21197a45eaab65e23032fcc3570e77`.
 Fetch the checkout's locked Cargo dependencies before running the offline check.
 
 ```sh
 python horizon/tools/check_native_sdk.py --horizon /path/to/horizon --output build/qa/sdk-check
 python horizon/tools/stage_native_sdk.py --resources /path/to/prepared/26.3 --output build/qa/sdk-mods/terraforged
-horizon-launcher native-build build/qa/sdk-mods --version nightly-2026-11-22-f1bb66f --trust-native-code
 ```
+
+On a build containing the mapper API, a biome source of type `terraforged:classic`
+accepts a base source and a configuration object with the same settings as
+`terraforged:cell`. The generated default preset uses its vanilla biome source
+until the classic feature types can also be registered.
 
 `--resources` uses the local prepared 26.3 worldgen registries to add **TerraForged**
 to the Create World type selector. The generated preset embeds its own Overworld
