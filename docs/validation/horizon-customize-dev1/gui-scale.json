@@ -1,0 +1,16 @@
+{
+  "status": "passed-native-gui-scale-layout-and-draft-preservation",
+  "draftUnchangedAfterGuiScaleChange": true,
+  "cancelAfterScaleChangePreservesDefaults": true,
+  "keyboardRuntimeNotCovered": "Existing horizon-ctl key command refuses at title without a loaded world. Keyboard arrows/Escape passed isolated actual Title logic tests; no desktop automation used.",
+  "images": [
+    {
+      "file": "editor-scale-2-page-1.png",
+      "sha256": "3b4eb92f4ae46f8f0c52128606fa78c66a58610275352ed6674ca4834f286dcb"
+    },
+    {
+      "file": "editor-scale-auto-page-1.png",
+      "sha256": "3b7c50b8d1140f984fe10bc97d0dd231f87be0e9f9d40cad27c2e5039b824a1c"
+    }
+  ]
+}

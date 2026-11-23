@@ -72,6 +72,7 @@ jobs:
           cargo fmt --manifest-path horizon/native-adapter/Cargo.toml --check
           cargo clippy --offline --locked --manifest-path horizon/native-adapter/Cargo.toml --lib --bin classic_biome_data_probe -- -D warnings
           cargo test --offline --locked --manifest-path horizon/native-adapter/Cargo.toml --lib
+          cargo test --offline --locked --manifest-path horizon/native-adapter/Cargo.toml --test preset_editor
       - name: Check actual registry and codec observations
         shell: bash
         run: |

@@ -1,0 +1,20 @@
+{
+  "status": "passed-malformed-and-old-client-refusal",
+  "cases": {
+    "old-stable": {
+      "status": "passed-controlled-refusal-with-saved-data-preserved",
+      "reason": "missing noise settings terraforged:customized_v1",
+      "worldDataUnchanged": true,
+      "errorUi": false
+    },
+    "malformed": {
+      "status": "passed-controlled-refusal-with-saved-data-preserved",
+      "reason": "Invalid TerraForged custom settings",
+      "worldDataUnchanged": true,
+      "errorUi": false
+    }
+  },
+  "oldStableReportSha256": "4fbb21c26a626a754cf79d24df9831d5845227b14f8b7e87d10c6e6de9743228",
+  "originalScratchWorldUnchanged": true,
+  "onlyCopiedQaWorldsUsed": true
+}

@@ -1,0 +1,19 @@
+{
+  "status": "passed-windows-local-customize-preview-functional-qualification",
+  "stable0.1.0Unchanged": true,
+  "supportedControls": 28,
+  "nativeMenuWorldPersistence": true,
+  "storedQuartBiomeComparisons": 15360,
+  "differentCompilerSavedReader": "MSVC fast reader versus GNU performance game, same pinned staged source",
+  "malformedWorldAndOldStableClientRefuseWithoutSavedDataChanges": true,
+  "keyboardLogicTestPassed": true,
+  "nativeKeyInjectionAtTitleNotSupported": true,
+  "previewOnly": true,
+  "fullWindowsHostSuiteGreen": false,
+  "historicalFailedAttempts": [
+    "UIv1 sampled stale old block after teleport; operator ended only owned client, retained failed report; replaced by corrected fresh UIv2 run",
+    "Keyboard runtime attempt used existing key control at title; command refused without a world, owned cleanup terminated test process; no keyboard-runtime pass claimed",
+    "Initial QA reader compile used reserved Rust2024 identifier gen; corrected without changing game code. Initial refusal harness raced controlled process exit; repeated with exit-race handling and data-preservation assertions."
+  ],
+  "scope": "Windows x64 Vulkan, singleplayer, TerraForged alone, local preview. All runtime worlds are separate disposable QA worlds, not user saves."
+}
