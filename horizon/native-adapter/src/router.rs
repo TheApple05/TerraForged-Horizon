@@ -2,7 +2,7 @@
 //! Vanilla helper definitions are read from the player's resources at runtime.
 use crate::noise_registry::{DecodeError, Result, float};
 use serde_json::{Value, json};
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 use terraforged_native_core::preset::KernelPreset;
 
 #[derive(Clone, Debug)]
@@ -28,6 +28,119 @@ impl RouterPlan {
         result.extend(self.definitions.clone());
         Ok(result)
     }
+
+    /// Keep altered density definitions inside the saved world's settings.
+    /// Vanilla references with no dependency on an override stay shared.
+    pub fn stock_router(&self, base: &BTreeMap<String, String>) -> Result<Value> {
+        let densities = self
+            .materialize(base)?
+            .into_iter()
+            .map(|(id, text)| {
+                serde_json::from_str(&text)
+                    .map(|value| (id.clone(), value))
+                    .map_err(|error| DecodeError(format!("Density {id}: {error}")))
+            })
+            .collect::<Result<BTreeMap<_, _>>>()?;
+        let mut local: BTreeSet<_> = self
+            .definitions
+            .keys()
+            .chain(self.aliases.iter().map(|(name, _)| name))
+            .map(String::as_str)
+            .collect();
+        let mut dependents = BTreeMap::<&str, Vec<&str>>::new();
+        for (id, value) in &densities {
+            visit_references(value, &mut |reference| {
+                if densities.contains_key(reference) {
+                    dependents.entry(reference).or_default().push(id);
+                }
+            });
+        }
+        let mut pending: Vec<_> = local.iter().copied().collect();
+        while let Some(id) = pending.pop() {
+            if let Some(inherited) = dependents.get(id) {
+                for &id in inherited {
+                    if local.insert(id) {
+                        pending.push(id);
+                    }
+                }
+            }
+        }
+        let mut router = self.router.clone();
+        let mut remaining = 32_768;
+        inline_density(&mut router, &densities, &local, 0, &mut remaining)?;
+        Ok(router)
+    }
+}
+
+fn visit_references<'a>(value: &'a Value, visit: &mut impl FnMut(&'a str)) {
+    match value {
+        Value::String(id) => visit(id),
+        Value::Array(values) => {
+            for value in values {
+                visit_references(value, visit);
+            }
+        }
+        Value::Object(fields) => {
+            for (key, value) in fields {
+                if density_field(key) {
+                    visit_references(value, visit);
+                }
+            }
+        }
+        _ => {}
+    }
+}
+
+fn density_field(key: &str) -> bool {
+    !matches!(key, "type" | "noise")
+}
+
+fn inline_density(
+    value: &mut Value,
+    densities: &BTreeMap<String, Value>,
+    local: &BTreeSet<&str>,
+    depth: usize,
+    remaining: &mut usize,
+) -> Result<()> {
+    if depth > 64 || *remaining == 0 {
+        return Err(DecodeError(
+            "Expanded stock density graph exceeds its limits".into(),
+        ));
+    }
+    *remaining -= 1;
+    if let Some(id) = value.as_str().filter(|id| local.contains(id)) {
+        *value = densities[id].clone();
+        return inline_density(value, densities, local, depth + 1, remaining);
+    }
+    match value {
+        Value::Object(fields) => match fields.get("type").and_then(Value::as_str) {
+            Some("reterraforged:cell") => {
+                fields.insert("type".into(), json!("terraforged:cell"));
+            }
+            Some("reterraforged:clamp_to_nearest_unit") => {
+                if fields.get("function").and_then(Value::as_str) != Some("terraforged:height") {
+                    return Err(DecodeError(
+                        "Stock quantization requires TerraForged height".into(),
+                    ));
+                }
+                *value = json!({"type":"terraforged:cell","field":"height","quantize_height":true});
+            }
+            _ => {
+                for (key, value) in fields {
+                    if density_field(key) {
+                        inline_density(value, densities, local, depth + 1, remaining)?;
+                    }
+                }
+            }
+        },
+        Value::Array(values) => {
+            for value in values {
+                inline_density(value, densities, local, depth + 1, remaining)?;
+            }
+        }
+        _ => {}
+    }
+    Ok(())
 }
 fn binary(kind: &str, left: Value, right: Value) -> Value {
     json!({"type":format!("minecraft:{kind}"),"left":left,"right":right})
@@ -232,4 +345,64 @@ pub fn default_router(preset: &KernelPreset, caves: &Value) -> Result<RouterPlan
     let surface = json!({"type":"minecraft:find_top_surface","density":add(preliminary,json!(-0.390625)),"lower_bound":-64,"upper_bound":320.0,"cell_height":8});
     plan.router = json!({"temperature":cell("temperature"),"vegetation":cell("moisture"),"continents":"minecraft:overworld/continents","erosion":"minecraft:overworld/erosion","depth":add(json!("minecraft:overworld/depth"),json!(-0.275)),"ridges":"minecraft:overworld/ridges","chunk_surface_level":interpolated(surface,16,1),"final_density":final_density});
     Ok(plan)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn stock_router_inlines_local_overrides_and_keeps_vanilla_dependencies() {
+        let base = BTreeMap::from([
+            (
+                "minecraft:inherited".into(),
+                r#"{"type":"minecraft:min","left":"minecraft:overridden","right":"minecraft:unchanged"}"#.into(),
+            ),
+            ("minecraft:overridden".into(), "0.25".into()),
+            ("minecraft:unchanged".into(), "0.5".into()),
+        ]);
+        let plan = RouterPlan {
+            router: json!({"final_density":"minecraft:inherited","temperature":"terraforged:quantized"}),
+            definitions: BTreeMap::from([
+                (
+                    "minecraft:overridden".into(),
+                    add(cell("height"), json!("terraforged:original")).to_string(),
+                ),
+                (
+                    "terraforged:quantized".into(),
+                    json!({"type":"reterraforged:clamp_to_nearest_unit","function":"terraforged:height","resolution":256}).to_string(),
+                ),
+            ]),
+            aliases: vec![("terraforged:original".into(), "minecraft:overridden".into())],
+        };
+        assert_eq!(
+            plan.stock_router(&base).unwrap(),
+            json!({
+                "final_density": {
+                    "type":"minecraft:min",
+                    "left": {
+                        "type":"minecraft:add",
+                        "left":{"type":"terraforged:cell","field":"height"},
+                        "right":0.25
+                    },
+                    "right":"minecraft:unchanged"
+                },
+                "temperature":{"type":"terraforged:cell","field":"height","quantize_height":true}
+            })
+        );
+        assert_eq!(base["minecraft:overridden"], "0.25");
+    }
+
+    #[test]
+    fn stock_router_rejects_recursive_local_density_definitions() {
+        let plan = RouterPlan {
+            router: json!({"final_density":"terraforged:loop"}),
+            definitions: BTreeMap::from([(
+                "terraforged:loop".into(),
+                json!("terraforged:loop").to_string(),
+            )]),
+            aliases: Vec::new(),
+        };
+        assert!(plan.stock_router(&BTreeMap::new()).is_err());
+    }
 }

@@ -10,12 +10,18 @@ Fetch the checkout's locked Cargo dependencies before running the offline check.
 
 ```sh
 python horizon/tools/check_native_sdk.py --horizon /path/to/horizon --output build/qa/sdk-check
-python horizon/tools/stage_native_sdk.py --output build/qa/sdk-mods/terraforged
+python horizon/tools/stage_native_sdk.py --resources /path/to/prepared/26.3 --output build/qa/sdk-mods/terraforged
 horizon-launcher native-build build/qa/sdk-mods --version nightly-2026-11-22-f1bb66f --trust-native-code
 ```
 
-This package is a development checkpoint. A playable preset also needs a port of
-the terrain router, per-world settings and biome selection. TerraForged's classic
-pillar and marsh features still need a native configured-feature type API.
-Existing TerraForged worlds use the legacy patched runtime until a migrated world
-passes independent saved-chunk and generation checks.
+`--resources` uses the local prepared 26.3 worldgen registries to add **TerraForged**
+to the Create World type selector. The generated preset embeds its own Overworld
+noise settings. Vanilla dimensions, biomes, and unaffected density functions
+remain shared. Omit `--resources` for a source project containing only the density
+adapter.
+
+This preset is a development checkpoint for the default terrain. The legacy
+continent-centered spawn, configurable biome selection, and classic pillar and
+marsh decoration still need integration. Existing TerraForged worlds use the
+legacy patched runtime until a migrated world passes independent saved-chunk and
+generation checks.

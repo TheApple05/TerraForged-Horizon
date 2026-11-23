@@ -3,16 +3,27 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 import shutil
+import subprocess
 
 from check_native_sdk import HORIZON_REVISION, ROOT
 
 MIXINS_REVISION = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"
 
 
-def stage(output: Path) -> None:
+def stage(output: Path, resources: Path | None = None) -> None:
     root = ROOT / "horizon"
+    preset = None
+    if resources is not None:
+        adapter = root / "native-adapter"
+        preset = json.loads(subprocess.check_output([
+            "cargo", "run", "--quiet", "--offline", "--locked",
+            "--manifest-path", str(adapter / "Cargo.toml"),
+            "--target-dir", str(adapter / "target"),
+            "--bin", "stock_preset", "--", str(resources),
+        ]))
     output.mkdir(parents=True, exist_ok=False)
     source = output / "src"
     shutil.copytree(root / "native-core/src", source, ignore=shutil.ignore_patterns("bin", "data"))
@@ -74,7 +85,7 @@ horizon-mod-api = { path = ".horizon/sdk/api/crates/horizon-mod-api" }
     (output / "horizon-mod.toml").write_text(f"""id = "terraforged"
 name = "TerraForged for Horizon"
 version = "0.1.1-sdk.dev1"
-description = "TerraForged terrain density nodes for the native Horizon SDK."
+description = "TerraForged terrain for the native Horizon SDK."
 authors = ["TerraForged Revival contributors"]
 api = "0.2"
 side = "both"
@@ -85,16 +96,29 @@ game = "26.3"
 horizon = "{HORIZON_REVISION}"
 mixins = "{MIXINS_REVISION}"
 """, encoding="utf-8")
+    if preset is not None:
+        files = {
+            "data/terraforged/worldgen/world_preset/default.json": preset,
+            "data/minecraft/tags/worldgen/world_preset/normal.json": {
+                "values": ["terraforged:default"],
+            },
+        }
+        for relative, data in files.items():
+            path = output / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+        shutil.copytree(root / "native-content/assets", output / "assets")
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--resources", type=Path, help="Prepared Horizon 26.3 resources, to include the default preset")
     args = parser.parse_args()
     output = args.output.resolve()
     if output.exists():
         parser.error("Choose a fresh output directory")
-    stage(output)
+    stage(output, args.resources.resolve() if args.resources is not None else None)
     print(output)
     return 0
 
